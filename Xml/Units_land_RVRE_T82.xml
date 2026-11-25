@@ -1,0 +1,186 @@
+﻿<?xml version="1.0"?>
+
+
+<RVRE_T82_Data>
+	
+	<GroundVehicle Name="RVRE_T82">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<Strafe_Distance>500.0</Strafe_Distance>
+		<Text_ID>TEXT_UNIT_RVRE_T82</Text_ID>
+		<Encyclopedia_Good_Against>MAAT SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker TIE_Fighter_Squadron_Land UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_T82</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RVRE_T82_ATATBuster.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor><!--Reescalado real-->
+		<Select_Box_Scale>55</Select_Box_Scale>
+		<Max_Speed>5.2</Max_Speed>
+		<Min_Speed>5.2</Min_Speed>
+		<OverrideAcceleration> .4</OverrideAcceleration>
+		<OverrideDeceleration> .4</OverrideDeceleration>
+		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>80</Bank_Turn_Angle>
+		<AI_Combat_Power>155</AI_Combat_Power>
+		<Custom_Hard_XExtent> 30.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 30.0 </Custom_Hard_YExtent>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Armor_Type> Armor_Interdictor </Armor_Type>
+		<Autoresolve_Health>70.0</Autoresolve_Health>
+		<Tactical_Health>1000</Tactical_Health>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Hover_Offset>70.0</Hover_Offset>
+		<LandBehavior>ABILITY_COUNTDOWN, HUNT, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Turret_Rotate_Extent_Degrees>20.0</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>50.0</Turret_Elevate_Extent_Degrees>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATMKII</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+	
+		<Targeting_Fire_Inaccuracy> LandHero, 10.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+
+		<Icon_Name>i_button_RVRE_T82.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>T82_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Red_ATATMKII</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Activate_Energy_Blast_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="T82_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+			<Enable_Radar_Ability Name="R_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			<Redirect_Blaster_Ability Name="RL_Heavy_Reflective_Armor_L1_Bonus">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.15</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+	
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+			<Redirect_Blaster_Ability Name="RL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		<Death_Clone>Damage_Normal, RVRE_T82_Death_Clone_00</Death_Clone>
+		<SFXEvent_Ambient_Moving> Unit_CombatSpeeder_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Engine_Moving_Loop> Unit_CombatSpeeder_Cinematic_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 12 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_CombatSpeeder_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+	</GroundVehicle>
+	<GroundVehicle Name="RVRE_T82_Death_Clone_00">
+		<Variant_Of_Existing_Type>RVRE_T82</Variant_Of_Existing_Type>
+		<Land_Model_Name>RVRE_T82_ATATBuster_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="RVRE_T82_squadron">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RVRE_T82</Text_ID>
+		<Encyclopedia_Good_Against>MAAT SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker TIE_Fighter_Squadron_Land UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_T82 TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Build_Cost_Credits>1650</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>RVRE_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>RVRE_T82_Transport</Company_Transport_Unit>
+		<Company_Units>RVRE_T82, RVRE_T82</Company_Units>
+		<Icon_Name>i_button_RVRE_T82.tga</Icon_Name>
+		<GUI_Model>RVRE_T82_ATATBuster.ALO</GUI_Model>
+
+		<Tactical_Build_Cost_Multiplayer>1650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RVRE_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+	<TransportUnit Name="RVRE_T82_Transport">
+		<Variant_Of_Existing_Type>Gallofree_Transport</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_TachyonLand_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>RVRE_T82_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<TransportUnit Name="RVRE_T82_Landing">
+		<Variant_Of_Existing_Type>RVRE_T82_Transport</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>0.25</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>RV_TachyonLand_Landing.ALO</Land_Model_Name>
+	</TransportUnit>
+</RVRE_T82_Data>

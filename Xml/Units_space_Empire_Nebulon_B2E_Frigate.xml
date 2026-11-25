@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<Nebulon_B2EUnit_Data>
+	
+	<SpaceUnit Name="Nebulon_B2E">
+		<Variant_Of_Existing_Type>Nebulon_B2ORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Corellian_Corvette Rep_Marauder E_CR_CVM </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MC40 R_Dreadnought_Up Y-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_NEBULON_B2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_NebulonB2.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<GUI_Model_Name>EV_NebulonB2.ALO</GUI_Model_Name>
+		<Death_Clone>Damage_Normal, Nebulon_B2E_Death_Clone</Death_Clone>
+	</SpaceUnit>
+		
+	<SpaceUnit Name="Nebulon_B2ORG">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NEBULON_B2</Text_ID>
+		<Encyclopedia_Good_Against> Tartan_Patrol_Cruiser Crusader_Gunship </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Star_Destroyer Vengeance_Frigate </Encyclopedia_Vulnerable_To>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_NebulonB2.ALO</Space_Model_Name>
+		<Scale_Factor>0.2</Scale_Factor>
+
+		<Layer_Z_Adjust>207.193</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Cost_Credits>3300</Build_Cost_Credits>
+		<AI_Combat_Power>720</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		
+
+		<HardPoints>
+			HP_LaserNG_01, 
+			HP_LaserNG_02, 
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05, 
+			HP_LaserNG_06,
+			HP_TurboG_01, 
+			HP_TurboG_02, 
+			HP_TurboG_03, 
+			HP_TurboG_04, 
+			HP_TurboG_05, 
+			HP_TurboG_06, 
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00,
+			HP_Fighter_Bay_Small_00
+	    </HardPoints>
+
+		<Icon_Name>I_BUTTON_NEB_B2.TGA</Icon_Name>
+		<GUI_Model_Name>EV_NebulonB2.ALO</GUI_Model_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN2_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Encyclopedia_Text> TEXT_TOOLTIP_NEBULON_B2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>3300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>825</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="Nebulon_B2E_Death_Clone">
+		<Text_ID>TEXT_UNIT_NEBULONMR_FRIGATE</Text_ID>
+		<Space_Model_Name>EV_NebulonB2_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>0.1</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.15</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Death_Persistence_Duration> 15 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+</Nebulon_B2EUnit_Data>

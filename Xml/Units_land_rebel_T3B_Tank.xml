@@ -1,0 +1,134 @@
+﻿<?xml version="1.0"?>
+
+
+<T3B_TankUnit_Data>
+	<GroundVehicle Name="T3B_Tank">
+		<Variant_Of_Existing_Type>T3B_TankORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, T3B_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="T3B_TankORG">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_T3B_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler M1_Repulsor_Tank AT_ST_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker HAV_Juggernaut_Company Lancet_Air_Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_T3B</Encyclopedia_Text>
+
+		<Land_Model_Name>RV_T3BX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Rebel, RVRE, Corporate</Affiliation>
+
+		<Tactical_Health>450</Tactical_Health>
+
+		<HardPoints>
+			HP_Gr_T6B_Proton_Torpedo_00
+		</HardPoints>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<Destruction_Survivors> 
+			Rebel_Pilot, 1.0 
+			Rebel_Pilot, 1.0 
+		</Destruction_Survivors>
+				
+	
+		<SFXEvent_Fire>Unit_Tank_T4B_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_T3B</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_T3B</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_T3B</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T3B</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T3B </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T3B</SFXEvent_Assist_Attack>
+	
+		<AI_Combat_Power>180</AI_Combat_Power>
+	
+		<Icon_Name>I_BUTTON_RV_T3B.tga</Icon_Name>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	<GroundVehicle Name="T3B_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>T3B_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_T3BX_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="Rebel_T3B_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_T3B_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler M1_Repulsor_Tank AT_ST_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker HAV_Juggernaut_Company Lancet_Air_Wing </Encyclopedia_Vulnerable_To>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Company_Units>T3B_Tank, T3B_Tank, T3B_Tank</Company_Units>
+
+		<Icon_Name>I_BUTTON_RV_T3B.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_T3B</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_T3B TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+	</GroundCompany>
+	
+	<GroundCompany Name="Rebel_Heavy_Tank_Brigade_Alliance">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_HEAVY_TANKS_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank AT_ST_Walker AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker UTAT_COMPANY AT-TE_Company </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVY_TANKS_BRIGADE TEXT_DESC_C_CANTIDAD_6</Encyclopedia_Text>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Units>T4B_Tank, T4B_Tank, T4B_Tank, T3B_Tank, T3B_Tank, T3B_Tank</Company_Units>
+		<Icon_Name>I_BUTTON_RV_T3B.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_T3B</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		
+	</GroundCompany>
+</T3B_TankUnit_Data>

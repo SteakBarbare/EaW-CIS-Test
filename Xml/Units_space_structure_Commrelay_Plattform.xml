@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Commrelay_PlattformUnit_Data>
+		
+	
+	
+	<SpecialStructure Name="Empire_Commrelay_Plattform">
+		<Variant_Of_Existing_Type>Commrelay_Plattform</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Commrelay_Plattform">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_COMMRELAY</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_COMMRELAY TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Commrelay.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>-500.0</Layer_Z_Adjust>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Autoresolve_Health>22200</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		<Tactical_Health>1000000</Tactical_Health>
+		<Shield_Refresh_Rate>23000</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		<Icon_Name>I_BUTTON_Commrelay.TGA</Icon_Name>
+		<Score_Cost_Credits>1500</Score_Cost_Credits>
+		<Death_Clone>Damage_Normal, Commrelay_Plattform_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, SPAWN_SQUADRON, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Commrelay_Plattform_Death_Clone">
+		<Text_ID>TEXT_UNIT_COMMRELAY</Text_ID>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Commrelay_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+	
+</Commrelay_PlattformUnit_Data>

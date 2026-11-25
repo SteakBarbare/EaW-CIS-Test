@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<General_Dodonna_Hero_Files>
+
+	<HeroUnit Name="General_Dodonna">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GENERAL_DODONNA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DODONNA TEXT_TOOLTIP_REDUCE_TIME_FRIGATE_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ri_Jan_Dodonna.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_DODONNA.tga</Icon_Name>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Autoresolve_Health>4000</Autoresolve_Health>
+
+		<SFXEvent_Select>Unit_Select_Rebel_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Rebel_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Rebel_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Rebel_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Rebel_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Rebel_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+
+		<Galactic_Influence_Range>0.0</Galactic_Influence_Range>
+
+		<Lua_Script>R_Do_Re_1X</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>TACTICAL_BRIBE</Type>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Dodonna_Tactical_Bribe </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Sprint_Katarn </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Tactical_Bribe_Ability Name="Dodonna_Tactical_Bribe">
+					<Activation_Style> User_Input </Activation_Style>
+					<Activation_Min_Range>0.0</Activation_Min_Range>
+					<Activation_Max_Range>100.0</Activation_Max_Range>
+					<Bribed_Effect> Rebel_Bribed_Particle_Effect </Bribed_Effect> 
+					<Bribed_Effect_Small> Rebel_Bribed_Particle_Effect_Small </Bribed_Effect_Small> 
+					<Effect_Z_Offset>35.0</Effect_Z_Offset>
+					<SFXEvent_Success>GUI_Bribe_SFX</SFXEvent_Success>
+					<SFXEvent_Fail></SFXEvent_Fail>
+            </Tactical_Bribe_Ability>
+			<System_Spy_Ability Name="Dodonna_Ship_Reveal">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>Yes</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			<Enhance_Defense_Ability Name="Dodonna_Enhance_Defense">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.25</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+				<Unit_Strength_Category>Vehicle | Air | Infantry</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="Dodonna_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.5</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			<Reduce_Production_Time_Ability Name="Dodonna_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Frigate</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Dodonna_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Reduce_Production_Price_Ability Name="Dodonna_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Frigate</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+		</Abilities>
+
+	</HeroUnit>
+
+	<HeroCompany Name="General_Dodonna_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DODONNA_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_DODONNA.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DODONNA TEXT_TOOLTIP_REDUCE_TIME_FRIGATE_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Company_Transport_Unit>Assault_Frg_D</Company_Transport_Unit>
+		<Company_Units>General_Dodonna</Company_Units>
+		<SFXEvent_Build_Complete>GUI_R_Fleet_Commander_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>GUI_R_Fleet_Commander_Complete</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Rebel_Field</SFXEvent_Fleet_Move>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>TACTICAL_BRIBE</Type>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Lando_Tactical_Bribe </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Sprint_Katarn </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+	</HeroCompany>
+	<SpaceUnit Name="Assault_Frg_D">
+		<Variant_Of_Existing_Type>Assault_FrgORG</Variant_Of_Existing_Type>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_UNIT_ASSAULT_FR_DODONNA</Text_ID>
+		<Encyclopedia_Good_Against> E_Strike Victory_Destroyer VSD2 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Defender GunBoat ISD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DODONNA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>RV_Assault_FrigateMKIII.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_Assault_FrigateMKIII_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+
+		<Scale_Factor>0.5</Scale_Factor><!-- REESCALADO EN 3DMAX -->
+
+		<Autoresolve_Health>5000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>40000</Tactical_Health>
+		<Shield_Refresh_Rate>10000</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>40000</Energy_Refresh_Rate>
+
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Assault_Frigate </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<AI_Combat_Power>2900</AI_Combat_Power>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+
+		<Death_Clone>Damage_Normal, Assault_Frg_D_Death_Clone</Death_Clone>
+		
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, ABILITY_COUNTDOWN, TARGETING, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, SHIELDED, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Starting_Spawned_Units_Tech_0>A_Wing_Dodonna_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>AssaultshuttleD_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>A_Wing_Dodonna_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AssaultshuttleD_Squadron, 4</Reserve_Spawned_Units_Tech_0>
+		
+		<HardPoints> 
+          	HP_T_AssaultFrigateIII_01,
+			HP_T_AssaultFrigateIII_02,
+			HP_T_AssaultFrigateIII_03,
+			HP_T_AssaultFrigateIII_04,
+			HP_T_AssaultFrigateIII_05,
+			HP_T_AssaultFrigateIII_06,
+			HP_T_AssaultFrigateIII_07,
+			HP_T_AssaultFrigateIII_08,
+			HP_T_AssaultFrigateIII_09,
+			HP_T_AssaultFrigateIII_10,
+			HP_T_AssaultFrigateIII_11,
+			HP_T_AssaultFrigateIII_12,
+			HP_T_AssaultFrigateIII_13,
+			HP_T_AssaultFrigateIII_14,
+			HP_GENERIC_SHIELD_LEECH_00B,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_Bay_Invisible
+       </HardPoints>
+		<CategoryMask> SpaceHero </CategoryMask>
+		
+		<Icon_Name>I_BUTTON_DODONNA.TGA</Icon_Name>
+		<GUI_Model_Name>RV_Assault_FrigateMKIII.ALO</GUI_Model_Name>
+
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			  <Unit_Ability>
+                <Type>LEECH_SHIELDS</Type>
+                <Recharge_Seconds>55.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Dodonna_Leech_Shields </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <Effective_Radius> 500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Leech_Sheilds_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_Target_Ability> Unit_Leech_Sheilds_Kadalbe </SFXEvent_Target_Ability>
+					 <SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+ 				<Supports_Autofire>True</Supports_Autofire>
+           </Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 50.0</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			 <Leech_Shields_Ability Name="Dodonna_Leech_Shields">
+                <Activation_Style> User_Input </Activation_Style>
+                <Applicable_Unit_Categories> Corvette | Frigate | Capital | Super | Structure | Spacehero </Applicable_Unit_Categories>
+                <Activation_Min_Range>10</Activation_Min_Range>
+                <Activation_Max_Range>2500</Activation_Max_Range>
+                <Duration_In_Secs> 25.0 </Duration_In_Secs>
+                <Shield_Damage_Per_Second> 100000.0 </Shield_Damage_Per_Second>
+                <Damage_Multiplier> 3.0 </Damage_Multiplier>
+                <Beam_Color>255, 7, 7, 255</Beam_Color>
+                <Beam_Bone_Name>HP_SHL_00_BONE</Beam_Bone_Name>
+                <Beam_Frames>10</Beam_Frames>
+                <Beam_Width>40.0</Beam_Width>
+                <Beam_Texture_Name>tractor_beam00.tga</Beam_Texture_Name>
+                <Beam_Effect_Name>Leech_Shields</Beam_Effect_Name>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Leech_Effect>Leech_Effect</Leech_Effect>
+            </Leech_Shields_Ability>
+            
+			
+			<Enable_Radar_Ability Name="Dodonna_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			
+			<Enhance_Defense_Ability Name="Dodonna_Enhance_Defense">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.25</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter | Vehicle | Infantry | Air</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="Dodonna_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.5</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			
+			<System_Spy_Ability Name="Dodonna_Ship_Reveal">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>Yes</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+		
+			<Remove_Corruption_Ability Name="Dodonna_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Reduce_Production_Price_Ability Name="Dodonna_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Frigate</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.10</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+		</Abilities>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		
+		<Landing_Transport_Variant>Alliance_Shuttle_Landing</Landing_Transport_Variant>
+
+		<Tactical_Build_Cost_Multiplayer>7000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Population_Value>2</Population_Value>
+	</SpaceUnit>
+	 <SpaceUnit Name="Assault_Frg_D_Death_Clone">
+		<Text_ID>TEXT_UNIT_CC9600</Text_ID>
+		<Space_Model_Name>RV_Assault_FrigateMKIII_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<!--<Death_Persistence_Duration> 0 </Death_Persistence_Duration> -->
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="A_WingS">	
+		<Variant_Of_Existing_Type>A-Wing</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 119, 237, 78, 255 </No_Colorization_Color>
+		<Space_Model_Name>RV_AwingSuper.ALO</Space_Model_Name>
+		<Icon_Name>i_button_RV_AwingS.tga</Icon_Name>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Shield_Points>1500</Shield_Points>
+		<Tactical_Health>4500</Tactical_Health>
+		
+		<Shield_Refresh_Rate>375</Shield_Refresh_Rate>
+		<Energy_Capacity>6000</Energy_Capacity>
+		<HardPoints> 
+			HP_R_Awing_Laser_00, HP_R_Awing_Laser_01, HP_R_Awing_Laser_02, HP_R_Awing_Laser_03, HP_BOMBER_MAGPULSE
+		</HardPoints>
+	</SpaceUnit>	
+	<SpaceUnit Name="A_Wing_Green_D">
+		<Variant_Of_Existing_Type>A-Wing</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 119, 237, 78, 255 </No_Colorization_Color>
+		<Space_Model_Name>RV_AwingSuper.ALO</Space_Model_Name>
+		<Icon_Name>i_button_RV_AwingS.tga</Icon_Name>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Shield_Points>1500</Shield_Points>
+		<Tactical_Health>4500</Tactical_Health>
+		<HardPoints> 
+			HP_R_Awing_Laser_00, HP_R_Awing_Laser_01, HP_R_Awing_Laser_02, HP_R_Awing_Laser_03, HP_BOMBER_MAGPULSE
+		</HardPoints>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<!-- Primary ability -->
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	
+	<Squadron Name="A_Wing_Cracken_Squadron">
+		<Variant_Of_Existing_Type>A_Wing_Dodonna_Squadron</Variant_Of_Existing_Type>
+	</Squadron>
+		
+	<Squadron Name="A_Wing_Dodonna_Squadron">
+		<Variant_Of_Existing_Type>A_Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GREEN_A_WING_SQUADRON</Text_ID>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Icon_Name>i_button_RV_AwingS.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Squadron_Units>A_Wing_Green_D, A_Wing_Green_D, A_Wing_Green_D</Squadron_Units>
+		<Squadron_Units>A_Wing_Green_D, A_Wing_Green_D, A_Wing_Green_D</Squadron_Units>
+		<Squadron_Units>A_Wing_Green_D, A_Wing_Green_D, A_Wing_Green_D</Squadron_Units>
+		<Squadron_Units>A_Wing_Green_D, A_Wing_Green_D, A_Wing_Green_D</Squadron_Units>
+		
+		<Max_Squad_Size>3</Max_Squad_Size>
+		<Population_Value>1</Population_Value>
+	</Squadron>
+	<SpaceUnit Name="AssaultshuttleD">
+			<Variant_Of_Existing_Type>Assaultshuttle_Builded</Variant_Of_Existing_Type>
+			<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG Lancer Bajonett </Encyclopedia_Vulnerable_To>
+			<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+			<Tech_Level>99</Tech_Level>
+			<Affiliation>Rebel</Affiliation>
+			<CategoryMask> Fighter </CategoryMask>
+			
+			<Lua_Script>ObjectScript_AI_Space_Capture_Ships</Lua_Script>
+			<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_BOARDING_ASSAULT</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_BOARDING_ASSAULT_DESC</Alternate_Description_Text>
+					<Recharge_Seconds>45</Recharge_Seconds>
+					<Spawned_Object_Type>Comm_Ship_orders3</Spawned_Object_Type>
+					<Effective_Radius> 1000.0 </Effective_Radius>
+					<SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+					<SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+					<Area_Effect_Decal_Distance> 1000 </Area_Effect_Decal_Distance>
+				</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	
+	<Squadron Name="AssaultshuttleD_Squadron">
+		<Variant_Of_Existing_Type>AssaultFighterCraft</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASSAULTSHUTTLE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ASSAULTSHUTTLE</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG Lancer Bajonett </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Affiliation>Rebel</Affiliation>
+		
+		<Tech_Level>99</Tech_Level>
+
+		<Squadron_Units>AssaultshuttleD</Squadron_Units>
+
+		<Icon_Name>i_button_Assaultshuttle.tga</Icon_Name>
+		<GUI_Model_Name>EV_Assaultshuttle.ALO</GUI_Model_Name>
+		
+		<Lua_Script>ObjectScript_AI_Space_Capture_Ships</Lua_Script>
+			<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_BOARDING_ASSAULT</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_BOARDING_ASSAULT_DESC</Alternate_Description_Text>
+					<Recharge_Seconds>45</Recharge_Seconds>
+					<Spawned_Object_Type>Comm_Ship_orders3</Spawned_Object_Type>
+					<Effective_Radius> 1000.0 </Effective_Radius>
+					<SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+					<SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+					<Area_Effect_Decal_Distance> 1000 </Area_Effect_Decal_Distance>
+				</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Squadron>
+</General_Dodonna_Hero_Files>

@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<Super_Heavy_WalkerUnit_Data>
+
+<GroundVehicle Name="Super_Heavy_Walker">
+		<Variant_Of_Existing_Type>AT_AT_WalkerORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_ATSHW</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_V-Wing_airspeeder_squadronRebel_V-Wing_airspeeder_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATSHW</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_WALKER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>EV_SuperHeavy_Walker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EV_ATSHW.tga</Icon_Name>
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>ABILITY_COUNTDOWN, WEAPON, TURRET, DEPLOY_TROOPERS, WALK_LOCOMOTOR,IDLE,TARGETING,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,STUNNABLE,DAMAGE_TRACKING,SQUASH,AFFECTED_BY_SHIELD</LandBehavior>
+
+		<Scale_Factor>2.95</Scale_Factor>
+		
+		<Armor_Type> Armor_ATAT5 </Armor_Type>
+
+		<Affiliation>Empire, GA</Affiliation>
+
+		<Tactical_Health>3800</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Land_FOW_Reveal_Range>800.0</Land_FOW_Reveal_Range>
+		
+		<Ranged_Target_Z_Adjust>160.0</Ranged_Target_Z_Adjust>
+		
+		<Targeting_Max_Attack_Distance>600.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>30.0</Targeting_Min_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>40</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATMKV</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Hardpoints>
+				HP_ATSHW_Beam_turret_00, 
+				HP_ATSHW_Turret_LASER_00,		
+				HP_ATSHW_Turret_LASER_01,
+				HP_ATSHW_Turret_LASER_03,
+				HP_ATSHW_Turret_LASER_04
+		</Hardpoints>
+		
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
+		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
+		
+		<AI_Combat_Power>500</AI_Combat_Power>
+	
+		<Death_Clone>Damage_Cable_Attack, Super_Heavy_Walker_Cable_Attack_Death_Clone</Death_Clone>
+		
+		<Vehicle_Thief_Inside_Clone>Super_Heavy_Walker_Captured</Vehicle_Thief_Inside_Clone>
+	
+		<Lua_Script>ObjectScript_Blast_Land</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+                <Type>BLAST</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+	            <GUI_Activated_Ability_Name> ATSHW_Blast </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_BARRAGE_AREA.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Blast_Ability Name="ATSHW_Blast">
+				<Activation_Style> User_Input </Activation_Style>
+				<Charge_Up_Seconds>5</Charge_Up_Seconds>
+				<Damage_Multiplier>100</Damage_Multiplier>
+				<SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
+			</Blast_Ability>         
+			
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+        
+		<Close_Enough_Angle_For_Move_Start> 30 </Close_Enough_Angle_For_Move_Start>        
+	</GroundVehicle>
+	<GroundVehicle Name="Super_Heavy_Walker_Captured">
+		<Variant_Of_Existing_Type>Super_Heavy_Walker</Variant_Of_Existing_Type>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="Super_Heavy_Walker_Basic_Death_Clone">
+		<Variant_Of_Existing_Type>Super_Heavy_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+		<Glory_Cinematics> CAM_ATAT_Death_01.tec, CAM_ATAT_Death_02.tec, CAM_ATAT_Death_03.tec </Glory_Cinematics>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="Super_Heavy_Walker_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>Super_Heavy_Walker_Basic_Death_Clone</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Super_Heavy_Walker_Death_Clone_00">
+		<Variant_Of_Existing_Type>Super_Heavy_Walker_Basic_Death_Clone</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+	</GroundVehicle>
+	
+
+	<GroundVehicle Name="Super_Heavy_Walker_Death_Clone_01">
+		<Variant_Of_Existing_Type>Super_Heavy_Walker_Basic_Death_Clone</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Super_Heavy_Walker_Death_Clone_02">
+		<Variant_Of_Existing_Type>Super_Heavy_Walker_Basic_Death_Clone</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+	</GroundVehicle>
+	
+
+	<GroundCompany Name="Super_Heavy_Walker_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		<Text_ID>TEXT_UNIT_ATSHW</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATSHW TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>E_Ground_Advanced_Vehicle_Factory, E_XCommand, AdvancedTech_8</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Super_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>Super_Heavy_Walker</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_EV_ATSHW.tga</Icon_Name>
+		<Build_Cost_Credits>25000</Build_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>5000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+	</GroundCompany>
+
+	<TransportUnit Name="Imperial_Super_ATAT_Barge">
+		<Variant_Of_Existing_Type>Imperial_ATAT_Barge</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<!--<Scale_Factor>0.25</Scale_Factor>-->
+		<Landing_Transport_Variant>Imperial_Super_ATAT_Barge_Landing</Landing_Transport_Variant>
+		<!--<Death_Clone>Damage_Normal, Imperial_Super_ATAT_Barge_Death_Clone</Death_Clone> -->
+	</TransportUnit>
+	<UniqueUnit Name="Imperial_Super_ATAT_Barge_Death_Clone">
+		<Text_ID>TEXT_UNIT_IMPERIAL_ATAT_BARGE</Text_ID>
+		<Space_Model_Name>EV_AT-Barge_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>1.4</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<CategoryMask> Fighter </CategoryMask>
+	</UniqueUnit>
+	<TransportUnit Name="Imperial_Super_ATAT_Barge_Landing">
+		<Variant_Of_Existing_Type>Imperial_Super_ATAT_Barge</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>2.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+      	<UnitCollisionClass>Landing Transport</UnitCollisionClass>	
+	</TransportUnit>
+</Super_Heavy_WalkerUnit_Data>

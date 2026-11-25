@@ -1,0 +1,150 @@
+﻿<?xml version="1.0"?>
+
+
+<KAAC_FreeRunnerUnit_Data>
+	<GroundVehicle Name="KAAC_FreeRunner">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_FREERUNNER</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RV_FREERUNNER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>RV_KAAC_FreeRunner.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_RV_KAAC_FreeRunner.tga</Icon_Name>
+
+		<Scale_Factor>0.45</Scale_Factor>
+
+		<Affiliation>Rebel, GA</Affiliation>
+		<Max_Speed>3.0</Max_Speed>
+		<Movement_Animation_Speed> 2.2 </Movement_Animation_Speed>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+
+		<OverrideAcceleration> .2 </OverrideAcceleration>
+		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<FormationSpacing> .75 </FormationSpacing>
+		<FormationOrder> 4 </FormationOrder>
+		<SecondaryTurnInPlaceROTCoefficient> .5 </SecondaryTurnInPlaceROTCoefficient>
+		<SecondaryTurnAngle> 65 </SecondaryTurnAngle>
+		<MinSecondaryTurnROTCoefficient> .25 </MinSecondaryTurnROTCoefficient>
+		<MaxSecondaryTurnROTCoefficient> .9 </MaxSecondaryTurnROTCoefficient>
+		<SecondaryTurnLookaheadDistance> 30 </SecondaryTurnLookaheadDistance>
+		
+		<Custom_Hard_XExtent> 40.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 40.0 </Custom_Hard_YExtent>
+		
+		<LandBehavior>GARRISON_UNIT,ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD, LURE, HUNT, DEPLOY_TROOPERS, WALK_LOCOMOTOR, IDLE, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE, SURFACE_FX,DAMAGE_TRACKING</LandBehavior>
+
+		<Armor_Type> Armor_T4B </Armor_Type>
+		<Shield_Points>150</Shield_Points>
+		<Tactical_Health>300</Tactical_Health>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+				
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Fire>Unit_Tank_T2B_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_T2B_Tank</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_T2B_Tank</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T2B_Tank</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_T2B_Tank</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T2B_Tank</SFXEvent_Guard>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T2B_Tank </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T2B_Tank</SFXEvent_Assist_Attack>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_T2B_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_T2B_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<Hardpoints>
+				HP_RV_KAAC_FreeRunner_00, HP_RV_KAAC_FreeRunner_01, HP_RV_KAAC_FreeRunner_02
+		</Hardpoints>
+
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
+
+		<Overall_Length>45.0</Overall_Length>
+		<Overall_Width>20.0</Overall_Width>
+		<AI_Combat_Power>175</AI_Combat_Power>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_T2B_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Death_Clone>Damage_Normal, KAAC_FreeRunner_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="KAAC_FreeRunner_Death_Clone_00">
+		<Variant_Of_Existing_Type>KAAC_FreeRunner</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_KAAC_FreeRunner_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="KAAC_FreeRunner_Brigade">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_FREERUNNER</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RV_FREERUNNER TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>652</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Formation_Priority>2</Formation_Priority>
+
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>KAAC_FreeRunner, KAAC_FreeRunner, KAAC_FreeRunner</Company_Units>
+
+		<Icon_Name>I_BUTTON_RV_KAAC_FreeRunner.tga</Icon_Name>
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_T2B_Tank</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T2B_Tank</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>652</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+
+</KAAC_FreeRunnerUnit_Data>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE Yagdul ESPACIAL********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Yagdul_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Yagdul_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_YAGDUL_R</Reward_Param1>
+				<Prereq>Batalla_de_Yagdul_Space</Prereq>
+			</Event>
+			
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Yagdul_Space</Prereq>
+	</Event>	
+	
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_BATTLEOFYAGDULR</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Yagdul_Space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="Destruir_All_enemies">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Empire</Event_Param1>
+		<Event_Param3>DESTROY_ALL</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_YAGDUL_R</Reward_Param1>
+		<Prereq>Destruir_All_enemies</Prereq>
+	</Event>
+			 <Event Name="Dialogo_Fin_02">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Reward_Type>MULTIMEDIA</Reward_Type>
+				<Reward_Param1>TEXT_STORY_ROGUE_SQUADRON_YAGDUL_05</Reward_Param1>
+				<Reward_Param2>10</Reward_Param2>
+				<Prereq>Objetivos_Completados</Prereq>
+			</Event>
+		
+					<Event Name="Dialogo_Fin_2b">
+						<Event_Type>STORY_ELAPSED</Event_Type>
+						<Event_Param1>8</Event_Param1>
+						<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+						<Prereq>Dialogo_Fin_02</Prereq>
+					</Event>
+	
+			<Event Name="Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>30</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Rebel</Reward_Param1>
+				<Prereq>Objetivos_Completados</Prereq>
+			</Event>
+	
+	
+	
+	<Event Name="Proteger_fuerzas">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Rebel</Event_Param1>
+		<Event_Param3>DESTROY_ALL</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+		
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_YAGDUL_R</Reward_Param1>
+		<Prereq>Proteger_fuerzas</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empire</Reward_Param1>
+				<Prereq>Objetivos_InCompletados1</Prereq>
+			</Event>
+			
+<!--DIALOGOS DE LA MISION ACTIVADOS POR EL SCRIPT -->			
+	<Event Name="Informe_00">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_00_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_00_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE00_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_00</Prereq>
+	</Event>
+			<Event Name="Informe_00_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_00_Text</Prereq>
+			</Event>
+	<Event Name="Informe_01_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE01_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_00_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_01_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_01_Text</Prereq>
+			</Event>		
+	<Event Name="Informe_02">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_01_DIALOGUE_GO</Event_Param2>
+	</Event>		
+	<Event Name="Informe_02_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE02_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_02</Prereq>
+	</Event>
+			<Event Name="Informe_02_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_02_Text</Prereq>
+			</Event>	
+	<Event Name="Informe_03_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE03_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_02_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_03_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_03_Text</Prereq>
+			</Event>		
+	<Event Name="Informe_04_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE04_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_03_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_04_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_04_Text</Prereq>
+			</Event>
+	<Event Name="Informe_05_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE05_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_04_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_05_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_05_Text</Prereq>
+			</Event>
+			
+	<Event Name="Informe_06">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_02_DIALOGUE_GO</Event_Param2>
+	</Event>		
+	
+	<Event Name="Informe_06_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE06_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_06</Prereq>
+	</Event>
+			<Event Name="Informe_06_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_06_Text</Prereq>
+			</Event>
+	<Event Name="Informe_07_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE07_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_06_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_07_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_07_Text</Prereq>
+			</Event>
+	<Event Name="Informe_08">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_03_DIALOGUE_GO</Event_Param2>
+	</Event>		
+	<Event Name="Informe_08_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_ROGUE_SQUADRON_PARTE08_MISSION_05</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_08</Prereq>
+	</Event>
+			<Event Name="Informe_08_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_08_Text</Prereq>
+			</Event>
+</Story>

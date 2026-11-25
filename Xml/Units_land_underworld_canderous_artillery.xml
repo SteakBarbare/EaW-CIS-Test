@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+
+
+<Canderous_ArtilleryUnit_Data>
+	
+
+	<GroundVehicle Name="UV_Artillery">
+		<Variant_Of_Existing_Type>CanderousORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UV_ARTILLERY_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder AT_AT_Walker M1_Repulsor_Tank  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL SPMAT_Walker </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UV_ARTILLERY_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Icon_Name> i_button_UV_Artillery.tga </Icon_Name>
+
+		<Land_Model_Name>UV_Artillery_Tank.alo</Land_Model_Name>
+
+		<Armor_Type> Armor_ATAT2 </Armor_Type>
+        <Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+		
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>Yes</Auto_Deploys>
+		<Deployment_Anim_Rate>1.5</Deployment_Anim_Rate>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+		<Max_Dist_Walk_While_Deployed>150.0</Max_Dist_Walk_While_Deployed>
+        <Deployed_Walk_Anim_Speed>2</Deployed_Walk_Anim_Speed>
+        <Deployed_Walk_Speed>2.5</Deployed_Walk_Speed>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Speed>4.0</Turret_Rotate_Speed>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 55.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 4.0 </Targeting_Fire_Inaccuracy>
+
+		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles> 2 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>       
+		<Turret_Targets_Anything_Else> 1 </Turret_Targets_Anything_Else>
+
+		<Projectile_Types>Proj_Ground_Proton_TorpedoXU</Projectile_Types>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1250.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 350 </Targeting_Min_Attack_Distance>
+		<Targeting_Fire_Inaccuracy_Fixed_Radius> 40 </Targeting_Fire_Inaccuracy_Fixed_Radius>
+		
+		<Projectile_Fire_Pulse_Count>9</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>6.0</Projectile_Fire_Recharge_Seconds>
+		<Attack_Category_Restrictions> Air </Attack_Category_Restrictions>
+		
+		<CategoryMask> Vehicle | AntiStructure </CategoryMask>
+		<Targeting_Priority_Set>AntiStructure</Targeting_Priority_Set>
+		<AI_Combat_Power>375</AI_Combat_Power>
+
+		<Hardpoints>
+				HP_UV_Artillery_00, HP_UV_Artillery_01
+		</Hardpoints>
+
+		<SFXEvent_Fire>Unit_MPTL_Tank_Fire</SFXEvent_Fire>
+
+		<Vehicle_Thief_Inside_Clone>UV_Artillery_Captured</Vehicle_Thief_Inside_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Land_Hvy_Mptl_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius> 
+				<Area_Effect_Decal_Distance> 2000.0 </Area_Effect_Decal_Distance> 
+				<GUI_Activated_Ability_Name>  </GUI_Activated_Ability_Name> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Canderous_Death_Clone_00</Death_Clone>
+
+	</GroundVehicle>
+	<GroundVehicle Name="UV_Artillery_Captured">
+		<Variant_Of_Existing_Type>UV_Artillery</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> <!-- time that the user can't eject thief, kicks in right away -->
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="UV_Artillery_Tank_Company">
+		<Variant_Of_Existing_Type>Canderous_Assault_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UV_ARTILLERY_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder AT_AT_Walker M1_Repulsor_Tank  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL SPMAT_Walker </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UV_ARTILLERY_TANK TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_UV_Artillery.tga</Icon_Name>
+
+		<GUI_Row> 1 </GUI_Row>
+
+		<Build_Cost_Credits>3500</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>UV_Artillery, UV_Artillery</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>3500</Tactical_Build_Cost_Multiplayer>
+
+	</GroundCompany>
+
+
+
+</Canderous_ArtilleryUnit_Data>

@@ -1,0 +1,597 @@
+<?xml version="1.0"?>
+<Chiss_structures_Data>
+	<SpecialStructure Name="Chiss_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				Chiss_Level_Two_Tech_Upgrade,
+				Chiss_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Chiss</Affiliation>
+	
+   </SpecialStructure>
+
+	<GroundBuildable Name="Chiss_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Chiss</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Chiss_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Command_Center </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Chiss</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Chiss_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				Chiss_Bombing_Run_Use_Upgrade,
+				Chiss_Planetary_Bombard_Use_Upgrade,
+				TIE_Claw_Squadron_Land,
+				TIE_Claw_Bomber_Squadron_Land,
+				Ch_LandingCG,
+				Ch_LandingCG_Loader
+		</Tactical_Buildable_Objects_Multiplayer>
+				
+		<Starting_Spawned_Units_Tech_0>TIE_Claw_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Claw_Land, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Affiliation>Chiss</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Chiss_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Chiss_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Chiss_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Chiss_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Chiss_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Chiss_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Chiss_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Chiss_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Chiss_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Chiss_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Chiss_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Chiss_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Chiss_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Chiss_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Chiss_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> Chiss_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Chiss</Affiliation>
+
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Chiss_Power_Generator</Tactical_Additional_Structure_Type>	
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Chiss_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Chiss_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> Chiss_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Chiss_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+
+		<Obstacle_Proxy_Type> Power_Generator_E_Build_Pad </Obstacle_Proxy_Type>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Chiss_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Chiss_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Chiss_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Chiss_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Chiss_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+	</SpecialStructure>	
+	<SpecialStructure Name="Chiss_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, TURRET, WEAPON, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+		
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				Ch_StormT_Squad,
+				Ch_PlexT_Squad,
+				Ch_Scout_Squad,
+				Ch_Engi_Squad,
+				Ch_StormC_Squad,
+				Ch_Assault_Squad,
+				Ch_Sniper_Squad,
+				Ch_EWEB_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+				
+		<Starting_Spawned_Units_Tech_0>Ch_StormT_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_StormT_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Scout_Trooper, 5</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Scout_Trooper, -1</Reserve_Spawned_Units_Tech_0>
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="Chiss_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Chiss_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Ground_Barracks </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Chiss_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				Ch_MTV_7_Company,
+				Ch_Patrol_Speeder_Armor_Group,
+				AT_RCT_Walker_Company,
+				ATSTAP_Walker_Company,
+				ATSTAP_AA_Walker_Company,
+				Ch_ATSTAS_Squad,
+				AT_HT_Walker_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+				
+		<Starting_Spawned_Units_Tech_0>Ch_Patrol_Speeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_Patrol_Speeder, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>AT_HT_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_HT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>AT_RCT_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_RCT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Chiss_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Chiss_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Chiss_Ground_Light_Vehicle_Factory </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Chiss_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				Ch_AT_AA_Walker_Company,
+				CH_AT_AV_Walker_Company,
+				CH_AT_TT_Walker_Company,
+				Ch_S1_Tank_Armor_Group,
+				Ch_Heavy_Artillery_Group,
+				CH_TR_MB_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+
+
+		<Starting_Spawned_Units_Tech_0>Ch_AT_AA_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_AT_AA_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>CH_AT_TT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CH_AT_TT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ch_S1_Tank, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_S1_Tank, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	<GroundBuildable Name="Chiss_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Chiss_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Ground_Heavy_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Chiss_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+				
+		<Starting_Spawned_Units_Tech_0>CH_AT_AV_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CH_AT_AV_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>CH_AT_TT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CH_AT_TT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+					
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Chiss_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Chiss_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+
+
+	<SpecialStructure Name="Chiss_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Chiss,
+				EL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Chiss_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Chiss_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Chiss_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_OfficerAcademy.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Chiss_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Destruction_Survivors> 
+			Chiss_Survivors_Small, 1.0
+			Chiss_Survivors_Medium, 1.0
+			Chiss_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Chiss_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+		
+		<Starting_Spawned_Units_Tech_0>Field_Com_Chiss_Team, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Field_Com_Chiss_Team, -1</Reserve_Spawned_Units_Tech_0>
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Chiss_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Chiss, PC_Chiss_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Ch_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Chiss_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Chiss_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Chiss_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+</Chiss_structures_Data>
+
+
+

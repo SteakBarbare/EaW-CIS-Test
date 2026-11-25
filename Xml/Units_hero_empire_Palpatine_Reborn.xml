@@ -1,0 +1,525 @@
+<?xml version="1.0"?>
+<Emperor_Palpatine2Unit_Data>
+	
+	
+	<HeroUnit Name="Emperor_Palpatine2">
+		<Variant_Of_Existing_Type>Emperor_Palpatine</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PALPATINE2_01 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Land_Model_Name>Ei_PalpatineYoung.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Palpatine_Young.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<CategoryMask> LandHero </CategoryMask>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				Carnor_Jax_Team,
+				Sedriss_Team,
+				Dark_Nist_Team,
+				Dark_Katth_Team,
+				Dark_Goir_Team,
+				Dark_Sha_Team
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Emperor_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Emperor_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Redirect_Blaster_Ability Name="Emperor_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | landhero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+			<Absorb_Blaster_Ability Name="Emperor_Absorb_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Absorb_Chance>0.6</Absorb_Chance>
+				<Damage_Absorb_Percentage>0.2</Damage_Absorb_Percentage>
+				<Damage_Absorb_Amount>1</Damage_Absorb_Amount>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Absorb</SFXEvent_Activate>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 0.4, 0.4</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Absorb_Blaster_Ability>
+
+			<Saber_Throw_Ability Name="Luke_Saber_Throw">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>200.0</Activation_Max_Range>
+                <Saber_Name>Sith_Light_Saber</Saber_Name>
+                <Catch_Dist>15.0</Catch_Dist>
+            </Saber_Throw_Ability>
+			
+			<Force_Lightning_Ability Name="Emperor_Force_Lightning">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>175.0</Activation_Max_Range>
+				<Applicable_Unit_Categories>Infantry | landhero</Applicable_Unit_Categories>
+				<Damage_Amount>9999.0</Damage_Amount>
+				<Damage_Application_Time_In_Secs>2.3893</Damage_Application_Time_In_Secs>
+				<Start_Lightning_Frame_Number> 8 </Start_Lightning_Frame_Number>
+				<Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>	
+				<Lightning_Source_Bone_Name>B_HAND_L</Lightning_Source_Bone_Name>
+				<Lightning_Target_Bone_Name>B_PELVIS</Lightning_Target_Bone_Name>
+				<Lightning_Max_Targets> 15 </Lightning_Max_Targets> 				
+				<Lightning_Targets_Radius> 100.0 </Lightning_Targets_Radius>		
+				<SFXEvent_Activate>Unit_Force_Lightning</SFXEvent_Activate>
+				<Target_Particle_Effect>Force_Lightning_Smoke</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_PELVIS</Target_Particle_Bone_Name> 
+				<Target_Light_Effect_Type>Linear_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.3, 0.3, 0.8</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>2.3893</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>25</Target_Light_Effect_Pulse_Count>
+			</Force_Lightning_Ability>
+
+			<Earthquake_Attack_Ability Name="Emperor_Attack_Structures">
+				<Activation_Style>Special_Attack</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>250.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.01</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.2</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Structure</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
+			</Earthquake_Attack_Ability>
+						
+			<Combat_Bonus_Ability Name="Emperor_Space_Combat_All_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Combat_Bonus_Ability Name="Emperor_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air | Landhero </Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air | Landhero</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Force_Healing_Ability Name="Emperor_AE_Force_Corruption">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>70.0</Heal_Range>
+				<Heal_Amount>-3.0</Heal_Amount> 
+				<Heal_Interval_In_Secs>3.0</Heal_Interval_In_Secs>
+				<Applicable_Unit_Categories> Infantry </Applicable_Unit_Categories>
+				
+				<SFXEvent_Target_Affected>Unit_Force_Corruption</SFXEvent_Target_Affected>	
+				<Target_Particle_Effect>Corrupt_Enemy</Target_Particle_Effect>	
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Smooth_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.1, 0.1, 0.1</Target_Light_Effect_Color>	
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>1.0</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+			<Remove_Corruption_Ability Name="Emperor_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+			<Force_Whirlwind_Ability Name="Vader_Force_Whirlwind">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>500.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Force_Whirlwind_Ability>
+		</Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Emperor_Palpatine2_Team">
+		<Variant_Of_Existing_Type>Emperor_Palpatine_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE2</Text_ID>
+		<Icon_Name>i_button_Palpatine_Young.tga</Icon_Name>
+		<Company_Transport_Unit>PalpatineReborn_Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Emperor_Palpatine2</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>3800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_PALPATINE2_01 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+
+		<CategoryMask>LandHero</CategoryMask>
+	</HeroCompany>
+	
+	<HeroUnit Name="Emperor_Palpatine3">
+		<Variant_Of_Existing_Type>Emperor_Palpatine</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PALPATINE2_01 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Land_Model_Name>Ei_PalpatineYoung.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Palpatine_Young.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Emperor_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Emperor_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Redirect_Blaster_Ability Name="Emperor_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | landhero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+			<Absorb_Blaster_Ability Name="Emperor_Absorb_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Absorb_Chance>0.6</Absorb_Chance>
+				<Damage_Absorb_Percentage>0.2</Damage_Absorb_Percentage>
+				<Damage_Absorb_Amount>1</Damage_Absorb_Amount>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Absorb</SFXEvent_Activate>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 0.4, 0.4</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Absorb_Blaster_Ability>
+
+			<Saber_Throw_Ability Name="Luke_Saber_Throw">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>200.0</Activation_Max_Range>
+                <Saber_Name>Sith_Light_Saber</Saber_Name>
+                <Catch_Dist>15.0</Catch_Dist>
+            </Saber_Throw_Ability>
+			
+			<Force_Lightning_Ability Name="Emperor_Force_Lightning">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>175.0</Activation_Max_Range>
+				<Applicable_Unit_Categories>Infantry | landhero</Applicable_Unit_Categories>
+				<Damage_Amount>9999.0</Damage_Amount>
+				<Damage_Application_Time_In_Secs>2.3893</Damage_Application_Time_In_Secs>
+				<Start_Lightning_Frame_Number> 8 </Start_Lightning_Frame_Number>
+				<Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>	
+				<Lightning_Source_Bone_Name>B_HAND_L</Lightning_Source_Bone_Name>
+				<Lightning_Target_Bone_Name>B_PELVIS</Lightning_Target_Bone_Name>
+				<Lightning_Max_Targets> 15 </Lightning_Max_Targets> 				
+				<Lightning_Targets_Radius> 100.0 </Lightning_Targets_Radius>		
+				<SFXEvent_Activate>Unit_Force_Lightning</SFXEvent_Activate>
+				<Target_Particle_Effect>Force_Lightning_Smoke</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_PELVIS</Target_Particle_Bone_Name> 
+				<Target_Light_Effect_Type>Linear_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.3, 0.3, 0.8</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>2.3893</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>25</Target_Light_Effect_Pulse_Count>
+			</Force_Lightning_Ability>
+
+			<Earthquake_Attack_Ability Name="Emperor_Attack_Structures">
+				<Activation_Style>Special_Attack</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>250.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.01</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.2</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Structure</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
+			</Earthquake_Attack_Ability>
+
+			<Combat_Bonus_Ability Name="Emperor_Space_Combat_All_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Combat_Bonus_Ability Name="Emperor_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air | Landhero </Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air | Landhero</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Force_Healing_Ability Name="Emperor_AE_Force_Corruption">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>70.0</Heal_Range>
+				<Heal_Amount>-3.0</Heal_Amount> 
+				<Heal_Interval_In_Secs>3.0</Heal_Interval_In_Secs>
+				<Applicable_Unit_Categories> Infantry </Applicable_Unit_Categories>
+				
+				<SFXEvent_Target_Affected>Unit_Force_Corruption</SFXEvent_Target_Affected>	
+				<Target_Particle_Effect>Corrupt_Enemy</Target_Particle_Effect>	
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Smooth_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.1, 0.1, 0.1</Target_Light_Effect_Color>	
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>1.0</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+			<Remove_Corruption_Ability Name="Emperor_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+			<Force_Whirlwind_Ability Name="Vader_Force_Whirlwind">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>500.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Force_Whirlwind_Ability>
+		</Abilities>
+
+	</HeroUnit>
+	<HeroCompany Name="Emperor_Palpatine3_Team">
+		<Variant_Of_Existing_Type>Emperor_Palpatine_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE2</Text_ID>
+		<Icon_Name>i_button_Palpatine_Young.tga</Icon_Name>
+		<Company_Transport_Unit>EclipseI_E3</Company_Transport_Unit>
+		<Company_Units>Emperor_Palpatine3</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>3800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_PALPATINE2_01 TEXT_TOOLTIP_REDUCE_TIME_10 </Encyclopedia_Text>
+
+	</HeroCompany>
+	
+	<HeroUnit Name="Emperor_Palpatine4">
+		<Variant_Of_Existing_Type>Emperor_Palpatine</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PALPATINE2_01 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Land_Model_Name>Ei_PalpatineYoung.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Palpatine_Young.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Emperor_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Emperor_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Redirect_Blaster_Ability Name="Emperor_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | landhero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+			<Absorb_Blaster_Ability Name="Emperor_Absorb_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Absorb_Chance>0.6</Absorb_Chance>
+				<Damage_Absorb_Percentage>0.2</Damage_Absorb_Percentage>
+				<Damage_Absorb_Amount>1</Damage_Absorb_Amount>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Absorb</SFXEvent_Activate>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 0.4, 0.4</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Absorb_Blaster_Ability>
+
+			<Saber_Throw_Ability Name="Luke_Saber_Throw">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>200.0</Activation_Max_Range>
+                <Saber_Name>Sith_Light_Saber</Saber_Name>
+                <Catch_Dist>15.0</Catch_Dist>
+            </Saber_Throw_Ability>
+			
+			<Force_Lightning_Ability Name="Emperor_Force_Lightning">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>175.0</Activation_Max_Range>
+				<Applicable_Unit_Categories>Infantry | landhero</Applicable_Unit_Categories>
+				<Damage_Amount>9999.0</Damage_Amount>
+				<Damage_Application_Time_In_Secs>2.3893</Damage_Application_Time_In_Secs>
+				<Start_Lightning_Frame_Number> 8 </Start_Lightning_Frame_Number>
+				<Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>	
+				<Lightning_Source_Bone_Name>B_HAND_L</Lightning_Source_Bone_Name>
+				<Lightning_Target_Bone_Name>B_PELVIS</Lightning_Target_Bone_Name>
+				<Lightning_Max_Targets> 15 </Lightning_Max_Targets> 				
+				<Lightning_Targets_Radius> 100.0 </Lightning_Targets_Radius>		
+				<SFXEvent_Activate>Unit_Force_Lightning</SFXEvent_Activate>
+				<Target_Particle_Effect>Force_Lightning_Smoke</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_PELVIS</Target_Particle_Bone_Name> 
+				<Target_Light_Effect_Type>Linear_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.3, 0.3, 0.8</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>2.3893</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>25</Target_Light_Effect_Pulse_Count>
+			</Force_Lightning_Ability>
+
+			<Earthquake_Attack_Ability Name="Emperor_Attack_Structures">
+				<Activation_Style>Special_Attack</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>250.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.01</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.2</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Structure</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
+			</Earthquake_Attack_Ability>
+
+			<Combat_Bonus_Ability Name="Emperor_Space_Combat_All_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Combat_Bonus_Ability Name="Emperor_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air | Landhero </Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air | Landhero</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Force_Healing_Ability Name="Emperor_AE_Force_Corruption">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>70.0</Heal_Range>
+				<Heal_Amount>-3.0</Heal_Amount> 
+				<Heal_Interval_In_Secs>3.0</Heal_Interval_In_Secs>
+				<Applicable_Unit_Categories> Infantry </Applicable_Unit_Categories>
+				
+				<SFXEvent_Target_Affected>Unit_Force_Corruption</SFXEvent_Target_Affected>	
+				<Target_Particle_Effect>Corrupt_Enemy</Target_Particle_Effect>	
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Smooth_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.1, 0.1, 0.1</Target_Light_Effect_Color>	
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>1.0</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+			<Remove_Corruption_Ability Name="Emperor_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+			<Force_Whirlwind_Ability Name="Vader_Force_Whirlwind">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>500.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Force_Whirlwind_Ability>
+		</Abilities>
+
+	</HeroUnit>
+	<HeroCompany Name="Emperor_Palpatine4_Team">
+		<Variant_Of_Existing_Type>Emperor_Palpatine_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE2</Text_ID>
+		<Icon_Name>i_button_Palpatine_Young.tga</Icon_Name>
+		<Company_Transport_Unit>EclipseII_E4</Company_Transport_Unit>
+		<Company_Units>Emperor_Palpatine4</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>3800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_PALPATINE2_01 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+
+	</HeroCompany>
+	
+	
+</Emperor_Palpatine2Unit_Data>

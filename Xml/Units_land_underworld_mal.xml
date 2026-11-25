@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+
+
+
+<MAL_VehicleUnit_Data>
+
+
+
+	<GroundVehicle Name="MAL_Rocket_Vehicle">
+		<Variant_Of_Existing_Type>MALORG</Variant_Of_Existing_Type>
+	
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Mal_Death_Clone_00</Death_Clone>
+
+	</GroundVehicle>
+
+	<GroundVehicle Name="MALORG">
+		<Variant_Of_Existing_Type>CanderousORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MAL</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank AT_ST_Walker R_Ground_Light_Vehicle_Factory  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Lancet_Air_Artillery Snowspeeder Rebel_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_MAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_uv_mal.tga</Icon_Name>
+
+		<Land_Model_Name>UV_MAL.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Select_Box_Scale>120</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>		
+
+		<Max_Speed>1.5</Max_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Size_Value>90</Size_Value>
+
+		<Affiliation>Underworld</Affiliation>
+
+		<Armor_Type> Armor_2M </Armor_Type>
+		<Shield_Armor_Type>Shield_LtTank</Shield_Armor_Type>
+		<Sensor_Range>200</Sensor_Range>
+		<Shield_Points>180</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Damage>21</Damage>
+
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>Yes</Auto_Deploys>
+        <Deployed_Max_Attack_Distance_Multiplier>1.0</Deployed_Max_Attack_Distance_Multiplier>
+		<Deployment_Anim_Rate>0.5</Deployment_Anim_Rate>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+
+		<Deployed_Turret_Rotate_Extent_Degrees>360</Deployed_Turret_Rotate_Extent_Degrees>
+		<Deployed_Turret_Elevate_Extent_Degrees>180</Deployed_Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Speed>8.0</Turret_Rotate_Speed>
+		<Turret_Bone_Name>B_turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_barrel</Barrel_Bone_Name>
+
+		<Turret_Targets_Ground_Infantry> 4 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles> 2 </Turret_Targets_Air_Vehicles>       
+		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
+
+		<Projectile_Types>Proj_MAL_Concussion_Missile, Proj_MAL_Carbonite_Missile </Projectile_Types>
+
+		<Land_FOW_Reveal_Range>320.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 10 </Targeting_Min_Attack_Distance>
+
+		<Targeting_Fire_Inaccuracy_Fixed_Radius> 40 </Targeting_Fire_Inaccuracy_Fixed_Radius> <!-- adding inaccuracy radius to MAL -->
+
+		<SFXEvent_Fire>Unit_MPTL_Tank_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Missile_Launcher</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Missile_Launcher</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Missile_Launcher</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Missile_Launcher</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Missile_Launcher</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Missile_Launcher </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Missile_Launcher </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> UHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> UHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> UHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<CategoryMask> Vehicle | AntiStructure | AntiVehicle </CategoryMask>
+
+		<Overall_Length>20.0</Overall_Length>
+		<Overall_Width>20.0</Overall_Width>
+
+ 		<AI_Combat_Power>300</AI_Combat_Power>
+
+		<Targeting_Priority_Set>Rocket_Vehicle_Attack_Priority</Targeting_Priority_Set>
+
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<FormationSpacing> 1.75 </FormationSpacing>
+		<FormationOrder> 8 </FormationOrder>
+		<Custom_Hard_XExtent> 30.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		<Custom_Hard_YExtent_Deployed> 24.0 </Custom_Hard_YExtent_Deployed>
+
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		<Vehicle_Thief_Inside_Clone>MAL_Captured</Vehicle_Thief_Inside_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_MAL_DEPLOY_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SWAP_WEAPONS</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_MAL_SWAP</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_MAL_SWAP_DESCRIPTION</Alternate_Description_Text>
+                <GUI_Activated_Ability_Name>MAL_Swap_Weapon</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+
+	</GroundVehicle>
+	<GroundVehicle Name="Mal_Death_Clone_00">
+		<Variant_Of_Existing_Type>M1_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>UV_MAL_D.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+	</GroundVehicle>
+	<GroundVehicle Name="MAL_Captured">
+		<Variant_Of_Existing_Type>MAL_Rocket_Vehicle</Variant_Of_Existing_Type>
+		
+	
+		<!-- MUST have same abilities PLUS EJECT_THIEF -->
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SWAP_WEAPONS</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_MAL_SWAP</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_MAL_SWAP_DESCRIPTION</Alternate_Description_Text>
+                <GUI_Activated_Ability_Name>MAL_Swap_Weapon</GUI_Activated_Ability_Name>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+
+
+	<GroundCompany Name="MAL_Rocket_Vehicle_Company">
+		<Variant_Of_Existing_Type>Canderous_Assault_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MAL_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank AT_ST_Walker R_Ground_Light_Vehicle_Factory  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Lancet_Air_Artillery Snowspeeder Rebel_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAL TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_uv_mal.tga</Icon_Name>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>1400</Build_Cost_Credits>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>MAL_Rocket_Vehicle, MAL_Rocket_Vehicle, MAL_Rocket_Vehicle</Company_Units>
+
+		<Cheap_Bribe_Cost>9</Cheap_Bribe_Cost>
+		<Expensive_Bribe_Cost>18</Expensive_Bribe_Cost>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Missile_Launcher</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Missile_Launcher</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+
+</MAL_VehicleUnit_Data>

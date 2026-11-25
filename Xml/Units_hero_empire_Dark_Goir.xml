@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<Dark_GoirUnit_Data>
+	
+	
+	
+	<GenericHeroUnit Name="Dark_Goir">
+		<Variant_Of_Existing_Type>Sith_generic</Variant_Of_Existing_Type>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Text_ID>TEXT_HERO_GOIR_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOIR TEXT_TOOLTIP_REDUCE_TIME_SITH_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Autoresolve_Health>350</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<CategoryMask> LandHero | SpaceHero </CategoryMask>
+		<Icon_Name>I_BUTTON_Ei_Vill_Goir.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+				<Type>FORCE_WHIRLWIND</Type>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Dark_Goir_Force_Whirlwind </GUI_Activated_Ability_Name> 
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>AREA_EFFECT_CONVERT</Type>
+				<Recharge_Seconds>50.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Mara_Corrupt_Blast </Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Convert_Emperor </SFXEvent_Target_Ability>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Dark_Goir_Production_Time_Reduction">
+					<Applicable_Unit_Types>Imperial_Sith</Applicable_Unit_Types>
+					<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+					<Stacking_Category>6</Stacking_Category>
+					<Galaxy_Wide> No </Galaxy_Wide>
+				</Reduce_Production_Time_Ability>
+			<Force_Whirlwind_Ability Name="Dark_Goir_Force_Whirlwind">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>500.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Force_Whirlwind_Ability>
+		
+			<Redirect_Blaster_Ability Name="Dark_Goir_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.9</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry, LandHero</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+			<Absorb_Blaster_Ability Name="Dark_Goir_Absorb_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Absorb_Chance>0.5</Absorb_Chance>
+				<Damage_Absorb_Percentage>0.1</Damage_Absorb_Percentage>
+				<Damage_Absorb_Amount>1</Damage_Absorb_Amount>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Absorb</SFXEvent_Activate>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 0.4, 0.4</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Absorb_Blaster_Ability>
+			<Remove_Corruption_Ability Name="Dark_Goir_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.1</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+			
+		</Abilities>
+	</GenericHeroUnit>	
+				
+	<HeroCompany Name="Dark_Goir_Team">
+		<Variant_Of_Existing_Type>Sedriss_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GOIR_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOIR TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Vill_Goir.tga</Icon_Name>
+
+		<Company_Transport_Unit>Dark_Goir_Howlrunner</Company_Transport_Unit>
+		<Company_Units>Dark_Goir</Company_Units>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Dark_Goir_Howlrunner">
+		<Variant_Of_Existing_Type>Sedriss_Howlrunner</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GOIR_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOIR </Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Vill_Goir.tga</Icon_Name>
+	</SpaceUnit>
+	
+	
+	
+		
+</Dark_GoirUnit_Data>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<General_Cracken_Hero_Files>
+	<GenericHeroUnit Name="General_Cracken">
+		<Variant_Of_Existing_Type>Comandante_Thanas</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_CRACKEN_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CRACKEN TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+
+		<Icon_Name>I_BUTTON_Ri_Airen_Cracken.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Spawn_Planet>Coruscant</Spawn_Planet>
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="General_Cracken_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.25</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Time_Ability Name="General_Cracken_Production_Time_Reduction">
+				<Applicable_Unit_Types>Rebel_Infiltrator_Team</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="General_Cracken_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="General_Cracken_Team">
+		<Variant_Of_Existing_Type>Thanas_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_CRACKEN_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CRACKEN TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Company_Units>General_Cracken</Company_Units>
+		<Icon_Name>I_BUTTON_Ri_Airen_Cracken.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Company_Transport_Unit>Cracken_Alliance_Shuttle</Company_Transport_Unit>
+		<Required_Special_Structures>R_Ground_Barracks</Required_Special_Structures>
+	</HeroCompany>	
+	
+	
+	
+
+</General_Cracken_Hero_Files>

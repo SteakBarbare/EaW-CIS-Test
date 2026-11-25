@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<RV_A5RXUnit_Data>
+
+	<GroundVehicle Name="RV_A5RX">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_A5RX</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank Canderous_Assault_Tank AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_A5RX</Encyclopedia_Text>
+		
+		<Affiliation>Rebel</Affiliation>
+		<Icon_Name>I_BUTTON_Rep_A5RX.TGA</Icon_Name>
+		<Land_Model_Name>Rep_A5RX.ALO</Land_Model_Name>
+		<Scale_Factor>0.50</Scale_Factor><!--Reescalado real-->
+		
+		<Behavior> SELECTABLE </Behavior>
+		<LandBehavior>BARRAGE, AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, TREAD_SCROLL, HUNT, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, SELF_DESTRUCT</LandBehavior>
+		
+		<Tactical_Health>850</Tactical_Health>
+		
+		<Turret_Rotate_Extent_Degrees>2</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_Jugger_Missile</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>4.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 5.0 </Fire_Inaccuracy_Distance>
+		
+		<HardPoints>
+			Rep_A5RX_Turret_00,
+			Rep_A5RX_Turret_01,
+			Rep_A5RX_Turret_02
+		</HardPoints>
+		
+		<SFXEvent_Fire>Unit_Missile_Fire</SFXEvent_Fire>
+				
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	
+		<SFXEvent_Engine_Idle_Loop> Unit_Juggernaut_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Juggernaut_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Attack_Clon_Trooper </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Jugger_Missile</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Death_Clone>Damage_Normal, Rep_A5RX_Death_Clone_00</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>RV_A5RX_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	
+	
+	<GroundVehicle Name="RV_A5RX_Captured">
+		<Variant_Of_Existing_Type>RV_A5RX</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundCompany Name="RV_A5RX_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_A5RX</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank Canderous_Assault_Tank AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_A5RX</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Rep_A5RX.TGA</Icon_Name>
+
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>CR25</Company_Transport_Unit>
+		<Company_Units>Rep_A5RX</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</RV_A5RXUnit_Data>

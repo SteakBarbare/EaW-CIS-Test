@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Ha_AT_RT_WalkerUnit_Data>
+	
+	<GroundVehicle Name="Ha_AT_RT_Walker">
+		<Variant_Of_Existing_Type> Rep_AT_RT_WalkerORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_RT_WALKER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Rebel_Sullustan_Squad MPTL </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATRT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ha_AT_RT.ALO</Land_Model_Name>
+		<Affiliation>Pirates, Hapan</Affiliation>
+
+		<Death_Clone>Damage_Normal, Ha_AT_RT_Walker_Death_Clone</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Ha_AT_RT_Walker_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_AT_RT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 20 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathClone> true </IsDeathClone>
+	</GroundVehicle>
+	<GroundCompany Name="Ha_AT_RT_Walker_Squad">
+		<Variant_Of_Existing_Type>Imperial_Light_Recon_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Hapan_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>Ha_AT_RT_Walker, Ha_AT_RT_Walker, Ha_AT_RT_Walker, Ha_AT_RT_Walker</Company_Units>
+	</GroundCompany>
+
+</Ha_AT_RT_WalkerUnit_Data>

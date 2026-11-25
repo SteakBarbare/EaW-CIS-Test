@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<R_Space_Sensor_SpawnedUnit_Data>
+	<SpecialStructure Name="Special_Space_Sensor_Spawned">
+		<Variant_Of_Existing_Type>R_Space_Sensor_Spawned</Variant_Of_Existing_Type>
+	</SpecialStructure>
+	<SpecialStructure Name="R_Space_Sensor_Spawned">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REMOTE_SENSOR_POD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_REMOTE_SENSOR_POD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_CORVETTE </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Space_Model_Name>NB_SpaceSensorNode.ALO</Space_Model_Name>
+		<Icon_Name>i_button_space_sensornode.tga</Icon_Name>
+		<Affiliation>Rebel, Empire, Underworld, CIS, Pirates, Republic</Affiliation>
+		<Autoresolve_Health>1</Autoresolve_Health>
+		<Shield_Points>800</Shield_Points>
+		<Tactical_Health>500</Tactical_Health>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 1000 </Reinforcement_Prevention_Radius>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Corvette</Shield_Armor_Type>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior> SPACE_OBSTACLE, ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT, SELF_DESTRUCT</SpaceBehavior>
+
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>9000.0</Space_FOW_Reveal_Range>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Name>mini_map_structure.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>1</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>Yes</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, R_Space_Sensor_Spawned_Death_Clone</Death_Clone>
+	</SpecialStructure>
+	<SpecialStructure Name="R_Space_Sensor_Spawned_Death_Clone">
+		<Text_ID>TEXT_UNIT_COMMRELAY</Text_ID>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Space_Model_Name>NB_SpaceSensorNode.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</R_Space_Sensor_SpawnedUnit_Data>

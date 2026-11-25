@@ -1,0 +1,134 @@
+﻿<?xml version="1.0"?>
+
+
+<Ha_Heavy_TrackedUnit_Data>
+	<GroundVehicle Name="Ha_Heavy_Tracked">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_HEAVY_TRACKED</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank AT_ST_Walker AT_AA_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker Imperial_MAAT Imperial_MAFT </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_HA_HEAVY_TRACKED</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Ha_Heavy_Tracked_Vehicle.ALO</Land_Model_Name>
+
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Empire, Hapan</Affiliation>
+
+		<Max_Speed>0.5</Max_Speed>
+		
+		<Armor_Type> Armor_ATAT </Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>1000</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<HardPoints>
+			HP_Ha_Heavy_Tracked_Turret_01, HP_Ha_Heavy_Tracked_Turret_02
+		</HardPoints>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>5</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_BlancoVacio_Laser</Projectile_Types>
+		
+		<AI_Combat_Power>250</AI_Combat_Power>
+		<Icon_Name>i_button_Ha_Heavy_Tracked.tga</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Juggernaut</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Juggernaut</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Juggernaut</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Juggernaut</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Juggernaut </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Juggernaut</SFXEvent_Assist_Attack>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	
+	
+		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_T4B_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Ha_HT_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Ha_HT_Death_Clone_00">
+		<Variant_Of_Existing_Type>Ha_Heavy_Tracked</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ha_Heavy_Tracked_Vehicle_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Ha_Heavy_Tracked_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_HEAVY_TRACKED</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank AT_ST_Walker AT_AA_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker Imperial_MAAT Imperial_MAFT </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_HA_HEAVY_TRACKED TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Advanced_Vehicle_Factory, AdvancedTech_6</Required_Special_Structures>
+
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>Ha_Heavy_Tracked</Company_Units>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+
+		<Icon_Name>i_button_Ha_Heavy_Tracked.tga</Icon_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>1150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<GroundCompany Name="Hapan_Heavy_Tracked_Brigade">
+		<Variant_Of_Existing_Type>Ha_Heavy_Tracked_Brigade</Variant_Of_Existing_Type>
+	
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Hapan_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		
+		<Tactical_Build_Cost_Multiplayer>1150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+
+</Ha_Heavy_TrackedUnit_Data>

@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<Projectiles>
+	<!-- Used for Underworld orbital bombardment -->
+	<Projectile Name="Proj_Krayt_Bombardment_Ion">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>p_kraytdestoyer_presuperblast.alo</Space_Model_Name>
+		<Land_Model_Name>p_kraytdestoyer_presuperblast.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_Default </Damage_Type>
+		<Max_Speed>20.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<AI_Combat_Power>3000</AI_Combat_Power>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		
+		<Projectile_Blast_Area_Range> 300 </Projectile_Blast_Area_Range>
+		<Projectile_Damage>1.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 500 </Projectile_Blast_Area_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		
+		<Projectile_Object_Detonation_Particle>p_orbital_impact_ion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>p_orbital_impact_ion</Projectile_Ground_Detonation_Particle>
+		
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>10.0</Projectile_Disable_Engines_Duration>
+		
+		<SFXEvent_Engine_Idle_Loop> Unit_Bombard_Projectile_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_Bombard_Projectile_Loop </SFXEvent_Engine_Moving_Loop>
+		<Projectile_SFXEvent_Detonate>SFX_Death_Bombard_Ion</Projectile_SFXEvent_Detonate>
+		<Death_SFXEvent_Start_Die>SFX_Death_Bombard</Death_SFXEvent_Start_Die>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+
+		<!-- Stun specifics -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Radius>300.0</Projectile_Ion_Stun_Radius>
+		<Projectile_Ion_Stun_Duration>7.0</Projectile_Ion_Stun_Duration> <!-- must be same as Projectile_Disable_Engines_Duration in this case -->
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent> <!-- almost total speed reduction -->
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent><!-- fire rate reduced to 20% -->
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+
+		<Projectile_Stun_On_Detonation>yes</Projectile_Stun_On_Detonation>
+		<Projectile_Stun_Duration_Frames>210</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>300</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect>Stunned_Object_Orbital_Consortium</Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> Vehicle | Structure </Projectile_Stun_Victims_Category_Mask>
+		<Projectile_Stun_Victims_Unit_Types> Scout_Trooper, IG-88, Droid_R2D2, Droid_C3P0, Dark_Trooper_PhaseI, Dark_Trooper_PhaseII, Dark_Trooper_PhaseIII </Projectile_Stun_Victims_Unit_Types>
+
+	</Projectile>
+
+
+
+
+	<!-- Used for Underworld orbital bombardment -->
+	<Projectile Name="Proj_Krayt_Bombardment_Damage">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>p_kraytdestoyer_superblast.alo</Space_Model_Name>
+		<Land_Model_Name>p_kraytdestoyer_superblast.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Max_Speed>16.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Blast_Area_Range>250.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+
+        <Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+        <Projectile_Blast_Area_Dropoff_Tiers>5</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Bombard_Projectile_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_Bombard_Projectile_Loop </SFXEvent_Engine_Moving_Loop>
+		<Projectile_SFXEvent_Detonate>SFX_Death_Bombard</Projectile_SFXEvent_Detonate>
+		<Death_SFXEvent_Start_Die>SFX_Death_Bombard</Death_SFXEvent_Start_Die>
+
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+
+		<Projectile_Object_Detonation_Particle>p_orbital_impact</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>p_orbital_impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>p_orbital_impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>p_orbital_impact</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>3000</AI_Combat_Power>
+	</Projectile>
+
+	<!-- Used for Rebel Orbital Bombardment -->
+	<Projectile Name="Proj_Rebel_Bombardment_Ion_Cannon">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_blueglow2.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Damage_Type> Damage_IonCannon_LRG </Damage_Type>
+		<AI_Combat_Power>200</AI_Combat_Power>
+		
+		<Max_Speed>25.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		
+		<Projectile_Damage>250.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+
+		<Projectile_Blast_Area_Damage> 200 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 50 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+
+		<!-- Stun specifics -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Radius>70.0</Projectile_Ion_Stun_Radius>
+		<Projectile_Ion_Stun_Duration>28.0</Projectile_Ion_Stun_Duration> <!-- must be same as Projectile_Disable_Engines_Duration in this case -->
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent> <!-- almost total speed reduction -->
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.5</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent><!-- fire rate reduced to 50% -->
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+
+		<Projectile_Stun_On_Detonation>yes</Projectile_Stun_On_Detonation>
+		<Projectile_Stun_Duration_Frames>840</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>70</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect>Stunned_Object_Orbital_Rebel</Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> Vehicle | Structure </Projectile_Stun_Victims_Category_Mask>
+		<Projectile_Stun_Victims_Unit_Types>Scout_Trooper, IG-88, Droid_R2D2, Droid_C3P0, Dark_Trooper_PhaseI, Dark_Trooper_PhaseII, Dark_Trooper_PhaseIII </Projectile_Stun_Victims_Unit_Types>
+
+		<Projectile_Object_Detonation_Particle>rebel_bombard_explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>rebel_bombard_explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>rebel_bombard_explosion</Projectile_Object_Armor_Reduced_Detonation_Particle>
+
+		<Projectile_Lifetime_Detonation_Particle />
+		<Projectile_Absorbed_By_Shields_Particle />
+
+		<Projectile_SFXEvent_Detonate>SFX_Ion_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+
+	</Projectile>
+	<Projectile Name="Proj_Rebel_Bombardment_Turbolaser">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_Redglow.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Damage_Type> Damage_Bomb </Damage_Type>
+		<AI_Combat_Power>200</AI_Combat_Power>
+		
+		<Max_Speed>25.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+
+		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+
+        <Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+        <Projectile_Blast_Area_Dropoff_Tiers>4</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Object_Detonation_Particle>rebel_bombard_explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>rebel_bombard_explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>rebel_bombard_explosion</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> rebel_bombard_explosion </Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>rebel_bombard_explosion</Projectile_Absorbed_By_Shields_Particle>
+
+		<Projectile_SFXEvent_Detonate>SFX_Death_Bombard</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Death_Bombard </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+
+	</Projectile>
+
+	<!-- Used for Empire Orbital Bombardment -->
+	<Projectile Name="Proj_Empire_Bombardment_Turbolaser">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_greenglow.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Damage_Type> Damage_Bomb </Damage_Type>
+		<AI_Combat_Power>200</AI_Combat_Power>
+		
+		<Max_Speed>25.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+
+		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+
+        <Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+        <Projectile_Blast_Area_Dropoff_Tiers>4</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Object_Detonation_Particle>empire_bombard_explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>empire_bombard_explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>empire_bombard_explosion</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> empire_bombard_explosion </Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>empire_bombard_explosion</Projectile_Absorbed_By_Shields_Particle>
+
+		<Projectile_SFXEvent_Detonate>SFX_Death_Bombard</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Death_Bombard </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+
+	</Projectile>
+	
+	<Projectile Name="Proj_Republic_Bombardment_Turbolaser">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_bluerep_glow.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Damage_Type> Damage_Bomb </Damage_Type>
+		<AI_Combat_Power>200</AI_Combat_Power>
+		
+		<Max_Speed>25.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+
+		<Projectile_Blast_Area_Range>100.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+
+        <Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+        <Projectile_Blast_Area_Dropoff_Tiers>4</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Object_Detonation_Particle>republic_bombard_explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>republic_bombard_explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>republic_bombard_explosion</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> republic_bombard_explosion </Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>republic_bombard_explosion</Projectile_Absorbed_By_Shields_Particle>
+
+		<Projectile_SFXEvent_Detonate>SFX_Death_Bombard</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Death_Bombard </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+
+	</Projectile>
+	
+	<!-- Bombing Run Projectiles: Use these for bombing runs only! -->
+	<Projectile Name="Proj_TIE_Bomber_Run_Bomb">
+		<Lua_Script>Hostile_BombRun_Bombardments</Lua_Script>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_THERMAL_DETONATOR.ALO</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<Damage_Type> Damage_Bomb </Damage_Type>
+		<Max_Speed>4.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior> PROJECTILE </Behavior>
+		<Projectile_Category>BOMB</Projectile_Category>
+		<Projectile_Bomb_Fall_Accel_Rate> 0.20 </Projectile_Bomb_Fall_Accel_Rate>
+		<Projectile_Blast_Area_Damage> 100.0 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 100.0 </Projectile_Blast_Area_Range>
+		<Projectile_Max_Flight_Distance>10000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>100.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle> Large_Explosion_Land </Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle> Large_Explosion_Land </Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> Large_Explosion_Land </Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Medium</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>Unit_Katarn_Building_Bomb_SFX</Projectile_SFXEvent_Detonate>
+		<AI_Combat_Power>80</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="TIE_Bomber_Bombing_Run_Bomb">
+		<Variant_Of_Existing_Type>Proj_TIE_Bomber_Run_Bomb</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_BombingRun_E.alo</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Projectile_Damage>100.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Empire_Bombing_Run_Explosion_Land </Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle> Empire_Bombing_Run_Explosion_Land </Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> Empire_Bombing_Run_Explosion_Land </Projectile_Lifetime_Detonation_Particle>
+	</Projectile>
+	<Projectile Name="Y_Wing_Bombing_Run_Bomb">
+		<Variant_Of_Existing_Type>Proj_TIE_Bomber_Run_Bomb</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_BombingRun_R.alo</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Projectile_Damage>100.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Rebel_Bombing_Run_Explosion_Land </Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle> Rebel_Bombing_Run_Explosion_Land </Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> Rebel_Bombing_Run_Explosion_Land </Projectile_Lifetime_Detonation_Particle>
+	</Projectile>
+	<Projectile Name="Skipray_Bombing_Run_Bomb">
+		<Variant_Of_Existing_Type>Proj_TIE_Bomber_Run_Bomb</Variant_Of_Existing_Type>
+		<Land_Model_Name>w_thermal_detonator_underworld.alo</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Projectile_Damage>100.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> underworld_Bombing_Run_Explosion_Land </Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle> underworld_Bombing_Run_Explosion_Land </Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> Empire_Bombing_Run_Explosion_Land </Projectile_Lifetime_Detonation_Particle>
+	</Projectile>
+</Projectiles>

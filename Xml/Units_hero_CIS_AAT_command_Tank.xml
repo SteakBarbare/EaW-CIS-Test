@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<CIS_AAT_MandoUnit_Data>
+	
+	
+	
+	<GroundVehicle Name="AAT_Command_Tank">
+		<Variant_Of_Existing_Type>AAT_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Vehicle_Thief_Inside_Clone>AAT_Repulsor_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Hardpoints>
+				HP_Gr_Front_Eweb_Laser_Green_00, HP_Gr_Front_Eweb_Laser_Green_01
+		</Hardpoints>
+		<Death_Clone>Damage_Normal, AAT_Death_Clone_00</Death_Clone>
+		
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_AAT_CIS</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Scout_Squad Empire_AT_AP_Company IMPV_19_landspeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT-TE_Company HAV_Juggernaut_Company UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_TOOLTIP_FIELD_DEPLOY TEXT_UNIT_MTT TEXT_UNIT_AAT_REPULSOR_TANK TEXT_UNIT_OG9 TEXT_UNIT_DROIDEKA_MK1 TEXT_UNIT_HAILFIRE_BRIGADE TEXT_UNIT_CIS_MAF TEXT_UNIT_WALK_DW TEXT_UNIT_VULTURE TEXT_UNIT_SUPERBDB2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_HERO_UNIT_FIELD_REBEL</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_AAT.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_AAT_Command_Blue.ALO,
+			Urban, 				CIS_AAT_Command_Blue.ALO,
+			Arctic, 			CIS_AAT_Command_Blue.ALO,
+			Volcanic, 			CIS_AAT_Command.ALO,
+			Desert, 			CIS_AAT_Command.ALO,
+			Forest, 			CIS_AAT_Command.ALO,
+			Swamp, 				CIS_AAT_Command.ALO
+		</Land_Terrain_Model_Mapping>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<CategoryMask> Vehicle </CategoryMask>
+		<Icon_Name> I_BUTTON_CIS_AAT_Command.tga </Icon_Name>
+	
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+		<Lua_Script>CIS_Plataforma_MandoX_Re</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+						
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_B1reconDroid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<HeroCompany Name="CIS_Plataforma_Mando_Team">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_AAT_CIS</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_TOOLTIP_FIELD_DEPLOY TEXT_UNIT_MTT TEXT_UNIT_AAT_REPULSOR_TANK TEXT_UNIT_OG9 TEXT_UNIT_DROIDEKA_MK1 TEXT_UNIT_HAILFIRE_BRIGADE TEXT_UNIT_CIS_MAF TEXT_UNIT_WALK_DW TEXT_UNIT_VULTURE TEXT_UNIT_SUPERBDB2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_HERO_UNIT_FIELD_REBEL</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_CIS_AAT_Command.tga</Icon_Name>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>CIS_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>CIS_Lucrehulk_AAT_Mando_Ship</Company_Transport_Unit>
+		<Company_Units>AAT_Command_Tank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_B1reconDroid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+		
+		
+				
+		<Tactical_Build_Cost_Multiplayer>12000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>-1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		
+		
+		<Population_Value>1</Population_Value>
+		<CategoryMask>LandHero</CategoryMask>
+	</HeroCompany>
+	<HeroCompany Name="CIS_Plataforma_Mando_Team_Space_MP">
+		<Variant_Of_Existing_Type>CIS_Plataforma_Mando_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_CIS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LUCREHULKC TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_LUCREHULKB TEXT_UNIT_TECNO_CRUISER TEXT_UNIT_PIRATE_MUNIFICENT </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_TOOLTIP_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Heroes>No</Build_Tab_Heroes>
+		<Tactical_Build_Cost_Multiplayer>12000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+	</HeroCompany>
+	
+	<GroundVehicle Name="AAT_Repulsor_Tank_special">
+		<Variant_Of_Existing_Type>AAT_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Lua_Script>CIS_Plataforma_MandoX2_Re</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="C_AAT_Group_special">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<Company_Units>AAT_Repulsor_Tank_special, AAT_Repulsor_Tank, AAT_Repulsor_Tank</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>Lucrehulk_Craft</Company_Transport_Unit>
+	</GroundCompany>
+
+	<TransportUnit Name="CIS_Lucrehulk_AAT_Mando_Ship">
+		<Variant_Of_Existing_Type>CIS_LucrehulkC</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Lucrehulk_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>		
+		<Text_ID>TEXT_HERO_UNIT_FLEET_CIS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LUCREHULKC TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_LUCREHULKB TEXT_UNIT_TECNO_CRUISER TEXT_UNIT_PIRATE_MUNIFICENT </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_TOOLTIP_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Landing_Transport_Variant>Gtrans_Craft_Landing</Landing_Transport_Variant>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<AI_Combat_Power>4935</AI_Combat_Power>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space3</Lua_Script>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_CIS_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>CIS_Fleet_Com_1_M</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_B1reconDroid</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Battlefield_Modifier_Ability Name="CIS_AAT_Command_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>3.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+	</TransportUnit>
+</CIS_AAT_MandoUnit_Data>

@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Up_R_MC80BI_to_IIUnit_Data>
+	
+	<SpaceUnit Name="Up_R_MC80BI_to_II">
+		<Variant_Of_Existing_Type>Up_R_Strike_to_StrikeMod</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_UNIT_CALAMARI_CRUISER</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_CALAMARI_CRUISER_MKII TEXT_TOOLTIP_MON_CALAMARI_CRUISER_MKII</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_RV_MC80B_UPGRADE.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosR</Required_Special_Structures>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Orbiting_Units>Calamari_Cruiser</Required_Orbiting_Units>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Lua_Script>Up_R_MC80BI_to_II</Lua_Script>
+		<Population_Value>4</Population_Value>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+	</SpaceUnit>
+	<SpaceUnit Name="Calamari_Cruiser_Up">
+		<Variant_Of_Existing_Type>MC80B_UPORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Death_Clone>Damage_Normal, Mc80b_EJ_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B_Wing_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>B_Wing_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+	</SpaceUnit>
+	<SpaceUnit Name="MC80B_UPORG">
+		<Variant_Of_Existing_Type>Mc80bORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CALAMARI_CRUISER_MKII</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer Acclamator_Assault_Ship Interceptor4_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Skipray_Blastboat </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MON_CALAMARI_CRUISER_MKII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X2 TEXT_UNIT_B_WING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>RV_MC80b_MKII_ver03.ALO</Space_Model_Name>
+
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		
+		<Affiliation>Rebel</Affiliation>
+
+		<Autoresolve_Health>36000</Autoresolve_Health>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<AI_Combat_Power>4215</AI_Combat_Power>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+				
+		<HardPoints> 
+			HP_ISD_Super_IonS_00,
+			HP_ISD_Super_IonS_01,
+			HP_T_MC80A2N_01,
+			HP_T_MC80A2N_02,
+			HP_T_MC80A2N_03,
+			HP_T_MC80A2N_04,
+			HP_T_MC80A2N_05,
+			HP_T_MC80A2N_06,
+			HP_T_MC80A2N_07,
+			HP_T_MC80A2N_08,
+			HP_T_MC80A2N_09,
+			HP_T_MC80A2N_10,
+			HP_T_MC80A2N_11,
+			HP_T_MC80A2N_12,
+			HP_T_MC80A2N_13,
+			HP_T_MC80A2N_14,
+			HP_T_MC80A2N_15,
+			HP_T_MC80A2N_16,
+			HP_T_MC80A2N_17,
+			HP_T_MC80A2N_18,
+			HP_T_MC80A2N_19,
+			HP_T_MC80A2N_20,
+			HP_T_MC80A2N_21,
+			HP_T_MC80A2N_22,
+			HP_T_MC80A2N_23,
+			HP_T_MC80A2N_24,
+			HP_T_MC80A2N_25,
+			HP_T_MC80A2N_26,
+			HP_T_MC80A2N_27,
+			HP_T_MC80A2N_28,
+			HP_T_MC80A2N_29,
+			HP_T_MC80A2N_30,
+			HP_T_MC80A2N_31,
+			HP_T_MC80A2N_32,
+			HP_T_MC80A2N_33,
+			HP_T_MC80A2N_34,
+			HP_T_MC80A2N_35,
+			HP_T_MC80A2N_36,
+			HP_T_MC80A2N_37,
+			HP_T_MC80B2N_38,
+			HP_T_MC80B2N_39,
+			HP_T_MC80B2N_40,
+			HP_T_MC80B2N_41,
+			HP_T_MC80B2N_42,
+			HP_T_MC80B2N_43,
+			HP_T_MC80B2N_44,
+			HP_T_MC80B2N_45,
+			HP_T_MC80B2N_46,
+			HP_T_MC80B2N_47,
+			HP_Shield_GeneratorH_00, 
+			HP_Shield_GeneratorH_01, 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Fighter_BayH_00
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_RV_Mc80b_EJ.tga</Icon_Name>
+		<GUI_Model_Name>RV_MC80b_MKII_ver03.ALO</GUI_Model_Name>
+		
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Enable_Radar_Ability Name="R_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+ 		
+	
+		<Tactical_Build_Cost_Multiplayer>4500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+	
+		
+	</SpaceUnit>
+
+	<SpaceUnit Name="MC80BII_Death_Clone">
+		<Text_ID> TEXT_UNIT_CALAMARI_CRUISER </Text_ID>
+		<Space_Model_Name>RV_MC80b_MKII_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor>0.65</Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Up_R_MC80BI_to_IIUnit_Data>

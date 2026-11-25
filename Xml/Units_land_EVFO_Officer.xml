@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<EVFO_OfficerUnit_Data>
+	<GroundInfantry Name="EVFO_Officer_Escort">
+		<Variant_Of_Existing_Type> B1Droid_SniperORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_STORMTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVFO_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Land_Model_Name>EVFO_StormTrooper.alo</Land_Model_Name>
+		<Icon_Name>i_button_EVFO_Stormtrooper.tga</Icon_Name>
+		
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Max_Speed> 1 </Max_Speed>
+		<Tactical_Health>100</Tactical_Health>
+
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		  
+		<AI_Combat_Power>12</AI_Combat_Power>
+
+		<Death_Clone>Damage_Force_Whirlwind, EVFO_Officer_Escort_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, EVFO_Officer_Escort_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, EVFO_Officer_Escort_Crush_Death_Clone</Death_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Conversion_Ability_Changes_To_Enemy> EVFO_Officer_Escort_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+	 <GroundInfantry Name="EVFO_Officer_Escort_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> EVFO_Officer_Escort </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="EVFO_Officer_Escort_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Officer_Escort</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+
+	<GroundInfantry Name="EVFO_Officer_Escort_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Officer_Escort</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="EVFO_Officer_Escort_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Officer_Escort</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	<GroundInfantry Name="Squad_EVFO_Officer_Escort">
+		<Variant_Of_Existing_Type> EVFO_Officer_Escort </Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	 </GroundInfantry>
+	
+	<GroundInfantry Name="EVFO_Officer">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_OFFICER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Land_Model_Name>EVFO_Officer_Male.alo</Land_Model_Name>
+		<Icon_Name>i_button_EVFO_Officer_Male.tga</Icon_Name>
+		
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Max_Speed> 1 </Max_Speed>
+		<Tactical_Health>70</Tactical_Health>
+
+		<Projectile_Types>Proj_Hand_Blaster_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Scout_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Scout_Trooper </SFXEvent_Assist_Attack>
+		  
+		<AI_Combat_Power>12</AI_Combat_Power>
+
+		<Death_Clone>Damage_Force_Whirlwind, EVFO_Officer_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, EVFO_Officer_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, EVFO_Officer_Crush_Death_Clone</Death_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		 <Abilities SubObjectList="Yes">
+			<Enhance_Defense_Ability Name="Empire_Field_Commander_Enhance_Defense">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.25</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+				<Unit_Strength_Category>Vehicle | Air | Infantry</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="Empire_Field_Commander_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.5</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+		
+		<Conversion_Ability_Changes_To_Enemy> EVFO_Officer_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+
+	  <GroundInfantry Name="EVFO_Officer_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> EVFO_Officer </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="EVFO_Officer_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Officer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+
+	<GroundInfantry Name="EVFO_Officer_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Officer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="EVFO_Officer_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Officer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	<GroundCompany Name="EVFO_Officer_Squad">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_OFFICER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_DESC_CI_CANTIDAD_6 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>EVFO_Ground_Barracks, E_XCommand, EVFO_Ground_Officer_Academy</Required_Special_Structures>
+		<Company_Transport_Unit>EVFO_Troop_Transport_L</Company_Transport_Unit>
+		<Company_Units> EVFO_Officer, EVFO_Officer_Escort, EVFO_Officer_Escort, EVFO_Officer_Escort, EVFO_Officer_Escort</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_EVFO_Officer_Male.tga</Icon_Name>
+		<GUI_Model_Name>EVFO_Officer_Male.ALO</GUI_Model_Name>
+		<Land_Model_Name>EVFO_Officer_Male.ALO</Land_Model_Name>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Empire_Field</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Move_Empire_Field</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EVFO_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+	
+	<Container Name="EVFO_Field_Commander_Team"><!-- solo usado en rb teams -->
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_OFFICER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_EVFO_Officer_Male.tga</Icon_Name>
+	</Container>
+</EVFO_OfficerUnit_Data>

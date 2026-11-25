@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<Cargofacility3_PlattformUnit_Data>
+	<SpecialStructure Name="Trade_Station">
+		<Variant_Of_Existing_Type>Cargofacility3_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TRADE_STATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRADE_STATION TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Affiliation>Empire, Rebel, Underworld, Hapan, Chiss, Hutts, Republic, CIS, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		<Base_Position>Orbital</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>1000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<AI_Combat_Power>800</AI_Combat_Power>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>SPACE_OBSTACLE, ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Space_FOW_Reveal_Range>1800.0</Space_FOW_Reveal_Range>
+
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		
+		<Starting_Spawned_Units_Tech_0>R_YT2000_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>R_YT2000_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Shadowclaw_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Shadowclaw_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+				
+		<HardPoints>
+			HP_Shipyard_Shield01, HP_Fighter_Bay_Invisible
+		</HardPoints>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+				
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Gambling_Ability Name="Nb_Trade_Station_Gambling_Income">
+				
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				
+				<Min_Income_Modifier>0.0</Min_Income_Modifier>
+				
+				<Max_Income_Modifier>1.4</Max_Income_Modifier>
+				
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+		</Abilities>
+		
+		<Additional_Population_Capacity>17</Additional_Population_Capacity>
+	</SpecialStructure>
+	<SpecialStructure Name="Co_Cargofacility">
+		<Variant_Of_Existing_Type>Trade_Station</Variant_Of_Existing_Type>
+		<Space_Model_Name>Co_Cargofacility.ALO</Space_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+				Co_LAATFighter_SquadronB,		
+				Co_V19_Torrent_SquadronB,
+				Co_Z95_SquadronB,
+				Co_R41_SquadronB,
+				Co_ARC170_SquadronB,
+				Co_Clockshape_SquadronB,
+				Co_YWing_SquadronB,
+				Co_XWing_SquadronB,
+				Co_Preybird_SquadronB,
+				Co_Irdfighter_SquadronB,
+				Co_T_Wing_SquadronB,
+				Co_BWing_SquadronB,
+				Co_A_Wing_SquadronB,
+			GAC,
+				Co_LAATFighter_SquadronB,		
+				Co_V19_Torrent_SquadronB,
+				Co_Z95_SquadronB,
+				Co_R41_SquadronB,
+				Co_ARC170_SquadronB,
+				Co_Clockshape_SquadronB,
+				Co_YWing_SquadronB,
+				Co_XWing_SquadronB,
+				Co_Preybird_SquadronB,
+				Co_Irdfighter_SquadronB,
+				Co_T_Wing_SquadronB,
+				Co_BWing_SquadronB,
+				Co_A_Wing_SquadronB,
+				Co_Tartan_Patrol_Cruiser,
+				Co_Marauder,
+				Co_Diamond,
+				Co_Nebulon_B,
+				Co_AcclamatorI,
+				Co_Dreadnought,
+				Co_Recusant,
+				Co_BulkCruiser,
+				Co_Missileship,
+				Co_MC40,
+				Co_VSD
+		</Tactical_Buildable_Objects_Multiplayer>
+		<HardPoints>
+			HP_T_Co_Cargofacility_01,
+			HP_T_Co_Cargofacility_02,
+			HP_T_Co_Cargofacility_03,
+			HP_T_Co_Cargofacility_04,
+			HP_T_Co_Cargofacility_05,
+			HP_T_Co_Cargofacility_06,
+			HP_T_Co_Cargofacility_07,
+			HP_T_Co_Cargofacility_08,
+			HP_T_Co_Cargofacility_09,
+			HP_T_Co_Cargofacility_10,
+			HP_T_Co_Cargofacility_11,
+			HP_T_Co_Cargofacility_12,
+			HP_T_Co_Cargofacility_13,
+			HP_T_Co_Cargofacility_14,
+			HP_T_Co_Cargofacility_15,
+			HP_T_Co_Cargofacility_16,
+			HP_Shipyard_Shield01
+		</HardPoints>	
+	</SpecialStructure>
+	<SpecialStructure Name="Cargofacility3_Plattform">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CARGOFACILITY2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CARGOFACILITY2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Cargofacility3X.ALO</Space_Model_Name>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Autoresolve_Health>15000</Autoresolve_Health>
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>1000000</Tactical_Health>
+		<Shield_Refresh_Rate>16000</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>90000</Energy_Refresh_Rate>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 1000 </Reinforcement_Prevention_Radius>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		<Icon_Name>I_BUTTON_NV_Cargofacility3X.TGA</Icon_Name>
+		<Score_Cost_Credits>1500</Score_Cost_Credits>
+		<Death_Clone>Damage_Normal, Cargofacility3_Plattform_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, SPAWN_SQUADRON, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_Shipyard_Shield01
+		</HardPoints>
+	</SpecialStructure>
+	<SpecialStructure Name="Cargofacility3_Plattform_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Cargofacility3X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Cargofacility_Union">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CARGOFACILITY2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CARGOFACILITY2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Cargofacility_UnionX.ALO</Space_Model_Name>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Shield_Points>1200</Shield_Points>
+		<Tactical_Health>1000</Tactical_Health>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 1000 </Reinforcement_Prevention_Radius>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		<Icon_Name>I_BUTTON_NV_Cargofacility3X.TGA</Icon_Name>
+		<Score_Cost_Credits>1500</Score_Cost_Credits>
+		<Death_Clone>Damage_Normal, Cargofacility_Union_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, SPAWN_SQUADRON, REVEAL, UNIT_AI</SpaceBehavior>
+		<HardPoints>
+			HP_Shipyard_Shield01
+		</HardPoints>
+	</SpecialStructure>
+	<SpecialStructure Name="Cargofacility_Union_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>NV_Cargofacility_UnionX.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>110.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpecialStructure>
+</Cargofacility3_PlattformUnit_Data>

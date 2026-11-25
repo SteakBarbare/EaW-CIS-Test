@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<WindcallerUnit_Data>
+	<GenericHeroUnit Name="Windcaller">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_WINDCALLER_TEAM</Text_ID>
+		<Icon_Name>i_button_Ei_Windcaller.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Spawn_Planet>Ord_Cantrell</Spawn_Planet>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WINDCALLER TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10</Encyclopedia_Text>
+		
+		<Abilities SubObjectList="Yes">
+			<Political_Transition_Bonus_Ability Name="Windcaller_Political_Transition_Bonus">
+				<Time_Reduction_Percentage>0.25</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Political_Transition_Bonus_Ability>
+			<Political_Control_Protection_Ability Name="Windcaller_Political_Protection">
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+			</Political_Control_Protection_Ability>
+			<Reduce_Production_Time_Ability Name="Windcaller_Production_Time_Reduction">
+				<Applicable_Unit_Types>Imperial_StormCommando_Squad</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Windcaller_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Windcaller_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_WINDCALLER_TEAM</Text_ID>
+		<Icon_Name>i_button_Ei_Windcaller.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Windcaller</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WINDCALLER TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10</Encyclopedia_Text>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Silri</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Silri</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+</WindcallerUnit_Data>

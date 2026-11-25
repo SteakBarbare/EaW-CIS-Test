@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<Ch_S1_TankUnit_Data>
+	
+<GroundVehicle Name="Ch_S1_Tank">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_S1_TANK</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MPTL T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T3B_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_S1_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name> i_button_Ch_S1_Tank.tga </Icon_Name>
+		<Land_Model_Name>Ch_S1_Tank.alo</Land_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor><!--Reescalado real-->
+		<Affiliation>Pirates, Chiss</Affiliation>
+		
+		<Armor_Type> Armor_ATAA </Armor_Type>
+        <Shield_Armor_Type>Shield_HvyTank</Shield_Armor_Type>
+
+		<Shield_Points>180</Shield_Points>
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+
+		<Projectile_Types>Proj_Main_Cannon_S1_Tank</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>1.0</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>50.0</Targeting_Min_Attack_Distance>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<AI_Combat_Power>140</AI_Combat_Power>
+
+		<CategoryMask> Vehicle </CategoryMask>
+
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+
+		<Vehicle_Thief_Inside_Clone>Ch_S1_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, S1_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="S1_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>M1_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_S1_Tank_D.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Ch_S1_Tank_Captured">
+		<Variant_Of_Existing_Type>Ch_S1_Tank</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Ch_S1_Tank_Armor_Group">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_S1_TANK_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MPTL Pod_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Plex_Soldier UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_S1_TANK TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>Ch_S1_Tank, Ch_S1_Tank, Ch_S1_Tank, Ch_S1_Tank</Company_Units>
+		<Icon_Name>i_button_Ch_S1_Tank.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</Ch_S1_TankUnit_Data>

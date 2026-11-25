@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE Coruscant ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Coruscant_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Coruscant_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_MISSION_OBJECTIVE_CORUSCANT_REP</Reward_Param1>
+				<Prereq>Batalla_de_Coruscant_Space</Prereq>
+			</Event>
+			
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>CIS</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Prevenir_victoria_prematura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>0</Reward_Param1>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+			
+				
+<!--DIALOGO Republica DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>TEXT_MISSION_DESCRIPTION_CORUSCANT_REP_00</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Coruscant_Space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="Proteger_Nave_Mando">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VenatorCody</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+				
+	<Event Name="Objetivos_InCompletados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_MISSION_OBJECTIVE_Coruscant_REP</Reward_Param1>
+		<Prereq>Proteger_Nave_Mando</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>CIS</Reward_Param1>
+				<Prereq>Objetivos_InCompletados</Prereq>
+			</Event>
+	
+	<Event Name="Grupo_de_naves_enemigas_destruido_01">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>CIS_LucrehulkB</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+		
+	<Event Name="Grupo_de_naves_enemigas_destruido_02">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Mano_Invisible_Mision_Coruscant</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Grupo_de_naves_enemigas_destruido_03">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>CIS_LucrehulkB02</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+		
+	<Event Name="Refuerzo_de_naves_enemigas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>TEXT_MESSAGE_RESCUE_FLEET_ENTER</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+		<Prereq>Grupo_de_naves_enemigas_destruido_01 Grupo_de_naves_enemigas_destruido_02 Grupo_de_naves_enemigas_destruido_03</Prereq>
+	</Event>		
+			 <Event Name="Refuerzo_de_naves_enemigasb">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Refuerzo_de_naves_enemigas</Prereq>
+			</Event>
+		
+	
+	<Event Name="Grupo_de_naves_enemigas_destruido_04">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>CIS_BulwarkI</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Grupo_de_naves_enemigas_destruido_05">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>CIS_Pinance</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Permitir_Retirada_Rebelde">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>CIS</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Grupo_de_naves_enemigas_destruido_04 Grupo_de_naves_enemigas_destruido_05</Prereq>
+	</Event>		
+	
+	<Event Name="Destruido_Todo_el_Enemigo">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>CIS</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	
+	<Event Name="Victoria_Republica_por_retirada_enemiga">
+		<Event_Type>STORY_GENERIC</Event_Type>
+		<Event_Param1>RETREAT_COMPLETE</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>Republic</Reward_Param1>
+		<Prereq>Permitir_Retirada_Rebelde</Prereq>
+		<Prereq>Destruido_Todo_el_Enemigo</Prereq>
+	</Event>
+			
+	<Event Name="Objetivos_Completados_Fin_Evento">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_MISSION_OBJECTIVE_CORUSCANT_REP</Reward_Param1>
+		<Prereq>Destruido_Todo_el_Enemigo</Prereq>
+		<Prereq>Victoria_Republica_por_retirada_enemiga</Prereq>
+	</Event>
+			<Event Name="Victoria_Republica">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>15</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Republic</Reward_Param1>
+				<Prereq>Objetivos_Completados_Fin_Evento</Prereq>
+			</Event>		
+	
+	<Event Name="Grupo_de_naves_amigas_destruido_01">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Rep_Integridad</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Grupo_de_naves_amigas_destruido_02">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Rep_Victoria</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Grupo_de_naves_amigas_destruido_03">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VenatorCody_Mision_Coruscant</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+		
+	<Event Name="Refuerzo_de_naves_amigas_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>TEXT_MESSAGE_RESCUE_FLEET_ENTER</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+		<Prereq>Grupo_de_naves_amigas_destruido_01 Grupo_de_naves_amigas_destruido_02 Grupo_de_naves_amigas_destruido_03 </Prereq>
+	</Event>		
+			 <Event Name="Refuerzo_de_naves_amigas_01b">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Refuerzo_de_naves_amigas_01</Prereq>
+			</Event>
+			
+	<Event Name="Grupo_de_naves_amigas_destruido_04">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Rep_MandatorI</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Grupo_de_naves_amigas_destruido_05">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Rep_MandatorII</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+	
+	<Event Name="Refuerzo_de_naves_amigas_02">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>TEXT_MESSAGE_RESCUE_FLEET_ENTER</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+		<Prereq>Grupo_de_naves_amigas_destruido_04 Grupo_de_naves_amigas_destruido_05</Prereq>
+	</Event>		
+			 <Event Name="Refuerzo_de_naves_amigas_02b">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Refuerzo_de_naves_amigas_02</Prereq>
+			</Event>
+<!--DIALOGOS DE LA MISION ACTIVADOS POR EL SCRIPT -->			
+
+	
+	<Event Name="Informe_00_Text">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>5</Event_Param1>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REP_EL_FINAL_DEL_CONFLICTO_01_PARTE00</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+			<Event Name="Informe_00_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_00_Text</Prereq>
+			</Event>
+	<Event Name="Informe_01_Text">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REP_EL_FINAL_DEL_CONFLICTO_01_PARTE01</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_00_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_01_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_01_Text</Prereq>
+			</Event>		
+	<Event Name="Informe_02_Text">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REP_EL_FINAL_DEL_CONFLICTO_01_PARTE02</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_01_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Informe_02_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_02_Text</Prereq>
+			</Event>	
+	
+</Story>

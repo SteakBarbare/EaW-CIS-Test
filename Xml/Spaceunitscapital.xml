@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<SpaceUnitsCapital>
+	
+	
+	
+	<SpaceUnit Name="Calamari_Cruiser">
+		<Variant_Of_Existing_Type>Mc80bORG</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_PesadosR</Required_Special_Structures>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y_Wing_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>15</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y_Wing_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MON_CALAMARI_CRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_X_WING TEXT_WAVES_X2 TEXT_UNIT_OLDBTLS3YWING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>Yes</Build_Can_Be_Unlocked_By_Slicer>
+		<Slice_Cost_Credits>3500</Slice_Cost_Credits>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+	</SpaceUnit>	
+	
+	
+		
+	<SpaceUnit Name="Star_Destroyer">
+		<Variant_Of_Existing_Type>Generic_Star_Destroyer</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>Empire, GA</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STAR_DESTROYER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>15</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron4, 18</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_ZLayerS</Lua_Script>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		
+	</SpaceUnit>
+
+	
+
+	<SpaceUnit Name="Star_Destroyer_E3">
+		<Variant_Of_Existing_Type>Star_Destroyer</Variant_Of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Shield_Points>1000</Shield_Points>
+		<Tech_Level>99</Tech_Level>
+		<Tactical_Health>2000</Tactical_Health>
+	</SpaceUnit>
+	
+
+</SpaceUnitsCapital>

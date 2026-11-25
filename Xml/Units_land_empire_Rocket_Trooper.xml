@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Rocket_TrooperUnit_Data>
+	<GroundVehicle Name="Rocket_Trooper">
+		<Variant_Of_Existing_Type>DarkTrooperSoldier</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROCKET_TROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ROCKET_TROOPER</Encyclopedia_Text>
+		<Armor_Type> Armor_Infantry_SH </Armor_Type>
+
+		<Land_Model_Name>Ei_Rockettrooper.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Ei_RocketTrooper.tga</Icon_Name>
+
+		<Land_Model_Anim_Override_Name>Ei_Rockettrooper.ALO</Land_Model_Anim_Override_Name>
+
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Empire</Affiliation>
+
+
+		<Tactical_Health>200</Tactical_Health>
+
+		<Land_FOW_Reveal_Range>225.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>180.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types>Proj_Rockettrooper_Blaster_Yellow</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+
+		<SFXEvent_Select>Unit_Select_Dark_Trooper_2</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Dark_Trooper_2</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_2</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_2</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_2</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_2 </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_2 </SFXEvent_Assist_Attack>
+
+		<Select_Box_Scale>25</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>JET_PACK</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_DT_JETPACK</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_DT_JETPACK_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_DT_Jet_Pack_Takeoff</SFXEvent_Target_Ability>
+				<Effective_Radius> -1.0 </Effective_Radius>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+				
+	</GroundVehicle>
+
+	<GroundCompany Name="Rocket_Trooper_Company">
+		<Variant_Of_Existing_Type>DarkTrooper_P1_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROCKET_TROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ROCKET_TROOPER TEXT_DESC_CI_CANTIDAD_2S</Encyclopedia_Text>
+		<Icon_Name>i_button_Ei_RocketTrooper.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		
+		<Build_Cost_Credits>750</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Doomgiver</Required_Orbiting_Units>
+
+		<Company_Transport_Unit>Assaultshuttle</Company_Transport_Unit>
+		<Company_Units>Rocket_Trooper, Rocket_Trooper</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Dark_Trooper_2</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_2</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+
+	</GroundCompany>
+
+
+
+</Rocket_TrooperUnit_Data>

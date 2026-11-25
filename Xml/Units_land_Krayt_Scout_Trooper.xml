@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Krayt_Scout_TrooperUnit_Data>
+	<GroundVehicle Name="Krayt_Scout_Trooper">
+		<Variant_Of_Existing_Type>Scout_Trooper</Variant_Of_Existing_Type>
+
+		<Affiliation>Krayt, Fel, Empire</Affiliation>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+				<Recharge_Seconds>64</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>4</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Scout_Trooper_Bomb</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	
+	</GroundVehicle>
+
+
+	<GroundInfantry Name="Krayt_Scout_Trooper_No_Bike">
+		<Variant_Of_Existing_Type> Scout_Trooper_No_Bike </Variant_Of_Existing_Type>
+	
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Presence_Induced_Animations>
+			Attention, 
+				Darth_Krayt,
+				Darth_Wyyrlok
+		</Presence_Induced_Animations>
+
+	</GroundInfantry>
+
+	
+	<GroundCompany Name="Krayt_Light_Scout_Squad">
+		<Variant_Of_Existing_Type> Imperial_Light_Scout_Squad </Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Required_Special_Structures>Krayt_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>Krayt_Scout_Trooper, Krayt_Scout_Trooper, Krayt_Scout_Trooper, Krayt_Scout_Trooper, Krayt_Scout_Trooper</Company_Units>
+	</GroundCompany>
+	
+	<GroundCompany Name="Fel_Light_Scout_Squad">
+		<Variant_Of_Existing_Type> Imperial_Light_Scout_Squad </Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Required_Special_Structures>Fel_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>Krayt_Scout_Trooper, Krayt_Scout_Trooper, Krayt_Scout_Trooper, Krayt_Scout_Trooper, Krayt_Scout_Trooper</Company_Units>
+	</GroundCompany>
+</Krayt_Scout_TrooperUnit_Data>

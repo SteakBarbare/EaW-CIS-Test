@@ -1,0 +1,183 @@
+﻿<?xml version="1.0"?>
+
+
+<Co_EspoWalker_101Unit_Data>
+	<GroundVehicle Name="Co_EspoWalker_101">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CO_ESPOWALKER_101</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_Z95Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPOWALKER_101</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Co_EspoWalker_101.ALO</Land_Model_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+
+		<Max_Speed>1.2</Max_Speed>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Required_Timeline>0</Required_Timeline>
+		<Size_Value>75</Size_Value>
+
+		<Armor_Type> Armor_ATST </Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>400</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<AI_Combat_Power>80</AI_Combat_Power>
+
+		<Projectile_Types>Proj_Mass_Driver_Tank, Proj_MAL_Carbonite_Missile </Projectile_Types>
+
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>240.0</Targeting_Max_Attack_Distance>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>
+		
+		<HardPoints>
+			HP_Ground_Plex_Missile
+		</HardPoints>
+
+		<Destruction_Survivors> 
+			Atst_Pilot_Survivor, 1.0 
+		</Destruction_Survivors>
+
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+		<Death_SFXEvent_Start_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Icon_Name>i_button_Co_EspoWalker_101.tga</Icon_Name>
+		<Select_Box_Scale>30</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Death_Clone>Damage_Normal, Co_EspoWalker_101_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Normal, Co_EspoWalker_101_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Normal, Co_EspoWalker_101_Death_Clone_02</Death_Clone>
+
+		<Vehicle_Thief_Inside_Clone>Co_EspoWalker_101_Captured</Vehicle_Thief_Inside_Clone>
+
+		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>SWAP_WEAPONS</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_MAL_SWAP</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_MAL_SWAP_DESCRIPTION</Alternate_Description_Text>
+                <GUI_Activated_Ability_Name>MAL_Swap_Weapon</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		
+
+	</GroundVehicle>
+
+	
+
+	<GroundVehicle Name="Co_EspoWalker_101_Captured">
+		<Variant_Of_Existing_Type>Co_EspoWalker_101</Variant_Of_Existing_Type>
+		
+	
+		<!-- MUST have same abilities PLUS EJECT_THIEF -->
+		<!-- Non-Hero unit abilities description -->
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="Co_EspoWalker_101_Death_Clone_00">
+		<Variant_Of_Existing_Type>Co_EspoWalker_101</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="Co_EspoWalker_101_Death_Clone_01">
+		<Variant_Of_Existing_Type>Co_EspoWalker_101</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+      <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="Co_EspoWalker_101_Death_Clone_02">
+		<Variant_Of_Existing_Type>Co_EspoWalker_101</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+	
+	<GroundCompany Name="Co_EspoWalker_101_Brigade">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_UNIT_CO_ESPOWALKER_101_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_Z95Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPOWALKER_101</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Corporate_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>Co_EspoWalker_101, Co_EspoWalker_101, Co_EspoWalker_101, Co_EspoWalker_101</Company_Units>
+		<Icon_Name>i_button_Co_EspoWalker_101.tga</Icon_Name>
+	
+		<Population_Value>1</Population_Value>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>SWAP_WEAPONS</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_MAL_SWAP</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_MAL_SWAP_DESCRIPTION</Alternate_Description_Text>
+                <GUI_Activated_Ability_Name>MAL_Swap_Weapon</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		
+		
+	</GroundCompany>
+</Co_EspoWalker_101Unit_Data>

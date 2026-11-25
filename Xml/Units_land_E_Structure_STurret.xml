@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<E_SPHAT_TurretUnit_Data>
+	
+	<GroundBuildable Name="UC_E_SPHAT_Turret">
+		<Variant_Of_Existing_Type> Basic_Skirmiss_Pad_Turret </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_SPHAT_TURRET</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_SPHAT_TURRET</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TURRET</Encyclopedia_Unit_Class>
+
+		<Affiliation> Empire, Rebel, Underworld, Chiss, Corporate, Hapan, Hutts, Republic, CIS, Krayt, Fel, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<Tactical_Buildable_Constructed> E_SPHAT_Turret </Tactical_Buildable_Constructed>	
+		
+		<Land_Model_Name>NB_SPHAT_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+
+		<Icon_Name>i_button_E_SPHAT_Turret.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>5000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 5 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0 </Tactical_Build_Start_Lower_Z>
+		<Tactical_Health> 175 </Tactical_Health>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+	</GroundBuildable>
+	
+	<GroundStructure Name="E_SPHAT_Turret">
+		<Variant_Of_Existing_Type> Underworld_Rocket_Pod </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_SPHAT_TURRET</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_SPHAT_TURRET</Encyclopedia_Text>
+		<Encyclopedia_Good_Against>C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_NR_N99_Tank_Droid_Brigade C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+
+		<Tactical_Health>600</Tactical_Health>
+
+		<Affiliation> Empire, Rebel, Underworld, Chiss, Corporate, Hapan, Hutts, Republic, CIS, Krayt, Fel, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<Targeting_Max_Attack_Distance>1250.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 50 </Targeting_Min_Attack_Distance>
+		
+		<LandBehavior> TURRET, TARGETING, WEAPON, UNIT_AI, REVEAL, HIDE_WHEN_FOGGED, DAMAGE_TRACKING, STUNNABLE, EARTHQUAKE_TARGET </LandBehavior>
+		<Land_Model_Name>NB_SPHAT_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Icon_Name>i_button_E_SPHAT_Turret.tga</Icon_Name>
+
+		<Projectile_Types>Proj_SPHAT_Beam</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Land_FOW_Reveal_Range>1200.0</Land_FOW_Reveal_Range>
+		<Turret_Rotate_Speed>1.5</Turret_Rotate_Speed>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel</Barrel_Bone_Name>
+		<Turret_Deployed_Rest_Angle>0.0, 0.0, 0.0</Turret_Deployed_Rest_Angle>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 40.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 55.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Fire>Unit_Rep_SPHAT_Fire</SFXEvent_Fire>
+		
+		<HardPoints>
+				E_SPHAT_Turret_00
+		</HardPoints>
+		
+		<CategoryMask> Structure | AntiVehicle </CategoryMask>
+	</GroundStructure>
+	<GroundBuildable Name="UC_E_AA_Turret">
+		<Variant_Of_Existing_Type> Basic_Skirmiss_Pad_Turret </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_TURRET_AA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AA_TURRET</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TURRET</Encyclopedia_Unit_Class>
+
+		<Affiliation> Empire, Rebel, Underworld, Chiss, Corporate, Hapan, Hutts, Republic, CIS, Krayt, Fel, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<Tactical_Buildable_Constructed> E_AA_Turret </Tactical_Buildable_Constructed>	
+		
+		<Land_Model_Name>EV_AA_XBCommand.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Icon_Name>i_button_e_anti_aircraft.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer> 800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>20</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0 </Tactical_Build_Start_Lower_Z>
+		<Tactical_Health> 175 </Tactical_Health>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+	</GroundBuildable>
+	<GroundStructure Name="E_AA_Turret">
+		<Variant_Of_Existing_Type> Underworld_Rocket_Pod </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_TURRET_AA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AA_TURRET</Encyclopedia_Text>
+		<Encyclopedia_Good_Against>C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_NR_N99_Tank_Droid_Brigade C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+
+		<Tactical_Health>600</Tactical_Health>
+
+		<Affiliation> Empire, Rebel, Underworld, Chiss, Corporate, Hapan, Hutts, Republic, CIS, Krayt, Fel, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 50 </Targeting_Min_Attack_Distance>
+		
+		<LandBehavior> TURRET, TARGETING, WEAPON, UNIT_AI, REVEAL, HIDE_WHEN_FOGGED, DAMAGE_TRACKING, STUNNABLE, EARTHQUAKE_TARGET </LandBehavior>
+		<Land_Model_Name>EV_AA_XBCommand.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Icon_Name>i_button_e_anti_aircraft.tga</Icon_Name>
+
+		<Projectile_Types>Proj_Flak_Pod</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>380.0</Land_FOW_Reveal_Range>
+		<Turret_Rotate_Speed>14.0</Turret_Rotate_Speed>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel</Barrel_Bone_Name>
+		<Turret_Deployed_Rest_Angle>0.0, 0.0, 0.0</Turret_Deployed_Rest_Angle>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Targeting_Priority_Set>AntiAir</Targeting_Priority_Set>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 25.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Fire>Unit_Anti_Air_Fire</SFXEvent_Fire>
+		
+		<CategoryMask> Structure | AntiAir </CategoryMask>
+	</GroundStructure>
+	
+</E_SPHAT_TurretUnit_Data>

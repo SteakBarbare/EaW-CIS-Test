@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<LabansatUnit_Data>
+	<HeroUnit Name="LabansatN">
+		<Variant_Of_Existing_Type>Labansat</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>No</Is_Generic_Hero>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+	</HeroUnit>
+	<HeroCompany Name="LabansatN_Team">
+		<Variant_Of_Existing_Type>Labansat_Team</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>No</Is_Generic_Hero>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Company_Units>LabansatN</Company_Units>
+	</HeroCompany>
+	<GenericHeroUnit Name="Labansat">
+		<Variant_Of_Existing_Type>General_MelvarORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LABANSAT</Text_ID>
+		<Land_Model_Name>NI_PirateSoldier.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>RI_INFANTRY.ALO</Land_Model_Anim_Override_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LABANSAT TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EV_LABANSAT.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Spawn_Planet>NalHutta</Spawn_Planet>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Projectile_Types>Proj_Hand_Blaster_Red_Hero</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.8</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<CategoryMask> LandHero | Spacehero </CategoryMask>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<SFXEvent_Select> Unit_Select_Pirate_Soldier </SFXEvent_Select>         		
+		<SFXEvent_Move> Unit_Move_Pirate_Soldier </SFXEvent_Move>  
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pirate_Soldier</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_Pirate_Soldier </SFXEvent_Attack>         		 
+		<SFXEvent_Guard> Unit_Guard_Pirate_Soldier </SFXEvent_Guard>            		 
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Pirate_Soldier </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Pirate_Soldier </SFXEvent_Assist_Attack> 
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Galactic_Stealth_Ability Name="Labansat_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Labansat_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Labansat_Production_Time_Reduction">
+				<Applicable_Unit_Types>Generic_Smuggler_E, Generic_Smuggler_R, Generic_Bounty_Hunter_E, Generic_Bounty_Hunter_R</Applicable_Unit_Types>
+					<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Neutralize_Hero_Ability Name="Labansat_Neutralize_Hero">
+				<Cost_Mod_By_Base_Level>0.0,0.0, 5.0,1.0</Cost_Mod_By_Base_Level>
+				<Cost_Mod_By_Previous_Neutralizations>0.0,0.0, 1000.0,750.0</Cost_Mod_By_Previous_Neutralizations>
+				<Cost_Mod_By_Planetary_Corruption_Level>0.0,0.0, 1.0,0.25</Cost_Mod_By_Planetary_Corruption_Level>
+				<General_Minor_Hero_Cost_Mod>1.0</General_Minor_Hero_Cost_Mod>
+				<General_Major_Hero_Cost_Mod>1.0</General_Major_Hero_Cost_Mod>
+				<Owner_Respawn_Time_In_Secs>120.0, 150.0</Owner_Respawn_Time_In_Secs>
+				<Target_Respawn_Time_In_Secs>240.0, 300.0</Target_Respawn_Time_In_Secs>
+				<Can_Neutralize_Minor_Heroes>Yes</Can_Neutralize_Minor_Heroes>
+				<Can_Neutralize_Major_Heroes>Yes</Can_Neutralize_Major_Heroes>
+			</Neutralize_Hero_Ability>
+
+		</Abilities>
+
+	</GenericHeroUnit>
+
+	<HeroCompany Name="Labansat_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H2_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LABANSAT TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EV_LABANSAT.tga</Icon_Name>
+
+		<Company_Transport_Unit>Labansat_Fighter</Company_Transport_Unit>
+		<Company_Units>Labansat</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Boba_Fett</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Boba_Fett</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Boba_Fett</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+		<CategoryMask>LandHero | SpaceHero</CategoryMask>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+	</HeroCompany>
+
+	<SpaceUnit Name="Labansat_Fighter_MP">
+		<Variant_Of_Existing_Type>Labansat_Fighter</Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>		
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<AI_Combat_Power>700</AI_Combat_Power>
+		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Labansat_Fighter">
+		<Variant_Of_Existing_Type>Mara_Blastboat</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LABANSAT</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LABANSAT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EV_LABANSAT.TGA</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Boba_Fett</SFXEvent_Build_Complete>
+
+		<SFXEvent_Select>Unit_Select_Pirate_Fighter</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Pirate_Fighter</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pirate_Fighter</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Pirate_Fighter</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Pirate_Fighter</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Pirate_Fighter </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Pirate_Fighter </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Pirate_Fighter </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Pirate_Fighter </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+
+		<Lua_Script>ObjectScript_MC30</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 10.0</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			 <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Labansat_Fighter_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Broadside_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		 <Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="Labansat_Fighter_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 3.0 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_Labansat_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_Attack_Broadside_Cruiser</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+	</SpaceUnit>
+</LabansatUnit_Data>

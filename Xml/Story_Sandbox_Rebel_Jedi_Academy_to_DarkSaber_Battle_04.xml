@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE YAVIN ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Yavin_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Yavin_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_YAVINDS</Reward_Param1>
+				<Prereq>Batalla_de_Yavin_Space</Prereq>
+			</Event>
+<!--DIALOGO DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_DSYAVINR</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Yavin_Space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="Destruir_KNIGHTHAMMER">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>KNIGHTHAMMER</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_VSD">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VSD2T</Event_Param1>
+		<Event_Param3>24</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_VSD_Cronus">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VSD13X</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_YAVINDS</Reward_Param1>
+		<Prereq>Destruir_KNIGHTHAMMER Destruir_VSD Destruir_VSD_Cronus</Prereq>
+	</Event>
+			
+	
+	
+	<Event Name="Proteger_EVENTOS_TACTICOS_HOME_ONE">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Home_One</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Proteger_MILLENNIUM_FALCON">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>MILLENNIUM_FALCON</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+		
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_YAVINDS</Reward_Param1>
+		<Prereq>Proteger_EVENTOS_TACTICOS_HOME_ONE Proteger_MILLENNIUM_FALCON</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empire</Reward_Param1>
+				<Prereq>Objetivos_InCompletados1</Prereq>
+			</Event>
+	
+</Story>

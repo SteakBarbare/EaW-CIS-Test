@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<Rep_Comm_ShipUnit_Data>
+	<SpaceUnit Name="Up_Rep_VictorII_to_C">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VICTORIICRUISER</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_COMMSHIP TEXT_TOOLTIP_COMMSHIP</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Rep_CommShip.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA3, Republic_Ground_Officer_Academy</Required_Special_Structures>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Required_Orbiting_Units>Rep_VictorII</Required_Orbiting_Units>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Lua_Script>Up_Rep_VictorII_to_C</Lua_Script>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_Comm_Ship">
+		<Variant_Of_Existing_Type>Rep_VictorII_UpC</Variant_Of_Existing_Type>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_VictorII_UpC">
+		<Variant_Of_Existing_Type>Rep_VictorII</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_COMMSHIP</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_COMMSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_V19 TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Affiliation>Republic, Empire</Affiliation>
+				
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		
+		<Space_Model_Name>EV_VictorII.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_CommShip.tga</Icon_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>15</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 2000 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+
+	<SpaceUnit Name="Rep_Comm_Ship_SB">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Rep_Comm_Ship3_SB1">
+		<Variant_Of_Existing_Type>Rep_Lt_CRU_Awacs_FighterORG</Variant_Of_Existing_Type>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>Rep_STR1_Re</Lua_Script>	
+		<Text_ID>TEXT_UNIT_REP_LIGHT_CRUISER</Text_ID>
+		<Space_Model_Name>Rep_Light_Cruiser_Awacs.ALO</Space_Model_Name>
+		<Icon_Name>i_button_Rep_Light_Cruiser_Awacs.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_GOZANTI_IGV55 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<HardPoints>
+			HP_T_CRLt_Cruiser_03,
+			HP_T_CRLt_Cruiser_04,
+			HP_T_CRLt_Cruiser_05,
+			HP_T_CRLt_Cruiser_06,
+			HP_T_CRLt_Cruiser_07,
+			HP_T_CRLt_Cruiser_08,
+			HP_T_CRLt_Cruiser_09,
+			HP_T_CRLt_Cruiser_10,
+			HP_T_CRLt_Cruiser_11,
+			HP_T_CRLt_Cruiser_12
+		</HardPoints>
+		<Death_Clone>Damage_Normal, Rep_Lt_CRU_Death_Clone</Death_Clone>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 500 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>CORRUPT_SYSTEMS</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Rep_Lt_CRU_Awacs_Corrupt_Systems </GUI_Activated_Ability_Name> 
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+                <SFXEvent_Target_Ability> Unit_Attack_Pirate_Fighter</SFXEvent_Target_Ability>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_JAMMING_FIGHTER</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_JAMMING_FIGHTER_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_CORRUPT_SYSTEMS.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+            <Corrupt_Systems_Ability Name="Rep_Lt_CRU_Awacs_Corrupt_Systems">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>1000.0</Activation_Max_Range>
+                <Duration_In_Seconds>12</Duration_In_Seconds>
+                <Shield_Drain_Per_Second>6000</Shield_Drain_Per_Second>
+                <Inaccuracy_Radius>500</Inaccuracy_Radius>
+				<Target_Particle_Effect>Han_Solo_Target_Stun_Effect</Target_Particle_Effect>
+				<Owner_Particle_Effect>Tani_Stun_Particles</Owner_Particle_Effect>
+                <SFXEvent_Activate>Unit_IG88_Corrupt_Systems</SFXEvent_Activate>
+            </Corrupt_Systems_Ability>
+        </Abilities>
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship3_SB2">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship3_SB1</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>Rep_STR2_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship3_SB3">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship3_SB1</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>Rep_STR3_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship3_SB4">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship3_SB1</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>Rep_STR4_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship3_SB5">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship3_SB1</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>Rep_STR5_Re</Lua_Script>	
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Rep_Comm_Ship2_SB1">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re1</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship2_SB2">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re2</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship2_SB3">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re3</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship2_SB4">
+		<Variant_Of_Existing_Type>Rep_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re4</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Comm_Ship2_SB">
+		<Variant_Of_Existing_Type>Rep_Lt_CRU</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Icon_Name>I_BUTTON_Rep_CommShip2.tga</Icon_Name>
+		<!--<Lua_Script>Enemy_Space_Re5</Lua_Script>-->		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="RB_Rep_Comm_Ship2_SB1">
+		<Variant_Of_Existing_Type>RB_Rep_Comm_Ship2_SB5</Variant_Of_Existing_Type>
+		<!--<Lua_Script>RB_CW_Enemy_Space_Re1</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="RB_Rep_Comm_Ship2_SB2">
+		<Variant_Of_Existing_Type>RB_Rep_Comm_Ship2_SB5</Variant_Of_Existing_Type>
+		<!--<Lua_Script>RB_CW_Enemy_Space_Re2</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="RB_Rep_Comm_Ship2_SB3">
+		<Variant_Of_Existing_Type>RB_Rep_Comm_Ship2_SB5</Variant_Of_Existing_Type>
+		<!--<Lua_Script>RB_CW_Enemy_Space_Re3</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="RB_Rep_Comm_Ship2_SB4">
+		<Variant_Of_Existing_Type>RB_Rep_Comm_Ship2_SB5</Variant_Of_Existing_Type>
+		<!--<Lua_Script>RB_CW_Enemy_Space_Re4</Lua_Script>-->		
+	</SpaceUnit>	
+	<SpaceUnit Name="RB_Rep_Comm_Ship2_SB5">
+		<Variant_Of_Existing_Type>Rep_Lt_CRU</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Icon_Name>I_BUTTON_Rep_CommShip2.tga</Icon_Name>
+		<!--<Lua_Script>RB_CW_Enemy_Space_Re5</Lua_Script>-->		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+</Rep_Comm_ShipUnit_Data>

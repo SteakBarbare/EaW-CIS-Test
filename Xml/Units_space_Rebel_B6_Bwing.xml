@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<B6_BWingUnit_Data>
+
+
+
+	<SpaceUnit Name="B6_BWing">
+		<Variant_Of_Existing_Type>B-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B6_WING</Text_ID>
+		<Space_Model_Name>RV_B6_Bwing.ALO</Space_Model_Name>
+		<Icon_Name>i_button_RV_B6_BWing.tga</Icon_Name>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Encyclopedia_Text>TEXT_TOOLTIP_B6_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, WEAPON, TURRET, SELECTABLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, REVEAL, NEBULA </SpaceBehavior>
+		
+		<Turret_Rotate_Extent_Degrees>10</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>10</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>0.15</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Fire_Category_Restrictions> Fighter, Bomber </Fire_Category_Restrictions>
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Spacehero, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 0.0 </Fire_Inaccuracy_Distance>
+		<Projectile_Types>Proj_B6_BWing_Ability</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>60.0</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_B6_Beam_Fire</SFXEvent_Fire>
+
+		<HardPoints>
+			HP_B6_Ion_00, HP_B6_Ion_01, HP_BTLYWING_02, HP_Torpedo_Ability_00
+		</HardPoints>
+		
+	</SpaceUnit>
+	
+	<Squadron Name="B6_BWing_Squadron">
+		<Variant_Of_Existing_Type>B-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_B6_WING_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> ISDORG Victory_Destroyer Rep_AcclamatorI </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG TIE_Defender </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_B6_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_RV_B6_BWing.tga</Icon_Name>
+		<Squadron_Units>B6_BWing, B6_BWing, B6_BWing</Squadron_Units>
+		<Create_Team_Type>B6_BWing_Squadron_Container1</Create_Team_Type>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Rebel, RVRE</Affiliation>
+	</Squadron>
+
+	<Container Name="B6_BWing_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_B6_WING_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_B6_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RV_B6_BWing.tga</Icon_Name>
+
+		<Max_Speed>3.61</Max_Speed>
+		<Min_Speed>2.41</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>	
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-50.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>50.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</B6_BWingUnit_Data>

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<CIS_PinanceUnit_Data>
+	
+	<SpaceUnit Name="CIS_Pinance">
+		<Variant_Of_Existing_Type>CIS_PinanceORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Nantex_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Nantex_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, CIS_Pinance_Death_Clone</Death_Clone>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="CIS_PinanceORG">
+		<Variant_Of_Existing_Type>ProvidenceORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PINANCE</Text_ID>
+		<Encyclopedia_Good_Against> REP_AcclamatorI REP_AcclamatorII REP_RandEcliptic </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rep_MandatorI Rep_MandatorII Rep_NTB630_Squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PINANCE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_SSD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_NANTEX TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_CRUISER </Encyclopedia_Unit_Class>
+		<Space_Model_Name>CIS_Pinance.alo</Space_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_Pinance.tga</Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>99</Tech_Level>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<AI_Combat_Power>3015</AI_Combat_Power>
+		<Build_Time_Seconds>105</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Autoresolve_Health>43000</Autoresolve_Health>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Points>43000</Shield_Points>
+		<Shield_Refresh_Rate>49000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate>
+		<Max_Speed>2.2</Max_Speed>
+		
+		<Max_Rate_Of_Turn>0.25</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.15</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration>0.035</OverrideAcceleration>
+		<OverrideDeceleration>0.035</OverrideDeceleration>
+		<Max_Thrust>2.4</Max_Thrust>		
+		
+		<Layer_Z_Adjust>47.398</Layer_Z_Adjust>
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_SSD</Shield_Armor_Type>
+		
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+
+		<AI_Combat_Power>1200</AI_Combat_Power>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+		<Space_Layer> Frigate </Space_Layer>
+
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+				
+		<HardPoints>
+				HP_T_Pinance_01,
+				HP_T_Pinance_02,
+				HP_T_Pinance_03,
+				HP_T_Pinance_04,
+				HP_T_Pinance_05,
+				HP_T_Pinance_06,
+				HP_T_Pinance_07,
+				HP_T_Pinance_08,
+				HP_T_Pinance_09,
+				HP_T_Pinance_10,
+				HP_T_Pinance_11,
+				HP_T_Pinance_12,
+				HP_T_Pinance_13,
+				HP_T_Pinance_14,
+				HP_T_Pinance_15,
+				HP_T_Pinance_16,
+				HP_T_Pinance_17,
+				HP_T_Pinance_18,
+				HP_T_Pinance_19,
+				HP_T_Pinance_20,
+				HP_T_Pinance_21,
+				HP_T_Pinance_22,
+				HP_T_Pinance_23,
+				HP_T_Pinance_24,
+				HP_T_Pinance_25,
+				HP_Super_Ion_Blast_00,
+				HP_Super_Ion_Blast_01,				
+				HP_Super_Ion_Blast_02,
+				HP_Super_Ion_Blast_03,
+				HP_Shield_GeneratorH_00,
+				HP_EnginesH_00,
+				HP_Fighter_BayH_00,
+				HP_Fighter_BayH_01
+		</HardPoints>
+		
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Bombard_Select_Target> RHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> RHD_Bombard_Incoming </SFXEvent_Bombard_Incoming>
+		<SFXEvent_Build_Complete>Unit_Select_Nantex</SFXEvent_Build_Complete>
+
+		<SFXEvent_Select>Unit_Select_Nantex</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Nantex</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Nantex</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Nantex</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Nantex</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Guard_Nantex</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Attack_Nantex</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Attack_Nantex </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Attack_Nantex </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> Unit_Attack_Nantex </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Nantex </SFXEvent_Attack_Hardpoint>
+		
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Nantex</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		4.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Nantex</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>12000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		<Population_Value>5</Population_Value>
+		<Tactical_Bribe_Cost>3000</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="CIS_Pinance_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>CIS_Pinance_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</CIS_PinanceUnit_Data>

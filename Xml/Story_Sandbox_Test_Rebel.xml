@@ -1,0 +1,498 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Global todas las historias (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_SW_Campaign</Story_Dialog>
+		<Story_Chapter>15</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+	</Event>
+
+	<Event Name="Set_Rebel_at_Nivel_GCE"><!-- Galactic Empire era -->
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Limitar_Nivel_Tech_Max_GCE">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<Event Name="Lock_Rebels_To_Tech_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rebels_To_Tech_3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Rebels_To_Tech_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rebels_To_Tech_4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Rebels_To_Tech_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rebels_To_Tech_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Set_Rebels_at_Nivel_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2><!-- CIS= 0 y 1, Rebels= 2 y 3, Fel = 4 Esto es asi con el bando Rebelde-->
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Limitar_Nivel_Tech_Max_04"><!-- Galactic Empire era -->
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Belbullab22_Probe">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Belbullab22_Probe</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	 </Event>
+	 
+	 <Event Name="Lock_Ga_Twighlight_Probe">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Ga_Twighlight_Probe</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_Modular_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Modular_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Factoria_Cazas_separatistas</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_ST_Base_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_ST_Base_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_GolanI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_GolanI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_GolanII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_GolanII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_GolanIII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_GolanIII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Astilleros_IA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_IA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_CIS_Turbolaser_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Turbolaser_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Base_Shield">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Base_Shield</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Barracks">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Barracks</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Light_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Light_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Heavy_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Advanced_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Officer_Academy">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Officer_Academy</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_Sienar_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_Sienar_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_ST_Base_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_ST_Base_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_GolanIV_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_GolanIV_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_GolanV_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_GolanV_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_GolanVI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_GolanVI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Turbolaser_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Turbolaser_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Base_Shield">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Base_Shield</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Barracks">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Barracks</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Light_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Light_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Heavy_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Advanced_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Officer_Academy">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Officer_Academy</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_FEL_GA_Ground_LNR_II_Gun">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>FEL_GA_Ground_LNR_II_Gun</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Capturar_click_Cazas_01">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters4</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Capturar_click_Corbetas_02">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters5</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	  
+	<Event Name="Capturar_click_Cruceros_04">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters7</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	  
+	<Event Name="Capturar_click_Destructores_05">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters8</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Lock_Astilleros_IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	 
+	<Event Name="Lock_Astilleros_RB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_R_Ground_Research_FacilityRB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>R_Ground_Research_FacilityRB</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	
+	
+	
+	<Event Name="Revelar_todos_los_planetas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+			<Event Name="Disable_Campaign_Victory">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ENABLE_VICTORY</Reward_Type>
+				<Reward_Param1>0</Reward_Param1>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+
+	<Event Name="Lock_RXSoloIA_STR_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>RXSoloIA_STR_01</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Armed_Walls">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>GC_Walls_IR</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_6IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_6IA</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_7IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_7IA</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_8IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_8IA</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+		<!--***** TACTICO LA BATALLA DE ENDOR ***********-->
+						
+			<Event Name="Batalla_de_Endor_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>45</Event_Param1>
+				<Story_Dialog>Dialog_R_Batalla_de_Endor</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Batalla_de_Endor_00_Tag</Story_Tag>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Flash_Endor">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_PLANET_GUI</Reward_Type>
+				<Reward_Param1>Test2</Reward_Param1>
+				<Reward_Param2>FLASH_PLANET</Reward_Param2>
+				<Prereq>Batalla_de_Endor_00</Prereq>
+			</Event>
+			<Event Name="CerrarBatalla_de_Endor_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Batalla_de_Endor_00_Tag</Reward_Param1>
+				<Prereq>Batalla_de_Endor_00</Prereq>
+			</Event>
+			<Event Name="Centrar_Camara_en_Endor">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>POSITION_CAMERA</Reward_Type>
+				<Reward_Param1>Test2</Reward_Param1>
+				<Prereq>Batalla_de_Endor_00</Prereq>	
+			</Event>
+			<Event Name="Batalla_de_Endor_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>LINK_TACTICAL</Reward_Type>
+				<Reward_Param1>Test2</Reward_Param1>
+				<Reward_Param2>SPACE</Reward_Param2>
+				<Reward_Param3>Rebel</Reward_Param3>
+				<Reward_Param4>_Space_Planet_Test2_01.ted</Reward_Param4>
+				<Reward_Param5>Empire</Reward_Param5>
+				<Reward_Param7>Story_Plots_Rebel_Test.xml</Reward_Param7>
+				<Reward_Param10>0</Reward_Param10>
+				<Reward_Param11>0</Reward_Param11>
+				<Reward_Param13>1</Reward_Param13>	
+				<Prereq>Batalla_de_Endor_00</Prereq>
+			</Event>
+			<Event Name="Batalla_de_Endor_02">
+				<Event_Type>STORY_WIN_BATTLES</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Event_Param2>SPACE</Event_Param2>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_R_Batalla_de_Endor</Story_Dialog>
+				<Story_Chapter>1</Story_Chapter>
+				<Story_Tag>Batalla_de_Endor_02_Tag</Story_Tag>
+				<Prereq>Batalla_de_Endor_01</Prereq>
+			</Event>
+			<Event Name="CerrarBatalla_de_Endor_02">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Batalla_de_Endor_02_Tag</Reward_Param1>
+				<Prereq>Batalla_de_Endor_02</Prereq>
+			</Event>
+			<Event Name="CerrarBatalla_de_Endor_02_B">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
+				<Reward_Param1>Batalla_de_Endor_03</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>CerrarBatalla_de_Endor_02</Prereq>
+			</Event>
+			<Event Name="Batalla_de_Endor_03">
+				<Event_Type>STORY_LOSE_BATTLES</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Event_Param2>SPACE</Event_Param2>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_R_Batalla_de_Endor</Story_Dialog>
+				<Story_Chapter>2</Story_Chapter>
+				<Story_Tag>Batalla_de_Endor_03_Tag</Story_Tag>
+				<Prereq>Batalla_de_Endor_01</Prereq>
+			</Event>
+			<Event Name="CerrarBatalla_de_Endor_03">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Batalla_de_Endor_03_Tag</Reward_Param1>
+				<Prereq>Batalla_de_Endor_03</Prereq>
+			</Event>
+			<Event Name="CerrarBatalla_de_Endor_03_B">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
+				<Reward_Param1>Batalla_de_Endor_02</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>CerrarBatalla_de_Endor_03</Prereq>
+			</Event>
+			
+			<Event Name="Executor_Destroyed">
+				<Event_Type>STORY_DESTROY</Event_Type>
+				<Event_Param1>Executor_Super_Star_Destroyer</Event_Param1>
+				<Event_Param2></Event_Param2>
+				<Event_Param3>1</Event_Param3>
+				<Event_Param4>Rebel</Event_Param4>
+				<Event_Param5>FILTER_ENEMY_ONLY</Event_Param5>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			<Event Name="Video_Executor_Destroyed_Pause">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PAUSE_GALACTIC</Reward_Type>
+				<Prereq>Video_Executor_Destroyed_Inicio</Prereq>
+			</Event>
+			<Event Name="Video_Executor_Destroyed_Inicio">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>Executor_Destroyed</Reward_Param1>
+				<Prereq>Executor_Destroyed</Prereq>
+			</Event>
+			<Event Name="Video_Executor_Destroyed_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_Executor_Destroyed_Inicio</Prereq>
+			</Event>				
+			<Event Name="Video_Executor_Destroyed_UnPause">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNPAUSE_GALACTIC</Reward_Type>
+				<Prereq>Video_Executor_Destroyed_Fin</Prereq>
+			</Event>
+			
+			<!--***** Intervención Starbase upgrade  ***********-->
+
+	
+
+</Story>

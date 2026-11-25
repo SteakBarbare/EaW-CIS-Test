@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<space_structure_NV_Defense_Outpost_StationUnit_Data>
+
+	<UniqueUnit Name="NV_Defense_Outpost_Station">
+		<Variant_Of_Existing_Type>SmallGolanIeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HYPERGUNSPACEP</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HYPERGUNSPACEP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Space_Model_Name>NV_Defense_Outpost_Station.alo</Space_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>BARRAGE, SELF_DESTRUCT, ABILITY_COUNTDOWN, SPACE_OBSTACLE, POWERED, TARGETING, TACTICAL_SELL, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, WEAPON, TURRET, ION_STUN_EFFECT</SpaceBehavior>
+		<Reinforcement_Prevention_Radius> 500 </Reinforcement_Prevention_Radius>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Icon_Name>I_BUTTON_UV_HYPERGUNSPACE.tga</Icon_Name>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>1.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Fire_Category_Restrictions> Fighter, Bomber, Transport </Fire_Category_Restrictions>
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 8.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 7.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 6.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 5.0 </Fire_Inaccuracy_Distance>
+		<Projectile_Types>Proj_Hypergun_FreeSide_Space</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>15.0</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Hyper_Velocity_Fire</SFXEvent_Fire>
+		
+		<HardPoints>
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_TurboMO_01,
+			HP_TurboMO_02,
+			HP_TurboMO_03,
+			HP_TurboMO_04,
+			HP_TurboMO_05,
+			HP_TurboMO_06,
+			HP_TurboMO_07,
+			HP_TurboMO_08,
+			HP_TurboMO_09,
+			HP_TurboMO_10,
+			HP_Shield_GeneratorH_00
+		</HardPoints>
+	
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+	
+		<Death_Clone>Damage_Normal, NV_Defense_Outpost_Station_Death_Clone</Death_Clone>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+                <Type>LASER_DEFENSE</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Crusader_Laser_Defense </GUI_Activated_Ability_Name>
+                <Effective_Radius> 1000.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Laser_Defense_On_Crusader </SFXEvent_GUI_Unit_Ability_Activated>  <!--(by pressing the activate button)-->
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Laser_Defense_Off_Crusader </SFXEvent_GUI_Unit_Ability_Deactivated>  <!--(by pressing deactivate)-->
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+           </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="Crusader_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 120.0 </Defense_Duration_In_Secs>
+                <Laser_Color>184, 10, 37, 255</Laser_Color>
+                <Bone_Names>muzzleB_00, muzzleB_01, muzzleB_02, muzzleB_03</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>1000.0</Protection_Radius>
+                <Laser_Beam_Frames>4</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>100</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.50</Recharge_Time_In_Secs>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+            </Laser_Defense_Ability>
+		</Abilities>
+	</UniqueUnit>
+	<UniqueUnit Name="NV_Defense_Outpost_Station_Death_Clone">
+		<Text_ID>TEXT_REBEL_STAR_BASE_1</Text_ID>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Space_Model_Name>NV_Defense_Outpost_Station_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</UniqueUnit>
+	
+</space_structure_NV_Defense_Outpost_StationUnit_Data>

@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<RV_GunboatT_Space_Files>
+	<SpaceUnit Name="RV_GunboatT_Space">
+		<Variant_Of_Existing_Type>Sedriss_HowlrunnerORG</Variant_Of_Existing_Type>		
+		<Text_ID>TEXT_UNIT_E_TECH_T</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG Lancer Bajonett </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_E_TECH_T TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_R_Tech_FieldX.tga</Icon_Name>
+		<Space_Model_Name>RV_Gunboat_Space.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Rebel</Affiliation>
+		<Max_Speed>2.7</Max_Speed>
+		<Min_Speed>1.8</Min_Speed>
+		<CategoryMask> Fighter | SpaceHero </CategoryMask>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+				
+		<Energy_Capacity>30000</Energy_Capacity>
+		<Energy_Refresh_Rate>18000</Energy_Refresh_Rate>
+				
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Turret_Rotate_Extent_Degrees>90</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>			
+		
+		<Projectile_Types>Proj_BlancoVacio_LaserT</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>3.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>10</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Fighter, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 65.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 50.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Fire/>
+		
+		
+		<HardPoints>
+      		HP_Fighter_Adv_Missile, HP_GunboatS_Turret_01, HP_GunboatS_Turret_02, HP_GunboatS_Turret_03
+	    </HardPoints>
+		
+		<SFXEvent_Select>Unit_Select_Rebel_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Rebel_Field</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Group_Move_Rebel_Field</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Rebel_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Rebel_Field</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Pirate_Fighter </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Pirate_Fighter </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Pirate_Fighter </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Pirate_Fighter </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Ambient_Moving> Unit_Moldy_Crow_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Idle_Loop> Unit_LAAT_Moving_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_LAAT_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_LAAT_Moving_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_FIGHTERS_ORDERS_A</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_A_DESC</Alternate_Description_Text>
+				<Recharge_Seconds>20</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders2b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> Unit_Barrage_Nebulon </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 0.0 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+									
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2c</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_FIGHTERS_ORDERS_B</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_B_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 75</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>RV_Gunboat_Space_Max_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_Small_Laser_Cannon_R_GunboatS_Max</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Attack_Rebel_Field </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="RV_Gunboat_Space_Max_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Super | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		
+		<Landing_Transport_Variant>Y_Wing_Land_Landing</Landing_Transport_Variant>
+		<Death_Clone>Damage_Normal, RV_GunboatT_Space_T_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="RV_GunboatT_Space_T_Death_Clone">
+		<Text_ID>TEXT_UNIT_ASSAULTFIGHTER</Text_ID>
+		<Space_Model_Name>RV_Gunboat_Space.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</RV_GunboatT_Space_Files>

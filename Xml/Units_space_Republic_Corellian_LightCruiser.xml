@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<Rep_Med_CRUUnit_Data>
+	<SpaceUnit Name="E_Command_Arquitens">
+		<Variant_Of_Existing_Type>ArquitensORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_C_ARQUITENS</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Missile_Frg CIS_Diamond CIS_Hardcell </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_LucrehulkC CIS_Providence CIS_Wavecrest </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_E_C_ARQUITENS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 4</Starting_Spawned_Units_Tech_0>
+
+		<Required_Special_Structures>Astilleros_Imperiales, AdvancedTech_6</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Icon_Name>i_button_ev_light_cruiserx.tga</Icon_Name>
+		<GUI_Model_Name>EV_ArquitentsC.ALO</GUI_Model_Name>
+		<Space_Model_Name>EV_ArquitentsC.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, E_Command_Arquitens_Death_Clone</Death_Clone>
+		<Affiliation>Empire, GA</Affiliation>
+		<HardPoints>
+			HP_T_ArquitensC_01,
+			HP_T_ArquitensC_02,
+			HP_T_ArquitensC_03,
+			HP_T_ArquitensC_04,
+			HP_T_ArquitensC_05,
+			HP_T_ArquitensC_06,
+			HP_T_ArquitensC_07,
+			HP_T_ArquitensC_08,
+			HP_T_ArquitensC_09,
+			HP_T_ArquitensC_10,
+			HP_Fighter_Bay_Small_00,
+			HP_Shield_Generator_Small_00,
+			HP_Shield_Generator_Small_01,
+			HP_Engines_Small_00
+		</HardPoints>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>	
+	<SpaceUnit Name="EV_Med_CRU">
+		<Variant_Of_Existing_Type>ArquitensORG</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Icon_Name>i_button_ev_light_cruiserx.tga</Icon_Name>
+		<GUI_Model_Name>EV_Light_cruiserX.ALO</GUI_Model_Name>
+		<Space_Model_Name>EV_LightcruiserX.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, EV_Med_CRU_Death_Clone</Death_Clone>
+		<Affiliation>Empire</Affiliation>
+		<HardPoints>
+			HP_TurboMG_01,
+			HP_TurboMG_02,
+			HP_TurboMG_03,
+			HP_TurboMG_04,
+			HP_T_Arquitens_01,
+			HP_T_Arquitens_02,
+			HP_T_Arquitens_03,
+			HP_T_Arquitens_04,
+			HP_Misil_01,
+			HP_Engines_Small_00,
+			HP_Shield_Generator_Small_00
+		</HardPoints>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Med_CRU">
+		<Variant_Of_Existing_Type>ArquitensORG</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Rep_Med_CRU_Death_Clone</Death_Clone>
+	</SpaceUnit>
+		
+	<SpaceUnit Name="ArquitensORG">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_REP_LIGHT_CRUISERX</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Missile_Frg CIS_Diamond CIS_Hardcell </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_LucrehulkC CIS_Providence CIS_Wavecrest </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_REP_LIGHT_CRUISERX TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>Rep_LightcruiserX.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Layer_Z_Adjust>3.695</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<Build_Cost_Credits>2200</Build_Cost_Credits>
+
+		<AI_Combat_Power>1215</AI_Combat_Power>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+				
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		
+				
+		<HardPoints>
+			HP_TurboMB_01,
+			HP_TurboMB_02,
+			HP_TurboMB_03,
+			HP_TurboMB_04,
+			HP_T_LightCruiser_01,
+			HP_T_LightCruiser_02,
+			HP_T_LightCruiser_03,
+			HP_T_LightCruiser_04,
+			HP_Misil_01,
+			HP_Engines_Small_00,
+			HP_Shield_Generator_Small_00
+		</HardPoints>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Bombard_Select_Target> EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming </SFXEvent_Bombard_Incoming>
+		<SFXEvent_Build_Complete>Unit_Complete_Rep_Nebulon</SFXEvent_Build_Complete>
+
+		<SFXEvent_Select>Unit_Select_Rep_Nebulon</SFXEvent_Select>
+
+		<Icon_Name>i_button_rep_light_cruiserx.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Light_cruiserX.ALO</GUI_Model_Name>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+
+		
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+    <SpaceUnit Name="Rep_Med_CRU_Death_Clone">
+		<Text_ID>TEXT_UNIT_REP_LIGHT_CRUISER</Text_ID>
+		<Space_Model_Name>Rep_LightCruiserX_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>Rep_LightCruiserX_D.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="EV_Med_CRU_Death_Clone">
+		<Text_ID>TEXT_UNIT_REP_LIGHT_CRUISER</Text_ID>
+		<Space_Model_Name>EV_LightCruiserX_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EV_LightCruiserX_D.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="E_Command_Arquitens_Death_Clone">
+		<Text_ID>TEXT_UNIT_REP_LIGHT_CRUISER</Text_ID>
+		<Space_Model_Name>EV_ArquitentsC_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EV_ArquitentsC_D.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Rep_Med_CRUUnit_Data>

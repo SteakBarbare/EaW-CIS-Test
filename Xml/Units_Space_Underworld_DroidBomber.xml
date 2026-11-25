@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+
+<UV_DroidBomberUnit_Data>
+
+	
+	
+	<SpaceUnit Name="UV_DroidBomber">
+		<Variant_Of_Existing_Type>Cis_DroidBomber</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+		<Space_Model_Name>UV_DroidBomber.ALO</Space_Model_Name>
+		<Land_Bomber_Type>Skipray_Bombing_Run</Land_Bomber_Type>
+	
+		<Icon_Name>I_BUTTON_UV_DROIDBOMBER.TGA</Icon_Name>
+	</SpaceUnit>
+	
+	<Squadron Name="UV_DroidBomber_Squadron">
+		<Variant_Of_Existing_Type>Cis_DroidBomber_Squadron</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>UV_DroidBomber, UV_DroidBomber, UV_DroidBomber</Squadron_Units>
+		<Create_Team_Type>UV_DroidBomber_Squadron_Container1</Create_Team_Type>		
+		<Icon_Name>I_BUTTON_UV_DroidBomber.TGA</Icon_Name>
+		<GUI_Model_Name>UV_DroidBomber.ALO</GUI_Model_Name>
+		
+	</Squadron>
+	<Container Name="UV_DroidBomber_Squadron_Container1">
+		<Movie_Object>false</Movie_Object>
+		<Text_ID>TEXT_CIS_DROIDBOMBER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_DROIDBOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_MEDIUM</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_UV_DroidBomber.tga</Icon_Name>
+
+		<Max_Speed>3.7</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | AntiCapital</CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-30.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,0.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,0.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,30.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,-30.0,-15.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</UV_DroidBomberUnit_Data>

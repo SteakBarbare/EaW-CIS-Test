@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<Pirates_structuresUnit_Data>
+	<GroundInfantry Name="B1_Pi_Deployer_A">
+		<Variant_Of_Existing_Type>B1Droid_Sniper</Variant_Of_Existing_Type>
+		<Lua_Script>Pirate_GroundBase_Defense_Structures</Lua_Script>			
+		<Affiliation>Pirates</Affiliation>	
+	</GroundInfantry>
+		
+	<SpecialStructure Name="Pirate_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+		<Autoresolve_Health>10500000</Autoresolve_Health>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>B1_Pi_Deployer_A, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Affiliation>Pirates</Affiliation>
+   </SpecialStructure>
+
+	<GroundBuildable Name="Pirate_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirate_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>	
+		<Affiliation>Pirates</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Pirate_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirate_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirate_Command_Center </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>	
+		<Affiliation>Pirates</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Pirates_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		
+
+		<Affiliation>Pirates</Affiliation>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				Hu_Basilisk_Squad,
+				Co_Scout_Airspeeder_squadron,
+				Co_Ird_Fighter_Land_Squadron,
+				TIE_Claw_Squadron_Land,
+				NV_HapanMiytil_Land_squadron,
+				Hu_HuttLtF_Squad,
+				Hu_LAAT_Company,
+				TIE_Claw_Bomber_Squadron_Land,
+				NV_HapanHetrinar_Land_squadron
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Co_Scout_Airspeeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Co_Scout_Airspeeder, -1</Reserve_Spawned_Units_Tech_0>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Pirates_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Pirates_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Pirates_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Pirates_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Pirates_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Pirates_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Pirates_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Pirates_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>1</Tech_Level>
+		<Tactical_Additional_Structure_Type>Pirates_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Pirates_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Pirates_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+
+		<Affiliation>Pirates</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Pirates_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Pirates_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Pirates_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Pirates_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Base_Heavy_Turret.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Affiliation>Pirates</Affiliation>
+		<Projectile_Types>Proj_Turbolaser_Ground_Rep_Base_Tower_Ion</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+				HP_GroundStructure_Shield_Generator_00,
+				HP_REP_Base_Turret_00,
+				HP_REP_Base_Turret_01
+		</HardPoints>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_REP_Base_tower.tga</Icon_Name>
+
+		<Tactical_Additional_Structure_Type>Power_Generator_E</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Pirates_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Base_Heavy_Turret.ALO</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_REP_Base_tower.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Pirates_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirates_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_Base_Heavy_Turret.ALO</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_REP_Base_tower.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Pirates_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Uplink_Station.ALO</Land_Model_Name>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				All_Bombing_Run_Use_Upgrade, 
+				All_Planetary_Bombard_Use_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Icon_Name>i_button_nb_mercenary_outfitter.tga</Icon_Name>
+		<Obstacle_Proxy_Type> Power_Generator_E_Build_Pad </Obstacle_Proxy_Type>
+
+		<Affiliation>Pirates</Affiliation>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Pirates_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Pirates_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Pirates_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_nb_mercenary_outfitter.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Pirates_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Pirates_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_nb_mercenary_outfitter.tga</Icon_Name>
+		<Affiliation>Pirates</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="Pirates_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>Hu_InfantryBarracks.alo</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Pirates</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_cantina.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				Hu_Gamorrean_Squad,
+				Hu_P_Soldier_Squad,
+				Hu_P_Plex_Squad,
+				Hu_Twilek_Squad,
+				Hu_Mandalorian_Squad,
+				Ha_Infantry_Trooper_Company,
+				Ha_Infantry_Plex_Trooper_Company,
+				Ha_Ciborg_troopers_Squad,
+				Ha_Ciborg_Trooper_Command_Weapon_Team,
+				Corporate_Espo_Trooper,
+				Corporate_Espo_Plex_Trooper_Company,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Mandalorian_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Mandalorian_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Corporate_Espo_Plex_Trooper_Company, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Corporate_Espo_Plex_Trooper_Company, -1</Reserve_Spawned_Units_Tech_0>
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="Pirates_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_InfantryBarracks.alo</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_cantina.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Pirates_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirates_Ground_Barracks </Tactical_Buildable_Constructed>
+
+		<Scale_Factor>0.75</Scale_Factor>
+		
+		<Land_Model_Name>Hu_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_cantina.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Pirates_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Light_Factory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Scale_Factor>1.25</Scale_Factor>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+		</Destruction_Survivors>
+		
+		<Affiliation>Pirates</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_nb_mandalorian_barracks.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				Hu_Mandalorian_Speeder_Company,
+				Hutts_Med_Skiff_Company,
+				Hutts_Hvy_Skiff_Company,
+				Hu_Seraph_Company,
+				Ha_AT_ST_Squad,
+				Ha_APC_Brigade,
+				X10_ground_patrol_Brigade,
+				Co_EspoWalker_91_Brigade,
+				Co_EspoWalker_101_Brigade,
+				Ch_MTV_7_Company,
+				Ch_Patrol_Speeder_Armor_Group,
+				AT_RCT_Walker_Company,
+				ATSTAP_Walker_Company,
+				ATSTAP_AA_Walker_Company,
+				AT_HT_Walker_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Pirates_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_Light_Factory.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_nb_mandalorian_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Pirates_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Pirates_Ground_Light_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Hu_Light_Factory.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_nb_mandalorian_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Pirates_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Heavy_Factory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Pirates</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+				
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Pirates_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_W_Hutt_Spawnbuilding.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				Hu_Pirate_Speeder_2_Company,
+				Hu_Mandalorian_Tank_Company,
+				Hu_Hvy_SailBarge_Company,
+				Hu_Adv_Hvy_SailBarge_Company,
+				AT_BT_Company,
+				Ha_HAV_Company,
+				Espo_Hovervan_Brigade,
+				Ch_AT_AA_Walker_Company,
+				CH_AT_AV_Walker_Company,
+				CH_AT_TT_Walker_Company,
+				Ch_S1_Tank_Armor_Group,
+				Ch_Heavy_Artillery_Group,
+				CH_TR_MB_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Ch_AT_AA_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_AT_AA_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_LAAT, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_LAAT, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ch_S1_Tank, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_S1_Tank, -1</Reserve_Spawned_Units_Tech_0>
+					
+
+		
+	</SpecialStructure>
+	<GroundBuildable Name="Pirates_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Hu_Heavy_Factory.alo</Land_Model_Name>
+
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_W_Hutt_Spawnbuilding.tga</Icon_Name>
+
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Pirates_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirates_Ground_Heavy_Vehicle_Factory </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Heavy_Factory.alo</Land_Model_Name>
+
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_W_Hutt_Spawnbuilding.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Pirates_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Adv_Heavy_Factory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Pirates</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Pirates_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_jabba_palace.tga</Icon_Name>
+		
+		<Starting_Spawned_Units_Tech_0>CH_AT_AV_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CH_AT_AV_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>CH_AT_TT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CH_AT_TT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+									
+	</SpecialStructure>
+	<GroundBuildable Name="Pirates_Ground_Advanced_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Hu_Adv_Heavy_Factory.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		
+		<Icon_Name>i_button_jabba_palace.tga</Icon_Name>
+		
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Pirates_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirates_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Hu_Adv_Heavy_Factory.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+
+		<Icon_Name>i_button_jabba_palace.tga</Icon_Name>
+	</GroundBuildable>
+
+	<SpecialStructure Name="Pirates_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Pirates</Affiliation>
+				
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_NB_twilek_building.tga</Icon_Name>
+		
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Pirates_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_NB_twilek_building.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Pirates_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirates_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_NB_twilek_building.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Pirates_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Pirates_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+		</HardPoints>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Pirates</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Pirates_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Pirates_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Pirates, PC_Pirates_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Pirates_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Pirates_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Pirates_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+
+	
+</Pirates_structuresUnit_Data>
+
+
+

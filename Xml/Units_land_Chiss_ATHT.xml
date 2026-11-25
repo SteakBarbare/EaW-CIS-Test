@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<AT_HT_WalkerUnit_Data>
+<GroundVehicle Name="AT_HT_Walker">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_AT_HT</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_AT_HT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_WALKER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Ch_AT_HT.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CH_AT_HT.tga</Icon_Name>
+
+		<Affiliation>Pirates, Empire, Chiss</Affiliation>
+
+		<Tactical_Health>700</Tactical_Health>
+
+		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Green_ATBT</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>12</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+			
+		<HardPoints>
+			HP_Gr_Fighter_Missile_00,
+			HP_Gr_Fighter_Missile_01
+		</HardPoints>
+		
+		<CategoryMask> Vehicle | AntiVehicle </CategoryMask>
+
+		<Death_Explosions>Medium_Damage_Land4</Death_Explosions>
+
+		<Vehicle_Thief_Inside_Clone>AT_HT_Walker_Captured</Vehicle_Thief_Inside_Clone>
+		<AI_Combat_Power>160</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+   
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_STas_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Green_ATBT</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Interdictor</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="AT_STas_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_HT_Walker_Captured">
+		<Variant_Of_Existing_Type>AT_HT_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_HT_Walker_Death_Clone_00">
+		<Variant_Of_Existing_Type>AT_HT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_HT_Walker_Death_Clone_01">
+		<Variant_Of_Existing_Type>AT_HT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+        <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_HT_Walker_Death_Clone_02">
+		<Variant_Of_Existing_Type>AT_HT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
+	
+	<GroundCompany Name="AT_HT_Walker_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		<Text_ID>TEXT_UNIT_CH_AT_HT_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_AT_HT TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>AT_HT_Walker, AT_HT_Walker, AT_HT_Walker</Company_Units>
+		<Icon_Name>I_BUTTON_CH_AT_HT.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+
+</AT_HT_WalkerUnit_Data>

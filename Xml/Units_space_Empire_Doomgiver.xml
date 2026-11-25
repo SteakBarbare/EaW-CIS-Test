@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<DoomgiverUnit_Data>
+	
+	<SpaceUnit Name="Doomgiver">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_UNIT_DOOMGIVER</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a MC60_01 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing B-Wing MC90 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DOOMGIVER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_CRUISER </Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_Doomgiver.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Doomgiver.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Armor_Type> Armor_Star_Destroyer </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		<Layer_Z_Adjust>300.0</Layer_Z_Adjust>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Maintenance_Cost>0.3</Maintenance_Cost>
+		<Affiliation>Empire</Affiliation>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Autoresolve_Health>53000</Autoresolve_Health>
+		<Shield_Points>53000</Shield_Points>
+		<Tactical_Health>300000000</Tactical_Health>
+		<Shield_Refresh_Rate>56000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Build_Cost_Credits>8500</Build_Cost_Credits>
+		<Tactical_Bribe_Cost>2125</Tactical_Bribe_Cost>
+		
+		<AI_Combat_Power>4100</AI_Combat_Power>
+		<Build_Time_Seconds>100</Build_Time_Seconds>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 35</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 35</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, Doomgiver_Death_Clone</Death_Clone>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN,SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+								
+		<HardPoints> 
+			HP_IonM_01, 
+			HP_IonM_02,
+			HP_IonM_03,
+			HP_IonM_04,
+			HP_IonM_05,
+			HP_IonM_06,
+			HP_IonM_07,
+			HP_IonM_08,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_MisilA_01, 
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,	
+			HP_TurboMG_01,
+			HP_TurboMG_02,
+			HP_TurboMG_03,
+			HP_TurboMG_04,
+			HP_TurboMG_05,
+			HP_TurboMG_06,
+			HP_TurboMG_07, 
+			HP_TurboMG_08,
+			HP_TurboMG_09,
+			HP_TurboMG_10,
+			HP_TurboMG_11,
+			HP_TurboMG_12,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Tractor_Beam_Rebelde
+		</HardPoints>
+		<CategoryMask> SpaceHero </CategoryMask>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Icon_Name>I_BUTTON_EV_Galak_Fyyar.tga</Icon_Name>
+		<GUI_Model_Name>EV_Doomgiver.ALO</GUI_Model_Name>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.04  0.06</Radar_Icon_Size>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Doomgiver_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Tractor_Beam_Attack_Ability Name="Doomgiver_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>2200</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			<Force_Healing_Ability Name="Doomgiver_Facility_Healing">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>500.0</Heal_Range>
+				<Heal_Percent> 30.0 </Heal_Percent>
+                <Blob_Color>0, 255, 0, 255</Blob_Color>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<!-- We can heal the following unit types: -->
+				<Applicable_Unit_Categories>Fighter, Transport, Bomber, Corvette, Frigate, Capital, Hero</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>FP_LC_L_00_00, FP_LC_R_00_00, FP_F_ConM00_00</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			<Sensor_Jamming_Ability Name="Doomgiver_Sensor_Jamming">
+				<Activation_Style> COMBAT_AUTOMATIC </Activation_Style>
+				<Duration_In_Secs>60.0</Duration_In_Secs>
+				<Blob_Color>200, 50, 200, 128</Blob_Color>
+				<Blob_Material_Name>Sensor_Jamming_Blob</Blob_Material_Name>
+			</Sensor_Jamming_Ability>
+		</Abilities>
+		<Landing_Transport_Variant>Darktroopers_Craft</Landing_Transport_Variant>
+		<Tactical_Build_Cost_Multiplayer>8500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>74</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>4</Population_Value>
+		<!--<Space_Override_Population_Value>3</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="Doomgiver_Death_Clone">
+		<Text_ID>TEXT_UNIT_TITAN_HEAVY_CRUISER</Text_ID>
+		<Space_Model_Name>EV_DOOMGIVER_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Layer_Z_Adjust>300.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	
+</DoomgiverUnit_Data>

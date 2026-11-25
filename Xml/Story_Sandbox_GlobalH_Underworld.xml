@@ -1,0 +1,943 @@
+<?xml version="1.0" ?>
+
+
+
+<!--**********************************************************-->
+<!--******	Global todas las historias (Underworld)	******-->
+<!--**********************************************************-->
+
+
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_Expansion_GC_Solo</Story_Dialog>
+		<Story_Chapter>4</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+	</Event>
+	
+	<Event Name="Lock_AdvTech_UIA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_UIA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Capturar_click_Cazas_01">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters4</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Capturar_click_Corbetas_02">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters5</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	  
+	<Event Name="Capturar_click_Cruceros_04">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters7</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	  
+	<Event Name="Capturar_click_Destructores_05">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters8</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<!--***** Indicador nuevas caracteristicas ***********-->
+			<Event Name="Indicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Story_Dialog>Dialog_BS_Indicador_nuevas_caracteristicas</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Indicador_nuevas_caracteristicas_Tag</Story_Tag>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>			
+			<Event Name="Flash_Buttons">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param2>
+				<Prereq>Indicador_nuevas_caracteristicas_00</Prereq>
+			</Event>	
+			<Event Name="Hide_Indicador_nuevas_caracteristicas">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			<Event Name="CerrarIndicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			
+		<!--***** Indicador nuevas caracteristicas ***********-->
+	<Event Name="Lock_Astilleros_IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	<Event Name="Lock_Astilleros_RB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Revelar_todos_los_planetas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<Event Name="Lock_UXSoloIA_STR_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>UXSoloIA_STR_01</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Armed_Walls">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>GC_Walls_IU</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<Event Name="Restringir_Acceso_Bakura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bakura</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Bastion">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bastion</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	<Event Name="Restringir_Acceso_Endor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Endor</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Vjun">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Vjun</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Hoth">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Hoth</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Coruscant">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Coruscant</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Borleias">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Borleias</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Las_Fauces">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>The_Maw</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Byss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Byss</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Polus">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Polus</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Rattatak">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Rattatak</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Bilbringi">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bilbringi</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Dantooine">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Dantooine</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_NewAlderaan">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>NewAlderaan</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_DaSoocha">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>DaSoocha</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Vladet">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Vladet</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Deep_Space_System_A">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Deep_Space_System_A</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Dathomir">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Dathomir</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Myrkr">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Myrkr</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Wayland">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Wayland</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Bothawui">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bothawui</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Acceso_Carida">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Carida</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Delvardus">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Delvardus</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_TossBeacon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>TossBeacon</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Harrsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Harrsk</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Restringir_Tedaroc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Tedaroc</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Tyber">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Tyber_Zann_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<Event Name="Spawn_Bossk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Bossk_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Urai">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Urai_Fen_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_IG88">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>IG88_Team</Reward_Param1>
+        <Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Silri">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Silri_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Xizor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Xizor_Team</Reward_Param1>
+		<Reward_Param2>Tatooine</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Guri">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Guri_Team</Reward_Param1>
+		<Reward_Param2>Tatooine</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Jabba_The_Hutt">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Jabba_The_Hutt_Team</Reward_Param1>
+		<Reward_Param2>NalHutta</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Batalla_de_Endor">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Endor</Event_Param1>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Xizor</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Remove_Jabba_The_Hutt">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Jabba_The_Hutt</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Endor</Prereq>
+	</Event>
+	<Event Name="Spawn_Durga">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Durga_Team</Reward_Param1>
+		<Reward_Param2>NalHutta</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+			<Event Name="Executor_Destroyed">
+				<Event_Type>STORY_DESTROY</Event_Type>
+				<Event_Param1>Executor_Super_Star_Destroyer</Event_Param1>
+				<Event_Param2></Event_Param2>
+				<Event_Param3>1</Event_Param3>
+				<Event_Param4>Underworld</Event_Param4>
+				<Event_Param5>FILTER_ENEMY_ONLY</Event_Param5>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			<Event Name="Video_Executor_Destroyed_Pause">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PAUSE_GALACTIC</Reward_Type>
+				<Prereq>Video_Executor_Destroyed_Inicio</Prereq>
+			</Event>
+			<Event Name="Video_Executor_Destroyed_Inicio">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>Executor_Destroyed</Reward_Param1>
+				<Prereq>Executor_Destroyed</Prereq>
+			</Event>
+			<Event Name="Video_Executor_Destroyed_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_Executor_Destroyed_Inicio</Prereq>
+			</Event>				
+			<Event Name="Video_Executor_Destroyed_UnPause">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNPAUSE_GALACTIC</Reward_Type>
+				<Prereq>Video_Executor_Destroyed_Fin</Prereq>
+			</Event>
+<!-- Debloqueo de Hoth y otros planetas -->		
+	<Event Name="Desbloqueo_Hoth">
+		<Event_Type>STORY_BUY_BLACK_MARKET</Event_Type>
+		<Event_Param1>Sensor_Jamming_Tech</Event_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+			<Event Name="Permitir_Acceso_Hoth">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Hoth</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloqueo_Hoth</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Rattatak">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Rattatak</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloqueo_Hoth</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Polus">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Polus</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloqueo_Hoth</Prereq>
+			</Event>
+<!-- Triggers para cambios de heroes en Imperio y Rebeldes -->	
+	<Event Name="Inicio_cambios_de_heroes">
+		<Event_Type>STORY_BUY_BLACK_MARKET</Event_Type>
+		<Event_Param1>Point_Defense_System_Tech</Event_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Desbloquear_Endor">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1090</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Endor</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Inicio_cambios_de_heroes</Prereq>
+	</Event>
+	<Event Name="Hacer_Endor_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Endor</Reward_Param1>
+		<Reward_Param2>Rebel</Reward_Param2>
+		<Prereq>Desbloquear_Endor</Prereq>
+	</Event>
+			<Event Name="Permitir_Acceso_Bakura">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Bakura</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Endor</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Vladet">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Vladet</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Endor</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Borleias">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Borleias</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Endor</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Coruscant">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Coruscant</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Endor</Prereq>
+			</Event>
+	
+	
+	<Event Name="Desbloquear_Dathomir">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1090</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Dathomir</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hacer_Endor_Rebelde</Prereq>
+	</Event>
+	<Event Name="Hacer_Dathomir_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Dathomir</Reward_Param1>
+		<Reward_Param2>Rebel</Reward_Param2>
+		<Prereq>Desbloquear_Dathomir</Prereq>
+	</Event>
+			<Event Name="Permitir_Acceso_Bastion">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Bastion</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Dathomir</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Myrkr">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Myrkr</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Dathomir</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Wayland">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Wayland</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Dathomir</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Bothawui">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Bothawui</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Dathomir</Prereq>
+			</Event>
+	
+	
+	<Event Name="Desbloquear_Bilbringi">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1090</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bilbringi</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hacer_Dathomir_Rebelde</Prereq>
+	</Event>
+	<Event Name="Hacer_Bilbringi_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Bilbringi</Reward_Param1>
+		<Reward_Param2>Rebel</Reward_Param2>
+		<Prereq>Desbloquear_Bilbringi</Prereq>
+	</Event>
+	<Event Name="Hacer_Pirata_Coruscant">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>21</Event_Param1>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Coruscant</Reward_Param1>
+		<Reward_Param2>Pirates</Reward_Param2>
+		<Prereq>Desbloquear_Bilbringi</Prereq>
+	</Event>
+			<Event Name="Permitir_Acceso_Byss">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Byss</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Bilbringi</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_DaSoocha">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>DaSoocha</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Bilbringi</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Vjun">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Vjun</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_Bilbringi</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Kuat">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Fondor">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Fondor</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Corellia">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Corellia</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Corulag">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Corulag</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Anaxes">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Anaxes</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Eriadu">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Eriadu</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>
+			<Event Name="Hacer_Imperial_Rendili">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>43</Event_Param1>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Rendili</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+			</Event>		
+	
+	<Event Name="Desbloquear_NewAlderaan">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1090</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>NewAlderaan</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hacer_Bilbringi_Rebelde</Prereq>
+	</Event>
+			<Event Name="Permitir_Acceso_Dantooine">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Dantooine</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_NewAlderaan</Prereq>
+			</Event>
+			<Event Name="Permitir_Acceso_Carida">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+				<Reward_Param1>Carida</Reward_Param1>
+				<Reward_Param2>0</Reward_Param2>
+				<Prereq>Desbloquear_NewAlderaan</Prereq>
+			</Event>
+	<Event Name="Spawn_Grappa">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grappa_The_Hutt_Team</Reward_Param1>
+		<Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>		
+	<Event Name="Spawn_Sol_Mon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Sol_Mon</Reward_Param1>
+		<Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>		
+	<Event Name="Spawn_Yull_Acib_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Yull_Acib_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>		
+	
+	<Event Name="Restringir_YagaMinor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>YagaMinor</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>	
+	<Event Name="Restringir_Valc_VII">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Valc_VII</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>	
+	<Event Name="Restringir_Bastion">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bastion</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>	
+	<Event Name="Restringir_Byss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Byss</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>			
+	
+	<Event Name="Desbloquear_The_Maw">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>545</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>The_Maw</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_NewAlderaan</Prereq>
+	</Event>	
+	<Event Name="Hacer_The_Maw_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>The_Maw</Reward_Param1>
+		<Reward_Param2>Rebel</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>			
+	<Event Name="Desbloquear_YagaMinor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>YagaMinor</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+		<Event Name="Hacer_Imperial_YagaMinor">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>PLANET_FACTION</Reward_Type>
+			<Reward_Param1>YagaMinor</Reward_Param1>
+			<Reward_Param2>Empire</Reward_Param2>
+			<Prereq>Desbloquear_YagaMinor</Prereq>
+		</Event>
+	<Event Name="Desbloquear_Valc_VII">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Valc_VII</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+		<Event Name="Hacer_Imperial_Valc_VII">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>PLANET_FACTION</Reward_Type>
+			<Reward_Param1>Valc_VII</Reward_Param1>
+			<Reward_Param2>Empire</Reward_Param2>
+			<Prereq>Desbloquear_Valc_VII</Prereq>
+		</Event>
+	<Event Name="Desbloquear_Bastion">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Bastion</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+		<Event Name="Hacer_Imperial_Bastion">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>PLANET_FACTION</Reward_Type>
+			<Reward_Param1>Bastion</Reward_Param1>
+			<Reward_Param2>Empire</Reward_Param2>
+			<Prereq>Desbloquear_Bastion</Prereq>
+		</Event>
+	<Event Name="Desbloquear_Byss">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Byss</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+		<Event Name="Hacer_Imperial_Byss">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>PLANET_FACTION</Reward_Type>
+			<Reward_Param1>Byss</Reward_Param1>
+			<Reward_Param2>Empire</Reward_Param2>
+			<Prereq>Desbloquear_Byss</Prereq>
+		</Event>
+	<Event Name="Desbloquear_Delvardus">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Delvardus</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+			<Event Name="Hacer_Imperial_Delvardus">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Delvardus</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Desbloquear_Delvardus</Prereq>
+			</Event>
+	<Event Name="Desbloquear_TossBeacon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>TossBeacon</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+			<Event Name="Hacer_Imperial_TossBeacon">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>TossBeacon</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Desbloquear_TossBeacon</Prereq>
+			</Event>
+	<Event Name="Desbloquear_Harrsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Harrsk</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+			<Event Name="Hacer_Imperial_Harrsk">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Harrsk</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Desbloquear_Harrsk</Prereq>
+			</Event>
+	<Event Name="Desbloquear_Tedaroc">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Tedaroc</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+			<Event Name="Hacer_Imperial_Tedaroc">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Tedaroc</Reward_Param1>
+				<Reward_Param2>Empire</Reward_Param2>
+				<Prereq>Desbloquear_Tedaroc</Prereq>
+			</Event>
+<!-- Fin triggers para cambios de heroes en Imperio y Rebeldes -->		
+	
+	<Event Name="Hacer_Hoth_del_SolNegro">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Hoth</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Desbloquear_The_Maw</Prereq>
+	</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>Underworld_Star_Base_1</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_02">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>U_Ground_Palace</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_03">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>U_Ground_Barracks</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_04">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>U_Ground_Vehicle_Factory</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_05">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>BS_Fleet_Man</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+	<Event Name="Unlock_EspadaOscura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>EspadaOscura</Reward_Param1>
+		<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+	</Event>
+	<Event Name="Eliminar_Restriccion_Deep_Space_System_A">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Deep_Space_System_A</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+	</Event>
+	<Event Name="Spawn_Leminsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Leminsk_Team</Reward_Param1>
+		<Reward_Param2>Hoth</Reward_Param2>
+		<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+	</Event>
+	
+	
+
+	<Event Name="Restringir_Acceso_Deep_Space_System_A">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Deep_Space_System_A</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+		
+	
+		
+		<!--***** Sandbox bandos alternativos ***********-->	
+	
+		
+	
+	<Event Name="Batalla_de_Bakura_00">
+			<Event_Type>STORY_ELAPSED</Event_Type>
+			<Event_Param1>8</Event_Param1>
+			<Prereq>Universal_Story_Start</Prereq>	
+		</Event>
+			<Event Name="Batalla_de_Bakura_01">
+				<Event_Type>STORY_SPACE_TACTICAL</Event_Type>
+				<Event_Param1>Story_Plots_Batalla_de_Bakura_00.xml</Event_Param1>
+				<Event_Param2>Bakura</Event_Param2>
+				<Prereq>Batalla_de_Bakura_00</Prereq>
+			</Event>
+		
+</Story>

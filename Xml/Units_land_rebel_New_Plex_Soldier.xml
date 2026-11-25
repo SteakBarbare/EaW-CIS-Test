@@ -1,0 +1,173 @@
+﻿<?xml version="1.0"?>
+
+
+<New_Plex_SoldierUnit_Data>
+	
+	<GroundInfantry Name="New_Plex_Soldier">
+		<Variant_Of_Existing_Type> Plex_SoldierORG </Variant_Of_Existing_Type>
+		<Land_Model_Name>RI_NewRInfantryPlex_Urban.ALO</Land_Model_Name>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			RI_NewRInfantryPlex_Urban.ALO,
+			Urban, 				RI_NewRInfantryPlex_Urban.ALO,
+			Arctic, 			RI_NewRInfantryPlex_Snow.ALO,
+			Volcanic, 			RI_NewRInfantryPlex_Desert.ALO,
+			Desert, 			RI_NewRInfantryPlex_Desert.ALO,
+			Forest, 			RI_NewRInfantryPlex_Forest.ALO,
+			Swamp, 				RI_NewRInfantryPlex_Forest.ALO
+		</Land_Terrain_Model_Mapping>
+		<Tactical_Health>200</Tactical_Health>
+		<Icon_Name>i_button_New_plex_soldier.tga</Icon_Name>
+		
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Rebel, GA, GAC</Affiliation>
+
+		<Death_Clone>Damage_Force_Whirlwind, New_Plex_Soldier_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, New_Plex_Soldier_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, New_Plex_Soldier_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, New_Plex_Soldier_Remote_Bomb_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Celebrate, 
+				AT_AT_Walker_Cable_Attack_Death_Clone,
+				AT_AT_Walker_Death_Clone_00,
+				AT_AT_Walker_Death_Clone_01,
+				AT_AT_Walker_Death_Clone_02
+		</Presence_Induced_Animations>		
+
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>		  
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+
+		<Conversion_Ability_Changes_To_Enemy> New_Plex_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_New_Plex_Soldier">
+		<Variant_Of_Existing_Type>New_Plex_Soldier</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_SOLDIER</Text_ID>
+		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, GARRISON_UNIT, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> 1.4 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+
+		<Conversion_Ability_Changes_To_Enemy> New_Plex_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+	<GroundInfantry Name="New_Plex_Soldier_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> New_Plex_Soldier </Variant_Of_Existing_Type>
+
+	</GroundInfantry>
+	
+	<GroundInfantry Name="New_Plex_Soldier_NonVictroy">
+		<Variant_Of_Existing_Type> New_Plex_Soldier </Variant_Of_Existing_Type>
+		<Victory_Relevant>no</Victory_Relevant>
+	</GroundInfantry>
+
+	<GroundInfantry Name="New_Plex_Soldier_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>New_Plex_Soldier</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="New_Plex_Soldier_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>New_Plex_Soldier</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="New_Plex_Soldier_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>New_Plex_Soldier</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+
+	</GroundInfantry>
+	
+	<GroundInfantry Name="New_Plex_Soldier_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>New_Plex_Soldier</Variant_Of_Existing_Type>
+
+	</GroundInfantry>	
+	<GroundInfantry Name="Squad_New_Plex_Soldier_B">
+		<Variant_Of_Existing_Type>Squad_New_Plex_Soldier</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>New_Rebel_Tank_Buster_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="New_Rebel_Tank_Buster_Squad_B">
+		<Variant_Of_Existing_Type>New_Rebel_Tank_Buster_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_New_Plex_Soldier, Squad_New_Plex_Soldier, Squad_New_Plex_Soldier </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Plex_Soldier_Team2 </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="New_Rebel_Tank_Buster_Squad">
+		<Variant_Of_Existing_Type> Rebel_Tank_Buster_Squad </Variant_Of_Existing_Type>
+		<Icon_Name>i_button_New_plex_soldier.tga</Icon_Name>
+
+
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+
+		<Tech_Level>0</Tech_Level>
+
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		
+		<Company_Units> Squad_New_Plex_Soldier_B, Squad_New_Plex_Soldier, Squad_New_Plex_Soldier </Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Plex_Soldier_Team2 </Create_Team_Type>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+
+		<Tactical_Build_Cost_Multiplayer>75</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+	<Container Name="Plex_Soldier_Team2">
+		<Variant_Of_Existing_Type> Plex_Soldier_Team </Variant_Of_Existing_Type>
+		
+		<Icon_Name>i_button_New_plex_soldier.tga</Icon_Name>
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</Container>
+</New_Plex_SoldierUnit_Data>

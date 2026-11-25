@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<Ch_Algol_Data>
+	<SpaceUnit Name="Ch_Algol">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+
+		<Death_Clone>Damage_Normal, Ch_Algol_Death_Clone</Death_Clone>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Affiliation>Chiss</Affiliation>
+		<Space_Model_Name>Ch_Algol.ALO</Space_Model_Name>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_CH_ALGOL</Text_ID>
+		<Encyclopedia_Good_Against> TartanORG Crusader_Gunship </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber ISDORG Vengeance_Frigate </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CH_ALGOL TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Slice_Cost_Credits>2500</Slice_Cost_Credits>
+
+		<Autoresolve_Health>22200</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Shield_Refresh_Rate>22700</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+
+		<Build_Cost_Credits>2200</Build_Cost_Credits>
+		<AI_Combat_Power>3200</AI_Combat_Power>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+
+		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+		<Icon_Name>i_button_Ch_Algol.tga</Icon_Name>
+		<GUI_Model_Name>Ch_Algol.ALO</GUI_Model_Name>
+		<HardPoints>
+		  	HP_T_ArdentM_01,
+			HP_T_ArdentM_02,
+			HP_T_ArdentM_03,
+			HP_T_Ch_Algol_04,
+			HP_T_ArdentM_05,
+			HP_T_ArdentM_06,
+			HP_T_Ch_Algol_07,
+			HP_T_Ch_Algol_08,
+			HP_T_Ch_Algol_09,
+			HP_T_Ch_Algol_10,
+			HP_T_Ch_Algol_11,
+			HP_T_Ch_Algol_12,
+			HP_T_ArdentM_13,
+			HP_Shield_GeneratorH_00,
+			HP_EnginesH_00
+		</HardPoints>
+		
+		<Targeting_Priority_Set>SpaceArtillery</Targeting_Priority_Set>
+
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+	
+	     <Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		  			
+	   </Unit_Abilities_Data>
+		<Score_Cost_Credits> 2250</Score_Cost_Credits>
+
+		<Tactical_Build_Cost_Multiplayer>2200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>	
+	
+		
+		
+	<SpaceUnit Name="Ch_Algol_Death_Clone">
+		<Text_ID>TEXT_UNIT_NEBULON_FRIGATE</Text_ID>
+		<Space_Model_Name>Ch_Algol_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+	
+</Ch_Algol_Data>

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Gozanti_HuUnit_Data>
+
+	<SpaceUnit Name="Hu_Gozanti_IGV55">
+		<Variant_Of_Existing_Type>TartanORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_GOZANTI_IGV55</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_GOZANTI_IGV55 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_CRUISER</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_Piratas</Required_Special_Structures>
+		<Space_Model_Name>Hu_Gozanti_ROC_IGV55.ALO</Space_Model_Name>
+		<Icon_Name>i_button_Hu_Gozanti_ROC_IGV55.tga</Icon_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<HardPoints>
+			HP_T_Hu_Gozanti_01,
+			HP_T_Hu_Gozanti_02
+	    </HardPoints>
+		
+		<Death_Clone>Damage_Normal, Gozanti_Hu_IGV55_Death_Clone </Death_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 500 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>CORRUPT_SYSTEMS</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> BS_Gozanti_Corrupt_Systems </GUI_Activated_Ability_Name> 
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+                <SFXEvent_Target_Ability> Unit_Attack_Pirate_Fighter</SFXEvent_Target_Ability>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_JAMMING_FIGHTER</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_JAMMING_FIGHTER_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_CORRUPT_SYSTEMS.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+            <Corrupt_Systems_Ability Name="BS_Gozanti_Corrupt_Systems">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>1000.0</Activation_Max_Range>
+                <Duration_In_Seconds>12</Duration_In_Seconds>
+                <Shield_Drain_Per_Second>6000</Shield_Drain_Per_Second>
+                <Inaccuracy_Radius>500</Inaccuracy_Radius>
+				<Target_Particle_Effect>Han_Solo_Target_Stun_Effect</Target_Particle_Effect>
+				<Owner_Particle_Effect>Tani_Stun_Particles</Owner_Particle_Effect>
+                <SFXEvent_Activate>Unit_IG88_Corrupt_Systems</SFXEvent_Activate>
+            </Corrupt_Systems_Ability>
+        </Abilities>
+	</SpaceUnit>
+	
+	
+	
+
+	<SpaceUnit Name="Gozanti_Hu_IGV55_Death_Clone">
+		<Text_ID>TEXT_UNIT_TARTAN_CRUISER</Text_ID>
+		<Space_Model_Name>UV_Gozanti_IGV55_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>UV_Gozanti_IGV55.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</Gozanti_HuUnit_Data>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0"?>
+
+<Escortshuttle_Files>
+	
+	<SpaceUnit Name="R_Escortshuttle">
+			<Variant_Of_Existing_Type>Escortshuttle_Builded</Variant_Of_Existing_Type>
+			<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+			<Tech_Level>99</Tech_Level>
+			<Required_Special_Structures>Factoria_Cazas_Rebeldes</Required_Special_Structures>
+			<Affiliation>Rebel</Affiliation>
+	</SpaceUnit>
+	<SpaceUnit Name="E_Escortshuttle">
+			<Variant_Of_Existing_Type>Escortshuttle_Builded</Variant_Of_Existing_Type>
+			<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+			<Tech_Level>99</Tech_Level>
+			<Required_Special_Structures>Factoria_Cazas_SIENAR</Required_Special_Structures>
+			<Affiliation>Empire</Affiliation>
+	</SpaceUnit>
+	<SpaceUnit Name="BS_Escortshuttle">
+			<Variant_Of_Existing_Type>Escortshuttle_Builded</Variant_Of_Existing_Type>
+			<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+			<Tech_Level>99</Tech_Level>
+			<Required_Special_Structures>Factoria_Cazas_Piratas</Required_Special_Structures>
+			<Affiliation>Underworld</Affiliation>
+	</SpaceUnit>
+	<SpaceUnit Name="Escortshuttle_Builded">
+			<Variant_Of_Existing_Type>Escortshuttle</Variant_Of_Existing_Type>
+			<Behavior>DUMMY_STARSHIP, POWERED, SHIELDED, SELECTABLE</Behavior>
+			<SpaceBehavior> FIGHTER_LOCOMOTOR, WEAPON, ABILITY_COUNTDOWN, TARGETING, SPAWN_SQUADRON, HUNT, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+	</SpaceUnit>
+	<SpaceUnit Name="Escortshuttle">
+		<Variant_Of_Existing_Type>Assaulttransport</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ESCORTSHUTTLE</Text_ID>
+		<Encyclopedia_Good_Against> Y-Wing TIE_Bomber R41 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Gunboat A-wing TIE_Interceptor </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ESCORTSHUTTLE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>EV_Escortshuttle.alo</Space_Model_Name>
+		<Icon_Name>i_button_Escortshuttle.TGA</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Max_Speed>2.5</Max_Speed>
+		<Min_Speed>1.7</Min_Speed>
+
+		<Death_Clone>Damage_Normal, Escortshuttle_Death_Clone</Death_Clone>
+
+		<Affiliation>Empire, Rebel</Affiliation>
+		
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>2000</Tactical_Health>
+
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SHIELDED, FIGHTER_LOCOMOTOR, TARGETING, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, UNIT_AI, NEBULA, SELECTABLE, HUNT </SpaceBehavior>
+
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+		
+		<HardPoints>
+			HP_G_TIEA_Laser_00,
+			HP_G_TIEA_Laser_01,
+			HP_G_TIEA_Laser_02,
+			HP_G_ATR_Laser_03
+	    </HardPoints>
+		
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Lamda_Shuttle</SFXEvent_Build_Complete>
+		
+		<SFXEvent_Fire>Unit_Shuttle_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Lamda_Shuttle</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Lamda_Shuttle</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Lamda_Shuttle</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Lamda_Shuttle</SFXEvent_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Engine_Idle_Loop> Unit_Shuttle_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Shuttle_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Shuttle_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-25.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Lamda_Shuttle</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Bribe_Cost>62</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Escortshuttle_Death_Clone">
+		<Text_ID>TEXT_UNIT_ESCORTSHUTTLE</Text_ID>
+		<Space_Model_Name>EV_Escortshuttle.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>100.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>Corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Fade_Time>0</Death_Fade_Time>
+	</SpaceUnit>
+</Escortshuttle_Files>

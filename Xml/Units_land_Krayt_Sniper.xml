@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Krayt_SniperUnit_Data>
+
+	
+	<GroundInfantry Name="Krayt_Sniper">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		
+		<Affiliation>Krayt, Fel, Empire</Affiliation>
+
+	</GroundInfantry>
+
+	<GroundInfantry Name="Krayt_Sniper_B">
+		<Variant_Of_Existing_Type>Krayt_Sniper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Krayt_Sniper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="Krayt_Sniper_Squad_B">
+		<Variant_Of_Existing_Type>Krayt_Sniper_Squad</Variant_Of_Existing_Type>
+		<Company_Units>Krayt_Sniper, Krayt_Sniper, Krayt_Sniper, Krayt_Sniper, Krayt_Sniper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Affiliation>Krayt, Fel, Rebel, Empire</Affiliation>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	
+	<GroundCompany Name="Krayt_Sniper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Sniper_Team</Variant_Of_Existing_Type>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Required_Special_Structures>Krayt_Ground_Barracks, Krayt_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Company_Units> Krayt_Sniper_B </Company_Units>
+
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+	
+	<GroundCompany Name="Fel_Sniper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Sniper_Team</Variant_Of_Existing_Type>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Required_Special_Structures>Fel_Ground_Barracks, Fel_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Units> Krayt_Sniper_B </Company_Units>
+
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+	
+</Krayt_SniperUnit_Data>

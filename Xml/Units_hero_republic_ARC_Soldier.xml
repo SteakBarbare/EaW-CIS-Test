@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<ARC_Soldier_Files>
+	<GroundInfantry Name="ARC_Soldier_Normal">
+		<Text_ID>TEXT_HERO_CLON_ARC</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>RI_ClonARCPhase1_Red.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_ARC TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<CanCellStack>yes</CanCellStack>
+		<Mass>1.0</Mass>
+		<Icon_Name>I_BUTTON_Rep_Arc_Red.tga</Icon_Name>
+		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Walk_Animation_Speed> .366 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
+		<Max_Speed>0.8</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .3 </FormationSpacing>
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<OverrideAcceleration> 0.05 </OverrideAcceleration>
+		<OverrideDeceleration> 0.05 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<Scale_Factor>1.2</Scale_Factor>
+		<!-- Temp scale change for scale test - change back once models resized -->
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Type>Walk</Type>
+		<Deploys>No</Deploys>
+		<Affiliation>Republic</Affiliation>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Political_Control>0</Political_Control>
+		<Size_Value>10</Size_Value>
+		<Damage>1</Damage>
+		<Sensor_Range>20</Sensor_Range>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>400</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>0</Energy_Capacity>
+		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Stealth_Capable>No</Stealth_Capable>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Victory_Relevant>yes</Victory_Relevant>
+		
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		
+		<Projectile_Types>Proj_Infiltrator_BlasterBlue</Projectile_Types>
+		
+		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>.7</Projectile_Fire_Recharge_Seconds>
+		
+		
+		<SFXEvent_Select>Unit_Select_Boba_Fett</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Boba_Fett</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Boba_Fett</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Boba_Fett</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Boba_Fett</SFXEvent_Guard>
+		<SFXEvent_Deploy>Unit_Deploy_Boba_Fett</SFXEvent_Deploy>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Boba_Fett</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Boba_Fett</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Boba_Fett </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Boba_Fett </SFXEvent_Health_Critical_Warning>
+		
+		<CategoryMask> Infantry </CategoryMask>
+		<MovementClass> Infantry </MovementClass>
+		<Property_Flags>Fodder</Property_Flags>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>99</No_Refraction_Below_Detail_Level>
+		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Create_Team>Yes</Create_Team>
+		<AI_Combat_Power>7</AI_Combat_Power>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AvoidAntiInfantryTurrets</Targeting_Priority_Set>
+		<Targeting_Max_Attack_Distance>140.0</Targeting_Max_Attack_Distance>
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Surface_Type_Cover_Damage_Shield>.5</Surface_Type_Cover_Damage_Shield>
+		<Weather_Category>Infantry</Weather_Category>
+		
+		<Death_Clone>Damage_Force_Whirlwind, ARC_Soldier_Normal_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, ARC_Soldier_Normal_Crush_Death_Clone</Death_Clone>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Clon_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	<GroundInfantry Name="ARC_Soldier_Normal_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>ARC_Soldier_Normal</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="ARC_Soldier_Normal_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>ARC_Soldier_Normal</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Republic_ARC_Soldier_Squad">
+		<Variant_Of_Existing_Type>ARC_Soldier_Normal</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="ARC_Soldier_Phase2_Normal">
+		<Text_ID>TEXT_HERO_CLON_ARC</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>RI_ClonARCPhase2_Blue.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_ARC TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<CanCellStack>yes</CanCellStack>
+		<Mass>1.0</Mass>
+		<Icon_Name>I_BUTTON_Rep_Arc_Phase2_Red.tga</Icon_Name>
+		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Walk_Animation_Speed> .366 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
+		<Max_Speed>0.8</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .3 </FormationSpacing>
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<OverrideAcceleration> 0.05 </OverrideAcceleration>
+		<OverrideDeceleration> 0.05 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<Scale_Factor>1.2</Scale_Factor>
+		<!-- Temp scale change for scale test - change back once models resized -->
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Type>Walk</Type>
+		<Deploys>No</Deploys>
+		<Affiliation>Republic</Affiliation>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Political_Control>0</Political_Control>
+		<Size_Value>10</Size_Value>
+		<Damage>1</Damage>
+		<Sensor_Range>20</Sensor_Range>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>400</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>0</Energy_Capacity>
+		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Stealth_Capable>No</Stealth_Capable>
+		<Armor_Type> Armor_Infantry </Armor_Type>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<Victory_Relevant>yes</Victory_Relevant>
+		
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		
+		<Projectile_Types>Proj_Infiltrator_BlasterBlue</Projectile_Types>
+		
+		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>.7</Projectile_Fire_Recharge_Seconds>
+		
+		
+		<SFXEvent_Select>Unit_Select_Boba_Fett</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Boba_Fett</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Boba_Fett</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Boba_Fett</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Boba_Fett</SFXEvent_Guard>
+		<SFXEvent_Deploy>Unit_Deploy_Boba_Fett</SFXEvent_Deploy>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Boba_Fett</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Boba_Fett</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Boba_Fett </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Boba_Fett </SFXEvent_Health_Critical_Warning>
+		
+		<CategoryMask> Infantry </CategoryMask>
+		<MovementClass> Infantry </MovementClass>
+		<Property_Flags>Fodder</Property_Flags>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>99</No_Refraction_Below_Detail_Level>
+		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Create_Team>Yes</Create_Team>
+		<AI_Combat_Power>7</AI_Combat_Power>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AvoidAntiInfantryTurrets</Targeting_Priority_Set>
+		<Targeting_Max_Attack_Distance>140.0</Targeting_Max_Attack_Distance>
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Surface_Type_Cover_Damage_Shield>.5</Surface_Type_Cover_Damage_Shield>
+		<Weather_Category>Infantry</Weather_Category>
+		
+		<Death_Clone>Damage_Force_Whirlwind, ARC_Soldier_Phase2_Normal_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, ARC_Soldier_Phase2_Normal_Crush_Death_Clone</Death_Clone>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Clon_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	<GroundInfantry Name="ARC_Soldier_Phase2_Normal_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>ARC_Soldier_Phase2_Normal</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="ARC_Soldier_Phase2_Normal_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>ARC_Soldier_Phase2_Normal</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Republic_ARC_Soldier_Phase2_Squad">
+		<Variant_Of_Existing_Type>ARC_Soldier_Phase2_Normal</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+	</GroundInfantry>
+	
+	
+	
+	
+	
+
+</ARC_Soldier_Files>

@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+
+
+<Starviper_FighterUnit_Data>
+
+
+
+	<SpaceUnit Name="Starviper_Fighter">
+		<Variant_Of_Existing_Type>A-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VIPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_VIPER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Bomber Y-Wing Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette TartanORG A-Wing </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_Viperfighter.tga</Icon_Name>
+
+		<Space_Model_Name>UV_Viperfighter.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>4.0</Max_Speed>
+		<Min_Speed>2.7</Min_Speed>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
+		<Max_Thrust>0.7</Max_Thrust>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		
+		<Max_Lift>2.67</Max_Lift>
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Armor_Type> Armor_Fighter </Armor_Type>
+		
+		<Affiliation>Underworld</Affiliation>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Autoresolve_Health>160</Autoresolve_Health>
+		<Shield_Refresh_Rate>1100</Shield_Refresh_Rate>
+		<Energy_Capacity>9999</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+
+	
+		<CategoryMask> Fighter | AntiFighter </CategoryMask> 
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+
+		<HardPoints> 
+			HP_BTLYWING_02, HP_G_StarViper_Laser_00, HP_G_StarViper_Laser_01
+		</HardPoints>
+
+		<SFXEvent_Fire>Unit_Star_Viper_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Star_Viper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Star_Viper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Star_Viper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Star_Viper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Star_Viper</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Star_Viper </SFXEvent_Move_Into_Nebula>
+		<Death_SFXEvent_Start_Die>Unit_A_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Star_Viper </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Star_Viper </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Star_Viper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Star_Viper </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_Star_Viper </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_Star_Viper </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+		<SFXEvent_Ambient_Moving> Unit_Star_Viper_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Star_Viper_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+            <Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> Unit_Buzz_Droids_Star_Viper </SFXEvent_Target_Ability>
+				
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L1">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.25</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
+				
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L2">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
+				
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
+				
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+            <Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 400 </Activation_Max_Range>
+				
+                <Chase_Radius>300</Chase_Radius>
+                <Damage_Radius> 175 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 23 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 3 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>GUI_Buzz_Droids_SFX</Activate_SFX>
+                <Object_Type>Buzz_Droids</Object_Type>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+
+		</Abilities>
+
+
+	</SpaceUnit>
+	
+	<Squadron Name="StarViper_Squadron">
+		<Variant_Of_Existing_Type>Z95_Headhunter_Rebel_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_VIPER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_VIPER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Interceptor X-wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette TartanORG </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Time_Seconds>13</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Factoria_Cazas_Piratas</Required_Special_Structures>
+
+		<Squadron_Units>Starviper_Fighter, Starviper_Fighter, Starviper_Fighter</Squadron_Units>
+		<Squadron_Offsets>-55.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-35.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,40.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,-25.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,-15.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,30.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,55.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-55.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,45.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-45.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-65.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type> StarViper_Squadron_Container1 </Create_Team_Type>
+
+		<Icon_Name>i_button_Viperfighter.TGA</Icon_Name>
+		<GUI_Model_Name>UV_Viperfighter.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Star_Viper</SFXEvent_Build_Complete>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+            <Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Buzz_Droids_Star_Viper</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>
+	
+	<Container Name="StarViper_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_VIPER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_VIPER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Viperfighter.tga</Icon_Name>
+
+		<Max_Speed>4.0</Max_Speed>
+		<Min_Speed>2.7</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-55.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-35.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,40.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,-25.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,-15.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,30.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,55.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-55.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,45.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-45.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-65.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+            <Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <SFXEvent_GUI_Unit_Ability_Activated></SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+            </Unit_Ability>
+			<Unit_Ability>
+
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+
+            <Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 400 </Activation_Max_Range>
+                <Chase_Radius>300</Chase_Radius>
+                <Damage_Radius> 175 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 23 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 3 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>GUI_Buzz_Droids_SFX</Activate_SFX>
+                <Object_Type>Buzz_Droids</Object_Type>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+
+        </Abilities>
+	</Container>
+
+</Starviper_FighterUnit_Data>

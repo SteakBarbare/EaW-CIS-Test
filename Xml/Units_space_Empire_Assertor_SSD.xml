@@ -1,0 +1,488 @@
+<?xml version="1.0"?>
+<E_AssertorUnit_Data>
+	
+	<SpaceUnit Name="E_Assertor">
+		<Variant_Of_Existing_Type>AssertorORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Special_Structures>Super_Astilleros_Imperiales, AdvancedTech_8</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, E_Assertor_Death_Clone</Death_Clone>
+		<Starting_Spawned_Units_Tech_0>TIE_Hunter_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Agresor_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Interdictor_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Opresor_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Hunter_Squadron5, 35</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Agresor_Squadron7, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Interdictor_Squadron4, 35</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Opresor_Squadron4, 35</Reserve_Spawned_Units_Tech_0>
+		
+		<SFXEvent_Select>Unit_Select_E_Assertor</SFXEvent_Select>
+		<SFXEvent_Build_Complete>Unit_Complete_E_Assertor</SFXEvent_Build_Complete>
+				
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+	</SpaceUnit>
+	<SpaceUnit Name="AssertorORG">
+		<Variant_Of_Existing_Type>SSDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_ASSERTOR_SSD</Text_ID>
+		<Encyclopedia_Good_Against> RSD NebulaSD StridentORG </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> B-Wing K-Wing T42 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EV_ASSERTOR_SSD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ECLIPSE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_HUNTER TEXT_WAVES_X2 TEXT_UNIT_TIE_AGRESOR TEXT_WAVES_X3 TEXT_UNIT_TIE_INTERDICTOR TEXT_WAVES_X2 TEXT_UNIT_TIE_OPRESOR TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_24</Encyclopedia_Text>
+		
+		<!--<Custom_Hard_XExtent> 1688.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 921.0 </Custom_Hard_YExtent>-->
+
+		<Icon_Name>I_BUTTON_EV_ASSERTOR_SSD.TGA</Icon_Name>
+		<GUI_Row>1</GUI_Row>
+		<GUI_Model_Name>EV_Assertor_SSD.ALO</GUI_Model_Name>
+		<Space_Model_Name>EV_Assertor_SSD.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Assertor_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Max_Speed>2.0</Max_Speed>
+		
+		<Mass>0.995</Mass>
+		<Scale_Factor>0.85</Scale_Factor>
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		
+		<!--<Layer_Z_Adjust>533.544</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>350.0</Layer_Z_Adjust>
+		
+		<Armor_Type> Armor_Eclipse </Armor_Type>
+		<Shield_Armor_Type>Shield_Eclipse</Shield_Armor_Type>
+
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>1000000</Shield_Points>
+		<Tactical_Health>1000000000</Tactical_Health>
+		<Shield_Refresh_Rate>1192000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+		
+		<Affiliation>Empire, GA</Affiliation>
+		<Space_Layer> Supercapital </Space_Layer>
+		
+		<Tactical_Bribe_Cost>9500</Tactical_Bribe_Cost>
+
+		<AI_Combat_Power>6600</AI_Combat_Power>
+		<Build_Cost_Credits>50000</Build_Cost_Credits>
+		<Build_Time_Seconds>240</Build_Time_Seconds>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+					
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>	
+     	<HardPoints>
+			HP_Assertor_SuperLaser_01,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10,
+			HP_Flak_11,
+			HP_Flak_12,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Shield_GeneratorH_05,
+			HP_Shield_GeneratorH_06,
+			HP_Shield_GeneratorH_07
+			HP_Shield_GeneratorH_08,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Tractor_Beam_Rebelde,
+			HP_TN_Assertor_01,
+			HP_TN_Assertor_02,
+			HP_TN_Assertor_03,
+			HP_TN_Assertor_04,
+			HP_TN_Assertor_05,
+			HP_TN_Assertor_06,
+			HP_TN_Assertor_07,
+			HP_TN_Assertor_08,
+			HP_TN_Assertor_09,
+			HP_TN_Assertor_10,
+			HP_TN_Assertor_11,
+			HP_TN_Assertor_12,
+			HP_TN_Assertor_13,
+			HP_TN_Assertor_14,
+			HP_TN_Assertor_15,
+			HP_TN_Assertor_16,
+			HP_TN_Assertor_17,
+			HP_TN_Assertor_18,
+			HP_TN_Assertor_19,
+			HP_TN_Assertor_20,
+			HP_TN_Assertor_21,
+			HP_TN_Assertor_22,
+			HP_TN_Assertor_23,
+			HP_TN_Assertor_24,
+			HP_TN_Assertor_25,
+			HP_TN_Assertor_26,
+			HP_TN_Assertor_27,
+			HP_TN_Assertor_28,
+			HP_TN_Assertor_29,
+			HP_TN_Assertor_30,
+			HP_TN_Assertor_31,
+			HP_TN_Assertor_32,
+			HP_TB_Assertor_01,
+			HP_TB_Assertor_02,
+			HP_TB_Assertor_03,
+			HP_TB_Assertor_04,
+			HP_TB_Assertor_05,
+			HP_TB_Assertor_06,
+			HP_TB_Assertor_07,
+			HP_TB_Assertor_08,
+			HP_TB_Assertor_09,
+			HP_TB_Assertor_10,
+			HP_TB_Assertor_11,
+			HP_TB_Assertor_12,
+			HP_TB_Assertor_13,
+			HP_TB_Assertor_14,
+			HP_TB_Assertor_15,
+			HP_TB_Assertor_16,
+			HP_TB_Assertor_17,
+			HP_TB_Assertor_18,
+			HP_TB_Assertor_19,
+			HP_TB_Assertor_20,
+			HP_TB_Assertor_21,
+			HP_TB_Assertor_22,
+			HP_TB_Assertor_23,
+			HP_TB_Assertor_24,
+			HP_TB_Assertor_25,
+			HP_TB_Assertor_26,
+			HP_TB_Assertor_27,
+			HP_TB_Assertor_28,
+			HP_TB_Assertor_29,
+			HP_TB_Assertor_30,
+			HP_TB_Assertor_31,
+			HP_TB_Assertor_32,
+			HP_TB_Assertor_33,
+			HP_TB_Assertor_34,
+			HP_TB_Assertor_35,
+			HP_TB_Assertor_36,
+			HP_TB_Assertor_37,
+			HP_TB_Assertor_38,
+			HP_TB_Assertor_39,
+			HP_TB_Assertor_40,
+			HP_TB_Assertor_41,
+			HP_TB_Assertor_42,
+			HP_TB_Assertor_43,
+			HP_TB_Assertor_44,
+			HP_TB_Assertor_45,
+			HP_TB_Assertor_46,
+			HP_TB_Assertor_47,
+			HP_TB_Assertor_48,
+			HP_TB_Assertor_49,
+			HP_TB_Assertor_50,
+			HP_TB_Assertor_51,
+			HP_TB_Assertor_52,
+			HP_TB_Assertor_53,
+			HP_TB_Assertor_54,
+			HP_TB_Assertor_55,
+			HP_TB_Assertor_56,
+			HP_TB_Assertor_57,
+			HP_TB_Assertor_58,
+			HP_TB_Assertor_59,
+			HP_TB_Assertor_60,
+			HP_TB_Assertor_61,
+			HP_TB_Assertor_62,
+			HP_TB_Assertor_63,
+			HP_TB_Assertor_64,
+			HP_TB_Assertor_65,
+			HP_TB_Assertor_66,
+			HP_TB_Assertor_67,
+			HP_TB_Assertor_68,
+			HP_TB_Assertor_69,
+			HP_TB_Assertor_70,
+			HP_TB_Assertor_71,
+			HP_TB_Assertor_72,
+			HP_TB_Assertor_73,
+			HP_TB_Assertor_74,
+			HP_TB_Assertor_75,
+			HP_TB_Assertor_76,
+			HP_TB_Assertor_77,
+			HP_TB_Assertor_78,
+			HP_TB_Assertor_79,
+			HP_TB_Assertor_80,
+			HP_TB_Assertor_81,
+			HP_TB_Assertor_82,
+			HP_TB_Assertor_83,
+			HP_TB_Assertor_84,
+			HP_TB_Assertor_85,
+			HP_TB_Assertor_86,
+			HP_TB_Assertor_87,
+			HP_TB_Assertor_88,
+			HP_TB_Assertor_89,
+			HP_TB_Assertor_90,
+			HP_TB_Assertor_91,
+			HP_TB_Assertor_92,
+			HP_TB_Assertor_93,
+			HP_TB_Assertor_94,
+			HP_TB_Assertor_95,
+			HP_TB_Assertor_96,
+			HP_TB_Assertor_97,
+			HP_TB_Assertor_98,
+			HP_TB_Assertor_99,
+			HP_TB_Assertor_100,
+			HP_TB_Assertor_101,
+			HP_TB_Assertor_102,
+			HP_TB_Assertor_103,
+			HP_TB_Assertor_104,
+			HP_TB_Assertor_105,
+			HP_TB_Assertor_106,
+			HP_TB_Assertor_107,
+			HP_TB_Assertor_108,
+			HP_TB_Assertor_109,
+			HP_TB_Assertor_110,
+			HP_TB_Assertor_111,
+			HP_TB_Assertor_112,
+			HP_TB_Assertor_113,
+			HP_TB_Assertor_114,
+			HP_TB_Assertor_115,
+			HP_TB_Assertor_116,
+			HP_TB_Assertor_117,
+			HP_TB_Assertor_118,
+			HP_TB_Assertor_119,
+			HP_TB_Assertor_120,
+			HP_TB_Assertor_121,
+			HP_TB_Assertor_122,
+			HP_TB_Assertor_123,
+			HP_TB_Assertor_124,
+			HP_TB_Assertor_125,
+			HP_TB_Assertor_126,
+			HP_TB_Assertor_127,
+			HP_TB_Assertor_128,
+			HP_TB_Assertor_129,
+			HP_TB_Assertor_130,
+			HP_TB_Assertor_131,
+			HP_TB_Assertor_132,
+			HP_TB_Assertor_133,
+			HP_TB_Assertor_134,
+			HP_TB_Assertor_135,
+			HP_TB_Assertor_136,
+			HP_TB_Assertor_137,
+			HP_TB_Assertor_138,
+			HP_TB_Assertor_139,
+			HP_TB_Assertor_140,
+			HP_TB_Assertor_141,
+			HP_TB_Assertor_142,
+			HP_TB_Assertor_143,
+			HP_TB_Assertor_144,
+			HP_T_Assertor_01,
+			HP_T_Assertor_02,
+			HP_T_Assertor_03,
+			HP_T_Assertor_04,
+			HP_T_Assertor_05,
+			HP_T_Assertor_06,
+			HP_T_Assertor_07,
+			HP_T_Assertor_08,
+			HP_T_Assertor_09,
+			HP_T_Assertor_10,
+			HP_T_Assertor_11,
+			HP_T_Assertor_12,
+			HP_T_Assertor_13,
+			HP_T_Assertor_14,
+			HP_T_Assertor_15,
+			HP_T_Assertor_16,
+			HP_T_Assertor_17,
+			HP_T_Assertor_18,
+			HP_T_Assertor_19,
+			HP_T_Assertor_20,
+			HP_T_Assertor_21,
+			HP_T_Assertor_22,
+			HP_T_Assertor_23,
+			HP_T_Assertor_24,
+			HP_T_Assertor_25,
+			HP_T_Assertor_26,
+			HP_T_Assertor_27,
+			HP_T_Assertor_28,
+			HP_T_Assertor_29,
+			HP_T_Assertor_30,
+			HP_T_Assertor_31,
+			HP_T_Assertor_32,
+			HP_T_Assertor_33,
+			HP_T_Assertor_34,
+			HP_T_Assertor_35,
+			HP_T_Assertor_36,
+			HP_T_Assertor_37,
+			HP_T_Assertor_38,
+			HP_T_Assertor_39,
+			HP_T_Assertor_40,
+			HP_T_Assertor_41,
+			HP_T_Assertor_42,
+			HP_T_Assertor_43,
+			HP_T_Assertor_44,
+			HP_T_Assertor_45,
+			HP_T_Assertor_46,
+			HP_T_Assertor_47,
+			HP_T_Assertor_48,
+			HP_T_Assertor_49,
+			HP_T_Assertor_50,
+			HP_T_Assertor_51,
+			HP_T_Assertor_52,
+			HP_T_Assertor_53,
+			HP_T_Assertor_54,
+			HP_T_Assertor_55,
+			HP_T_Assertor_56,
+			HP_T_Assertor_57,
+			HP_T_Assertor_58,
+			HP_T_Assertor_59,
+			HP_T_Assertor_60,
+			HP_T_Assertor_61,
+			HP_T_Assertor_62,
+			HP_T_Assertor_63,
+			HP_T_Assertor_64,
+			HP_T_Assertor_65,
+			HP_T_Assertor_66,
+			HP_T_Assertor_67,
+			HP_T_Assertor_68,
+			HP_T_Assertor_69,
+			HP_T_Assertor_70,
+			HP_T_Assertor_71,
+			HP_T_Assertor_72,
+			HP_T_Assertor_73,
+			HP_T_Assertor_74,
+			HP_T_Assertor_75,
+			HP_T_Assertor_76,
+			HP_T_Assertor_77,
+			HP_T_Assertor_78,
+			HP_T_Assertor_79,
+			HP_T_Assertor_80,
+			HP_T_Assertor_81,
+			HP_T_Assertor_82,
+			HP_T_Assertor_83,
+			HP_T_Assertor_84,
+			HP_T_Assertor_85,
+			HP_T_Assertor_86,
+			HP_T_Assertor_87,
+			HP_T_Assertor_88,
+			HP_T_Assertor_89,
+			HP_T_Assertor_90,
+			HP_T_Assertor_91,
+			HP_T_Assertor_92,
+			HP_T_Assertor_93,
+			HP_T_Assertor_94,
+			HP_T_Assertor_95,
+			HP_T_Assertor_96,
+			HP_T_Assertor_97,
+			HP_T_Assertor_98,
+			HP_T_Assertor_99,
+			HP_T_Assertor_100,
+			HP_T_Assertor_101,
+			HP_T_Assertor_102,
+			HP_T_Assertor_103,
+			HP_T_Assertor_104,
+			HP_T_Assertor_105,
+			HP_T_Assertor_106,
+			HP_T_Assertor_107,
+			HP_T_Assertor_108,
+			HP_T_Assertor_109,
+			HP_T_Assertor_110,
+			HP_T_Assertor_111,
+			HP_T_Assertor_112,
+			HP_T_Assertor_113,
+			HP_T_Assertor_114,
+			HP_T_Assertor_115
+		</HardPoints>
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Population_Value>12</Population_Value>
+		<!--<Space_Override_Population_Value>9</Space_Override_Population_Value>-->
+		
+		<Tactical_Build_Cost_Multiplayer>50000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>88</Tactical_Build_Time_Seconds>
+		
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> ASS_Tractor_Beam_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	        </Unit_Ability>
+
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Tractor_Beam_Attack_Ability Name="ASS_Tractor_Beam_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>4000</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>0</Stacking_Category>            
+	      	</Tractor_Beam_Attack_Ability>
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			<Force_Healing_Ability Name="Assertor_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>E_Assertor</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>TractorBeam</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>          
+		</Abilities>
+
+		<Radar_Icon_Name>Executor_Radar.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.54867  0.30267</Radar_Icon_Size>  
+
+	</SpaceUnit>
+	<SpaceUnit Name="E_Assertor_Death_Clone">
+		<Text_ID> TEXT_UNIT_DOMINANCE </Text_ID>
+		<Space_Model_Name>EV_Assertor_SSD_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<In_Background>No</In_Background>
+		<Scale_Factor>0.85</Scale_Factor>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</E_AssertorUnit_Data>

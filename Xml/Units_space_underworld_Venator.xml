@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+
+
+<BS_VenatorUnit_Data>
+
+	<SpaceUnit Name="BS_Venator">
+		<Variant_Of_Existing_Type>VenatorORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VENETORCLON TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_RAZORFIGHTER TEXT_UNIT_TOSKAN TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Space_Model_Name>UV_Venator.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_UV_Venator.TGA</Icon_Name>
+		<Affiliation>Underworld, CIS</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		<AI_Combat_Power>9000</AI_Combat_Power>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<HardPoints>
+			HP_T_RepVenator_01,
+			HP_T_RepVenator_02,
+			HP_T_RepVenator_03,
+			HP_T_RepVenator_04,
+			HP_T_RepVenator_05,
+			HP_T_RepVenator_06,
+			HP_T_RepVenator_07,
+			HP_T_RepVenator_08,
+			HP_T_RepVenator_09,
+			HP_T_RepVenator_10,
+			HP_T_RepVenator_11,
+			HP_T_RepVenator_12,
+			HP_T_RepVenator_13,
+			HP_T_RepVenator_14,
+			HP_T_RepVenator_15,
+			HP_T_RepVenator_16,
+			HP_T_UVenator_17,
+			HP_T_UVenator_18,
+			HP_T_UVenator_19,
+			HP_T_UVenator_20,
+			HP_T_UVenator_21,
+			HP_T_UVenator_22,
+			HP_T_UVenator_23,
+			HP_T_UVenator_24,
+			HP_T_UVenator_25,
+			HP_T_UVenator_26,
+			HP_T_UVenator_27,
+			HP_T_UVenator_28,
+			HP_T_UVenator_29,
+			HP_T_UVenator_30,
+			HP_T_UVenator_31,
+			HP_T_UVenator_32,
+			HP_T_UVenator_33,
+			HP_T_UVenator_34,
+			HP_E_UV_Venator_00,
+			HP_SH_UV_Venator_00,
+			HP_SH_UV_Venator_01,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02
+		</HardPoints>
+		
+		<Starting_Spawned_Units_Tech_0>RazorfighterU_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>ToskanU_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>RazorfighterU_Squadron, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ToskanU_Squadron, 17</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, BS_Venator_Death_Clone</Death_Clone>
+
+
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Expiration_Seconds>25</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	5.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.8f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+	</SpaceUnit>	
+	<SpaceUnit Name="BS_Venator_Death_Clone">
+		<Text_ID>TEXT_UNIT_JEDI_CRUISER</Text_ID>
+		<Space_Model_Name>UV_Venator_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+    
+</BS_VenatorUnit_Data>

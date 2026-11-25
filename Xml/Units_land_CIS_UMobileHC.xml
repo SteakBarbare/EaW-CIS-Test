@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<CIS_UMobileHCUnit_Data>
+	
+	<GroundVehicle Name="CIS_UMobileHC">
+		<Variant_Of_Existing_Type>MTAT_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_UMOBILEHC</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Z95Land_squadron Rebel_Speeder_Wing Rebel_AAC-1_Tank_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_UMOBILEHC</Encyclopedia_Text>
+
+		<Icon_Name>i_button_CIS_UMobileHC.tga</Icon_Name>
+		<Land_Model_Name>CIS_UMobileHC.ALO</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<CategoryMask> Vehicle  </CategoryMask>
+		<Deploys>No</Deploys>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>Yes</Fire_Weapon_When_Undeployed>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel</Barrel_Bone_Name>
+				
+		<Projectile_Types>Proj_Main_CIS_UMobileHC</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>20.0</Targeting_Min_Attack_Distance>
+		
+		<Ranged_Target_Z_Adjust>35.0</Ranged_Target_Z_Adjust> 
+		
+		<HardPoints>
+				HP_MTAT_00, HP_MTAT_01
+		</HardPoints>
+		
+		<SFXEvent_Fire>Unit_AAT_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_B1reconDroid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1reconDroid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1reconDroid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1reconDroid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Select_B1reconDroid</SFXEvent_Guard>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1reconDroid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1reconDroid </SFXEvent_Assist_Attack>
+		
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>CIS_UMobileHC_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Red_ATATMKII</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Activate_Energy_Blast_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="CIS_UMobileHC_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+		
+		<Vehicle_Thief_Inside_Clone>CIS_UMobileHC_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="CIS_UMobileHC_Captured">
+		<Variant_Of_Existing_Type>CIS_UMobileHC</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+					
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	
+	<GroundCompany Name="CIS_UMobileHC_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_UMOBILEHC</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_V-Wing_airspeeder_squadronRebel_V-Wing_airspeeder_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_UMOBILEHC TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<GUI_Row> 1 </GUI_Row>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>C9979_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>CIS_UMobileHC</Company_Units>
+		<Icon_Name>i_button_CIS_UMobileHC.tga</Icon_Name>
+		<GUI_Model_Name>CIS_UMobileHC.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Build_Complete>Unit_Select_B1reconDroid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_B1reconDroid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+</CIS_UMobileHCUnit_Data>

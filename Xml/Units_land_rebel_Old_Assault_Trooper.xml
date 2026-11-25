@@ -1,0 +1,157 @@
+﻿<?xml version="1.0"?>
+
+
+<Old_Rebel_Assault_TrooperUnit_Data>
+	<GroundInfantry Name="Squad_Old_Rebel_Assault_Trooper_Hoth">
+		<Variant_Of_Existing_Type>Squad_Old_Rebel_Assault_Trooper</Variant_Of_Existing_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Old_Rebel_Assault_Trooper">
+		<Variant_Of_Existing_Type> StormtrooperORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_REBEL_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Model_Name>RI_Infantry_Assault.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+            		Temperate, 			RI_Infantry_Assault.ALO,
+            		Urban, 				RI_Infantry_Assault.ALO,
+					Arctic, 			RI_Infantry_Assault.ALO,
+            		Volcanic, 			RI_Infantry_Assault.ALO,
+            		Desert, 			RI_Infantry_Assault.ALO,
+            		Forest, 			RI_Infantry_Assault.ALO,
+            		Swamp, 				RI_Infantry_Assault.ALO
+		</Land_Terrain_Model_Mapping>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Tactical_Health>200</Tactical_Health>
+		
+		<Projectile_Types>Proj_Assault_Gun</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 12.0 </Targeting_Fire_Inaccuracy>
+		
+		<Land_FOW_Reveal_Range>150.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+
+		<Icon_Name>I_BUTTON_REBEL_ASSAULTX.tga</Icon_Name>
+		<Create_Team>Yes</Create_Team>
+		<Death_Clone>Damage_Force_Whirlwind, Rebel_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Rebel_Trooper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Rebel_Trooper_Crush_Death_Clone</Death_Clone>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVY_REBELSOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Presence_Induced_Animations>
+			Celebrate, 
+				AT_AT_Walker_Cable_Attack_Death_Clone,
+				AT_AT_Walker_Death_Clone_00,
+				AT_AT_Walker_Death_Clone_01,
+				AT_AT_Walker_Death_Clone_02
+		</Presence_Induced_Animations>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.6f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.6f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Rebel_Soldier</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Conversion_Ability_Changes_To_Enemy> Rebel_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Old_Rebel_Assault_Trooper">
+		<Variant_Of_Existing_Type>Old_Rebel_Assault_Trooper</Variant_Of_Existing_Type>
+		
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT,ABILITY_COUNTDOWN</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+
+	</GroundInfantry>
+	<GroundCompany Name="Rebel_Old_Assault_Squad_Hoth">
+		<Variant_Of_Existing_Type>Rebel_Old_Assault_Squad_B</Variant_Of_Existing_Type>
+	</GroundCompany>		
+	<GroundInfantry Name="Squad_Old_Rebel_Assault_Trooper_B">
+		<Variant_Of_Existing_Type>Squad_Old_Rebel_Assault_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Rebel_Old_Assault_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Rebel_Old_Assault_Squad_B">
+		<Variant_Of_Existing_Type>Rebel_Old_Assault_Squad</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Rebel_Old_Assault_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Rebel_Old_Assault_Squad">
+		<Variant_Of_Existing_Type> Rebel_Infantry_Squad </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_REBEL_TROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVY_REBELSOLDIER TEXT_DESC_CI_CANTIDAD_1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		
+		<Company_Units> 
+		Squad_Old_Rebel_Assault_Trooper_B,
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper, 
+		Squad_Old_Rebel_Assault_Trooper
+		</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Rebel_Old_Assault_Team </Create_Team_Type>
+		<Icon_Name>I_BUTTON_REBEL_ASSAULTX.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+
+	<Container Name="Rebel_Old_Assault_Team">
+		<Variant_Of_Existing_Type>Rebel_Trooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_REBEL_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Scout_Trooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVY_REBELSOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_REBEL_ASSAULTX.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.6f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.6f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Rebel_Soldier_Converted</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+	
+		</Unit_Abilities_Data>
+	
+	</Container>
+</Old_Rebel_Assault_TrooperUnit_Data>

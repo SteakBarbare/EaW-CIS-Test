@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<Republic_AT_TE_WalkerUnit_Data>
+	<GroundVehicle Name="Rep_AT_TE_Walker">
+		<Variant_Of_Existing_Type>Rep_AT_TE_WalkerORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Cable_Attack, Rep_AT_TE_Walker_Cable_Attack_Death_Clone</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>Rep_AT_TE_Walker_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_AT_TE_WalkerORG">
+		<Variant_Of_Existing_Type>AT_AT_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_TE_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_T5B_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AT_TE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<No_Colorization_Color> 146, 25, 56, 255 </No_Colorization_Color>
+
+		<Land_Model_Name>Rep_AT_TE.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_at_te.tga</Icon_Name>
+
+		<Scale_Factor>1.0</Scale_Factor>
+	
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+		
+		<Armor_Type> Armor_T4B </Armor_Type>
+
+		<Tactical_Health>800</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>425.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>50.0</Targeting_Min_Attack_Distance>
+
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>15</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		<Ranged_Target_Z_Adjust>40.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types>Proj_Main_Cannon_AT-TE</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Garrison_Category> Vehicle </Garrison_Category>
+		<Garrison_Value>2</Garrison_Value>
+		
+		<MovementPredictionInterval> 12.0 </MovementPredictionInterval>		
+		<MovementBoxExpansionFactor> 16.0 </MovementBoxExpansionFactor>	
+		
+		<Overall_Length>80.0</Overall_Length> 
+		<Overall_Width>40.0</Overall_Width> 
+		
+		<HardPoints>
+			HP_ATTE_Turret_LASER_00, HP_ATTE_Turret_LASER_01, HP_ATTE_Turret_LASER_02, HP_ATTE_Turret_LASER_03, HP_ATTE_Turret_LASER_04, HP_ATTE_Turret_LASER_05
+		</HardPoints>
+
+		<SFXEvent_Select>Unit_Select_Republic_ATTE</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Republic_ATTE</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_ATTE</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Republic_ATTE</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Republic_ATTE</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Republic_ATTE </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Republic_ATTE </SFXEvent_Assist_Attack>
+		<MovementClass>Walker</MovementClass>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ATTE </Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
+		<Should_Reinforcements_Move> false </Should_Reinforcements_Move>
+		<AI_Combat_Power>190</AI_Combat_Power>
+
+		<Select_Box_Scale>160</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>240</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 15.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Main_Cannon_AT-TE</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Attack_Republic_ATTE </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>SHUTTLEATTACK_Deployed_Republic_Clon_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Republic_ATTE</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_AT_TE_Walker_Captured">
+		<Variant_Of_Existing_Type>Rep_AT_TE_Walker</Variant_Of_Existing_Type>
+		
+
+    	<Unit_Abilities_Data SubObjectList="Yes">
+	
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_AT_TE_Walker_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>Rep_AT_TE_Walker</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+      <Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		<Presence_Range>200.0</Presence_Range>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</GroundVehicle>
+	
+	
+	
+
+	<GroundCompany Name="Republic_AT_TE_Company">
+		<Variant_Of_Existing_Type>ATATCompanyORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_TE_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>Republic_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Republic_LAATCTransport</Company_Transport_Unit>
+		<Company_Units>Rep_AT_TE_Walker</Company_Units>
+
+		<Icon_Name>i_button_Rep_at_te.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Republic_ATTE</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_ATTE</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>24</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_AT_TE TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+	
+</Republic_AT_TE_WalkerUnit_Data>

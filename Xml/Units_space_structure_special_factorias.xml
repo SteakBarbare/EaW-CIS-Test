@@ -1,0 +1,358 @@
+<?xml version="1.0"?>
+<special_factoriasUnit_Data>
+	<SpecialStructure Name="Factoria_Naves_Ligeras">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIANAVESLIGERAS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FACTORIANAVESLIGERAS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_CAPITAL </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		
+		<Death_Clone>Damage_Normal, Factory_Plattform_Death_Clone</Death_Clone>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="Repair_Facility_Healing">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>2500.0</Heal_Range>
+				<Heal_Percent> 30.0 </Heal_Percent>
+                <Blob_Color>0, 255, 0, 255</Blob_Color>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<!-- We can heal the following unit types: -->
+				<Applicable_Unit_Categories>Fighter, Transport, Bomber</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>Shield_00</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Co_Factoria_Cazas_Piratas">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Piratas</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+	</SpecialStructure>		
+	<SpecialStructure Name="Ha_Factoria_Cazas_Piratas">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Piratas</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+	</SpecialStructure>		
+	<SpecialStructure Name="Hu_Factoria_Cazas_Piratas">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Piratas</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+	</SpecialStructure>		
+	<SpecialStructure Name="Factoria_Cazas_Piratas">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Lua_Script>BS_Fighter_Factory</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Required_Special_Structures>Astilleros_Piratas</Required_Special_Structures>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASPIRATAS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FACTORIACAZASPIRATAS  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Affiliation>Underworld, Hutts</Affiliation>
+		<Icon_Name>I_BUTTON_FACTORY_PIR.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="Repair_Facility_Healing">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>2500.0</Heal_Range>
+				<Heal_Percent> 30.0 </Heal_Percent>
+                <Blob_Color>0, 255, 0, 255</Blob_Color>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<!-- We can heal the following unit types: -->
+				<Applicable_Unit_Categories>Fighter, Transport, Bomber</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>Shield_00</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	</SpecialStructure>
+	
+	
+	<SpecialStructure Name="Factoria_Cazas_separatistas">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Lua_Script>CIS_Fighter_Factory</Lua_Script>
+		<Icon_Name>I_BUTTON_FACTORYCIS.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASCIS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FACTORIACAZASCIS  </Encyclopedia_Text>
+	</SpecialStructure>	
+	<SpecialStructure Name="Ch_Factoria_Cazas_Sienar">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Sienar</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+	</SpecialStructure>		
+	<SpecialStructure Name="Factoria_CazasEVFO">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Sienar</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASSIENARFO</Text_ID>
+		<Affiliation>EVFO, Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Lua_Script>EVFO_Fighter_Factory</Lua_Script>
+	</SpecialStructure>		
+	<SpecialStructure Name="Factoria_Cazas_Sienar">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Lua_Script>E_Fighter_Factory</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Icon_Name>I_BUTTON_FACTORYSIENAR.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASSIENAR</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FACTORIACAZASSIENAR  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, Factory_Plattform_Death_Clone</Death_Clone>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="Repair_Facility_Healing">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>2500.0</Heal_Range>
+				<Heal_Percent> 30.0 </Heal_Percent>
+                <Blob_Color>0, 255, 0, 255</Blob_Color>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<!-- We can heal the following unit types: -->
+				<Applicable_Unit_Categories>Fighter, Transport, Bomber</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>Shield_00</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+				</Force_Healing_Ability>
+			
+		</Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Rep_Factory_Sienar">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Lua_Script>Rep_Fighter_Factory</Lua_Script>
+		<Icon_Name>I_BUTTON_FACTORYRep.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+	</SpecialStructure>
+	<SpecialStructure Name="Factoria_Cazas_Soorub">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASSOORUB</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FACTORIACAZASSOORUB  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Factoria_Cazas_ICOM">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASICOM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FACTORIACAZASICOM</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Factoria_Cazas_KOEN">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASKOEM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FACTORIACAZASKOEM</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpecialStructure>
+	<SpecialStructure Name="Factoria_CazasRVRE">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Rebeldes</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASRVRE</Text_ID>
+		<Affiliation>RVRE, Rebel</Affiliation>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Lua_Script>RVRE_Fighter_Factory</Lua_Script>
+	</SpecialStructure>		
+	<SpecialStructure Name="Factoria_Cazas_Rebeldes">
+		<Variant_Of_Existing_Type>Factory_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FACTORIACAZASREBELDES</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FACTORIACAZASREBELDES  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_FACTORYREPUBLIC.tga</Icon_Name>
+		<Lua_Script>R_Fighter_Factory</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Affiliation>Rebel</Affiliation>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+		
+		<Abilities SubObjectList="Yes">
+			<Force_Healing_Ability Name="Repair_Facility_Healing">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>2500.0</Heal_Range>
+				<Heal_Percent> 30.0 </Heal_Percent>
+                <Blob_Color>0, 255, 0, 255</Blob_Color>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<!-- We can heal the following unit types: -->
+				<Applicable_Unit_Categories>Fighter, Transport, Bomber</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Shield_Sparks_Medium</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>Shield_00</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 1.2, 2.0</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="EVK_Sienar_Factory">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Sienar</Variant_Of_Existing_Type>
+		<Lua_Script>EVK_Fighter_Factory</Lua_Script>
+		<Icon_Name>I_BUTTON_FACTORYFel.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA4</Required_Special_Structures>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="EVF_Sienar_Factory">
+		<Variant_Of_Existing_Type>Factoria_Cazas_Sienar</Variant_Of_Existing_Type>
+		<Lua_Script>EVF_Fighter_Factory</Lua_Script>
+		<Icon_Name>I_BUTTON_FACTORYKrayt.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA4</Required_Special_Structures>
+	</SpecialStructure>
+	
+</special_factoriasUnit_Data>

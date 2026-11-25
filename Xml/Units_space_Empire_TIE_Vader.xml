@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<TIE_PrototypeUnit_Data>
+
+	<SpaceUnit Name="Escort_TIE_Fighter">
+		<Variant_Of_Existing_Type>TIE_Fighter</Variant_Of_Existing_Type>
+		<Tactical_Health>3000</Tactical_Health>
+		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 1.0 </Fire_Inaccuracy_Distance>
+		<Lua_Script>Sundered_Heart</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Effective_Radius> 1000.0 </Effective_Radius>
+				<Spawned_Object_Type>Vader_Weaken_Enemy_Effect</Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+				<Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="Escort_TIE_Avenger">
+		<Variant_Of_Existing_Type>TIE_Avenger</Variant_Of_Existing_Type>
+		<Tactical_Health>3000</Tactical_Health>
+		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 1.0 </Fire_Inaccuracy_Distance>
+	</SpaceUnit>
+	<SpaceUnit Name="TIE_Prototype">
+		<Variant_Of_Existing_Type>TIE_Avenger_Vader_Escort</Variant_Of_Existing_Type>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Text_ID>TEXT_UNIT_TIE_PROTOTYPE</Text_ID>
+		<Encyclopedia_Good_Against> R41 Z-95_Headhunter_Rebel Rep_Clockshape </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TIE_ADVANCED TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER </Encyclopedia_Text>
+		<Land_Model_Name> EV_TIEADVANCED.ALO </Land_Model_Name>
+		<Space_Model_Name> EV_TIEADVANCED.ALO </Space_Model_Name>
+		
+		<Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+		<Icon_Name>i_button_darth_vader.tga</Icon_Name>
+		<Armor_Type> Armor_Hero_Transport </Armor_Type>
+		<Affiliation>Empire</Affiliation>
+		<Shield_Points>1500</Shield_Points>
+		<Tactical_Health>1000</Tactical_Health>
+		<Autoresolve_Health>600</Autoresolve_Health>
+		<Shield_Refresh_Rate>1650</Shield_Refresh_Rate>
+		<Energy_Capacity>15000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green_Hero</Projectile_Types>
+		<HardPoints> 
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+		<SFXEvent_Select>Unit_Select_Vader_Ship</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Vader_Ship</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Vader_Ship</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Vader</SFXEvent_Guard>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Vader </Death_SFXEvent_Start_Die>
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Create_Team> Yes </Create_Team>
+		<Redirect_Damage_To_Teammates>Yes</Redirect_Damage_To_Teammates>
+		<AI_Combat_Power>750</AI_Combat_Power>
+		
+		<SFXEvent_Ambient_Moving> Unit_TIE_Advanced_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Advanced_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+	</SpaceUnit>
+	
+	
+	
+</TIE_PrototypeUnit_Data>

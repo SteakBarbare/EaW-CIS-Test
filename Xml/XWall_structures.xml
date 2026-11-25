@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<XNewGCGr_structuresUnit_Data>
+	
+	<SpecialStructure Name="A_Normal_Wall_GC">
+		<Variant_Of_Existing_Type>Template_Ground_Turbolaser_Tower</Variant_Of_Existing_Type>  
+		<Text_ID>TEXT_STRUCTURE_WALL</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALL  </Encyclopedia_Text>
+
+		<Land_Model_Name>Nb_Wall_Normal.ALO</Land_Model_Name>
+			
+		<Behavior>SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION, STUNNABLE,EARTHQUAKE_TARGET </LandBehavior>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+
+		<Land_FOW_Reveal_Range>100.0</Land_FOW_Reveal_Range>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.03</Radar_Icon_Size>
+
+		<Requires_Base_Power>False</Requires_Base_Power>
+		
+		<Armor_Type> Armor_Wall </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+
+		<Select_Box_Scale>0.001</Select_Box_Scale>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Tactical_Health>4000</Tactical_Health>
+		<Autoresolve_Health>10</Autoresolve_Health>
+		<Affiliation>Rebel, Empire, Underworld, Krayt, Fel, CIS, Republic, Chiss, Corporate, Hapan, Hutts, EVFO, RVRE, GA, GAC</Affiliation>
+		<CategoryMask>Structure</CategoryMask>
+		
+		<Obstacle_Proxy_Type> GC_Walls_Build_Pad </Obstacle_Proxy_Type>
+		
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		
+		<Victory_Relevant>No</Victory_Relevant>
+		<Death_Clone_Is_Obstacle> false </Death_Clone_Is_Obstacle>
+		
+		<Score_Cost_Credits> 20 </Score_Cost_Credits>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Template_GC_Walls">
+		<Variant_Of_Existing_Type>Template_Galactic_Turbolaser_Tower_Defenses</Variant_Of_Existing_Type>  
+		<Text_ID>TEXT_STRUCTURE_WALL</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALL  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Nb_Wall_Normal.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage>1</Damage>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+		<CategoryMask> Structure </CategoryMask>
+		<Score_Cost_Credits> 20 </Score_Cost_Credits>
+		<AI_Combat_Power>2000</AI_Combat_Power>
+	</SpecialStructure>
+   
+	<SpecialStructure Name="GC_Walls">
+		<Variant_Of_Existing_Type>Template_GC_Walls</Variant_Of_Existing_Type>
+		<Affiliation>Rebel, Empire, Underworld, Krayt, Fel, CIS, Republic, Chiss, Corporate, Hapan, Hutts</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		
+		<Place_Other_Type_At_Every_Specific_Marker_Position>A_Normal_Wall_GC</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		
+	</SpecialStructure>
+	<GroundBuildable Name="GC_Walls_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>
+		Empire, 
+			PC_Walls_Build, 
+			EC_WallArmed_Build, 
+		Rebel, 
+			PC_Walls_Build, 
+			RC_WallArmed_Build, 
+		Underworld, 
+			PC_Walls_Build, 
+			UC_WallArmed_Build, 
+		Republic, 
+			EC_WallArmed_Build, 
+		CIS, 
+			RC_WallArmed_Build, 
+		Pirates, 
+			EC_WallArmed_Build,
+		Krayt, 
+			PC_Walls_Build, 
+			EC_WallArmed_Build, 	
+		Fel, 
+			PC_Walls_Build, 
+			RC_WallArmed_Build
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Nb_Wall_Normal.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Rebel, Empire, Pirates, CIS, Republic, Underworld, Krayt, Fel, Chiss, Corporate, Hapan, Hutts</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Walls_Build">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_WALL</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALL  </Encyclopedia_Text>
+		<Land_Model_Name>Nb_Wall_Normal.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> A_Normal_Wall_GC </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> GC_Walls_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Rebel, Empire, Underworld, Chiss, Corporate, Hapan, Hutts</Affiliation>
+   </GroundBuildable>   
+  
+</XNewGCGr_structuresUnit_Data>
+
+
+

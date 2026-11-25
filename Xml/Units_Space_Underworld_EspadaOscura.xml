@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<EspadaOscuraUnit_Data>
+	<UniqueUnit Name="DarkSaber">
+		<Variant_Of_Existing_Type>EspadaOscuraORG</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Political_Faction>Hutts</Political_Faction>
+	</UniqueUnit>
+	<UniqueUnit Name="EspadaOscura">
+		<Variant_Of_Existing_Type>EspadaOscuraORG</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+		<Required_Special_Structures>AdvancedTech_U</Required_Special_Structures>
+	</UniqueUnit>
+	<UniqueUnit Name="EspadaOscuraORG">
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_UNIT_ESPADAOSCURA</Text_ID>
+		<Space_Model_Name>UV_EspadaOscura.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Underworld_DarkSaber_BS_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<No_Colorization_Color> 255, 255, 255 </No_Colorization_Color>
+		<Select_Box_Scale>8</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Moniker>SSD.txt</Moniker>
+		<Mass>0.995</Mass>
+		<Dense_FOW_Reveal_Range_Multiplier>0.24</Dense_FOW_Reveal_Range_Multiplier>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		<Shield_Armor_Type>Shield_DeathStar</Shield_Armor_Type>
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Supercapital </Space_Layer>
+		<Layer_Z_Adjust>-1000.0</Layer_Z_Adjust>
+		
+		<Max_Speed> 2.0 </Max_Speed>		
+		<Max_Thrust> 0.02 </Max_Thrust>	
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>75</Bank_Turn_Angle>
+		<OverrideAcceleration> 0.02 </OverrideAcceleration>
+		<OverrideDeceleration> 0.02 </OverrideDeceleration>
+				
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1.0</Hyperspace_Speed>
+		<Maintenance_Cost>0.5</Maintenance_Cost>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Affiliation>Underworld</Affiliation>
+		<Required_Special_Structures>AdvancedTech_U</Required_Special_Structures>
+		<Required_Planets>
+			Hoth, Anoat_GJavin_Sector
+		</Required_Planets>
+		<Damage>150</Damage>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>2000000000</Tactical_Health>
+		<Shield_Refresh_Rate>12000000</Shield_Refresh_Rate>
+		<Energy_Capacity>9000000</Energy_Capacity>
+		<Energy_Refresh_Rate>5400000</Energy_Refresh_Rate>
+		
+		<Ship_Class>Super</Ship_Class>
+		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
+
+		<Political_Faction>Underworld</Political_Faction>
+		<Squadron_Capacity>70</Squadron_Capacity>
+		<Build_Cost_Credits>100000</Build_Cost_Credits>
+		<AI_Combat_Power>26250</AI_Combat_Power>
+		<Build_Time_Seconds>610</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Space_Full_Stop_Command> Yes </Space_Full_Stop_Command>
+		<Size_Value>8</Size_Value>
+		<In_Background>Yes</In_Background>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Space_FOW_Reveal_Range>3200.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.24</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Death_Clone>Damage_Normal, EspadaOscura_Death_Clone</Death_Clone>
+		
+		<HardPoints> 
+			HP_Tractor_Beam_Rebelde,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Fighter_BayH_05,
+			HP_Fighter_BayH_06,
+			HP_Fighter_BayH_07,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Shield_GeneratorH_05,
+			HP_Shield_GeneratorH_06,
+			HP_Shield_GeneratorH_07,
+			HP_Shield_GeneratorH_08
+		</HardPoints>
+
+		<CategoryMask> Super | AntiCapital </CategoryMask>
+		<Icon_Name>i_button_EspadaOscura.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Bombard_Select_Target> EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+		<SFXEvent_Ambient_Loop>Unit_Acclamator_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Select>Unit_Select_Jedi_Cruiser</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Jedi_Cruiser</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Jedi_Cruiser</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Jedi_Cruiser</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Jedi_Cruiser</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Stop_Jedi_Cruiser</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Barrage_Jedi_Cruiser</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Jedi_Cruiser </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Jedi_Cruiser </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Jedi_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Engine_Idle_Loop> Unit_Acclamator_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Acclamator_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Acclamator_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Cruiser_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_ESPADA_OSCURA_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 192, 143, 82, 255 </Build_Countdown_Text_RGBA>
+		
+		<Build_Speech_Underway> UHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Complete_Kadalbe </Build_Speech_Completed>
+		<Build_Speech_Stopped> UHD_Unit_Canceled </Build_Speech_Stopped>
+
+		<Build_Speech_Countdowns> UHD_Build_Vehicle </Build_Speech_Countdowns>
+		<Build_Music_Completed> Planet_Death_SFX </Build_Music_Completed>
+		<Space_Full_Stop_Command> Yes </Space_Full_Stop_Command>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>	
+		<Radar_Icon_Name>i_radar_EspadaOscura.tga</Radar_Icon_Name> 
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.5  0.5</Radar_Icon_Size>
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+		<Guard_Chase_Range>300.0</Guard_Chase_Range>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>2000.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
+		<Defend_Mode_Weapon_Delay_Multiplier>3.0</Defend_Mode_Weapon_Delay_Multiplier>
+		<Defend_Mode_Shield_Regen_Multiplier>5.0</Defend_Mode_Shield_Regen_Multiplier>
+		<Defend_Mode_Energy_Regen_Multiplier>5.0</Defend_Mode_Energy_Regen_Multiplier>
+		<Defend_Mode_Speed_Multiplier>0.5</Defend_Mode_Speed_Multiplier>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ESPADAOSCURA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_DEATHSTAR</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BATTLE_STATION</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 12000 </Score_Cost_Credits>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> EspadaOscura_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Space_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+
+				<Area_Effect_Decal_Distance> 0.0 </Area_Effect_Decal_Distance>
+
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Destruction_Ability Name="Death_Star_Planet_Destruction">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<SFXEvent_Target_Affected>Planet_Death_SFX</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Planet_Explosion_Galactic</Target_Particle_Effect>
+				<Target_Particle_Bone_Name />
+			</Planet_Destruction_Ability>
+			<Super_Laser_Ability Name="EspadaOscura_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+
+				<Damage_Per_Frame>1000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>45</Line_Width>
+				<Line_Color>233 4 4 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+			</Super_Laser_Ability>
+		
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>30000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>310</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>15</Population_Value>
+		<Space_Override_Population_Value>1</Space_Override_Population_Value>
+	</UniqueUnit>
+	<UniqueUnit Name="EspadaOscura_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>UV_EspadaOscura.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>UV_EspadaOscura.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Clone_Exp_Space_Empire</Death_Explosions>
+		<In_Background>Yes</In_Background>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Layer_Z_Adjust>-2000.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</UniqueUnit>
+
+
+	
+</EspadaOscuraUnit_Data>

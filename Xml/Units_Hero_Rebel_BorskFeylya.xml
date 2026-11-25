@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<BorskFeylya_Hero_Files>
+	<GenericHeroUnit Name="BorskFeylya">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_BORSKFEYLYA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_BORSKFEYLYA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_Ri_BorskFeylya.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Spawn_Planet>Kothlis</Spawn_Planet>
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="BorskFeylya_Combat_Bonus">
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter | Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter | Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Time_Ability Name="BorskFeylya_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Reduce_Production_Price_Ability Name="BorskFeylya_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Remove_Corruption_Ability Name="BorskFeylya_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="BorskFeylya_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_BORSKFEYLYA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_BORSKFEYLYA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Company_Units>BorskFeylya</Company_Units>
+		<Icon_Name>i_button_Ri_BorskFeylya.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Company_Transport_Unit>BorskFeylya_Alliance_Shuttle</Company_Transport_Unit>
+		<Required_Special_Structures>R_Ground_Barracks</Required_Special_Structures>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Bothan</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Bothan</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Bothan</SFXEvent_Fleet_Move>
+		
+	</HeroCompany>	
+	
+	
+	
+
+</BorskFeylya_Hero_Files>

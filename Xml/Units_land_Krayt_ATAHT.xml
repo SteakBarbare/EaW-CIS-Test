@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<EVK_AT_AHTUnit_Data>
+
+	<GroundVehicle Name="EVK_AT_AHT">
+		<Variant_Of_Existing_Type>AT_AHT_Walker</Variant_Of_Existing_Type>
+	
+		<Armor_Type> Armor_ATAT3 </Armor_Type>
+
+		<Affiliation>Krayt, Fel, Empire, Rebel</Affiliation>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>90</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Red_ATATMKII</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Activate_Energy_Blast_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+
+	<GroundCompany Name="EVK_AT_AHT_Squad">
+		<Variant_Of_Existing_Type>ATAHT_Company</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Krayt_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Hvy_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVK_AT_AHT</Company_Units>
+
+		<Build_Cost_Credits>1600</Build_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Krayt_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+	
+	<GroundCompany Name="EVF_AT_AHT_Squad">
+		<Variant_Of_Existing_Type>ATAHT_Company</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVK_AT_AHT</Company_Units>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Build_Cost_Credits>1600</Build_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+
+
+</EVK_AT_AHTUnit_Data>

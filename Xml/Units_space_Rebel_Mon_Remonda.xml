@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<Mon_RemondaUnit_Data>
+	
+	<SpaceUnit Name="Mon_Remonda">
+		<Variant_Of_Existing_Type>Mc80cORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MONREMONDA</Text_ID>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_MonRemonda_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>I_BUTTON_RV_Mon_Remonda.TGA</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+
+		<Space_Model_Name>RV_Mon_Remonda.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>-250.0</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Death_Clone>Damage_Normal, Mon_Remonda_Death_Clone</Death_Clone>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+
+		<Starting_Spawned_Units_Tech_0>R_XWingS1_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B_WingS2_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>R_XWingS1_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>B_WingS2_Squadron5, 23</Reserve_Spawned_Units_Tech_0>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<GUI_Model_Name>RV_Mon_Remonda.ALO</GUI_Model_Name>
+		<CategoryMask> SpaceHero </CategoryMask>
+		<AI_Combat_Power>3140</AI_Combat_Power>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		<HardPoints> 	
+			HP_T_MC90_01,
+			HP_T_MC90_02,
+			HP_T_MC90_03,
+			HP_T_MC80C_04,
+			HP_T_MC90_05,
+			HP_T_MC80C_06,
+			HP_T_MC90_07,
+			HP_T_MC80C_08,
+			HP_T_MC80C_09,
+			HP_T_MC80C_10,
+			HP_T_MC80C_11,
+			HP_T_MC80C_12,
+			HP_T_MC80C_13,
+			HP_T_MC80C_14,
+			HP_T_MC80C_15,
+			HP_T_MC80C_16,
+			HP_T_MC80C_17,
+			HP_T_MC80C_18,
+			HP_T_MC80C_19,
+			HP_T_MC80C_20,
+			HP_T_MC80C_21,
+			HP_T_MC80C_22,
+			HP_T_MC80C_23,
+			HP_IonLH_01,
+			HP_IonLH_02,
+			HP_IonLH_03,
+			HP_IonLH_04,
+			HP_IonLH_05,
+			HP_IonLH_06,
+			HP_TurboLRH_01,
+			HP_TurboLRH_02,
+			HP_TurboLRH_03,
+			HP_TurboLRH_04,
+			HP_TurboLRH_05,
+			HP_TurboLRH_06,
+			HP_TurboLRH_07,
+			HP_TurboLRH_08,
+			HP_TurboLRH_09,
+			HP_TurboLRH_10,
+			HP_TurboLRH_11,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_Rocket_01,
+			HP_Rocket_02,
+			HP_Rocket_03,
+			HP_Rocket_04,
+			HP_Fighter_BayH_00, 
+			HP_Fighter_BayH_01,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Tractor_Beam_Rebelde,
+			HP_LaserRXC_01
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_LaserRXC_04,
+			HP_LaserRXC_05,
+			HP_LaserRXC_06,
+			HP_LaserRXC_07,
+			HP_LaserRXC_08
+		</HardPoints>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Alternate_Icon_Name>I_SA_REB_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_MON_REMONDA_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+ 			    <Effective_Radius> 0.0 </Effective_Radius>
+			    <Spawned_Object_Type>MonRemonda_Marker</Spawned_Object_Type>  
+			    <SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability> 
+			    <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+			    <SFXEvent_GUI_Unit_Ability_Deactivated />
+ 			    <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Enhance_Defense_Ability Name="RMon_Remonda_Enhance_Defense">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.5</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+				<Applicable_Unit_Types>Mon_Remonda</Applicable_Unit_Types>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="Mon_Remonda_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>5.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>20000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		
+		<Population_Value>32</Population_Value>
+		<Space_Override_Population_Value>6</Space_Override_Population_Value>
+
+	</SpaceUnit>
+	<SpaceUnit Name="Mon_Remonda_Death_Clone">
+		<Text_ID> TEXT_TOOLTIP_MC80C </Text_ID>
+		<Space_Model_Name>RV_Mon_Remonda_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust> -1050.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Stellar_Web">
+		<Variant_Of_Existing_Type>Interdictor_Cruiser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_STELLAR_WEB</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber Pirate_Fighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> ISDORG Victory_Destroyer Skipray_Blastboat </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STELLAR_WEB</Encyclopedia_Text>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>
+	<SpaceUnit Name="Crynyd">
+		<Variant_Of_Existing_Type>Generic_Star_Destroyer</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CRYNYD</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 Harrow </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Gunboat ISDORG</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CRYNYD</Encyclopedia_Text>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 8</Reserve_Spawned_Units_Tech_0>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+
+	</SpaceUnit>
+	<SpaceUnit Name="RAllegiance">
+		<Variant_Of_Existing_Type>Generic_Star_Destroyer</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ALLEGIANCE</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 Harrow </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Gunboat ISDORG</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ALLEGIANCE</Encyclopedia_Text>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B_Wing_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y_Wing_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Gaunlet_Squadron_Space, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 2</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>B_Wing_Squadron4, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y_Wing_Squadron4, 5</Reserve_Spawned_Units_Tech_0>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>
+	<SpaceUnit Name="Skyhook">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, ISD2_Death_Clone</Death_Clone>
+		<Text_ID>TEXT_UNIT_SKYHOOK</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 Harrow </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Gunboat ISDORG</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SKYHOOK</Encyclopedia_Text>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 8</Reserve_Spawned_Units_Tech_0>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>
+	
+</Mon_RemondaUnit_Data>

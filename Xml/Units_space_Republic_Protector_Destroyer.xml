@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<Rep_ProtectorUnit_Data>
+
+	<SpaceUnit Name="E_Protector">
+		<Variant_Of_Existing_Type>ProtectorORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>EV_ProtectorSD.ALO</Space_Model_Name>
+		<Affiliation>Empire</Affiliation>
+		<Icon_Name>I_BUTTON_EV_PROTECTORSD.TGA</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PROTECTORSD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_ALLIGATOR TEXT_WAVES_X3 TEXT_UNIT_ARC_170 TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, E_Protector_Death_Clone</Death_Clone>
+		<AI_Combat_Power>5100</AI_Combat_Power>
+	</SpaceUnit>
+	<SpaceUnit Name="E_Protector_Death_Clone">
+		<Text_ID> TEXT_UNIT_VALIANT </Text_ID>
+		<Space_Model_Name>EV_ProtectorSD_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust> -30.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_Protector">
+		<Variant_Of_Existing_Type>ProtectorORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Layer_Z_Adjust>363.145</Layer_Z_Adjust>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Death_Clone>Damage_Normal, Rep_Protector_Death_Clone</Death_Clone>
+		<Starting_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+	</SpaceUnit>
+	<SpaceUnit Name="ProtectorORG">
+		<Variant_Of_Existing_Type>REP_ValiantORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PROTECTORSD</Text_ID>
+		<Encyclopedia_Good_Against> CIS_TU_SD CIS_Wavecrest CIS_Providence </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Pinance CIS_BulwarkI CIS_LucrehulkB </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PROTECTORSD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_ALLIGATOR TEXT_UNIT_ARC_170 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>Rep_ProtectorSD_Red.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax -->
+		
+		<Layer_Z_Adjust>100.0</Layer_Z_Adjust>
+
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Affiliation>Empire</Affiliation>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<Autoresolve_Health>36000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Refresh_Rate>37000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<AI_Combat_Power>3255</AI_Combat_Power>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>AACapital</Targeting_Priority_Set>	
+
+		<HardPoints>
+			HP_T_Protector_01,
+			HP_T_Protector_02,
+			HP_T_Protector_03,
+			HP_T_Protector_04,
+			HP_T_Protector_05,
+			HP_T_Protector_06,
+			HP_T_Protector_07,
+			HP_T_Protector_08,
+			HP_T_Protector_09,
+			HP_T_Protector_10,
+			HP_T_Protector_11,
+			HP_T_Protector_12,
+			HP_T_Protector_13,
+			HP_T_Protector_14,
+			HP_T_Protector_15,
+			HP_T_Protector_16,
+			HP_T_Protector_17,
+			HP_T_Protector_18,
+			HP_T_Protector_19,
+			HP_T_Protector_20,
+			HP_T_Protector_21,
+			HP_T_Protector_22,
+			HP_T_Protector_23,
+			HP_T_Protector_24,
+			HP_T_Protector_25,
+			HP_T_Protector_26,
+			HP_T_Protector_27,
+			HP_T_Protector_28,
+			HP_T_Protector_29,
+			HP_T_Protector_30,
+			HP_T_Protector_31,
+			HP_T_Protector_32,
+			HP_T_Protector_33,
+			HP_T_Protector_34,
+			HP_T_Protector_35,
+			HP_T_Protector_36,
+			HP_T_Protector_37,
+			HP_T_Protector_38,
+			HP_T_Protector_39,
+			HP_T_Protector_40,
+			HP_T_Protector_41,
+			HP_T_Protector_42,
+			HP_T_Protector_43,
+			HP_Shield_Generator_00, 
+			HP_Shield_Generator_01,
+			HP_Fighter_Bay_00,
+			HP_Engines_00,
+			HP_Engines_01
+   		</HardPoints>
+	
+		<Icon_Name>I_BUTTON_Rep_PROTECTORSD.TGA</Icon_Name>
+		<GUI_Model_Name>Rep_ProtectorSD_Red.ALO</GUI_Model_Name>
+	
+		<Radar_Icon_Scale_Land>0.7</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>0.7</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			 <Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_Protector_Death_Clone">
+		<Text_ID> TEXT_UNIT_VALIANT </Text_ID>
+		<Space_Model_Name>Rep_ProtectorSD_Red_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust> -30.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</Rep_ProtectorUnit_Data>

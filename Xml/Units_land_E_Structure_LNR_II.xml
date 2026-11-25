@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Units_land_empire_LNR_II_Data>
+
+	
+	<SpecialStructure Name="Upgrade_EV_LNR_I_to_EV_LNR_II">
+		<Text_ID>TEXT_GROUND_LNR_II</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_LNR_II </Encyclopedia_Text>
+        <Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_REP_LNRIImixto.tga</Icon_Name>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Special_Structures>Ground_Empire_Hypervelocity_Gun_MKII</Required_Special_Structures>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Lua_Script>Upgrade_EV_LNR_I_to_EV_LNR_II</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Time_Reduced_By_Multiple_Factories>no</Build_Time_Reduced_By_Multiple_Factories>
+		<behavior> DUMMY_GROUND_STRUCTURE </behavior>
+		<CategoryMask>Upgrade</CategoryMask>
+		<SFXEvent_Build_Started>EHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpecialStructure>
+
+	<SpecialStructure Name="IA_Empire_Ground_LNR_II_Gun">
+		<Variant_Of_Existing_Type>Ground_Empire_Hypervelocity_Gun_MKII_I</Variant_Of_Existing_Type>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Tactical_Additional_Structure_Type>E_Ground_Advanced_Vehicle_FactoryC</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	<SpecialStructure Name="EVFO_Ground_LNR_II_Gun">
+		<Variant_Of_Existing_Type>Ground_Empire_Hypervelocity_Gun_MKII_I</Variant_Of_Existing_Type>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>EVFO</Affiliation>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+	</SpecialStructure>
+	<SpecialStructure Name="Chiss_Ground_LNR_II_Gun">
+		<Variant_Of_Existing_Type>Ground_Empire_Hypervelocity_Gun_MKII_I</Variant_Of_Existing_Type>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+	</SpecialStructure>
+	<SpecialStructure Name="Krayt_Ground_LNR_II_Gun">
+		<Variant_Of_Existing_Type>Ground_Empire_Hypervelocity_Gun_MKII_I</Variant_Of_Existing_Type>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Krayt</Affiliation>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Ground_Empire_Hypervelocity_Gun_MKII_I">
+		<Variant_Of_Existing_Type>Ground_Empire_Hypervelocity_Gun</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_LNR_II</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_LNR_II </Encyclopedia_Text>
+
+		<Land_Model_Name>REP_LNR_II.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+
+		<Tech_Level>99</Tech_Level>
+		<Behavior>SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE, SHIELDED, POWERED, REVEAL, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<SpaceBehavior>SPECIAL_WEAPON</SpaceBehavior>
+		
+		<!--<Weapon_Type>Proj_Republic_LNR_II_Gun_Space</Weapon_Type>
+		<Weapon_Quantity>1</Weapon_Quantity>-->
+
+		<Is_Special_Weapon_In_Space>Yes</Is_Special_Weapon_In_Space>
+		<Special_Weapon_Index>1</Special_Weapon_Index>
+		<Special_Weapon_Target_Action_Index> 0 </Special_Weapon_Target_Action_Index>
+		<!-- HV Gun = 0, Ion Cannon = 1, Magnepulse Cannon = 2 -->
+		<Special_Weapon_Valid_Targets>Transport | Corvette | Frigate | Capital | Super</Special_Weapon_Valid_Targets>
+		<Projectile_Fire_Recharge_Seconds>35.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Types>Proj_Republic_LNR_II_Gun_Space</Projectile_Types>		
+		<Icon_Name>I_BUTTON_REP_LNRIImixto.tga</Icon_Name>
+
+		<HardPoints>
+     		HP_GroundLNRII_TurboG_00, HP_GroundStructure_Power_Generator_00
+	  	</HardPoints>
+
+		<SFXEvent_Fire>Unit_Rep_LNR_Fire</SFXEvent_Fire>
+	</SpecialStructure>
+	
+</Units_land_empire_LNR_II_Data>

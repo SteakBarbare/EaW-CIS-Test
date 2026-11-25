@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Projectiles>
+
+	
+	
+	
+	
+	
+	
+	
+	<Projectile Name="Proj_BlancoVacio_MassPulse">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>Proj_BlancoVacio_Laser.ALO</Space_Model_Name>
+		<Scale_Factor>0.1</Scale_Factor>
+		<Max_Speed>25.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Damage_Type> Damage_IonCannon </Damage_Type>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>0.0</Projectile_Damage>
+		<Projectile_Acceleration_Per_Frame>0.0</Projectile_Acceleration_Per_Frame>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle> Mass_Mine_Dud </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Mass_Mine_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>30.0</Projectile_Disable_Engines_Duration>
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<AI_Combat_Power>400</AI_Combat_Power>
+		<!-- Stun specifics -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>30.0</Projectile_Ion_Stun_Duration>
+		<!-- must be same as Projectile_Disable_Engines_Duration in this case -->
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<!-- almost total speed reduction -->
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<!-- fire rate reduced to 60% -->
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+	</Projectile>
+	
+	
+	
+	<Projectile Name="Proj_EyeofPalpatine_Gun_Barrage">
+		<Variant_Of_Existing_Type>Proj_EyeofPalpatine_Gun</Variant_Of_Existing_Type>
+		<Projectile_Damage>999999</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 999999 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 500 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+	</Projectile>
+	<Projectile Name="Proj_EyeofPalpatine_Gun">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>W_TorpedoSphere.ALO</Space_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Max_Speed>40.0</Max_Speed>
+		<Max_Rate_Of_Turn>50</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE</Behavior>
+		<Projectile_Category>ROCKET</Projectile_Category>
+		
+		<Projectile_Rocket_Curve_Distance>500</Projectile_Rocket_Curve_Distance>
+		<Projectile_Rocket_Curve_Offset>0</Projectile_Rocket_Curve_Offset>
+		<Projectile_Rocket_Straight_Distance>500</Projectile_Rocket_Straight_Distance>
+
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>20000.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+		<Projectile_Blast_Area_Dropoff_Tiers>5</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Damage>999999</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 999999 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 250 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Death_Explosions>p_Tyrant_detonate</Death_Explosions> 
+  		<Death_SFXEvent_Start_Die> SFX_Sizemic_Detonation </Death_SFXEvent_Start_Die>
+		<Projectile_SFXEvent_Detonate>SFX_Sizemic_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>p_SphereTorpedo_detonate</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>p_SphereTorpedo_detonate</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>p_SphereTorpedo_detonate</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>p_SphereTorpedo_detonate</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>60000</AI_Combat_Power>
+	</Projectile>
+	
+		
+	<Projectile Name="Proj_Ground_Small_Laser_Cannon_Red_Hero">
+		<Variant_Of_Existing_Type>Proj_Ground_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Projectile_Damage>40.0</Projectile_Damage>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallR</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	
+	
+</Projectiles>

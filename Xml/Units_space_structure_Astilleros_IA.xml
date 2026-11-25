@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<Astilleros_Pesados_IAUnit_Data>
+		
+	
+	<SpecialStructure Name="Astilleros_NoIA">
+		<Variant_Of_Existing_Type>Astilleros_Pesados</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSNOIA</Text_ID>
+		<Affiliation>Chiss, Corporate, Hapan, Hutts, GA, GAC</Affiliation>		
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES TEXT_INFO3 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Required_Planets>Bestine, Hypori, Bannistar, Kothlis, Mhaeli, Ralltiir, RalltiirCW, Toydaria, Eriadu, Utapau, UtapauCW, Malastare, VergessoAsteroids, Turkhana, Corellia, Bespin, Bothawui, Toprawa, Tedaroc, Tralus, Tangrene, Tynna, Chardaan, Commenor, CommenorCW, Csilla, DaSoocha, Dubrillion, Duro, Delvardus, Dathomir, Kuat, KuatCh, KuatCW, Fondor, FondorCh, MonCalimari, MonCalimariCW, RZ7_6113_23, 
+			Narshadda, Ord_Trasi, Bastion, Bakura, Sluis_Van, Bonadan, Mandalore, NalHutta, Bpfassh, Bilbringi, BilbringiCh, Brentaal, Byss, ByssDestroyed, Elom, Filve, 
+			Hapes, Harrsk, LiinadeIII, Mygeeto, MygeetoCW, Nubia, Rendili, RendiliCh, Xa_Fel, RocheAsteroids, Rothana, Svivren, Sulon, Sullust, YagaMinor, Yagdul, Dandalas, Doornik_628, Doornik_881, Doornik_1142, ILC_905, Kojash, New_Brigia, N_zoth, Polneye, Tizon, Wakiza, Z_Fell, Zhina, Koornatch_Cluster, Geonosis, GeonosisCW, Manaan, Zhar, Byss, Narshadda, BastionK, SullustK, 
+			DuroK, MandaloreK, KuatK, FondorK, Ord_TrasiK, Dac, CoruscantK, Borosk, CorelliaK, YagdulK, NarShaddaK, Xa_FelK, RothanaK, BothawuiK, CsillaK, BilbringiK, BestineK, Saffalore, Ession, Nirauan, PolisMassa, Escarte, AnoatAsteroids, Coruscant, CoruscantCW, CoruscantGuerraCivil, The_Maw, Korriban, KorribanK, Mustafar, MustafarK, KuatI, DacI, SulonI, SullustI, DaSoocha_NapduI, NalHuttaI, NarshaddaI, TangreneI, Sluis_Sector, Anoat_GJavin_Sector, Seswenna_Sector, Atravis_Sector, Parnabe_Sector, Chardaan_Sector, Bothan_Sector, Abrion_Sector, Corellia_Sector, Kuat_Sector, Coruscant_Sector, Borleias_Sector, Mindor_Sector, Taris_Sector, Pallaxides_Sector, Mandalore_Sector, The_Wheel_Sector, Escarte_Sector, Roche_Sector, Bonadan_Sector, Ciutric_Sector, Yagdul_Sector, Nirauan_Sector, Ord_Mantell_Sector, Orinda_Sector, Vladet_Sector, Bannistar_Sector, Vergesso_Sector, Denon_Sector, Brentaal_Sector, Nespis, Lothal, Scarif, StarkillerBase, Exegol, Christophsis, Hosnian_Prime, Akiva, Rodia, Shu_Torun, Station_Theta_Black, Balmorra, Naboo, Corulag  </Required_Planets>
+	</SpecialStructure>
+		
+	<SpecialStructure Name="Astilleros_IA">
+		<Variant_Of_Existing_Type>Astilleros_NoIA</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOSIA</Text_ID>
+		<Lua_Script>SSD_Shipy_IA</Lua_Script>
+		<AI_Combat_Power>8500</AI_Combat_Power>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Affiliation>Empire, Rebel, Underworld, Chiss, Corporate, Hapan, Hutts, EVFO, RVRE, GA, GAC</Affiliation>		
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Death_Clone>Damage_Normal, Shipyard_Plattform_Death_Clone</Death_Clone>
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Mining_Income_Bonus">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
+				<Percentage_Income_Modifier>0.0</Percentage_Income_Modifier>
+				<Absolute_Income_Modifier>250.0</Absolute_Income_Modifier>
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+		
+	<SpecialStructure Name="Astilleros_IA2"><!-- Teoricamente no usado -->
+		<Variant_Of_Existing_Type>Astilleros_NoIA</Variant_Of_Existing_Type>
+		<AI_Combat_Power>8500</AI_Combat_Power>
+		<Affiliation>Pirates</Affiliation>		
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		
+		<Death_Clone>Damage_Normal, Shipyard_Plattform_Death_Clone</Death_Clone>
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Mining_Income_Bonus">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
+				<Percentage_Income_Modifier>0.0</Percentage_Income_Modifier>
+				<Absolute_Income_Modifier>250.0</Absolute_Income_Modifier>
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+			
+	<SpecialStructure Name="Astilleros_IAN">
+		<Variant_Of_Existing_Type>Astilleros_Imperiales</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPIRATAS</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ASTILLEROSPIRATAS TEXT_INFO2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Affiliation>Republic, CIS</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Astilleros_IAC">
+		<Variant_Of_Existing_Type>Astilleros_Rebeldes</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSCORELLIANOS</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ASTILLEROSCORELLIANOS TEXT_INFO1 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Affiliation>Republic</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+	</SpecialStructure>
+	
+	
+</Astilleros_Pesados_IAUnit_Data>

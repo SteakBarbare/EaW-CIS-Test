@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<CIS_SupplyShipUnit_Data>
+
+	<SpaceUnit Name="CIS_SupplyShip_01">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES TEXT_INFO3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>CIS_SupplyShip</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>CIS_SupplyShip_01</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_SupplyShip">
+		<Variant_Of_Existing_Type>CIS_LucrehulkCORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Scale_Factor>0.5</Scale_Factor>
+		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, CIS_SupplyShip_Death_Clone</Death_Clone>
+		
+
+		<Variant_Of_Existing_Type>CIS_LucrehulkBORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_SUPPLYSHIP</Text_ID>
+		<Encyclopedia_Good_Against> REP_AcclamatorI REP_AcclamatorII REP_VictorII </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> REP_Venator REP_Valiant REP_MandatorI </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_SUPPLYSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_VULTURE TEXT_WAVES_X3 TEXT_UNIT_TRIDROID TEXT_WAVES_X3 TEXT_UNIT_SCARAB TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_12</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FACTORY_SHIP </Encyclopedia_Unit_Class>
+		<Space_Model_Name>CIS_SupplyShip.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>176.424</Layer_Z_Adjust>
+		<Space_Layer> Capital </Space_Layer>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<AI_Combat_Power>2175</AI_Combat_Power>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				Cis_DroidBomber_SquadronB,
+				CIS_Hyena_SquadronB,
+				CIS_Scarab_SquadronB,
+				CIS_Tridroid_SquadronB,
+				CIS_Vulture_SquadronB
+		</Tactical_Buildable_Objects_Multiplayer>
+						
+		<HardPoints>
+			HP_TurboMR_01, 
+			HP_TurboMR_02, 
+			HP_TurboMR_03, 
+			HP_TurboMR_04, 
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_LaserRXC_04,
+			HP_Shield_GeneratorH_00, 
+			HP_Shield_GeneratorH_01, 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01
+	  </HardPoints>
+		<Icon_Name>i_button_CIS_Supplyship.TGA</Icon_Name>
+		<GUI_Model_Name>CIS_SupplyShip.ALO</GUI_Model_Name>
+						
+		<Starting_Spawned_Units_Tech_0>CIS_Tridroid_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Scarab_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>CIS_Tridroid_Squadron6, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Scarab_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+		
+		<Tactical_Build_Cost_Multiplayer>5000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Lua_Script>ObjectScript_PowerToShields_Z_BC</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	5.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_DroidShip1</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>MISSILE_SHIELD</Type>
+				<Disable_Movement>No</Disable_Movement>
+				<Effective_Radius>1000</Effective_Radius>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Expiration_Seconds>1800</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Missile_Field_Interdictor</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.01f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="SupplyShip_Vehicle_Production_Time_Reduction">
+				<Applicable_Unit_Categories> Fighter | Bomber | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.75</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Reduce_Production_Price_Ability Name="SupplyShip_Price_Reduction_Cost_Bonus">
+				<Unit_Strength_Category />
+				<Applicable_Unit_Categories> Fighter | Bomber | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.15</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			
+			<Sensor_Jamming_Ability Name="SupplyShip_Sensor_Jamming">
+				<Activation_Style> COMBAT_AUTOMATIC </Activation_Style>
+				<Duration_In_Secs>60.0</Duration_In_Secs>
+				<Blob_Color>200, 50, 200, 128</Blob_Color>
+				<Blob_Material_Name>Sensor_Jamming_Blob</Blob_Material_Name>
+			</Sensor_Jamming_Ability>
+		</Abilities>	
+		<Tactical_Bribe_Cost>2500</Tactical_Bribe_Cost>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_SupplyShip_Death_Clone">
+		<Text_ID> TEXT_UNIT_LUCREHULKC </Text_ID>
+		<Space_Model_Name> CIS_SupplyShip_D.ALO </Space_Model_Name>
+		<No_Colorization_Color> 59, 15, 202, 255 </No_Colorization_Color>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor> 0.5 </Scale_Factor>
+		<Layer_Z_Adjust> -30.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel, Pirates, Underworld, Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</CIS_SupplyShipUnit_Data>

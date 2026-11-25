@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE KATANA ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Katana_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Katana_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_KATANA</Reward_Param1>
+				<Prereq>Batalla_de_Katana_Space</Prereq>
+			</Event>
+	
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_BATTLEOFKATANAE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Katana_Space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="Empire_Batalla_Space_Autoresolve_Off">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIDE_AUTORESOLVE</Reward_Type>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>
+	
+	<Event Name="Prevent_early_victory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>0</Reward_Param1>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Todos_los_enemigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>
+	
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>	
+	
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>	
+	
+	<Event Name="Disable_Prevent_early_victory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>1</Reward_Param1>
+		<Prereq>Objetivos_Completados</Prereq>
+		<Prereq>Objetivos_InCompletados</Prereq>
+	</Event>
+	
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_KATANA</Reward_Param1>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+	</Event>
+			
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>30</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empire</Reward_Param1>
+				<Prereq>Objetivos_Completados</Prereq>
+			</Event>
+
+
+	<Event Name="JudicatorM_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>JudicatorM</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>		
+	
+	<Event Name="Refuerzos_Imperiales">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Peregrino_Dreadnought</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>		
+
+	
+	<Event Name="Destruidos_Todos_los_amigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>EMPIRE</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Batalla_de_Katana_Space</Prereq>
+	</Event>
+	
+			
+	<Event Name="Objetivos_InCompletados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_KATANA</Reward_Param1>
+		<Prereq>Destruidos_Todos_los_amigos JudicatorM_Destruido</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Objetivos_InCompletados</Prereq>
+			</Event>
+</Story>

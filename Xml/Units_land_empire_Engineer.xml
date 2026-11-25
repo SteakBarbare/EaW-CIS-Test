@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<EI_EngineerUnit_Data>
+	
+	<GroundInfantry Name="EI_Engineer">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EI_ENGINEER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_INGENIERO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Land_Model_Name>EI_Gunner.alo</Land_Model_Name>
+		<Icon_Name>i_button_ei_engineer.tga</Icon_Name>
+		
+		<Land_Model_Name>Ei_ImperialGunnerE11_1U.alo</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ei_ArmyTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_ImperialGunnerE11_1U.ALO,
+			Urban, 				Ei_ImperialGunnerE11_1U.ALO,
+			Arctic, 			Ei_ImperialGunnerE11_1U.ALO,
+			Volcanic, 			Ei_ImperialGunnerE11_1U.ALO,
+			Desert, 			Ei_ImperialGunnerE11_1D.ALO,
+			Forest, 			Ei_ImperialGunnerE11_1U.ALO,
+			Swamp, 				Ei_ImperialGunnerE11_1U.ALO
+		</Land_Terrain_Model_Mapping>
+	
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Empire, Chiss</Affiliation>
+		<Max_Speed> 1 </Max_Speed>
+		<Tactical_Health>75</Tactical_Health>
+
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Scout_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Scout_Trooper </SFXEvent_Assist_Attack>
+		  
+		<AI_Combat_Power>12</AI_Combat_Power>
+
+		<Death_Clone>Damage_Force_Whirlwind, EI_Engineer_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, EI_Engineer_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, EI_Engineer_Crush_Death_Clone</Death_Clone>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+		 
+		 <Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADLAND</Alternate_Name_Text>
+	                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADLAND_DESCRIPTION</Alternate_Description_Text>
+					<Recharge_Seconds>120</Recharge_Seconds>
+					 <!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+					 <!-- The actual radius of ability is in projectile XML -->
+					 <!-- <Spawned_Object_Type>Empire_Turret_Pad</Spawned_Object_Type> -->
+					 <Spawned_Object_Type>E_Engineer_Build_Pad</Spawned_Object_Type>
+					 <Effective_Radius> 50.0 </Effective_Radius>
+				     <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+					 <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+					 <SFXEvent_GUI_Unit_Ability_Deactivated/>
+	 				 <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+					 <Area_Effect_Decal_Distance> 50 </Area_Effect_Decal_Distance>
+		  </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Force_Healing_Ability Name="Engineer_Repair_Healing">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount>15.0</Heal_Amount>
+				<Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Vehicle | Air</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_TURRET, TURRET_00, B_TURRET_BASE</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+		<Conversion_Ability_Changes_To_Enemy> EI_Engineer_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+
+	  <GroundInfantry Name="EI_Engineer_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> EI_Engineer </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="EI_Engineer_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+
+	<GroundInfantry Name="EI_Engineer_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="EI_Engineer_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	
+	<GroundInfantry Name="EI_Engineer_B">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Ei_Engineer_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+	</GroundInfantry>	
+	<GroundCompany Name="Ei_Engineer_Squad_B">
+		<Variant_Of_Existing_Type>Ei_Engineer_Squad</Variant_Of_Existing_Type>
+		<Company_Units> EI_Engineer, EI_Engineer, EI_Engineer, EI_Engineer, EI_Engineer</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Ei_Engineer_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ENGINEER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_INGENIERO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		<Company_Units> EI_Engineer_B </Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_EI_Engineer.tga</Icon_Name>
+		<GUI_Model_Name>EI_Gunner.ALO</GUI_Model_Name>
+		<Land_Model_Name>EI_Gunner.ALO</Land_Model_Name>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Empire_Field</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Move_Empire_Field</SFXEvent_Fleet_Move>
+		<Population_Value>0</Population_Value>
+		<Tactical_Build_Cost_Multiplayer>60</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</EI_EngineerUnit_Data>

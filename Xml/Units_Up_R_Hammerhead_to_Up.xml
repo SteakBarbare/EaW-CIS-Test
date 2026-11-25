@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Up_R_Hammerhead_to_UpUnit_Data>
+	
+	<SpaceUnit Name="Up_R_Hammerhead_to_Up">
+		<Variant_Of_Existing_Type>Up_R_Strike_to_StrikeMod</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HAMMERHEAD_UP</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_HAMMERHEAD_UP TEXT_TOOLTIP_HAMMERHEAD_UP</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_RV_HAMMERHEAD_UPGRADE.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>R_Hammerhead</Required_Orbiting_Units>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+		<Build_Cost_Credits>950</Build_Cost_Credits>
+		<Lua_Script>Up_R_Hammerhead_to_Up</Lua_Script>
+		<Population_Value>1</Population_Value>
+		<Affiliation>Rebel, RVRE</Affiliation>
+	</SpaceUnit>
+	<SpaceUnit Name="R_Hammerhead_Up">
+		<Variant_Of_Existing_Type>Rep_HammerheadORG</Variant_Of_Existing_Type>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Space_Model_Name>RV_Hammerhead_Up.ALO</Space_Model_Name>
+		<AI_Combat_Power>975</AI_Combat_Power>
+		<Icon_Name>I_BUTTON_R_HAMMERHEAD_Up.tga</Icon_Name>
+		<HardPoints> 
+				HP_LaserRXC_01,
+				HP_LaserRXC_02,
+				HP_LaserRXC_03,
+				HP_LaserRXC_04,
+				HP_T_HammerheadO_01, 
+				HP_T_HammerheadO_02, 
+				HP_T_HammerheadO_03,
+				HP_T_HammerheadO_04, 
+				HP_T_HammerheadO_05, 
+				HP_T_HammerheadO_06,
+				HP_T_HammerheadO_07
+		</HardPoints>
+		<Death_Clone>Damage_Normal, R_Hammerhead_Up_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Hammerhead_Up_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>RV_Hammerhead_Up_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>RV_Hammerhead_Up.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	
+</Up_R_Hammerhead_to_UpUnit_Data>

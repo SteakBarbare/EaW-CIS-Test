@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<BS_MAFUnit_Data>
+	
+	<GroundVehicle Name="BS_MAF">
+		<Variant_Of_Existing_Type>MAFORG</Variant_Of_Existing_Type>
+		<Land_Model_Name>UV_MAFT.alo</Land_Model_Name>
+		<Affiliation>Underworld</Affiliation>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, BS_MAF_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="BS_MAF_Death_Clone_00">
+		<Variant_Of_Existing_Type>LAAT_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>UV_MAFT_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	
+	<GroundCompany Name="BS_MAF_Squad">
+		<Variant_Of_Existing_Type>C_Cis_MAF_team</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>U_Ground_Droid_Works, U_XCommand</Required_Special_Structures>
+		<Company_Units>BS_MAF</Company_Units>
+		<Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+
+</BS_MAFUnit_Data>

@@ -1,0 +1,776 @@
+<?xml version="1.0" ?>
+
+
+
+<!--****** This story file is used to automatically set some things that would normally happen ******-->
+<!--****** in story mode for the full campaign.  This file should be generic enough to use for  ******-->
+<!--****** any sandbox campaign set.                                                           ******-->
+
+<!-- Sandbox Campaign: The Conflict Begins -->
+
+<Story>
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Sandbox_Intro</Story_Dialog>
+		<Story_Chapter>9</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+	</Event>
+	<Event Name="Set_Empire_at_Nivel_GCE"><!-- Galactic Empire era -->
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>3</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Limitar_Nivel_Tech_Max_GCE">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>3</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Indicador_LEVEL_5">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>8</Event_Param1>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>10</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_5</Story_Tag>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Lock_Rep_Alligator_Probe">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rep_Alligator_Probe</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	 </Event>
+	 
+	 <Event Name="Lock_EVK_Rage_Probe">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVK_Rage_Probe</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Astilleros_NoIA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Astilleros_IA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_IA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_Rep_Kamino_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Kamino_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_Rep_Modular_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Modular_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_Rep_Factory_Sienar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rep_Factory_Sienar</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Rep_ST_Base_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rep_ST_Base_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_Rep_GolanI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rep_GolanI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_Rep_GolanII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rep_GolanII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_Rep_GolanIII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rep_GolanIII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Turbolaser_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Turbolaser_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_Base_Shield">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_Base_Shield</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_Barracks">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_Barracks</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_Light_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_Light_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_Heavy_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_Advanced_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_Officer_Academy">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_Officer_Academy</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Republic_Ground_LNR_I_Gun">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Republic_Ground_LNR_I_Gun</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVK_Sienar_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVK_Sienar_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_ST_Base_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_ST_Base_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVK_GolanIV_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVK_GolanIV_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVK_GolanV_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVK_GolanV_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVK_GolanVI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVK_GolanVI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Turbolaser_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Turbolaser_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_Base_Shield">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_Base_Shield</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_Barracks">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_Barracks</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_Light_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_Light_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_Heavy_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_Advanced_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_Officer_Academy">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_Officer_Academy</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Krayt_Ground_LNR_II_Gun">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Krayt_Ground_LNR_II_Gun</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	
+			<!--***** Indicador nuevas caracteristicas ***********-->
+			<Event Name="Indicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Story_Dialog>Dialog_E_Indicador_nuevas_caracteristicas</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Indicador_nuevas_caracteristicas_Tag</Story_Tag>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>			
+			<Event Name="Flash_Buttons">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param2>
+				<Prereq>Indicador_nuevas_caracteristicas_00</Prereq>
+			</Event>	
+			<Event Name="Hide_Indicador_nuevas_caracteristicas">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			<Event Name="CerrarIndicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			
+		<!--***** Indicador nuevas caracteristicas ***********-->
+	<Event Name="Lock_Astilleros_RB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_E_Ground_Research_FacilityRB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>E_Ground_Research_FacilityRB</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Revelar_todos_los_planetas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_EXSoloIA_STR_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EXSoloIA_STR_01</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Armed_Walls">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>GC_Walls_IE</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_6IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_6IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_7IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_7IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_8IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_8IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvancedTech_8">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvancedTech_8</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+		<Event Name="Conquista_Coruscant">
+			<Event_Type>STORY_CONQUER</Event_Type>
+			<Event_Param1>CoruscantGuerraCivil</Event_Param1>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+        </Event>	
+	
+		<Event Name="UnLock_AdvancedTech_8">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>AdvancedTech_8</Reward_Param1>
+			<Prereq>Conquista_Coruscant</Prereq>
+        </Event>	
+
+	
+			
+	<Event Name="Empire_AI_Unlock_Research_Facility">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>E_Ground_Research_Facility</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_EclipseI">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EclipseI</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	
+	<Event Name="Lock_Tarkin_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Tarkin_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	<Event Name="Lock_Death_Star_II_Full">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Death_Star_II_Full</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Death_Star">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Death_StarB</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_ISD_Conqueror">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>ISD_Conqueror</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Emperor_Palpatine2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Emperor_Palpatine2_Team</Reward_Param1>
+		<Reward_Param2>Byss</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+			
+	
+	
+	<!-- Spawn Tech Level 1 Heroes -->
+
+	<Event Name="Empire_Enters_Tech_01">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>1</Event_Param1>
+	</Event>
+	
+	
+	<!-- Spawn Time Era 2 Heroes -->
+
+	<Event Name="Empire_Enters_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+	
+
+	<Event Name="Spawn_Veers">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>General_Veers_Team</Reward_Param1>
+		<Reward_Param2>Byss</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	
+
+	<!-- Spawn Time Era 3 Heroes -->
+
+	<Event Name="Empire_Enters_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+
+	
+	
+	
+	<!--***** Batalla Coruscant por construccion de Twin Death Stars***********-->				
+		<Event Name="Construir_Twin_Death_Stars">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Death_Star_Defense_ver04</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+			<Perpetual>True</Perpetual>
+		</Event>	
+		
+		<Event Name="Batalla_de_Twin_Death_Stars_Setup_Espacio">
+			<Event_Type>STORY_SPACE_TACTICAL</Event_Type>
+			<Event_Param1>Story_plots_empire_Batalla_de_Twin_Death_Stars_60.xml</Event_Param1>
+			<Event_Param2>CoruscantGuerraCivil</Event_Param2>
+			<Prereq>Construir_Twin_Death_Stars</Prereq>
+			<Perpetual>True</Perpetual>
+		</Event>	
+	<!--***** TACTICO RESCATE EN CORUSCANT TERRESTRE***********-->
+					
+
+	<!-- Spawn Time Era 4 Heroes -->
+
+	<Event Name="Empire_Enters_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	
+	<!-- Spawn Time Era 5 Heroes -->
+
+	<Event Name="Empire_Enters_Tech_05">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>5</Event_Param1>
+	</Event>
+		
+	
+	<Event Name="Batalla_de_Byss_00">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>21</Event_Param1>
+		<Prereq>Conquista_Coruscant</Prereq>
+	</Event>	
+	
+	<Event Name="Inicio_Batalla_de_Byss_00">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Emperador_Resucitado_Battle_00</Reward_Param1>
+		<Prereq>Batalla_de_Byss_00</Prereq>
+	</Event>		
+			
+							
+		<!--***** FINAL TACTICO BATALLA TERRESTRE EN NEWALDERAAN***********-->
+	<!-- EVENTOS ESPECIALES -->
+	
+	
+	
+	<Event Name="DISABLE_BUILDABLE_IA_Rebel_Ground_LNR_I_Gun">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>LOCK_UNIT</Reward_Type>
+        <Reward_Param1>IA_Empire_Ground_LNR_I_Gun</Reward_Param1>
+        <Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+    </Event>
+	
+	<Event Name="DISABLE_BUILDABLE_IA_Rebel_Ground_LNR_II_Gun">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>LOCK_UNIT</Reward_Type>
+        <Reward_Param1>IA_Empire_Ground_LNR_II_Gun</Reward_Param1>
+        <Prereq>Universal_Story_Start</Prereq>
+		<Perpetual>true</Perpetual>
+    </Event>
+	
+	<Event Name="Capturar_click_Cazas_01">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters4</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Capturar_click_Bombarderos_24">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters24</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+        <Event Name="Capturar_click_Corbetas_02">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters5</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+         <Event Name="Capturar_click_Fragatas_03">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters6</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_LTCruceros_25">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters25</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_04">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters7</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Portanaves_26">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters26</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Destructores_05">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters8</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_Pesados_06">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters9</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_de_Batalla_07">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters10</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Super_Destructores_08">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters11</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		   <Event Name="Capturar_click_Infanteria_09">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters12</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Ligeros_10">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters13</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Pesados_11">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters14</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Pesados_Avanzados_12">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters15</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Aerodeslizadores_13">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters16</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Aereos_14">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters17</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_estructuras_15">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters18</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_venta_de_estructuras_16">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters19</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_upgrades_17">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters20</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_RBUnits_18">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters21</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_Commanders_19">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters22</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_FactoryShip_20">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters23</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_NewCanon_27">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters27</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+	
+	<Event Name="Ocultar13_Estructuras_espaciales">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>AdvancedTech_6</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+		        <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Capturar_click_NewCanon_27</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar14_Estructuras_espaciales">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>AdvancedTech_7</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+		        <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Capturar_click_NewCanon_27</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar15_Estructuras_espaciales">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>AdvancedTech_8</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+		        <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Capturar_click_NewCanon_27</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+	
+	
+	<Event Name="DesOcultar_Estructuras_espaciales_18">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>AdvancedTech_6</Reward_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Capturar_click_estructuras_15</Prereq>
+	</Event>
+	<Event Name="DesOcultar_Estructuras_espaciales_19">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>AdvancedTech_7</Reward_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Capturar_click_estructuras_15</Prereq>
+	</Event>		
+	<Event Name="DesOcultar_Estructuras_espaciales_20">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>AdvancedTech_8</Reward_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Capturar_click_estructuras_15 UnLock_AdvancedTech_8</Prereq>
+	</Event>	
+</Story>

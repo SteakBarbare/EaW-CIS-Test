@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+
+
+<Hutts_Heavy_Frigate_Data>
+	
+
+	<SpaceUnit Name="Hutts_Heavy_Frigate">
+		<Variant_Of_Existing_Type>Krayt_SD_ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_HEAVY_FRIGATE</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HU_HEAVY_FRIGATE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CAPITAL </Encyclopedia_Unit_Class>
+		<Space_Model_Name>Hu_Hutt_Hvy_Frigate.alo</Space_Model_Name>
+		<Icon_Name>i_button_Hutts_Heavy_Frigate.tga</Icon_Name>
+		<Scale_Factor>0.65</Scale_Factor>
+		
+		<!--<Custom_Hard_XExtent> 99.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 29.0 </Custom_Hard_YExtent>-->
+		
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+        <Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		
+		<Max_Speed>2.3</Max_Speed>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Refresh_Rate>34000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+				
+		<AI_Combat_Power>3735</AI_Combat_Power>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<AI_Combat_Power>2880</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>	
+		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Hutts_Heavy_Frigate_Death_Clone</Death_Clone>
+		<HardPoints> 
+			HP_T_HuHvyFrigate_01,
+			HP_T_HuHvyFrigate_02,
+			HP_T_HuHvyFrigate_03,
+			HP_T_HuHvyFrigate_04,
+			HP_T_HuHvyFrigate_05,
+			HP_T_HuHvyFrigate_06,
+			HP_T_HuHvyFrigate_07,
+			HP_T_HuHvyFrigate_08,
+			HP_T_HuHvyFrigate_09,
+			HP_T_HuHvyFrigate_10,
+			HP_T_HuHvyFrigate_11,
+			HP_T_HuHvyFrigate_12,
+			HP_T_HuHvyFrigate_13,
+			HP_T_HuHvyFrigate_14,
+			HP_T_HuHvyFrigate_15,
+			HP_T_HuHvyFrigate_16,
+			HP_T_HuHvyFrigate_17,
+			HP_T_HuHvyFrigate_18,
+			HP_T_HuHvyFrigate_19,
+			HP_T_HuHvyFrigate_20,
+			HP_T_HuHvyFrigate_21,
+			HP_T_HuHvyFrigate_22,
+			HP_T_HuHvyFrigate_23,
+			HP_T_HuHvyFrigate_24,
+			HP_T_HuHvyFrigate_25,
+			HP_Shield_GeneratorH_00,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_EnginesH_03
+		</HardPoints>
+		<Lua_Script>ObjectScript_Krayt_Z</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>No</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+			
+
+		</Unit_Abilities_Data>
+
+	</SpaceUnit>
+	<SpaceUnit Name="Hutts_Heavy_Frigate_Death_Clone">
+		<Text_ID>TEXT_UNIT_KEDALBE_BATTLESHIP</Text_ID>
+		<Space_Model_Name>Hu_Hutt_Hvy_Frigate_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.65</Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Underworld </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+
+
+
+
+
+</Hutts_Heavy_Frigate_Data>

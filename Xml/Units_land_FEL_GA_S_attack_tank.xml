@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<FEL_GA_S_Attack_TankUnit_Data>
+	
+	<GroundVehicle Name="GA_S_Attack_Tank">
+		<Variant_Of_Existing_Type>R_S_Attack_Tank</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_R_S_ATTACK_TANK</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_R_S_ATTACK_TANK</Encyclopedia_Text>
+		<Land_Model_Name>GA_S_Attack_Tank.ALO</Land_Model_Name>
+		<Icon_Name>i_button_RV_S_Attack_Tank.tga</Icon_Name>
+		<No_Colorization_Color> 255, 210, 0, 255 </No_Colorization_Color>
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Armor_Type> Armor_ATAT4 </Armor_Type>
+
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Bone_Name>B_Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_Ground_GA_S_Attack_Tank</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<HardPoints>
+			HP_GA_Attack_Tank_Turret_02,
+			HP_GA_Attack_Tank_Turret_03,
+			HP_GA_SAttack_Tank_Turret_04
+		</HardPoints>
+
+		<SFXEvent_Fire>Unit_Rep_SPHAT_Fire</SFXEvent_Fire>
+		
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+                <Type>LASER_DEFENSE</Type>
+                <Recharge_Seconds>35.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Juggernaut_Laser_Defense </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Defense_On_Juggernaut </SFXEvent_GUI_Unit_Ability_Activated>  
+			 	<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Defense_Off_Juggernaut </SFXEvent_GUI_Unit_Ability_Deactivated>  
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_T3B</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>i_sa_assault.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="Juggernaut_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 28.0 </Defense_Duration_In_Secs>
+                <Laser_Color>0, 255, 0, 255</Laser_Color>
+                <Bone_Names>Muzzleb_00, Muzzleb_01, Muzzleb_02</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>350.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>40</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.25</Recharge_Time_In_Secs>
+            </Laser_Defense_Ability>
+		
+		</Abilities>
+
+	</GroundVehicle>
+
+	<GroundCompany Name="GA_S_Attack_Tank_Squad">
+		<Variant_Of_Existing_Type>Rebel_Attack_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_R_S_ATTACK_TANK</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_R_S_ATTACK_TANK TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Icon_Name>i_button_RV_S_Attack_Tank.tga</Icon_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>2150</Build_Cost_Credits>
+		<Company_Transport_Unit>GA_Crix_Transport</Company_Transport_Unit>
+		<Company_Units>GA_S_Attack_Tank</Company_Units>
+		<Required_Special_Structures>Fel_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Tactical_Build_Cost_Multiplayer>2150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+
+</FEL_GA_S_Attack_TankUnit_Data>

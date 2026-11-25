@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<LancerUnit_Data>
+	<SpaceUnit Name="Lancer">
+		<Variant_Of_Existing_Type>LancerORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<Death_Clone>Damage_Normal, Lancer_Death</Death_Clone>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>Empire, GA</Affiliation>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="LancerORG">
+		<Variant_Of_Existing_Type>AcclamatorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LANCER_FRIGATE</Text_ID>
+		<Encyclopedia_Good_Against> A-Wing X-Wing Y-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser Mc80AJM Mc80a </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LANCER_FRIGATE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_Lancer_Frigate.ALO</Space_Model_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.275</Scale_Factor> -->
+		<Select_Box_Scale>175</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+
+		<Selection_Blob_Material_Name>Selection_Spaceunit</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Spaceunit</Highlight_Blob_Material_Name>
+
+		<Max_Speed>2.6</Max_Speed>
+		<Max_Rate_Of_Turn>1.5</Max_Rate_Of_Turn>
+		<Layer_Z_Adjust>150.0</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Armor_Type> Armor_Acclamator </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+
+		<Autoresolve_Health>15000</Autoresolve_Health>
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>100000000</Tactical_Health>  
+		<Shield_Refresh_Rate>17000</Shield_Refresh_Rate>
+		<Energy_Capacity>240000</Energy_Capacity>
+		<Energy_Refresh_Rate>144000</Energy_Refresh_Rate>
+
+		<Affiliation>Empire</Affiliation>
+		
+		<Tech_Level>99</Tech_Level>
+		<Build_Cost_Credits>1800</Build_Cost_Credits>
+		<AI_Combat_Power>960</AI_Combat_Power>
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, POWERED, WEAPON, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>			
+		
+		<Projectile_Types>Proj_BlancoVacio_LaserT</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>14</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>3.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>10</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Fighter, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 65.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 50.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Fire/>
+
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+				
+		<HardPoints>
+      			HP_T_Lancer_01, 
+				HP_T_Lancer_02, 
+				HP_T_Lancer_03, 
+				HP_T_Lancer_04, 
+				HP_T_Lancer_05, 
+				HP_T_Lancer_06, 
+				HP_T_Lancer_07, 
+				HP_T_Lancer_08, 
+				HP_T_Lancer_09, 
+				HP_T_Lancer_10, 
+				HP_T_Lancer_11, 
+				HP_T_Lancer_12, 
+				HP_T_Lancer_13, 
+				HP_T_Lancer_14, 
+				HP_T_Lancer_15, 
+				HP_T_Lancer_16, 
+				HP_T_Lancer_17, 
+				HP_T_Lancer_18, 
+				HP_T_Lancer_19, 
+				HP_T_Lancer_20
+	  	</HardPoints>
+		
+		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+		<Icon_Name>I_BUTTON_LANCER.TGA</Icon_Name>
+		<GUI_Model_Name>EV_Lancer_Frigate.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Rep_Assault_Frigate</SFXEvent_Build_Complete>
+		
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>I_RADAR_DEFAULT_BLIP.TGA</Radar_Icon_Name>
+		
+		
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_Large_LaserIGX_Barrage</Projectile_Types_Override>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,			3.0f</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Attack_Assault_Frigate </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320.0</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Expiration_Seconds>35</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+	   	</Unit_Abilities_Data>
+		<Targeting_Priority_Set>Corvette</Targeting_Priority_Set>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+		<!--<Space_Override_Population_Value>1</Space_Override_Population_Value>-->
+		<Tactical_Bribe_Cost>450</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="Lancer_Death">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>EV_Lancer_Frigate_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.275</Scale_Factor> -->
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</LancerUnit_Data>

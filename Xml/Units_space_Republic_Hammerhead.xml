@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<REP_HAMMERHEADUnit_Data>
+	
+	
+	<SpaceUnit Name="R_Hammerhead">
+		<Variant_Of_Existing_Type>Rep_HammerheadORG</Variant_Of_Existing_Type>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<AI_Combat_Power>1500</AI_Combat_Power>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Space_Model_Name>RV_HammerheadOld.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, R_Hammerhead_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_Hammerhead">
+		<Variant_Of_Existing_Type>Rep_HammerheadORG</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Rep_Hammerhead_Death_Clone</Death_Clone>
+		<Space_Model_Name>Rep_HammerheadOld.ALO</Space_Model_Name>
+	</SpaceUnit>	
+	<SpaceUnit Name="Rep_HammerheadORG">
+		<Variant_Of_Existing_Type>DreadnoughtORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HAMMERHEAD</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Marauder CIS_Sabaoth_Frigate CIS_Sabaoth_Hex_Deployer </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Recusant_PSD CIS_Recusant CIS_Munificent </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>Rep_HammerheadOld.ALO</Space_Model_Name>
+		<GUI_Model_Name>Rep_HammerheadOld.ALO</GUI_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Max_Speed>2.4</Max_Speed>
+		<Layer_Z_Adjust>39.959</Layer_Z_Adjust>
+		<Armor_Type> Armor_Nebulon_B </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Autoresolve_Health>15000</Autoresolve_Health>
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>75000000</Tactical_Health>  
+		<Shield_Refresh_Rate>15050</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>90000</Energy_Refresh_Rate>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		
+		<Tech_Level>99</Tech_Level>
+		
+		<Build_Cost_Credits>1400</Build_Cost_Credits>
+		<AI_Combat_Power>15</AI_Combat_Power>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		
+		<HardPoints> 
+				HP_T_HammerheadO_01, 
+				HP_T_HammerheadO_02, 
+				HP_T_HammerheadO_03
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_Rep_HAMMERHEAD.tga</Icon_Name>
+		<GUI_Model_Name>RV_HammerheadOld.ALO</GUI_Model_Name>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_HAMMERHEAD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-25.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_Hammerhead_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>Rep_HammerheadOld_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>Rep_HammerheadOld.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="R_Hammerhead_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>RV_HammerheadOld_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>Rep_HammerheadOld.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</REP_HAMMERHEADUnit_Data>

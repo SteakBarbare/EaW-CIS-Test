@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<Ha_Ciborg_Trooper_Command_WeaponUnit_Data>
+
+	
+	<GroundInfantry Name="Ha_Ciborg_Trooper_Command_Weapon">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_CIBORG_TROOPER_COMMAND</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER_COMMAND TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Model_Name>Ha_Ciborg_Trooper_Command_Weapon.ALO</Land_Model_Name>
+
+		<Affiliation>Pirates, Hapan</Affiliation>
+
+		<Projectile_Types> Proj_Hapan_Command_Gun </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>30.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 0.1 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+
+		<CategoryMask> Infantry | AntiVehicle</CategoryMask>
+		  
+		<Create_Team>No</Create_Team>
+		<AI_Combat_Power>12</AI_Combat_Power>
+		<Death_Clone>Damage_Force_Whirlwind, Ha_Ciborg_Trooper_Command_Weapon_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Ha_Ciborg_Trooper_Command_Weapon_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Ha_Ciborg_Trooper_Command_Weapon_Crush_Death_Clone</Death_Clone>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Icon_Name>i_button_Ha_Ciborg_Trooper_Command_Weapon.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Land_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius> <!-- 0.0 means no distance factor, unlimited to entire map -->
+				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance> 
+				<GUI_Activated_Ability_Name>  </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+
+		<Conversion_Ability_Changes_To_Enemy> Ha_Ciborg_Trooper_Command_Weapon_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+
+	<!-- Version of above Infantry who has been converted to enemy by Force Corruption ability.                                            -->
+	<!-- This object type can be commented out or deleted if the base type is never effected by Force Corruption enemy conversion ability. -->
+	<!-- IMPORTANT: For now, only SFXEvent should be changed due to the on-the-fly type pointer change. If more is desired to be changed   -->
+	<!-- there could be serious ramifications, so please consult with Programming team.                                                    -->
+	  <GroundInfantry Name="Ha_Ciborg_Trooper_Command_Weapon_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Ha_Ciborg_Trooper_Command_Weapon </Variant_Of_Existing_Type>
+		<SFXEvent_Select> Unit_Select_Rebel_Soldier_Converted </SFXEvent_Select>             
+		<SFXEvent_Move> Unit_Move_Rebel_Soldier_Converted </SFXEvent_Move>                      
+		<SFXEvent_Attack> Unit_Attack_Rebel_Soldier_Converted </SFXEvent_Attack>                 
+		<SFXEvent_Guard> Unit_Guard_Rebel_Soldier_Converted </SFXEvent_Guard>                   
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Soldier_Converted </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Rebel_Soldier_Converted </SFXEvent_Assist_Attack> 	 
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_3_Death</Death_SFXEvent_Start_Die>
+	  </GroundInfantry>
+	  <GroundInfantry Name="Ha_Ciborg_Trooper_Command_Weapon_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_Trooper_Command_Weapon</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	  </GroundInfantry>
+
+	<GroundInfantry Name="Ha_Ciborg_Trooper_Command_Weapon_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_Trooper_Command_Weapon</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Ha_Ciborg_Trooper_Command_Weapon_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_Trooper_Command_Weapon</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>	
+	
+	<GroundCompany Name="Ha_Ciborg_Trooper_Command_Weapon_Team">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_CIBORG_TROOPER_COMMAND_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER_COMMAND TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>Hapan_Ground_Barracks, Hapan_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Units> Ha_Ciborg_Trooper_Command_Weapon, Ha_Ciborg_Trooper_Command_Weapon, Ha_Ciborg_Trooper_Command_Weapon</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Company_Transport_Unit>Underworld_Infantry_Droid_Shuttle</Company_Transport_Unit>
+		<Icon_Name>i_button_Ha_Ciborg_Trooper_Command_Weapon.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		
+		
+	</GroundCompany>
+	
+</Ha_Ciborg_Trooper_Command_WeaponUnit_Data>

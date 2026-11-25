@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<EVK_PellaeonSD_AUnit_Data>
+	<SpaceUnit Name="EVK_PellaeonSD_A">
+		<Variant_Of_Existing_Type>PellaeonSD_A_ORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, EVK_PellaeonSD_A_Death_Clone</Death_Clone>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Predator_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Predator_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+	</SpaceUnit>	
+	<SpaceUnit Name="PellaeonSD_A_ORG">
+		<Variant_Of_Existing_Type>EVF_PellaeonSDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVF_PELLAEONSD_A</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVF_PELLAEONSD_A TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVF_TIE_PREDATOR TEXT_WAVES_X2 TEXT_UNIT_EVF_TIE_NEUTRALIZER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		
+		<!--<Custom_Hard_XExtent> 189.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 98.0 </Custom_Hard_YExtent>-->
+		
+		<Space_Model_Name>EVK_Pellaeon_SD_A.ALO</Space_Model_Name>
+		
+		<Icon_Name>I_BUTTON_EVF_Pellaeon_SD_A.TGA</Icon_Name>
+		<!--<Layer_Z_Adjust>650.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>250.0</Layer_Z_Adjust>
+		<AI_Combat_Power>1335</AI_Combat_Power>
+		
+		<Build_Cost_Credits>8000</Build_Cost_Credits>
+						
+		<HardPoints> 
+			HP_IonLH_01,
+			HP_IonLH_02,
+			HP_IonLH_03,
+			HP_IonLH_04,
+			HP_IonLH_05,
+			HP_IonLH_06,
+			HP_IonLH_07,
+			HP_IonLH_08,
+			HP_T_EVKPellaeon_01,
+			HP_T_EVKPellaeon_02,
+			HP_T_EVKPellaeon_03,
+			HP_T_EVKPellaeon_04,
+			HP_T_EVKPellaeon_05,
+			HP_T_EVKPellaeon_06,
+			HP_T_EVKPellaeon_07,
+			HP_T_EVKPellaeon_08,
+			HP_T_EVKPellaeon_09,
+			HP_T_EVKPellaeon_10,
+			HP_T_EVKPellaeon_11,
+			HP_T_EVKPellaeon_12,
+			HP_T_EVKPellaeon_13,
+			HP_T_EVKPellaeon_14,
+			HP_T_EVKPellaeon_15,
+			HP_T_EVKPellaeon_16,
+			HP_T_EVKPellaeon_17,
+			HP_T_EVKPellaeon_18,
+			HP_T_EVKPellaeon_19,
+			HP_T_EVKPellaeon_20,
+			HP_T_EVKPellaeon_21,
+			HP_T_EVKPellaeon_22,
+			HP_T_EVKPellaeon_23,
+			HP_T_EVKPellaeonN_24,
+			HP_T_EVKPellaeonN_25,
+			HP_T_EVKPellaeonN_26,
+			HP_T_EVKPellaeonN_27,
+			HP_T_EVKPellaeonN_28,
+			HP_T_EVKPellaeonN_29,
+			HP_T_EVKPellaeonN_30,
+			HP_T_EVKPellaeonN_31,
+			HP_T_EVKPellaeonN_32,
+			HP_T_EVKPellaeonN_33,
+			HP_T_EVKPellaeonN_34,
+			HP_T_EVKPellaeonN_35,
+			HP_T_EVKPellaeonN_36,
+			HP_T_EVKPellaeonN_37,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Tractor_Beam_Rebelde
+		</HardPoints>
+		
+		<SFXEvent_Select>Unit_Select_EVK_PELLAEON_A</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_E_BC</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_E_BC</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_E_BC</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_E_BC</SFXEvent_Guard>
+		<SFXEvent_Move_Opposite>Unit_Move_Opposite_E_BC</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Barrage_E_BC</SFXEvent_Barrage>
+		<SFXEvent_Stop>Unit_Stop_E_BC</SFXEvent_Stop>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_E_BC </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_E_BC </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target>	EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_Attack_E_BC </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Ambient_Loop>Unit_E_BC_Idle_Engine_Loop</SFXEvent_Ambient_Loop>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+         
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_EVK_PELLAEON_A</SFXEvent_Build_Complete>
+		
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> K_PellaeonSD_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			    <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="K_PellaeonSD_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>2500</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>8000</Tactical_Build_Cost_Multiplayer>
+	</SpaceUnit>
+	<SpaceUnit Name="EVK_PellaeonSD_A_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EVK_Pellaeon_SD_A_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-110.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+	
+	
+</EVK_PellaeonSD_AUnit_Data>

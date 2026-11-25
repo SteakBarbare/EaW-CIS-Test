@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<EVF_Hvy_ArtilleryUnit_Data>
+	<GroundVehicle Name="EVF_Hvy_Artillery">
+		<Variant_Of_Existing_Type>MOVILEARTORG</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Hvy_Artillery.ALO</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Shield_Armor_Type>Shield_LtTank</Shield_Armor_Type>
+		
+		<Projectile_Types>Proj_Ground_EVF_Hvy_Artillery</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>9</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Max_Attack_Distance>650.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 220 </Targeting_Min_Attack_Distance>
+		
+		<Icon_Name>I_BUTTON_EVF_Hvy_Artillery.tga</Icon_Name>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, EVF_Hvy_Artillery_Death_Clone_00</Death_Clone>
+	</GroundVehicle>	
+	
+	<GroundVehicle Name="EVF_Hvy_Artillery_Death_Clone_00">
+		<Variant_Of_Existing_Type>EVF_Hvy_Artillery</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Hvy_Artillery_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="EVF_Hvy_Artillery_Squad">
+		<Variant_Of_Existing_Type>Imperial_MOVILEART_Corp</Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Company_Units>EVF_Hvy_Artillery, EVF_Hvy_Artillery, EVF_Hvy_Artillery</Company_Units>
+		<Required_Special_Structures>Fel_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Icon_Name>I_BUTTON_EVF_Hvy_Artillery.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</EVF_Hvy_ArtilleryUnit_Data>

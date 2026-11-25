@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<EmpireGroundCompanies>
+	<GroundCompany Name="Imperial_Armor_Group">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Tech_Level>3</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+	</GroundCompany>	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<GroundCompany Name="Imperial_Heavy_Scout_Squad_Small">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATST TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Company_Units> AT_ST_Walker, AT_ST_Walker, AT_ST_Walker </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Damage>18</Damage> 
+	</GroundCompany>
+
+	
+	
+
+
+	<GroundCompany Name="Imperial_Anti_Infantry_Brigade_Small">
+		<Variant_Of_Existing_Type>Imperial_Anti_Infantry_Brigade</Variant_Of_Existing_Type>
+		<Company_Units> TIE_Crawler, TIE_Crawler, TIE_Crawler </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Damage>12</Damage> 
+	</GroundCompany>
+
+
+	
+	
+	
+	
+	
+	
+
+
+<!-- Used for exploding Empire buildings -->
+
+	<GroundCompany Name="Empire_Survivors_Small">
+		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>3</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Empire, Pirates, Fel, Krayt, Chiss</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Units>Squad_Armytrooper_S, Squad_Armytrooper, Squad_Armytrooper</Company_Units>
+		<Icon_Name>i_button_storm_trooper.tga</Icon_Name>
+		<Score_Cost_Credits>36</Score_Cost_Credits>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		<Create_Team_Type> Stormtrooper_Team </Create_Team_Type>
+	</GroundCompany>	
+
+
+	<GroundCompany Name="Empire_Survivors_Medium">
+		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>6</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Empire, Pirates, Fel, Krayt, Chiss</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Units>Squad_Armytrooper_L, Squad_Armytrooper_RT97, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper</Company_Units>
+		<Icon_Name>i_button_storm_trooper.tga</Icon_Name>
+		<Score_Cost_Credits>48</Score_Cost_Credits>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+
+		<Create_Team_Type> Stormtrooper_Team </Create_Team_Type>
+	</GroundCompany>
+
+
+	<GroundCompany Name="Empire_Survivors_Large">
+		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>9</Damage>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Empire, Pirates, Fel, Krayt, Chiss</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Units>Squad_Armytrooper_C, Squad_Armytrooper, Squad_Armytrooper_RT97, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper</Company_Units>
+		<Icon_Name>i_button_storm_trooper.tga</Icon_Name>
+		<Score_Cost_Credits>54</Score_Cost_Credits>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+		<Create_Team_Type> Stormtrooper_Team </Create_Team_Type>
+	</GroundCompany>	
+
+	
+	<GroundCompany Name="Imperial_Turrets_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Armytrooper_L, Squad_Armytrooper_RT97, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper, Squad_Armytrooper</Company_Units>
+		<Tech_Level>6</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 6 </Max_Squad_Size>
+		<Damage>3</Damage> 
+	</GroundCompany>	
+</EmpireGroundCompanies>

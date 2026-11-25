@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Ch_Heavy_ArtilleryUnit_Data>
+	
+<GroundVehicle Name="Ch_Heavy_Artillery">
+		<Variant_Of_Existing_Type>MOVILEARTORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_HEAVY_ARTILLERY</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MPTL T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T3B_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_HEAVY_ARTILLERY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name> i_button_Ch_Heavy_Artillery.tga </Icon_Name>
+		<Land_Model_Name>Ch_Heavy_Artillery.alo</Land_Model_Name>
+
+		<Scale_Factor>1.1</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Pirates, Empire, Chiss</Affiliation>
+		<Political_Control>0</Political_Control>
+
+		<Max_Speed>2.00</Max_Speed>
+		
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>50.0</Targeting_Min_Attack_Distance>
+
+		<AI_Combat_Power>162</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+        <Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Ch_Hvy_Artillery_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Ch_Hvy_Artillery_Death_Clone_00">
+		<Variant_Of_Existing_Type>MOVILEART_Death_Clone_00</Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>Ch_Heavy_Artillery_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	<GroundCompany Name="Ch_Heavy_Artillery_Group">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_HEAVY_ARTILLERY_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Fast_Tank_Brigade Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Heavy_Tank_Brigade Rebel_Speeder_Wing Rebel_T3B_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_HEAVY_ARTILLERY TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Empire, Chiss</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		
+		<Company_Units>Ch_Heavy_Artillery, Ch_Heavy_Artillery</Company_Units>
+		<Required_Special_Structures>Chiss_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Icon_Name>i_button_Ch_Heavy_Artillery.tga</Icon_Name>
+		<SFXEvent_Build_Complete>Unit_Complete_MOVILEART</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_MOVILEART</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</Ch_Heavy_ArtilleryUnit_Data>

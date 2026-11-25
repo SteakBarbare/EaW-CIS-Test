@@ -1,0 +1,601 @@
+<?xml version="1.0" ?>
+<Story>
+
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Set_IA_at_Nivel_1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>CIS</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Limitar_IA_Nivel_Tech_Max_1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>CIS</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+		<Event Name="CW_Enter_Tech_2">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Republic_To_Tech_2</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+				<Event Name="Set_IA_at_Nivel_2">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>2</Reward_Param2>
+					<Prereq>CW_Enter_Tech_2</Prereq>
+				</Event>
+				<Event Name="Limitar_Nivel_Tech_Max_2">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>2</Reward_Param2>
+					<Prereq>CW_Enter_Tech_2</Prereq>
+				</Event>
+		<Event Name="CW_Enter_Tech_3">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Republic_To_Tech_3</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+				<Event Name="Set_IA_at_Nivel_3">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>3</Reward_Param2>
+					<Prereq>CW_Enter_Tech_3</Prereq>
+				</Event>
+				<Event Name="Limitar_Nivel_Tech_Max_3">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>3</Reward_Param2>
+					<Prereq>CW_Enter_Tech_3</Prereq>
+				</Event>
+		<Event Name="CW_Enter_Tech_4">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Republic_To_Tech_4</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+				<Event Name="Set_IA_at_Nivel_4">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>4</Reward_Param2>
+					<Prereq>CW_Enter_Tech_4</Prereq>
+				</Event>
+				<Event Name="Limitar_Nivel_Tech_Max_4">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>4</Reward_Param2>
+					<Prereq>CW_Enter_Tech_4</Prereq>
+				</Event>
+		<Event Name="CW_Enter_Tech_5">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Republic_To_Tech_5</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+				<Event Name="Set_IA_at_Nivel_5">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+					<Reward_Param1>CIS</Reward_Param1>
+					<Reward_Param2>5</Reward_Param2>
+					<Prereq>CW_Enter_Tech_5</Prereq>
+				</Event>
+	
+	
+	
+	
+	<Event Name="Spawn_Dooku_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Dooku_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_01_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Dooku_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_01_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Dooku_Team</Reward_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_01_CIS_A</Prereq>
+		</Event>
+		
+	<Event Name="Spawn_Jango_Fett_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Jango_Fett_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_02_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Jango_Fett_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_02_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Jango_Fett_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_02_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_CIS_Wat_Tambor_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>CIS_Wat_Tambor_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_03_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>CIS_Wat_Tambor_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_03_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>CIS_Wat_Tambor_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_03_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_Grievous_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grievous_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_04_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Grievous_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_04_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Grievous_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_04_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_Samhill_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Samhill_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_05_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Samhill_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_05_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Samhill_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_05_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_CIS_Kul_Teska_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>CIS_Kul_Teska_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_06_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>CIS_Kul_Teska_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_06_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>CIS_Kul_Teska_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_06_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_Durge_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Durge_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_07_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Durge_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_07_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Durge_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_07_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_Ventress_Sith_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Ventress_Sith_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_08_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Ventress_Sith_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_08_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Ventress_Sith_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_08_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_CIS_Poggle_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>CIS_Poggle_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_09_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>CIS_Poggle_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_09_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>CIS_Poggle_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_09_CIS_A</Prereq>
+		</Event>	
+	<Event Name="Spawn_General_Sevran_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>General_Sevran_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_10_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>General_Sevran_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_10_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>General_Sevran_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_10_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_CIS_Trench_Providence">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>CIS_Trench_Providence</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_11_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>CIS_Trench_Providence</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_11_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>CIS_Trench_Providence</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_11_CIS_A</Prereq>
+		</Event>	
+	<Event Name="Spawn_Aurra_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Aurra_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_5</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_12_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Aurra_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_12_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Aurra_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_12_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_CydonTank_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>CydonTank_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_5</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_13_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>CydonTank_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_13_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>CydonTank_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_13_CIS_A</Prereq>
+		</Event>
+	<Event Name="Spawn_Cad_Bane_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Cad_Bane_Team</Reward_Param1>
+		<Reward_Param2>Geonosis</Reward_Param2>
+		<Prereq>Universal_Story_Start CW_Enter_Tech_5</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_14_CIS_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Cad_Bane_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_11_CIS_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Cad_Bane_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_14_CIS_A</Prereq>
+		</Event>
+
+		<Event Name="RB_CIS_Ocultar01_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace01</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar02_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace15</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar05_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace08</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar01_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace03</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar02_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace17</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar_IARB_CIS_ProvidenceDR">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace23</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		 <Event Name="RB_CIS_DesOcultar01_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace01</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_CIS_DesOcultar02_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace15</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_4</Prereq>
+        </Event>
+		<Event Name="RB_CIS_DesOcultar01_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace03</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_5</Prereq>
+        </Event>	
+		<Event Name="RB_CIS_DesOcultar02_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace17</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_CIS_DesOcultar_IARB_CIS_ProvidenceDR">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_CISSpace23</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_4</Prereq>
+        </Event>
+		
+		<Event Name="RB_CIS_Ocultar_CIS_SMNoRB_Super_Tank_Squad">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>CIS_SMNoRB_Super_Tank_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar_CIS_SMNoRB_NR_N99_Squad">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>CIS_SMNoRB_NR_N99_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar_CIS_SMNoRB_UMobileHC_Squad">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>CIS_SMNoRB_UMobileHC_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="RB_CIS_DesOcultar_CIS_SMNoRB_Super_Tank_Squad">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>CIS_SMNoRB_Super_Tank_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>CW_Enter_Tech_3</Prereq>
+        </Event>
+		<Event Name="RB_CIS_DesOcultar_CIS_SMNoRB_NR_N99_Squad">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>CIS_SMNoRB_NR_N99_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>CW_Enter_Tech_4</Prereq>
+        </Event>
+		<Event Name="RB_CIS_DesOcultar_CIS_SMNoRB_UMobileHC_Squad">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>CIS_SMNoRB_UMobileHC_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>CW_Enter_Tech_5</Prereq>
+        </Event>
+
+
+		<Event Name="RB_CIS_Ocultar_Estructuras_espaciales_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>CIS_GolanI_Defenses</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar_Estructuras_espaciales_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>CIS_GolanII_Defenses</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_Ocultar_Estructuras_espaciales_06">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>CIS_GolanIII_Defenses</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+	
+		<Event Name="RB_CIS_DesOcultar_Estructuras_espaciales_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>CIS_GolanI_Defenses</Reward_Param1>
+				<Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_3</Prereq>
+				
+        </Event>
+		<Event Name="RB_CIS_DesOcultar_Estructuras_espaciales_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>CIS_GolanII_Defenses</Reward_Param1>
+				<Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_4</Prereq>
+				
+        </Event>
+		<Event Name="RB_CIS_DesOcultar_Estructuras_espaciales_06">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>CIS_GolanIII_Defenses</Reward_Param1>
+				<Perpetual>True</Perpetual>
+			    <Prereq>CW_Enter_Tech_5</Prereq>
+				
+        </Event>
+		
+		<Event Name="RB_CIS_Ocultar_Commanders_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_CIS_Fleet_Tech_5</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_CIS_DesOcultar_Commanders_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_CIS_Fleet_Tech_5</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>CW_Enter_Tech_5</Prereq>
+        </Event>
+</Story>

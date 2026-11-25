@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<R_Fleet_Tech_0FUnit_Data>
+	<SpaceUnit Name="R_Fleet_Tech_0F_AI">
+		<Variant_Of_Existing_Type>R_Fleet_Tech_0F</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, RXSoloIA_STR_01</Required_Special_Structures>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Affiliation>Rebel</Affiliation>
+		<!--<Space_Override_Population_Value>25</Space_Override_Population_Value>-->
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Fleet_Tech_0F">
+		<Variant_Of_Existing_Type>Rep_MandatorII</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_REBEL_TECH_0</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_MANDATORMKII TEXT_UNIT_JEDI_CRUISERMOD TEXT_UNIT_VALIANT TEXT_UNIT_VICTORIICRUISER TEXT_UNIT_PROTECTORSD TEXT_UNIT_RANDECLIPTIC TEXT_UNIT_ACCLAMATORMKI TEXT_UNIT_VAINGLORIOUS TEXT_UNIT_VICTORIICRUISER TEXT_UNIT_REP_LIGHT_CRUISER TEXT_UNIT_REP_LIGHT_CRUISERX</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_MandatorMKII_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>i_button_RI_fleet_rebel_tech_0b.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Cost_Credits>22000</Build_Cost_Credits>
+		<Affiliation>Rebel</Affiliation>
+		<Required_Planets>
+			Fondor, FondorK
+		</Required_Planets>
+		<Required_Special_Structures>Astilleros_PesadosR</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Population_Value>45</Population_Value>
+		<Space_Override_Population_Value>4</Space_Override_Population_Value>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<Tactical_Build_Cost_Multiplayer>22000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>R_fleet_tech_0_Fondor_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>LEECH_SHIELDS</Type>
+                <Recharge_Seconds>55.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> MandatorII_Leech_Shields </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 3000.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Leech_Sheilds_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_Target_Ability> Unit_Leech_Sheilds_Kadalbe </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+ 				<Supports_Autofire>True</Supports_Autofire>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	4000.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	200.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+           </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		 <Abilities SubObjectList="Yes">
+
+			
+            <Leech_Shields_Ability Name="MandatorII_Leech_Shields">
+                <Activation_Style> User_Input </Activation_Style>
+                <Applicable_Unit_Categories> Corvette | Frigate | Capital </Applicable_Unit_Categories>
+                <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+                <Activation_Min_Range>10</Activation_Min_Range>
+                <Activation_Max_Range>3000</Activation_Max_Range>
+                <Duration_In_Secs> 25.0 </Duration_In_Secs>
+                <Shield_Damage_Per_Second> 10000.0 </Shield_Damage_Per_Second>
+                <Damage_Multiplier> 3.0 </Damage_Multiplier>
+                <Beam_Color>146, 25, 56, 255</Beam_Color>
+                <Beam_Bone_Name>HP_SHL_00_BONE</Beam_Bone_Name>
+                <Beam_Frames>10</Beam_Frames>
+                <Beam_Width>40.0</Beam_Width>
+                <Beam_Texture_Name>tractor_beam00.tga</Beam_Texture_Name>
+                <Beam_Effect_Name>Leech_Shields</Beam_Effect_Name>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+                <Leech_Effect>Leech_Effect</Leech_Effect>
+            </Leech_Shields_Ability>
+            
+        </Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="Disband_R_Fleet_Tech_0F">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_REBEL_TECH_0 TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Rebel</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosR</Required_Special_Structures>
+
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>R_Fleet_Tech_0F</Required_Orbiting_Units>
+		<Lua_Script>Disband_R_Fleet_Tech_0F</Lua_Script>
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>		
+
+</R_Fleet_Tech_0FUnit_Data>

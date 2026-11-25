@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<Rebel_Attack_TankUnit_Data>
+	
+	<GroundVehicle Name="Rebel_Attack_Tank">
+		<Variant_Of_Existing_Type>HAV_A5ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_ATTACK_TANK</Text_ID>
+		<Encyclopedia_Good_Against> MAL_Rocket_Vehicle MPTL Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RV_ATTACK_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RV_Attack_Tank.ALO</Land_Model_Name>
+		<Icon_Name>i_button_RV_ATTACK_TANK.tga</Icon_Name>
+
+		<Affiliation>Rebel, GA, RVRE, Corporate</Affiliation>
+
+		<Armor_Type> Armor_ATAT2 </Armor_Type>
+		<Tactical_Health>2000</Tactical_Health>
+		<Autoresolve_Health>1300</Autoresolve_Health>
+		<Shield_Points>0</Shield_Points>
+		<Shield_Refresh_Rate>40</Shield_Refresh_Rate>	
+		<Energy_Capacity>9999</Energy_Capacity>
+		<Energy_Refresh_Rate>9999</Energy_Refresh_Rate>
+		<AI_Combat_Power>300</AI_Combat_Power>
+
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATMKII</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+		
+		<Ranged_Target_Z_Adjust>50.0</Ranged_Target_Z_Adjust>
+		<Deploys>No</Deploys>
+		<Auto_Deploys>No</Auto_Deploys>
+		
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>Yes</Fire_Weapon_When_Undeployed>
+
+		<HardPoints>
+			HP_Rebel_Attack_Tank_Turret_01,
+			HP_Rebel_Attack_Tank_Turret_02,
+			HP_Rebel_Attack_Tank_Turret_03
+		</HardPoints>
+
+		<SFXEvent_Fire>Unit_Tank_T4B_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_T3B</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_T3B</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_T3B</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T3B</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T3B </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T3B</SFXEvent_Assist_Attack>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Juggernaut_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Juggernaut_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+
+		<Death_Clone>Damage_Normal, Rebel_Attack_Tank_Death_Clone_00</Death_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+                <Type>LASER_DEFENSE</Type>
+                <Recharge_Seconds>35.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Juggernaut_Laser_Defense </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Defense_On_Juggernaut </SFXEvent_GUI_Unit_Ability_Activated>  
+			 	<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Defense_Off_Juggernaut </SFXEvent_GUI_Unit_Ability_Deactivated>  
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="Juggernaut_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 28.0 </Defense_Duration_In_Secs>
+                <Laser_Color>34, 34, 235, 255</Laser_Color>
+                <Bone_Names>Muzzleb_00, Muzzleb_01, Muzzleb_02</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>350.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>40</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.25</Recharge_Time_In_Secs>
+            </Laser_Defense_Ability>
+			
+		</Abilities>
+
+	</GroundVehicle>
+
+
+	<GroundVehicle Name="Rebel_Attack_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>Rebel_Attack_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_Attack_Tank_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Rebel_Attack_Tank_Company">
+		<Variant_Of_Existing_Type>Rep_HAV_Juggernaut_A5_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_ATTACK_TANK</Text_ID>
+		<Encyclopedia_Good_Against> MAL_Rocket_Vehicle MPTL Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RV_ATTACK_TANK TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RV_ATTACK_TANK.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand, AdvancedTech_6</Required_Special_Structures>
+
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>Rebel_Attack_Tank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		
+		<Tactical_Build_Cost_Multiplayer>1650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+
+</Rebel_Attack_TankUnit_Data>

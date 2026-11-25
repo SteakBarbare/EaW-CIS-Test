@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<EVFO_TIE_Elite_Data>
+	<GroundVehicle Name="EVFO_TIE_Elite_Land">
+		<Variant_Of_Existing_Type>TIE_Fighter_LandORG</Variant_Of_Existing_Type>
+				
+		<Text_ID>TEXT_UNIT_TIE_FIGHTER_E_FO</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_FIGHTER_E_FO</Encyclopedia_Text>
+				
+		<Land_Model_Name>EVFO_TIE_Fighter_Elite_FO_Land.ALO</Land_Model_Name>
+				
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED,SHIELDED,AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, HUNT</LandBehavior>
+		<Affiliation>Empire, EVFO</Affiliation>		
+		<Shield_Points>150</Shield_Points>
+		<Tactical_Health>175</Tactical_Health>
+		<Shield_Refresh_Rate>3.8</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<HardPoints> 
+			HP_Gr_Fighter_AA_Missile_00, HP_Gr_Fighter_AA_Missile_01, HP_EVFO_TIE_Elite_Gr
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_EV_TIE_Fighter_E_FO.tga</Icon_Name>
+		<Death_Clone>Damage_Normal, EVFO_TIE_Elite_Land_Death_Clone_00</Death_Clone>		
+	</GroundVehicle>
+	<GroundVehicle Name="EVFO_TIE_Elite_Land_Death_Clone_00">
+		<Variant_Of_Existing_Type>EVFO_TIE_Elite_Land</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVFO_TIE_Fighter_Elite_FO_Land_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>0.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="EVFO_TIE_Elite_Squadron_Land">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_FIGHTER_E_FO_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_FIGHTER_E_FO TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
+		
+		<Required_Special_Structures>EVFO_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>TIE_Fighter_Land_Transport</Company_Transport_Unit>
+		<Company_Units>EVFO_TIE_Elite_Land, EVFO_TIE_Elite_Land, EVFO_TIE_Elite_Land</Company_Units>
+		<Icon_Name>I_BUTTON_EV_TIE_Fighter_E_FO.tga</Icon_Name>
+	</GroundCompany>
+
+</EVFO_TIE_Elite_Data>

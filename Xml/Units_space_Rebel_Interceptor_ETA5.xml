@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<Interceptor_ETA5_Files>
+
+
+<SpaceUnit Name="Interceptor_ETA5">
+		<Variant_Of_Existing_Type>A-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_INTERCEPTOR_ETA5</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Defender TIE_Avenger Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Missile_Gunboat A9_Fighter Lancer </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_INTERCEPTOR_ETA5 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR </Encyclopedia_Unit_Class>
+		<Space_Model_Name>RV_Interceptor_ETA5.ALO</Space_Model_Name>
+		<No_Colorization_Color> 237, 78, 78, 255 </No_Colorization_Color>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>5.6</Max_Speed>
+		<Min_Speed>3.8</Min_Speed>
+		<Max_Rate_Of_Turn>3.2</Max_Rate_Of_Turn>
+		<Max_Thrust>1.2</Max_Thrust>
+		<Max_Rate_Of_Roll>4.3</Max_Rate_Of_Roll>
+
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Fires_Forward>no</Fires_Forward>
+		<Turret_Rotate_Extent_Degrees>10</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>10</Turret_Elevate_Extent_Degrees>
+		<Max_Lift>4.5</Max_Lift>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Maintenance_Cost>0.1</Maintenance_Cost>
+		<Affiliation>Rebel, GA, GAC</Affiliation>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>1150</Shield_Refresh_Rate>
+		<Energy_Capacity>15000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Infantry_H </Armor_Type>
+		
+
+		<HardPoints>
+			HP_Fighter_Adv_Missile, HP_R_TIEREA_Laser_00, HP_R_TIEREA_Laser_01
+        </HardPoints>
+		
+		<SFXEvent_Ambient_Moving> Unit_TIE_Fighter_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Fighter_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+		<CategoryMask> Fighter | AntiBomber </CategoryMask>
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+		
+		<Property_Flags> SmallShip </Property_Flags>
+		<Icon_Name>I_BUTTON_RV_Interceptor_ETA5.TGA</Icon_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+
+	<Squadron Name="Interceptor_ETA5_Squadron">
+		<Variant_Of_Existing_Type>Rebel_X-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_INTERCEPTOR_ETA5_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Defender TIE_Avenger Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Missile_Gunboat A9_Fighter Lancer </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_INTERCEPTOR_ETA5 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR </Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Rebel, GA, GAC</Affiliation>
+
+		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Factoria_Cazas_Rebeldes, AdvancedTech_8</Required_Special_Structures>
+
+		<Squadron_Units>Interceptor_ETA5, Interceptor_ETA5, Interceptor_ETA5</Squadron_Units>
+		<Squadron_Offsets>-55.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-35.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,40.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,-25.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,-15.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,30.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,55.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-55.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,45.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-45.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-65.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>Interceptor_ETA5_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>I_BUTTON_RV_Interceptor_ETA5.TGA</Icon_Name>
+		<GUI_Model_Name>RV_Interceptor_ETA5.ALO</GUI_Model_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+		
+		<Tactical_Build_Cost_Multiplayer>180</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</Squadron>
+	<Container Name="Interceptor_ETA5_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_RV_INTERCEPTOR_ETA5_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_INTERCEPTOR_ETA5 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_RV_Interceptor_ETA5.tga</Icon_Name>
+
+		<Max_Speed>5.6</Max_Speed>
+		<Min_Speed>3.8</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiBomber </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-55.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-35.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,40.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,-25.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,-15.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,30.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,55.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-55.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,45.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-45.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-65.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</Interceptor_ETA5_Files>

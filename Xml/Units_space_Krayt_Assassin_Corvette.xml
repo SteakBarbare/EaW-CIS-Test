@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<EVK_Assassin_CorvetteUnit_Data>
+
+	
+	
+	<SpaceUnit Name="EVK_Assassin_Corvette">
+		<Variant_Of_Existing_Type>Assassin_CorvetteORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVK_Assassin_Corvette.ALO</Space_Model_Name>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_TIE_Predator_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVF_TIE_Predator_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Death_Clone>Damage_Normal, EVK_Assassin_Corvette_Death_Clone</Death_Clone>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Assassin_CorvetteORG">
+		<Variant_Of_Existing_Type>CR_CV_Basic</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVF_ASSASSINCORVETTE</Text_ID>
+		<Encyclopedia_Good_Against> Quasar Corellian_Gunboat Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVF_ASSASSINCORVETTE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVF_TIE_PREDATOR TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CORVETTE </Encyclopedia_Unit_Class>
+		<Space_Model_Name>EVF_Assassin_Corvette.ALO</Space_Model_Name>
+		<Icon_Name>i_button_EVF_Assassin_Corvette.tga</Icon_Name>
+		<Scale_Factor>0.25</Scale_Factor>
+		
+		<Required_Special_Structures>Astilleros_NoIA4</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>Neutral</Affiliation>
+		
+		<!--<Custom_Hard_XExtent> 28.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 11.0 </Custom_Hard_YExtent>-->
+		
+		<Armor_Type> Armor_Acclamator </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Tactical_Health>100000000</Tactical_Health>  
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		
+		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<AI_Combat_Power>15</AI_Combat_Power>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		
+		<Starting_Spawned_Units_Tech_0>EVF_TIE_Predator_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVF_TIE_Predator_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+				
+		<HardPoints>
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_T_EVKAssasin_01,
+			HP_T_EVKAssasin_02,
+			HP_T_EVKAssasin_03,
+			HP_T_EVKAssasin_04,
+			HP_T_EVKAssasin_05,
+			HP_T_EVKAssasin_06
+		</HardPoints>
+		<Targeting_Priority_Set>Corvette</Targeting_Priority_Set>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Gunboat</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Tartan</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+				
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+
+		
+	</SpaceUnit>
+	
+	
+	<SpaceUnit Name="EVK_Assassin_Corvette_Death_Clone">
+		<Text_ID>TEXT_UNIT_ACCLAMATOR</Text_ID>
+		<Space_Model_Name>EVK_Assassin_Corvette_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+	
+</EVK_Assassin_CorvetteUnit_Data>

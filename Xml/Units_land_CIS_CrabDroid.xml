@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<CIS_CrabdroidUnit_Data>
+	
+	<GroundVehicle Name="CIS_Crabdroid">
+		<Variant_Of_Existing_Type>CIS_OctuparraORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CRABDROID</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Recon_Squad REP_LAAT Republic_AT_AP_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CRABDROID</Encyclopedia_Text>
+
+		<Land_Model_Name>CIS_CrabDroid.ALO</Land_Model_Name>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<Max_Speed> .65 </Max_Speed>
+		<Custom_Hard_XExtent> 30.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 30.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_ATST </Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+
+		<Land_FOW_Reveal_Range>380.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+
+		<Projectile_Types>Proj_T1B_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Fire>Unit_Crabdroid_Fire</SFXEvent_Fire>
+		<Icon_Name>I_BUTTON_CIS_CrabDroid.tga</Icon_Name>
+		<AI_Combat_Power>25</AI_Combat_Power>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>240</Recharge_Seconds>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 10.0</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Crabdroid_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_T1B_Red</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Crabdroid</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Assist_Attack_Crabdroid </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			 
+			<Maximum_Firepower_Attack_Ability Name="Crabdroid_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+			
+		</Abilities>
+	</GroundVehicle>
+	
+	
+	<GroundCompany Name="C_CIS_Crabdroid_Group">
+		<Variant_Of_Existing_Type>C_CIS_walk_DW_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CRABDROID</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Recon_Squad REP_LAAT Republic_AT_AP_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CRABDROID</Encyclopedia_Text>
+		<GUI_Row> 1 </GUI_Row>
+		<Icon_Name> I_BUTTON_CIS_CrabDroid.tga </Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>400</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		
+		<Tech_Level>0</Tech_Level>
+
+		<Company_Transport_Unit>Gtrans_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>CIS_Crabdroid, CIS_Crabdroid, CIS_Crabdroid</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</CIS_CrabdroidUnit_Data>

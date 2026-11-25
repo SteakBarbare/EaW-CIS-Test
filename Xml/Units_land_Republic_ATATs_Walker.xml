@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<Republic_ATATsUnit_Data>
+	<GroundVehicle Name="AT_ATs_Walker">
+		<Variant_Of_Existing_Type>AT_AT_WalkerORG</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 184, 10, 37, 255 </No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_AT_ATs_WALKER</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_V-Wing_airspeeder_squadronRebel_V-Wing_airspeeder_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATATs</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_WALKER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Rep_ATATs.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_atats.tga</Icon_Name>
+		<Scale_Factor>1.75</Scale_Factor>
+
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Blue_ATATsX</Projectile_Types>
+
+		<Hardpoints>
+				HP_Gr_Front_Blaster_Cannon_Blue_00, HP_Gr_Front_Blaster_Cannon_Blue_01
+		</Hardpoints>
+		
+		<Destruction_Survivors> 
+			Walker_Commander_Survivor, 1.0 
+			Walker_Pilot_Survivor, 1.0
+			Walker_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+
+		<Death_Clone>Damage_Cable_Attack, AT_ATs_Walker_Cable_Attack_Death_Clone</Death_Clone>
+		
+		<Vehicle_Thief_Inside_Clone>AT_ATs_Walker_Captured</Vehicle_Thief_Inside_Clone>
+		
+		<SFXEvent_Select>Unit_Select_Republic_ATTE</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Republic_ATTE</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_ATTE</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Republic_ATTE</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Republic_ATTE</SFXEvent_Guard>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Republic_ATTE </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Republic_ATTE </SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ATTE </Death_SFXEvent_Start_Die>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Blue_ATATsX</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Attack_Republic_ATTE </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Phase2_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Republic_ATTE</SFXEvent_GUI_Unit_Ability_Activated>
+				</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	
+	
+	
+	<GroundVehicle Name="AT_ATs_Walker_Captured">
+		<Variant_Of_Existing_Type>AT_ATs_Walker</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_chewbacca_atat.tga</Icon_Name>
+        <LandBehavior>ABILITY_COUNTDOWN, WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,TURRET,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,STUNNABLE,DAMAGE_TRACKING,SQUASH</LandBehavior>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="AT_ATs_Walker_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>AT_ATs_Walker</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+      <Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		<Presence_Range>200.0</Presence_Range>
+
+	</GroundVehicle>
+	<GroundVehicle Name="AT_ATs_Phase1_Walker">
+		<Variant_Of_Existing_Type>AT_ATs_Walker</Variant_Of_Existing_Type>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_AT_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Blue_ATATsX</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Attack_Republic_ATTE </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Phase1_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Republic_ATTE</SFXEvent_GUI_Unit_Ability_Activated>
+				</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_Heavy_Assault_Phase1_Company">
+		<Variant_Of_Existing_Type>Republic_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Company_Units>AT_ATs_Phase1_Walker</Company_Units>
+	</GroundCompany>
+	<GroundCompany Name="Republic_Heavy_Assault_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_ATs_WALKER</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+		<Required_Special_Structures>Republic_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Company_Units>AT_ATs_Walker</Company_Units>
+		<Icon_Name>i_button_Rep_atats.tga</Icon_Name>
+		<GUI_Model_Name>Rep_ATATs.ALO</GUI_Model_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>1600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATATs</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		
+	</GroundCompany>
+	
+</Republic_ATATsUnit_Data>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<Attack_CarrierUnit_Data>
+	<SpaceUnit Name="Attack_Carrier">
+		<Variant_Of_Existing_Type>Attack_CarrierORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Required_Planets>Fondor, FondorK</Required_Planets>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_Imperiales, AdvancedTech_6</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Hunter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Hunter_Squadron7, 23</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, Attack_Carrier_Death</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="Attack_CarrierORG">
+		<Variant_Of_Existing_Type>AcclamatorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IMP_ATTACK_CARRIER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_IMP_ATTACK_CARRIER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_HUNTER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Corellian_Corvette E_CR_CVM Rep_Marauder </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser R_Dreadnought_Up Y-Wing </Encyclopedia_Vulnerable_To>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_AttackCarrier.ALO</Space_Model_Name>
+		<Scale_Factor>0.125</Scale_Factor>
+
+		<Layer_Z_Adjust>10.0</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+
+		<Autoresolve_Health>18000</Autoresolve_Health>
+		<Shield_Points>18000</Shield_Points>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Shield_Refresh_Rate>21000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		
+		<Affiliation>Empire, GA</Affiliation>
+		
+		<Tech_Level>99</Tech_Level>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+	
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+
+		<Build_Cost_Credits>5200</Build_Cost_Credits>
+		<AI_Combat_Power>2040</AI_Combat_Power>
+		
+		<Tactical_Bribe_Cost>1300</Tactical_Bribe_Cost>
+
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+
+		<HardPoints>
+			HP_T_AttackCarrier_01,
+			HP_T_AttackCarrier_02,
+			HP_TurboMG_03,
+			HP_TurboMG_04,
+			HP_TurboMG_05,
+			HP_TurboMG_06,
+			HP_TurboMG_07,
+			HP_TurboMG_08,
+			HP_Flak_01, 
+			HP_Flak_02, 
+			HP_Flak_03, 
+			HP_Flak_04, 
+			HP_Flak_05,
+			HP_Flak_06, 
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Shield_GeneratorH_00,
+			HP_EnginesH_00,
+			HP_EspecialG_01,
+			HP_EspecialG_02
+	    </HardPoints>
+
+		<Icon_Name>I_BUTTON_ATTACK_CARRIER.TGA</Icon_Name>
+		<GUI_Model_Name>EV_AttackCarrier.ALO</GUI_Model_Name>
+
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	
+		
+		<Tactical_Build_Cost_Multiplayer>4500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Attack_Carrier_Death">
+		<Text_ID>IMPERIAL_CARRIER_ID</Text_ID>
+		<Space_Model_Name>EV_AttackCarrier_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Star_Destroyer_Death_SFX </Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.125</Scale_Factor>
+		<Layer_Z_Adjust>-10.0</Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> Frigate </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+	
+</Attack_CarrierUnit_Data>

@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<Battlecarrier_Data>
+
+	
+	
+	<SpaceUnit Name="BattleCarrier">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_BATTLECARRIER</Text_ID>
+
+		<Encyclopedia_Good_Against> Victory_Destroyer Star_Destroyer Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing TIE_Bomber B-Wing </Encyclopedia_Vulnerable_To>
+		<Icon_Name>I_BUTTON_HA_BATTLECARRIER.TGA</Icon_Name>
+		<GUI_Model_Name>NV_BattleDragon_Carrier.ALO</GUI_Model_Name>
+		<Space_Model_Name>NV_BattleDragon_Carrier.ALO</Space_Model_Name>
+		<Scale_Factor>0.3</Scale_Factor>
+		
+		<!--<Custom_Hard_XExtent> 108.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 54.0 </Custom_Hard_YExtent>-->
+
+		<Layer_Z_Adjust> 200 </Layer_Z_Adjust>
+		
+		<Political_Faction>Hapan, Underworld</Political_Faction>
+		<Tech_Level>99</Tech_Level>
+		<AI_Combat_Power>2655</AI_Combat_Power>
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+				
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+
+		<HardPoints>
+     		HP_T_Battledragon_01, 
+			HP_T_Battledragon_02, 
+			HP_T_Battledragon_03, 
+			HP_T_Battledragon_04, 
+			HP_T_Battledragon_05, 
+			HP_T_Battledragon_06, 
+			HP_T_Battledragon_07, 
+			HP_T_Battledragon_08, 
+			HP_Shield_Generator_00, 
+			HP_Shield_Generator_01, 
+			HP_EnginesH_00,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02
+    	</HardPoints>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HA_BATTLECARRIER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Rep_Cruiser</SFXEvent_Build_Complete>
+		
+		<SFXEvent_Select>Unit_Select_Rep_Cruiser</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Rep_Cruiser</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Rep_Cruiser</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Rep_Cruiser</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Rep_Cruiser</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Stop_Rep_Cruiser</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Attack_Rep_Cruiser</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Attack_Rep_Cruiser </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Attack_Rep_Cruiser </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Rep_Cruiser </SFXEvent_Attack_Hardpoint>
+
+		<Tactical_Build_Cost_Multiplayer>4500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Lua_Script>Sundered_HeartPW</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Rep_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADSENSOR</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADSENSOR_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>40</Recharge_Seconds>
+			    <Spawned_Object_Type>R_MassPulseMine_Spawned</Spawned_Object_Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Effective_Radius> 100.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> Unit_Guard_Rep_Cruiser </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Rep_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+
+		<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+
+		<Population_Value>2</Population_Value>
+		<!--<Space_Override_Population_Value>1</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="BattleCarrier_Death_Clone">
+		<Text_ID> TEXT_UNIT_HOME_ONE </Text_ID>
+		<Space_Model_Name>NV_BattleDragon_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor> 0.3 </Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Hapan_BattleCarrier">
+		<Variant_Of_Existing_Type>BattleCarrier</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HA_BATTLECARRIER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_WAVES_X3 TEXT_UNIT_MIYTILBOMBER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Affiliation>Hapan, Underworld, Rebel, GAC</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, BattleCarrier_Death_Clone</Death_Clone>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>MIYTILFIGHTER_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>MiytilBomber_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>MIYTILFIGHTER_Squadron7, 10</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>MiytilBomber_Squadron7, 10</Reserve_Spawned_Units_Tech_0>
+	</SpaceUnit>
+	
+</Battlecarrier_Data>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<space_structure_SmallGolanIIUnit_Data>
+	
+	<UniqueUnit Name="SmallGolanII">
+		<Variant_Of_Existing_Type>SmallGolanIeORG</Variant_Of_Existing_Type>
+	
+		<Space_Model_Name>NV_SmallGolanII.alo</Space_Model_Name>
+		<Death_Clone>Damage_Normal, SmallGolanII_Death_Clone</Death_Clone>
+		<Text_ID>TEXT_UNIT_SGOLANII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEFSTATION TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_NV_SmallGolanII.tga</Icon_Name>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Fire_Inaccuracy_Distance> Fighter, 50.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 50.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 2.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 50.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 1.0 </Fire_Inaccuracy_Distance>
+		
+		<Projectile_Types>Proj_SmallGolanII_Gun</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>9</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>6</Projectile_Fire_Recharge_Seconds>
+		
+		<Fire_SFXEvent>Unit_MPTL_Tank_Fire</Fire_SFXEvent>
+		
+		<HardPoints>
+			HP_TurboMO_01,
+			HP_TurboMO_02,
+			HP_TurboMO_03,
+			HP_TurboMO_04,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Shield_GeneratorH_00
+		</HardPoints>
+	
+	</UniqueUnit>
+
+	<UniqueUnit Name="SmallGolanII_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>NV_SmallGolanII.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>NV_SmallGolanII.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.225</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</UniqueUnit>
+	
+</space_structure_SmallGolanIIUnit_Data>

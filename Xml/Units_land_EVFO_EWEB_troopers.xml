@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<EVFO_EWEB_troopersUnit_Data>
+
+	<GroundInfantry Name="EVFO_EWEB_troopers">
+		<Variant_Of_Existing_Type>EWEB_troopers</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_UNIT_EWEB_TROOPER</Text_ID>
+
+		<Land_Model_Name>EVFO_EWeb_Trooper.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>EVFO_EWeb_Trooper.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVFO_EWeb_Trooper.ALO,
+			Urban, 				EVFO_EWeb_Trooper.ALO,
+			Arctic, 			EVFO_EWeb_Trooper.ALO,
+			Volcanic, 			EVFO_EWeb_Trooper.ALO,
+			Desert, 			EVFO_EWeb_Trooper.ALO,
+			Forest, 			EVFO_EWeb_Trooper.ALO,
+			Swamp, 				EVFO_EWeb_Trooper.ALO
+		</Land_Terrain_Model_Mapping>
+		<Icon_Name>i_button_EVFO_Eweb_trooper.tga</Icon_Name>
+		
+		<Affiliation>Empire, EVFO</Affiliation>
+	
+		
+	</GroundInfantry>
+	<GroundCompany Name="EVFO_EWEB_Squad">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EWEB_TROOPER</Text_ID>
+				
+		<Affiliation>Empire, EVFO</Affiliation>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>120</Build_Cost_Credits>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+		
+		<Required_Special_Structures>EVFO_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>EVFO_Troop_Transport_L</Company_Transport_Unit>
+		<Company_Units>
+		 EVFO_EWEB_troopers, 
+		 EVFO_EWEB_troopers, 
+		 EVFO_EWEB_troopers, 
+		 EVFO_EWEB_troopers
+		</Company_Units>
+		
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		
+		<Icon_Name>i_button_EVFO_Eweb_trooper.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>120</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EVFO_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</EVFO_EWEB_troopersUnit_Data>

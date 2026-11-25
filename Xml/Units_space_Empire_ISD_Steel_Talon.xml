@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<Command_Steel_TalonUnit_Data>
+				
+	
+	<SpaceUnit Name="Command_Steel_Talon">
+		<Variant_Of_Existing_Type>Star_Destroyer</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		
+		<Text_ID>TEXT_UNIT_SD_STEEL_TALON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STEEL_TALON TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Kedalbe_Battleship Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> B-Wing MC30_Frigate Skipray_Blastboat </Encyclopedia_Vulnerable_To>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_ISD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>I_BUTTON_EV_ISD_Motti.tga</Icon_Name>
+		
+		<AI_Combat_Power>3300</AI_Combat_Power>
+		
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		
+		<SFXEvent_Select>Unit_Select_Tyber_Zann_Space</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Tyber_Zann_Space</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tyber_Zann</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Tyber_Zann_Space</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Tyber_Zann</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Tyber_Zann </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Tyber_Zann </SFXEvent_Health_Critical_Warning>
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Tyber_Zann_Space </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Tyber_Zann_Space </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target>	UHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> UHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Tyber_Zann_Space </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Tyber_Zann_Space </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Tyber_Zann_Space </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Tyber_Zann_Space </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Tyber_Zann_Space </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Tyber_Zann_Space </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Tyber_Zann_Space </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Tyber_Zann_Space </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Tyber_Zann_Space </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Tyber_Zann</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Tyber_Zann</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tyber_Zann</SFXEvent_Fleet_Move>
+		
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<HardPoints> 
+			HP_ISD_Super_IonS_00,
+			HP_ISD_Super_IonS_01,
+			HP_Star_Destroyer_Weapon_FL,
+			HP_Star_Destroyer_Weapon_FR,
+			HP_T_ISD1_SideN_03,
+			HP_T_ISD1_SideN_04, 		
+			HP_Star_Destroyer_Weapon_BL,
+			HP_Star_Destroyer_Weapon_BR,
+			HP_T_ISD1_SideN_07,
+			HP_T_ISD1_SideN_08,
+			HP_T_ISD1_SideN_09,
+			HP_T_ISD1_SideN_10,
+			HP_T_ISD1_SideN_11,
+			HP_T_ISD1_SideN_12,
+			HP_Star_Destroyer_Weapon_ML,
+			HP_Star_Destroyer_Weapon_MR,
+			HP_T_ISD_Side_15,
+			HP_T_ISD_Side_16,
+			HP_T_ISD_Side_17,
+			HP_T_ISD_Side_18,
+			HP_T_ISD_Side_19,
+			HP_T_ISD1_SideN_20,
+			HP_T_ISD1_SideN_21,
+			HP_T_ISD1_SideN_22,
+			HP_T_ISD1_SideN_23,
+			HP_T_ISD1_SideN_24,
+			HP_T_ISD1_SideN_25,
+			HP_T_ISD1_SideN_26,
+			HP_T_ISD1_SideN_27,
+			HP_T_ISD1_SideN_28,
+			HP_T_ISD1_SideN_29,
+			HP_T_ISD1_SideN_30,
+			HP_T_ISD1_SideN_31,
+			HP_T_ISD1_SideN_32,
+			HP_T_ISD1_SideN_33,
+			HP_T_ISD1_SideN_34,
+			HP_T_ISD1_SideN_35,
+			HP_Star_Destroyer_Fighter_Bay,
+			HP_Fighter_Bay_01,
+			HP_Star_Destroyer_Shield_Generator,
+			HP_EV_SH_ISD1_01,
+			HP_Star_Destroyer_Tractor_Beam,
+			HP_Engines_00,
+			HP_Engines_01,
+			HP_Engines_02,
+			HP_T_ISD1_01,
+			HP_T_ISD1_02,
+			HP_T_ISD1_03,
+			HP_T_ISD1_04,
+			HP_T_ISD1_05,
+			HP_T_ISD1_06,
+			HP_T_ISD1_07,
+			HP_T_ISD1_08,
+			HP_T_ISDI_09,
+			HP_T_ISDI_10,
+			HP_T_ISDI_11,
+			HP_T_ISDI_12,
+			HP_T_ISDI_13,
+			HP_T_ISDI_14,
+			HP_T_ISDI_15,
+			HP_T_ISDI_16,
+			HP_T_ISDI_17,
+			HP_T_ISDI_18,
+			HP_T_ISDI_19,
+			HP_T_ISDI_20,
+			HP_T_ISDI_21,
+			HP_T_ISDI_22,
+			HP_T_ISDI_23,
+			HP_T_ISDI_24,
+			HP_T_ISDI_25,
+			HP_T_ISDI_26
+		</HardPoints>
+		
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		 <Unit_Abilities_Data SubObjectList="Yes">
+	     	  
+			  <Unit_Ability>
+					<Type>TRACTOR_BEAM</Type>
+					<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+					<GUI_Activated_Ability_Name> SD_Tractor_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+					<Recharge_Seconds>25</Recharge_Seconds>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+					<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+					<Supports_Autofire>True</Supports_Autofire>
+			  </Unit_Ability>
+			  <Unit_Ability>
+					<Type>HARMONIC_BOMB</Type>
+					<Recharge_Seconds>20</Recharge_Seconds>
+					<Spawned_Object_Type>Motti_S_Marker</Spawned_Object_Type>
+					<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+					<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+	   </Unit_Abilities_Data>
+	 
+		
+		<CategoryMask> SpaceHero </CategoryMask>
+
+		<Landing_Transport_Variant>Shuttle_Tyderium_Landing</Landing_Transport_Variant>
+
+		<Tactical_Build_Cost_Multiplayer>5850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>28</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+	</SpaceUnit>			
+</Command_Steel_TalonUnit_Data>

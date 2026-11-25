@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE KESSEL ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Kessel_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Kessel_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_KESSEL</Reward_Param1>
+				<Prereq>Batalla_de_Kessel_Space</Prereq>
+			</Event>
+<!--DIALOGO DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_TAJBATTLEOFKESSELE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Kessel_Space</Prereq>
+    </Event>
+	
+	<Event Name="Anular_Retirada_Pirata">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Pirates</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Kessel_Space</Prereq>
+	</Event>	
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Kessel_Space</Prereq>
+	</Event>	
+	
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	<Event Name="Destruir_Pirate_CARRACK_CRUISER">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>R_Carrack</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_Pirate_MODIFIED_CORELLIAN_CORVETTE">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>R_CR_CVM</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_Pirate_IMPERIAL_LANCER_FRIGATE">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Lancer</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+			
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_KESSEL</Reward_Param1>
+		<Prereq>Destruir_Pirate_CARRACK_CRUISER Destruir_Pirate_MODIFIED_CORELLIAN_CORVETTE Destruir_Pirate_IMPERIAL_LANCER_FRIGATE</Prereq>
+	</Event>
+	
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+				<Event_Param2>Victoria_Imperial</Event_Param2>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>EMPIRE</Reward_Param1>
+				<Prereq>Dialogo_Inicio_01b</Prereq>
+			</Event>
+	
+	
+	<Event Name="Proteger_COMMAND_Gorgona">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>GORGONA_THE_MAW</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_KESSEL</Reward_Param1>
+		<Prereq>Proteger_COMMAND_Gorgona</Prereq>
+	</Event>
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+				<Event_Param2>Derrota_por_Victoria_Rebelde</Event_Param2>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Dialogo_Inicio_01b</Prereq>
+			</Event>
+</Story>

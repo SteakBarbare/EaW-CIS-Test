@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<BS_Geo_DreadUnit_Data>
+
+	<SpaceUnit Name="BS_Geo_Dread">
+		<Variant_Of_Existing_Type>CIS_Geo_DreadORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>UV_Geonosian_Dreadnought.ALO</Space_Model_Name>
+		<Icon_Name>i_button_UV_Geo_Dread.tga</Icon_Name>
+		<Death_Clone>Damage_Normal, BS_Geo_Dread_Death_Clone</Death_Clone>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Super_Astilleros_SolNegro</Required_Special_Structures>
+
+		<Required_Planets>
+				Geonosis
+		</Required_Planets>
+		
+		<AI_Combat_Power>22250</AI_Combat_Power>
+					
+		<HardPoints> 
+			HP_EnginesH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_BSDRIVER_01,
+			HP_BSDRIVER_02,
+			HP_BSDRIVER_03,
+			HP_BSDRIVER_04,
+			HP_BSDRIVERH_01,
+			HP_BSDRIVERH_02,
+			HP_BSDRIVERH_03,
+			HP_BSDRIVERH_04,
+			HP_BSDRIVERH_05,
+			HP_BSDRIVERH_06,
+			HP_BSDRIVERH_07,
+			HP_BSDRIVERH_08,
+			HP_BSDRIVERH_09,
+			HP_BSDRIVERH_10,
+			HP_BSDRIVERH_11,
+			HP_BSDRIVERH_12,
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_LaserRXC_04,
+			HP_LaserRXC_05,
+			HP_LaserRXC_06,
+			HP_LaserRXC_07
+		</HardPoints>
+		
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BS_Geo_Dread_Death_Clone">
+		<Text_ID> TEXT_UNIT_CIS_GEONOSIAN_DREADNOUGHT </Text_ID>
+		<Space_Model_Name>UV_Geonosian_Dreadnought_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_5000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Scale_Factor> 1.5 </Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</BS_Geo_DreadUnit_Data>

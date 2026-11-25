@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<Roguespeeder_Hero_Files>
+	<GroundVehicle Name="Roguespeeder_1">
+		<Variant_Of_Existing_Type>Snowspeeder</Variant_Of_Existing_Type>
+		<Tactical_Health>570</Tactical_Health>
+		<Projectile_Types>Proj_Ground_Turbolaser_Red_T</Projectile_Types>
+
+		<Targeting_Fire_Inaccuracy>Infantry, 75.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Vehicle, 1.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Air, 2.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Structure, 10.0</Targeting_Fire_Inaccuracy>
+		
+		<Fire_Category_Restrictions> Infantry </Fire_Category_Restrictions>	
+
+		<SFXEvent_Select>Unit_Select_Wedge_Rogue</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Wedge_Rogue</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Wedge_Rogue</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Wedge_Rogue</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Wedge_Rogue</SFXEvent_Guard>
+		<SFXEvent_Assist_Move>Unit_Assist_Move_Wedge_Rogue </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Wedge_Rogue</SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Wedge_Rogue </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Wedge_Rogue </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Wedge_Rogue </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Wedge_Rogue </SFXEvent_Enemy_Health_Critical_Warning>
+		
+	  <Lua_Script>ObjectScript_Auto_Hunt_AI_Land</Lua_Script>	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.0</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Wedge_Rogue</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_RogueSpeeder_STRIKE.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		
+			<Unit_Ability>
+				<Type>CABLE_ATTACK</Type>
+				<Recharge_Seconds>120</Recharge_Seconds>
+				<GUI_Activated_Ability_Name>Cable</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_ATAT_Assault_Speeder </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+	</GroundVehicle>
+	<!-- Rogue Two: Zev Senesca -->
+	<GroundVehicle Name="Roguespeeder_2">
+		<Variant_Of_Existing_Type>Roguespeeder_1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROGUE_02</Text_ID>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Zev </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Zev </SFXEvent_Enemy_Health_Low_Warning>
+	</GroundVehicle>
+
+
+	<!-- Rogue Four: Derek Klivian -->
+	<GroundVehicle Name="Roguespeeder_4">
+		<Variant_Of_Existing_Type>Roguespeeder_1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROGUE_04</Text_ID>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Derek_Klivian </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Derek_Klivian </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Derek_Klivian </SFXEvent_Enemy_Health_Critical_Warning>
+	</GroundVehicle>
+
+
+	<!-- Rogue Seven: Kasan Moor -->
+	<GroundVehicle Name="Roguespeeder_7">
+		<Variant_Of_Existing_Type>Roguespeeder_1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROGUE_07</Text_ID>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Kasan </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Kasan </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Kasan </SFXEvent_Enemy_Health_Low_Warning>
+	</GroundVehicle>
+
+
+	<!-- Rogue Ten: Tarrub Datch -->
+	<GroundVehicle Name="Roguespeeder_10">
+		<Variant_Of_Existing_Type>Roguespeeder_1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROGUE_10</Text_ID>
+	</GroundVehicle>
+
+
+	<!-- Rogue Eleven: Tenk Lenso -->
+	<GroundVehicle Name="Roguespeeder_11">
+		<Variant_Of_Existing_Type>Roguespeeder_1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROGUE_11</Text_ID>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Rogue_Speeder_Wing">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_ROGUE_SPEEDER_WING</Text_ID>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Transport_Unit>RV_Tachyon_Airspeeder_Transport</Company_Transport_Unit>
+		<Company_Units>Roguespeeder_1, Roguespeeder_2, Roguespeeder_4, Roguespeeder_7, Roguespeeder_10, Roguespeeder_11</Company_Units>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.0</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Wedge_Rogue</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_RogueSpeeder_STRIKE.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>CABLE_ATTACK</Type>
+				<Recharge_Seconds>120</Recharge_Seconds>
+				<GUI_Activated_Ability_Name>Cable</GUI_Activated_Ability_Name> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_ROGUESPEEDER</Encyclopedia_Text>
+	</GroundCompany>
+</Roguespeeder_Hero_Files>

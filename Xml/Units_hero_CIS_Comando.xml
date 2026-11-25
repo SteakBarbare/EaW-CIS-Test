@@ -1,0 +1,321 @@
+<?xml version="1.0"?>
+
+
+<CIS_ComandoUnit_Data>
+	
+	<GenericHeroUnit Name="CIS_Comando_Squad">
+		<Text_ID>TEXT_HERO_CIS_COMANDO</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_COMANDO </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>	
+		<Encyclopedia_Good_Against> CloneTrooper Republic_Stormtrooper Rep_Hovermoto_Phase1 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Jedi REP_Wookie_Soldier Rep_Commando </Encyclopedia_Vulnerable_To>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+
+		<Land_Model_Name>CIS_BXComando.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_COMANDO.TGA</Icon_Name>
+		
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Is_Sprite>No</Is_Sprite>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Size_Value>75</Size_Value>
+
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON,REVEAL,HIDE_WHEN_FOGGED</LandBehavior>
+		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<CanCellStack>yes</CanCellStack>
+		<Mass>1.0</Mass>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		
+		<Movement_Animation_Speed> 0.65 </Movement_Animation_Speed>
+		<Walk_Animation_Speed> .366 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
+		<Max_Speed>0.8</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> 0.3 </FormationSpacing>
+		<OverrideAcceleration> .07 </OverrideAcceleration>
+		<OverrideDeceleration> .07 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+	
+		<Is_Sprite>No</Is_Sprite>
+		<Shield_Points>0</Shield_Points>
+		<Autoresolve_Health>30</Autoresolve_Health>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>0</Energy_Capacity>
+		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Victory_Relevant>yes</Victory_Relevant>
+
+		<Damage>4</Damage>
+
+		<Land_FOW_Reveal_Range>150.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types> Proj_Infiltrator_Blaster </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Select>Unit_Select_Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Select_Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Select_Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Select_Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Select_Droid</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Defeat_B1Droid</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Select_Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Select_Droid </SFXEvent_Assist_Attack>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<CategoryMask> LandHero </CategoryMask>
+		<Ranking_In_Category> 21 </Ranking_In_Category>
+		<MovementClass> Infantry </MovementClass>
+
+		<OccupationStyle>1x1</OccupationStyle>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>5.0, 5.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<No_Reflection_Below_Detail_Level>2</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>2</No_Refraction_Below_Detail_Level>
+		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Create_Team>No</Create_Team>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<AI_Combat_Power>50</AI_Combat_Power>
+
+		<Neutralization_Cost>100.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>PLACE_REMOTE_BOMB</Type>
+				<Recharge_Seconds>18.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name>Saboteur_Remote_Bomb_Attack</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Thermal_Sabateur </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>DETONATE_REMOTE_BOMB</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Galactic_Stealth_Ability Name="CIS_Comando_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<Galactic_Sabotage_Ability Name="CIS_Comando_Galactic_Sabotage">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>Yes</Causes_Despawn>
+				<Can_Destroy_Special_Structure>False</Can_Destroy_Special_Structure>
+				<Sabotage_Cost_Increase_Factor> 2.0 </Sabotage_Cost_Increase_Factor>
+			</Galactic_Sabotage_Ability>
+
+			<System_Spy_Ability Name="CIS_Comando_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+			</System_Spy_Ability>
+
+			<Remote_Bomb_Ability Name="CIS_Comando_Remote_Bomb_Attack"> 
+				<Activation_Style> User_Input </Activation_Style> 
+				<Activation_Min_Range>5.0</Activation_Min_Range>
+				<Activation_Max_Range>130.0</Activation_Max_Range>
+				<Bomb_Type>Proj_Remote_Bomb</Bomb_Type>
+				<Toss_Anim>BOMBTOSS</Toss_Anim>
+				<Spawn_Frame>12.0</Spawn_Frame>
+				<Spawn_Bone>MuzzleB_00</Spawn_Bone>
+			</Remote_Bomb_Ability>
+
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="CIS_Comando_Team">
+		<Text_ID>TEXT_HERO_CIS_COMANDO</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_COMANDO </Encyclopedia_Text>
+		<Encyclopedia_Good_Against> CloneTrooper Republic_Stormtrooper Rep_Hovermoto_Phase1 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Jedi REP_Wookie_Soldier Rep_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>	
+		<Icon_Name>I_BUTTON_CIS_COMANDO.TGA</Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>80</Damage>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>1750</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>CIS_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Required_Planets>Geonosis, Hypori</Required_Planets>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>CIS_Attack_Shuttle</Company_Transport_Unit>
+		<Company_Units> CIS_Comando_Squad, CIS_Comando_Squad, CIS_Comando_Squad, CIS_Comando_Squad, CIS_Comando_Squad</Company_Units>
+		<Is_Homogeneous>No</Is_Homogeneous>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Formation_Priority>2</Formation_Priority>
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Available_In_Skirmish>yes</Available_In_Skirmish>
+		<Can_Be_Only_One>true</Can_Be_Only_One>
+
+			
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_KUS_Vulture</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_KUS_Vulture</SFXEvent_Fleet_Move>
+		
+		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
+		<CategoryMask> LandHero </CategoryMask>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Ranking_In_Category> 3 </Ranking_In_Category>
+		<Population_Value>1</Population_Value>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>PLACE_REMOTE_BOMB</Type>
+				<Recharge_Seconds>18.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name>Saboteur_Remote_Bomb_Attack</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Thermal_Sabateur </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>DETONATE_REMOTE_BOMB</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Galactic_Stealth_Ability Name="Saboteur_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<Galactic_Sabotage_Ability Name="Saboteur_Galactic_Sabotage">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>Yes</Causes_Despawn>
+				<Can_Destroy_Special_Structure>False</Can_Destroy_Special_Structure>
+				<Sabotage_Cost_Increase_Factor> 2.0 </Sabotage_Cost_Increase_Factor>
+			</Galactic_Sabotage_Ability>
+
+			<System_Spy_Ability Name="Saboteur_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+			</System_Spy_Ability>
+
+			<Remote_Bomb_Ability Name="Saboteur_Remote_Bomb_Attack"> 
+				<Activation_Style> User_Input </Activation_Style> 
+				<Activation_Min_Range>5.0</Activation_Min_Range>
+				<Activation_Max_Range>130.0</Activation_Max_Range>
+				<Bomb_Type>Proj_Remote_Bomb</Bomb_Type>
+				<Toss_Anim>BOMBTOSS</Toss_Anim>
+				<Spawn_Frame>12.0</Spawn_Frame>
+				<Spawn_Bone>MuzzleB_00</Spawn_Bone>
+			</Remote_Bomb_Ability>
+
+		</Abilities>
+	</HeroCompany>
+	<HeroCompany Name="CIS_Comando_Space_MP">
+		<Variant_Of_Existing_Type>CIS_Comando_Team</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Heroes>No</Build_Tab_Heroes>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_COMMANDO </Encyclopedia_Unit_Class>
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>38</Tactical_Build_Time_Seconds>
+		<Company_Transport_Unit>CIS_Attack_Shuttle_MP</Company_Transport_Unit>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+   	    <Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+	</HeroCompany>
+		
+	<HeroCompany Name="CIS_Comando_Land_MP">
+		<Variant_Of_Existing_Type>CIS_Comando_Team</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Heroes>No</Build_Tab_Heroes>
+		<Tactical_Build_Cost_Multiplayer>1750</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	<TransportUnit Name="CIS_Attack_Shuttle_Landing">
+		<Variant_Of_Existing_Type>CIS_Attack_Shuttle</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>6.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</TransportUnit>
+
+	
+</CIS_ComandoUnit_Data>

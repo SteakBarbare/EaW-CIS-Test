@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE SARAPIN ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Sarapin_land">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Sarapin_land_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_SARAPIN_E</Reward_Param1>
+				<Prereq>Batalla_de_Sarapin_land</Prereq>
+			</Event>
+			
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Sarapin_land</Prereq>
+	</Event>	
+	
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_LAND_HISTORY_BATTLEOFSARAPINE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Sarapin_land</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	<Event Name="Destruir_SNOWSPEEDER">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>SNOWSPEEDER</Event_Param1>
+		<Event_Param3>12</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Destruir_MPTL">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>MPTL</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_EVENTOS_TACTICOS_T1B_TANK_WD">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>EVENTOS_TACTICOS_T1B_TANK_WD</Event_Param1>
+		<Event_Param3>12</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Destruir_T2B_TANK">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>T2B_TANK</Event_Param1>
+		<Event_Param3>12</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Destruir_REBEL_INFANTRY_SQUAD">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>REBEL_INFANTRY_SQUAD</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Destruir_REBEL_TANK_BUSTER_SQUAD">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>REBEL_TANK_BUSTER_SQUAD</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Destruir_REBEL_ASSAULT_SQUAD">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>REBEL_ASSAULT_SQUAD</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="Destruir_MPTL_SPOTTER">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>MPTL_SPOTTER</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	
+	
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_SARAPIN_E</Reward_Param1>
+		<Prereq>Destruir_SNOWSPEEDER Destruir_MPTL Destruir_EVENTOS_TACTICOS_T1B_TANK_WD Destruir_T2B_TANK Destruir_REBEL_INFANTRY_SQUAD Destruir_REBEL_TANK_BUSTER_SQUAD Destruir_REBEL_ASSAULT_SQUAD Destruir_MPTL_SPOTTER</Prereq>
+	</Event>
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empìre</Reward_Param1>
+				<Prereq>Objetivos_Completados</Prereq>
+			</Event>
+	
+	<Event Name="Proteger_VEERS_AT_AT_WALKER">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VEERS_AT_AT_WALKER</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+		
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_SARAPIN_E</Reward_Param1>
+		<Prereq>Proteger_VEERS_AT_AT_WALKER</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Objetivos_InCompletados1</Prereq>
+			</Event>
+			
+			
+</Story>

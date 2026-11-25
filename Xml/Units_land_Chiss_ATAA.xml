@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Ch_AT_AA_WalkerUnit_Data>
+	<GroundVehicle Name="Ch_AT_AA_Walker">
+		<Variant_Of_Existing_Type>AT_AA_WalkerORG</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_AT_AA.ALO</Land_Model_Name>
+		<Affiliation>Pirates, Empire, Chiss</Affiliation>
+		<Armor_Type> Armor_ATAT </Armor_Type>
+		<Tactical_Health>500</Tactical_Health>
+		<Projectile_Types>Proj_Chiss_ATSAP_AA_Turret</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		
+		<Vehicle_Thief_Inside_Clone>Ch_AT_AA_Walker_Captured</Vehicle_Thief_Inside_Clone>
+
+	</GroundVehicle>	
+	<GroundVehicle Name="Ch_AT_AA_Walker_Captured">
+		<Variant_Of_Existing_Type>Ch_AT_AA_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Ch_AT_AA_Walker_Company">
+		<Variant_Of_Existing_Type>ATAACompanyORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_ANTI_AIRCRAFT</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder Y-wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATAA TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>Ch_AT_AA_Walker, Ch_AT_AA_Walker, Ch_AT_AA_Walker</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</Ch_AT_AA_WalkerUnit_Data>

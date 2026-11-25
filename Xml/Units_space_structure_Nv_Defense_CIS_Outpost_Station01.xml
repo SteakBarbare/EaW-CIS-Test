@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<NV_CIS_Outpost_Station_1Unit_Data>
+
+	<SpecialStructure Name="NV_CIS_Outpost_Station_1">
+		<Variant_Of_Existing_Type>NV_CIS_Outpost_Station_1ORG</Variant_Of_Existing_Type>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Reserve_Spawned_Units_Tech_0>
+		<!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>CIS_Tridroid_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Tridroid_Squadron6, 1</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="NV_BS_Outpost_Station_1">
+		<Variant_Of_Existing_Type>NV_CIS_Outpost_Station_1ORG</Variant_Of_Existing_Type>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Starting_Spawned_Units_Tech_0>Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Vulture_Squadron7, 1</Reserve_Spawned_Units_Tech_0>
+		<!-- -1 == no limit -->
+		<Starting_Spawned_Units_Tech_0>TridroidU_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TridroidU_Squadron6, 1</Reserve_Spawned_Units_Tech_0>
+		
+		<HardPoints>
+			HP_T_BSLucrehulk_01,
+			HP_T_BSLucrehulk_02,
+			HP_T_BSLucrehulk_03,
+			HP_T_BSLucrehulk_04,
+			HP_T_BSLucrehulk_05,
+			HP_T_BSLucrehulk_06,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_LaserRXC_04,
+			HP_LaserRXC_05,
+			HP_LaserRXC_06
+		</HardPoints>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="NV_CIS_Outpost_Station_1ORG">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_OUTPOST_STATION1</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION1 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD </Encyclopedia_Text>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>CIS_Outpost_Station_1.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>-400.0</Layer_Z_Adjust>
+		<Affiliation>CIS</Affiliation>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+
+		<Spawned_Squadron_Location_Flyout_Distances>180.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_T_CISLucrehulk_01,
+			HP_T_CISLucrehulk_02,
+			HP_T_CISLucrehulk_03,
+			HP_T_CISLucrehulk_04,
+			HP_T_CISLucrehulk_05,
+			HP_T_CISLucrehulk_06,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_LaserRXC_04,
+			HP_LaserRXC_05,
+			HP_LaserRXC_06
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_NV_CIS_Outpost_Station_1.TGA</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, NV_CIS_Outpost_Station_1_Death_Clone</Death_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</SpecialStructure>
+	<SpecialStructure Name="NV_CIS_Outpost_Station_1_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_2</Text_ID>
+		<Space_Model_Name>CIS_Outpost_Station_1_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</NV_CIS_Outpost_Station_1Unit_Data>

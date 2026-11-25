@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<Espo_Plex_TrooperUnit_Data>
+
+	<GroundInfantry Name="Espo_Plex_Trooper">
+		<Variant_Of_Existing_Type>Plex_SoldierORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CO_ESPO_PLEX_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank Canderous_Assault_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid Rebel_Trooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPO_PLEX_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Co_Espo_Plex_Trooper.ALO</Land_Model_Name>
+
+		<Icon_Name>i_button_Co_Espo_Plex_Trooper.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Tactical_Health>100</Tactical_Health>
+
+		<Projectile_Types>Proj_Plex_Missile</Projectile_Types>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>
+		<AI_Combat_Power>20</AI_Combat_Power>
+
+		<Death_Clone>Damage_Force_Whirlwind, Espo_Plex_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Espo_Plex_Trooper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Espo_Plex_Trooper_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Espo_Plex_Trooper_Remote_Bomb_Death_Clone</Death_Clone>
+	</GroundInfantry>
+
+	<!-- Version of above Infantry who has been converted to enemy by Force Corruption ability.                                            -->
+	<!-- This object type can be commented out or deleted if the base type is never effected by Force Corruption enemy conversion ability. -->
+	<!-- IMPORTANT: For now, only SFXEvent should be changed due to the on-the-fly type pointer change. If more is desired to be changed   -->
+	<!-- there could be serious ramifications, so please consult with Programming team.                                                    -->
+	<GroundInfantry Name="Espo_Plex_Trooper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Espo_Plex_Trooper </Variant_Of_Existing_Type>
+		<SFXEvent_Select> Unit_Select_Rebel_Soldier_Converted </SFXEvent_Select>						 
+		<SFXEvent_Move> Unit_Move_Rebel_Soldier_Converted </SFXEvent_Move>                      	
+		<SFXEvent_Attack> Unit_Attack_Rebel_Soldier_Converted </SFXEvent_Attack>                 
+		<SFXEvent_Guard> Unit_Guard_Rebel_Soldier_Converted </SFXEvent_Guard>                   	  
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Soldier_Converted </SFXEvent_Assist_Move>			  
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Rebel_Soldier_Converted </SFXEvent_Assist_Attack>  	
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Espo_Plex_Trooper_NonVictroy">
+		<Variant_Of_Existing_Type> Espo_Plex_Trooper </Variant_Of_Existing_Type>
+		<Victory_Relevant>no</Victory_Relevant>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Espo_Plex_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Plex_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Espo_Plex_Trooper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Plex_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Espo_Plex_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Plex_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Espo_Plex_Trooper_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Plex_Trooper</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>	
+	<GroundInfantry Name="Squad_Espo_Plex_Trooper">
+		<Variant_Of_Existing_Type>Espo_Plex_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, GARRISON_UNIT, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> 1.4 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+		<!-- When this unit is converted by the "convert to enemy" special ability (Force Corruption), this is what his type pointer changes to -->
+		<Conversion_Ability_Changes_To_Enemy> Squad_Espo_Plex_Trooper_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>		  
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Espo_Plex_Trooper_Soldier_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Squad_Espo_Plex_Trooper </Variant_Of_Existing_Type>
+		<SFXEvent_Select> Unit_Select_Rebel_Soldier_Converted </SFXEvent_Select>             
+		<SFXEvent_Move> Unit_Move_Rebel_Soldier_Converted </SFXEvent_Move>                      
+		<SFXEvent_Attack> Unit_Attack_Rebel_Soldier_Converted </SFXEvent_Attack>                 
+		<SFXEvent_Guard> Unit_Guard_Rebel_Soldier_Converted </SFXEvent_Guard>                   
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Soldier_Converted </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Rebel_Soldier_Converted </SFXEvent_Assist_Attack>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Espo_Plex_Trooper_B">
+		<Variant_Of_Existing_Type>Squad_Espo_Plex_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Corporate_Espo_Plex_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Corporate_Espo_Plex_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>Corporate_Espo_Plex_Trooper_Company</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Espo_Plex_Trooper, Squad_Espo_Plex_Trooper, Squad_Espo_Plex_Trooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Espo_Plex_Trooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Corporate_Espo_Plex_Trooper_Company">
+		<Variant_Of_Existing_Type>X10_ground_patrol_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CO_ESPO_PLEX_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank Canderous_Assault_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid Rebel_Trooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPO_PLEX_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Corporate_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		
+		<Company_Units> Squad_Espo_Plex_Trooper_B, Squad_Espo_Plex_Trooper, Squad_Espo_Plex_Trooper </Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Espo_Plex_Trooper_Team </Create_Team_Type>
+		<Icon_Name>i_button_Co_Espo_Plex_Trooper.tga</Icon_Name>
+		<GUI_Model_Name>Co_Espo_Plex_Trooper.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+				
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	<Container Name="Espo_Plex_Trooper_Team">
+		<Variant_Of_Existing_Type>Plex_Soldier_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CO_ESPO_PLEX_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank Canderous_Assault_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid Rebel_Trooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPO_PLEX_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Co_Espo_Plex_Trooper.tga</Icon_Name>
+	</Container>
+</Espo_Plex_TrooperUnit_Data>

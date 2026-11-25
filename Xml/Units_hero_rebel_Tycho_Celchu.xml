@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<Tycho_Celchu_Hero_Files>
+	<!--Tycho Telchu data-->
+	<GenericHeroUnit Name="Tycho_Celchu">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_TYCHO_CELCHU</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TYCHO_CELCHU TEXT_TOOLTIP_REDUCE_TIME_FIGHTER_BOMBER_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+				
+		<Land_Model_Name>Ri_Tycho_Telchu.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ri_ThychoTelchu.tga</Icon_Name>
+
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Rebel</Affiliation>
+
+		<Autoresolve_Health>400</Autoresolve_Health>
+		<Tactical_Health>1400</Tactical_Health>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Projectile_Types>Proj_Infiltrator_Blaster</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<SFXEvent_Select>Unit_Select_Tycho</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Tycho</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tycho</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Tycho</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Tycho</SFXEvent_Guard>
+		<SFXEvent_Deploy>Unit_Fleet_Move_Tycho</SFXEvent_Deploy>
+		<SFXEvent_Fire>Unit_Han_Blaster_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Tycho</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Tycho</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Tycho </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Tycho </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Tycho </Death_SFXEvent_Start_Die>
+
+		<CategoryMask> LandHero | Spacehero </CategoryMask>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<Selection_Blob_Material_Name>Selection_Rebel_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Rebel_Hero</Highlight_Blob_Material_Name>
+
+		<Neutralization_Cost>1500.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<Lua_Script>R_Tycho_Re_1X</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	
+		<Abilities SubObjectList="Yes">
+		
+			<Combat_Bonus_Ability Name="Tycho_Combat_Bonus">
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<Unit_Strength_Category>Fighter | Bomber | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Fighter | Bomber | Air</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Tycho_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Fighter | Bomber | Air</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.14</Time_Reduction_Percentage>
+				<Stacking_Category>3</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Tycho_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Fighter | Bomber | Air</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+			<Remove_Corruption_Ability Name="Tycho_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+		</Abilities>
+		
+	</GenericHeroUnit>
+	
+<HeroCompany Name="Tycho_Celchu_Team_Space_MP">
+		<Variant_Of_Existing_Type>Tycho_Celchu_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TYCHO_CELCHU TEXT_TOOLTIP_REDUCE_TIME_FIGHTER_BOMBER_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	<HeroCompany Name="Tycho_Celchu_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_TYCHO_CELCHU</Text_ID>
+		<Icon_Name>I_BUTTON_Ri_ThychoTelchu.tga</Icon_Name>
+
+		<Affiliation>Rebel</Affiliation>
+		<Company_Transport_Unit>Tycho_Xwing</Company_Transport_Unit>
+		<Company_Units>Tycho_Celchu</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Tycho</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Tycho</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tycho</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_TYCHO_CELCHU </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<CategoryMask>LandHero | SpaceHero</CategoryMask>
+	</HeroCompany>
+	
+	
+	<SpaceUnit Name="Tycho_Xwing">
+		<Variant_Of_Existing_Type>Luke_Jedi_XWingORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TYCHO_XWING</Text_ID>	
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TYCHO_TELCHU TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Is_Super_Weapon_Killer>No</Is_Super_Weapon_Killer>
+		<Space_Model_Name>RV_Xwing_ver02.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Ri_ThychoTelchu.tga</Icon_Name>
+
+		<HardPoints> 
+			HP_BTLYWING_02
+		</HardPoints>
+		
+		<SFXEvent_Select>Unit_Select_Tycho</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Tycho</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tycho</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Tycho</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Tycho</SFXEvent_Guard>
+		<SFXEvent_Assist_Move>Unit_Move_Tycho </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack>Unit_Attack_Tycho </SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Tycho </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Tycho </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Health_Low_Tycho </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Health_Critical_Tycho </SFXEvent_Enemy_Health_Critical_Warning>		
+		<SFXEvent_Unit_Lost> Unit_Health_Critical_Tycho </SFXEvent_Unit_Lost>
+		
+		<Landing_Transport_Variant>Tycho_Xwing_Landing</Landing_Transport_Variant>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Tycho</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Guard_Tycho</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 10.0</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Tycho</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+		
+			<Combat_Bonus_Ability Name="Tycho_Combat_Bonus">
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<Unit_Strength_Category>Fighter | Bomber | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Fighter | Bomber | Air</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Tycho_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Fighter | Bomber | Air</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.50</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Tycho_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Fighter | Bomber | Air</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+			<Remove_Corruption_Ability Name="Tycho_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+		</Abilities>
+	</SpaceUnit>
+	<TransportUnit Name="Tycho_Xwing_Landing">
+		<Variant_Of_Existing_Type>Tycho_Xwing</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_Xwing_ver02_landing.ALO</Land_Model_Name>
+		<Icon_Name>i_button_x_wing.tga</Icon_Name>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>1.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+      	<UnitCollisionClass>Landing Transport</UnitCollisionClass>	
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</TransportUnit>
+</Tycho_Celchu_Hero_Files>

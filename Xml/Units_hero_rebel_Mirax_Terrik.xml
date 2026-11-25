@@ -1,0 +1,273 @@
+<?xml version="1.0"?>
+<Mirax_Terrik_Hero_Files>
+	<GenericHeroUnit Name="Mirax_Terrik">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MIRAX_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ri_Mirax.TGA</Icon_Name>
+		
+		<Land_Model_Name> Ri_MiraxTerrik.ALO </Land_Model_Name>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>	
+		<Affiliation>Rebel</Affiliation>
+		
+		<SFXEvent_Select>Unit_Select_Mirith</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mirith</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirith</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mirith</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mirith</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mirith </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mirith </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mirith </Death_SFXEvent_Start_Die>
+		
+		<CategoryMask> Landhero | Spacehero </CategoryMask>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Mirax_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.14</Time_Reduction_Percentage>
+				<Stacking_Category>3</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+
+			<Remove_Corruption_Ability Name="Mirax_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Galactic_Stealth_Ability Name="Mirax_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Siphon_Credits_Ability Name="Mirax_Siphon_Credits">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Min_Siphon_Percentage>0.8</Min_Siphon_Percentage>
+				<Max_Siphon_Percentage>0.9</Max_Siphon_Percentage>
+				<Siphon_Duration_In_Cycles>2</Siphon_Duration_In_Cycles>
+				<Min_Respawn_Time>100.0</Min_Respawn_Time>
+				<Max_Respawn_Time>200.0</Max_Respawn_Time>
+				<SFXEvent_Activate> Unit_Deploy_Han_Solo </SFXEvent_Activate>
+			</Siphon_Credits_Ability>
+			<System_Spy_Ability Name="Mirax_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Mirax_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MIRAX_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ri_Mirax.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MIRAX TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Affiliation>Rebel</Affiliation>
+
+		<Company_Transport_Unit>Pulsar_Skate</Company_Transport_Unit>
+		<Company_Units>Mirax_Terrik</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		
+		<SFXEvent_Build_Complete>Unit_Respawn_Mirax</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Mirax</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirax</SFXEvent_Fleet_Move>
+
+		<CategoryMask>Landhero | Spacehero</CategoryMask>
+
+		<Tactical_Build_Cost_Multiplayer>2800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Pulsar_Skate_Skirmiss">
+		<Variant_Of_Existing_Type>Pulsar_Skate</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="Pulsar_Skate">
+		<Variant_Of_Existing_Type>Moldy_Crow</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MIRAX_TEAM</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout Planetaryfighter_Squadron </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Interceptor TIE_Avenger Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MIRAX </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ri_Mirax.tga</Icon_Name>
+		<Land_Model_Name>Rv_Pulsar_Skate_Land.ALO</Land_Model_Name>
+		<Space_Model_Name>Rv_Pulsar_Skate.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Reb_Mirax_Terrik_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>3.5</Min_Speed>
+		<Affiliation>Rebel</Affiliation>
+		<AI_Combat_Power>1700</AI_Combat_Power>
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Red_Hero</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<SFXEvent_Fire>Unit_Corvette_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_Mirith</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mirith</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirith</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mirith</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mirith</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mirith </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mirith </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mirith </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Ambient_Moving> Unit_Falcon_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Idle_Loop> Unit_Tridroid_Cinematic_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Tridroid_Fly_By </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Tridroid_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+				
+		<Landing_Transport_Variant>RV_Pulsar_Skate_Landing</Landing_Transport_Variant>
+		
+		<Tactical_Build_Cost_Multiplayer>2800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		4.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Mirith</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>SENSOR_JAMMING</Type>
+				<GUI_Activated_Ability_Name> Pulsar_Skate_Sensor_Jamming </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>75.0</Recharge_Seconds>
+				<Expiration_Seconds>30.0</Expiration_Seconds>
+				<Effective_Radius>900.0</Effective_Radius> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Remove_Corruption_Ability Name="Mirax_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Galactic_Stealth_Ability Name="Mirax_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Siphon_Credits_Ability Name="Mirax_Siphon_Credits">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Min_Siphon_Percentage>0.8</Min_Siphon_Percentage>
+				<Max_Siphon_Percentage>0.9</Max_Siphon_Percentage>
+				<Siphon_Duration_In_Cycles>2</Siphon_Duration_In_Cycles>
+				<Min_Respawn_Time>100.0</Min_Respawn_Time>
+				<Max_Respawn_Time>200.0</Max_Respawn_Time>
+				<SFXEvent_Activate> Unit_Deploy_Han_Solo </SFXEvent_Activate>
+			</Siphon_Credits_Ability>
+			<System_Spy_Ability Name="Mirax_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+		</Abilities>  
+		<Death_Clone>Damage_Normal, RV_Pulsar_Skate_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="RV_Pulsar_Skate_Death_Clone">
+		<Text_ID>TEXT_UNIT_MILLENNIUM_FALCON</Text_ID>
+		<Space_Model_Name>Rv_Pulsar_Skate.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.40</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="RV_Pulsar_Skate_Landing">
+		<Variant_Of_Existing_Type>Pulsar_Skate</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rv_Pulsar_Skate_Land.ALO</Land_Model_Name>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>2.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</SpaceUnit>
+
+</Mirax_Terrik_Hero_Files>

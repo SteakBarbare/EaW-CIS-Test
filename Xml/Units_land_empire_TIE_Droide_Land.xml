@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<TIE_Droide_LandUnit_Data>
+<GroundVehicle Name="TIE_Droide_Land">
+		<Variant_Of_Existing_Type>TIE_Fighter_LandORG</Variant_Of_Existing_Type>
+		<No_Colorization_Color>4,4,4,255</No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_TIE_DROIDE</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder Rebel_Light_Tank_Brigade LIGHT_SCOUT_SPEEDER_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T2BAA_Brigade Rebel_Z95Land_squadron UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DROIDE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>EV_TIEDroid_Land.ALO</Land_Model_Name>
+		<Scale_Factor>4.0</Scale_Factor>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Ranking_In_Category>6</Ranking_In_Category>
+		<AI_Combat_Power>100</AI_Combat_Power>
+		<Affiliation>Empire</Affiliation>
+		<Armor_Type> Armor_Corellian_Corvette </Armor_Type>
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>125</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.05</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
+		<Death_Explosions>Medium_Explosion_Space6</Death_Explosions>
+
+		<Icon_Name>I_BUTTON_TIEDroide.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_TIE_Fighter</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="TIE_Droide_Land_Group_WD">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron_Land</Variant_Of_Existing_Type>
+		<Company_Units>TIE_Droide_Land, TIE_Droide_Land</Company_Units>
+		<Icon_Name>I_BUTTON_TIEDroide.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_TIE_DROIDE</Text_ID>
+		<Affiliation>Empire</Affiliation>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DROIDE TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Orbiting_Units>World_Devastator</Required_Orbiting_Units>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</TIE_Droide_LandUnit_Data>

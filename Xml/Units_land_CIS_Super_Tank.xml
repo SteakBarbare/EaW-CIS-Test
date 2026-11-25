@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<CIS_Super_TankUnit_Data>
+	<GroundVehicle Name="CIS_Super_Tank">
+		<Variant_Of_Existing_Type>AAT_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_SUPER_TANK</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_SUPER_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_CIS_Super_Tank.tga</Icon_Name>
+
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		
+		<FormationOrder> 2 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<FormationSpacing> 1 </FormationSpacing>
+		<FormationRaggedness> 2.5 </FormationRaggedness>
+		<MaxJiggleDistance> 5 </MaxJiggleDistance>
+
+		<Land_Model_Name>CIS_Super_Tank.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		
+		<Max_Speed>1.25</Max_Speed>
+		<Min_Speed>0.1</Min_Speed>
+		<OverrideAcceleration> 0.15 </OverrideAcceleration>
+		<OverrideDeceleration> 0.15 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>1</Bank_Turn_Angle>
+		
+		<Custom_Hard_XExtent> 45.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 45.0 </Custom_Hard_YExtent>
+		
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<PathFrameDelay> 0 </PathFrameDelay>
+		
+		<Armor_Type> Armor_ATAT </Armor_Type>
+
+		<Tactical_Health>2000</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<LandBehavior>ABILITY_COUNTDOWN, IDLE, AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, TARGETING, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET, STUNNABLE, DAMAGE_TRACKING, SQUASH</LandBehavior>
+		
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>Yes</Auto_Deploys>
+		<Deployment_Anim_Rate>1.5</Deployment_Anim_Rate>
+		<Max_Dist_Walk_While_Deployed>150.0</Max_Dist_Walk_While_Deployed>
+        <Deployed_Walk_Anim_Speed>1</Deployed_Walk_Anim_Speed>
+        <Deployed_Walk_Speed>1.25</Deployed_Walk_Speed>
+
+		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+				
+		<Hardpoints>
+				HP_CIS_Super_Tank_Turret_01,
+				HP_CIS_Super_Tank_Turret_02,
+				HP_CIS_Super_Tank_Turret_03,
+				HP_Gr_Front_Eweb_Laser_Red_00,
+				HP_Gr_Front_Eweb_Laser_Red_01
+		</Hardpoints>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<CategoryMask> Vehicle </CategoryMask>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		
+		<MovementClass> LargeHover </MovementClass>
+		<Property_Flags> CanContainGarrison </Property_Flags>
+
+		<AI_Combat_Power>260</AI_Combat_Power>
+
+		<Is_Supercrusher>Yes</Is_Supercrusher>
+		
+		<Lua_Script>ObjectScript_Blast_Land</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<!-- IMPORTANT! If you modify the ability below, please make same adjustments to unit's "Captured" clone. -->
+			<!-- I know this is awkward, hopefully we'll get a chance to re-write the code to fix it.   -Oksana -->
+			<Unit_Ability>
+                <Type>BLAST</Type>
+                <Recharge_Seconds>180.0</Recharge_Seconds>
+	            <GUI_Activated_Ability_Name> SuperTank_Blast </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Blast_Ability Name="SuperTank_Blast">
+				<Activation_Style> User_Input </Activation_Style>
+				<Charge_Up_Seconds>5</Charge_Up_Seconds>
+				<Damage_Multiplier>100</Damage_Multiplier>
+				<SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
+			</Blast_Ability>       		
+			
+			<Force_Healing_Ability Name="SuperTank_Autorepair">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+		
+		<Should_Reinforcements_Move> false </Should_Reinforcements_Move>
+		<Death_Clone>Damage_Normal, CIS_Super_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="CIS_Super_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>CIS_Super_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Super_Tank_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="CIS_Super_Tank_Company">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_SUPER_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 REP_LAAT TX130_Repulsor_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_SUPER_TANK TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name> I_BUTTON_CIS_Super_Tank.tga </Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>1800</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>CIS_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>CIS_Super_Tank, CIS_Super_Tank</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+
+	
+	
+</CIS_Super_TankUnit_Data>

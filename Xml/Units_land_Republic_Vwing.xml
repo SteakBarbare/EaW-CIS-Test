@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<Republic_Vwing_LandUnit_Data>
+	<GroundVehicle Name="Republic_Vwing_Land">
+		<Variant_Of_Existing_Type>Snowspeeder</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VWING_FIGHTER</Text_ID>
+		<Encyclopedia_Good_Against> AAT_Repulsor_Tank C_HAG_Group C_CIS_walk_DW_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Vulture_squadron C_Nantex_squadron UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_V_WING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR</Encyclopedia_Unit_Class>
+		<Land_Model_Name>REP_VwingLand.alo</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<No_Colorization_Color> 146, 25, 56, 255 </No_Colorization_Color>
+		<Custom_Hard_XExtent> 25.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 25.0 </Custom_Hard_YExtent>
+
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>Yes</Auto_Deploys>
+		<Deployment_Anim_Rate>1.5</Deployment_Anim_Rate>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>Yes</Fire_Weapon_When_Undeployed>
+		<Max_Dist_Walk_While_Deployed>0.0</Max_Dist_Walk_While_Deployed>
+        <Deployed_Walk_Anim_Speed>2</Deployed_Walk_Anim_Speed>
+        <Deployed_Walk_Speed>2.5</Deployed_Walk_Speed>
+		
+		<Max_Speed>5.5</Max_Speed>
+		<Min_Speed>5.5</Min_Speed>
+
+		<Begin_Turn_Towards_Distance>500.0</Begin_Turn_Towards_Distance>
+		<Prepare_Strafe_Height>500.0</Prepare_Strafe_Height>
+		
+		<Affiliation>Empire, Republic</Affiliation>
+		
+		<Armor_Type> Armor_Corellian_Corvette </Armor_Type>
+
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>175</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Fire_Category_Restrictions> LandHero, Infantry, Vehicle, Structure </Fire_Category_Restrictions>
+
+		<Spin_Away_On_Death_SFXEvent_Start_Die>Unit_TIE_Fighter_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Fire>Unit_Rep_TIE_Fighter_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_Clon_Fighter_Pilot</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Fighter_Pilot</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Fighter_Pilot</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Fighter_Pilot</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Fighter_Pilot</SFXEvent_Guard>
+		<Death_SFXEvent_Start_Die>Unit_Snow_Speeder_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<SFXEvent_Ambient_Moving> Unit_TIE_Fighter_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Fighter_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<Icon_Name>i_button_rep_vwing.tga</Icon_Name>
+		<CategoryMask> Air | AntiAir</CategoryMask>
+		<Targeting_Priority_Set>AntiAir</Targeting_Priority_Set>
+		
+		<AI_Combat_Power>60</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Clon_Fighter_Pilot</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Attack_Clon_Fighter_Pilot</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_Vwing_Land_Company">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VWING_FIGHTER</Text_ID>
+		<Encyclopedia_Good_Against> AAT_Repulsor_Tank C_HAG_Group C_CIS_walk_DW_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Vulture_squadron C_Nantex_squadron UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Cost_Credits>170</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>REP_Vwing_Land_Transport</Company_Transport_Unit>
+		<Company_Units>Republic_Vwing_Land, Republic_Vwing_Land, Republic_Vwing_Land</Company_Units>
+		<Icon_Name>i_button_rep_vwing.tga</Icon_Name>
+		<GUI_Model>REP_VwingLand.alo</GUI_Model>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Clon_Fighter_Pilot</SFXEvent_Build_Complete>
+
+		<Tactical_Build_Cost_Multiplayer>170</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>14</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_V_WING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+	<TransportUnit Name="REP_Vwing_Land_Transport">
+		<Variant_Of_Existing_Type>CR20</Variant_Of_Existing_Type>
+		<Land_Model_Name>REP_TIE_Land_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>REP_Vwing_Land_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<TransportUnit Name="REP_Vwing_Land_Landing">
+		<Variant_Of_Existing_Type>REP_TIE_Land_Transport</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>0.25</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>REP_TIE_Land_Landing.ALO</Land_Model_Name>
+	</TransportUnit>
+	
+</Republic_Vwing_LandUnit_Data>

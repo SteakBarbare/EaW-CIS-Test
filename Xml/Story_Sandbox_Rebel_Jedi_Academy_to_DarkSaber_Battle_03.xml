@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE CHAARDAN ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Chardaan_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Chardaan_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CHARDAAN</Reward_Param1>
+				<Prereq>Batalla_de_Chardaan_Space</Prereq>
+			</Event>
+<!--DIALOGO DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_DSCHARDAANE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Chardaan_Space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	<Event Name="Destruir_Cronus">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VSD13X</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_50_porciento_VSD">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>VSD2T</Event_Param1>
+		<Event_Param3>8</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CHARDAAN</Reward_Param1>
+		<Prereq>Destruir_Cronus Destruir_50_porciento_VSD</Prereq>
+	</Event>
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empire</Reward_Param1>
+				<Prereq>Objetivos_Completados</Prereq>
+			</Event>
+	
+	
+	<Event Name="ProtegerEVENTOS_TACTICOS_FACTORIA_CAZAS_ICOM">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>FACTORIA_CAZAS_ICOM</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Proteger_EVENTOS_TACTICOS_FACTORIA_CAZAS_REBELDES">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>FACTORIA_CAZAS_REBELDES</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Proteger_EVENTOS_TACTICOS_FACTORIA_CAZAS_KOEN">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>FACTORIA_CAZAS_KOEN</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+			
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CHARDAAN</Reward_Param1>
+		<Prereq>Proteger_EVENTOS_TACTICOS_FACTORIA_CAZAS_REBELDES Proteger_EVENTOS_TACTICOS_FACTORIA_CAZAS_REBELDES Proteger_EVENTOS_TACTICOS_FACTORIA_CAZAS_KOEN</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empire</Reward_Param1>
+				<Prereq>Objetivos_InCompletados1</Prereq>
+			</Event>
+	
+</Story>

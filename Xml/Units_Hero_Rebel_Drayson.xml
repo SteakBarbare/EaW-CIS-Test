@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Admiral_Drayson_Hero_Files>
+	<GenericHeroUnit Name="Admiral_Drayson">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DRAYSON_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DRAYSON TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Icon_Name>I_BUTTON_Ri_Hiram_Drayson.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Spawn_Planet>Coruscant</Spawn_Planet>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Drayson_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Drayson_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Admiral_Drayson_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="Admiral_Drayson_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DRAYSON_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DRAYSON TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Company_Units>Admiral_Drayson</Company_Units>
+		<Icon_Name>I_BUTTON_Ri_Hiram_Drayson.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Company_Transport_Unit>Drayson_Alliance_Shuttle</Company_Transport_Unit>
+		<Required_Special_Structures>R_Ground_Barracks</Required_Special_Structures>
+		
+	</HeroCompany>	
+	
+	
+	
+
+</Admiral_Drayson_Hero_Files>

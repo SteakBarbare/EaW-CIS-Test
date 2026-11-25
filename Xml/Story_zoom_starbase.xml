@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+
+
+
+<Story>
+	<Event Name="Patata_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Zoom_in_Planet_01">
+      <Event_Type>STORY_ZOOM_INTO_PLANET</Event_Type>
+      <Event_Param1>Arkanis</Event_Param1>
+      <Prereq>Patata_Start</Prereq>
+    </Event>
+			<Event Name="Flash_Button01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>Flash_Button01_GUI_Flash</Reward_Param2>
+				<Prereq>Zoom_in_Planet_01</Prereq>
+			</Event>	
+			<Event Name="Hide_Flash_Button01">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>5</Event_Param1>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>Flash_Button01_GUI_Flash</Reward_Param1>
+				<Prereq>Flash_Button01</Prereq>
+			</Event>
+	
+   <Event Name="Zoom_out_Planet_01">
+      <Event_Type>STORY_ZOOM_OUT_PLANET</Event_Type>
+      <Event_Param1>Arkanis</Event_Param1>
+      <Prereq>Patata_Start</Prereq>
+   </Event>
+
+			<Event Name="Flash_Button02">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters5</Reward_Param1>
+				<Reward_Param2>Flash_Button02_GUI_Flash</Reward_Param2>
+				<Prereq>Zoom_out_Planet_01</Prereq>
+			</Event>	
+			<Event Name="Hide_Flash_Button02">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>5</Event_Param1>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>Flash_Button02_GUI_Flash</Reward_Param1>
+				<Prereq>Flash_Button02</Prereq>
+			</Event>
+		
+</Story>

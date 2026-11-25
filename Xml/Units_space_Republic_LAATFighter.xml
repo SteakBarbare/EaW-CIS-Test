@@ -1,0 +1,184 @@
+﻿<?xml version="1.0"?>
+
+<LAATFighter_Files>
+	<SpaceUnit Name="LAATFighter">
+		<Variant_Of_Existing_Type>Pirate_Fighter</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LAATFIGHTER</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Chembomber_SquadronB CIS_Hyena Cis_DroidBomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Mankvim814_SquadronB CIS_Marauder CIS_BOARDING </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LAATFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_SLOW</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Rep_laat.tga</Icon_Name>
+		<Space_Model_Name>REP_LAATFighter.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<No_Colorization_Color> 146, 25, 56, 255 </No_Colorization_Color>
+		<Max_Speed>2.9</Max_Speed>
+		<Min_Speed>1.9</Min_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Fires_Forward>no</Fires_Forward>
+		<Turret_Rotate_Extent_Degrees>10</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>10</Turret_Elevate_Extent_Degrees>
+		<Hyperspace>No</Hyperspace>
+		<Hyperspace_Speed>0</Hyperspace_Speed>
+		<OverrideAcceleration> .3 </OverrideAcceleration>
+		<OverrideDeceleration> .3 </OverrideDeceleration>
+		<Armor_Type> Armor_Bomber </Armor_Type>
+		<Affiliation>Empire, Republic, Corporate</Affiliation>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Autoresolve_Health>40</Autoresolve_Health>
+		<Shield_Refresh_Rate>1000</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Size_Value>8</Size_Value>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, HUNT, TURRET, TARGETING, WEAPON, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, UNIT_AI, NEBULA </SpaceBehavior>
+		<GUI_Bracket_Size>1</GUI_Bracket_Size>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+
+		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
+		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+		
+		<Turret_Rotate_Extent_Degrees>120</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		
+		<Fire_Inaccuracy_Distance> Fighter, 15.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 15.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<HardPoints> 
+			HP_Fighter_Adv_Missile, HP_REP_LAATFIGHTER_02, HP_REP_LAATFIGHTER_03, HP_REP_LAATFIGHTER_04, HP_REP_LAATFIGHTER_05, HP_REP_LAATFIGHTER_06, HP_MissileAdv_Ability_00, HP_MissileAdv_Ability_01
+		</HardPoints>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<SFXEvent_Fire>Unit_LAAT_Fire</SFXEvent_Fire>
+				
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<SFXEvent_Engine_Idle_Loop>Unit_LAAT_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_LAAT_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop>Unit_LAAT_Idle_Engine_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+		<SFXEvent_Ambient_Moving> Unit_LAAT_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<CategoryMask> Bomber | Antifrigate</CategoryMask>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+	<Squadron Name="REP_LAATFighter_Squadron">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LAATFIGHTER</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Chembomber_SquadronB CIS_Hyena Cis_DroidBomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Mankvim814_SquadronB CIS_Marauder CIS_BOARDING </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LAATFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_SLOW</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Empire, Republic, Corporate</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>17</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Factoria_Naves_Ligeras</Required_Special_Structures>
+
+		<Squadron_Units>LAATFighter, LAATFighter, LAATFighter</Squadron_Units>
+		<Create_Team_Type>REP_LAATFighter_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_Rep_laat.tga</Icon_Name>
+		<GUI_Model_Name>REP_LAATFighter.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Pirate_Fighter</SFXEvent_Build_Complete>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+				
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>17</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>
+	<Container Name="REP_LAATFighter_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_LAATFIGHTER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LAATFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_SLOW</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Rep_laat.tga</Icon_Name>
+
+		<Max_Speed>2.9</Max_Speed>
+		<Min_Speed>1.9</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Antifrigate</CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</LAATFighter_Files>

@@ -1,0 +1,560 @@
+<?xml version="1.0"?>
+<Units_space_ships_neutralUnit_Data>
+	<SpaceUnit Name="Neutral-Ferryboatliner">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<CategoryMask> Vehicle </CategoryMask>
+		<Space_Model_Name>NV_Ferryboatliner.ALO</Space_Model_Name>
+		<Text_ID>TEXT_UNIT_FERRYBOATLINER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FERRYBOATLINER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.2</Scale_Factor> -->
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Structuras</Affiliation>
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Death_Clone>Damage_Normal, Ferryboatliner_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="Ferryboatliner_Death_Clone">
+		<Text_ID>TEXT_UNIT_FERRYBOATLINER</Text_ID>
+		<Space_Model_Name>NV_Ferryboatliner.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-MobTransport">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_MOBTRANSPORT</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_MobTransport.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_MobTransport.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.075</Scale_Factor> -->
+		
+		<Death_Clone>Damage_Normal, MobTransport_Death_Clone</Death_Clone>
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MOBTRANSPORT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>No</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="MobTransport_Death_Clone">
+		<Text_ID>TEXT_UNIT_MOBTRANSPORT</Text_ID>
+		<Space_Model_Name>NV_MobTransport.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.075</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-FreighterCong">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_FREIGHTERCONG</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_FreighterCong.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_FreighterCong.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.065</Scale_Factor> -->
+		
+		<Death_Clone>Damage_Normal, FreighterCong_Death_Clone</Death_Clone>
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FREIGHTERCONG</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>No</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="FreighterCong_Death_Clone">
+		<Text_ID>TEXT_UNIT_FREIGHTERCONG</Text_ID>
+		<Space_Model_Name>NV_FreighterCong.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.065</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-FreighterConb">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_FREIGHTERCONB</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_FreighterConb.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_FreighterConb.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.15</Scale_Factor> -->
+		
+		<Death_Clone>Damage_Normal, FreighterConb_Death_Clone</Death_Clone>
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FREIGHTERCONB</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>No</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="FreighterConb_Death_Clone">
+		<Text_ID>TEXT_UNIT_FREIGHTERCONB</Text_ID>
+		<Space_Model_Name>NV_FreighterConb.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-FreighterBox">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_FREIGHTERBOX</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_FreighterBox.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_FreighterBox.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.075</Scale_Factor> -->
+		
+		<Death_Clone>Damage_Normal, FreighterBox_Death_Clone</Death_Clone>
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FREIGHTERBOX</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>No</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="FreighterBox_Death_Clone">
+		<Text_ID>TEXT_UNIT_FREIGHTERBOX</Text_ID>
+		<Space_Model_Name>NV_FreighterBox.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.075</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-Bulk_Freighter">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_BULK_MERCHANT</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_Bulkfreighter.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_Bulkfreighter.ALO</GUI_Model_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.125</Scale_Factor> -->
+		<Death_Clone>Damage_Normal, Bulk_Freighter_Death_Clone</Death_Clone>
+		<CategoryMask> Vehicle </CategoryMask>
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_BULK_MERCHANT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	<SpaceUnit Name="Bulk_Freighter_Death_Clone">
+		<Text_ID>TEXT_UNIT_BULK_MERCHANT</Text_ID>
+		<Space_Model_Name>NV_Bulkfreighter.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.125</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire, Rebel, Pirates, Underworld</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-CargoFerry">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Max_Speed>1.5</Max_Speed>
+		<Text_ID>TEXT_UNIT_CARGOFERRY</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>NV_CargoFerry.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_CargoFerry.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.15</Scale_Factor> -->
+		<Death_Clone>Damage_Normal, CargoFerry_Death_Clone</Death_Clone>
+		
+		<HardPoints> 
+			HP_LaserNR_01,
+			HP_LaserNR_02,
+			HP_LaserNR_03
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CARGOFERRY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	<SpaceUnit Name="CargoFerry_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>NV_CargoFerry_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-ContainerTransport">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_CONTAINERTRANSPORT</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_ContainerTransport.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_ContainerTransport.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.25</Scale_Factor> -->
+		<Death_Clone>Damage_Normal, ContainerTransport_Death_Clone</Death_Clone>
+		
+		<HardPoints> 
+			HP_LaserNR_01,
+			HP_LaserNR_02,
+			HP_LaserNR_03,
+			HP_LaserNR_04
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONTAINERTRANSPORT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	<SpaceUnit Name="ContainerTransport_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>NV_ContainerTransport_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-Modularconveyor">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_MODULARCONVEYOR</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_Modularconveyor.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_Modularconveyor.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.05</Scale_Factor> -->
+		<Death_Clone>Damage_Normal, ModularConveyor_Death_Clone</Death_Clone>
+		
+		<HardPoints> 
+			HP_LaserNR_01,
+			HP_LaserNR_02,
+			HP_LaserNR_03
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MODULARCONVEYOR</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	<SpaceUnit Name="ModularConveyor_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>NV_Modularconveyor_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.05</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-Xiytiartransport">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_XIYTIARTRANSPORT</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>NV_Xiytiartransport.ALO</Space_Model_Name>
+		<GUI_Model_Name>NV_Xiytiartransport.ALO</GUI_Model_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor><!-- Reducido a la mitad en 3Dmax, antes a media escala eran <Scale_Factor>0.2</Scale_Factor> -->
+		<Death_Clone>Damage_Normal, Xiytiartransport_Death_Clone</Death_Clone>
+		
+		<HardPoints> 
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03,
+			HP_LaserNG_04
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_TEMPORARY.tga</Icon_Name>
+		<GUI_Model_Name>NV_Xiytiartransport.ALO</GUI_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XIYTIARTRANSPORT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	<SpaceUnit Name="Xiytiartransport_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>NV_Xiytiartransport_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Neutral-ActionIVTransport">
+		<Variant_Of_Existing_Type>P_FrgORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, P_Frg_Death_Clone</Death_Clone>
+	</SpaceUnit>
+		
+	<SpaceUnit Name="Neutral-StarGaleon">
+		<Variant_Of_Existing_Type>Star_Galleon</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Structuras</Affiliation>
+	</SpaceUnit>
+	
+	
+	<SpaceUnit Name="Neutral-Gallofree">
+		<Variant_Of_Existing_Type>Star_GalleonORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_GALLOFREE_TRANSPORT</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Max_Speed>1.5</Max_Speed>
+		<Space_Model_Name>RV_GR75_Gallofree.ALO</Space_Model_Name>
+		<GUI_Model_Name>RV_GR75_Gallofree.ALO</GUI_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Gallofree_Transport.tga</Icon_Name>
+		<Death_Clone>Damage_Normal, Gallofree_Transport_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<HardPoints>
+			HP_TurboR_01, 
+			HP_TurboR_02, 
+			HP_TurboR_03, 
+			HP_TurboR_04, 
+			HP_LaserNR_01,
+			HP_LaserNR_02, 
+			HP_LaserNR_03,
+			HP_LaserNR_04
+		</HardPoints>
+
+		<Icon_Name>i_button_Gallofree_Transport.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GALLOFREE_TRANSPORT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Neutral-YT1300">
+		<Variant_Of_Existing_Type>AssaulttransportORG</Variant_Of_Existing_Type>
+		<Tactical_Health>8000</Tactical_Health>  
+		<CategoryMask> Vehicle </CategoryMask>
+		<Affiliation>Structuras</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_YT1300</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, TURRET, SELECTABLE, HUNT, TARGETING, WEAPON, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, UNIT_AI, NEBULA </SpaceBehavior>
+		<Max_Speed>2.5</Max_Speed>
+		<Space_Model_Name>RV_MFalconX.ALO</Space_Model_Name>
+		<GUI_Model_Name>RV_MFalconX.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Death_Clone>Damage_Normal, NeutralFalcon_Transport_Death_Clone</Death_Clone>
+		
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>25.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Red</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Fire_Inaccuracy_Distance> Fighter, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+		
+		<Icon_Name>I_BUTTON_MILLENNIUM_FALCON.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_YT1300</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FREIGHTER</Encyclopedia_Unit_Class>
+	</SpaceUnit>
+	<SpaceUnit Name="NeutralFalcon_Transport_Death_Clone">
+		<Text_ID>TEXT_UNIT_MILLENNIUM_FALCON</Text_ID>
+		<Space_Model_Name>RV_MFalcon_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.40</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Units_space_ships_neutralUnit_Data>

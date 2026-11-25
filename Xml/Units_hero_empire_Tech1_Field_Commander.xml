@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<Tech1_Field_Commander_EmpireUnit_Data>
+	
+	
+	<GroundInfantry Name="Squad_E_Tech1_Field_Commander_Guard">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator Destroyer_Droid </Encyclopedia_Vulnerable_To>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		<Land_Model_Name>EI_TROOPER_nsh_black.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EI_TROOPER_nsh_black.ALO,
+			Urban, 				EI_TROOPER_nsh_black.ALO,
+			Arctic, 			Ei_trooper_snowE11.alo,
+			Volcanic, 			EI_TROOPER_Sandx.ALO,
+			Desert, 			EI_TROOPER_Sandx.ALO,
+			Forest, 			EI_TROOPER_nsh_black.ALO,
+			Swamp, 				EI_TROOPER_nsh_black.ALO
+		</Land_Terrain_Model_Mapping>
+		<Icon_Name>i_button_storm_trooper.tga</Icon_Name>
+				
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+
+		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Death_Clone>Damage_Force_Whirlwind, Stormtrooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Stormtrooper_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Stormtrooper_Remote_Bomb_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Attention, 
+				Emperor_Palpatine,
+				Darth_Vader
+		</Presence_Induced_Animations>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	
+	<GroundVehicle Name="Squad_E_Tech1_Field_Commander_Empire">
+		<Variant_Of_Existing_Type>EV_Lambda_Ground</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_TECH1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_E_TECH1 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_AT_TE_COMPANY TEXT_UNIT_A5 TEXT_UNIT_TX130_AR_REPULSOR_TANK TEXT_UNIT_TX130_REPULSOR_TANK TEXT_UNIT_POD_WALKER TEXT_IMPERIAL_XGRUPOLAAT_SQUAD TEXT_UNIT_ARC_170 TEXT_UNIT_V_19 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech1.tga</Icon_Name>
+
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech1.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+
+		<CategoryMask> LandHero </CategoryMask>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		
+		<Lua_Script>E_Tech1_Field_Re_1X</Lua_Script>
+		
+		<Abilities SubObjectList="Yes">
+			<Remove_Corruption_Ability Name="Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+			
+	</GroundVehicle>
+	<HeroCompany Name="E_Tech1_Field_Com_Empire_Team">
+		<Variant_Of_Existing_Type>E_T1_Field_Com_TeamORG</Variant_Of_Existing_Type>
+		<Required_Special_Structures>E_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+	</HeroCompany>	
+	<HeroCompany Name="E_T1_Field_Com_TeamORG">
+		<GUI_Row>0</GUI_Row>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_TECH1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_E_TECH1 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_AT_TE_COMPANY TEXT_UNIT_A5 TEXT_UNIT_TX130_AR_REPULSOR_TANK TEXT_UNIT_TX130_REPULSOR_TANK TEXT_UNIT_POD_WALKER TEXT_IMPERIAL_XGRUPOLAAT_SQUAD TEXT_UNIT_ARC_170 TEXT_UNIT_V_19 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech1.tga</Icon_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>9550</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Heroes>No</Build_Tab_Heroes>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		
+		
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>Jedi_Cruiser_IMP_E_Tech1_Field_Commander</Company_Transport_Unit>
+		<Company_Units> 
+		Squad_E_Tech1_Field_Commander_Empire, 
+		Squad_E_T1_Commander_Auxiliar
+		</Company_Units>
+		
+		<Is_Homogeneous>No</Is_Homogeneous>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<SFXEvent_Build_Complete>GUI_E_Field_Commander_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Started>EHD_Build_Commander</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Empire_Field</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>9550</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Population_Value>1</Population_Value>
+		<CategoryMask>LandHero</CategoryMask>
+		<Score_Cost_Credits> 500 </Score_Cost_Credits>
+	</HeroCompany>
+	<TransportUnit Name="Jedi_Cruiser_IMP_E_Tech1_Field_Commander">
+		<Variant_Of_Existing_Type>E_Venator</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Venator_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VENETORCLON TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_JEDI_CRUISER TEXT_UNIT_ACCLAMATORMKI</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Empire, Pirates</Affiliation>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech1.tga</Icon_Name>
+		
+		<Landing_Transport_Variant>EV_Lambda_Ground_Landing</Landing_Transport_Variant>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space3</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_REP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>E_Tech1_Fl_Sh</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</TransportUnit>
+	<GroundVehicle Name="EV_AT_TE_X_I">
+		<Variant_Of_Existing_Type>AT-TE_Walker</Variant_Of_Existing_Type>
+		<Lua_Script>E_Tech1_Field_Re_2X</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="EV_AT_TE_Sq_X_I">
+		<Variant_Of_Existing_Type>AT-TE_Company</Variant_Of_Existing_Type>
+		<Company_Units>EV_AT_TE_X_I</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>EV_Venator_Craft</Company_Transport_Unit>
+	</GroundCompany>
+	
+	<TransportUnit Name="EV_Venator_Craft">
+		<Variant_Of_Existing_Type>Imperial_Landing_Craft</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_Venator_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>EV_Venator_Craft_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	<TransportUnit Name="EV_Venator_Craft_Landing">
+		<Variant_Of_Existing_Type>EV_Venator_Craft</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CR20</Text_ID>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>3.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING, REVEAL</LandBehavior>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+		<HardPoints> 
+			HP_TurboMB_01, 
+			HP_TurboMB_02, 
+			HP_TurboMB_03, 
+			HP_TurboMB_04,
+			HP_TurboMB_05,
+			HP_TurboMB_06,   
+			HP_TurboMB_07, 
+			HP_TurboMB_08,
+			HP_TurboB_01, 
+			HP_TurboB_02, 
+			HP_TurboB_03, 
+			HP_TurboB_04,
+			HP_TurboB_05,
+			HP_TurboB_06,   
+			HP_TurboB_07, 
+			HP_TurboB_08,
+			HP_TurboB_09,
+			HP_TurboB_10
+		</HardPoints>
+		
+	</TransportUnit>
+	
+	
+	
+	
+	
+</Tech1_Field_Commander_EmpireUnit_Data>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<DevianUnit_Data>
+	
+		
+		
+<GenericHeroUnit Name="Devian">
+		<Variant_Of_Existing_Type>Kir_Kanos</Variant_Of_Existing_Type>
+	
+		<Text_ID>TEXT_HERO_DEVIAN_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEVIAN TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
+		<Land_Model_Name>Ei_Devian.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ei_Devian.tga</Icon_Name>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Is_Force_Sensitive>No</Is_Force_Sensitive>
+		
+		<SFXEvent_Select> Unit_Select_Mercenary </SFXEvent_Select>         		
+		<SFXEvent_Move> Unit_Move_Mercenary </SFXEvent_Move>  
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_Mercenary </SFXEvent_Attack>         		 
+		<SFXEvent_Guard> Unit_Guard_Mercenary </SFXEvent_Guard>            		 
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Mercenary </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Mercenary </SFXEvent_Assist_Attack> 
+		<Death_SFXEvent_Start_Die>Unit_Underworld_Soldier_Death</Death_SFXEvent_Start_Die>
+		
+		<Selection_Blob_Material_Name>Selection_Empire_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
+				
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TACTICAL_BRIBE</Type>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Devian_Tactical_Bribe </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Sprint_Katarn </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Tactical_Bribe_Ability Name="Devian_Tactical_Bribe">
+					<Activation_Style> User_Input </Activation_Style>
+					<Activation_Min_Range>0.0</Activation_Min_Range>
+					<Activation_Max_Range>100.0</Activation_Max_Range>
+					<Bribed_Effect> Rebel_Bribed_Particle_Effect </Bribed_Effect> 
+					<Bribed_Effect_Small> Empire_Bribed_Particle_Effect_Small </Bribed_Effect_Small> 
+					<Effect_Z_Offset>35.0</Effect_Z_Offset>
+					<SFXEvent_Success>GUI_Bribe_SFX</SFXEvent_Success>
+					<SFXEvent_Fail></SFXEvent_Fail>
+            </Tactical_Bribe_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Devian_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.10</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Devian_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+
+			<Combat_Bonus_Ability Name="Devian_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+		
+			<Remove_Corruption_Ability Name="Devian_remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		
+		</Abilities>
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="Devian_Team">
+		<Variant_Of_Existing_Type>Sedriss_Team</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_DEVIAN_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEVIAN TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Devian</Company_Units>
+		
+		<Icon_Name>I_BUTTON_Ei_Devian.tga</Icon_Name>
+
+		<Is_Force_Sensitive>No</Is_Force_Sensitive>
+
+		<SFXEvent_Build_Complete>Unit_Select_CarnorJax</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_CarnorJax</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_CarnorJax</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	
+		<CategoryMask>Landhero</CategoryMask>
+
+	</HeroCompany>
+
+	
+</DevianUnit_Data>

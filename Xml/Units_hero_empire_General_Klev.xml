@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<General_KlevUnit_Data>
+	
+	
+	
+	<SpaceUnit Name="General_Klev">
+		<Variant_Of_Existing_Type>World_Devastator</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_HERO_KLEV_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KLEV TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_DEATHSTAR</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Titus_Klev.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Abilities SubObjectList="Yes">
+
+			<Super_Laser_Ability Name="WorldDevastator_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero | Fighter | Bomber </Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>1800</Activation_Max_Range>
+				<Damage_Per_Frame>1000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>300</Line_Width>
+				<Line_Color>249 6 6 255</Line_Color>
+				<Face_Target>True</Face_Target>
+			</Super_Laser_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Klev_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Bounty_On_Faction_Ability Name="WD_Bounty">
+				<Bounty_Percentage_Amount> 0.95 </Bounty_Percentage_Amount>
+				<Stacking_Category> 1 </Stacking_Category>
+				<Target_Faction_Names> Empire </Target_Faction_Names>
+				<Apply_To_All_Allies> No </Apply_To_All_Allies>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Bounty_On_Faction_Ability>
+			
+			<Planet_Income_Bonus_Ability Name="Empire_Mining_Income_Bonus">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
+				<Percentage_Income_Modifier>10</Percentage_Income_Modifier>
+				<Absolute_Income_Modifier>0</Absolute_Income_Modifier>
+				<Additional_Multiplier_On_Mining_Colonies>1.5</Additional_Multiplier_On_Mining_Colonies>
+			</Planet_Income_Bonus_Ability>
+
+			<Income_Stream_Ability Name="Empire_Mining_Income_Stream">
+				<Base_Income_Value>625</Base_Income_Value>
+				<Base_Interval_In_Secs>5</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			
+			<Remove_Corruption_Ability Name="Klev_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+		</Abilities>
+	</SpaceUnit>	
+</General_KlevUnit_Data>

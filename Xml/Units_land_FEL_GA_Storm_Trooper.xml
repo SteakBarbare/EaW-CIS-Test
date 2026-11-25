@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<Fel_StormtrooperUnit_Data>
+	<GroundInfantry Name="Squad_Fel_Stormtrooper">
+		<Variant_Of_Existing_Type>Stormtrooper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_STORMTROOPER</Text_ID>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperE11_1T.ALO,
+			Urban, 				Ei_StormTrooperE11_1U.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_StormTrooperE11_1D.ALO,
+			Desert, 			Ei_StormTrooperE11_1D.ALO,
+			Forest, 			Ei_StormTrooperE11_1T.ALO,
+			Swamp, 				Ei_StormTrooperE11_1T.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Presence_Induced_Animations>
+			Attention, 
+				Marasiah_Fel,
+				Roan_Fel
+		</Presence_Induced_Animations>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_M">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+			
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperE11_1TM.ALO,
+			Urban, 				Ei_StormTrooperE11_1UM.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_StormTrooperE11_2DM.ALO,
+			Desert, 			Ei_StormTrooperE11_2DM.ALO,
+			Forest, 			Ei_StormTrooperE11_1TM.ALO,
+			Swamp, 				Ei_StormTrooperE11_1TM.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Abilities SubObjectList="Yes">
+		
+			<Force_Healing_Ability Name="Medic_Healing">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.20 </Heal_Percent>
+				<Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_Chest</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_S">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperE11_2TS.ALO,
+			Urban, 				Ei_StormTrooperE11_2TS.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_StormTrooperE11_2DS.ALO,
+			Desert, 			Ei_StormTrooperE11_2DS.ALO,
+			Forest, 			Ei_StormTrooperE11_2TS.ALO,
+			Swamp, 				Ei_StormTrooperE11_2TS.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_L">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperE11_2TL.ALO,
+			Urban, 				Ei_StormTrooperE11_1UM.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_StormTrooperE11_2DL.ALO,
+			Desert, 			Ei_StormTrooperE11_2DL.ALO,
+			Forest, 			Ei_StormTrooperE11_1TM.ALO,
+			Swamp, 				Ei_StormTrooperE11_1TM.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_DLT19">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+		
+		<Projectile_Types> Proj_Assault_Gun </Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperDLT19.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperDLT19_1T.ALO,
+			Urban, 				Ei_StormTrooperDLT19_1U.ALO,
+			Arctic, 			Ei_StormTrooperDLT19_1A.ALO,
+			Volcanic, 			Ei_StormTrooperDLT19_1D.ALO,
+			Desert, 			Ei_StormTrooperDLT19_1D.ALO,
+			Forest, 			Ei_StormTrooperDLT19_1T.ALO,
+			Swamp, 				Ei_StormTrooperDLT19_1T.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_DLT20">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+		
+		<Projectile_Types> Proj_DLT20 </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperDLT20.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperDLT20_1T.ALO,
+			Urban, 				Ei_StormTrooperDLT20_1U.ALO,
+			Arctic, 			Ei_StormTrooperDLT20_1A.ALO,
+			Volcanic, 			Ei_StormTrooperDLT20_1D.ALO,
+			Desert, 			Ei_StormTrooperDLT20_1D.ALO,
+			Forest, 			Ei_StormTrooperDLT20_1T.ALO,
+			Swamp, 				Ei_StormTrooperDLT20_1T.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_RT97">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+		
+		<Projectile_Types> Proj_RT97 </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperRT97a.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperRT97_2T.ALO,
+			Urban, 				Ei_StormTrooperRT97_2U.ALO,
+			Arctic, 			Ei_StormTrooperRT97_2A.ALO,
+			Volcanic, 			Ei_StormTrooperRT97_2D.ALO,
+			Desert, 			Ei_StormTrooperRT97_2D.ALO,
+			Forest, 			Ei_StormTrooperRT97_2T.ALO,
+			Swamp, 				Ei_StormTrooperRT97_2T.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_T21">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+		
+		<Projectile_Types> Proj_T21 </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperT21.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperT21_1T.ALO,
+			Urban, 				Ei_StormTrooperT21_1U.ALO,
+			Arctic, 			Ei_StormTrooperT21_1A.ALO,
+			Volcanic, 			Ei_StormTrooperT21_1D.ALO,
+			Desert, 			Ei_StormTrooperT21_1D.ALO,
+			Forest, 			Ei_StormTrooperT21_1T.ALO,
+			Swamp, 				Ei_StormTrooperT21_1T.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_C">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+
+		
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperE11_2TC.ALO,
+			Urban, 				Ei_StormTrooperE11_2TC.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_StormTrooperE11_2DC.ALO,
+			Desert, 			Ei_StormTrooperE11_2DC.ALO,
+			Forest, 			Ei_StormTrooperE11_2TC.ALO,
+			Swamp, 				Ei_StormTrooperE11_2TC.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_Z6">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper</Variant_Of_Existing_Type>
+		
+		<Projectile_Types> Proj_Z6 </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.0</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperZ6.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperZ6_1T.ALO,
+			Urban, 				Ei_StormTrooperZ6_1T.ALO,
+			Arctic, 			Ei_StormTrooperZ6_1A.ALO,
+			Volcanic, 			Ei_StormTrooperZ6_1T.ALO,
+			Desert, 			Ei_StormTrooperZ6_1T.ALO,
+			Forest, 			Ei_StormTrooperZ6_1T.ALO,
+			Swamp, 				Ei_StormTrooperZ6_1T.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_Stormtrooper_C_B">
+		<Variant_Of_Existing_Type>Squad_Fel_Stormtrooper_C</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Fel_Stormtrooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Fel_Stormtrooper_Squad_B">
+		<Variant_Of_Existing_Type>Fel_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Fel_Stormtrooper_C, Squad_Fel_Stormtrooper_T21, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper_DLT19, Squad_Fel_Stormtrooper_L, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper_RT97, Squad_Fel_Stormtrooper_Z6, Squad_Fel_Stormtrooper_S, Squad_Fel_Stormtrooper_DLT20, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper_M</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Create_Team_Type> Stormtrooper_Team </Create_Team_Type>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+	</GroundCompany>	
+	
+	<GroundCompany Name="Fel_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Fel_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		
+		<Company_Units> Squad_Fel_Stormtrooper_C_B, Squad_Fel_Stormtrooper_T21, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper_DLT19, Squad_Fel_Stormtrooper_L, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper_RT97, Squad_Fel_Stormtrooper_Z6, Squad_Fel_Stormtrooper_S, Squad_Fel_Stormtrooper_DLT20, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper_M </Company_Units>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Create_Team_Type> Stormtrooper_Team </Create_Team_Type>
+	</GroundCompany>
+	
+	<GroundCompany Name="Fel_Deployed_Imperial_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Fel_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Create_Team_Type> Stormtrooper_Team </Create_Team_Type>
+		<Company_Units> Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper,Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper, Squad_Fel_Stormtrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	
+	
+	
+	
+	
+</Fel_StormtrooperUnit_Data>

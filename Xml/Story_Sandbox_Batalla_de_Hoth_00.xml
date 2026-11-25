@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<Story>
+
+      <Event Name="Batalla_de_Hoth_Land">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+		
+			
+	<Event Name="Prevenir_victoria_prematura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>0</Reward_Param1>
+		<Prereq>Batalla_de_Hoth_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Todos_los_enemigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>FILTER_ENEMY_ONLY</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Batalla_de_Hoth_Land</Prereq>
+	</Event>		
+		
+	<Event Name="Destruidos_Todos_Amigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>FILTER_FRIENDLY_ONLY</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Batalla_de_Hoth_Land</Prereq>
+	</Event>		
+		
+	<Event Name="Activar_Victoria">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>1</Reward_Param1>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+		<Prereq>Destruidos_Todos_Amigos</Prereq>
+	</Event>
+	
+</Story>

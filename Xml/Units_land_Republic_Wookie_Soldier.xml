@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<REP_Wookie_SoldierUnit_Data>
+	<GroundInfantry Name="REP_Wookie_Soldier_Special">
+		<Variant_Of_Existing_Type>REP_Wookie_Soldier</Variant_Of_Existing_Type>
+		<Create_Team>No</Create_Team>
+	</GroundInfantry>
+	<GroundInfantry Name="REP_Wookie_Soldier">
+		<Variant_Of_Existing_Type> Wookie_Soldier </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_REP_SOLDIER</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_WOOKIE_REP_SOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroidB2_Squad C_Super_BattleDroid_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_CIS_walk_DW_Group UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire</Affiliation>
+	</GroundInfantry>
+	<GroundInfantry Name="REP_Wookie_Soldier_B">
+		<Variant_Of_Existing_Type>REP_Wookie_Soldier</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Republic_Wookie_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="Republic_Wookie_Squad_B">
+		<Variant_Of_Existing_Type>Republic_Wookie_Squad</Variant_Of_Existing_Type>
+		<Company_Units>REP_Wookie_Soldier, REP_Wookie_Soldier, REP_Wookie_Soldier, REP_Wookie_Soldier, REP_Wookie_Soldier</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Create_Team_Type>Rep_Wookie_Team</Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Republic_Wookie_Squad">
+		<Variant_Of_Existing_Type> Rebel_Wookie_Squad </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_REP_SOLDIER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WOOKIE_REP_SOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroidB2_Squad C_Super_BattleDroid_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_CIS_walk_DW_Group UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Required_Planets>Kashyyyk, KashyyykCW</Required_Planets>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Company_Units>REP_Wookie_Soldier_B, REP_Wookie_Soldier, REP_Wookie_Soldier, REP_Wookie_Soldier, REP_Wookie_Soldier</Company_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Create_Team_Type>Rep_Wookie_Team</Create_Team_Type>
+		
+	</GroundCompany>
+	<Container Name="Rep_Wookie_Team">
+		<Variant_Of_Existing_Type> Wookie_Team </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_REP_SOLDIER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WOOKIE_REP_SOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroidB2_Squad C_Super_BattleDroid_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_CIS_walk_DW_Group UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+	</Container>	
+</REP_Wookie_SoldierUnit_Data>

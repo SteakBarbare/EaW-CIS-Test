@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<SivronUnit_Data>
+	<HeroUnit Name="Sivron">
+		<Variant_Of_Existing_Type>TarkinORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_SIVRON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SIVRON TEXT_TOOLTIP_NOREDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Icon_Name>I_BUTTON_SIVRON.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Political_Faction>Empire</Political_Faction>
+		<Spawn_Planet>The_Maw</Spawn_Planet>
+		<CategoryMask>NonCombatHero</CategoryMask>
+		
+		<Abilities SubObjectList="Yes">
+
+			<Reduce_Production_Time_Ability Name="Sivron_Increase_Production_Time">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>-0.10</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Reduce_Production_Price_Ability Name="Sivron_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Remove_Corruption_Ability Name="Sivron_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Sivron_Team">
+		<Variant_Of_Existing_Type>Grand_Moff_Tarkin_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_SIVRON</Text_ID>
+		<Icon_Name>I_BUTTON_SIVRON.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Sivron</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SIVRON TEXT_TOOLTIP_NOREDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Twilek</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Twilek</SFXEvent_Hero_Respawned>
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+</SivronUnit_Data>

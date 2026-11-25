@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<R_XwingT70_Files>
+
+	<SpaceUnit Name="R_XwingT70">
+		<Variant_Of_Existing_Type>X-Wing</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 68, 109, 131, 255 </No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_R_XWINGT70</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Interceptor TIE_Avenger TIE_Defender </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Lancer Missile_Gunboat TIE_Phantom </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_R_XWINGT70 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Space_Model_Name>RVRE_XwingT70_SF.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Max_Speed>4.2</Max_Speed>
+		<Min_Speed>2.8</Min_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+
+		<Shield_Points>1200</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>1350</Shield_Refresh_Rate>
+		<Energy_Capacity>16000</Energy_Capacity>
+		<Energy_Refresh_Rate>9600</Energy_Refresh_Rate>
+		
+		<HardPoints> 
+			HP_Fighter_Proton_Torpedo_Adv, HP_R_DefenderF_Laser_00, HP_R_DefenderF_Laser_01, HP_R_DefenderF_Laser_02, HP_R_XwingX_Laser_03
+		</HardPoints>
+
+		<Icon_Name>i_button_R_XwingT70.tga</Icon_Name>
+	</SpaceUnit>
+	
+	
+	<Squadron Name="R_XwingT70_Squadron">
+		<Variant_Of_Existing_Type>Rebel_X-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_R_XWINGT70_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Interceptor TIE_Avenger TIE_Defender </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Lancer Missile_Gunboat TIE_Phantom </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_R_XWINGT70 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Time_Seconds>5</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Factoria_Cazas_Rebeldes</Required_Special_Structures>
+		<GUI_Row> 1 </GUI_Row>
+		<Squadron_Units>R_XwingT70, R_XwingT70, R_XwingT70</Squadron_Units>
+		<Create_Team_Type>R_XwingT70_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_R_XwingT70.tga</Icon_Name>
+		<GUI_Model_Name>RVRE_XwingT70_SF.ALO</GUI_Model_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+	</Squadron>
+	<Container Name="R_XwingT70_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_R_XWINGT70_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_R_XWINGT70 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_R_XwingT70.tga</Icon_Name>
+
+		<Max_Speed>4.2</Max_Speed>
+		<Min_Speed>2.8</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>60.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</R_XwingT70_Files>

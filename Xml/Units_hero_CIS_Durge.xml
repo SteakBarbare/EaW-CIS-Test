@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<DurgeUnit_Data>
+	<GroundVehicle Name="Durge">
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<LOD_Bias>3</LOD_Bias>
+		<Text_ID>TEXT_UNIT_DURGE</Text_ID>
+		<Encyclopedia_Good_Against> MPTL Destroyer_Droid  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DURGE TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_Durge.ALO</Land_Model_Name>
+		<Icon_Name>i_button_CIS_Durge.tga</Icon_Name>
+
+		<Is_Squashable_By_Supercrusher>Yes</Is_Squashable_By_Supercrusher>
+        <Ranking_In_Category>7</Ranking_In_Category>
+		<Autoresolve_Health>200</Autoresolve_Health>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Movement_Animation_Speed> 1.0 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Walk_Animation_Speed> 1.0 </Walk_Animation_Speed>
+
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .3 </FormationSpacing> 
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<OverrideAcceleration> 0.05 </OverrideAcceleration>
+		<OverrideDeceleration> 0.05 </OverrideDeceleration>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,GARRISON_UNIT,ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD,UNIT_AI</LandBehavior>
+		<SurfaceFX_Name>Generic_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
+
+		<Garrison_Category> Vehicle </Garrison_Category>
+		<Garrison_Value>1</Garrison_Value>
+
+		
+		<Uses_Multiple_Locomotors> Yes </Uses_Multiple_Locomotors>
+		<Primary_Locomotor_Name>WALK_LOCOMOTOR</Primary_Locomotor_Name>
+		<Secondary_Locomotor_Name>JETPACK_LOCOMOTOR</Secondary_Locomotor_Name>
+		<Hover_Offset>70.0</Hover_Offset>
+		<Max_Lift> 1.2 </Max_Lift>
+		<Alternate_Max_Speed> 2.5 </Alternate_Max_Speed>
+		<SFXEvent_Engine_Moving_Loop> Unit_DT_Jet_Pack_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+
+		<Affiliation>CIS</Affiliation>
+
+		<Armor_Type> Armor_Hero </Armor_Type>
+
+		<Damage>8</Damage>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>1450</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Size_Value>75</Size_Value>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+
+		<Land_FOW_Reveal_Range>225.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>180.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types>Proj_Assault_Gun_Hero</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+        <Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		<Death_Fade_Time>0.05</Death_Fade_Time>
+
+		<SFXEvent_Select>Unit_Select_Durge</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Urai_Fen</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Urai_Fen</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Urai_Fen</SFXEvent_Guard>
+		<SFXEvent_Fire></SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Urai_Fen</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Urai_Fen</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Urai_Fen</Death_SFXEvent_Start_Die>
+ 
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+		
+		<CategoryMask> Landhero | AntiVehicle</CategoryMask>
+		<MovementClass>Infantry</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>3</No_Refraction_Below_Detail_Level>
+
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		
+		<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Overall_Length>0.0</Overall_Length>
+		<Overall_Width>0.0</Overall_Width>
+		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
+		<AI_Combat_Power>70</AI_Combat_Power>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AntiVehicleStructure</Targeting_Priority_Set>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+		
+		<Selection_Blob_Material_Name>Selection_CIS_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_CIS_Hero</Highlight_Blob_Material_Name>
+
+		<Select_Box_Scale>25</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<GUI_Bracket_Size>1</GUI_Bracket_Size>
+
+		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>50.0, 50.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		
+		<Weather_Category>Walker</Weather_Category>
+
+		<Score_Cost_Credits>50</Score_Cost_Credits>
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
+
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Large Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 8.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<MinimumPushReturnDistance> 100 </MinimumPushReturnDistance>
+		<FormationOrder> 4 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<FormationSpacing> 1 </FormationSpacing>
+		<FormationRaggedness> 2.5 </FormationRaggedness>
+		<MaxJiggleDistance> 5 </MaxJiggleDistance>
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>JET_PACK</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_DT_JETPACK</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_DT_JETPACK_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+			
+				<SFXEvent_Target_Ability> Unit_DT_Jet_Pack_Takeoff</SFXEvent_Target_Ability>
+				<Effective_Radius> -1.0 </Effective_Radius>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Galactic_Stealth_Ability Name="Durge_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Durge_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+
+			<Neutralize_Hero_Ability Name="Durge_Neutralize_Hero">
+				<Cost_Mod_By_Base_Level>0.0,0.0, 5.0,1.0</Cost_Mod_By_Base_Level>
+				<Cost_Mod_By_Previous_Neutralizations>0.0,0.0, 1000.0,750.0</Cost_Mod_By_Previous_Neutralizations>
+				<Cost_Mod_By_Planetary_Corruption_Level>0.0,0.0, 1.0,0.25</Cost_Mod_By_Planetary_Corruption_Level>
+				<General_Minor_Hero_Cost_Mod>1.0</General_Minor_Hero_Cost_Mod>
+				<General_Major_Hero_Cost_Mod>1.0</General_Major_Hero_Cost_Mod>
+				<Owner_Respawn_Time_In_Secs>120.0, 150.0</Owner_Respawn_Time_In_Secs>
+				<Target_Respawn_Time_In_Secs>240.0, 300.0</Target_Respawn_Time_In_Secs>
+				<Can_Neutralize_Minor_Heroes>Yes</Can_Neutralize_Minor_Heroes>
+				<Can_Neutralize_Major_Heroes>Yes</Can_Neutralize_Major_Heroes>
+			</Neutralize_Hero_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Durge_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.14</Time_Reduction_Percentage>
+				<Stacking_Category>3</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Redirect_Blaster_Ability Name="Durge_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				
+				<Redirect_Chance>0.50</Redirect_Chance>
+				<Block_Chance>0.50</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 180.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Applicable_Unit_Types>Destroyer_Droid, T2B_Tank, TIE_Crawler </Applicable_Unit_Types>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+		</Abilities>
+		
+	</GroundVehicle>
+
+	<HeroCompany Name="Durge_Team">
+		<Text_ID>TEXT_UNIT_DURGE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DURGE TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_CIS_Durge.tga</Icon_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>60</Damage>
+		<Affiliation>CIS</Affiliation>
+		
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>Sheathipede_Shuttle</Company_Transport_Unit>
+		<Company_Units>Durge</Company_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		
+		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
+		<Available_In_Skirmish>yes</Available_In_Skirmish>
+		<Can_Be_Only_One>true</Can_Be_Only_One>
+		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
+        <Max_Squad_Size> 1 </Max_Squad_Size>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<SFXEvent_Build_Started>UHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Request_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Durge</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Durge</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+		
+		
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>JET_PACK</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_DT_JETPACK</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_DT_JETPACK_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+			
+				<SFXEvent_Target_Ability> Unit_DT_Jet_Pack_Takeoff</SFXEvent_Target_Ability>
+				<Effective_Radius> -1.0 </Effective_Radius>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+
+			
+			<Redirect_Blaster_Ability Name="Durge_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 180.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Applicable_Unit_Types>Destroyer_Droid, T2B_Tank, TIE_Crawler </Applicable_Unit_Types>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+		</Abilities>
+		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
+		<CategoryMask>LandHero</CategoryMask>
+		<Ranking_In_Category> 3 </Ranking_In_Category>
+		<Population_Value>1</Population_Value>
+	</HeroCompany>
+
+
+</DurgeUnit_Data>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<ViperX1Unit_Data>
+	<GroundVehicle Name="ViperX1">
+		<Variant_Of_Existing_Type>RancorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VIPERX1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_VIPERX1</Encyclopedia_Text>
+
+		<Land_Model_Name>EV_ViperX1.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EV_ViperX1.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+		<Tactical_Health>2000</Tactical_Health>
+		<LandBehavior>BARRAGE, ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD,HUNT, WALK_LOCOMOTOR,TARGETING,IDLE,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, SQUASH, GARRISON_UNIT</LandBehavior>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<Armor_Type> Armor_ATAT3 </Armor_Type>
+		
+		<Hardpoints>
+				HP_ViperX1_GunR,
+				HP_ViperX1_GunL
+		</Hardpoints>
+		
+		<Projectile_Types>Proj_Rancor_Hit</Projectile_Types>
+		
+		<Ranged_Target_Z_Adjust>40.0</Ranged_Target_Z_Adjust>
+
+		<Death_Clone>Damage_Cable_Attack, ViperX1_Cable_Attack_Death_Clone</Death_Clone>
+
+		<Vehicle_Thief_Inside_Clone>ViperX1_Captured</Vehicle_Thief_Inside_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>BLAST</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> ViperX1_Blast </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_BARRAGE_AREA.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+					
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Blast_Ability Name="ViperX1_Blast">
+				<Activation_Style> User_Input </Activation_Style>
+				<Charge_Up_Seconds>5</Charge_Up_Seconds>
+				<Damage_Multiplier>100</Damage_Multiplier>
+				<SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
+			</Blast_Ability>         
+			
+			<Generic_Attack_Ability Name="Rancor_Pound_Vehicles">
+				<Activation_Chance>1.0</Activation_Chance>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>50.0</Activation_Max_Range>
+				<Damage_Amount>1000.0</Damage_Amount>
+				<Damage_Percentage>0.0</Damage_Percentage>
+				<Damage_Type>Damage_Normal</Damage_Type>
+				<Attack_Animation>POUND_ATTACK</Attack_Animation>
+				<Attack_Animation_Speedup>0.75</Attack_Animation_Speedup>
+				<Damage_Frame_Number>20</Damage_Frame_Number>
+				<Applicable_Unit_Categories>Vehicle</Applicable_Unit_Categories>
+			</Generic_Attack_Ability>
+		
+			<Eat_Attack_Ability Name="Rancor_Eat_Infantry">
+				<Activation_Chance>1.0</Activation_Chance>
+				<Activation_Min_Range>45.0</Activation_Min_Range>
+				<Activation_Max_Range>50.0</Activation_Max_Range>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>1.0</Damage_Percentage>
+				<Health_Per_Victim>1000</Health_Per_Victim>
+				<Damage_Type>Damage_Eat</Damage_Type>
+				<Attack_Animation>EAT_ATTACK</Attack_Animation>
+				<Attack_Animation_Speedup>1.0</Attack_Animation_Speedup>
+				<Owner_Attachment_Bone>B_Thumb_R01</Owner_Attachment_Bone>
+				<Attachment_Frame>14</Attachment_Frame>
+				<Target_Destruction_Frame>110</Target_Destruction_Frame>
+				<Target_Grabbed_Animation>EATEN_DIE</Target_Grabbed_Animation>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+			</Eat_Attack_Ability>
+		
+			<Arc_Sweep_Attack_Ability Name="Rancor_Swat_Infantry_Left">
+				<Activation_Chance>0.5</Activation_Chance>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>50.0</Activation_Max_Range>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>1.0</Damage_Percentage>
+				<Damage_Type>Damage_Force_Whirlwind</Damage_Type>
+				<Attack_Animation>ATTACK</Attack_Animation>
+				<Attack_Animation_Speedup>0.75</Attack_Animation_Speedup>
+				<Attack_Animation_Subindex>0</Attack_Animation_Subindex>
+				<Arc_Width_In_Degrees>120.0</Arc_Width_In_Degrees>
+				<Arc_Min_Range>10.0</Arc_Min_Range>
+				<Arc_Max_Range>30.0</Arc_Max_Range>
+				<Begin_Applying_Damage_Frame>27</Begin_Applying_Damage_Frame>
+				<Damage_Sweep_Time_In_Secs>0.233333</Damage_Sweep_Time_In_Secs>
+				<Apply_Damage_Right_To_Left>Yes</Apply_Damage_Right_To_Left>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+			</Arc_Sweep_Attack_Ability>
+
+			<Arc_Sweep_Attack_Ability Name="Rancor_Swat_Infantry_Right">
+				<Activation_Chance>0.5</Activation_Chance>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>50.0</Activation_Max_Range>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>1.0</Damage_Percentage>
+				<Damage_Type>Damage_Force_Whirlwind</Damage_Type>
+				<Attack_Animation>ATTACK</Attack_Animation>
+				<Attack_Animation_Speedup>0.75</Attack_Animation_Speedup>
+				<Attack_Animation_Subindex>1</Attack_Animation_Subindex>	
+				<Arc_Width_In_Degrees>120.0</Arc_Width_In_Degrees>
+				<Arc_Min_Range>10.0</Arc_Min_Range>
+				<Arc_Max_Range>30.0</Arc_Max_Range>
+				<Begin_Applying_Damage_Frame>27</Begin_Applying_Damage_Frame>
+				<Damage_Sweep_Time_In_Secs>0.233333</Damage_Sweep_Time_In_Secs>
+				<Apply_Damage_Right_To_Left>No</Apply_Damage_Right_To_Left>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+			</Arc_Sweep_Attack_Ability>
+			
+			<Redirect_Blaster_Ability Name="ViperX1_Heavy_Reflective_Armor">
+				<Initially_Enabled> Yes </Initially_Enabled>	
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.50</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+		</Abilities>
+
+	</GroundVehicle>
+	
+	
+	<GroundVehicle Name="ViperX1_Captured">
+		<Variant_Of_Existing_Type>ViperX1</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="ViperX1_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>ViperX1</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+     	 <Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		<Presence_Range>200.0</Presence_Range>
+
+	</GroundVehicle>
+		
+	<GroundCompany Name="ViperX1_Squad">
+		<Variant_Of_Existing_Type>AT_SE_Walker_Company</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		<Text_ID>TEXT_UNIT_VIPERX1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_VIPERX1 TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>E_Ground_Advanced_Vehicle_Factory, E_XCommand, AdvancedTech_7</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>VIPERX1, VIPERX1</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_EV_ViperX1.tga</Icon_Name>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+	
+		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
+	</GroundCompany>
+	
+	<GroundCompany Name="R_ViperX1_Squad">
+		<Variant_Of_Existing_Type>ViperX1_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Required_Planets>Balmorra, Balmorrak, Kuat_Sector</Required_Planets>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+	
+</ViperX1Unit_Data>

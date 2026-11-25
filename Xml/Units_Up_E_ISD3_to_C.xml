@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Up_E_ISD3_to_CUnit_Data>
+	
+	<SpaceUnit Name="Up_E_ISD3_to_C">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_UNIT_STAR_DESTROYERIII</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_COMMSHIP TEXT_TOOLTIP_COMMSHIP</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EV_ISD3_C.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosE, E_Ground_Officer_Academy</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Orbiting_Units>ISD3</Required_Orbiting_Units>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Lua_Script>Up_E_ISD3_to_C</Lua_Script>
+		<Population_Value>4</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="ISD3_UpC">
+		<Variant_Of_Existing_Type>ISD3</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Empire, GA</Affiliation>
+		<Icon_Name>I_BUTTON_EV_ISD3_C.TGA</Icon_Name>
+		<Starting_Spawned_Units_Tech_0>NV_Tug_Repair_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>15</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 2000 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+
+	
+</Up_E_ISD3_to_CUnit_Data>

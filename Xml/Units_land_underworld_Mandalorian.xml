@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Underworld_MandalorianUnit_Data>
+	
+	<GroundInfantry Name="Mandalorian_Indigenous_B">
+		<Variant_Of_Existing_Type>Mandalorian_Indigenous</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Mandalorian_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Mandalorian_Squad_B">
+		<Variant_Of_Existing_Type>Mandalorian_Squad</Variant_Of_Existing_Type>
+		<Company_Units>Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous,Mandalorian_Indigenous,Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Create_Team_Type> Mandalorian_Container </Create_Team_Type>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Mandalorian_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_INDIG_MANDALORIAN</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_UNDERWORLD_MANDALORIAN TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Icon_Name>i_button_ni_mandalorian.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Autoresolve_Health>135</Autoresolve_Health>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>U_Ground_Barracks, U_XCommand</Required_Special_Structures>
+
+		
+		<Company_Transport_Unit>Underworld_Infantry_Droid_Shuttle</Company_Transport_Unit>
+		<Company_Units>Mandalorian_Indigenous_B, Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous,Mandalorian_Indigenous,Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous, Mandalorian_Indigenous</Company_Units>
+		<Create_Team_Type> Mandalorian_Container </Create_Team_Type>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+
+		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Assault_Squad</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Assault_Squad</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	
+	</GroundCompany>
+	
+
+
+</Underworld_MandalorianUnit_Data>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE MON CALAMARI ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_MonCalamari_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_MonCalamari_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARI_E</Reward_Param1>
+				<Prereq>Batalla_de_MonCalamari_Space</Prereq>
+			</Event>
+						
+	
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_MonCalamari_Space</Prereq>
+	</Event>	
+
+	
+	
+<!--DIALOGO DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_TAJMONCALAMARIE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_MonCalamari_Space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+		  <Event Name="Comunicacion_del_Manticore">
+				<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+				<Event_Param1>Marea_Estelar</Event_Param1>
+				<Event_Param2>Story_Trigger_Zone_00</Event_Param2>
+				<Event_Param3>500</Event_Param3>
+				<Reward_Type>MULTIMEDIA</Reward_Type>
+				<Reward_Param1>TEXT_STORY_BATALLA_DE_MONCALAMARI_E_00</Reward_Param1>
+				<Reward_Param2>10</Reward_Param2>
+				<Reward_Param9>Commander_Moff2_Loop</Reward_Param9>
+				<Reward_Param10>1</Reward_Param10>
+		   </Event>
+			    <Event Name="Comunicacion_del_Manticore_b">
+					<Event_Type>STORY_ELAPSED</Event_Type>
+					<Event_Param1>8</Event_Param1>
+					<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+					<Prereq>Comunicacion_del_Manticore</Prereq>
+				</Event>
+		   <Event Name="Comunicacion_del_Gorgona">
+				<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+				<Event_Param1>MC902_2</Event_Param1>
+				<Event_Param2>Story_Trigger_Zone_01</Event_Param2>
+				<Event_Param3>6000</Event_Param3>
+				<Reward_Type>MULTIMEDIA</Reward_Type>
+				<Reward_Param1>TEXT_STORY_BATALLA_DE_MONCALAMARI_E_01</Reward_Param1>
+				<Reward_Param2>10</Reward_Param2>
+				<Reward_Param9>Commander_Moff2_Loop</Reward_Param9>
+				<Reward_Param10>1</Reward_Param10>
+		   </Event>
+			   <Event Name="Comunicacion_del_Gorgona_b">
+					<Event_Type>STORY_ELAPSED</Event_Type>
+					<Event_Param1>8</Event_Param1>
+					<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+					<Prereq>Comunicacion_del_Gorgona</Prereq>
+				</Event>
+	<Event Name="Destruir_ASTILLERO_NAVES_CAPITALES_MONCAL">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>ASTILLERO_NAVES_CAPITALES_MONCAL</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARI_E</Reward_Param1>
+		<Prereq>Destruir_ASTILLERO_NAVES_CAPITALES_MONCAL</Prereq>
+	</Event>
+	<Event Name="Proteger_Gorgona">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Star_Destroyer</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+			
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARI_E</Reward_Param1>
+		<Prereq>Proteger_Gorgona</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde1">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Objetivos_InCompletados1</Prereq>
+			</Event>
+	
+</Story>

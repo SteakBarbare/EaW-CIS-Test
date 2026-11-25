@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<REP_StealthshipUnit_Data>
+	
+	<SpaceUnit Name="REP_Stealthship">
+		<Variant_Of_Existing_Type>CR_CV_Basic</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_REP_STEALTHSHIP</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Vulture CIS_Hyena CIS_Tridroid </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Recusant_PSD CIS_Recusant CIS_Munificent </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_REP_STEALTHSHIP</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Icon_Name>i_button_Rep_Stealthship.tga</Icon_Name>
+		<Space_Model_Name>Rep_Stealthship.ALO</Space_Model_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		
+		<Scale_Factor>1.0</Scale_Factor>
+		<AI_Combat_Power>1095</AI_Combat_Power>
+		<Max_Speed>4.0</Max_Speed>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>  
+		<Max_Rate_Of_Roll>0.8</Max_Rate_Of_Roll>
+		<OverrideAcceleration> .12 </OverrideAcceleration>
+		<OverrideDeceleration> .12 </OverrideDeceleration>
+		<Space_Layer> Fighter </Space_Layer>
+		<Armor_Type> Armor_Corellian_Gunboat </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+	
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Build_Cost_Credits>5500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+				
+		<Autoresolve_Health>10000</Autoresolve_Health>
+		<Shield_Points>10000</Shield_Points>
+		<Tactical_Health>1500000</Tactical_Health>  
+		<Shield_Refresh_Rate>10150</Shield_Refresh_Rate>
+		<Energy_Capacity>240000</Energy_Capacity>
+		<Energy_Refresh_Rate>144000</Energy_Refresh_Rate>
+
+		<CategoryMask> SpaceHero </CategoryMask>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, UNIT_AI, NEBULA </SpaceBehavior>
+		
+		<HardPoints> 
+			HP_T_RepStealthship_01,
+			HP_T_RepStealthship_02,
+			HP_LaserNB_O_01,
+			HP_LaserNB_O_02
+		</HardPoints>
+		
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Clon_Fighter_Pilot</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Fighter_Pilot</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Fighter_Pilot</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Fighter_Pilot</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Fighter_Pilot</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Fighter_Pilot </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Fighter_Pilot </SFXEvent_Assist_Attack>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Hardpoint_Clon_Fighter_Pilot </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Fighter_Pilot </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Fighter_Pilot </SFXEvent_Health_Critical_Warning>
+
+		<Death_Clone>Damage_Normal, Rep_Stealthship_Death_Clone</Death_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Tartan</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+            <Unit_Ability>
+                <Type>STEALTH</Type>
+				<Alternate_Icon_Name>i_sa_stealth.tga</Alternate_Icon_Name>
+                <GUI_Activated_Ability_Name>Stealth_Stealthship</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>10.0</Recharge_Seconds>
+				<Expiration_Seconds>80.0</Expiration_Seconds>
+            <SFXEvent_GUI_Unit_Ability_Activated> Unit_Stealth_On_Tie_Phantom </SFXEvent_GUI_Unit_Ability_Activated>  				
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Stealth_Off_Tie_Phantom </SFXEvent_GUI_Unit_Ability_Deactivated> 
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+        
+			<Stealth_Ability Name="Stealth_Stealthship">
+				<Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 255</Stealth_Color>
+                <Stealth_Transition_Time>0.8</Stealth_Transition_Time>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Stealth_Ability>
+			
+			<Galactic_Stealth_Ability Name="Stealthship_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+		</Abilities>  
+		
+		<Tactical_Build_Cost_Multiplayer>5500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Rep_Stealthship_Death_Clone">
+		<Text_ID>TEXT_UNIT_MARAUDER_CRUISER</Text_ID>
+		<Space_Model_Name>Rep_Stealthship_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Pirates, Underworld</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+	
+	
+</REP_StealthshipUnit_Data>

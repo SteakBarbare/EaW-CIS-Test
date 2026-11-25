@@ -1,0 +1,599 @@
+<?xml version="1.0"?>
+<Hutts_structures_Data>
+	<SpecialStructure Name="Hutts_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Hutts,
+				Hu_Level_Two_Tech_Upgrade,
+				Hu_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Hutts</Affiliation>
+   </SpecialStructure>
+
+	<GroundBuildable Name="Hutts_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>	
+		<Affiliation>Hutts</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Hutts_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Command_Center </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>	
+		<Affiliation>Hutts</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Hutts_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hutts_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hutts,
+				Hu_Bombing_Run_Use_Upgrade,
+				Hu_Planetary_Bombard_Use_Upgrade,
+				Hu_HuttLtF_Squad,
+				Hu_Med_Fighter_Land_squadron,
+				Hu_Hvy_Fighter_Land_squadron,
+				Hu_LAAT_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Starting_Spawned_Units_Tech_0>HuttLightFighter_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>HuttLightFighter_Land, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Affiliation>Hutts</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Hutts_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hutts_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Hutts_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Hutts_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Hutts_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Hutts_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Hutts_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Hutts_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Hutts_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Hutts_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Hutts_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+
+		<Affiliation>Hutts</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hutts_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Hutts_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Hutts_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Hutts_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> Hutts_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Hutts</Affiliation>
+
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Hutts_Power_Generator</Tactical_Additional_Structure_Type>	
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hutts_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hutts_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> Hutts_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Hutts_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Uplink_Station.ALO</Land_Model_Name>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+		
+		
+		<Icon_Name>i_button_nb_mercenary_outfitter.tga</Icon_Name>
+		<Obstacle_Proxy_Type> Power_Generator_E_Build_Pad </Obstacle_Proxy_Type>
+
+		<Affiliation>Hutts</Affiliation>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Hutts_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Hutts_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Hutts_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_nb_mercenary_outfitter.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Hutts_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Hutts_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_nb_mercenary_outfitter.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="Hutts_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>Hu_InfantryBarracks.alo</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hutts</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_cantina.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hutts,
+				Hu_Gamorrean_Squad,
+				Hu_P_Soldier_Squad,
+				Hu_P_Plex_Squad,
+				Hu_Twilek_Squad,
+				Hu_Mandalorian_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Mandalorian_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Mandalorian_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_P_Plex_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_P_Plex_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_P_Soldier_Squad, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_P_Soldier_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Twilek_Squad, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Twilek_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Gamorrean_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Gamorrean_Squad, -1</Reserve_Spawned_Units_Tech_0>
+	
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="Hutts_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_InfantryBarracks.alo</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_cantina.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hutts_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Ground_Barracks </Tactical_Buildable_Constructed>
+
+		<Scale_Factor>0.75</Scale_Factor>
+		
+		<Land_Model_Name>Hu_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_cantina.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Hutts_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Light_Factory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hutts_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+		</Destruction_Survivors>
+		
+		<Affiliation>Hutts</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_nb_mandalorian_barracks.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hutts,
+				Hu_Skiff_Squad,
+				Hu_Swamps_Squad,
+				Hu_ATAP_Squad,
+				Hu_ATAP2_Squad,
+				Hu_Mandalorian_Speeder_Company,
+				Hutts_Med_Skiff_Company,
+				Hutts_Hvy_Skiff_Company,
+				Hu_Basilisk_Squad,
+				Hu_Seraph_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+				
+		<Starting_Spawned_Units_Tech_0>Hutts_Hvy_Skiff, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hutts_Hvy_Skiff, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Mandalorian_Speeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Mandalorian_Speeder, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hutts_Med_Skiff, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hutts_Med_Skiff, -1</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hutts_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_Light_Factory.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_nb_mandalorian_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hutts_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Hutts_Ground_Light_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Hu_Light_Factory.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_nb_mandalorian_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Hutts_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Heavy_Factory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hutts_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hutts</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+				
+		<Tech_Level>0</Tech_Level>
+		
+
+		
+		<Icon_Name>i_button_W_Hutt_Spawnbuilding.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hutts,
+				Hu_Pirate_Speeder_2_Company,
+				Hu_Mandalorian_Tank_Company,
+				Hu_SailBarge_Company,
+				Hu_Hvy_SailBarge_Company,
+				Hu_Adv_Hvy_SailBarge_Company,
+				Hu_ATATs_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+
+
+		<Starting_Spawned_Units_Tech_0>Hu_Pirate_Speeder_2, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Pirate_Speeder_2, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_LAAT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_LAAT, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Mandalorian_Tank, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Mandalorian_Tank, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	<GroundBuildable Name="Hutts_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Hu_Heavy_Factory.alo</Land_Model_Name>
+
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_W_Hutt_Spawnbuilding.tga</Icon_Name>
+
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hutts_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Ground_Heavy_Vehicle_Factory </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Heavy_Factory.alo</Land_Model_Name>
+
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_W_Hutt_Spawnbuilding.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Hutts_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Adv_Heavy_Factory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hutts_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hutts</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hutts_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_jabba_palace.tga</Icon_Name>
+		
+		<Starting_Spawned_Units_Tech_0>AT_ATs_WalkerU, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_ATs_WalkerU, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>AT_AT_Light_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_AT_Light_Walker, -1</Reserve_Spawned_Units_Tech_0>
+				
+	</SpecialStructure>
+	<GroundBuildable Name="Hutts_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Hu_Adv_Heavy_Factory.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		
+		<Icon_Name>i_button_jabba_palace.tga</Icon_Name>
+		
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hutts_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Hu_Adv_Heavy_Factory.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+
+		<Icon_Name>i_button_jabba_palace.tga</Icon_Name>
+	</GroundBuildable>
+
+	<SpecialStructure Name="Hutts_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hutts_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hutts</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_NB_twilek_building.tga</Icon_Name>
+		
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hutts,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hutts_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_NB_twilek_building.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hutts_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_NB_twilek_building.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Hutts_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hutts_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, WEAPON, TURRET, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0
+			Hutt_Soldier_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hutts</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Hutts_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hutts_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hutts, PC_Hutts_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hutts_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hutts_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hutts_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Hu_Command_Center.alo</Land_Model_Name>
+		<Affiliation>Hutts</Affiliation>
+		<Icon_Name>i_button_Hu_Officer_Academy.tga</Icon_Name>
+	</GroundBuildable>
+</Hutts_structures_Data>
+
+
+

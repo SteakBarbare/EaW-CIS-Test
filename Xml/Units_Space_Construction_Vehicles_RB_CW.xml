@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<Construction_Vehicles_RB_CWUnit_Data>
+	
+	
+		
+	<SpaceUnit Name="BuildShipA_RB_CIS_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_CIS_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Lua_Script>RB_CIS_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_RB_CIS_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_CIS</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Lua_Script>RB_CIS_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+
+	
+	<SpaceUnit Name="BuildShipA_RB_Rep_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_Rep_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Lua_Script>RB_Rep_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_RB_Rep_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Lua_Script>RB_Rep_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipA_RB_Fel_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_Fel_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Lua_Script>RB_EVF_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_RB_Fel_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Lua_Script>RB_EVF_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipA_RB_Krayt_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Lua_Script>RB_EVK_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_RB_Krayt_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Lua_Script>RB_EVK_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+	
+	
+</Construction_Vehicles_RB_CWUnit_Data>

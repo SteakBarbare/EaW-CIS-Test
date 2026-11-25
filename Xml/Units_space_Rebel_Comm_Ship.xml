@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<R_Comm_ShipUnit_Data>
+	<SpaceUnit Name="R_Comm_Ship">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_COMMSHIP</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_COMMSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_UNIT_X_WING TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Affiliation>Rebel, RVRE, GA, GAC</Affiliation>
+		<Required_Special_Structures>Astilleros_Rebeldes, R_Ground_Officer_Academy</Required_Special_Structures>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Death_Clone>Damage_Normal, Nebulon_Death_Clone</Death_Clone>
+		<Space_Model_Name>RV_Comm_Ship1.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_RV_CommShip.tga</Icon_Name>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<AI_Combat_Power>1350</AI_Combat_Power>
+			
+		<HardPoints>
+		  	HP_LaserNR_01, 
+			HP_LaserNR_02, 
+			HP_LaserNR_03, 
+			HP_LaserNR_04, 
+			HP_LaserNR_05, 
+			HP_RV_Nebulon_B_01,
+			HP_RV_Nebulon_B_02,
+			HP_RV_Nebulon_B_03,
+			HP_RV_Nebulon_B_04, 
+			HP_RV_Nebulon_B_05,
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00,
+			HP_Fighter_Bay_Small_00
+		</HardPoints>
+		
+		<Starting_Spawned_Units_Tech_0>A_Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>2</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>A_Wing_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>15</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 1000 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+	<SpaceUnit Name="R_Comm_Ship_SB">
+		<Variant_Of_Existing_Type>R_Comm_Ship</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Space_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius> <!-- 0.0 means no distance factor, unlimited to entire map -->
+				<Area_Effect_Decal_Distance> 600.0 </Area_Effect_Decal_Distance> 
+				<GUI_Activated_Ability_Name>  </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	<SpaceUnit Name="GA_Comm_Ship_SB">
+		<Variant_Of_Existing_Type>R_Comm_Ship</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Space_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius> <!-- 0.0 means no distance factor, unlimited to entire map -->
+				<Area_Effect_Decal_Distance> 600.0 </Area_Effect_Decal_Distance> 
+				<GUI_Activated_Ability_Name>  </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship3_SB1">
+		<Variant_Of_Existing_Type>R_ProfundityB</Variant_Of_Existing_Type>
+		<Space_Model_Name>RV_Profundity_Comm.ALO</Space_Model_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>R_STR1_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship3_SB2">
+		<Variant_Of_Existing_Type>R_ProfundityB</Variant_Of_Existing_Type>
+		<Space_Model_Name>RV_Profundity_Comm.ALO</Space_Model_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>R_STR2_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship3_SB3">
+		<Variant_Of_Existing_Type>R_ProfundityB</Variant_Of_Existing_Type>
+		<Space_Model_Name>RV_Profundity_Comm.ALO</Space_Model_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>R_STR3_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship3_SB4">
+		<Variant_Of_Existing_Type>R_ProfundityB</Variant_Of_Existing_Type>
+		<Space_Model_Name>RV_Profundity_Comm.ALO</Space_Model_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>R_STR4_Re</Lua_Script>	
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship3_SB5">
+		<Variant_Of_Existing_Type>R_ProfundityB</Variant_Of_Existing_Type>
+		<Space_Model_Name>RV_Profundity_Comm.ALO</Space_Model_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>R_STR5_Re</Lua_Script>	
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="R_Comm_Ship2_SB1">
+		<Variant_Of_Existing_Type>R_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re1</Lua_Script>-->			
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship2_SB2">
+		<Variant_Of_Existing_Type>R_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re2</Lua_Script>-->			
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship2_SB3">
+		<Variant_Of_Existing_Type>R_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re3</Lua_Script>-->			
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship2_SB4">
+		<Variant_Of_Existing_Type>R_Comm_Ship2_SB</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Enemy_Space_Re4</Lua_Script>-->			
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Comm_Ship2_SB">
+		<Variant_Of_Existing_Type>Corellian_Gunboat</Variant_Of_Existing_Type>
+		<AI_Combat_Power>865</AI_Combat_Power>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Icon_Name>I_BUTTON_RV_CommShip2.tga</Icon_Name>
+		<!--<Lua_Script>Enemy_Space_Re5</Lua_Script>-->			
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+	
+	
+</R_Comm_ShipUnit_Data>

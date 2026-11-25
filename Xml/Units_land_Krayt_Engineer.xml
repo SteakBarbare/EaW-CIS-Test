@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Krayt_EngineerUnit_Data>
+	
+	<GroundInfantry Name="Krayt_Engineer">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Fel, Empire</Affiliation>
+		 <Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADLAND</Alternate_Name_Text>
+	                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADLAND_DESCRIPTION</Alternate_Description_Text>
+					<Recharge_Seconds>120</Recharge_Seconds>
+					 <Spawned_Object_Type>EVK_Engineer_Build_Pad</Spawned_Object_Type>
+					 <Effective_Radius> 50.0 </Effective_Radius>
+				     <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+					 <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+					 <SFXEvent_GUI_Unit_Ability_Deactivated/>
+					 <Area_Effect_Decal_Distance> 50 </Area_Effect_Decal_Distance>
+		  </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Force_Healing_Ability Name="Engineer_Repair_Healing">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount>15.0</Heal_Amount>
+				<Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Vehicle | Air</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_TURRET, TURRET_00, B_TURRET_BASE</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	</GroundInfantry>
+	<GroundInfantry Name="Krayt_Engineer_B">
+		<Variant_Of_Existing_Type>Krayt_Engineer</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Krayt_Engineer_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="Krayt_Engineer_Squad_B">
+		<Variant_Of_Existing_Type>Krayt_Engineer_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Krayt_Engineer, Krayt_Engineer, Krayt_Engineer, Krayt_Engineer, Krayt_Engineer </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Krayt_Engineer_Squad">
+		<Variant_Of_Existing_Type>Ei_Engineer_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Krayt_Ground_Barracks, Krayt_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units> Krayt_Engineer_B </Company_Units>
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+	<GroundCompany Name="Fel_Engineer_Squad">
+		<Variant_Of_Existing_Type>Ei_Engineer_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Fel_Ground_Barracks, Fel_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units> Krayt_Engineer_B </Company_Units>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</Krayt_EngineerUnit_Data>

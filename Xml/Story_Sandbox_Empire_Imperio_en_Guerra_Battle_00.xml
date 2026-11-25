@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE ALDERAAN GALACTICO ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+	<Event Name="Batalla_de_Alderaan_01">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<!--<Event Name="Despawn_Death_Star">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Death_StarB</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Alderaan_01</Prereq>
+	  </Event>-->
+	
+	<Event Name="Play_Death_Star_Movie">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>START_MOVIE</Reward_Type>
+		<Reward_Param1>Empire_Win_Deathstar</Reward_Param1>
+		<Prereq>Batalla_de_Alderaan_01</Prereq>	
+	</Event>
+
+	<Event Name="Play_Death_Star_Movie_Fin">
+		<Event_Type>STORY_MOVIE_DONE</Event_Type>
+		<Prereq>Play_Death_Star_Movie</Prereq>
+	</Event>
+		
+	<!--<Event Name="Despawn_Death_Star_IA">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Death_Star_IA</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Alderaan_01</Prereq>
+	  </Event>	  -->
+
+	  <Event Name="Batalla_de_Alderaan_02">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Alderaan</Reward_Param1>
+		<Reward_Param2>Empire</Reward_Param2>
+		<Prereq>Play_Death_Star_Movie_Fin</Prereq>
+		</Event>
+     <!--
+<Event Name="Spawn_Death_Star"> la nueva DS puede destruir planetas en modo galactico, cosa que la antigua no hacia y por eso usaba un modelo diferente
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Death_StarB</Reward_Param1>
+		<Reward_Param2>Alderaan</Reward_Param2>
+		<Prereq>Batalla_de_Alderaan_02</Prereq>
+	</Event>	-->
+</Story>

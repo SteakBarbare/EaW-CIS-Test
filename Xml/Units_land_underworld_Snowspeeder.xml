@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+
+
+
+<UV_SnowspeederUnit_Data>
+	<GroundVehicle Name="UV_Snowspeeder">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SNOWSPEEDER</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad AT_AA_Walker Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Fighter_Squadron_Land AT_AA_Walker UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SPEEDERU</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>UV_SnowSpeeder.ALO</Land_Model_Name>
+		<AI_Combat_Power>150</AI_Combat_Power>
+		<Affiliation>Underworld</Affiliation>
+		
+		<Projectile_Types>Proj_Mass_Driver_Tank</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<LandBehavior>ABILITY_COUNTDOWN, HUNT, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+
+		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		
+		<Begin_Turn_Towards_Distance>500.0</Begin_Turn_Towards_Distance>
+		<Prepare_Strafe_Height>150.0</Prepare_Strafe_Height>
+		<Strafe_Distance>500.0</Strafe_Distance>
+		
+		<Hardpoints>
+			HP_Gr_Rear_Turret_Yellow_00
+		</Hardpoints>
+
+		<Icon_Name>i_button_rebel_speeder.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	
+	<GroundCompany Name="UV_Snowspeeder_Company">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_SPEEDER_WING</Text_ID>
+		<Encyclopedia_Good_Against> AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPEEDERU TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Affiliation>Underworld</Affiliation>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>UV_Snowspeeder, UV_Snowspeeder, UV_Snowspeeder</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<Icon_Name>i_button_rebel_speeder.tga</Icon_Name>
+		<GUI_Model>RV_SnowSpeeder.ALO</GUI_Model>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundCompany>
+
+</UV_SnowspeederUnit_Data>

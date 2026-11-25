@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+
+<BS_BulwarkIUnit_Data>
+	<SpaceUnit Name="BS_BulwarkI">
+		<Variant_Of_Existing_Type>BulwarkIORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>	
+
+		<Required_Planets>
+				Sluis_Van
+		</Required_Planets>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Preybird_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Clockshape_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y_Wing_SquadronU5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Preybird_Squadron5, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Clockshape_Squadron4, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y_Wing_SquadronU5, 23</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+		<Death_Clone>Damage_Normal, BS_BulwarkI_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="BulwarkIORG">
+		<Variant_Of_Existing_Type>KedalbeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BULWARKMKI</Text_ID>
+		<Encyclopedia_Good_Against> Rep_Venator REP_Valiant REP_MandatorI </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> REP_ARC-170_Rep Rep_Y_Wing Rep_NTB630 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BULWARKMKI TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_PREYBIRD TEXT_WAVES_X2 TEXT_UNIT_CLOCKSHAPE TEXT_WAVES_X2 TEXT_UNIT_OLDBTLS3YWING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_12</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DREADNAUGHT </Encyclopedia_Unit_Class>
+		
+		
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.5</Max_Thrust>
+
+		<Space_Model_Name>UV_BulkwarkMKI.ALO</Space_Model_Name>
+		<Scale_Factor>0.875</Scale_Factor>
+
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+		
+		<Space_Layer> Supercapital </Space_Layer>
+
+		<Affiliation>Underworld</Affiliation>
+
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>300000000</Tactical_Health>
+		<Shield_Refresh_Rate>262000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+
+		<Political_Faction>Underworld</Political_Faction>
+		<Build_Cost_Credits>9000</Build_Cost_Credits>
+		<AI_Combat_Power>18750</AI_Combat_Power>
+		<Build_Time_Seconds>100</Build_Time_Seconds>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		<HardPoints> 
+			HP_T_Bulkwark_Side_01,
+			HP_T_Bulkwark_Side_02,
+			HP_T_UBulkwark_Side_04,
+			HP_T_UBulkwark_Side_03,
+			HP_T_Bulkwark_Side_05,
+			HP_T_Bulkwark_Side_06,
+			HP_T_UBulkwark_Side_07,
+			HP_T_UBulkwark_Side_08,
+			HP_T_Bulkwark_Side_09,
+			HP_T_Bulkwark_Side_10,
+			HP_T_UBulkwark_Side_11,
+			HP_T_UBulkwark_Side_12,
+			HP_T_Bulkwark_Side_13,
+			HP_T_Bulkwark_Side_14,
+			HP_T_UBulkwark_Side_15,
+			HP_T_UBulkwark_Side_16,
+			HP_T_Bulkwark_Side_17,
+			HP_T_Bulkwark_Side_18,
+			HP_T_Bulkwark_Side_19,
+			HP_T_Bulkwark_Side_20,
+			HP_T_Bulkwark_Side_21,
+			HP_T_Bulkwark_Side_22,
+			HP_T_Bulkwark_Side_23,
+			HP_T_Bulkwark_Side_24,
+			HP_LaserYXC_01,
+			HP_LaserYXC_02,
+			HP_LaserYXC_03,
+			HP_LaserYXC_04,
+			HP_LaserYXC_05,
+			HP_LaserYXC_06,
+			HP_LaserYXC_07,
+			HP_LaserYXC_08,
+			HP_LaserYXC_09,
+			HP_LaserYXC_10,
+			HP_LaserYXC_11,
+			HP_LaserYXC_12,
+			HP_Fighter_BayH_00, 
+			HP_Shield_GeneratorH_00, 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02
+		</HardPoints>
+		<Icon_Name>I_BUTTON_BULWARKMKI.TGA</Icon_Name>
+		<GUI_Model_Name>UV_BulkwarkMKI.ALO</GUI_Model_Name>
+	
+		<SFXEvent_Ambient_Loop>Unit_Calamari_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Engine_Idle_Loop> Unit_Calamari_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Calamari_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Calamari_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Death_SFXEvent_Start_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_Start_Die>
+				
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+
+		<Radar_Icon_Size>0.0838  0.11178</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>		
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>15000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>74</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>2250</Tactical_Bribe_Cost>
+		<Population_Value>6</Population_Value>
+		<!--<Space_Override_Population_Value>4</Space_Override_Population_Value>-->
+		
+	</SpaceUnit>
+	<SpaceUnit Name="BS_BulwarkI_Death_Clone">
+		<Text_ID>TEXT_UNIT_BULWARKMKI</Text_ID>
+		<Space_Model_Name>UV_BulkwarkMKI_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Scale_Factor>0.875</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+	</SpaceUnit>
+
+</BS_BulwarkIUnit_Data>

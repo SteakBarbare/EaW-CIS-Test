@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+
+
+
+
+<Kedalbe_Battleship_up2Unit_Data>
+		
+	<SpaceUnit Name="Up_BS_Kedalbe_2_to_3">
+		<Variant_Of_Existing_Type>Up_BS_MC80b_to_BS_MC80bII</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_UNIT_UV_KEDALBE_2_TO_3</Text_ID>
+        <Encyclopedia_Text>TEXT_TOOLTIP_UV_KEDALBE_2_TO_3</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Uv_Kedalbe_UPGRADE2.TGA</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosU, AdvancedTech_U</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Orbiting_Units>Kedalbe_Battleship_up</Required_Orbiting_Units>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Lua_Script>Up_BS_Kedalbe_2_to_3</Lua_Script>
+		<Population_Value>5</Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Kedalbe_Battleship_up_p">
+		<Variant_Of_Existing_Type>KedalbeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_KEDALBE_BATTLESHIP3</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 Assault_FrgORG </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Defender B-Wing Y-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KEDALBE_BATTLESHIP3 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_HUTTLIGHTFIGHTER TEXT_WAVES_X2 TEXT_UNIT_HUTTMEDIUMFIGHTER TEXT_WAVES_X3 TEXT_UNIT_HUTTHEAVYFIGHTER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_8</Encyclopedia_Text>
+		<Icon_Name>i_button_UV_Keldabe3.tga</Icon_Name>
+		<Space_Model_Name>UV_KedalbeBattleship3.alo</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Kedalbe_Battleship3_Death_Clone</Death_Clone>
+		<Starting_Spawned_Units_Tech_0>Hu_Lt_Fighter_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Hu_Med_Fighter_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Hu_Hvy_Fighter_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Hu_Lt_Fighter_Squadron5, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Med_Fighter_Squadron6, 10</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hu_Hvy_Fighter_Squadron4, 15</Reserve_Spawned_Units_Tech_0>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<AI_Combat_Power>21250</AI_Combat_Power>
+		
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>500000000</Tactical_Health>
+		<Shield_Refresh_Rate>256000</Shield_Refresh_Rate>
+		<Energy_Capacity>1500000</Energy_Capacity>
+		<Energy_Refresh_Rate>900000</Energy_Refresh_Rate>
+		
+		<Turret_Rotate_Extent_Degrees>90</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_Hvy_Art_ISD_Max_4000</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>15.0</Projectile_Fire_Recharge_Seconds>
+				
+		<Targeting_Fire_Inaccuracy> Fighter, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+				
+		<SFXEvent_Fire>Unit_Underworld_Plasma_Fire</SFXEvent_Fire>
+		
+		<Targeting_Max_Attack_Distance>3500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Fire_Inaccuracy_Fixed_Radius> 120 </Targeting_Fire_Inaccuracy_Fixed_Radius>
+		
+		<HardPoints> 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Fighter_BayH_00, 
+			HP_Fighter_BayH_01, 
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_MisilA_03,
+			HP_MisilA_04,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_TorpedoA_03,
+			HP_TorpedoA_04,
+			HP_Rocket_01,
+			HP_Rocket_02,
+			HP_Rocket_03,
+			HP_Rocket_04,
+			HP_T_Kedalbe3_01,
+			HP_T_Kedalbe3_02,
+			HP_T_Kedalbe3_03,
+			HP_T_Kedalbe3_04,
+			HP_T_Kedalbe3_05,
+			HP_T_Kedalbe3_06,
+			HP_T_Kedalbe3_07,
+			HP_T_Kedalbe3_08,
+			HP_T_Kedalbe3_09,
+			HP_T_Kedalbe3_10,
+			HP_T_Kedalbe3_11,
+			HP_T_Kedalbe3_12,
+			HP_T_Kedalbe3_13,
+			HP_T_Kedalbe3_14,
+			HP_T_Kedalbe3_15,
+			HP_T_Kedalbe3_16,
+			HP_T_Kedalbe3_17,
+			HP_T_Kedalbe3_18,
+			HP_T_Kedalbe3_19,
+			HP_T_Kedalbe3_20,
+			HP_T_Kedalbe3_21,
+			HP_T_Kedalbe3_22,
+			HP_T_Kedalbe3_23,
+			HP_T_Kedalbe3_24,
+			HP_T_Kedalbe3_25,
+			HP_T_Kedalbe3_26,
+			HP_T_Kedalbe3_27,
+			HP_T_Kedalbe3_28,
+			HP_T_Kedalbe3_29,
+			HP_T_Kedalbe3_30,
+			HP_T_Kedalbe3_31,
+			HP_T_Kedalbe3_32,
+			HP_T_Kedalbe3_33,
+			HP_T_Kedalbe3_34,
+			HP_GENERIC_SHIELD_LEECH_00B
+		</HardPoints>
+		<Population_Value>5</Population_Value>
+		
+		<Tactical_Build_Cost_Multiplayer>7300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+			<Unit_Abilities_Data SubObjectList="Yes">
+				<Unit_Ability>
+					<Type>FULL_SALVO</Type>
+					<Recharge_Seconds>60</Recharge_Seconds>
+					<Expiration_Seconds>5</Expiration_Seconds>
+					<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+					<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+					<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+					<GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+					<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+					<Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+				</Unit_Ability>
+             <Unit_Ability>
+                <Type>LEECH_SHIELDS</Type>
+                <Recharge_Seconds>55.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Kadalbe3_Leech_Shields </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Leech_Sheilds_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_Target_Ability> Unit_Leech_Sheilds_Kadalbe </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+ 				<Supports_Autofire>True</Supports_Autofire>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	4000.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	200.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+           </Unit_Ability>
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+
+            <Leech_Shields_Ability Name="Kadalbe3_Leech_Shields">
+                <Activation_Style> User_Input </Activation_Style>
+                <Applicable_Unit_Categories> Corvette | Frigate | Capital </Applicable_Unit_Categories>
+                <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+                <Activation_Min_Range>10</Activation_Min_Range>
+                <Activation_Max_Range>3500</Activation_Max_Range>
+                <Duration_In_Secs> 25.0 </Duration_In_Secs>
+                <Shield_Damage_Per_Second> 20000.0 </Shield_Damage_Per_Second>
+                <Damage_Multiplier> 3.0 </Damage_Multiplier>
+                <Beam_Color>192, 143, 82, 255</Beam_Color>
+                <Beam_Bone_Name>HP_SHL_00_BONE</Beam_Bone_Name>
+                <Beam_Frames>10</Beam_Frames>
+                <Beam_Width>40.0</Beam_Width>
+                <Beam_Texture_Name>tractor_beam00.tga</Beam_Texture_Name>
+                <Beam_Effect_Name>Leech_Shields</Beam_Effect_Name>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+                <Leech_Effect>Leech_Effect</Leech_Effect>
+            </Leech_Shields_Ability>
+            
+        </Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="Kedalbe_Battleship3_Death_Clone">
+		<Text_ID>TEXT_UNIT_KEDALBE_BATTLESHIP</Text_ID>
+		<Space_Model_Name>UV_KedalbeBattleship3_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_2000</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Underworld </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+
+</Kedalbe_Battleship_up2Unit_Data>

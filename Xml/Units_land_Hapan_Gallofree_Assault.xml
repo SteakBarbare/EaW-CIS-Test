@@ -1,0 +1,52 @@
+﻿<?xml version="1.0"?>
+
+
+<Ha_Gallofree_AssaultUnit_Data>
+	<GroundVehicle Name="Ha_Gallofree_Assault">
+		<Variant_Of_Existing_Type>Gallofree_Assault</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 0, 162, 211, 255 </No_Colorization_Color>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Ha_Ciborg_trooper_Deployed_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	<GroundCompany Name="Ha_Gallofree_Assault_Company">
+		<Variant_Of_Existing_Type>Ha_AT_ST_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_G-HTTA_TRANSPORT_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker Underworld_Mass_Driver_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_G-HTTA_TRANSPORT_A TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_GALLOFREE_Assault.tga</Icon_Name>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hapan_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Assault_Transport</Company_Transport_Unit>
+		<Company_Units>Ha_Gallofree_Assault</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Gallofree_HTT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gallofree_HTT</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+	
+
+</Ha_Gallofree_AssaultUnit_Data>

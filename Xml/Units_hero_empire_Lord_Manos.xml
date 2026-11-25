@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Lord_ManosUnit_Data>
+	<GenericHeroUnit Name="Lord_Manos">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LORD_MANOS_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LORD_MANOS TEXT_TOOLTIP_REDUCE_TIME_MINE_10</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Lord_Manos.tga</Icon_Name>
+		<Spawn_Planet>Ord_Cantrell</Spawn_Planet>
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Lord_Manos_Production_Boost">
+				<Applicable_Unit_Types> Empire_Ground_Mining_Facility, Orbital_Mine, E_Ground_Light_Vehicle_Factory, E_Ground_Heavy_Vehicle_Factory, E_Ground_Advanced_Vehicle_Factory </Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.20</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> Yes </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Lord_Manos_Production_Time_Reduction">
+				<Applicable_Unit_Types> Empire_Ground_Mining_Facility, Orbital_Mine, E_Ground_Light_Vehicle_Factory, E_Ground_Heavy_Vehicle_Factory, E_Ground_Advanced_Vehicle_Factory </Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Planet_Income_Gambling_Ability Name="Lord_Manos_Gambling_Income">
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				<Min_Income_Modifier>-0.20</Min_Income_Modifier>
+				<Max_Income_Modifier>0.90</Max_Income_Modifier>
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+			<Income_Stream_Ability Name="Lord_Manos_Income_Stream">
+				<Base_Income_Value>125</Base_Income_Value>
+				<Base_Interval_In_Secs>5</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Remove_Corruption_Ability Name="Lord_Manos_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Lord_Manos_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LORD_MANOS_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Lord_Manos.tga</Icon_Name>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Lord_Manos</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LORD_MANOS TEXT_TOOLTIP_REDUCE_TIME_MINE_10</Encyclopedia_Text>
+
+		<SFXEvent_Build_Complete>Unit_Select_Cad_Bane</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Fleet_Move_Cad_Bane</SFXEvent_Hero_Respawned>
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+
+	
+</Lord_ManosUnit_Data>

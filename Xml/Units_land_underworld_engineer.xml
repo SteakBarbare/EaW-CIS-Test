@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<Underworld_EngineerUnit_Data>
+
+	
+	<GroundInfantry Name="UI_Engineer">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UI_INGENIERO</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Stormtrooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Dark_Trooper_PhaseII UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UI_INGENIERO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Land_Model_Name>UI_disruptor.alo</Land_Model_Name>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Icon_Name>i_button_ui_disruptor_engineer.tga</Icon_Name>
+		<Max_Speed> 1 </Max_Speed>
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Underworld</Affiliation>
+
+		<Tactical_Health>75</Tactical_Health>
+
+		<Projectile_Types>Proj_Merc_Concussion_Grenade</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>3.5</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Min_Attack_Distance> 50 </Targeting_Min_Attack_Distance>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>240.0</Targeting_Max_Attack_Distance>
+
+		<SFXEvent_Select> Unit_Select_Mercenary </SFXEvent_Select>         		
+		<SFXEvent_Move> Unit_Move_Mercenary </SFXEvent_Move>  
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mercenary</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_Mercenary </SFXEvent_Attack>         		 
+		<SFXEvent_Guard> Unit_Guard_Mercenary </SFXEvent_Guard>            		 
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Mercenary </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Mercenary </SFXEvent_Assist_Attack> 
+		<Death_SFXEvent_Start_Die>Unit_Underworld_Soldier_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Fire>Unit_Underworld_Infantry_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Tactical_Build_Started> UHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> UHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> UHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<AI_Combat_Power>12</AI_Combat_Power>
+				
+		<Death_Clone>Damage_Force_Whirlwind, UI_Engineer_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, UI_Engineer_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, UI_Engineer_Crush_Death_Clone</Death_Clone>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Surface_Type_Cover_Damage_Shield>.25</Surface_Type_Cover_Damage_Shield>
+
+		 <Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADLAND</Alternate_Name_Text>
+	                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADLAND_DESCRIPTION</Alternate_Description_Text>
+					<Recharge_Seconds>30</Recharge_Seconds>
+					<Spawned_Object_Type>U_Engineer_Build_Pad</Spawned_Object_Type>
+					<Effective_Radius> 50.0 </Effective_Radius>
+				    <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+					<SFXEvent_GUI_Unit_Ability_Deactivated/>
+	 				<Area_Effect_Decal_Distance> 50 </Area_Effect_Decal_Distance>
+		  </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Force_Healing_Ability Name="Engineer_Repair_Healing">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount>15.0</Heal_Amount>
+				<Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Vehicle | Air</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_TURRET, TURRET_00, B_TURRET_BASE</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+		<Conversion_Ability_Changes_To_Enemy> UI_Engineer_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+                                               
+	<GroundInfantry Name="UI_Engineer_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> UI_Engineer </Variant_Of_Existing_Type>
+		<SFXEvent_Select> Unit_Select_Rebel_Soldier_Converted </SFXEvent_Select>             
+		<SFXEvent_Move> Unit_Move_Rebel_Soldier_Converted </SFXEvent_Move>                      
+		<SFXEvent_Attack> Unit_Attack_Rebel_Soldier_Converted </SFXEvent_Attack>                 
+		<SFXEvent_Guard> Unit_Guard_Rebel_Soldier_Converted </SFXEvent_Guard>                   
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Soldier_Converted </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Rebel_Soldier_Converted </SFXEvent_Assist_Attack> 	 
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_3_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	<GroundInfantry Name="UI_Engineer_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="UI_Engineer_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="UI_Engineer_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>EI_Engineer</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>	
+
+<!-- COMPANY INFO -->
+
+	<GroundInfantry Name="UI_Engineer_B">
+		<Variant_Of_Existing_Type>UI_Engineer</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Underworld_UI_Engineer_Merc_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="Underworld_UI_Engineer_Merc_Squad_B">
+		<Variant_Of_Existing_Type>Underworld_UI_Engineer_Merc_Squad</Variant_Of_Existing_Type>
+		<Company_Units>UI_Engineer, UI_Engineer, UI_Engineer, UI_Engineer, UI_Engineer</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Underworld_UI_Engineer_Merc_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UI_INGENIERO_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_INGENIERO TEXT_DESC_CI_CANTIDAD_6 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Icon_Name>i_button_ui_disruptor_engineer.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+
+		<Autoresolve_Health>135</Autoresolve_Health>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>U_Ground_Barracks, U_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Underworld_Infantry_Droid_Shuttle</Company_Transport_Unit>
+		<Company_Units>UI_Engineer_B</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>UHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Assault_Squad</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Assault_Squad</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+	</GroundCompany>
+	
+	
+	
+
+
+</Underworld_EngineerUnit_Data>

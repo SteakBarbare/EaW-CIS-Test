@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<BS_Fleet_SullustUnit_Data>
+	<SpaceUnit Name="BS_Fleet_Sullust_AI">
+		<Variant_Of_Existing_Type>BS_Fleet_Sullust</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, UXSoloIA_STR_01</Required_Special_Structures>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+		<!--<Space_Override_Population_Value>20</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="BS_Fleet_Sullust">
+		<Variant_Of_Existing_Type>R_Fleet_Sullust</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_REBEL_SULLUST</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_DAUNTLESS TEXT_UNIT_LIBERATOR_CARRIER TEXT_SQUADRON_PREYBIRD</Encyclopedia_Text>
+		<Icon_Name>i_button_UI_fleet_Dauntless_Sullust.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Cost_Credits>28000</Build_Cost_Credits>
+		<Affiliation>Underworld</Affiliation>		
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Tactical_Build_Cost_Multiplayer>28000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Disband_BS_Fleet_Sullust">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_REBEL_SULLUST TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>BS_Fleet_Sullust</Required_Orbiting_Units>
+		<Lua_Script>Disband_BS_Fleet_Sullust</Lua_Script>
+		<SFXEvent_Build_Started>UHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>	
+</BS_Fleet_SullustUnit_Data>

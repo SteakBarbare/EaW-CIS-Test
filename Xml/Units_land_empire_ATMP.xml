@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<AT_MPUnit_Data>
+<GroundVehicle Name="AT_HMP">
+		<Variant_Of_Existing_Type>AT_MP</Variant_Of_Existing_Type>
+		<Projectile_Types>Proj_Ground_Proton_Torpedo_ATHMP</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		<Tactical_Health>300</Tactical_Health>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 5.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_HMP_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_EWEB_Blaster</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Assist_Attack_AT_ST</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+   
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="AT_HMP_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+</GroundVehicle>		
+
+<GroundVehicle Name="AT_MP">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_AT_MP</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_AT_MP</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>EV_AT_MP.ALO</Land_Model_Name>
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD,HUNT, WALK_LOCOMOTOR,TARGETING,IDLE,WEAPON,TURRET,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, SQUASH, GARRISON_UNIT</LandBehavior>
+
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Max_Speed>0.6</Max_Speed>
+		
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<AI_Combat_Power>50</AI_Combat_Power>
+		
+		<Projectile_Types>Proj_Ground_Proton_Torpedo_ATMP</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 60.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+		<SFXEvent_Fire>Unit_Missile_Fire</SFXEvent_Fire>
+		
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+					
+		<HardPoints>
+			HP_Gr_Front_Eweb_Laser_Red_01
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Atst_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+
+		<Icon_Name>i_button_EV_AT_MP.tga</Icon_Name>
+
+		<Death_Clone>Damage_Normal, AT_MP_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Normal, AT_MP_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Normal, AT_MP_Death_Clone_02</Death_Clone>
+		
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+
+		<Vehicle_Thief_Inside_Clone>AT_MP_Captured</Vehicle_Thief_Inside_Clone>
+		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 5.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>AT_MP_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Proton_Torpedo_ATMP</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Assist_Attack_AT_ST</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+   
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="AT_MP_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_MP_Captured">
+		<Variant_Of_Existing_Type>AT_MP</Variant_Of_Existing_Type>
+		
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+	
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_MP_Death_Clone_00">
+		<Variant_Of_Existing_Type>AT_MP</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_MP_Death_Clone_01">
+		<Variant_Of_Existing_Type>AT_MP</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+      <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_MP_Death_Clone_02">
+		<Variant_Of_Existing_Type>AT_MP</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_AT_MP_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_EV_AT_MP_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>155</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Company_Units>AT_MP, AT_MP, AT_MP</Company_Units>
+
+		<Icon_Name>i_button_EV_AT_MP.tga</Icon_Name>
+		<GUI_Model_Name>EV_AT_MP.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_AT_MP TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+	<GroundCompany Name="Imperial_AT_HMP_Squad">
+		<Variant_Of_Existing_Type>Imperial_AT_MP_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Units>AT_HMP, AT_HMP, AT_HMP</Company_Units>
+		
+	</GroundCompany>
+
+</AT_MPUnit_Data>

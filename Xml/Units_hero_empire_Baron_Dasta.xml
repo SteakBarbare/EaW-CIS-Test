@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Baron_DastaUnit_Data>
+	
+	
+	
+	<GenericHeroUnit Name="Baron_Dasta">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_BARON_DASTA_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BARON_DASTA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Baron_Dasta.tga</Icon_Name>
+		<Spawn_Planet>Nez_Peron</Spawn_Planet>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Baron_Dasta_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Planet_Income_Gambling_Ability Name="Baron_Dasta_Gambling_Income">
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				<Min_Income_Modifier>-0.20</Min_Income_Modifier>
+				<Max_Income_Modifier>0.90</Max_Income_Modifier>
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+			<Income_Stream_Ability Name="Baron_Dasta_Income_Stream">
+				<Base_Income_Value>125</Base_Income_Value>
+				<Base_Interval_In_Secs>5</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Reduce_Production_Price_Ability Name="Baron_Dasta_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Price_Ability>
+			<Remove_Corruption_Ability Name="Baron_Dasta_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Baron_Dasta_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_BARON_DASTA_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BARON_DASTA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Baron_Dasta.tga</Icon_Name>
+				
+		<Company_Units>Baron_Dasta</Company_Units>
+	</HeroCompany>
+
+	
+</Baron_DastaUnit_Data>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Kooloota_FyfUnit_Data>
+	<GenericHeroUnit Name="Kooloota_Fyf">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_KOOLOOTA_FYF_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KOOLOOTA_FYF TEXT_TOOLTIP_REDUCE_TIME_CORVETTE_10 </Encyclopedia_Text>
+		<Icon_Name>i_button_Ei_Kooloota_Fyf.tga</Icon_Name>
+		<Spawn_Planet>Ord_Cantrell</Spawn_Planet>
+		
+		<Abilities SubObjectList="Yes">
+			<Political_Transition_Bonus_Ability Name="Kooloota_Fyf_Political_Transition_Bonus">
+				<Time_Reduction_Percentage>0.25</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Political_Transition_Bonus_Ability>
+			<Political_Control_Protection_Ability Name="Kooloota_Fyf_Political_Protection">
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+			</Political_Control_Protection_Ability>
+			<Reduce_Production_Time_Ability Name="Kooloota_Fyf_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Corvette</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Kooloota_Fyf_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Kooloota_Fyf_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_KOOLOOTA_FYF_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KOOLOOTA_FYF TEXT_TOOLTIP_REDUCE_TIME_CORVETTE_10</Encyclopedia_Text>
+		<Icon_Name>i_button_Ei_Kooloota_Fyf.tga</Icon_Name>
+				
+		<Company_Units>Kooloota_Fyf</Company_Units>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Sullustan</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Attack_Sullustan</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Sullustan</SFXEvent_Fleet_Move>
+	</HeroCompany>
+</Kooloota_FyfUnit_Data>

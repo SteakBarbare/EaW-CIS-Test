@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO MOVIMIENTOS ESPECIALES ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+	  <Event Name="Special_Movement_00">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+
+      <Event Name="Special_Movement_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+	  </Event>
+					<Event Name="Hacer_Hutt_Myrkr">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Myrkr</Reward_Param1>
+						<Reward_Param2>Hutts</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Coruscant">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Coruscant</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Ord_Pardron">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Ord_Pardron</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Qat_Chrystac">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Qat_Chrystac</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Woostri">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Woostri</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Generis">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Generis</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Corellia">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Corellia</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Brentaal">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Brentaal</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+					<Event Name="Hacer_Rebelde_Kashyyyk">
+						<Event_Type>STORY_TRIGGER</Event_Type>
+						<Reward_Type>PLANET_FACTION</Reward_Type>
+						<Reward_Param1>Kashyyyk</Reward_Param1>
+						<Reward_Param2>Rebel</Reward_Param2>
+						<Prereq>Special_Movement_00</Prereq>
+					</Event>
+	  
+	  <Event Name="Special_Movement_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Special_Movement_01</Prereq>
+	  </Event>
+	  
+	  <Event Name="Special_Movement_01c">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Special_Movement_01b</Prereq>
+	  </Event>
+	  
+	  <Event Name="Special_Movement_01d">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Special_Movement_01c</Prereq>
+	  </Event>
+	  				
+	
+</Story>

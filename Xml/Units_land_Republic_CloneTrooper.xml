@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<CloneTrooperUnit_Data>
+	
+	
+	<GroundInfantry Name="CloneTrooper">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CLON_PHASE1</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_MAF_team </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RI_ClonPhase1.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			RI_ClonPhase1GunLarga.ALO,
+			Urban, 				RI_ClonPhase1.ALO,
+			Arctic, 			RI_ClonPhase2Snow.ALO,
+			Volcanic, 			RI_ClonPhase1GunLarga.ALO,
+			Desert, 			RI_ClonPhase1GunLarga.ALO,
+			Forest, 			RI_ClonPhase1Gunlarga.ALO,
+			Swamp, 				RI_ClonPhase1M.ALO
+		</Land_Terrain_Model_Mapping>
+		<Icon_Name>I_BUTTON_Rep_Phase1Clones.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Health>100</Tactical_Health>
+
+		<Projectile_Types>Proj_Hand_Blaster_Blue</Projectile_Types>
+
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<Death_Clone>Damage_Force_Whirlwind, CloneTrooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, CloneTrooper_Crush_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Attention, 
+				CancillerPalpatine, 
+				Anakin
+		</Presence_Induced_Animations>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Clon_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	<GroundInfantry Name="CloneTrooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>CloneTrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="CloneTrooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>CloneTrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Republic_Squad_CloneTrooper">
+		<Variant_Of_Existing_Type>CloneTrooper</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,GARRISON_UNIT</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .1 </FormationRaggedness>
+		<MaxJiggleDistance> 1 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Republic_Squad_CloneTrooper_B">
+		<Variant_Of_Existing_Type>Republic_Squad_CloneTrooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Republic_CloneTrooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Republic_CloneTrooper_Squad_B">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units>
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper
+		 </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 18 </Max_Squad_Size>
+		<Create_Team_Type> Clontrooper1_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Republic_CloneTrooper_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_CLON_PHASE1_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_MAF_team </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		
+		<Company_Units>
+		 Republic_Squad_CloneTrooper_B,
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper, 
+		 Republic_Squad_CloneTrooper
+		 </Company_Units>
+		<Max_Squad_Size> 18 </Max_Squad_Size>
+		<Create_Team_Type> Clontrooper1_Team </Create_Team_Type>
+		<Icon_Name>I_BUTTON_Rep_Phase1Clones.tga</Icon_Name>
+		<GUI_Model_Name>RI_ClonPhase1.ALO</GUI_Model_Name>
+		<Land_Model_Name>RI_ClonPhase1.ALO</Land_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Clon_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>60</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Clon_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundCompany>
+
+	<GroundCompany Name="Republic_Large_Clontrooper_Squad">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad_B</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Damage>9</Damage>
+	</GroundCompany>
+	<GroundCompany Name="Republic_Medium_Clontrooper_Squad">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Damage>9</Damage>
+	</GroundCompany>
+	<GroundCompany Name="Republic_Mini_Clontrooper_Squad">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Damage>3</Damage>
+	</GroundCompany>
+	<Container Name="Clontrooper1_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_CLON_PHASE1_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Rep_Phase1Clones.tga</Icon_Name>
+	</Container>
+	
+	
+	
+	
+</CloneTrooperUnit_Data>

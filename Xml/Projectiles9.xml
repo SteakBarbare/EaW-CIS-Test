@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Projectiles>
+	<Projectile Name="Proj_Hapan_Command_Gun">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_SMALLG.ALO</Land_Model_Name>
+		<Projectile_Custom_Render>1</Projectile_Custom_Render>
+		<Projectile_Width>0.3</Projectile_Width>
+		<Projectile_Length>13.0</Projectile_Length>
+		<Projectile_Texture_Slot>3,0</Projectile_Texture_Slot>
+		<Damage_Type> Damage_Default </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>11.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		<Projectile_Max_Flight_Distance>400.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>0.0</Projectile_Damage> <!-- No damage, stun blast -->
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_SFXEvent_Detonate>Unit_Force_Convert</Projectile_SFXEvent_Detonate>						 <!-- Frank STUB PLACEHOLDER -->
+		<Projectile_Object_Detonation_Particle>Hapan_Force_Convert_Particles</Projectile_Object_Detonation_Particle>		 <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Ground_Detonation_Particle>Hapan_Force_Convert_Particles</Projectile_Ground_Detonation_Particle>		 <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Lifetime_Detonation_Particle>Hapan_Force_Convert_Particles</Projectile_Lifetime_Detonation_Particle> <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Absorbed_By_Shields_Particle />
+		<AI_Combat_Power>0</AI_Combat_Power>
+
+		<!-- Convert enemy specifics -->
+		<Projectile_Convert_Enemy_On_Detonation> Yes </Projectile_Convert_Enemy_On_Detonation>
+		<Projectile_Convert_Enemy_Radius> 100 </Projectile_Convert_Enemy_Radius>
+		<Projectile_Convert_Enemy_Spawn_Effect> Stun_Particles </Projectile_Convert_Enemy_Spawn_Effect> 					<!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Convert_Enemy_Targets_Category_Mask> Infantry </Projectile_Convert_Enemy_Targets_Category_Mask>
+	</Projectile>
+	
+	<Projectile Name="Proj_Assault_Gun_Yellow">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_SMALLY.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_Blaster_Cannon </Damage_Type>
+		<Max_Speed>20.0</Max_Speed>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>MISSILE</Projectile_Category>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Projectile_Max_Flight_Distance>400.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>3.5</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>Small_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Tiny_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Projectile_Dirt_Collide</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Small</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE_INFANTRY</Projectile_Ground_Detonation_SurfaceFX>
+		<AI_Combat_Power>70</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Infantry_Blaster_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Projectile_Infantry_Ricochet </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+	</Projectile>
+</Projectiles>

@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<MC108Unit_Data>
+	<SpaceUnit Name="MC108">
+		<Variant_Of_Existing_Type>MC108ORG</Variant_Of_Existing_Type>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="MC108ORG">
+		<Variant_Of_Existing_Type>Mc80aORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_MC108</Text_ID>
+		<Encyclopedia_Good_Against> ISD3 Titan Predator </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> SOVEREIGN Missile_Gunboat SSD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MC108 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X2 TEXT_UNIT_T42 TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SSD_CARRIER </Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>RV_MC108.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<!--<Custom_Hard_XExtent> 695.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 317.0 </Custom_Hard_YExtent>-->
+		
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<!--<Layer_Z_Adjust>800.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>420.0</Layer_Z_Adjust>
+		
+		<Space_Layer> supercapital </Space_Layer>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		
+		<GUI_Bracket_Height>500</GUI_Bracket_Height>
+		<GUI_Bracket_Size>1</GUI_Bracket_Size>
+		<GUI_Bounds_Scale>0.2</GUI_Bounds_Scale>
+		
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+		<Death_Clone>Damage_Normal, MC108_Death_Clone</Death_Clone>
+		<Affiliation>Rebel, GA</Affiliation>
+				
+		<Required_Special_Structures>Super_Astilleros_Rebeldes, AdvancedTech_8</Required_Special_Structures>
+
+		<Autoresolve_Health>68000</Autoresolve_Health>
+		<Tactical_Health>500000000</Tactical_Health>
+		<Shield_Points>68000</Shield_Points>
+		<Shield_Refresh_Rate>82000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>22500</Build_Cost_Credits>
+		<AI_Combat_Power>7575</AI_Combat_Power>
+		<Build_Time_Seconds>175</Build_Time_Seconds>
+
+		<Starting_Spawned_Units_Tech_0>A_Wing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rebel_T42_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>A_Wing_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rebel_T42_Squadron4, 29</Reserve_Spawned_Units_Tech_0>
+
+
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>	
+
+		<CategoryMask> Capital | AntiTransport </CategoryMask>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<HardPoints>
+				HP_Flak_01,
+				HP_Flak_02,
+				HP_Flak_03,
+				HP_Flak_04,
+				HP_Flak_05,
+				HP_Flak_06,
+				HP_T_MC112_01,
+				HP_T_MC112_02,
+				HP_T_MC112_03,
+				HP_T_MC112_04,
+				HP_T_MC112_05,
+				HP_T_MC112_06,
+				HP_T_MC112_07,
+				HP_T_MC112_08,
+				HP_T_MC112_09,
+				HP_T_MC112_10,
+				HP_T_MC112_11,
+				HP_T_MC112_12,
+				HP_T_MC112_13,
+				HP_T_MC112_14,
+				HP_T_MC112_15,
+				HP_T_MC112_16,
+				HP_T_MC112_17,
+				HP_T_MC112_18,
+				HP_T_MC112_19,
+				HP_T_MC112_20,
+				HP_T_MC112_21,
+				HP_T_MC112_22,
+				HP_T_MC112_23,
+				HP_T_MC112_24,
+				HP_T_MC112_25,
+				HP_T_MC112_26,
+				HP_T_MC112_27,
+				HP_T_MC112_28,
+				HP_T_MC112_29,
+				HP_T_MC112_30,
+				HP_T_MC112_31,
+				HP_T_MC112_32,
+				HP_T_MC112_33,
+				HP_T_MC112_34,
+				HP_T_MC112_35,
+				HP_T_MC112_36,
+				HP_T_MC112_37,
+				HP_T_MC112_38,
+				HP_T_MC112_39,
+				HP_T_MC112_40,
+				HP_T_MC112_41,
+				HP_T_MC112_42,
+				HP_T_MC112_43,
+				HP_T_MC112_44,
+				HP_T_MC112_45,
+				HP_T_MC112_46,
+				HP_T_MC112_47,
+				HP_T_MC112_48,
+				HP_T_MC112_49,
+				HP_T_MC112_50,
+				HP_T_MC112_51,
+				HP_T_MC112_52,
+				HP_T_MC112_53,
+				HP_T_MC112_54,
+				HP_T_MC112_55,
+				HP_T_MC112_56,
+				HP_T_MC112_57,
+				HP_T_MC112_58,
+				HP_T_MC112_59,
+				HP_T_MC112_60,
+				HP_T_MC112_61,
+				HP_T_MC112_62,
+				HP_T_MC112_63,
+				HP_T_MC112_64,
+				HP_T_MC112_65,
+				HP_T_MC112_66,
+				HP_T_MC112_67,
+				HP_T_MC112_68,
+				HP_T_MC112_69,
+				HP_T_MC112_70,
+				HP_T_MC112_71,
+				HP_T_MC112_72,
+				HP_T_MC112_73,
+				HP_T_MC112_74,
+				HP_T_MC112_75,
+				HP_T_MC112_76,
+				HP_T_MC112_77,
+				HP_T_MC112_78,
+				HP_T_MC112_79,
+				HP_T_MC112_80,
+				HP_T_MC112_81,
+				HP_T_MC112_82,
+				HP_T_MC112_83,
+				HP_T_MC112_84,
+				HP_T_MC112_85,
+				HP_T_MC112_86,
+				HP_T_MC112_87,
+				HP_T_MC112_88,
+				HP_T_MC112_89,
+				HP_T_MC112_90,
+				HP_T_MC112_91,
+				HP_T_MC112_92,
+				HP_T_MC112_93,
+				HP_T_MC112_94,
+				HP_T_MC112_95,
+				HP_T_MC112_96,
+				HP_T_MC112_97,
+				HP_T_MC112_98,
+				HP_T_MC112_99,
+				HP_T_MC112_100,
+				HP_T_MC112_101,
+				HP_T_MC112_102,
+				HP_T_MC112_103,
+				HP_T_MC112_104,
+				HP_T_MC112_105,
+				HP_T_MC112_106,
+				HP_T_MC112_107,
+				HP_T_MC112_108,
+				HP_T_MC112_109,
+				HP_T_MC112_110,
+				HP_T_MC112_111,
+				HP_T_MC112_112,
+				HP_T_MC112_113,
+				HP_T_MC112_114,
+				HP_T_MC112_115,
+				HP_T_MC112_116,
+				HP_Tractor_Beam_Rebelde,
+				HP_Shield_GeneratorH_00,
+				HP_EnginesH_00,
+				HP_EnginesH_01,
+				HP_EnginesH_02,
+				HP_Fighter_BayH_00,
+				HP_Fighter_BayH_01,
+				HP_Fighter_BayH_02,
+				HP_Fighter_BayH_03,
+				HP_Fighter_BayH_04,
+				HP_Fighter_BayH_05,
+				HP_Fighter_BayH_06,
+				HP_Fighter_BayH_07,
+				HP_Fighter_BayH_08,
+				HP_Fighter_BayH_09
+		</HardPoints>
+		<Icon_Name>I_BUTTON_MC108.TGA</Icon_Name>
+		<GUI_Model_Name>RV_MC108.ALO</GUI_Model_Name>
+
+		<Radar_Icon_Size>0.111335 0.15267</Radar_Icon_Size>  
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> MC108_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			    <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="MC108_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>1800</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			<Force_Healing_Ability Name="MC108_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>MC108</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>TractorBeam</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>      
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>8000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>66</Tactical_Build_Time_Seconds>
+
+		<Population_Value>6</Population_Value>
+		<!--<Space_Override_Population_Value>5</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="MC108_Death_Clone">
+		<Text_ID>TEXT_UNIT_MEDIATOR</Text_ID>
+		<Space_Model_Name>RV_MC108_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_8000</Death_Explosions>
+		<Scale_Factor>0.45</Scale_Factor>
+		<Layer_Z_Adjust>800.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</MC108Unit_Data>

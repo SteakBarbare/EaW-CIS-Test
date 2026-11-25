@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<space_structure_NV_Defense_Hangar_StationUnit_Data>
+	<SpecialStructure Name="NV_Defense_Hangar_Station_Rep">
+		<Variant_Of_Existing_Type>NV_Defense_Hangar_StationORG</Variant_Of_Existing_Type>
+		<Affiliation>Republic</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>REP_VWing_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>REP_VWing_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_ARC-170_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ARC-170_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>	
+	<SpecialStructure Name="NV_Defense_Hangar_Station">
+		<Variant_Of_Existing_Type>NV_Defense_Hangar_StationORG</Variant_Of_Existing_Type>
+		<Affiliation>Pirates</Affiliation>
+		<Starting_Spawned_Units_Tech_0>BS_Lt_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BS_Med_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>BS_Lt_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>BS_Med_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>	
+	<SpecialStructure Name="Ch_Defense_Hangar_Station">
+		<Variant_Of_Existing_Type>NV_Defense_Hangar_StationORG</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Starting_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron7, -1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron4, -1</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>	
+	<SpecialStructure Name="Ch_Hangar_Container_Defenses">
+		<Variant_Of_Existing_Type>Ch_Defense_Hangar_Station</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HANGARCONTAINER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_R_HANGARCONTAINER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD </Encyclopedia_Text>
+		<Lua_Script>Ch_STR_D_B_STRU</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Chiss</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+	</SpecialStructure>
+
+	
+	<SpecialStructure Name="NV_Defense_Hangar_StationORG">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HANGARCONTAINER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_R_HANGARCONTAINER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD </Encyclopedia_Text>
+		<Space_Model_Name>NV_Defense_Hangar_Station.ALO</Space_Model_Name>
+		<Affiliation>Pirates</Affiliation>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<AI_Combat_Power>800</AI_Combat_Power>
+		<Icon_Name>I_BUTTON_NV_Defense_Hangar_Station.tga</Icon_Name>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, WEAPON, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04,
+			HP_Torpedo_01,
+			HP_Torpedo_02,
+			HP_Torpedo_03,
+			HP_Torpedo_04,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_TurboR_01,
+			HP_TurboR_02,
+			HP_TurboR_03,
+			HP_TurboR_04,
+			HP_TurboR_05,
+			HP_TurboR_06,
+			HP_TurboR_07,
+			HP_TurboR_08,
+			HP_TurboR_09,
+			HP_TurboR_10,
+			HP_TurboR_11,
+			HP_TurboR_12,
+			HP_TurboR_13,
+			HP_TurboR_14,
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_IonM_01,
+			HP_IonM_02,
+			HP_IonM_03
+		</HardPoints>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+
+		<Death_Clone>Damage_Normal, NV_Defense_Hangar_Station_Death_Clone</Death_Clone>
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</SpecialStructure>
+	<SpecialStructure Name="NV_Defense_Hangar_Station_Death_Clone">
+		<Text_ID>TEXT_REBEL_STAR_BASE_1</Text_ID>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Space_Model_Name>NV_Defense_Hangar_Station_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</space_structure_NV_Defense_Hangar_StationUnit_Data>

@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<EVFO_Starkiller_StrUnit_Data>
+	<SpecialStructure Name="EVFO_Starkiller">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_OBJECT_STAR_SYSTEM_STARKILLER_BASE</Text_ID>
+		<Encyclopedia_Text>TEXT_PLANET_STARKILLER_BASE_INFO_HIS_01 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_DEATHSTAR</Encyclopedia_Text>
+	
+		<Space_Model_Name>EVFO_Starkiller_invisible.ALO</Space_Model_Name>
+
+		<GUI_Model_Name>EVFO_Starkiller_invisible.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		<Shield_Armor_Type>Shield_DeathStar</Shield_Armor_Type>
+		
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>20000000</Tactical_Health>
+		<Shield_Refresh_Rate>20000000</Shield_Refresh_Rate>
+		<Energy_Capacity>90000000</Energy_Capacity>
+		<Energy_Refresh_Rate>34000000</Energy_Refresh_Rate>
+
+		<Icon_Name>i_button_EVFO_Starkiller.TGA</Icon_Name>
+		<In_Background>Yes</In_Background>
+		<Victory_Relevant>No</Victory_Relevant>
+		<Lua_Script>ObjectScript_None</Lua_Script>
+		
+		<Is_Visible_On_Radar>No</Is_Visible_On_Radar>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> EVFO_Starkiller_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Super_Laser_Ability Name="EVFO_Starkiller_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+				<Damage_Per_Frame>1000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>1200</Line_Width>
+				<Line_Color>255 53 0 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+				<Fire_Delay>0</Fire_Delay>
+				<Fire_Continuation>0.01</Fire_Continuation>
+			</Super_Laser_Ability>
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>20000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Death_Clone>Damage_Normal, EVFO_Starkiller_Death_Clone</Death_Clone>
+	</SpecialStructure>
+	<SpecialStructure Name="EVFO_Starkiller_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>EVFO_Starkiller_Orbital.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EVFO_Starkiller_Orbital.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Planet_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>DeathStar_Explosion_Space_Empire</Death_Explosions>
+		<Scale_Factor>4.5</Scale_Factor>
+		<Layer_Z_Adjust>-440.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpecialStructure>
+	
+</EVFO_Starkiller_StrUnit_Data>

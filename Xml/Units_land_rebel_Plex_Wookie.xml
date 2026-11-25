@@ -1,0 +1,161 @@
+﻿<?xml version="1.0"?>
+
+
+<Plex_WookieUnit_Data>
+	<GroundInfantry Name="Plex_Wookie">
+		<Variant_Of_Existing_Type> Plex_SoldierORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_WOOKIE</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank Canderous_Assault_Tank AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Stormtrooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Stealth_Capable>No</Stealth_Capable>
+		<Land_Model_Name>RI_WookiePlex.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>RI_WookiePlex.ALO</Land_Model_Anim_Override_Name>
+		<Icon_Name>i_button_plexwookie.tga</Icon_Name>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Rebel</Affiliation>
+
+		<Tactical_Health>200</Tactical_Health>
+		<AI_Combat_Power>15</AI_Combat_Power>
+
+		<SFXEvent_Select>Unit_Select_Wookie</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Wookie</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Wookie</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Wookie</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Wookie </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Attack_Wookie </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Wookie_Death</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Ambient_Moving> Ambient_Wookie_Random_Chatter </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Death_Clone>Damage_Force_Whirlwind, Plex_Wookie_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Plex_Wookie_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Plex_Wookie_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Plex_Wookie_Remote_Bomb_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Celebrate, 
+				AT_AT_Walker_Cable_Attack_Death_Clone,
+				AT_AT_Walker_Death_Clone_00,
+				AT_AT_Walker_Death_Clone_01,
+				AT_AT_Walker_Death_Clone_02
+		</Presence_Induced_Animations>		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Wookie</SFXEvent_GUI_Unit_Ability_Activated>		  
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Conversion_Ability_Changes_To_Enemy> Plex_Wookie_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Squad_Plex_Wookie">
+		<Variant_Of_Existing_Type>Plex_Wookie</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_SOLDIER</Text_ID>
+		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, GARRISON_UNIT, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> 1.4 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+		<Conversion_Ability_Changes_To_Enemy> Squad_Plex_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+	                                 
+	<GroundInfantry Name="Plex_Wookie_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Plex_Wookie </Variant_Of_Existing_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Plex_Wookie_NonVictroy">
+		<Variant_Of_Existing_Type> Plex_Wookie </Variant_Of_Existing_Type>
+		<Victory_Relevant>no</Victory_Relevant>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_Wookie_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_Wookie</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_Wookie_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_Wookie</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_Wookie_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_Wookie</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Plex_Wookie_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_Wookie</Variant_Of_Existing_Type>
+	</GroundInfantry>	
+	<GroundInfantry Name="Squad_Plex_Wookie_B">
+		<Variant_Of_Existing_Type>Squad_Plex_Wookie</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Rebel_Wookie_Buster_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Rebel_Wookie_Buster_Squad_B">
+		<Variant_Of_Existing_Type>Rebel_Wookie_Buster_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Plex_Wookie, Squad_Plex_Wookie, Squad_Plex_Wookie </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Plex_Wookie_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Rebel_Wookie_Buster_Squad">
+		<Variant_Of_Existing_Type>Rebel_Wookie_Trooper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_WOOKIE_BUSTER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank TIE_Crawler AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Stormtrooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+
+		<Tech_Level>0</Tech_Level>
+
+		
+		<Company_Units> Squad_Plex_Wookie_B, Squad_Plex_Wookie, Squad_Plex_Wookie </Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Plex_Wookie_Team </Create_Team_Type>
+		<Icon_Name>i_button_plexwookie.tga</Icon_Name>
+		<GUI_Model_Name>RI_WookiePlex.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<Container Name="Plex_Wookie_Team">
+		<Variant_Of_Existing_Type>Plex_Soldier_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_WOOKIE_BUSTER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank TIE_Crawler AT_AT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Stormtrooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_plexwookie.tga</Icon_Name>
+	</Container>
+</Plex_WookieUnit_Data>

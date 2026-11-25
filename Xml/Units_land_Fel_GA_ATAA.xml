@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<EVF_AT_AA_WalkerUnit_Data>
+	<GroundVehicle Name="EVF_AT_AA_Walker">
+		<Variant_Of_Existing_Type>AT_AA_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATHAA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATHAA</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		
+		<Affiliation>Fel, Krayt, Rebel</Affiliation>
+		<Icon_Name>I_BUTTON_EVF_AT_AA.tga</Icon_Name>
+		<Land_Model_Name>EVF_ATAA.ALO</Land_Model_Name>
+		
+		<Hardpoints>
+				HP_EVF_AT_AA_Walker_01,
+		</Hardpoints>
+
+		<Projectile_Types>Proj_Chiss_ATSAP_AA_Turret</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		
+		<Vehicle_Thief_Inside_Clone>EVF_AT_AA_Walker_Captured</Vehicle_Thief_Inside_Clone>
+		<Destruction_Survivors> 
+			Walker_Pilot_Survivor, 1.0 
+			Walker_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+	</GroundVehicle>	
+
+	<GroundVehicle Name="EVF_AT_AA_Walker_Captured">
+		<Variant_Of_Existing_Type>EVF_AT_AA_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundCompany Name="EVF_AT_AA_Walker_Squad">
+		<Variant_Of_Existing_Type>Ch_AT_AA_Walker_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_ATHAA_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATHAA</Encyclopedia_Text>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Hvy_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVF_AT_AA_Walker, EVF_AT_AA_Walker, EVF_AT_AA_Walker</Company_Units>
+		<Icon_Name>I_BUTTON_EVF_AT_AA.tga</Icon_Name>
+		
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+	<GroundCompany Name="EVK_AT_AA_Walker_Squad">
+		<Variant_Of_Existing_Type>Ch_AT_AA_Walker_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_ATHAA_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATHAA</Encyclopedia_Text>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Krayt_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Hvy_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVF_AT_AA_Walker, EVF_AT_AA_Walker, EVF_AT_AA_Walker</Company_Units>
+		<Icon_Name>I_BUTTON_EVF_AT_AA.tga</Icon_Name>
+		
+		<Tactical_Build_Prerequisites>Krayt_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</EVF_AT_AA_WalkerUnit_Data>

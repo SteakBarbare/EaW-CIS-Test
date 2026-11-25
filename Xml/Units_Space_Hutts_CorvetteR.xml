@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+
+
+<Hu_Hutt_CorvetteRUnit_Data>
+
+
+
+	<SpaceUnit Name="Hu_Hutt_CorvetteR">
+		<Variant_Of_Existing_Type>CR_CVORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_HUTT_CORVETTER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_HUTT_CORVETTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>Hu_Hutt_CorvetteR.ALO</Space_Model_Name>
+		<GUI_Model_Name>Hu_Hutt_CorvetteR.ALO</GUI_Model_Name>
+		<Icon_Name>i_button_Hu_Hutt_CorvetteR.tga</Icon_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<!--<Custom_Hard_XExtent> 46.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>-->
+		<Layer_Z_Adjust>120.0</Layer_Z_Adjust>
+
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+
+		<Death_Clone>Damage_Normal, Hu_Hutt_CorvetteR_Death_Clone</Death_Clone>
+
+		<Affiliation>Hutts, GAC</Affiliation>
+		
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+
+		<Autoresolve_Health>600</Autoresolve_Health>
+		<Shield_Points>10000</Shield_Points>
+		<Tactical_Health>50000000</Tactical_Health>
+		<Shield_Refresh_Rate>13000</Shield_Refresh_Rate>
+		<Energy_Capacity>240000</Energy_Capacity>
+		<Energy_Refresh_Rate>144000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Tactical_Bribe_Cost>300</Tactical_Bribe_Cost>	
+
+		<AI_Combat_Power>135</AI_Combat_Power>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<HardPoints>
+			HP_TurboY_01,
+			HP_TurboY_02,
+			HP_TurboY_03,
+			HP_TurboY_04,
+			HP_TurboMO_01,
+			HP_TurboMO_02,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Rocket_01,
+			HP_Rocket_02,
+			HP_Shield_Generator_Small_00,
+			HP_Engines_Small_00
+		</HardPoints>
+		
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Corvette</SFXEvent_Build_Complete>
+
+		
+		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Hutts_CorvetteR_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Cluster_Bombs_MC30_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="Hutts_CorvetteR_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 1.5 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_Cluster_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_MC30_Launch_Cluster_Bomb</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+	</SpaceUnit>
+
+    <SpaceUnit Name="Hu_Hutt_CorvetteR_Death_Clone">
+		<Text_ID>TEXT_UNIT_BALRUS</Text_ID>
+		<Space_Model_Name>Hu_Hutt_CorvetteR_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+</Hu_Hutt_CorvetteRUnit_Data>

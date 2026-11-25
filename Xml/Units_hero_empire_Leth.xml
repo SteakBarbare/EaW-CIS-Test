@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<LethUnit_Data>
+
+	
+	<HeroUnit Name="Leth">
+		<Variant_Of_Existing_Type>Basic_Generic_H</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LETH</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LETH TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ei_Leth.tga</Icon_Name>
+		<Spawn_Planet>Byss</Spawn_Planet>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Abilities SubObjectList="Yes">
+
+			<Reduce_Production_Time_Ability Name="Leth_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Leth_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Leth_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LETH</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Leth.tga</Icon_Name>
+		<Company_Transport_Unit>Leth_Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Leth</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LETH TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+			
+		<SFXEvent_Build_Complete>Unit_Respawn_Ackbar</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Ackbar</SFXEvent_Hero_Respawned>
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+
+
+</LethUnit_Data>

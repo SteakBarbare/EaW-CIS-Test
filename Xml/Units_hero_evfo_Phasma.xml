@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<Phasma_Hero_Files>
+	
+	
+	<HeroUnit Name="EVFO_Phasma">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_PHASMA</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PHASMA TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Icon_Name>I_BUTTON_EVFO_Phasma.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Land_Model_Name>EVFO_Pasma.alo</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVFO_Pasma.ALO,
+			Urban, 				EVFO_Pasma.ALO,
+			Arctic, 			EVFO_Pasma.ALO,
+			Volcanic, 			EVFO_Pasma.ALO,
+			Desert, 			EVFO_Pasma.ALO,
+			Forest, 			EVFO_Pasma.ALO,
+			Swamp, 				EVFO_Pasma.ALO
+		</Land_Terrain_Model_Mapping>
+				
+		<Scale_Factor>1.2</Scale_Factor>
+		
+		<Affiliation>EVFO</Affiliation>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Autoresolve_Health>800</Autoresolve_Health>
+		<Tactical_Health>500</Tactical_Health>
+		
+		<Always_Spawn_In_Orbit>No</Always_Spawn_In_Orbit>
+
+		<Projectile_Types> Proj_Assault_Gun </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>325.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		
+		<SFXEvent_Select>Unit_Select_Ventress</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Ventress</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Ventress</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Ventress</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Ventress</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Fleet_Move_Ventress</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Ventress</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Ventress </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Ventress </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Ventress </Death_SFXEvent_Start_Die>
+
+		<CategoryMask> Landhero </CategoryMask>
+		<Create_Team>No</Create_Team>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<AI_Combat_Power>12</AI_Combat_Power>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+			<Abilities SubObjectList="Yes">
+				<Reduce_Production_Time_Ability Name="Phasma_Production_Time_Reduction">
+						<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+						<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+						<Stacking_Category>6</Stacking_Category>
+						<Galaxy_Wide> No </Galaxy_Wide>
+					</Reduce_Production_Time_Ability>
+		</Abilities>	
+	</HeroUnit>
+
+	<GenericHeroUnit Name="E_Phasma">
+		<Variant_Of_Existing_Type>EVFO_Phasma</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Affiliation>Empire</Affiliation>			
+	</GenericHeroUnit>
+
+	<HeroCompany Name="E_Phasma_Team">
+		<Variant_Of_Existing_Type>EVFO_Phasma_Team</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>				
+		<Company_Transport_Unit>EVFO_Transport_Upsilon</Company_Transport_Unit>
+		<Company_Units>E_Phasma</Company_Units>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+
+	<HeroCompany Name="EVFO_Phasma_Team">
+		<Variant_Of_Existing_Type>Rebel_Infiltrator_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_PHASMA</Text_ID>
+		<Icon_Name>I_BUTTON_EVFO_Phasma.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>				
+		<Company_Transport_Unit>EVFO_Transport_Upsilon</Company_Transport_Unit>
+		<Company_Units>EVFO_Phasma</Company_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>EVFO_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Encyclopedia_Text>TEXT_TOOLTIP_PHASMA TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<CategoryMask> LandHero </CategoryMask>
+	</HeroCompany>
+	
+	
+	
+</Phasma_Hero_Files>

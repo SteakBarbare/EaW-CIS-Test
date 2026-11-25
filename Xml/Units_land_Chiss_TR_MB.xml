@@ -1,0 +1,234 @@
+﻿<?xml version="1.0"?>
+
+
+<Ch_TR_MBUnit_Data>
+	<GroundVehicle Name="Ch_TR_MB">
+		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>65.0, 65.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Text_ID>TEXT_UNIT_CH_TR_MB</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_TR_MB</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ch_TR_MB.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ch_TR_MB.TGA</Icon_Name>
+		
+		
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Type>Tracked</Type>
+		<Deploys>No</Deploys>
+		<Affiliation>Underworld, Pirates, Empire, Rebel, Chiss</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Ranking_In_Category>5</Ranking_In_Category>
+		<Max_Speed>0.6</Max_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<FormationSpacing> 1 </FormationSpacing>
+		<FormationOrder> 8 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<FormationRaggedness> .6 </FormationRaggedness>
+		<MaxJiggleDistance> 5 </MaxJiggleDistance>
+		<MinimumPushReturnDistance> 100 </MinimumPushReturnDistance>
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 22.0 </Custom_Hard_YExtent>
+		<MovementPredictionInterval> 3.0 </MovementPredictionInterval>
+		<Armor_Type> Armor_T2B </Armor_Type>
+		<Size_Value>75</Size_Value>
+		<Damage>20</Damage>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>100</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Behavior> SELECTABLE </Behavior>
+		<LandBehavior>GARRISON_UNIT, AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, HUNT, BARRAGE, TREAD_SCROLL, WALK_LOCOMOTOR, IDLE, TARGETING, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET, STUNNABLE, DAMAGE_TRACKING</LandBehavior>
+		<DeployedBehavior>TACTICAL_BUILD_OBJECTS</DeployedBehavior>
+		
+		<Garrison_Category> Vehicle </Garrison_Category>
+		<Garrison_Value>2</Garrison_Value>
+		<Property_Flags>GoodInfantryCrusher</Property_Flags>
+		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Tactically_Built_Child_Object_Persists> No </Tactically_Built_Child_Object_Persists>
+		<Tactical_Build_Attachment_Bone_Name> ATTACH_POINT_00 </Tactical_Build_Attachment_Bone_Name>
+		
+		<Capture_Point_Radius> 10.0 </Capture_Point_Radius>
+
+		<Deploys>Yes</Deploys>
+		<Deployment_Anim_Rate>2.0</Deployment_Anim_Rate>
+		<Fire_Weapon_When_Deployed>No</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+		
+		<Land_FOW_Reveal_Range>210.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+		
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<Tactical_Buildable_Objects_Campaign>
+			Chiss,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Empire,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				EC_A_Wall_Build,
+			Rebel,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Buildable_Repair_Facility_MDU,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+				UC_Rebel_Landing_Pad,
+				UC_Rebel_Buildable_Bunker,
+				UC_Rebel_Offensive_Sensor_Node,
+			Underworld,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret	
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer>
+			Chiss,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Empire,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Empire_Buildable_Bunker,
+			Rebel,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Buildable_Repair_Facility_MDU,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+				UC_Rebel_Landing_Pad,	
+				UC_Rebel_Buildable_Bunker,
+				UC_Rebel_Offensive_Sensor_Node,
+			Underworld,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret	
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+				
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<SFXEvent_Fire>Unit_Tank_T4B_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_MDU</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_MDU</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_MDU</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T3B</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T3B </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T3B</SFXEvent_Assist_Attack>
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Engine_Idle_Loop> Unit_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+		
+		<CategoryMask> Vehicle </CategoryMask>
+		<MovementClass>Tracked</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Tread_Scroll_Rate>0.167</Tread_Scroll_Rate>
+		<Overall_Length>20.0</Overall_Length>
+		<!-- For vehicle pitching up and down on terrain (40 by geometry -->
+		<Overall_Width>25.0</Overall_Width>
+		<!-- For vehicle rolling left and right on terrain (50 by geometry) -->
+		<Has_Land_Evaluator>Yes</Has_Land_Evaluator>
+		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>3</No_Refraction_Below_Detail_Level>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		<AI_Combat_Power>142</AI_Combat_Power>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AntiVehicleStructure</Targeting_Priority_Set>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<GUI_Bracket_Size>1</GUI_Bracket_Size>
+		<Weather_Category>Tracked</Weather_Category>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
+		<Score_Cost_Credits>200</Score_Cost_Credits>
+		<Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Ch_TR_MB_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Ch_TR_MB_Death_Clone_00">
+		<Variant_Of_Existing_Type>T4B_Tank_Death_Clone_00</Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>Ch_TR_MB_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	<GroundCompany Name="CH_TR_MB_Company">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_TR_MB</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_TR_MB TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>CH_TR_MB</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_CH_TR_MB.tga</Icon_Name>
+		<SFXEvent_Build_Complete>Unit_Select_MDU</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_MDU</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>950</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+
+</Ch_TR_MBUnit_Data>

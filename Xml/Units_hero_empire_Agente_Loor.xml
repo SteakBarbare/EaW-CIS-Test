@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<Agente_LoorUnit_Data>
+	
+	
+	
+	<GenericHeroUnit Name="Agente_Loor">
+		<Variant_Of_Existing_Type>General_MelvarORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LOOR_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LOOR TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIELD_COMMANDER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ei_Loor.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ei_Loor.tga</Icon_Name>
+		<SFXEvent_Select>Unit_Select_Loor</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Loor</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Loor</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Loor</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Loor</SFXEvent_Guard>
+		<SFXEvent_Announce>Unit_Announce_Loor</SFXEvent_Announce>
+		<SFXEvent_Group_Move>Unit_Group_Move_Loor</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Loor</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Loor </Death_SFXEvent_Start_Die>
+		
+		<Lua_Script>E_Loor_Re_2X</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+			<Abilities SubObjectList="Yes">
+				<Reduce_Production_Time_Ability Name="Loor_Production_Time_Reduction">
+					<Applicable_Unit_Types>Imperial_StormCommando_Squad</Applicable_Unit_Types>
+					<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+					<Stacking_Category>6</Stacking_Category>
+					<Galaxy_Wide> No </Galaxy_Wide>
+				</Reduce_Production_Time_Ability>
+			</Abilities>	
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="Agente_Loor_Team">
+		<Variant_Of_Existing_Type>General_Melvar_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LOOR_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Loor.TGA</Icon_Name>
+		<Company_Units>Agente_Loor</Company_Units>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_LOOR TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIELD_COMMANDER </Encyclopedia_Unit_Class>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Respawn_Loor</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Loor</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Loor</SFXEvent_Fleet_Move>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+	</HeroCompany>
+	
+</Agente_LoorUnit_Data>

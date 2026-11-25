@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Republic_Seraph_class_landspeederUnit_Data>
+	<GroundVehicle Name="Rep_Seraph_class_landspeeder">
+		<Variant_Of_Existing_Type>Republic_Combatspeeder</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SERAPH</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroidB2_Squad C_Stap_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_OG_9_Group C_Hailfire_Tank_Droid_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SERAPH</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Rep_Seraph_Phase1.ALO</Land_Model_Name>
+
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Turret_Bone_Name>Turret_base_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Icon_Name>I_BUTTON_Rep_SERAPH_CLASS.tga</Icon_Name>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Republic_Seraph_Company">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SERAPH</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroidB2_Squad C_Stap_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_OG_9_Group C_Hailfire_Tank_Droid_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SERAPH</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Rep_SERAPH_CLASS.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Required_Special_Structures>Republic_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Company_Units>Rep_Seraph_class_landspeeder, Rep_Seraph_class_landspeeder, Rep_Seraph_class_landspeeder</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Select_Clon_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+</Republic_Seraph_class_landspeederUnit_Data>

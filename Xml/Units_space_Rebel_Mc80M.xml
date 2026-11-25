@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<Mc80MUnit_Data>
+
+	<SpaceUnit Name="Mc80M">
+		<Variant_Of_Existing_Type>MC30ORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_MC80M</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 AcclamatorII </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Gunboat ISD2 </Encyclopedia_Vulnerable_To>
+		<Required_Special_Structures>Astilleros_PesadosR</Required_Special_Structures>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_MC80M_CRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>RV_MC80M.ALO</Space_Model_Name>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Max_Speed>2.0</Max_Speed>
+		
+		<Max_Rate_Of_Turn>0.01</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.04</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.05</Max_Thrust>
+
+		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Death_Clone>Damage_Normal, Mc80M_Death_Clone</Death_Clone>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>5400</Build_Cost_Credits>
+		<AI_Combat_Power>3615</AI_Combat_Power>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>A_Wing_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>A_Wing_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Space_FOW_Reveal_Range>2200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>5000.0</Targeting_Max_Attack_Distance>
+
+		<CategoryMask> Capital | AntiFrigate </CategoryMask>
+
+		<Projectile_Types>Proj_Ship_MC80M_Missile</Projectile_Types>
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Projectile_Fire_Pulse_Count>15</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.02</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>8.0</Projectile_Fire_Recharge_Seconds>
+		<!--<Targeting_Fire_Inaccuracy_Fixed_Radius> 220 </Targeting_Fire_Inaccuracy_Fixed_Radius>-->
+		<Targeting_Min_Attack_Distance>100</Targeting_Min_Attack_Distance>
+		<SFXEvent_Fire>Unit_Boron_Missile_Fire</SFXEvent_Fire>
+		
+		<HardPoints>
+			HP_TurboHMR_01,
+			HP_TurboHMR_02,
+			HP_TurboHMR_03,
+			HP_TurboHMR_04,
+			HP_TurboHMR_05,
+			HP_TurboHMR_06,
+			HP_Fighter_Bay_00, 
+			HP_Shield_Generator_00,
+			HP_Shield_Generator_01,
+			HP_Engines_00,
+			HP_Engines_01,
+			HP_MisilM_01,
+			HP_MisilM_02,
+			HP_TorpedoM_01,
+			HP_TorpedoM_02,
+			HP_RocketM_01,
+			HP_RocketM_02
+		</HardPoints>
+		<Icon_Name>I_BUTTON_Mc80M.tga</Icon_Name>
+		<GUI_Model_Name>RV_MC80M.ALO</GUI_Model_Name>
+
+		<!-- reducido a la mitad -->
+		<Radar_Icon_Size>0.03125  0.03125</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+
+		<Targeting_Priority_Set>Vengeance_TP</Targeting_Priority_Set>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_MC80M_MissileB</Projectile_Types_Override>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,			4.0f</Mod_Multiplier>
+
+				<SFXEvent_Target_Ability> Unit_Barrage_Corvette </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320.0</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>LASER_DEFENSE</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> MC80M_Laser_Defense </GUI_Activated_Ability_Name>
+                <Effective_Radius> 1000.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Laser_Defense_On_Crusader </SFXEvent_GUI_Unit_Ability_Activated>  
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Laser_Defense_Off_Crusader </SFXEvent_GUI_Unit_Ability_Deactivated>  
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+           </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="MC80M_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 120.0 </Defense_Duration_In_Secs>
+                <Laser_Color>252, 109, 4, 255</Laser_Color>
+                <Bone_Names>muzzleB_00, muzzleB_01, muzzleB_02</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>1000.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>100</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.50</Recharge_Time_In_Secs>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+            </Laser_Defense_Ability>
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>5400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+
+		<Population_Value>3</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Mc80M_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC80 </Text_ID>
+		<Space_Model_Name> RV_MC80M_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor> 0.2 </Scale_Factor>
+		<Layer_Z_Adjust> -50.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</Mc80MUnit_Data>

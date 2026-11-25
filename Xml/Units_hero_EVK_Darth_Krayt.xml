@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Darth_KraytUnit_Data>
+	<HeroUnit Name="Darth_Krayt">
+		<Variant_Of_Existing_Type>Emperor_Palpatine</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_KRAYT_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_KRAYT TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Land_Model_Name>EVK_Darth_Krayt.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EVK_Darth_Krayt.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<CategoryMask> LandHero </CategoryMask>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<SFXEvent_Select>Unit_Select_Krayt</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Urai_Fen</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Krayt</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Urai_Fen</SFXEvent_Guard>
+		<SFXEvent_Fire></SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Urai_Fen</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Urai_Fen</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Urai_Fen</Death_SFXEvent_Start_Die>
+		
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Krayt_Hero</Highlight_Blob_Material_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>FORCE_LIGHTNING</Type>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Emperor_Force_Lightning </GUI_Activated_Ability_Name> 
+				<SFXEvent_Target_Ability> Unit_Attack_Krayt </SFXEvent_Target_Ability> 
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>AREA_EFFECT_CONVERT</Type>
+				<Recharge_Seconds>70.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+				<Spawned_Object_Type> Proj_Special_Convert_Krayt_Land </Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Convert_Emperor </SFXEvent_Target_Ability>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</HeroUnit>
+	<HeroCompany Name="Darth_Krayt_Team">
+		<Variant_Of_Existing_Type>Emperor_Palpatine_TeamORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_KRAYT_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DARTH_KRAYT TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Darth_Krayt.tga</Icon_Name>
+		<Company_Transport_Unit>Darth_Krayt_EVK_Fury</Company_Transport_Unit>
+		<Company_Units>Darth_Krayt</Company_Units>
+		<Affiliation>Krayt</Affiliation>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Krayt</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Krayt</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>3800</Tactical_Build_Cost_Multiplayer>
+		
+		<CategoryMask>LandHero</CategoryMask>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Darth_Krayt_EVK_Fury"> 
+		<Variant_Of_Existing_Type>EVK_Fury</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_KRAYT_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_KRAYT </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Darth_Krayt.tga</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Krayt</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Urai_Fen</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Krayt</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Urai_Fen</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		<AI_Combat_Power>2800</AI_Combat_Power>
+		<HardPoints> 
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+		
+		<Landing_Transport_Variant>EVK_Fury_Landing</Landing_Transport_Variant>
+	</SpaceUnit>	
+</Darth_KraytUnit_Data>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<AT_DPUnit_Data>
+	
+
+	<GroundVehicle Name="AT_DP">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATDP</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATDP</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.7</Scale_Factor>
+		<Land_Model_Name>EV_AT_DP.ALO</Land_Model_Name>
+		<AI_Combat_Power>50</AI_Combat_Power>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+
+		<Icon_Name>i_button_AT_DP.tga</Icon_Name>
+		
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+
+		<Vehicle_Thief_Inside_Clone>AT_DP_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_DP_Captured">
+		<Variant_Of_Existing_Type>AT_DP</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">	
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_DP_Death_Clone_00">
+		<Variant_Of_Existing_Type>AT_DP</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_DP_Death_Clone_01">
+		<Variant_Of_Existing_Type>AT_DP</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+        <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_DP_Death_Clone_02">
+		<Variant_Of_Existing_Type>AT_DP</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+	
+	<GroundCompany Name="Imperial_AT_DP_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_AT_DP_SQUAD</Text_ID>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>155</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Company_Units>AT_DP, AT_DP, AT_DP, AT_DP</Company_Units>
+
+		<Icon_Name>i_button_AT_DP.tga</Icon_Name>
+		<GUI_Model_Name>EV_AT_DP.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>155</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATDP TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+	
+
+</AT_DPUnit_Data>

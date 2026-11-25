@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Rep_A5RXUnit_Data>
+
+	<GroundVehicle Name="Rep_A5RX">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_A5RX</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_A5RX</Encyclopedia_Text>
+		
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>I_BUTTON_Rep_A5RX.TGA</Icon_Name>
+		<Land_Model_Name>Rep_A5RX.ALO</Land_Model_Name>
+		<Scale_Factor>0.50</Scale_Factor>
+		
+		<Behavior> SELECTABLE </Behavior>
+		<LandBehavior>BARRAGE, AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, TREAD_SCROLL, HUNT, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING, SELF_DESTRUCT</LandBehavior>
+		
+		<Tactical_Health>850</Tactical_Health>
+		
+		<Turret_Rotate_Extent_Degrees>2</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_Jugger_Missile</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>4.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Fire_Inaccuracy_Distance> Infantry, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Air, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Structure, 5.0 </Fire_Inaccuracy_Distance>
+		
+		<HardPoints>
+			Rep_A5RX_Turret_00,
+			Rep_A5RX_Turret_01,
+			Rep_A5RX_Turret_02
+		</HardPoints>
+		
+		<SFXEvent_Fire>Unit_Missile_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	
+		<SFXEvent_Engine_Idle_Loop> Unit_Juggernaut_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Juggernaut_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Attack_Clon_Trooper </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Jugger_Missile</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Death_Clone>Damage_Normal, Rep_A5RX_Death_Clone_00</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>Rep_A5RX_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Rep_A5RX_Death_Clone_00">
+		<Variant_Of_Existing_Type>Rep_A5RX</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_A5RX_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="Rep_A5RX_Captured">
+		<Variant_Of_Existing_Type>Rep_A5RX</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundCompany Name="Rep_A5RX_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_A5RX</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_A5RX</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Rep_A5RX.TGA</Icon_Name>
+
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>CR25</Company_Transport_Unit>
+		<Company_Units>Rep_A5RX</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</Rep_A5RXUnit_Data>

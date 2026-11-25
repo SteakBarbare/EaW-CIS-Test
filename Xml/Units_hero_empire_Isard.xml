@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Admiral_IsardUnit_Data>
+	<HeroUnit Name="Admiral_Isard">
+		<Variant_Of_Existing_Type>TarkinORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ISARD_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_ISARD.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ISARD TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+	</HeroUnit>
+	<HeroCompany Name="Isard_Team">
+		<Variant_Of_Existing_Type>Grand_Moff_Tarkin_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ISARD_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_ISARD.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Company_Transport_Unit>Isard_Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Admiral_Isard</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ISARD TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Silri</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Silri</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+</Admiral_IsardUnit_Data>

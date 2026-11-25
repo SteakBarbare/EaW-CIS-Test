@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<SuncrusherUnit_Data>
+	<SpaceUnit Name="IA_Suncrusher">
+		<Variant_Of_Existing_Type>Suncrusher_Rebel</Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+   		<Abilities SubObjectList="Yes">
+             		<Sensor_Jamming_Ability Name="Suncrusher_Sensor_Jamming">
+						<Activation_Style> User_Input </Activation_Style>
+						<Owner_Particle_Effect>Sensor_Jamming_Effect_Skipray</Owner_Particle_Effect>
+						<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+					</Sensor_Jamming_Ability>
+        	</Abilities>  
+	</SpaceUnit>
+	<SpaceUnit Name="Suncrusher">
+		<Variant_Of_Existing_Type>Suncrusher_Rebel</Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+   		<Abilities SubObjectList="Yes">
+             		<Sensor_Jamming_Ability Name="Suncrusher_Sensor_Jamming">
+						<Activation_Style> User_Input </Activation_Style>
+						<Owner_Particle_Effect>Sensor_Jamming_Effect_Skipray</Owner_Particle_Effect>
+						<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+					</Sensor_Jamming_Ability>
+					<Planet_Destruction_Ability Name="Death_Star_Planet_Destruction">
+						<Activation_Style>Ground_Activated</Activation_Style>
+						<SFXEvent_Target_Affected>Planet_Death_SFX</SFXEvent_Target_Affected>
+						<Target_Particle_Effect>Planet_Explosion_Galactic</Target_Particle_Effect>
+						<Target_Particle_Bone_Name />
+					</Planet_Destruction_Ability>
+					
+        	</Abilities>  
+	</SpaceUnit>
+	<SpaceUnit Name="Suncrusher_Rebel">
+		<Variant_Of_Existing_Type>SuncrusherORG</Variant_Of_Existing_Type>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+   		<Abilities SubObjectList="Yes">
+					<Planet_Destruction_Ability Name="Death_Star_Planet_Destruction">
+						<Activation_Style>Ground_Activated</Activation_Style>
+						<SFXEvent_Target_Affected>Planet_Death_SFX</SFXEvent_Target_Affected>
+						<Target_Particle_Effect>Planet_Explosion_Galactic</Target_Particle_Effect>
+						<Target_Particle_Bone_Name />
+					</Planet_Destruction_Ability>
+       	</Abilities>  
+	</SpaceUnit>
+	<SpaceUnit Name="SuncrusherORG">
+		<Variant_Of_Existing_Type>IPV1ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SUNCRUSHER</Text_ID>
+		<Encyclopedia_Good_Against> X-wing Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette Corellian_Gunboat A-Wing </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_ev_suncrusher.tga</Icon_Name>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_New_Suncrusher.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_EV_Suncrusher_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>i_button_ev_suncrusher.TGA</Icon_Name>
+		<Required_Planets>The_Maw</Required_Planets>
+		<Scale_Factor>0.07</Scale_Factor>
+
+		<Build_Cost_Credits>100000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+
+        <Ranking_In_Category>3</Ranking_In_Category>
+		
+		<Max_Speed>4.0</Max_Speed>
+		<Min_Speed>2.7</Min_Speed>
+
+		<Max_Rate_Of_Turn>2.4</Max_Rate_Of_Turn>
+
+		<Layer_Z_Adjust>-20.0</Layer_Z_Adjust>
+
+		<OverrideAcceleration> .12 </OverrideAcceleration>
+		<OverrideDeceleration> .12 </OverrideDeceleration>
+
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		<Shield_Armor_Type>Shield_DeathStar</Shield_Armor_Type>
+		<Max_Thrust>0.5</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+
+		<Tech_Level>99</Tech_Level>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>2000000000</Tactical_Health>
+		<Shield_Refresh_Rate>20000000</Shield_Refresh_Rate>
+		<Energy_Capacity>90000000</Energy_Capacity>
+		<Energy_Refresh_Rate>34000000</Energy_Refresh_Rate>
+
+		<AI_Combat_Power>1700</AI_Combat_Power>
+
+		<CategoryMask> SpaceHero | Super | AntiFighter | AntiBomber </CategoryMask>
+				
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		
+		<Behavior>DUMMY_STARSHIP, POWERED, SHIELDED, SELECTABLE</Behavior>
+		<SpaceBehavior> FIGHTER_LOCOMOTOR, WEAPON, TURRET, ABILITY_COUNTDOWN, TARGETING, SPAWN_SQUADRON, HUNT, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>25.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 1.0 </Targeting_Min_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>180.0</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90.0</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 1.0 </Fire_Inaccuracy_Distance>
+		
+		<Projectile_Types>Proj_SunCrusher</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>100</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.0</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Rebel_Ship_Laser_NoSound</SFXEvent_Fire>
+				
+		<HardPoints>
+			HP_G_SunCrusher_Laser_00, HP_G_SunCrusher_Laser_01, HP_G_SunCrusher_Laser_02, HP_G_SunCrusher_Laser_03, HP_G_SunCrusher_Laser_04, HP_G_SunCrusher_Laser_05
+		</HardPoints>
+		
+		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+				
+		<SFXEvent_Build_Complete>Unit_Complete_REP_IPV</SFXEvent_Build_Complete>
+		<SFXEvent_Select>Unit_Select_REP_IPV</SFXEvent_Select>
+		
+		<SFXEvent_Ambient_Moving> Unit_ARC170_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_ARC170_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Population_Value>1</Population_Value>
+
+		<Death_Clone>Damage_Normal, Suncrusher_Death_Clone</Death_Clone>
+
+		<Neutralization_Cost>2500.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_SUNCRUSHER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_SUPER_WEAPON </Encyclopedia_Unit_Class>
+
+		<Score_Cost_Credits> 35000 </Score_Cost_Credits>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SENSOR_JAMMING</Type>
+				<GUI_Activated_Ability_Name> Suncrusher_Sensor_Jamming </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>35.0</Recharge_Seconds> 
+				<Expiration_Seconds>30.0</Expiration_Seconds>
+				<Effective_Radius>300.0</Effective_Radius> 
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Jam_Sensors_On_Skipray </SFXEvent_GUI_Unit_Ability_Activated> 				
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Jam_Sensors_Off_Skipray </SFXEvent_GUI_Unit_Ability_Deactivated> 
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_TRACTOR_DECOY</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_TRACTOR_DECOY_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Tactical_Bribe_Cost>25000</Tactical_Bribe_Cost>
+
+		<Tactical_Build_Cost_Multiplayer>32000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+
+		<Targeting_Priority_Set>Fighter_Super</Targeting_Priority_Set>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Suncrusher_Death_Clone">
+		<Text_ID>TEXT_UNIT_SUNCRUSHER</Text_ID>
+		<Space_Model_Name>EV_New_Suncrusher.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.07</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</SuncrusherUnit_Data>

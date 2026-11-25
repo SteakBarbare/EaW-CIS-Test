@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<Hapan_structures_Data>
+	<SpecialStructure Name="Hapan_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>HA_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Ha_Level_Two_Tech_Upgrade,
+				Ha_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Hapan</Affiliation>
+
+   </SpecialStructure>
+
+	<GroundBuildable Name="Hapan_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>HA_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Hapan</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Hapan_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Command_Center </Tactical_Buildable_Constructed>
+		<Land_Model_Name>HA_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Hapan</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Hapan_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hapan_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Ha_Bombing_Run_Use_Upgrade,
+				Ha_Planetary_Bombard_Use_Upgrade,
+				NV_HapanMiytil_Land_squadron,
+				Ha_Gallofree_Assault_Company,
+				NV_HapanHetrinar_Land_squadron
+		</Tactical_Buildable_Objects_Multiplayer>
+				
+		<Starting_Spawned_Units_Tech_0>NV_HapanMiytil_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>NV_HapanMiytil_Land, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Affiliation>Hapan</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Hapan_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hapan_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Hapan_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Hapan_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Hapan_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Hapan_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Hapan_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Hapan_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Hapan_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Hapan_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Hapan_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hapan_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Hapan_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Hapan_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Hapan_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> Hapan_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Hapan</Affiliation>
+
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Hapan_Power_Generator</Tactical_Additional_Structure_Type>	
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hapan_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hapan_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> Hapan_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Hapan_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+
+		
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+		
+		
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Obstacle_Proxy_Type> Power_Generator_E_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Hapan</Affiliation>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Hapan_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Hapan_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Hapan_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Hapan_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Hapan_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Affiliation>Hapan</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="Hapan_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>HA_InfantryBarracks.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hapan_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, WEAPON, TURRET, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+		
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Large_Ha_Infantry_Trooper_Squad,
+				Ha_Infantry_Plex_Trooper_Company,
+				Ha_Ciborg_troopers_Squad,
+				Ha_Ciborg_Trooper_Command_Weapon_Team,
+				Ha_Infiltrator
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Large_Ha_Infantry_Trooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Large_Ha_Infantry_Trooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Infantry_Plex_Trooper_Company, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ha_Infantry_Plex_Trooper_Company, -1</Reserve_Spawned_Units_Tech_0>
+	
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="Hapan_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>HA_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hapan_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Ground_Barracks </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>HA_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Hapan_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<Obstacle_Proxy_Type> Hapan_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+				
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Hapan_Light_Tank_Brigade,
+				Ha_AT_RT_Walker_Squad,
+				Ha_AT_APT_Company,
+				Ha_AT_ST_Squad,
+				Ha_APC_Brigade,
+				Ha_LAVr_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_AT_APT, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ha_AT_APT, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_AT_ST, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ha_AT_ST, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>NV_HapanMiytil_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>NV_HapanMiytil_Land, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hapan_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hapan_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Hapan_Ground_Light_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Hapan_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hapan_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hapan_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Ha_1H_Squad,
+				Ha_Artillery_Brigade,
+				Ha_MZ8A_Squad,
+				Ha_T6B_Brigade,
+				Ha_Heavy_Tracked_Brigade,
+				AT_BT_Company,
+				Ha_HAV_Company,
+				Ha_Specforce_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>NV_HapanHetrinar_Land_squadron, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>NV_HapanHetrinar_Land_squadron, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Specforce, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ha_Specforce, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Heavy_Tracked, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ha_Heavy_Tracked, -1</Reserve_Spawned_Units_Tech_0>
+		
+	
+	</SpecialStructure>
+	<GroundBuildable Name="Hapan_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hapan_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Ground_Heavy_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Hapan_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hapan_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hapan_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+		
+		<Starting_Spawned_Units_Tech_0>AT_BT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_BT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_HAV, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ha_HAV, -1</Reserve_Spawned_Units_Tech_0>
+					
+		
+	</SpecialStructure>
+	<GroundBuildable Name="Hapan_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Hapan_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+
+	<SpecialStructure Name="Hapan_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hapan_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hapan_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hapan_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Hapan_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>HA_OfficerAcademy.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Hapan_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, WEAPON, TURRET, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		<Destruction_Survivors> 
+			Mini_Ha_Infantry_Trooper_Squad, 1.0
+			Medium_Ha_Infantry_Trooper_Squad, 1.0
+			Large_Ha_Infantry_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Hapan_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Hapan_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Hapan, PC_Hapan_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>HA_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Hapan_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Hapan_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Hapan_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>HA_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+</Hapan_structures_Data>
+
+
+

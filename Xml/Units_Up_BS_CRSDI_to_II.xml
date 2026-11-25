@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<CR_SDI_UpUnit_Data>
+
+	<SpaceUnit Name="Up_BS_CRSDI_to_II">
+		<Variant_Of_Existing_Type>Up_BS_MC80b_to_BS_MC80bII</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CR_SDI_TO_II</Text_ID>
+        <Encyclopedia_Text>TEXT_TOOLTIP_CR_SDI_TO_II</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_UV_CRSDI_UPGRADE.TGA</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>CR_SDI</Required_Orbiting_Units>
+		<Required_Special_Structures>Astilleros_Piratas, AdvancedTech_U</Required_Special_Structures>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Lua_Script>Up_BS_CRSDI_to_II</Lua_Script>
+		<Required_Planets>Corellia, Tralus, Duro, Commenor, Nubia, Tynna, Naboo, Balmorra, DuroK, CorelliaK, Corellia_Sector, Kuat_Sector, Vladet_Sector, Chardaan_Sector</Required_Planets>
+		<Population_Value>4</Population_Value>
+	</SpaceUnit>	
+	<SpaceUnit Name="Up_GAC_CRSDI_to_II">
+		<Variant_Of_Existing_Type>Up_BS_CRSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CR_SDI_TO_II</Text_ID>
+        <Encyclopedia_Text>TEXT_TOOLTIP_CR_SDI_TO_II</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_UV_CRSDI_UPGRADE.TGA</Icon_Name>
+		<Affiliation>GAC</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>CR_SDI</Required_Orbiting_Units>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Lua_Script>Up_BS_CRSDI_to_II</Lua_Script>
+	</SpaceUnit>	
+	<SpaceUnit Name="CR_SDI_Up">
+		<Variant_Of_Existing_Type>CR_SDI</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CORELLIAN_DESTROYERMKII</Text_ID>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_CORELLIAN_DESTROYERMKII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+
+		<Space_Model_Name>UV_Corellian_DestroyerMKII.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_RV_Corellian_Destroyer2.tga</Icon_Name>
+
+		<Layer_Z_Adjust>290.0</Layer_Z_Adjust>
+
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON </SpaceBehavior>
+		<Affiliation>Underworld, Rebel, Empire, GAC</Affiliation>
+
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<AI_Combat_Power>16000</AI_Combat_Power>
+
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+				
+		
+		<Shield_Points>36000</Shield_Points>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<HardPoints> 
+			HP_T_CRSDII_01,
+			HP_T_CRSDII_02,
+			HP_T_CRSDII_03,
+			HP_T_CRSDII_04,
+			HP_T_CRSDII_05,
+			HP_T_CRSDII_06,
+			HP_T_CRSDII_07,
+			HP_T_CRSDII_08,
+			HP_T_CRSDII_09,
+			HP_T_CRSDII_10,
+			HP_T_CRSDII_11,
+			HP_T_CRSDII_12,
+			HP_T_CRSDII_13,
+			HP_T_CRSDII_14,
+			HP_IonM_01, 
+			HP_IonM_02, 
+			HP_IonM_03, 
+			HP_IonM_04, 
+			HP_LaserNY_01, 
+			HP_LaserNY_02, 
+			HP_LaserNY_03, 
+			HP_LaserNY_04, 
+			HP_LaserNY_05, 
+			HP_LaserNY_06,
+			HP_TurboMO_01, 
+			HP_TurboMO_02, 
+			HP_TurboMO_03, 
+			HP_TurboMO_04,
+			HP_TurboMO_05, 
+			HP_TurboMO_06, 
+			HP_TurboMO_07, 
+			HP_TurboMO_08,
+			HP_TorpedoA_01, 
+			HP_TorpedoA_02,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Shield_GeneratorH_00, 
+			HP_EnginesH_00
+		</HardPoints>
+
+		<GUI_Model_Name>UV_Corellian_DestroyerMKII.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>8200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>45</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+	
+</CR_SDI_UpUnit_Data>

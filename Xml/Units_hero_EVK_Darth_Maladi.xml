@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Darth_MaladiUnit_Data>
+	<HeroUnit Name="Darth_Maladi">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_MALADY_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_MALADY TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Icon_Name>I_BUTTON_EVK_Darth_Maladi.tga</Icon_Name>
+		<Spawn_Planet>Wayland</Spawn_Planet>
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Darth_Maladi_Production_Time_Reduction">
+						<Applicable_Unit_Types>EVK_Sith, EVK_TIEReaper_Squadron_Land, EVK_Annihilator_Squadron_Land, EVK_Dragon, EVK_TIE_Reaper_SquadronB, EVK_Annihilator_SquadronB</Applicable_Unit_Types>
+						<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+						<Stacking_Category>6</Stacking_Category>
+						<Galaxy_Wide> No </Galaxy_Wide>
+					</Reduce_Production_Time_Ability>
+            <Galactic_Stealth_Ability Name="Darth_Maladi_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+						
+			<System_Spy_Ability Name="Darth_Maladi_System_Spy">
+				<Activation_Style>Galactic_Automatic</Activation_Style>			
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+
+			<Neutralize_Hero_Ability Name="Darth_Maladi_Hero_Assasin">
+				<Cost_Mod_By_Base_Level>0.0,0.0, 5.0,1.0</Cost_Mod_By_Base_Level>
+				<Cost_Mod_By_Previous_Neutralizations>0.0,0.0, 1000.0,750.0</Cost_Mod_By_Previous_Neutralizations>
+				<Cost_Mod_By_Planetary_Corruption_Level>0.0,0.0, 1.0,0.25</Cost_Mod_By_Planetary_Corruption_Level>
+				<General_Minor_Hero_Cost_Mod>1.0</General_Minor_Hero_Cost_Mod>
+				<General_Major_Hero_Cost_Mod>1.0</General_Major_Hero_Cost_Mod>
+				<Owner_Respawn_Time_In_Secs>120.0, 150.0</Owner_Respawn_Time_In_Secs>
+				<Target_Respawn_Time_In_Secs>240.0, 300.0</Target_Respawn_Time_In_Secs>
+				<Can_Neutralize_Minor_Heroes>Yes</Can_Neutralize_Minor_Heroes>
+				<Can_Neutralize_Major_Heroes>No</Can_Neutralize_Major_Heroes>
+			</Neutralize_Hero_Ability>
+			
+			<Remove_Corruption_Ability Name="Darth_Maladi_Remove_Corruption">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+        </Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Darth_Maladi_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_DARTH_MALADY_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_MALADY TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Icon_Name>I_BUTTON_EVK_Darth_Maladi.tga</Icon_Name>
+		<Company_Units>Darth_Maladi</Company_Units>
+		
+		<Company_Transport_Unit>Darth_Maladi_EVK_Fury</Company_Transport_Unit>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Silri</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Silri</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+	</HeroCompany>
+	<SpaceUnit Name="Darth_Maladi_EVK_Fury"> 
+		<Variant_Of_Existing_Type>EVK_Fury</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_MALADY_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_MALADY TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Darth_Maladi.tga</Icon_Name>
+		<SFXEvent_Select>Unit_Select_Silri</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Silri</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Silri</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Silri</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		<HardPoints> 
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+		<AI_Combat_Power>2295</AI_Combat_Power>
+	</SpaceUnit>	
+</Darth_MaladiUnit_Data>

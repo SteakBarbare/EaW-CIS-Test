@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE MON CALAMARI TERRESTRE ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_MonCalamariDE_Land">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_MonCalamariDE_Land_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARIDE_LAND_E</Reward_Param1>
+				<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+			</Event>
+			
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>	
+	
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>			
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_LAND_HISTORY_DARKEMPIREMONCALAMARIE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+		<Reward_Param8>EMPIRE_ACT04_MISSION_TWELVE_09</Reward_Param8>
+		<Reward_Param9>Commander_Moff_Loop</Reward_Param9>
+		<Reward_Param10>1</Reward_Param10>
+        <Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_06</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>
+	<Event Name="HIGHLIGHT_OBJECT_02">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_07</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>
+	<Event Name="HIGHLIGHT_OBJECT_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_08</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>
+	<Event Name="HIGHLIGHT_OBJECT_04">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_09</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>
+	<Event Name="UnHIGHLIGHT_OBJECT_01">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_06</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="UnHIGHLIGHT_OBJECT_02">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_07</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="UnHIGHLIGHT_OBJECT_03">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_08</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	<Event Name="UnHIGHLIGHT_OBJECT_04">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_09</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	
+			
+	<Event Name="Destruir_R_XLanding">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>R_XLANDINGB</Event_Param1>
+		<Event_Param3>4</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Rebeldes_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+	
+	<Event Name="Reinforces">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>R_XLANDINGB</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	
+			
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARIDE_LAND_E</Reward_Param1>
+		<Prereq>Destruir_R_XLanding</Prereq>
+		<Prereq>Rebeldes_Destruidos</Prereq>
+	</Event>
+	
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+				<Event_Param2>Victoria_Imperial</Event_Param2>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>EMPIRE</Reward_Param1>
+				<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+			</Event>
+			
+	<Event Name="Imperiales_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>EMPIRE</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+		
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARIDE_LAND_E</Reward_Param1>
+		<Prereq>Imperiales_Destruidos</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+				<Event_Param2>Derrota_por_Victoria_Rebelde</Event_Param2>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+			</Event>
+			
+	<Event Name="DesAnular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Objetivos_InCompletados1</Prereq>
+		<Prereq>Objetivos_Completados</Prereq>
+	</Event>			
+	
+	<Event Name="Empire_Reinforcement01_DialogCue">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>REINFORCE_DIALOG_GO_01</Event_Param2>
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement01_Dialog_00">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_EMPIRE_ACT01_MISSION_TWO_52</Reward_Param1>
+		<Reward_Param2>-1</Reward_Param2>	
+		<Reward_Param8>EMPIRE_ACT01_MISSION_TWO_52</Reward_Param8>
+		<Reward_Param9>Commander_Moff_Loop</Reward_Param9>
+		<Reward_Param10>1</Reward_Param10>
+		<Prereq>Empire_Reinforcement01_DialogCue</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>	
+
+	<Event Name="Empire_Reinforcement01_Dialog_00c">
+		<Event_Type>STORY_SPEECH_DONE</Event_Type>
+		<Event_Param1>EMPIRE_ACT01_MISSION_TWO_52</Event_Param1>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_EMPIRE_ACT01_MISSION_TWO_52</Reward_Param1>
+		<Reward_Param4>remove</Reward_Param4>
+		<Prereq>Empire_Reinforcement01_Dialog_00</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>
+	
+				<Event Name="Empire_Reinforcement01_Dialog_RemoveMovie">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+					<Prereq>Empire_Reinforcement01_Dialog_00c</Prereq>
+					<Branch>Branch_Empire_Reinforcement01</Branch>
+				</Event>
+				
+	<Event Name="Fin_dialog_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>RESET_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Empire_Reinforcement01</Reward_Param1>
+		<Prereq>Empire_Reinforcement01_Dialog_RemoveMovie</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>			
+</Story>

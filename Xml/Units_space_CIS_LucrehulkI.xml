@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<CIS_LucrehulkIUnit_Data>
+	<SpaceUnit Name="CIS_LucrehulkI">
+		<Variant_Of_Existing_Type>CIS_LucrehulkIORG</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, CIS_LucrehulkI_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="CIS_LucrehulkIORG">
+		<Variant_Of_Existing_Type>CIS_LucrehulkBORG</Variant_Of_Existing_Type>
+		<GUI_Row> 1 </GUI_Row>
+		<Text_ID>TEXT_UNIT_LUCREHULKI</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LUCREHULKI TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_VULTURE TEXT_WAVES_X3 TEXT_UNIT_TRIDROID TEXT_WAVES_X3 TEXT_UNIT_SCARAB TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_12</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERDICTOR </Encyclopedia_Unit_Class>
+		<Space_Model_Name>CIS_LucrehulkI.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Space_Layer> Corvette </Space_Layer>
+
+		<Build_Cost_Credits>11600</Build_Cost_Credits>
+		<AI_Combat_Power>2895</AI_Combat_Power>
+		<Build_Time_Seconds>110</Build_Time_Seconds>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_Tridroid_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Scarab_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>CIS_Tridroid_Squadron6, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Scarab_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		<HardPoints>
+			HP_T_CISLucrehulk_01,
+			HP_T_CISLucrehulk_02,
+			HP_T_CISLucrehulk_03,
+			HP_T_CISLucrehulk_04,
+			HP_T_CISLucrehulk_05,
+			HP_T_CISLucrehulk_06,
+			HP_T_CISLucrehulk_07,
+			HP_T_CISLucrehulk_08,
+			HP_T_CISLucrehulk_09,
+			HP_T_CISLucrehulk_10,
+			HP_T_CISLucrehulk_11,
+			HP_T_CISLucrehulk_12,
+			HP_T_CISLucrehulk_13,
+			HP_T_CISLucrehulk_14,
+			HP_T_CISLucrehulk_15,
+			HP_T_CISLucrehulk_16,
+			HP_T_CISLucrehulk_17,
+			HP_T_CISLucrehulk_18,
+			HP_T_CISLucrehulk_19,
+			HP_T_CISLucrehulk_20,
+			HP_T_CISLucrehulk_21,
+			HP_T_CISLucrehulk_22,
+			HP_T_CISLucrehulk_23,
+			HP_T_CISLucrehulk_24,
+			HP_T_CISLucrehulk_25,
+			HP_T_CISLucrehulk_26,
+			HP_T_CISLucrehulk_27,
+			HP_T_CISLucrehulk_28,
+			HP_T_CISLucrehulk_29,
+			HP_T_CISLucrehulk_30,
+			HP_T_CISLucrehulk_31,
+			HP_T_CISLucrehulk_32,
+			HP_T_CISLucrehulk_33,
+			HP_T_CISLucrehulk_34,
+			HP_T_CISLucrehulk_35,
+			HP_T_CISLucrehulk_36,
+			HP_SH_LucrehulkB_00, 
+			HP_E_LucrehulkB_00,
+			HP_B_LucrehulkB_00,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_LucrehulkI_Gr_01,
+			HP_LucrehulkI_Gr_02,
+			HP_LucrehulkI_Gr_03,
+			HP_LucrehulkI_Gr_04,
+			HP_LucrehulkI_Gr_05,
+			HP_LucrehulkI_Gr_06
+	  </HardPoints>
+		<Icon_Name>I_BUTTON_CIS_LUCREHULKI.TGA</Icon_Name>
+		<GUI_Model_Name>CIS_LucrehulkI.ALO</GUI_Model_Name>
+		
+		<Is_Interdictor>Yes</Is_Interdictor>
+		<Disallows_Hyperspace_Retreat> No </Disallows_Hyperspace_Retreat>
+		
+		<Lua_Script>Interdictor_CIS</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>INTERDICT</Type>
+				<Disable_Movement>Yes</Disable_Movement>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_DroidShip1</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>MISSILE_SHIELD</Type>
+				<Disable_Movement>Yes</Disable_Movement>
+				<Effective_Radius>1300</Effective_Radius>
+				<Recharge_Seconds>0</Recharge_Seconds>
+				<Expiration_Seconds>0</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_DroidShip1</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Tactical_Bribe_Cost>2900</Tactical_Bribe_Cost>
+		<Tactical_Build_Cost_Multiplayer>11600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_LucrehulkI_Death_Clone">
+		<Text_ID> TEXT_UNIT_LUCREHULKI </Text_ID>
+		<Space_Model_Name> CIS_LucrehulkI_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor> 0.65 </Scale_Factor>
+		<Layer_Z_Adjust> -1050.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_LucrehulkI02">
+		<Variant_Of_Existing_Type>CIS_LucrehulkIORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>CIS_LucrehulkI_ver02.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_LUCREHULKI.tga</Icon_Name>
+		<Death_Clone>Damage_Normal, CIS_LucrehulkI02_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_LucrehulkI02_Death_Clone">
+		<Text_ID> TEXT_UNIT_LUCREHULKC </Text_ID>
+		<Space_Model_Name> CIS_LucrehulkI_ver02_D.ALO </Space_Model_Name>
+		<No_Colorization_Color> 59, 15, 202, 255 </No_Colorization_Color>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor> 0.65 </Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel, Pirates, Underworld, Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</CIS_LucrehulkIUnit_Data>

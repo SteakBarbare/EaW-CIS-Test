@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<AT_RCT_WalkerUnit_Data>
+
+<GroundVehicle Name="AT_RCT_Walker">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_AT_RCT</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_Z95Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_AT_RCT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		
+		<Land_Model_Name>Ch_AT_RCT.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CH_AT_RCT.tga</Icon_Name>
+
+		<Affiliation>Pirates, Empire, Chiss</Affiliation>
+
+		<AI_Combat_Power>70</AI_Combat_Power>
+
+		<Death_Clone>Damage_Normal, AT_RCT_Walker_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Normal, AT_RCT_Walker_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Normal, AT_RCT_Walker_Death_Clone_02</Death_Clone>
+
+		<Vehicle_Thief_Inside_Clone>AT_RCT_Walker_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	
+
+	<GroundVehicle Name="AT_RCT_Walker_Captured">
+		<Variant_Of_Existing_Type>AT_RCT_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_RCT_Walker_Death_Clone_00">
+		<Variant_Of_Existing_Type>AT_RCT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_RCT_Walker_Death_Clone_01">
+		<Variant_Of_Existing_Type>AT_RCT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+	    <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_RCT_Walker_Death_Clone_02">
+		<Variant_Of_Existing_Type>AT_RCT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+	</GroundVehicle>
+	
+	<GroundCompany Name="AT_RCT_Walker_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		<Text_ID>TEXT_UNIT_CH_AT_RCT_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_AT_RCT TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Loader</Company_Transport_Unit>
+		<Company_Units>AT_RCT_Walker, AT_RCT_Walker, AT_RCT_Walker, AT_RCT_Walker</Company_Units>
+		<Icon_Name>I_BUTTON_CH_AT_RCT.tga</Icon_Name>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+
+</AT_RCT_WalkerUnit_Data>

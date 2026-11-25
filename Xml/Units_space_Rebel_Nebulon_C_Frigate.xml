@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<RV_Nebulon_CUnit_Data>
+	
+	<SpaceUnit Name="RV_Nebulon_C">	
+		<Variant_Of_Existing_Type>Assault_FrgORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_NEBULON_C_FRIGATE</Text_ID>
+		<Encyclopedia_Good_Against> Nebulon_B2E Rep_AcclamatorI Interdictor_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber ISDORG ISD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RV_NEBULON_C_FRIGATE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>RV_Nebulon_C.alo</Space_Model_Name>
+		<Scale_Factor>0.15</Scale_Factor>
+
+		<Max_Speed>2.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
+		<Layer_Z_Adjust>150.0</Layer_Z_Adjust>		
+
+		<OverrideAcceleration> .06 </OverrideAcceleration>
+		<OverrideDeceleration> .06 </OverrideDeceleration>
+
+		<Armor_Type> Armor_Assault_Frigate </Armor_Type>
+        <Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+
+		<Shield_Points>22500</Shield_Points>
+		<Tactical_Health>130000000</Tactical_Health>  
+		<Shield_Refresh_Rate>24500</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>210000</Energy_Refresh_Rate>
+		
+		<Affiliation>Rebel, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<AI_Combat_Power>1935</AI_Combat_Power>
+
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, RV_Nebulon_C_Death_Clone</Death_Clone>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, SHIELDED, SPAWN_SQUADRON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Priority_Set>Frigate</Targeting_Priority_Set>	
+						
+		<HardPoints>
+			HP_T_RNebulonC_01,
+			HP_T_RNebulonC_02,
+			HP_TurboR_01,
+			HP_TurboR_02,
+			HP_TurboR_03,
+			HP_TurboR_04,
+			HP_TurboR_05,
+			HP_TurboR_06,
+			HP_TurboR_07,
+			HP_Shield_Generator_Small_00,
+			HP_Engines_Small_00
+		</HardPoints>
+		<CategoryMask> Frigate | AntiCorvette | AntiFighter | AntiBomber </CategoryMask>
+		<Icon_Name>I_BUTTON_RV_Nebulon_C_Frigate.tga</Icon_Name>
+		<GUI_Model_Name>RV_Nebulon_C.alo</GUI_Model_Name>
+
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>	 
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>40</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		3.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		       
+		<Tactical_Build_Cost_Multiplayer>3500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+    <SpaceUnit Name="RV_Nebulon_C_Death_Clone">
+		<Text_ID>TEXT_UNIT_CC9600</Text_ID>
+		<Space_Model_Name>RV_Nebulon_C_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</RV_Nebulon_CUnit_Data>

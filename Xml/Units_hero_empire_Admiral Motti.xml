@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<Admiral_MottiUnit_Data>
+	
+
+	<GenericHeroUnit Name="Admiral_Motti">
+		<Variant_Of_Existing_Type>General_MelvarORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOTTI_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MOTTI TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>8.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Create_Team>Yes</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Land_Model_Name>Ei_motti.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ei_Motti.tga</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Tyber_Zann</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Tyber_Zann</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tyber_Zann</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Tyber_Zann</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Tyber_Zann</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Tyber_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Tyber_Zann</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Tyber_Zann</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Tyber_Zann </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Tyber_Zann </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Tyber_Zann </Death_SFXEvent_Start_Die>
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+				
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.2f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+					<Type>HARMONIC_BOMB</Type>
+					<Recharge_Seconds>20</Recharge_Seconds>
+					<Spawned_Object_Type>Motti_Gr_Marker</Spawned_Object_Type>
+					<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+					<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Admiral_Motti_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+
+			<Combat_Bonus_Ability Name="Admiral_Motti_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Air | Infantry | Vehicle</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Air | Infantry | Vehicle</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.1</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.1</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.1</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.1</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<System_Spy_Ability Name="Admiral_Motti_Ship_Reveal">
+
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>Yes</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>No</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			
+			<Remove_Corruption_Ability Name="Admiral_Motti_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Enhance_Defense_Ability Name="Admiral_Motti_Enhance_Defense">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.50</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+				<Unit_Strength_Category>Vehicle | Air | Infantry</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="Admiral_Motti_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>2.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	
+
+	
+	<HeroCompany Name="Admiral_Motti_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H2_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOTTI_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Motti.TGA</Icon_Name>
+		<Company_Transport_Unit>Command_Steel_Talon</Company_Transport_Unit>
+		<Company_Units>Admiral_Motti, Squad_Armytrooper_Motti, Squad_Armytrooper_Motti, Squad_Armytrooper_Motti, Squad_Armytrooper_Motti</Company_Units>
+		
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Create_Team_Type> Admiral_Motti_Container </Create_Team_Type>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOTTI TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Tyber_Zann</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Tyber_Zann</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tyber_Zann</SFXEvent_Fleet_Move>
+
+		<CategoryMask>Landhero</CategoryMask>
+
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.2f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+					<Type>HARMONIC_BOMB</Type>
+					<Recharge_Seconds>20</Recharge_Seconds>
+					<Spawned_Object_Type>Motti_Gr_Marker</Spawned_Object_Type>
+					<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+					<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</HeroCompany>
+	
+	<GroundInfantry Name="Squad_Armytrooper_Motti">
+		<Variant_Of_Existing_Type>Squad_Armytrooper</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.3f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+			<Unit_Ability>
+					<Type>HARMONIC_BOMB</Type>
+					<Recharge_Seconds>20</Recharge_Seconds>
+					<Spawned_Object_Type>Motti_Gr_Marker</Spawned_Object_Type>
+					<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+					<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundInfantry>
+
+	<Container Name="Admiral_Motti_Container">
+			<Variant_Of_Existing_Type>Empire_Field_Commander_Team</Variant_Of_Existing_Type>
+			<Text_ID>TEXT_HERO_MOTTI_TEAM</Text_ID>
+			<Encyclopedia_Text> TEXT_TOOLTIP_MOTTI </Encyclopedia_Text>
+			<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+			<Icon_Name>I_BUTTON_Ei_Motti.TGA</Icon_Name>
+			
+			<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.3f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+			<Unit_Ability>
+					<Type>HARMONIC_BOMB</Type>
+					<Recharge_Seconds>20</Recharge_Seconds>
+					<Spawned_Object_Type>Motti_Gr_Marker</Spawned_Object_Type>
+					<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+					<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+					<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Container>
+</Admiral_MottiUnit_Data>

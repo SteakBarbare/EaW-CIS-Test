@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<Ch_VSD3XUnit_Data>
+	<SpaceUnit Name="VSD3XORG">
+		<Variant_Of_Existing_Type>IPV1ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CHISS_VSD</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CHISS_VSD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_CLAW TEXT_UNIT_TIE_CLAW_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> CC9600 CC7700 Ranger </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Mc80cORG R_BulwarkII MC90X </Encyclopedia_Vulnerable_To>
+	    <Space_Model_Name>EV_VictoryIIIX.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+        <Ranking_In_Category>6</Ranking_In_Category>
+
+		<Max_Speed>2.5</Max_Speed>
+		<Max_Rate_Of_Turn>0.5</Max_Rate_Of_Turn>
+		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+		<Max_Rate_Of_Roll>0.45</Max_Rate_Of_Roll>
+
+		<Begin_Turn_Towards_Distance>1000.0</Begin_Turn_Towards_Distance>
+        <OverrideAcceleration> .04 </OverrideAcceleration>
+		<OverrideDeceleration> .04 </OverrideDeceleration>
+		<Autonomous_Move_Extension_Vs_Attacker>750.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Affiliation>Chiss, Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Shield_Refresh_Rate>34000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Ship_Class>frigate</Ship_Class>
+		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
+		
+		
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<AI_Combat_Power>3350</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+        <Max_Thrust>2.5</Max_Thrust>
+		
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+        <Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Death_Explosions>Especial_Explosion_Space_Empire</Death_Explosions>
+
+		
+
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+				
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<HardPoints>
+			HP_EspecialCh_00,
+			HP_EspecialCh_01,
+			HP_EspecialCh_02,
+			HP_EspecialCh_03,
+			HP_EspecialCh_04,
+			HP_EspecialCh_05,
+			HP_EspecialCh_06,
+			HP_EspecialCh_07,
+			HP_LaserGX_01, 
+			HP_LaserGX_02, 
+			HP_LaserGX_03, 
+			HP_LaserGX_04, 
+			HP_LaserGX_05, 
+			HP_LaserGX_06, 
+			HP_LaserGX_07, 
+			HP_LaserGX_08, 
+			HP_LaserGX_09
+			HP_T_Ch_VSDX_07,
+			HP_T_Ch_VSDX_08,
+			HP_T_Ch_VSDX_09,
+			HP_T_Ch_VSDX_10,
+			HP_T_Ch_VSDX_11,
+			HP_T_Ch_VSDX_12,
+			HP_T_Ch_VSDX_13,
+			HP_T_Ch_VSDX_14
+			HP_T_Ch_VSDX_15,
+			HP_T_Ch_VSDX_16,
+			HP_T_Ch_VSDX_17,
+			HP_T_Ch_VSDX_18,
+			HP_T_Ch_VSDX_19,
+			HP_T_Ch_VSDX_20,
+			HP_T_Ch_VSDX_21,
+			HP_T_Ch_VSDX_22,
+			HP_T_Ch_VSDX_23,
+			HP_T_Ch_VSDX_24,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Fighter_Bay_00,
+			HP_Engines_00,
+			HP_Engines_01
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_VictoryIIIX.tga</Icon_Name>
+		<GUI_Model_Name>EV_VictoryIII.ALO</GUI_Model_Name>
+
+        <SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Victory_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Ambient_Loop>Unit_Victory_Destroyer_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Select>Unit_Select_Victory_Destroyer</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Victory_Destroyer</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Victory_Destroyer</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Victory_Destroyer</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Victory_Destroyer</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Stop_Victory_Destroyer</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Barrage_Victory_Destroyer</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Victory_Destroyer </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Victory_Destroyer </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Victory_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Victory_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Engine_Idle_Loop> Unit_Victory_Destroyer_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Victory_Destroyer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Victory_Destroyer_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Cruiser_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		
+		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+	
+		<Radar_Icon_Scale_Land>0.5</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>0.5</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		
+		<Score_Cost_Credits> 2000 </Score_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>1000</Tactical_Bribe_Cost>
+		<Population_Value>3</Population_Value>
+	</SpaceUnit>
+
+     <SpaceUnit Name="Ch_VSD3X_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>EV_VictoryIIIX.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EV_VictoryIIIX.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>110.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+	
+	<SpaceUnit Name="VSD3X">
+		<Variant_Of_Existing_Type>VSD3XORG</Variant_Of_Existing_Type>
+		<Affiliation>Chiss, Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Death_Clone>Damage_Normal, Ch_VSD3X_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+</Ch_VSD3XUnit_Data>

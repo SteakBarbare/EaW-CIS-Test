@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<CIS_Fleet_Tech_5Unit_Data>
+	
+	<SpaceUnit Name="CIS_Fleet_Tech_5">
+		<Variant_Of_Existing_Type>CIS_BulwarkI</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>100000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Text_ID>TEXT_HERO_UNIT_FLEET_CIS_MKII</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FLEET_COMMANDER TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_LUCREHULKB TEXT_UNIT_BULWARKMKI TEXT_UNIT_TRAFED_MISSILESHIP TEXT_UNIT_LUCREHULKDD TEXT_UNIT_PIRATE_MUNIFICENT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Fleet_Commander_MKII_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Affiliation>CIS</Affiliation>
+		<Icon_Name>I_BUTTON_CIS_FLEET_COMMANDER_MKII.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Cost_Credits>75000</Build_Cost_Credits>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<AI_Combat_Power>5415</AI_Combat_Power>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<!-- Hero abilities for Captain Piett added to ship; Hero "moveable" unit removed -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_CIS_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>CIS_Fleet_Tech_5M</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="CIS_Fleet_Tech_5_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.2</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Battlefield_Modifier_Ability Name="CIS_Fleet_CommanderII_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>3.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+		<Tactical_Build_Cost_Multiplayer>75000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>30</Population_Value>
+		<Space_Override_Population_Value>4</Space_Override_Population_Value>
+	</SpaceUnit>
+	
+	
+</CIS_Fleet_Tech_5Unit_Data>

@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<space_structure_NV_Centralia_PlattformUnit_Data>
+
+	
+	<UniqueUnit Name="NV_Centralia_Plattform">
+		<Text_ID>TEXT_UNIT_CENTRALIA</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CENTRALIA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_DEATHSTAR </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Space_Model_Name>NV_Centralia.ALO</Space_Model_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Select_Box_Scale>3</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+		<Is_Dummy>No</Is_Dummy>
+		<Affiliation>Rebel, Empire, Underworld, neutral, Republic, CIS, Pirates, Krayt, Fel</Affiliation>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>90</Size_Value>
+		<Base_Position>Orbital</Base_Position>
+		<Layer_Z_Adjust>-2500.0</Layer_Z_Adjust>
+		<No_Colorization_Color> 255, 255, 255 </No_Colorization_Color>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>20000000</Tactical_Health>
+		<Shield_Refresh_Rate>12000000</Shield_Refresh_Rate>
+		<Energy_Capacity>99999</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, POWERED, TARGETING, SPAWN_SQUADRON, WEAPON, TACTICAL_SELL, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, WEAPON, TURRET, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Reinforcement_Prevention_Radius> 1000 </Reinforcement_Prevention_Radius>
+		<Death_Explosions>Death_Clone_Centralia_Space_Empire</Death_Explosions>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Icon_Name>I_BUTTON_NV_Centralia.tga</Icon_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Space_FOW_Reveal_Range>12000.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.24</Dense_FOW_Reveal_Range_Multiplier>
+		<In_Background>Yes</In_Background>
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>FOCAlliance2.3</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>0.05</Turret_Rotate_Speed>
+		
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Category_Restrictions> Fighter, Bomber </Fire_Category_Restrictions>
+		
+		<Projectile_Types>Proj_BlancoVacio_Laser</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>0</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Underworld_Plasma_Fire</SFXEvent_Fire> 
+		
+		<HardPoints>
+			HP_Centralia_00,
+			HP_Centralia_01,
+			HP_Centralia_03
+		</HardPoints>
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Ambient_Loop>Unit_Starbase_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Select>Unit_Select_Rebel_Space_Station</SFXEvent_Select>
+		<SFXEvent_Attack>Unit_Attack_Rebel_Space_Station</SFXEvent_Attack>
+		<SFXEvent_Barrage>Unit_Barrage_Rebel_Space_Station</SFXEvent_Barrage>
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Rebel_Space_Station</SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Rebel_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Rebel_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Rebel_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Rebel_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Rebel_Space_Station </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Rebel_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  Unit_Lost_Missile_Rebel_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  Unit_Lost_Torpedo_Rebel_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Rebel_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Rebel_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Rebel_Space_Station </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Unit_Under_Attack> RHD_Space_Station_Under_Attack </SFXEvent_Unit_Under_Attack>
+		
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		<Shield_Armor_Type>Shield_DeathStar</Shield_Armor_Type>
+		<Modifies_Reveal_Range>no</Modifies_Reveal_Range>
+		<Reveal_Range_Modifier>-.50</Reveal_Range_Modifier>
+		<CategoryMask> Structure </CategoryMask>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<!--<Radar_Icon_Name>i_radar_station4_e.tga</Radar_Icon_Name>-->
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		<Death_Clone>Damage_Normal, NV_Centralia_Plattform_Death_Clone</Death_Clone>
+		<Score_Cost_Credits> 15000 </Score_Cost_Credits>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		<Custom_Soft_Footprint_Radius> 500 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> StaticObject </Space_Layer>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Centralia_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Recharge_Seconds>30</Recharge_Seconds><!-- jdg was 5  -->
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Turbo_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_EYE_SUPERWEAPON</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_EYE_SUPERWEAPON_DESCR</Alternate_Description_Text>
+			</Unit_Ability>
+			
+	   	</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Super_Laser_Ability Name="Centralia_Super_Laser_Attack_Ability">
+						<Activation_Style> User_Input </Activation_Style>
+						<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+						<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+						<Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+						<Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+
+						<Activation_Min_Range>0</Activation_Min_Range>
+						<Activation_Max_Range>22000</Activation_Max_Range>
+		
+						<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+						<Damage_Per_Frame>250000000</Damage_Per_Frame>			
+						<Fire_Frame>10</Fire_Frame>
+						<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+						<Num_Anim_Frames>1</Num_Anim_Frames>
+						<Line_Width>1000</Line_Width>
+						<Line_Color>242 188 24 255</Line_Color>
+						<Face_Target>false</Face_Target>
+						<Turn_Rate>0.0f</Turn_Rate>
+						<Firing_Cone>0.0f</Firing_Cone>
+					</Super_Laser_Ability>
+		</Abilities>
+	</UniqueUnit>
+	
+	<SpecialStructure Name="NV_Centralia_Plattform_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_2</Text_ID>
+		<Space_Model_Name>NV_Centralia_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<Scale_Factor>1.5</Scale_Factor>
+		<In_Background>Yes</In_Background>
+		<Layer_Z_Adjust>-2500.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</space_structure_NV_Centralia_PlattformUnit_Data>

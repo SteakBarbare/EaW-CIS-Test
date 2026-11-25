@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Eventos_Tacticos_Space_03Unit_Data>
+	<SpaceUnit Name="Shuttle_TyderiumM">
+		<Variant_Of_Existing_Type>Assaulttransport</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TYDERIUM_SHUTTLE</Text_ID>
+		
+		<Land_Model_Name>EV_LAMBDASHUTTLE_Land.ALO</Land_Model_Name>
+		<Space_Model_Name>EV_LAMBDASHUTTLE_SPACE.ALO</Space_Model_Name>
+		
+		<Encyclopedia_Good_Against> Y-Wing TIE_Bomber R41 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Gunboat A-wing TIE_Interceptor </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TYDERIUM_SHUTTLE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Shuttle_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+		<Icon_Name>i_button_Lamba_Shuttle.tga</Icon_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<Max_Speed>2.2</Max_Speed>
+		<Min_Speed>1.5</Min_Speed>
+		<Death_Clone>Damage_Normal, Shuttle_Tyderium_Death_Clone</Death_Clone>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		
+		<CategoryMask> Corvette | AntiFighter | AntiBomber </CategoryMask>
+
+		<Affiliation>Empire, Rebel</Affiliation>
+		
+		<Shield_Points>5000</Shield_Points>
+		<Tactical_Health>2000</Tactical_Health>
+
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SHIELDED, FIGHTER_LOCOMOTOR, WEAPON, TARGETING, REVEAL, HIDE_WHEN_FOGGED, AMBIENT_SFX, UNIT_AI, NEBULA, SELECTABLE, HUNT </SpaceBehavior>
+
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Medium_Explosion_Space_Empire</Death_Explosions>
+		
+		<Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>700.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+
+		<Fire_Inaccuracy_Distance> Fighter, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+
+		<Fire_Category_Restrictions> Infantry, Vehicle, Structure, Air, Transport </Fire_Category_Restrictions>
+		
+		<HardPoints>
+			HP_TIE_Fighter_E_FO_00
+		</HardPoints>
+		
+		<SFXEvent_Fire>Unit_Shuttle_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Lamda_Shuttle</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Lamda_Shuttle</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Lamda_Shuttle</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Lamda_Shuttle</SFXEvent_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Engine_Idle_Loop> Unit_Shuttle_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Shuttle_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Shuttle_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>62</Tactical_Bribe_Cost>
+		<Landing_Transport_Variant>Shuttle_Tyderium_Landing</Landing_Transport_Variant>
+	</SpaceUnit>
+	
+	
+</Eventos_Tacticos_Space_03Unit_Data>
+

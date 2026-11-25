@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Republic_AT_RT_WalkerUnit_Data>
+	<GroundInfantry Name="Clon_ATRTScout_Trooper_No_Bike">
+		<Variant_Of_Existing_Type> Republic_Stormtrooper </Variant_Of_Existing_Type>
+		<Land_Model_Name>RI_ClonPhase2_Scout.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>RI_ClonPhase2_Scout.ALO</Land_Model_Anim_Override_Name>
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			RI_ClonPhase2_Scout.ALO,
+			Urban, 				RI_ClonPhase2_Scout.ALO,
+			Arctic, 			RI_ClonPhase2_Scout.ALO,
+			Volcanic, 			RI_ClonPhase2_Scout.ALO,
+			Desert, 			RI_ClonPhase2_Scout.ALO,
+			Forest, 			RI_ClonPhase2_Scout.ALO,
+			Swamp, 				RI_ClonPhase2_Scout.ALO
+		</Land_Terrain_Model_Mapping>
+	</GroundInfantry>	
+	
+	<GroundInfantry Name="Rep_AT_RT_Walker">
+		<Variant_Of_Existing_Type> Rep_AT_RT_WalkerORG </Variant_Of_Existing_Type>
+		<Destruction_Survivors> 
+			Clon_ATRTScout_Trooper_No_Bike, 1.0 
+		</Destruction_Survivors>
+		<Death_Clone>Damage_Normal, Rep_ATRT_Death_Clone</Death_Clone>
+	</GroundInfantry>	
+	
+	
+	<GroundVehicle Name="Rep_AT_RT_WalkerORG">
+		<Variant_Of_Existing_Type>Pod_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_RT_WALKER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Rebel_Sullustan_Squad MPTL </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATRT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Rep_ATRT.ALO</Land_Model_Name>
+		<No_Colorization_Color> 146, 25, 56, 255 </No_Colorization_Color>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Select_Box_Scale>50</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Armor_Type> Armor_ATST </Armor_Type>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>50</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>250.0</Land_FOW_Reveal_Range>
+
+		<Targeting_Max_Attack_Distance>240.0</Targeting_Max_Attack_Distance>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>
+		
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		
+		<Death_Explosions>Small_Explosion_Land_07</Death_Explosions>
+				
+		<SFXEvent_Select>Unit_Select_Republic_ATXT</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Republic_ATXT</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Republic_ATXT</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Republic_ATXT</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Eweb_Fire</SFXEvent_Fire>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Republic_ATXT </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Republic_ATXT</SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ATXT </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<CategoryMask> Vehicle | AntiVehicle </CategoryMask>
+		<Icon_Name>i_button_Rep_ATRT.tga</Icon_Name>
+		
+		<AI_Combat_Power>25</AI_Combat_Power>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_ATRT_Death_Clone">
+		<Variant_Of_Existing_Type>AT_RT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<Death_Persistence_Duration> 20 </Death_Persistence_Duration>
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathClone> true </IsDeathClone>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_Light_Recon_Squad">	
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_AT_RT_WALKER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATRT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Stap_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_NR_N99_Tank_Droid_Brigade </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+		<Build_Cost_Credits>125</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>Republic_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Company_Units>Rep_AT_RT_Walker, Rep_AT_RT_Walker, Rep_AT_RT_Walker, Rep_AT_RT_Walker</Company_Units>
+
+		<Icon_Name>i_button_Rep_ATRT.tga</Icon_Name>
+		<GUI_Model_Name>AT_RT.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Republic_ATXT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_ATXT</SFXEvent_Fleet_Move>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>125</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+</Republic_AT_RT_WalkerUnit_Data>

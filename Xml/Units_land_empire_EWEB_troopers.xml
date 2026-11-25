@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<EWEB_troopersUnit_Data>
+
+	<GroundInfantry Name="EWEB_troopers">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Turret_Targets_Anything_Else> 2 </Turret_Targets_Anything_Else>
+		<Turret_Targets_Air_Vehicles> 1</Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Ground_Vehicles> 2 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 4 </Turret_Targets_Ground_Infantry>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Turret_Bone_Name>TURRET_BONE</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>4.0</Turret_Rotate_Speed>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Deployment_Anim_Rate>1.0</Deployment_Anim_Rate>
+		<No_Colorization_Color>80,80,80, 255</No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_EWEB_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<LandBehavior>TURRET,SURFACE_FX,ABILITY_COUNTDOWN,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperEWEB.ALO</Land_Model_Anim_Override_Name>
+		<Land_Model_Name>Ei_StormTrooperEWEB.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperEWEB_1T.ALO,
+			Urban, 				Ei_StormTrooperEWEB_1U.ALO,
+			Arctic, 			Ei_StormTrooperEWEB_1A.ALO,
+			Volcanic, 			Ei_StormTrooperEWEB_1T.ALO,
+			Desert, 			Ei_StormTrooperEWEB_1T.ALO,
+			Forest, 			Ei_StormTrooperEWEB_1T.ALO,
+			Swamp, 				Ei_StormTrooperEWEB_1T.ALO
+		</Land_Terrain_Model_Mapping>
+		<Icon_Name>i_button_eweb_trooper.tga</Icon_Name>
+		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
+		<Movement_Animation_Speed> 2</Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Walk_Animation_Speed> .366 </Walk_Animation_Speed>
+		<Crouch_Animation_Speed> .537 </Crouch_Animation_Speed>
+		<Max_Speed>0.7</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius>5.0</Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent>5.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent>5.0 </Custom_Hard_YExtent>
+		<FormationSpacing> .5</FormationSpacing>
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<OverrideAcceleration> 0.05 </OverrideAcceleration>
+		<OverrideDeceleration> 0.05 </OverrideDeceleration>
+		<FormationOrder>2</FormationOrder>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Deploys>Yes</Deploys>
+		<Affiliation>Empire, Chiss</Affiliation>
+		<Tactical_Health>100</Tactical_Health>
+		<AI_Combat_Power>10</AI_Combat_Power>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Targeting_Max_Attack_Distance>390.0</Targeting_Max_Attack_Distance>
+		
+		<Ranged_Target_Z_Adjust>4.5</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0</Projectile_Fire_Recharge_Seconds>
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 7.5</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 15.5</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Speeder_Bike_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_EWEB_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+		
+	</GroundInfantry>
+	<GroundCompany Name="Imperial_EWEB_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EWEB_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EWEB_TROOPER TEXT_DESC_CI_CANTIDAD_4 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Autoresolve_Health>200</Autoresolve_Health>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>120</Build_Cost_Credits>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>
+		 EWEB_troopers, 
+		 EWEB_troopers, 
+		 EWEB_troopers, 
+		 EWEB_troopers
+		</Company_Units>
+		<Max_Squad_Size>1</Max_Squad_Size>
+		<Icon_Name>i_button_eweb_trooper.tga</Icon_Name>
+		<GUI_Model_Name>EI_EWEB_TROOPER.ALO</GUI_Model_Name>
+		<Land_Model_Name>EI_EWEB_TROOPER.ALO</Land_Model_Name>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>120</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</EWEB_troopersUnit_Data>

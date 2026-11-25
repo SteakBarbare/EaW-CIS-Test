@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<Empire_Units_Mixtas_Data>
+
+	
+	<GroundInfantry Name="Ei_Commander_Guard">
+		<Variant_Of_Existing_Type>Squad_Stormtrooper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_COMMANDER_GUARD_E</Text_ID>
+		<Tactical_Health>70</Tactical_Health>
+		<Projectile_Fire_Recharge_Seconds>0.6</Projectile_Fire_Recharge_Seconds>
+		<Score_Cost_Credits> 250 </Score_Cost_Credits>
+		<Create_Team>Yes</Create_Team>
+		<Affiliation>Empire, Fel, Krayt</Affiliation>
+		<Icon_Name>i_button_E_Mix01.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	
+	</GroundInfantry>
+	<GroundInfantry Name="Ei_Commander_Mix01">
+		<Variant_Of_Existing_Type>Ei_Commander_Mix01ORG</Variant_Of_Existing_Type>
+		<Starting_Spawned_Units_Tech_0>Scout_Trooper, 5</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Imperial_Stormtrooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>PlexTrooper_Company, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+	</GroundInfantry>
+	<GroundInfantry Name="Ei_Commander_Mix01M">
+		<Variant_Of_Existing_Type>Ei_Commander_Mix01ORG</Variant_Of_Existing_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Ei_Commander_Mix01ORG">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_OFFICER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_OFFICER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_E_Mix01.tga</Icon_Name>
+		<Land_Model_Name>Ei_Officer_Lieutenant.ALO</Land_Model_Name>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN, SPAWN_SQUADRON</LandBehavior>
+		<Tactical_Health>450</Tactical_Health>
+					
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+	
+		<HardPoints> 
+			HP_Ground_Bay_Invisible
+		</HardPoints>
+		
+		<Create_Team>Yes</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+	</GroundInfantry>	
+	
+	
+	<HeroCompany Name="E_Mix01_Sq">
+		<Variant_Of_Existing_Type>Imperial_Sniper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_STORMTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_IMPERIAL_STORMTROOPER_SQUAD TEXT_UNIT_PLEXTROOPER_SQUAD TEXT_UNIT_SCOUT_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Cost_Credits>135</Build_Cost_Credits>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Units> Ei_Commander_Mix01, Ei_Commander_Guard, Ei_Commander_Guard, Ei_Commander_Guard, Ei_Commander_Guard </Company_Units>
+		<Create_Team_Type> E_Mix01_Sq_Team </Create_Team_Type>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		 <Icon_Name>i_button_E_Mix01.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>135</Tactical_Build_Cost_Multiplayer>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
+	</HeroCompany>	
+	<HeroCompany Name="E_Mix01_SqM">
+		<Variant_Of_Existing_Type>E_Mix01_Sq</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Units> Ei_Commander_Mix01M, Ei_Commander_Guard, Ei_Commander_Guard, Ei_Commander_Guard, Ei_Commander_Guard </Company_Units>
+	</HeroCompany>	
+	<Container Name="E_Mix01_Sq_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_STORMTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_IMPERIAL_STORMTROOPER_SQUAD TEXT_UNIT_PLEXTROOPER_SQUAD TEXT_UNIT_SCOUT_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_E_Mix01.tga</Icon_Name>
+	</Container>
+	<GroundInfantry Name="Ei_Commander_Mix02">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_OFFICER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_OFFICER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_E_Mix02.tga</Icon_Name>
+		<Land_Model_Name>Ei_WalkerCommander.ALO</Land_Model_Name>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN, SPAWN_SQUADRON</LandBehavior>
+		<Tactical_Health>450</Tactical_Health>
+		
+		<Starting_Spawned_Units_Tech_0>Imperial_Assault_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EWEB_troopers, 4</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Empire_Sniper, 6</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Ei_Incinerator, 5</Starting_Spawned_Units_Tech_0>
+		
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+	
+		<HardPoints> 
+			HP_Ground_Bay_Invisible
+		</HardPoints>
+		
+		<Create_Team>Yes</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+	</GroundInfantry>	
+	<HeroCompany Name="E_Mix02_Sq">
+		<Variant_Of_Existing_Type>Imperial_Sniper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_STORMTROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_HEAVY_STORMTROOPER TEXT_Ei_INCINERATOR_SQUAD TEXT_UNIT_EMPIRE_SNIPER_SQUAD TEXT_UNIT_EWEB_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Rebel_Trooper MPTL </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Build_Cost_Credits>520</Build_Cost_Credits>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Tech_Level>99</Tech_Level>
+        <Icon_Name>i_button_E_Mix02.tga</Icon_Name>
+		<Company_Units> Ei_Commander_Mix02, Ei_Commander_Guard, Ei_Commander_Guard, Ei_Commander_Guard, Ei_Commander_Guard </Company_Units>
+		<Create_Team_Type> E_Mix02_Sq_Team </Create_Team_Type>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Tactical_Build_Cost_Multiplayer>520</Tactical_Build_Cost_Multiplayer>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
+	</HeroCompany>	
+	<Container Name="E_Mix02_Sq_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_STORMTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_HEAVY_STORMTROOPER TEXT_Ei_INCINERATOR_SQUAD TEXT_UNIT_EMPIRE_SNIPER_SQUAD TEXT_UNIT_EWEB_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_E_Mix02.tga</Icon_Name>
+	</Container>
+	
+	
+	 	
+</Empire_Units_Mixtas_Data>

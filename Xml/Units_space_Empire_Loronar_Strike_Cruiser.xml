@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<E_StrikeUnit_Data>
+
+	<SpaceUnit Name="E_Strike">
+		<Variant_Of_Existing_Type>StrikeORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STRIKECRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_DTMStrikeCruiser.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>100</Layer_Z_Adjust>
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, E_Strike_Death</Death_Clone>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<GUI_Model_Name>EV_DTMStrikeCruiser.ALO</GUI_Model_Name>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		
+	</SpaceUnit>
+	
+	<SpaceUnit Name="StrikeORG">
+		<Variant_Of_Existing_Type>AcclamatorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_STRIKECRUISER</Text_ID>
+		<Encyclopedia_Good_Against> Tartan_Patrol_Cruiser Imperial_Lancer_Frigate Empire_Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Star_Destroyer Victory_Destroyer2 TIE_Bomber </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STRIKECRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_CRUISER </Encyclopedia_Unit_Class>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_DTMStrikeCruiser.ALO</Space_Model_Name>
+
+		<Scale_Factor>0.15</Scale_Factor>
+
+		<Layer_Z_Adjust>191.583</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Acclamator </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+
+		<Autoresolve_Health>18000</Autoresolve_Health>
+		<Shield_Points>18000</Shield_Points>
+		<Tactical_Health>100000000</Tactical_Health>  
+		<Shield_Refresh_Rate>19000</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>90000</Energy_Refresh_Rate>
+
+		<Affiliation>Rebel</Affiliation>
+
+		<Build_Cost_Credits>1850</Build_Cost_Credits>
+		<AI_Combat_Power>1080</AI_Combat_Power>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		
+		
+		
+		<HardPoints>
+			  HP_T_EStrike_01, 
+			  HP_T_EStrike_02, 
+			  HP_T_EStrike_03,
+			  HP_T_EStrike_04, 
+			  HP_T_EStrike_05, 
+			  HP_T_EStrike_06,  
+			  HP_T_EStrike_07, 
+			  HP_T_EStrike_08, 
+			  HP_T_EStrike_09,
+			  HP_T_EStrike_10, 
+			  HP_T_EStrike_11, 
+			  HP_T_EStrike_12,  
+			  HP_T_EStrike_13,  
+			  HP_Engines_00,
+			  HP_Shield_Generator_Small_00,
+			  HP_Fighter_Bay_Small_00
+	    </HardPoints>
+		
+		<Icon_Name>I_BUTTON_DTMStrike.TGA</Icon_Name>
+		<GUI_Model_Name>EV_DTMStrikeCruiser.ALO</GUI_Model_Name>
+
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>I_RADAR_DEFAULT_BLIP.TGA</Radar_Icon_Name>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>1850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>462</Tactical_Bribe_Cost>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="E_Strike_Death">
+		<Text_ID>TEXT_UNIT_STRIKECRUISER</Text_ID>
+		<Space_Model_Name>RV_DTMStrikeCruiser_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-100.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</E_StrikeUnit_Data>

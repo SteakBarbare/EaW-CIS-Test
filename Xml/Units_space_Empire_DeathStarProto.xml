@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<DeathStarProtoUnit_Data>
+
+	<SpaceUnit Name="DeathStarProto">
+		<Variant_Of_Existing_Type>E_Hvy_Art_ISDORG</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_UNIT_DEATHSTARPROTO</Text_ID>
+		<Encyclopedia_Good_Against> Mc85 Mc80cORG MC90 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing B-Wing Mc104 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEATHSTARPROTO TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_SLOW TEXT_CLASS_NORMAL_SPEED_VERYFAST</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BATTLE_STATION </Encyclopedia_Unit_Class>
+		<Space_Model_Name>EV_DeathStarProto.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_DeathStarProto.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>1.2</Scale_Factor>
+				
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		
+		<Max_Speed>2.0</Max_Speed>
+			
+		<Max_Rate_Of_Turn>0.3</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		
+		
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Supercapital </Space_Layer>
+		<Layer_Z_Adjust>-1000.0</Layer_Z_Adjust>
+		
+		<OverrideAcceleration> 2 </OverrideAcceleration>
+		<OverrideDeceleration> 2 </OverrideDeceleration>
+
+		<Max_Thrust>3.0</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.2</Hyperspace_Speed>
+		<Maintenance_Cost>0.5</Maintenance_Cost>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Planets>The_Maw</Required_Planets>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+				
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Tactical_Health>2000000000</Tactical_Health>
+		<Energy_Capacity>300000</Energy_Capacity>
+		<Energy_Refresh_Rate>180000</Energy_Refresh_Rate>
+		
+		<Ship_Class>Super</Ship_Class>
+		<Surface_Bombardment_Capable>No</Surface_Bombardment_Capable>
+		<Build_Cost_Credits>41000</Build_Cost_Credits>
+		<Tactical_Bribe_Cost>10250</Tactical_Bribe_Cost>
+		<AI_Combat_Power>5500</AI_Combat_Power>
+		<Build_Time_Seconds>280</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+				
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, IDLE, POWERED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Space_FOW_Reveal_Range>8000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		<Death_Clone>Damage_Normal, DeathStarProto_Death_Clone</Death_Clone>
+		<In_Background>Yes</In_Background>
+				
+		<CategoryMask> Capital | AntiSuper </CategoryMask>
+		<Icon_Name>i_button_EV_DeathStarProto.tga</Icon_Name>
+		
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_DEATHSTARPROTO_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+		<Build_Speech_Underway> EHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Respawn_Vader_Executor </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Unit_Canceled </Build_Speech_Stopped>
+		
+		<Build_Speech_Countdowns> EHD_Build_Vehicle </Build_Speech_Countdowns>
+		<Build_Music_Completed> Galactic_Death_Star_Complete_Music_Event </Build_Music_Completed>
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>	
+		<Radar_Icon_Name>i_radar_deathstarproto.tga</Radar_Icon_Name> 
+		<Radar_Icon_Size>0.2  0.2</Radar_Icon_Size>
+		
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
+		
+		<Victory_Relevant>No</Victory_Relevant>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> DeathStarproto_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Space_FOW_Reveal_Ping_All_Map </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+				<Area_Effect_Decal_Distance> 20000.0 </Area_Effect_Decal_Distance>
+				<GUI_Activated_Ability_Name/>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Super_Laser_Ability Name="DeathStarproto_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+				<Damage_Per_Frame>100000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>45</Line_Width>
+				<Line_Color>0 237 119 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+			</Super_Laser_Ability>
+			
+			
+		</Abilities>
+		<Tactical_Build_Cost_Multiplayer>41000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>180</Tactical_Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>5</Population_Value>
+		<Space_Override_Population_Value>1</Space_Override_Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="DeathStarProto_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>EV_DeathStarProto.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EV_DeathStarProto.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Clone_Exp_Space_Empire</Death_Explosions>
+		<Scale_Factor>1.2</Scale_Factor>
+		<In_Background>Yes</In_Background>
+		<Layer_Z_Adjust>-2000.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</DeathStarProtoUnit_Data>

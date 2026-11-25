@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<MagnaguardUnit_Data>
+	<GroundInfantry Name="Magnaguard">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MAGNAGUARD</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAGNAGUARD TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>CIS_Magnaguard.ALO</Land_Model_Name>
+		<GUI_Model_Name>CIS_Magnaguard.ALO</GUI_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_MAGNAGUARD.tga</Icon_Name>
+		<Armor_Type> Armor_Infantry_H </Armor_Type>
+
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Armor_Type> Armor_Infantry_H </Armor_Type>
+		<Tactical_Health>150</Tactical_Health>
+		
+		<AI_Combat_Power>20</AI_Combat_Power>
+		
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Projectile_Types>Proj_Force_Pike</Projectile_Types>
+		
+		<Harass_Enemy_Exclusion_Range>100.0</Harass_Enemy_Exclusion_Range>
+
+		<Targeting_Max_Attack_Distance>5.0</Targeting_Max_Attack_Distance>
+		<Projectile_Appearance_Delay_Frames> 6 </Projectile_Appearance_Delay_Frames>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 4.0 </Targeting_Fire_Inaccuracy>
+				
+		<SFXEvent_Select>Unit_Select_B2Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B2Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B2Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B2Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B2Droid</SFXEvent_Guard>
+		
+		<SFXEvent_Fire>Unit_Magnaguard_Electropica_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Critical_B2Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B2Droid </SFXEvent_Health_Critical_Warning>
+		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B2Droid </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B2Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B2Droid </SFXEvent_Assist_Attack>
+		
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+
+		<Create_Team>No</Create_Team>
+		<Abilities SubObjectList="Yes">
+
+			<Redirect_Blaster_Ability Name="Saber_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
+				<Redirect_Chance>0.50</Redirect_Chance>
+				<Block_Chance>0.50</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+               <Applicable_Unit_Categories>Infantry | Vehicle | Air | Landhero | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+		</Abilities>
+	</GroundInfantry>
+	<GroundInfantry Name="Magnaguard_B">
+		<Variant_Of_Existing_Type>Magnaguard</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>MAGNAGUARD_Company_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="MAGNAGUARD_Company_B">
+		<Variant_Of_Existing_Type>MAGNAGUARD_Company</Variant_Of_Existing_Type>
+		<Company_Units>Magnaguard, Magnaguard, Magnaguard, Magnaguard, Magnaguard, Magnaguard, Magnaguard, Magnaguard</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 8 </Max_Squad_Size>
+	</GroundCompany>		
+	<GroundCompany Name="MAGNAGUARD_Company">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MAGNAGUARD</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAGNAGUARD TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_CIS_MAGNAGUARD.tga</Icon_Name>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Sheathipede_Shuttle</Company_Transport_Unit>
+		<Company_Units>Magnaguard_B</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<SFXEvent_Build_Complete>Unit_Select_B2Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_B2Droid</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</MagnaguardUnit_Data>

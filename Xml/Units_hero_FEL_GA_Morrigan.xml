@@ -1,0 +1,194 @@
+<?xml version="1.0"?>
+<Morrigan_Hero_Files>
+
+	<HeroUnit Name="Morrigan">
+		<Variant_Of_Existing_Type>Mirith_Sinn</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GA_MORRIGAN</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_MORRIGAN TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Land_Model_Name>GA_Morrigan.ALO</Land_Model_Name>
+		<Icon_Name>i_button_GA_Morrigan.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Fel</Affiliation>
+		<CategoryMask>LandHero | SpaceHero</CategoryMask>
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_FEL_GA_Hero</Highlight_Blob_Material_Name>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		
+		<SFXEvent_Select>Unit_Select_Mara_Jade</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mara_Jade</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mara_Jade</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mara_Jade</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mara_Jade</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mara_Jade </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mara_Jade </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mara_Jade </Death_SFXEvent_Start_Die>
+		
+		<Galactic_Influence_Range>100.0</Galactic_Influence_Range>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>STICKY_BOMB</Type>
+				<Recharge_Seconds>26.0f </Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Morrigan_Grenade_Attack </GUI_Activated_Ability_Name>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Morrigan_Production_Time_Reduction">
+				<Applicable_Unit_Types>Generic_Smuggler_E, Generic_Smuggler_R, Generic_Bounty_Hunter_E, Generic_Bounty_Hunter_R</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Galactic_Stealth_Ability Name="Morrigan_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<Remove_Corruption_Ability Name="Morrigan_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+			<System_Spy_Ability Name="Morrigan_System_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+
+			<Neutralize_Hero_Ability Name="Morrigan_Hero_Assasin">
+				<Cost_Mod_By_Base_Level>0.0,0.0, 5.0,1.0</Cost_Mod_By_Base_Level>
+				<Cost_Mod_By_Previous_Neutralizations>0.0,0.0, 1000.0,750.0</Cost_Mod_By_Previous_Neutralizations>
+				<Cost_Mod_By_Planetary_Corruption_Level>0.0,0.0, 1.0,0.25</Cost_Mod_By_Planetary_Corruption_Level>
+				<General_Minor_Hero_Cost_Mod>1.0</General_Minor_Hero_Cost_Mod>
+				<General_Major_Hero_Cost_Mod>1.0</General_Major_Hero_Cost_Mod>
+				<Owner_Respawn_Time_In_Secs>120.0, 150.0</Owner_Respawn_Time_In_Secs>
+				<Target_Respawn_Time_In_Secs>240.0, 300.0</Target_Respawn_Time_In_Secs>
+				<Can_Neutralize_Minor_Heroes>Yes</Can_Neutralize_Minor_Heroes>
+				<Can_Neutralize_Major_Heroes>No</Can_Neutralize_Major_Heroes>
+			</Neutralize_Hero_Ability>
+
+			<Grenade_Attack_Ability Name="Morrigan_Grenade_Attack">
+				<Activation_Style> User_Input </Activation_Style> 
+				<Activation_Min_Range>5.0</Activation_Min_Range>
+				<Activation_Max_Range>100.0</Activation_Max_Range>
+				<Requires_Direct_Player_Command> No </Requires_Direct_Player_Command> 
+				<Grenade_Type>Proj_Mara_Jade_Sticky_Bomb</Grenade_Type>
+				<Grenade_Toss_Anim>BOMBTOSS</Grenade_Toss_Anim>
+				<Grenade_Spawn_Frame>12.0</Grenade_Spawn_Frame>
+				<Grenade_Spawn_Bone>B_Hand_L</Grenade_Spawn_Bone>
+				<Grenade_Explode_Timer_In_Secs>8.0</Grenade_Explode_Timer_In_Secs>
+				<Activation_Chance>0,0.0, 1,1.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry | Air | Vehicle | Structure | Landhero</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Bomb_Mara_Jade</SFXEvent_Activate>
+			</Grenade_Attack_Ability>
+
+
+		</Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Morrigan_Team">
+		<Variant_Of_Existing_Type>Mirith_Sinn_Team</Variant_Of_Existing_Type>
+		<LOD_Bias>5</LOD_Bias>
+		<Text_ID>TEXT_HERO_GA_MORRIGAN</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_MORRIGAN TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_GA_Morrigan.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<Company_Transport_Unit>Ga_Gladius</Company_Transport_Unit>
+		<Company_Units>Morrigan</Company_Units>
+		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+
+	<SpaceUnit Name="Ga_Gladius">
+		<Variant_Of_Existing_Type>Moldy_CrowORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GA_MORRIGAN</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_MORRIGAN TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Space_Model_Name> GA_Gladius.ALO </Space_Model_Name>
+		<Icon_Name>i_button_GA_Morrigan.TGA</Icon_Name>
+		<Galactic_Fleet_Override_Model_Name> W_GA_Gladius_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Fel</Affiliation>
+		<AI_Combat_Power>2895</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Mara_Jade</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mara_Jade</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mara_Jade</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mara_Jade</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mara_Jade</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mara_Jade </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mara_Jade </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mara_Jade </Death_SFXEvent_Start_Die>
+		
+		<HardPoints>
+			HP_Havoc_Laser
+		</HardPoints>
+		<Death_Clone>Damage_Normal, Ga_Gladius_Death_Clone</Death_Clone>
+		<Landing_Transport_Variant>Ga_Gladius_Landing</Landing_Transport_Variant>
+	</SpaceUnit>
+	<SpaceUnit Name="Ga_Gladius_Death_Clone">
+		<Text_ID>TEXT_UNIT_MOLDY_CROW</Text_ID>
+		<Space_Model_Name>GA_Gladius.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Ga_Gladius_Landing">
+		<Variant_Of_Existing_Type>Ga_Mynock</Variant_Of_Existing_Type>
+		<Land_Model_Name>GA_Gladius_Land.ALO</Land_Model_Name>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>2.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</SpaceUnit>
+	
+
+
+
+</Morrigan_Hero_Files>

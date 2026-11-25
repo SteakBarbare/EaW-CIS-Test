@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<Sundered_HeartUnit_Data>
+	
+	<SpaceUnit Name="Sundered_HeartM">
+		<Variant_Of_Existing_Type>Sundered_Heart</Variant_Of_Existing_Type>
+		<Lua_Script>Sundered_Heart</Lua_Script>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+				
+				 <!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				 <!-- The actual radius of ability is in projectile XML -->
+				 <Effective_Radius> 1000.0 </Effective_Radius>
+		         <Spawned_Object_Type>Antilles_Weaken_Enemy_Effect</Spawned_Object_Type>  
+               <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability> 
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN2_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="Sundered_Heart">
+		<Variant_Of_Existing_Type>CR_CVORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SUNDERED_HEART</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Bomber TIE_Fighter Starviper_Fighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Vengeance_Frigate Victory_Destroyer Rep_AcclamatorI </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_captain_antillies.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Space_Model_Name>RV_AntilliesVette.alo</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_Sundered_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>0.175</Scale_Factor>
+
+		<Max_Speed>2.90</Max_Speed>
+		<Max_Rate_Of_Turn>2.4</Max_Rate_Of_Turn>  
+		<Layer_Z_Adjust>-20.0</Layer_Z_Adjust>
+		<Max_Rate_Of_Roll>0.8</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>45</Bank_Turn_Angle>
+		<OverrideAcceleration> .12 </OverrideAcceleration>
+		<OverrideDeceleration> .12 </OverrideDeceleration>
+
+		<Armor_Type> Armor_Corellian_Gunboat </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+	
+		<Affiliation>Rebel</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>99</Tech_Level>
+		<Autoresolve_Health>25000</Autoresolve_Health>
+		<Shield_Points>25000</Shield_Points>
+		<Tactical_Health>500000</Tactical_Health>  
+		<Shield_Refresh_Rate>26000</Shield_Refresh_Rate>
+		<Energy_Capacity>240000</Energy_Capacity>
+		<Energy_Refresh_Rate>144000</Energy_Refresh_Rate>
+		
+		<AI_Combat_Power>1100</AI_Combat_Power>
+		
+		<HardPoints> 
+			HP_T_CR_RCRV_01,
+			HP_T_CR_RCRV_02,
+			HP_T_CR_RCRV_03,
+			HP_T_CR_RCRV_04,
+			HP_T_CR_RCRV_05,
+			HP_T_CR_RCRV_06
+		</HardPoints>
+
+		<CategoryMask> Corvette | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		
+		<SFXEvent_Select>Unit_Select_Antilles</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Antilles</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Antilles</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Antilles</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Antilles</SFXEvent_Guard>
+
+		<Death_Clone>Damage_Normal, Sundered_Heart_Death_Clone</Death_Clone>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_ANTILLES TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+	
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+
+				<Recharge_Seconds>60</Recharge_Seconds>
+				
+				 <!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				 <!-- The actual radius of ability is in projectile XML -->
+				 <Effective_Radius> 1000.0 </Effective_Radius>
+		         <Spawned_Object_Type>Antilles_Weaken_Enemy_Effect</Spawned_Object_Type>  
+               <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability> 
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 300 </Area_Effect_Decal_Distance>
+
+			</Unit_Ability>
+
+
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN2_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Remove_Corruption_Ability Name="Mothma_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+	</SpaceUnit>
+
+	<SpaceUnit Name="Sundered_Heart_Death_Clone">
+		<Text_ID>TEXT_UNIT_SUNDERED_HEART</Text_ID>
+		<Space_Model_Name>RV_Corellian_Corvette_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.175</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+	</SpaceUnit>
+	
+</Sundered_HeartUnit_Data>

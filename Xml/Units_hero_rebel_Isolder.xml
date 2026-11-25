@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<Isolder_Hero_Files>
+	
+	<SpaceUnit Name="Isolder_Cantico_de_Guerra">
+		<Variant_Of_Existing_Type>Battledragon</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_RV_Battledragon_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor> 0.4 </Scale_Factor>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<CategoryMask> Capital | Spacehero | AntiFrigate </CategoryMask>
+		<Death_Clone>Damage_Normal, Isolder_Cantico_de_Guerra_Death_Clone</Death_Clone>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 3</Reserve_Spawned_Units_Tech_0>
+		<AI_Combat_Power>3000</AI_Combat_Power>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				Hapan_Ha_Heavy_Cruiser,
+				Hapan_Star_Destroyer,
+				Hapan_Victory_Destroyer,
+				Hapan_Patrolship,
+				Hapan_Battledragon,
+				Hapan_Stella_Frigate,
+				Hapan_BetaCruiser,
+				Hapan_NovaCruiser
+		</Tactical_Buildable_Objects_Multiplayer>
+				
+		<Text_ID>TEXT_UNIT_ISOLDER</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Required_Planets>Hapes</Required_Planets>
+		<Encyclopedia_Good_Against> Victory_Destroyer Star_Destroyer Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> OLD_BTLS3Ywing TIE_Bomber B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ISOLDER TEXT_TOOLTIP_REDUCE_TIME_HAPAN_SHIPS_10 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BATTLECRUISER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ni_Isolder.tga</Icon_Name>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Affiliation>Rebel</Affiliation>
+		
+		<Population_Value>25</Population_Value>
+		<Space_Override_Population_Value>2</Space_Override_Population_Value>
+		
+		<Tactical_Build_Cost_Multiplayer>4500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>Ha_Isolder_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN_DESCR</Alternate_Description_Text>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	2.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.30f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Isolder_Production_Time_Reduction">
+				<Applicable_Unit_Types>Hapan_Stella_Frigate, Hapan_Victory_Destroyer, Hapan_Battledragon, Hapan_BetaCruiser, Hapan_Ha_Heavy_Cruiser, Hapan_Star_Destroyer, Hapan_Patrolship, Hapan_NovaCruiser</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Combat_Bonus_Ability Name="Isolder_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Isolder_Cantico_de_Guerra, Hapan_Stella_Frigate, Hapan_Victory_Destroyer, Hapan_Battledragon, Hapan_BetaCruiser, Hapan_Ha_Heavy_Cruiser, Hapan_Star_Destroyer, Hapan_Patrolship, Hapan_NovaCruiser</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.15</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.15</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Remove_Corruption_Ability Name="Isolder_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.1</Corruption_Removal_Cost_Multiplier> <!--1.2 means 20% more expensive than base cost, 0.8 means 20% cheaper-->				
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> <!-- Time it takes to remove corruption-->
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="Isolder_Cantico_de_Guerra_Death_Clone">
+		<Text_ID> TEXT_UNIT_HOME_ONE </Text_ID>
+		<Space_Model_Name>NV_BattleDragon_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor> 0.4 </Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<!--<Death_Persistence_Duration> 0 </Death_Persistence_Duration> -->
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Isolder_Hero_Files>

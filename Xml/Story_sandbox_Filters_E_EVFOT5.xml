@@ -1,0 +1,3100 @@
+<?xml version="1.0" ?>
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Lock_Empire_To_Tech_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Empire_To_Tech_2</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Empire_To_Tech_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Empire_To_Tech_3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+	<Event Name="Lock_Empire_To_Tech_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Empire_To_Tech_4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+	<Event Name="Lock_Empire_To_Tech_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Empire_To_Tech_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+	<Event Name="Enter_Tech_FO">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Empire_To_Tech_FO</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Snoke_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Snoke_Team</Reward_Param1>
+		<Reward_Param2>Exegol</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_FO</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Kylo_Ren_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Kylo_Ren_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_FO</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Phasma_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Phasma_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_FO</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Fulminatrix">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>EVFO_Fulminatrix</Reward_Param1>
+		<Reward_Param2>Exegol</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_FO</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Armitage_Hux_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Armitage_Hux_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_FO</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Edrison_Peavey_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Edrison_Peavey_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_FO</Prereq>
+	</Event>	
+
+	
+	<!--***** CODIGO FILTROS ***********-->		
+	
+	 	<Event Name="Capturar_click_Cazas_01">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters4</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Capturar_click_Bombarderos_24">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters24</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+        <Event Name="Capturar_click_Corbetas_02">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters5</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+         <Event Name="Capturar_click_Fragatas_03">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters6</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_LTCruceros_25">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters25</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_04">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters7</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Portanaves_26">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters26</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Destructores_05">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters8</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_Pesados_06">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters9</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_de_Batalla_07">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters10</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Super_Destructores_08">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters11</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		 
+
+<!--  Cazas Principio -->
+
+        <Event Name="Ocultar01_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>TIE_Fighter_FO_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+        <Event Name="Ocultar02_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>TIE_Fighter_E_FO_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+        <Event Name="Ocultar03_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Silencer_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+        <Event Name="Ocultar04_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Interceptor_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+        <Event Name="Ocultar05_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Int_Baron_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+        <Event Name="Ocultar06_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Invader_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+		
+		 <Event Name="Ocultar07_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Dagger_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+		
+		<Event Name="Ocultar01_EVFO_Bombarderos">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Bomber_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+		<Event Name="Ocultar02_EVFO_Bombarderos">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Def_E_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+		<Event Name="Ocultar03_EVFO_Bombarderos">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_M_Gunboat_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+		   
+        </Event>
+
+		<Event Name="DesOcultar01_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+				<Reward_Param1>TIE_Fighter_FO_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+
+        <Event Name="DesOcultar02_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>TIE_Fighter_E_FO_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+
+        <Event Name="DesOcultar03_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Silencer_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+
+        <Event Name="DesOcultar04_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Interceptor_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+
+        <Event Name="DesOcultar05_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Int_Baron_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+
+        <Event Name="DesOcultar06_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Invader_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar07_EVFO_Cazas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Dagger_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar01_EVFO_Bombarderos">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Bomber_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24 Enter_Tech_FO</Prereq>
+        </Event>
+
+		<Event Name="DesOcultar02_EVFO_Bombarderos">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Def_E_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24 Enter_Tech_FO</Prereq>
+        </Event>
+
+		<Event Name="DesOcultar03_EVFO_Bombarderos">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_M_Gunboat_SquadronB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Bombarderos_24 Enter_Tech_FO</Prereq>
+        </Event>
+		
+<!-- Cazas Final -->
+<!-- Corbetas Principio -->
+       
+	   	
+        <Event Name="Ocultar02_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_CR_CV</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="Ocultar03_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_CR_CVM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar04_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Raider</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+			
+		<Event Name="Ocultar05_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_RaiderM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		
+        <Event Name="DesOcultar02_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_CR_CV</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Corbetas_02 Enter_Tech_FO</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar03_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_CR_CVM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Corbetas_02 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar04_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Raider</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Corbetas_02 Enter_Tech_FO</Prereq>
+        </Event>
+					
+		<Event Name="DesOcultar05_EVFO_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_RaiderM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Corbetas_02 Enter_Tech_FO</Prereq>
+        </Event>
+
+		
+				      
+<!-- Corbetas Final -->
+<!--  Cruceros LT Principio -->		
+			<Event Name="Ocultar01_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Light_Cruiser</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Command_Arquitens</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar03_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Strike</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar04_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_DreadOld</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar05_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Medium_Cruiser</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		 <Event Name="Ocultar06_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Strike_Up</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar01_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Light_Cruiser</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_LTCruceros_25 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar02_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Command_Arquitens</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_LTCruceros_25 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar03_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Strike</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_LTCruceros_25 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar04_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_DreadOld</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_LTCruceros_25 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar05_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Medium_Cruiser</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_LTCruceros_25 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		 <Event Name="DesOcultar06_EVFO_LTCruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Strike_Up</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_LTCruceros_25 Enter_Tech_FO</Prereq>
+        </Event>
+<!--  Cruceros LT Final -->			
+<!-- Fragatas Principio -->
+			
+		
+		
+		<Event Name="Ocultar02_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Lancer</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+	
+		<Event Name="Ocultar07_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Nebulon_B</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+			
+		<Event Name="Ocultar09_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Nebulon_B2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		<Event Name="Ocultar14_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Interdictor</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		<Event Name="Ocultar16_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_AcclamatorII</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		
+		
+		<Event Name="DesOcultar02_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Lancer</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Fragatas_03 Enter_Tech_FO</Prereq>
+        </Event>
+
+		
+	
+		<Event Name="DesOcultar07_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Nebulon_B</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Fragatas_03 Enter_Tech_FO</Prereq>
+        </Event>
+			
+		<Event Name="DesOcultar09_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Nebulon_B2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Fragatas_03 Enter_Tech_FO</Prereq>
+        </Event>
+	
+		<Event Name="DesOcultar14_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Interdictor</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Fragatas_03 Enter_Tech_FO</Prereq>
+        </Event>
+			
+		<Event Name="DesOcultar16_EVFO_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_AcclamatorII</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Fragatas_03 Enter_Tech_FO</Prereq>
+        </Event>
+	
+<!-- Fragatas Final -->
+<!-- Cruceros Principio -->
+
+         <Event Name="Ocultar02_EVFO_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Enforcer</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		 <Event Name="Ocultar03_EVFO_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Enforcer_Up</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+						
+		 <Event Name="Ocultar06_EVFO_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Nar_SD</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		
+
+		
+
+         <Event Name="DesOcultar02_EVFO_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Enforcer</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_04 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		 <Event Name="DesOcultar03_EVFO_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Enforcer_Up</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_04 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		 
+				
+		 <Event Name="DesOcultar06_EVFO_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Nar_SD</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_04 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		
+				
+<!-- Cruceros Final -->
+<!-- Destructores Principio -->
+
+        <Event Name="Ocultar01_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Destroyer</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="Ocultar03_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_VSD1</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar04_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_VSD2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar05_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_VSD3</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="Ocultar06_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD1</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+			
+		<Event Name="Ocultar07_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD1T</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar08_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar09_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD2T</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar10_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Dominator</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar11_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Int_SD</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		<Event Name="DesOcultar01_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Destroyer</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar03_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_VSD1</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar04_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_VSD2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar05_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_VSD3</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar06_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD1</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+			
+		<Event Name="DesOcultar07_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD1T</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar08_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar09_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ISD2T</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar10_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Dominator</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar11_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Int_SD</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Destructores_05 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		
+<!-- Destructores Final -->
+<!--  Portanaves Principio -->		
+		<Event Name="Ocultar01_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Gozanti</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Quasar</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar03_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Carrier</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar04_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Attack_Carrier</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+			    <Prereq>Capturar_click_Corbetas_02</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar05_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Gladiator</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+				<Prereq>Capturar_click_Cruceros_04</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="DesOcultar01_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Gozanti</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Portanaves_26 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar02_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Quasar</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Portanaves_26 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar03_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Carrier</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Portanaves_26 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar04_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Attack_Carrier</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Portanaves_26 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		 <Event Name="DesOcultar05_EVFO_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Gladiator</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Portanaves_26 Enter_Tech_FO</Prereq>
+        </Event>
+<!--  Portanaves Final -->		
+<!--  Cruceros_Pesados Principio -->
+		<Event Name="Ocultar01_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>Resurgent</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TorpedoSphere</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar03_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>ResurgentT</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar04_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Xyston</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar01_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>Resurgent</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar02_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TorpedoSphere</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar03_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>ResurgentT</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar04_EVFO_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Xyston</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		
+<!--  Cruceros_Pesados Final -->
+<!--  Cruceros_de_Batalla Principio -->
+		<Event Name="Ocultar01_EVFO_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Dreadnought</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_EVFO_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_MandatorV</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar01_EVFO_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Dreadnought</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar02_EVFO_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_MandatorV</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07 Enter_Tech_FO</Prereq>
+        </Event>
+				
+<!--  Cruceros_de_Batalla Final -->
+
+<!--  Super_Destructores Principio -->
+		<Event Name="Ocultar01_Super_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_SSD</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_Super_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_SSD02</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar03_Super_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_SupremacySTM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar01_Super_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_SSD</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Super_Destructores_08 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar02_Super_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_SSD02</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Super_Destructores_08 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar03_Super_EVFO_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_SupremacySTM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Super_Destructores_08 Enter_Tech_FO</Prereq>
+        </Event>
+<!--  Super_Destructores Final -->
+
+ <!-- FILTROS UNIDADES TERRESTRES--> 
+		 <Event Name="Capturar_click_Infanteria_09">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters12</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Ligeros_10">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters13</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Pesados_11">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters14</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Pesados_Avanzados_12">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters15</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Aerodeslizadores_13">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters16</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Capturar_click_Vehiculos_Aereos_14">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters17</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+
+ <!-- Parte Unidades terrestres -->
+		
+<!--  Infanteria Principio -->
+
+        <Event Name="Ocultar_Unidad_de_EVFO_Infanteria_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Stormtrooper_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		 <Event Name="Ocultar_Unidad_de_EVFO_Infanteria_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_GrenadeTrooper_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Infanteria_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_FlameTrooper_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		<Event Name="Ocultar_Unidad_de_EVFO_Infanteria_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_EWEB_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Infanteria_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Assault_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Infanteria_06">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Officer_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Infanteria_07">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Praetorian_Guard_Company</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Stormtrooper_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+		
+		 <Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_GrenadeTrooper_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_FlameTrooper_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+
+		<Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_EWEB_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Assault_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_06">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Officer_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Infanteria_07">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Praetorian_Guard_Company</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+        </Event>
+					
+<!--  Infanteria Final -->		
+
+<!--  Vehiculos Ligeros Principio -->		
+
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Ligeros_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_AT_ST_Walker_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Ligeros_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATMP_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Ligeros_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_AT_ST_Walker_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Ligeros_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATMP_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+        </Event>
+		
+		
+		
+	
+<!--  Vehiculos Ligeros Final -->				
+<!--  Vehiculos Pesados Principio -->		
+			
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Pesados_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATTE_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Pesados_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATTE_AA_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Pesados_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATTE_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Pesados_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATTE_AA_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+        </Event>
+<!--  Vehiculos Pesados Final -->						
+<!--  Vehiculos_Pesados_Avanzados Principio -->						
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATAT_Company</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATM6_Company</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_UMHC_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_UMHC_Art_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATAT_Company</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_ATM6_Company</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_UMHC_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Pesados_Avanzados_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_UMHC_Art_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+        </Event>
+<!--  Vehiculos_Pesados_Avanzados Final -->			
+
+<!--  Aerodeslizadores Inicio -->		
+		
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Aerodeslizadores_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Troop_Transport_Squad_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Aerodeslizadores_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_M2_Tank_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Aerodeslizadores_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_M2_Tank_Rocket_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Aerodeslizadores_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Troop_Transport_Squad_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Aerodeslizadores_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_M2_Tank_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Aerodeslizadores_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_M2_Tank_Rocket_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+        </Event>
+	
+<!--  Aerodeslizadores Final -->		
+
+<!--  Vehiculos_Aereos Inicio -->		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Elite_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Bomber_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Interceptor_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Invader_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_07">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Upsilon_Ground_SquadB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Unidad_de_EVFO_Vehiculos_Aereos_08">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_INT4_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Elite_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Bomber_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Interceptor_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_TIE_Invader_Squadron_Land</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_07">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Upsilon_Ground_SquadB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Unidad_de_EVFO_Vehiculos_Aereos_08">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_INT4_Squad</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+        </Event>
+	
+<!--  Vehiculos_Aereos Final -->									
+<!-- Parte para las estructuras -->
+		  <Event Name="Capturar_click_estructuras_15">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters18</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_venta_de_estructuras_16">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters19</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_upgrades_17">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters20</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_RBUnits_18">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters21</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_Commanders_19">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters22</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  <Event Name="Capturar_click_FactoryShip_20">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters23</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>			
+
+<!-- Estructuras espaciales -->		  
+
+		<Event Name="Ocultar02_Estructuras_espaciales">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>Factoria_CazasEVFO</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+		        <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+	
+		
+		
+		<!-- Activar Estructuras Espaciales -->
+	
+		<Event Name="DesOcultar_Estructuras_espaciales_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>Factoria_CazasEVFO</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_FO</Prereq>
+        </Event>		
+	
+		
+<!-- Venta Estructuras espaciales -->		  
+
+		<Event Name="Ocultar02_Venta_Estructuras_espaciales">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>V_Factoria_CazasEVFO</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+		        <Prereq>Capturar_click_Fragatas_03</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				 <Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>				
+						
+		
+		<Event Name="DesOcultar_Venta_Estructuras_espaciales_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>V_Factoria_CazasEVFO</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_venta_de_estructuras_16</Prereq>
+        </Event>		
+				<Event Name="Creditos_por_V_estructura_02">
+						<Event_Type>STORY_CONSTRUCT</Event_Type>
+						<Event_Param1>V_Factoria_CazasEVFO</Event_Param1>
+						<Event_Param2>1</Event_Param2>
+						<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+						<Reward_Type>CREDITS</Reward_Type>
+						<Reward_Param1>450</Reward_Param1>
+						<Reward_Param3>Empire</Reward_Param3>
+						<Perpetual>True</Perpetual>
+						<Prereq>Universal_Story_Start</Prereq>
+				</Event>
+
+	
+		
+<!-- Estructuras terrestres -->		  
+	
+		<Event Name="Ocultar07_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Barracks</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar08_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Light_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar09_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar10_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar11_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Officer_Academy</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+
+		<Event Name="DesOcultar_Estructuras_terrestres_07">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Barracks</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_FO</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_Estructuras_terrestres_08">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Light_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_FO</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_Estructuras_terrestres_09">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_FO</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_Estructuras_terrestres_10">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_FO</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_Estructuras_terrestres_11">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Ground_Officer_Academy</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_FO</Prereq>
+        </Event>		
+
+		<!--Filtro Space Upgrades -->
+		
+		<Event Name="Ocultar01_Space_Upgrades">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>Up_EVFO_Enforcer_to_Int</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_Space_Upgrades">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>Up_EVFO_Strike_to_Eidolon</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar03_Space_Upgrades">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>Up_EVFO_ISD2_to_DO</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		<Event Name="DesOcultar01_Space_Upgrades">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>Up_EVFO_Enforcer_to_Int</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_upgrades_17</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar02_Space_Upgrades">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>Up_EVFO_Strike_to_Eidolon</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_upgrades_17</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar03_Space_Upgrades">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>Up_EVFO_ISD2_to_DO</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_upgrades_17</Prereq>
+        </Event>
+	
+	
+		
+		<!--RB ground units filter-->	
+		
+		<Event Name="Ocultar24_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Stormtrooper_Regiment</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar25_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Army_Regiment</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_EVFO_Infanteria_09</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Ligeros_10</Prereq>
+			    <Prereq>Capturar_click_Vehiculos_Pesados_11</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Pesados_Avanzados_12</Prereq>
+				<Prereq>Capturar_click_Aerodeslizadores_13</Prereq>
+				<Prereq>Capturar_click_Vehiculos_Aereos_14</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_Commanders_19</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="DesOcultar24_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Stormtrooper_Regiment</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_RBUnits_18</Prereq>
+        </Event>
+		<Event Name="DesOcultar25_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Army_Regiment</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_RBUnits_18</Prereq>
+        </Event>
+		
+		<!--Ground and fleet Commanders filter-->
+		
+		<Event Name="Ocultar_Commanders_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Fleet_Tech_1</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Commanders_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Fleet_Tech_2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_Commanders_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Fleet_Tech_3</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+				<Prereq>Capturar_click_Bombarderos_24</Prereq>
+				<Prereq>Capturar_click_Corbetas_02</Prereq>
+			    <Prereq>Capturar_click_Fragatas_03</Prereq>
+				<Prereq>Capturar_click_LTCruceros_25</Prereq>
+			    <Prereq>Capturar_click_Cruceros_04</Prereq>
+				<Prereq>Capturar_click_Portanaves_26</Prereq>
+			    <Prereq>Capturar_click_Destructores_05</Prereq>
+			    <Prereq>Capturar_click_Cruceros_Pesados_06</Prereq>
+			    <Prereq>Capturar_click_Cruceros_de_Batalla_07</Prereq>
+			    <Prereq>Capturar_click_Super_Destructores_08</Prereq>
+				<Prereq>Capturar_click_estructuras_15</Prereq>
+				<Prereq>Capturar_click_upgrades_17</Prereq>
+				<Prereq>Capturar_click_RBUnits_18</Prereq>
+				<Prereq>Capturar_click_FactoryShip_20</Prereq>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+		<Event Name="DesOcultar_Commanders_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Fleet_Tech_1</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Commanders_19 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Commanders_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Fleet_Tech_2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Commanders_19 Enter_Tech_FO</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_Commanders_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVFO_Fleet_Tech_3</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Capturar_click_Commanders_19 Enter_Tech_FO</Prereq>
+        </Event>
+		
+</Story>

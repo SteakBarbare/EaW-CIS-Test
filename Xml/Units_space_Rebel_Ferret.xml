@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<FerretUnit_Data>
+	<SpaceUnit Name="Ferret">
+		<Variant_Of_Existing_Type>GuardianORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FERRET</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber TIE_Scout </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> ISDORG Victory_Destroyer AcclamatorII </Encyclopedia_Vulnerable_To>
+
+		<Space_Model_Name>RV_Ferret.alo</Space_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Max_Speed>4.1</Max_Speed>
+
+		<Armor_Type> Armor_Tartan </Armor_Type>
+		<Shield_Armor_Type>Shield_Corvette</Shield_Armor_Type>
+		<Affiliation>Rebel, GA</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes, AdvancedTech_8</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<AI_Combat_Power>50</AI_Combat_Power>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+
+		<Death_Clone>Damage_Normal, Ferret_Death_Clone</Death_Clone>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+
+		<Hardpoints>
+				HP_MisilA_01, 
+				HP_MisilA_02,
+				HP_T_Ferret_01,	
+				HP_R_Xwing_Laser_02, 
+				HP_R_Xwing_Laser_03
+		</Hardpoints>
+
+		<Icon_Name>I_BUTTON_RV_FERRET.TGA</Icon_Name>
+		<GUI_Model_Name>RV_Ferret.alo</GUI_Model_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADSENSOR</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADSENSOR_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>60</Recharge_Seconds>
+			    <Spawned_Object_Type>R_Space_Sensor_Spawned</Spawned_Object_Type>
+				<Effective_Radius> 100.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FERRET TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_RECON_CRAFT</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="Ferret_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>RV_Ferret_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</FerretUnit_Data>

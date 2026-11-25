@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<Hu_YBWing_Files>
+
+	<SpaceUnit Name="Hu_YBWing">
+		<Variant_Of_Existing_Type>B-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_YB_WING</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_YB_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Star_Destroyer Victory_Destroyer Krayt_Class_Destroyer </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG TIE_Defender Crusader_Gunship </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>Hu_YB_Wing.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>3.4</Max_Speed>
+		<Min_Speed>2.3</Min_Speed>
+		<Max_Rate_Of_Turn>2.8</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		<Fires_Forward>no</Fires_Forward>
+		<Armor_Type> Armor_Bomber </Armor_Type>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Shield_Points>1500</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>1650</Shield_Refresh_Rate>
+		<Energy_Capacity>15000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+
+		<Land_Bomber_Type>YB_Wing_Bombing_Run</Land_Bomber_Type>
+		
+		<HardPoints>
+			HP_BTLYWING_02, HP_R_Bwing_Laser_00, HP_R_Bwing_Laser_01, HP_R41_Ion_02, HP_R41_Ion_03, HP_R_YBwing_Laser_04, HP_R_YBwing_Laser_05, HP_R_YBwing_Laser_06, HP_R_YBwing_Laser_07, HP_R_YBwing_Laser_08, HP_R_YBwing_Laser_09, HP_YwingSpace_Turret, HP_IonShot_00H, HP_Torpedo_Ability_00, HP_Torpedo_Ability_01 
+		</HardPoints>
+		
+		<CategoryMask>Bomber | Antifrigate</CategoryMask>
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
+		
+		<SFXEvent_Fire> Unit_Rebel_Ship_Laser_Fire </SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_B_WingX</SFXEvent_Select>
+				
+		<Icon_Name>I_BUTTON_Hu_YBWing.TGA</Icon_Name>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Strafe_Distance>500.0</Strafe_Distance>
+
+	</SpaceUnit>
+
+
+	<Squadron Name="Hu_YBWing_Squadron">
+		<Variant_Of_Existing_Type>Y-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HU_YB_WING_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Star_Destroyer Victory_Destroyer Acclamator_Assault_Ship </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG TIE_Defender </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+
+		<Tech_Level>99</Tech_Level>
+		
+		<Squadron_Units>Hu_YBWing, Hu_YBWing, Hu_YBWing</Squadron_Units>
+
+		<Create_Team_Type>Hu_YBWing_Squadron_Container1</Create_Team_Type>
+
+		<Icon_Name>I_BUTTON_Hu_YBWing.TGA</Icon_Name>
+		<GUI_Model_Name>Hu_YB_Wing.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_B_WingX</SFXEvent_Build_Complete>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_YB_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+	</Squadron>
+	<Container Name="Hu_YBWing_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_HU_YB_WING_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_YB_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Hu_YBWing.tga</Icon_Name>
+
+		<Max_Speed>3.4</Max_Speed>
+		<Min_Speed>2.3</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask>Bomber | Antifrigate</CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</Hu_YBWing_Files>

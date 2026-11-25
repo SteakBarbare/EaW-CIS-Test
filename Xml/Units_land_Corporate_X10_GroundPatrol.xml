@@ -1,0 +1,85 @@
+﻿<?xml version="1.0"?>
+
+
+<X10_ground_patrolUnit_Data>
+	<GroundVehicle Name="X10_ground_patrol">
+		<Variant_Of_Existing_Type>T2B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_X10_GROUND_PATROL</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_X10_GROUND_PATROL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Co_Ground_Patrol_X10.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Co_X10_ground_patrol.tga</Icon_Name>
+
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Max_Speed>3.0</Max_Speed>
+
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_T2B </Armor_Type>
+        <Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<LandBehavior>AFFECTED_BY_SHIELD, HUNT, WALK_LOCOMOTOR, ABILITY_COUNTDOWN, IDLE, TARGETING, BARRAGE, WEAPON, TURRET, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+
+		<Turret_Rotate_Extent_Degrees>90</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+	
+		<Projectile_Types>Proj_Blaster_Cannon_Green_X10</Projectile_Types>
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+	
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+	
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<SFXEvent_Fire>Unit_Tank_T2B_Fire</SFXEvent_Fire>
+
+		<CategoryMask> Vehicle | AntiInfantry</CategoryMask>
+		
+        <Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<GroundCompany Name="X10_ground_patrol_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_X10_GROUND_PATROL_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_X10_GROUND_PATROL TEXT_DESC_C_CANTIDAD_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Corporate_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>X10_ground_patrol, X10_ground_patrol, X10_ground_patrol, X10_ground_patrol, X10_ground_patrol</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_Co_X10_ground_patrol.tga</Icon_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Population_Value>1</Population_Value>
+
+	</GroundCompany>
+	
+</X10_ground_patrolUnit_Data>

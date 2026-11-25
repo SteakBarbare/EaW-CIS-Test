@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<EVK_ArdentHUnit_Data>
+	
+	<SpaceUnit Name="EVK_ArdentH">
+		<Variant_Of_Existing_Type>ArdentORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVK_Ardent_FrigateH.ALO</Space_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<!--<Custom_Hard_XExtent> 88.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 46.0 </Custom_Hard_YExtent>-->
+		
+		<Icon_Name>I_BUTTON_EVF_ARDENTH.TGA</Icon_Name>
+		<AI_Combat_Power>975</AI_Combat_Power>
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		
+		<Text_ID>TEXT_UNIT_EVF_ARDENTH</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVF_ARDENTH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVF_TIE_PREDATOR TEXT_WAVES_X2 TEXT_UNIT_EVF_TIE_NEUTRALIZER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Predator_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Predator_Squadron5, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Squadron4, 5</Reserve_Spawned_Units_Tech_0>
+		
+		<Projectile_Fire_Pulse_Count>26</Projectile_Fire_Pulse_Count>
+		
+		<Death_Clone>Damage_Normal, EVK_Ardent_H_Death_Clone</Death_Clone>
+		
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<HardPoints> 
+			HP_IonM_01, 
+			HP_IonM_02,
+			HP_IonM_03,
+			HP_IonM_04,
+			HP_IonM_05,
+			HP_IonM_06,
+			HP_IonM_07,
+			HP_IonM_08,
+			HP_TurboMR_01,
+			HP_TurboMR_02,
+			HP_TurboMR_03,
+			HP_TurboMR_04,
+			HP_TurboMR_05,
+			HP_TurboMR_06,
+			HP_TurboMR_07,
+			HP_TurboMR_08,
+			HP_TurboMR_09,
+			HP_TurboMR_10,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_Ardent_01,
+			HP_T_Ardent_02,
+			HP_T_Ardent_03,
+			HP_T_Ardent_04,
+			HP_T_Ardent_05,
+			HP_T_Ardent_06,
+			HP_T_Ardent_07,
+			HP_T_Ardent_08,
+			HP_T_Ardent_09,
+			HP_T_Ardent_10,
+			HP_T_Ardent_11,
+			HP_T_Ardent_12,
+			HP_T_Ardent_13,
+			HP_T_Ardent_14
+		</HardPoints>
+	</SpaceUnit>
+		
+	<SpaceUnit Name="EVK_Ardent_H_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EVK_Ardent_FrigateH_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Layer_Z_Adjust>-110.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</EVK_ArdentHUnit_Data>

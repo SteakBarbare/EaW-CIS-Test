@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<DefianceUnit_Data>
+	<SpaceUnit Name="Up_R_Home_One_to_Defiance">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HOME_ONE</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_DEFIANCE TEXT_TOOLTIP_DEFIANCE</Encyclopedia_Text>
+		<Icon_Name>i_button_admiral_akbar.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Officer_Academy</Required_Special_Structures>
+
+		<Required_Orbiting_Units>Home_One</Required_Orbiting_Units>
+		<Build_Time_Seconds>75</Build_Time_Seconds>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Lua_Script>Up_R_Home_One_to_Defiance</Lua_Script>
+		<Population_Value>3</Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Defiance_MP">
+		<Variant_Of_Existing_Type>Defiance</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+	</SpaceUnit>	
+	<SpaceUnit Name="MC90R1">
+		<Variant_Of_Existing_Type>Defiance_Re_1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MC902</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MC902 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X2 TEXT_UNIT_B_WING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+	</SpaceUnit>
+	<SpaceUnit Name="MC90R2">
+		<Variant_Of_Existing_Type>Defiance_Re_2</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MC902</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MC902 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X2 TEXT_UNIT_B_WING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+	</SpaceUnit>
+	<SpaceUnit Name="Defiance_Re_1">
+		<Variant_Of_Existing_Type>DefianceORG</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust> -190 </Layer_Z_Adjust>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Text_ID>TEXT_UNIT_DEFIANCE_RE</Text_ID>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Generic_Hero>No</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEFIANCE_RE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_UNIT_B_WING TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Icon_Name>i_button_RV_MC90B_Green_JM.tga</Icon_Name>
+		<AI_Combat_Power>2415</AI_Combat_Power>
+		<Affiliation>Rebel</Affiliation>
+		<Space_Model_Name>RV_MC90_GREEN_JM.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, Defiance_Re_1_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+		</Unit_Abilities_Data>
+
+		<Population_Value>4</Population_Value>
+		<!--<Space_Override_Population_Value>3</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="Defiance_Re_1_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC902 </Text_ID>
+		<Space_Model_Name> RV_MC90_GREEN_JM_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Defiance_Re_2">
+		<Variant_Of_Existing_Type>DefianceORG</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust> -90 </Layer_Z_Adjust>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Generic_Hero>No</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<Text_ID>TEXT_UNIT_DEFIANCE_RE</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEFIANCE_RE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X2 TEXT_UNIT_B_WING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Icon_Name>i_button_RV_MC90B_Brown_JM.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Space_Model_Name>RV_MC90_BROWN_JM.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, Defiance_Re_2_Death_Clone</Death_Clone>
+		<AI_Combat_Power>2420</AI_Combat_Power>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+		</Unit_Abilities_Data>
+		
+
+		<Population_Value>4</Population_Value>
+		<!--<Space_Override_Population_Value>3</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="Defiance_Re_2_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC902 </Text_ID>
+		<Space_Model_Name> RV_MC90_BROWN_JM_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Defiance">
+		<Variant_Of_Existing_Type>DefianceORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Ackbar</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Alternate_Icon_Name>I_SA_REB_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_REBELONE_FLEET_REIN_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+ 			    <Effective_Radius> 0.0 </Effective_Radius>
+			    <Spawned_Object_Type>Defiance_Marker</Spawned_Object_Type>  
+			    <SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability> 
+			    <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+ 			    <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Population_Value>14</Population_Value>
+		<Space_Override_Population_Value>4</Space_Override_Population_Value>
+		
+	</SpaceUnit>	
+	<SpaceUnit Name="DefianceORG">
+		<Variant_Of_Existing_Type>Home_OneORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_DEFIANCE</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEFIANCE TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_WAVES_X2 TEXT_UNIT_B_WING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> ISD2 VSD2 Allegiance </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Interdictor Missile_Gunboat SSD </Encyclopedia_Vulnerable_To>
+		
+		<!--<Custom_Hard_XExtent> 191.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 72.0 </Custom_Hard_YExtent>-->
+
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Generic_Hero>No</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<Icon_Name>i_button_admiral_akbar.TGA</Icon_Name>
+		<Space_Model_Name>RV_MCDefianceJM.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_NewHomeOne_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>0.25</Scale_Factor>
+		
+		<Layer_Z_Adjust> 0.0 </Layer_Z_Adjust>
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		<Death_Clone>Damage_Normal, Defiance_Death_Clone</Death_Clone>
+
+		<Autoresolve_Health>41000</Autoresolve_Health>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Points>41000</Shield_Points>
+		<Shield_Refresh_Rate>43000</Shield_Refresh_Rate>
+		<Energy_Capacity>1000000</Energy_Capacity>
+		<Energy_Refresh_Rate>600000</Energy_Refresh_Rate>
+		<AI_Combat_Power>2425</AI_Combat_Power>
+
+		<Starting_Spawned_Units_Tech_0>A_Wing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>B_WingS2_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>A_Wing_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>B_WingS2_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		
+		
+		<HardPoints>
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_IonM_01,
+			HP_IonM_02,
+			HP_IonM_03,
+			HP_IonM_04,
+			HP_IonM_05,
+			HP_IonM_06,
+			HP_TurboMR_4XTM_01,
+			HP_TurboMR_4XTM_02,
+			HP_TurboMR_4XTM_03,
+			HP_TurboMR_4XTM_04,
+			HP_TurboMR_4XTM_05,
+			HP_TurboMR_4XTM_06,
+			HP_TurboMR_4XTM_07,
+			HP_TurboMR_4XTM_08,
+			HP_TurboMR_09,
+			HP_TurboMR_10,
+			HP_TurboMR_11,
+			HP_TurboMR_12,
+			HP_TurboMR_13,
+			HP_TurboMR_14,
+			HP_T_MC90_01,
+			HP_T_MC90_02,
+			HP_T_MC90_03,
+			HP_T_MC90_04,
+			HP_T_MC90_05,
+			HP_T_MC90_06,
+			HP_T_MC90_07,
+			HP_T_MC90_08,
+			HP_T_MC90_09,
+			HP_T_MC90_10,
+			HP_T_MC90_11,
+			HP_T_MC90_12,
+			HP_T_MC90_13,
+			HP_T_MC90_14,
+			HP_T_MC90_15,
+			HP_T_MC90_16,
+			HP_T_MC90_17,
+			HP_Fighter_BayH_00, 
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Rocket_01,
+			HP_Rocket_02
+  		</HardPoints>
+		<GUI_Model_Name>RV_MCDefianceJM.ALO</GUI_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>8500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+	
+		<Population_Value>4</Population_Value>
+		<!--<Space_Override_Population_Value>4</Space_Override_Population_Value>-->
+		
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+
+		<Radar_Icon_Size>0.0625  0.0625</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+
+		<CategoryMask> SpaceHero </CategoryMask>
+		
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier> <!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier> <!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	5.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Ackbar</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>			
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Ackbar</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			
+			
+		</Unit_Abilities_Data>
+
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="AkbarD_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Combat_Bonus_Ability Name="AkbarD_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Defiance, Defiance_Re_1, Defiance_Re_2, IA_Defiance_Re_1, IA_Defiance_Re_2</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>1.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>1.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Price_Ability Name="AkbarD_Reduce_Production_Price">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Remove_Corruption_Ability Name="AkbarD_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="Defiance_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC902 </Text_ID>
+		<Space_Model_Name> RV_MCDefianceJM_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</DefianceUnit_Data>

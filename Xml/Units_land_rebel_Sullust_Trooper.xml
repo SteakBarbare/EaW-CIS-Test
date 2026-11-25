@@ -1,0 +1,168 @@
+﻿<?xml version="1.0"?>
+
+
+<Sullust_TrooperUnit_Data>
+	<GroundInfantry Name="Sullust_Trooper">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SULLUST_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ri_Sullustan_Soldier.ALO</Land_Model_Name>
+
+		<Scale_Factor>1.1</Scale_Factor>
+		<AI_Combat_Power>5</AI_Combat_Power>
+
+		<Affiliation>Rebel</Affiliation>
+		<Tactical_Health>100</Tactical_Health>
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+
+		<Targeting_Max_Attack_Distance>150.0</Targeting_Max_Attack_Distance>
+
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+
+		<SFXEvent_Select>Unit_Select_Civilian</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Civilian</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Civilian</SFXEvent_Attack>
+		<SFXEvent_Assist_Move>Unit_Assist_Move_Civilian</SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack>Unit_Assist_Attack_Civilian</SFXEvent_Assist_Attack>
+		<SFXEvent_Guard>Unit_Guard_Civilian</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Pyngani_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Death</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<Icon_Name>i_button_rebel_Sullust_Trooper.tga</Icon_Name>
+		
+		<Create_Team>Yes</Create_Team>
+		<Death_Clone>Damage_Force_Whirlwind, Sullust_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Sullust_Trooper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Sullust_Trooper_Crush_Death_Clone</Death_Clone>
+		
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SULLUSTAN_SQUAD TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+				
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Sullust_Trooper_Remote_Bomb_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Celebrate, 
+				AT_AT_Walker_Cable_Attack_Death_Clone,
+				AT_AT_Walker_Death_Clone_00,
+				AT_AT_Walker_Death_Clone_01,
+				AT_AT_Walker_Death_Clone_02
+		</Presence_Induced_Animations>		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Rebel_Soldier</SFXEvent_GUI_Unit_Ability_Activated>			
+				</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Conversion_Ability_Changes_To_Enemy> Sullust_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Sullust_Trooper">
+		<Variant_Of_Existing_Type>Sullust_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, GARRISON_UNIT, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>		
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> 1.6 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+		<Conversion_Ability_Changes_To_Enemy> Squad_Rebel_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Sullust_Trooper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Sullust_Trooper </Variant_Of_Existing_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Sullust_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Sullust_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Sullust_Trooper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Sullust_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Sullust_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Sullust_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Sullust_Trooper_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_Soldier</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>		
+	
+	<GroundInfantry Name="Sullust_Trooper_NonVictroy">
+		<Variant_Of_Existing_Type> Sullust_Trooper </Variant_Of_Existing_Type>
+		<Victory_Relevant>no</Victory_Relevant>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Sullust_Trooper_B">
+		<Variant_Of_Existing_Type>Squad_Sullust_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Rebel_Sullust_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Rebel_Sullust_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>Rebel_Sullust_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper, Squad_Sullust_Trooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Sullust_Trooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Rebel_Sullust_Trooper_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SULLUST_TROOPER</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SULLUSTAN_SQUAD TEXT_DESC_CI_CANTIDAD_3 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>70</Build_Cost_Credits>
+		<Build_Time_Seconds>17</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Required_Planets>Sullust, SulonI, SullustI</Required_Planets>
+
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		
+
+		<Company_Units> Squad_Sullust_Trooper_B, Squad_Sullust_Trooper, Squad_Sullust_Trooper </Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Sullust_Trooper_Team </Create_Team_Type>
+		<Icon_Name>i_button_rebel_Sullust_Trooper.tga</Icon_Name>
+
+		<SFXEvent_Build_Started>RHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Guard_Sullustan</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Move_Sullustan</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>70</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+	<Container Name="Sullust_Trooper_Team">
+		<Variant_Of_Existing_Type>Rebel_Trooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SULLUST_TROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SULLUSTAN_SQUAD TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Icon_Name>i_button_rebel_Sullust_Trooper.tga</Icon_Name>
+	</Container>
+</Sullust_TrooperUnit_Data>

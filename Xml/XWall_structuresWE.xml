@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<E_WallArmedUnit_Data>
+	
+	<SpecialStructure Name="Upgrade_E_Wall_to_WallArmed">
+		<Variant_Of_Existing_Type>Upgrade_EV_Hypervelocity_Gun_to_EV_LNR_I</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_WallArmed.tga</Icon_Name>
+		<Affiliation>Empire, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>GC_Walls</Required_Special_Structures>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Lua_Script>Upgrade_E_Wall_to_WallArmed</Lua_Script>
+	</SpecialStructure>
+	
+	
+	<SpecialStructure Name="Template_WallArmed">
+		<Variant_Of_Existing_Type>A_Normal_Wall_GC</Variant_Of_Existing_Type>  
+		<Land_Model_Name>Nb_Wall_Normal_WImp.ALO</Land_Model_Name>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+			
+		<Behavior>SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,TURRET,TARGETING,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION, STUNNABLE,EARTHQUAKE_TARGET </LandBehavior>
+		<Icon_Name>I_BUTTON_WallArmed.tga</Icon_Name>
+
+		<Affiliation>Neutral</Affiliation>
+		
+		<Turret_Rotate_Speed>1.5</Turret_Rotate_Speed>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		
+		<Fire_Inaccuracy_Distance> Air, 100.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Vehicle, 50.0 </Fire_Inaccuracy_Distance>
+		
+		<CategoryMask> Structure | AntiVehicle | AntiAir </CategoryMask>
+		<Requires_Base_Power>False</Requires_Base_Power>
+		
+	</SpecialStructure>
+	
+	<SpecialStructure Name="E_WallArmed">
+		<Variant_Of_Existing_Type>Template_WallArmed</Variant_Of_Existing_Type>  
+		<Land_Model_Name>Nb_Wall_Normal_WImp.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_WallArmed.tga</Icon_Name>
+		<Affiliation>Empire, Pirates, Republic, Krayt, Chiss, EVFO</Affiliation>	
+		<SFXEvent_Fire>Unit_Turbo_Tower_Fire</SFXEvent_Fire>
+		<Projectile_Types>Proj_Ground_Turbolaser_GreenWE</Projectile_Types>
+		
+		<Tactical_Additional_Structure_Type>Power_Generator_E</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	   
+	<SpecialStructure Name="GC_Walls_IE">
+		<Variant_Of_Existing_Type>GC_Walls</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_WallArmed.tga</Icon_Name>
+		<Affiliation>Empire, Pirates, Republic, Krayt, Chiss, EVFO</Affiliation>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>E_WallArmed</Place_Other_Type_At_Every_Specific_Marker_Position>
+	</SpecialStructure>
+	<GroundBuildable Name="EC_WallArmed_Build">
+		<Variant_Of_Existing_Type>PC_Walls_Build</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_WallArmed.tga</Icon_Name>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Land_Model_Name>Nb_Wall_Normal_WImp.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> E_WallArmed </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> GC_Walls_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Empire, Pirates, Republic, Krayt, Chiss, EVFO</Affiliation>
+   </GroundBuildable>   
+  
+</E_WallArmedUnit_Data>
+
+
+

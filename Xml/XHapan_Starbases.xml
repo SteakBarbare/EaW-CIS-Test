@@ -1,0 +1,1014 @@
+<?xml version="1.0"?>
+<StarBases>
+	
+	<StarBase Name="Hapan_Star_Base_1">
+		<Variant_Of_Existing_Type>R_Star_BaseORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STAR_BASE_SP_1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_1 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<Space_Model_Name>NV_Baas_class_ST.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_NV_Baas_class_ST.alo</Galactic_Model_Name>
+		
+		<Affiliation>Hapan</Affiliation>
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Station>yes</Build_Tab_Space_Station>
+		<Size_Value>10</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>1</Base_Level>
+
+		<Next_Level_Base>Hapan_Star_Base_2</Next_Level_Base>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<CategoryMask> Capital </CategoryMask>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		
+		<Autoresolve_Health>150000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+				
+		<Starting_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+			
+	
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship2_SB, 1</Starting_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship3_SB5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Ha_STR1, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_ChCoHaHu_STR1, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_ADVtorpedoB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		
+		<SFXEvent_Fire>Unit_Torpedo_Fire</SFXEvent_Fire>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Hapan, 
+				UC_SB_Defense_Ion_Circle,
+				UC_SB_Defense_Laser_Circle
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Damage>35</Damage>
+
+		<HardPoints>
+			HP_T_Baas_R_01,
+			HP_T_Baas_R_02,
+			HP_T_Baas_R_03,
+			HP_T_Baas_R_04,
+			HP_T_Baas_R_05,
+			HP_T_Baas_R_06,
+			HP_T_Baas_07,
+			HP_T_Baas_08,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Empire_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+		<GUI_Model_Name>NV_Baas_class_ST.ALO</GUI_Model_Name>
+				
+		<Radar_Icon_Name>i_radar_Fel_station1_2.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+
+		<Icon_Name>I_BUTTON_Ha_st_Baas_1.tga</Icon_Name>
+		<Score_Cost_Credits> 1500</Score_Cost_Credits>
+		<Death_Clone>Damage_Normal, NV_Baas_class_ST_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>10</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Hapan_Star_Base_2">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_STAR_BASE_SP_2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>Ha_station_Level_2.alo</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Affiliation>Hapan</Affiliation>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<AI_Combat_Power>7500</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Tab_Space_Station>Yes</Build_Tab_Space_Station>
+
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>2</Base_Level>
+		<Prev_Level_Base>Hapan_Star_Base_1</Prev_Level_Base>
+		<Next_Level_Base>Hapan_Star_Base_3</Next_Level_Base>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>300000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<CategoryMask> Capital </CategoryMask>
+
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		
+		<Starting_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+			
+	
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship2_SB, 1</Starting_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship3_SB5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Ha_STR2, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_ChCoHaHu_STR2, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_ADVtorpedoB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		
+		<SFXEvent_Fire>Unit_Torpedo_Fire</SFXEvent_Fire>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Hapan, 
+				UC_SB_Defense_Ion_Circle,
+				UC_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_T_HaStation_01,
+			HP_T_HaStation_02,
+			HP_T_HaStation_03,
+			HP_T_HaStation_04,
+			HP_T_HaStation_05,
+			HP_T_HaStation_06,
+			HP_T_HaStation_07,
+			HP_T_HaStation_08,
+			HP_T_HaStation_09,
+			HP_T_HaStation_10,
+			HP_T_HaStation_11,
+			HP_T_HaStation_12,
+			HP_T_HaStation_13,
+			HP_T_HaStation_14,
+			HP_T_HaStation_15,
+			HP_T_HaStation_16,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+	
+		<Radar_Icon_Name>I_RADAR_Ha_STATION2.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+	
+		<Icon_Name>I_BUTTON_Ha_Station_Level2.tga</Icon_Name>
+		<Score_Cost_Credits>3000</Score_Cost_Credits>
+		<Slice_Cost_Credits>600</Slice_Cost_Credits>
+		
+		<Death_Clone>Damage_Normal, Hapan_Star_Base_2_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>13</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Hapan_Star_Base_2_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>Ha_station_Level_2_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>	
+	<StarBase Name="Hapan_Star_Base_3">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_STAR_BASE_SP_3</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_3 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>Ha_station_Level_3.alo</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Affiliation>Hapan</Affiliation>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<AI_Combat_Power>12000</AI_Combat_Power>
+		<Build_Time_Seconds>95</Build_Time_Seconds>
+		<Build_Tab_Space_Station>Yes</Build_Tab_Space_Station>
+
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>3</Base_Level>
+		<Prev_Level_Base>Hapan_Star_Base_2</Prev_Level_Base>
+		<Next_Level_Base>Hapan_Star_Base_4</Next_Level_Base>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>450000</Autoresolve_Health>
+		<Shield_Points>43000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>46000</Shield_Refresh_Rate>
+		<Energy_Capacity>1000000</Energy_Capacity>
+		<Energy_Refresh_Rate>600000</Energy_Refresh_Rate>
+
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<CategoryMask> Capital </CategoryMask>
+
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		
+		<Starting_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+			
+	
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship2_SB, 1</Starting_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship3_SB5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Ha_STR3, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_ChCoHaHu_STR3, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_ADVtorpedoB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		
+		<SFXEvent_Fire>Unit_Torpedo_Fire</SFXEvent_Fire>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Hapan, 
+				UC_SB_Defense_Ion_Circle,
+				UC_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle,	
+				UC_SB_Defense_Turbolaser_Circle
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_T_HaStation_01,
+			HP_T_HaStation_02,
+			HP_T_HaStation_03,
+			HP_T_HaStation_04,
+			HP_T_HaStation_05,
+			HP_T_HaStation_06,
+			HP_T_HaStation_07,
+			HP_T_HaStation_08,
+			HP_T_HaStation_09,
+			HP_T_HaStation_10,
+			HP_T_HaStation_11,
+			HP_T_HaStation_12,
+			HP_T_HaStation_13,
+			HP_T_HaStation_14,
+			HP_T_HaStation_15,
+			HP_T_HaStation_16,
+			HP_T_HaStation_17,
+			HP_T_HaStation_18,
+			HP_T_HaStation_19,
+			HP_T_HaStation_20,
+			HP_T_HaStation_21,
+			HP_T_HaStation_22,
+			HP_T_HaStation_23,
+			HP_T_HaStation_24,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+	
+		<Radar_Icon_Name>I_RADAR_Ha_STATION3.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+	
+		<Icon_Name>I_BUTTON_Ha_Station_Level3.tga</Icon_Name>
+		<Score_Cost_Credits> 6000</Score_Cost_Credits>
+		<Slice_Cost_Credits>1200</Slice_Cost_Credits>
+		
+		<Death_Clone>Damage_Normal, Hapan_Star_Base_3_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>15</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Hapan_Star_Base_3_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>Ha_station_Level_3_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>	
+	<StarBase Name="Hapan_Star_Base_4">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_STAR_BASE_SP_4</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_4 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>Ha_station_Level_4.alo</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Affiliation>Hapan</Affiliation>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<AI_Combat_Power>20000</AI_Combat_Power>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Tab_Space_Station>Yes</Build_Tab_Space_Station>
+
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>4</Base_Level>
+		<Prev_Level_Base>Hapan_Star_Base_3</Prev_Level_Base>
+		<Next_Level_Base>Hapan_Star_Base_5</Next_Level_Base>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>600000</Autoresolve_Health>
+		<Shield_Points>125000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>131000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+
+		<Armor_Type> Armor_Station </Armor_Type>
+				
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<CategoryMask> Capital </CategoryMask>
+
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		
+		<Starting_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 9</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MiytilBomber_Squadron7, 9</Reserve_Spawned_Units_tech_0>
+			
+	
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship2_SB, 1</Starting_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship3_SB5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Ha_STR4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_ChCoHaHu_STR4, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_ADVtorpedoB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		
+		<SFXEvent_Fire>Unit_Torpedo_Fire</SFXEvent_Fire>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Hapan, 
+				UC_SB_Defense_Ion_Circle,
+				UC_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle,	
+				UC_SB_Defense_Turbolaser_Circle,
+				UC_SB_Defense_TurbolaserM_Circle
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_T_HaStation_01,
+			HP_T_HaStation_02,
+			HP_T_HaStation_03,
+			HP_T_HaStation_04,
+			HP_T_HaStation_05,
+			HP_T_HaStation_06,
+			HP_T_HaStation_07,
+			HP_T_HaStation_08,
+			HP_T_HaStation_09,
+			HP_T_HaStation_10,
+			HP_T_HaStation_11,
+			HP_T_HaStation_12,
+			HP_T_HaStation_13,
+			HP_T_HaStation_14,
+			HP_T_HaStation_15,
+			HP_T_HaStation_16,
+			HP_T_HaStation_17,
+			HP_T_HaStation_18,
+			HP_T_HaStation_19,
+			HP_T_HaStation_20,
+			HP_T_HaStation_21,
+			HP_T_HaStation_22,
+			HP_T_HaStation_23,
+			HP_T_HaStation_24,
+			HP_T_HaStation_25,
+			HP_T_HaStation_26,
+			HP_T_HaStation_27,
+			HP_T_HaStation_28,
+			HP_T_HaStation_29,
+			HP_T_HaStation_30,
+			HP_T_HaStation_31,
+			HP_T_HaStation_32,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+	
+		<Radar_Icon_Name>I_RADAR_Ha_STATION4.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+	
+		<Icon_Name>I_BUTTON_Ha_Station_Level4.tga</Icon_Name>
+		<Score_Cost_Credits> 12000</Score_Cost_Credits>
+		<Slice_Cost_Credits>2400</Slice_Cost_Credits>
+		
+		<Death_Clone>Damage_Normal, Hapan_Star_Base_4_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>16</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Hapan_Star_Base_4_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>Ha_station_Level_4_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>	
+	<StarBase Name="Hapan_Star_Base_5">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_STAR_BASE_SP_5</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_5 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>Ha_station_Level_5.alo</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Affiliation>Hapan</Affiliation>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<AI_Combat_Power>35000</AI_Combat_Power>
+		<Build_Time_Seconds>145</Build_Time_Seconds>
+		<Build_Tab_Space_Station>Yes</Build_Tab_Space_Station>
+
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>5</Base_Level>
+		<Prev_Level_Base>Hapan_Star_Base_4</Prev_Level_Base>
+
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>262000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+				
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<CategoryMask> Capital </CategoryMask>
+
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		
+		<Starting_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MIYTILFIGHTER_Squadron7, 9</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>MiytilBomber_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>MiytilBomber_Squadron7, 9</Reserve_Spawned_Units_tech_0>
+			
+	
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship2_SB, 1</Starting_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Ha_Comm_Ship3_SB5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Ha_STR5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_ChCoHaHu_STR5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_ADVtorpedoB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		
+		<SFXEvent_Fire>Unit_Torpedo_Fire</SFXEvent_Fire>
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Hapan, 
+				UC_SB_Defense_Ion_Circle,
+				UC_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle,	
+				UC_SB_Defense_Turbolaser_Circle,
+				UC_SB_Defense_TurbolaserM_Circle,			
+				UC_SB_Defense_TurbolaserML_Circle		
+		</Tactical_Buildable_Objects_Campaign>
+		
+
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_T_HaStation_01,
+			HP_T_HaStation_02,
+			HP_T_HaStation_03,
+			HP_T_HaStation_04,
+			HP_T_HaStation_05,
+			HP_T_HaStation_06,
+			HP_T_HaStation_07,
+			HP_T_HaStation_08,
+			HP_T_HaStation_09,
+			HP_T_HaStation_10,
+			HP_T_HaStation_11,
+			HP_T_HaStation_12,
+			HP_T_HaStation_13,
+			HP_T_HaStation_14,
+			HP_T_HaStation_15,
+			HP_T_HaStation_16,
+			HP_T_HaStation_17,
+			HP_T_HaStation_18,
+			HP_T_HaStation_19,
+			HP_T_HaStation_20,
+			HP_T_HaStation_21,
+			HP_T_HaStation_22,
+			HP_T_HaStation_23,
+			HP_T_HaStation_24,
+			HP_T_HaStation_25,
+			HP_T_HaStation_26,
+			HP_T_HaStation_27,
+			HP_T_HaStation_28,
+			HP_T_HaStation_29,
+			HP_T_HaStation_30,
+			HP_T_HaStation_31,
+			HP_T_HaStation_32,
+			HP_T_HaStation_33,
+			HP_T_HaStation_34,
+			HP_T_HaStation_35,
+			HP_T_HaStation_36,
+			HP_T_HaStation_37,
+			HP_T_HaStation_38,
+			HP_T_HaStation_39,
+			HP_T_HaStation_40,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+	
+		<Radar_Icon_Name>I_RADAR_Ha_STATION5.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+	
+		<Icon_Name>I_BUTTON_Ha_Station_Level5.tga</Icon_Name>
+		<Score_Cost_Credits> 24000</Score_Cost_Credits>
+		<Slice_Cost_Credits>4800</Slice_Cost_Credits>
+		
+		<Death_Clone>Damage_Normal, Hapan_Star_Base_5_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>17</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Hapan_Star_Base_5_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>Ha_station_Level_5_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>	
+		
+	<!-- Hapan Skirmish Starbases -->
+	<StarBase Name="Skirmish_Ha_Star_Base_1">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_1</Text_ID>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Space_Model_Name>Ha_station_Level_1.ALO</Space_Model_Name>
+		<Affiliation>Hapan</Affiliation>
+		<Damage>35</Damage>
+		<CategoryMask> Capital </CategoryMask>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		
+		<Autoresolve_Health>150000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<Projectile_Types>Proj_Ship_ADVtorpedoB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		
+		<SFXEvent_Fire>Unit_Torpedo_Fire</SFXEvent_Fire>
+
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_T_HaStation_01,
+			HP_T_HaStation_02,
+			HP_T_HaStation_03,
+			HP_T_HaStation_04,
+			HP_T_HaStation_05,
+			HP_T_HaStation_06,
+			HP_T_HaStation_07,
+			HP_T_HaStation_08,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Hapan_Patrolship,
+				Hapan_BetaCruiser,
+				Ha_Level_Two_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base/>
+		<Next_Level_Base>Skirmish_Ha_Star_Base_2</Next_Level_Base>
+		
+		<GUI_Model_Name>Ha_station_Level_1.ALO</GUI_Model_Name>
+				
+		<Radar_Icon_Name>I_RADAR_Ha_STATION1.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+
+		<Icon_Name>I_BUTTON_Ha_Station_Level1.tga</Icon_Name>
+
+		<Death_Clone>Damage_Normal, Hapan_Star_Base_1_Death_Clone</Death_Clone>
+		
+		
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Ha_station_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>90</Base_Income_Value>
+				<Base_Interval_In_Secs>10</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Hapan_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>20</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Ha_Star_Base_1</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Hapan_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Hapan_Star_Base_1_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_1</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>Ha_station_Level_1_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>
+	<StarBase Name="Skirmish_Ha_Star_Base_2">
+		<Variant_Of_Existing_Type>Hapan_Star_Base_2</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_2</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Hapan_Patrolship,
+				Hapan_BetaCruiser,
+				Hapan_Victory_Destroyer,
+				Hapan_Star_Destroyer,
+				Ha_Level_Three_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base>Skirmish_Ha_Star_Base_1</Prev_Level_Base>
+		<Next_Level_Base>Skirmish_Ha_Star_Base_3</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Hapan_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>95.0</Base_Income_Value>
+				<Base_Interval_In_Secs>12</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Hapan_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>25.0</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Ha_Star_Base_2</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Hapan_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Skirmish_Ha_Star_Base_3">
+		<Variant_Of_Existing_Type>Hapan_Star_Base_3</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_3</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		<Affiliation>Hapan</Affiliation>
+		
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Hapan_Patrolship,
+				Hapan_BetaCruiser,
+				Hapan_Victory_Destroyer,
+				Hapan_Star_Destroyer,
+				Hapan_Stella_Frigate,
+				Hapan_Battledragon,
+				Ha_Level_Four_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base>Skirmish_Ha_Star_Base_2</Prev_Level_Base>
+		<Next_Level_Base>Skirmish_Ha_Star_Base_4</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Hapan_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>100.0</Base_Income_Value>
+				<Base_Interval_In_Secs>14</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Hapan_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>30</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Ha_Star_Base_3</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Hapan_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Skirmish_Ha_Star_Base_4">
+		<Variant_Of_Existing_Type>Hapan_Star_Base_4</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_4</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		<Affiliation>Hapan</Affiliation>
+		
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN</Encyclopedia_Text>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Hapan_Patrolship,
+				Hapan_BetaCruiser,
+				Hapan_Victory_Destroyer,
+				Hapan_Star_Destroyer,
+				Hapan_Stella_Frigate,
+				Hapan_Battledragon,
+				Hapan_BattleCarrier,
+				Hapan_NovaCruiser,
+				Ha_Level_Five_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base>Skirmish_Ha_Star_Base_3</Prev_Level_Base>
+		<Next_Level_Base>Skirmish_Ha_Star_Base_5</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Hapan_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>105.0</Base_Income_Value>
+				<Base_Interval_In_Secs>16</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Hapan_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>35</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Ha_Star_Base_4</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Hapan_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Skirmish_Ha_Star_Base_5">
+		<Variant_Of_Existing_Type>Hapan_Star_Base_5</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		<Affiliation>Hapan</Affiliation>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<AI_Combat_Power>35000</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE</Encyclopedia_Text>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<Prev_Level_Base>Skirmish_Ha_Star_Base_4</Prev_Level_Base>
+		<Next_Level_Base/>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Hapan,
+				Hapan_Patrolship,
+				Hapan_BetaCruiser,
+				Hapan_Victory_Destroyer,
+				Hapan_Star_Destroyer,
+				Hapan_Stella_Frigate,
+				Hapan_Battledragon,
+				Hapan_BattleCarrier,
+				Hapan_Battledragon_Int,
+				Hapan_NovaCruiser,
+				Hapan_Ha_Heavy_Cruiser
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<GUI_Distance>4700</GUI_Distance>
+		<GUI_Offset>0 0 -300</GUI_Offset>
+		<GUI_Angles>90 0 0</GUI_Angles>
+		<GUI_Velocity>45</GUI_Velocity>
+		<GUI_X_Rot>0</GUI_X_Rot>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Hapan_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>115</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Hapan_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Ha_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Hapan_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	
+	
+	
+</StarBases>

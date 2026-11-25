@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+
+
+
+<Story>
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Enter_Tech_2">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>RVRE_To_Tech_2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Enter_Tech_3">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>RVRE_To_Tech_3</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Enter_Tech_4">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>RVRE_To_Tech_4</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Enter_Tech_5">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>RVRE_To_Tech_5</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Snoke_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Snoke_Team</Reward_Param1>
+		<Reward_Param2>Exegol</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_5</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Kylo_Ren_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Kylo_Ren_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Phasma_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Phasma_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_2</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Fulminatrix">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Fulminatrix</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_4</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Armitage_Hux_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Armitage_Hux_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Edrison_Peavey_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Edrison_Peavey_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_4</Prereq>
+	</Event>
+
+
+
+</Story>

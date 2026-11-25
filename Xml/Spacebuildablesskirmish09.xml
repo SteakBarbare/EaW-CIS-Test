@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<SpaceBuildables>
+		
+	<SpaceBuildable Name="UC_FreeSide_Defense_Satellite_Laser">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STAR_BASE_SP_1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_1</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_1</MP_Encyclopedia_Text>
+		
+		<Tactical_Buildable_Constructed> Baas_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Space_Model_Name>NV_Baas_class_ST_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Icon_Name>I_BUTTON_Pi_st_Baas_1.tga</Icon_Name>
+		<Affiliation>Corporate, Hutts, Hapan, Chiss</Affiliation>
+		<GUI_Model_Name>NV_Baas_class_ST_Build.ALO</GUI_Model_Name>
+	</SpaceBuildable>		
+		
+	<SpaceBuildable Name="UC_Hapan_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+   		<Text_ID>TEXT_UNIT_HA_DEFENSE_STATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_DEFENSE_STATION</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_HA_DEFENSE_STATION</MP_Encyclopedia_Text>
+
+		<Space_Model_Name>Ha_Defense_station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Icon_Name>I_BUTTON_Hapan_Defense_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> HA_Defense_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Hapan</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+
+	<SpaceBuildable Name="UC_Hutts_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_CIS_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_PIRATE_ASTEROID_BASE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PIRATE_ASTEROIDP</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_PIRATE_ASTEROIDP</MP_Encyclopedia_Text>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Defense_Special_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_Defense_Special.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> Nv_Defense_Special </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Hutts</Affiliation>
+		
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+
+	</SpaceBuildable>
+	
+	<SpaceBuildable Name="UC_Chiss_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_CIS_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HANGARCONTAINER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_R_HANGARCONTAINER</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_R_HANGARCONTAINER</MP_Encyclopedia_Text>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Space_Model_Name>NV_Defense_Hangar_Station_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_Defense_Hangar_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> Ch_Defense_Hangar_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Chiss</Affiliation>
+		
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+
+	</SpaceBuildable>
+	
+	<SpaceBuildable Name="UC_Corporate_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_CIS_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CORSECSTATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CORSECSTATION</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_CORSECSTATION</MP_Encyclopedia_Text>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Defense_Corsec_Station_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_Defense_Corsec_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> NV_Defense_Corsec_Station_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Corporate</Affiliation>
+		
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+
+	</SpaceBuildable>
+	
+   	<SpaceBuildable Name="UC_Hapan_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_DEFENSE_STATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_DEFENSE_STATION</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_HA_DEFENSE_STATION</MP_Encyclopedia_Text>
+
+		<Space_Model_Name>Ha_Defense_station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Icon_Name>I_BUTTON_Hapan_Defense_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> HA_Defense_StationB </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Hapan</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+   </SpaceBuildable>	
+   
+   	<SpaceBuildable Name="UC_Hapan_Defense_SSD_Shipyard">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_DEFENSE_STATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_DEFENSE_STATION</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_HA_DEFENSE_STATION</MP_Encyclopedia_Text>
+
+		<Space_Model_Name>Ha_Defense_station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Icon_Name>I_BUTTON_Hapan_Defense_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> HA_Defense_StationC </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Hapan</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+   </SpaceBuildable>	
+   
+	
+   <SpaceBuildable Name="UC_Hutts_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> NV_Defense_Mining_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_MININGSTATION</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MININGSTATION </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_MININGSTATION </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>NV_Defense_Mining_Station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_Defense_Mining_Station.tga</Icon_Name>
+		<Affiliation>Hutts, GAC</Affiliation>
+
+		<GUI_Model_Name>NV_Defense_Mining_Station_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>
+
+	
+	 <SpaceBuildable Name="UC_Hutts_Defense_SSD_Shipyard">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> NV_Asteroid_Mine_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_PIRATE_ASTEROID_BASE</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PIRATE_ASTEROIDP </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_PIRATE_ASTEROIDP </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>NV_Asteroid_Mine_Station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_Asteroid_Mine_Station.tga</Icon_Name>
+		<Affiliation>Hutts</Affiliation>
+
+		<GUI_Model_Name>NV_Asteroid_Mine_Station_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>	
+	
+	 <SpaceBuildable Name="UC_Chiss_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> Ch_GolanIII </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_GOLANIII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANSE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GOLANSE </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>NV_GolanIII_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Icon_Name>I_BUTTON_SB_GOLAN3.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+
+		<GUI_Model_Name>NV_GolanIII_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>	
+	
+	<SpaceBuildable Name="UC_Corporate_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> Co_GolanII </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_GOLANII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANSE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GOLANSE </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>NV_GolanII_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Icon_Name>I_BUTTON_SB_GOLAN2.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+
+		<GUI_Model_Name>NV_GolanII_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>	
+	
+	<SpaceBuildable Name="UC_Chiss_Defense_SSD_Shipyard">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> Ch_XQ3 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_PLATTFORM2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PLATTFORM2 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_PLATTFORM2 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>Ch_XQ3X_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_XQ3X.tga</Icon_Name>
+		<Affiliation>Chiss</Affiliation>
+
+		<GUI_Model_Name>Ch_XQ3X_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>	
+	
+	<SpaceBuildable Name="UC_Corporate_Defense_SSD_Shipyard">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> Co_Cargofacility </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_CARGOFACILITY2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CARGOFACILITY2 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CARGOFACILITY2 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>Co_Cargofacility_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_Cargofacility3X.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+
+		<GUI_Model_Name>Co_Cargofacility_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>	
+</SpaceBuildables>

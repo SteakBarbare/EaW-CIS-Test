@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<SpaceCorvettes>
+	
+	
+	
+	<SpaceUnit Name="Tartan_Patrol_Cruiser_Easy">
+		<Variant_Of_Existing_Type>Tartan_Patrol_Cruiser</Variant_Of_Existing_Type>
+		<Tech_Level>10</Tech_Level>
+		<Tactical_Health>150</Tactical_Health>
+		<Shield_Points>35</Shield_Points>
+	</SpaceUnit>
+
+	
+	<SpaceUnit Name="Merchant_Freighter">
+		<Variant_Of_Existing_Type>X-Wing</Variant_Of_Existing_Type>		
+		<Text_ID>TEXT_UNIT_MERCHANT</Text_ID>
+		<Encyclopedia_Good_Against> X-wing TIE_Fighter Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CR_Hvy_Gunboat Alliance_Assault_Frigate Victory_Destroyer </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MERCHANT_FREIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Space_Model_Name>NV_Shadowclaw.alo</Space_Model_Name>
+		<Icon_Name>I_button_shadowclaw.tga</Icon_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor>		
+		<Is_Named_Hero>No</Is_Named_Hero>		
+		<Armor_Type> Armor_Infantry_SH </Armor_Type>
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>8000</Tactical_Health>
+		<Autoresolve_Health>400</Autoresolve_Health>
+		<Shield_Refresh_Rate>2150</Shield_Refresh_Rate>
+		<Energy_Capacity>99999</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		
+		<HardPoints>
+      		HP_Fighter_Adv_Missile_B, HP_MissileAdv_Ability_00, HP_MFalcon_01, 
+			HP_MFalcon_02
+	    </HardPoints>
+		
+		<SFXEvent_Select>Unit_Select_Pirate_Fighter</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Pirate_Fighter</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pirate_Fighter</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Pirate_Fighter</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Pirate_Fighter</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Pirate_Fighter </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Pirate_Fighter </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Pirate_Fighter </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Pirate_Fighter </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Pirate_Fighter </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Ambient_Moving> Unit_Falcon_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Idle_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Falcon_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
+		<Victory_Relevant>no</Victory_Relevant>
+		
+		<Guard_Chase_Range>300.0</Guard_Chase_Range>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>2000.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>2000.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+				
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.2f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 5.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Pirate_Fighter</SFXEvent_GUI_Unit_Ability_Activated>
+				
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, Merchant_Freighter_Death_Clone</Death_Clone>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Merchant_Freighter_Death_Clone">
+		<Text_ID>TEXT_UNIT_ASSAULTFIGHTER</Text_ID>
+		<Space_Model_Name>NV_Shadowclaw.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+<!-- jdg 8/24/05 making a Tantive_IV entry here (based on Corellian Crusier) -->
+
+<SpaceUnit Name="Tantive_IV">
+		<Variant_Of_Existing_Type>Corellian_Corvette</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TANTIVE_IV</Text_ID>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Property_Flags>NotOpportunityTarget</Property_Flags>
+		<Should_Attacker_Hold_Fire_For_Special_Ability>True</Should_Attacker_Hold_Fire_For_Special_Ability>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Tantive_IV_Death_Clone">
+		<Text_ID>TEXT_UNIT_TANTIVE_IV</Text_ID>
+		<Space_Model_Name>RV_Corvette_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>RV_Corellian_Corvette.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+	</SpaceUnit>
+
+	
+	
+	
+	
+	
+	
+</SpaceCorvettes>

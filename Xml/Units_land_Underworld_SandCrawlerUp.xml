@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+
+
+
+<UV_SandcrawlerUpUnit_Data>
+
+
+	<GroundVehicle Name="UV_SandcrawlerUp">
+		<Variant_Of_Existing_Type>MZ8ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UV_SANDCRAWLERUP</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank R_Ground_Heavy_Vehicle_Factory E_Ground_Turbolaser_Tower </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank AT_AT_Walker </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_UV_SANDCRAWLERUP</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_UV_SandCrawlerUp.tga</Icon_Name>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Land_Model_Name>UV_SandCrawlerUp.ALO</Land_Model_Name>
+		
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
+
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Underworld</Affiliation>
+
+		<LandBehavior> SHIELDED, ABILITY_COUNTDOWN, AFFECTED_BY_SHIELD, GARRISON_VEHICLE, TREAD_SCROLL, WALK_LOCOMOTOR, IDLE, TARGETING, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET, STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SELF_DESTRUCT</LandBehavior>
+
+		<Garrison_Category> Infantry </Garrison_Category>
+        <Num_Garrison_Slots>5</Num_Garrison_Slots>
+        <Garrison_Bone_Names>b_garrison_00</Garrison_Bone_Names>
+		<Garrison_Exit_Dist>0</Garrison_Exit_Dist>
+		<Garrison_Enter_Dist>0</Garrison_Enter_Dist>
+        <Garrison_Radius>30</Garrison_Radius>
+
+		<Armor_Type> Armor_ATAT5 </Armor_Type>
+		<Shield_Armor_Type>Shield_HvyTank</Shield_Armor_Type>
+		<Tactical_Health>3000</Tactical_Health>
+	
+		<Shield_Points>1500</Shield_Points>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Hardpoints>
+				HP_UV_SandcrawlerUp_Turret_01,		
+				HP_UV_SandcrawlerUp_Turret_02,
+				HP_UV_SandcrawlerUp_Turret_03,
+				HP_UV_SandcrawlerUp_Turret_04,
+				HP_UV_SandcrawlerUp_Turret_05,
+				HP_UV_SandcrawlerUp_Turret_06,
+				HP_UV_SandcrawlerUp_Turret_07,
+				HP_UV_SandcrawlerUp_Turret_08,
+				HP_UV_SandcrawlerUp_Turret_09
+		</Hardpoints>
+
+		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>13.0</Ranged_Target_Z_Adjust>
+		<AI_Combat_Power>450</AI_Combat_Power>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<CategoryMask> Vehicle | AntiInfantry | AntiVehicle | AntiStructure | AntiAir </CategoryMask>
+		
+		<Targeting_Priority_Set>ATATAntiEverything</Targeting_Priority_Set>
+
+		<Lua_Script>ObjectScript_SelfDestructLand</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_PULSE_TANK_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>2</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> MZ8_Tank_Self_Destruct_Blast </Spawned_Object_Type>
+                <Owner_Attachment_Bone>b_overheat_00</Owner_Attachment_Bone>
+                <Particle_Effect>Pulse_Cannon_Tank_Overheat</Particle_Effect>
+                <Stop_When_Activated>No</Stop_When_Activated>
+                <GUI_Activated_Ability_Name>Pulse_Tank_Self_Destruct</GUI_Activated_Ability_Name>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>LASER_DEFENSE</Type>
+                <Recharge_Seconds>35.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Sandcrawler_Laser_Defense </GUI_Activated_Ability_Name>
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Defense_On_Juggernaut </SFXEvent_GUI_Unit_Ability_Activated>  
+			 	<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Defense_Off_Juggernaut </SFXEvent_GUI_Unit_Ability_Deactivated>  
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="Sandcrawler_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 28.0 </Defense_Duration_In_Secs>
+                <Laser_Color>252, 249, 5, 255</Laser_Color>
+                <Bone_Names>Muzzleb_00, Muzzleb_01, Muzzleb_02</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>350.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>40</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.25</Recharge_Time_In_Secs>
+            </Laser_Defense_Ability>
+			<Force_Healing_Ability Name="Sandcrawler_Autorepair">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+		<Death_Clone>Damage_Normal, UV_SandcrawlerUp_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="UV_SandcrawlerUp_Death_Clone_00">
+		<Variant_Of_Existing_Type>UV_SandcrawlerUp</Variant_Of_Existing_Type>
+		<Land_Model_Name>UV_SandCrawlerUp_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      	<Scale_Factor>1.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="UV_SandcrawlerUp_Company">
+		<Variant_Of_Existing_Type>MZ8_Pulse_Cannon_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UV_SANDCRAWLER</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank R_Ground_Heavy_Vehicle_Factory E_Ground_Turbolaser_Tower </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank AT_AT_Walker </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_UV_SANDCRAWLER TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_UV_SandCrawlerUp.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+		
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Time_Seconds>23</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand, U_Ground_Palace</Required_Special_Structures>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>UV_SandcrawlerUp</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+	
+
+
+
+
+
+
+
+</UV_SandcrawlerUpUnit_Data>

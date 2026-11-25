@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<Ha_AT_STUnit_Data>
+<GroundVehicle Name="Ha_AT_ST">
+		<Variant_Of_Existing_Type>AT_ST_ASXORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_AT_ST</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_AT_ST</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_WALKER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Ha_AT_ST.ALO</Land_Model_Name>
+
+		<Scale_Factor>1.6</Scale_Factor>
+		
+		<AI_Combat_Power>152</AI_Combat_Power>
+
+		<Affiliation>Pirates, Hapan, GAC</Affiliation>
+			
+		<HardPoints>
+			HP_LAAT_Red_Beam_01,
+			HP_Gr_Front_T1B_Laser_01,
+			HP_Gr_Back_T1B_Laser_02,
+			HP_Gr_Front_Eweb_Laser_Red_01
+		</HardPoints>
+
+		<Death_Explosions>Medium_Damage_Land4</Death_Explosions>
+				
+		<Icon_Name>i_button_Ha_AT_ST.tga</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Ha_AT_ST_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Normal, Ha_AT_ST_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Normal, Ha_AT_ST_Death_Clone_02</Death_Clone>
+
+		<Vehicle_Thief_Inside_Clone>Ha_AT_ST_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Ha_AT_ST_Captured">
+		<Variant_Of_Existing_Type>Ha_AT_ST</Variant_Of_Existing_Type>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Ha_AT_ST_Death_Clone_00">
+		<Variant_Of_Existing_Type>Ha_AT_ST</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="Ha_AT_ST_Death_Clone_01">
+		<Variant_Of_Existing_Type>Ha_AT_ST</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+      <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="Ha_AT_ST_Death_Clone_02">
+		<Variant_Of_Existing_Type>Ha_AT_ST</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+	<GroundCompany Name="Ha_AT_ST_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_AT_ST</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Cost_Credits>155</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		<Required_Special_Structures>Hapan_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+
+		<Company_Units>Ha_AT_ST, Ha_AT_ST, Ha_AT_ST, Ha_AT_ST</Company_Units>
+
+		<Icon_Name>i_button_Ha_AT_ST.tga</Icon_Name>
+		<GUI_Model_Name>Ha_AT_ST.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_AT_ST TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_WALKER</Encyclopedia_Unit_Class>
+		
+	</GroundCompany>
+	
+	
+
+</Ha_AT_STUnit_Data>

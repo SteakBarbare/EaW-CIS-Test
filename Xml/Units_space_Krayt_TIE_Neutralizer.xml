@@ -1,0 +1,172 @@
+﻿<?xml version="1.0"?>
+
+<EVF_TIE_Neutralizer_Files>
+
+	<SpaceUnit Name="EVF_TIE_Neutralizer">
+		<Variant_Of_Existing_Type>TIE_Defender</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVF_TIE_NEUTRALIZER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVF_TIE_NEUTRALIZER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOMBER</Encyclopedia_Unit_Class>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>3.4</Min_Speed>
+		
+		<Armor_Type> Armor_Bomber </Armor_Type>
+		<Shield_Points>1600</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+
+		<Space_Model_Name>EVF_TIE_Neutralizer.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		
+		<CategoryMask> Bomber | Anticapital </CategoryMask>	
+		<Targeting_Priority_Set>Bomber_Multi</Targeting_Priority_Set>
+		<Formation_Priority>2</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Is_Bomber>yes</Is_Bomber>
+		
+		<Create_Team>Yes</Create_Team>
+		
+		<Hardpoints>
+			HP_BWING_BOMBER_Rocket, HP_G_TIEB_Laser_00, HP_G_TIEB_Laser_01, HP_G_TIEB_Laser_02, HP_G_TIEB_Laser_03, HP_Rocket_Ability_00, HP_Rocket_Ability_01
+		</Hardpoints>
+
+		<Icon_Name>i_button_EVF_TIE_Neutralizer.tga</Icon_Name>
+		
+		<Land_Bomber_Type>Fel_TIE_Neutralizer_Bombing_Run</Land_Bomber_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_TIE_Fighter</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Guard_TIE_Fighter</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="EVK_TIE_Neutralizer">
+		<Variant_Of_Existing_Type>EVF_TIE_Neutralizer</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Land_Bomber_Type>Krayt_TIE_Neutralizer_Bombing_Run</Land_Bomber_Type>
+	</SpaceUnit>	
+	
+	<Squadron Name="EVK_TIE_Neutralizer_Squadron">
+		<Variant_Of_Existing_Type>TIE_Interceptor_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVF_TIE_NEUTRALIZER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVF_TIE_NEUTRALIZER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOMBER</Encyclopedia_Unit_Class>
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
+		
+		<Squadron_Units>EVK_TIE_Neutralizer, EVK_TIE_Neutralizer, EVK_TIE_Neutralizer</Squadron_Units>
+		<Create_Team_Type>EVK_TIE_Neutralizer_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_EVF_TIE_Neutralizer.TGA</Icon_Name>
+		<GUI_Model_Name>EVF_TIE_Neutralizer.ALO</GUI_Model_Name>
+		
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Defender</SFXEvent_Build_Complete>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Squadron>
+	
+	<Squadron Name="EVF_TIE_Neutralizer_Squadron">
+		<Variant_Of_Existing_Type>EVK_TIE_Neutralizer_Squadron</Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Squadron_Units>EVF_TIE_Neutralizer</Squadron_Units>
+	</Squadron>
+	<Container Name="EVK_TIE_Neutralizer_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_EVF_TIE_NEUTRALIZER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVF_TIE_NEUTRALIZER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOMBER</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EVF_TIE_Neutralizer.tga</Icon_Name>
+
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>3.4</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>	
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</EVF_TIE_Neutralizer_Files>

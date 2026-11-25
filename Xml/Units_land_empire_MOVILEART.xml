@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<MOVILEARTUnit_Data>
+	<GroundVehicle Name="MOVILEART">
+		<Variant_Of_Existing_Type>MOVILEARTORG</Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, MOVILEART_Death_Clone_00</Death_Clone>
+	</GroundVehicle>	
+	<GroundVehicle Name="MOVILEARTORG">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MOVILEART</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Fast_Tank_Brigade Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Heavy_Tank_Brigade Rebel_Speeder_Wing Rebel_T3B_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MOVILEART</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>EV_MovileART.ALO</Land_Model_Name>
+		<Scale_Factor>0.9</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+		<Max_Speed>1.60</Max_Speed>
+
+		<Shield_Points>120</Shield_Points>
+		<Tactical_Health>250</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Shield_Armor_Type>Shield_LtTank</Shield_Armor_Type>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>4.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+		<Turret_Rest_Angle>0.0, 0.0, 0.0</Turret_Rest_Angle>
+		<Turret_Deployed_Rest_Angle>0.0, 0.0, 0.0</Turret_Deployed_Rest_Angle>
+	
+		<Deploys>Yes</Deploys>
+		<Deployment_Anim_Rate>2.0</Deployment_Anim_Rate>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+		
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 220 </Targeting_Min_Attack_Distance>
+		
+		<Projectile_Types>Proj_Ground_SPMAT_grenade</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 40.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 55.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 4.0 </Targeting_Fire_Inaccuracy>
+		
+		<Land_FOW_Reveal_Range>260.0</Land_FOW_Reveal_Range>
+
+		<Death_Explosions>Medium_Explosion_Space8</Death_Explosions>
+
+		<Icon_Name> I_BUTTON_MovileART.tga </Icon_Name>
+
+		<Death_SFXEvent_Start_Die>Unit_AT_AT_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Select>Unit_Select_MOVILEART</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_MOVILEART</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_MOVILEART</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_MOVILEART</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_MOVILEART</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_SPMAT_Projectile_Fire</SFXEvent_Fire>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_MOVILEART </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_MOVILEART </SFXEvent_Assist_Attack>
+		
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<CategoryMask> Vehicle | AntiStructure </CategoryMask>
+		<Targeting_Priority_Set>AntiStructure</Targeting_Priority_Set>
+
+		<AI_Combat_Power>130</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+	</GroundVehicle>
+	<GroundVehicle Name="MOVILEART_Death_Clone_00">
+		<Variant_Of_Existing_Type>MOVILEART</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_MovileART_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_MOVILEART_Corp">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_MOVILEART_CORPS</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Fast_Tank_Brigade Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Heavy_Tank_Brigade Rebel_Speeder_Wing Rebel_T3B_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MOVILEART</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>900</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>MOVILEART, MOVILEART, MOVILEART</Company_Units>
+		<Icon_Name>I_BUTTON_MovileART.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_MOVILEART</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_MOVILEART</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Imperial_Artillery_Group">
+		<Variant_Of_Existing_Type>Imperial_MOVILEART_Corp</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_XEARTILLERY</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Z95Land_squadron Rebel_Speeder_Wing Rebel_AAC-1_Tank_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XEARTILLERY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Units>MOVILEART, MOVILEART, MOVILEART, SPMAT_Walker, SPMAT_Walker, SPMAT_Walker</Company_Units>
+
+		<Icon_Name>I_BUTTON_MovileART.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</MOVILEARTUnit_Data>

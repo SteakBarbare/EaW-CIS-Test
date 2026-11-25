@@ -1,0 +1,140 @@
+<?xml version="1.0" ?>
+
+<Equations>
+
+	<Should_Mine_Structure>
+		(15.0
+		*
+		Variable_Target.Location.EnemyForce
+		+
+		8.0
+		*
+		Variable_Target.Location.IsFriendlyStartLocation
+		+
+		8.0
+		*
+		Variable_Self.IsDefender
+		+
+		8.0
+		*
+		Variable_Target.Force
+		+
+		15.0
+		*
+		Variable_Target.IsContestable)
+		*
+		0.33
+		*
+		(1 + 2 * Game.IsCampaignGame)
+	</Should_Mine_Structure>
+	
+	<Should_Remote_Bomb_Friendly_Unit>
+		100.0
+		*
+		(0.4 > Variable_Target.Health)
+		*
+		Variable_Target.Location.EnemyForce
+		*
+		(1.0 - Variable_Target.Force)
+	</Should_Remote_Bomb_Friendly_Unit>
+	
+	<Bribe_Target_Score>
+		500 
+		* 
+		(
+			clamp(Variable_Target.Force{Parameter_Attenuator = 1.0} - Variable_Target.Location.FriendlyForce, 0.01, 1.0)
+			-
+			Variable_Target.Force{Parameter_Category = GameObjectCategoryType[LandHero]}
+			-
+			Variable_Target.Force{Parameter_Category = GameObjectCategoryType[SpaceHero]}
+		)		
+	</Bribe_Target_Score>
+	
+	<Should_Build_Ysalamiri_Cage>
+		50.0
+		*
+		(Variable_Target.EnemyForce {Parameter_Type = "Emperor_Palpatine",
+										Parameter_Type = "Darth_Vader",
+										Parameter_Type = "Mara_Jade",
+										Parameter_Type = "Obi_Wan_Kenobi",
+										Parameter_Type = "Luke_Skywalker_Jedi",
+										Parameter_Type = "Ventress_Sith",
+										Parameter_Type = "General_Sevran",
+										Parameter_Type = "Dooku",
+										Parameter_Type = "Carnor_Jax",
+										Parameter_Type = "Dark_Nist",
+										Parameter_Type = "Dark_Sha",
+										Parameter_Type = "Dark_Goir",
+										Parameter_Type = "Dark_Katth",
+										Parameter_Type = "Dark_Luke_Skywalker_Jedi",
+										Parameter_Type = "Jerec",
+										Parameter_Type = "Desann",
+										Parameter_Type = "Joorus",
+										Parameter_Type = "Emperor_Palpatine2",
+										Parameter_Type = "Emperor_Palpatine3",
+										Parameter_Type = "Emperor_Palpatine4",
+										Parameter_Type = "Sedriss",
+										Parameter_Type = "Tavion",
+										Parameter_Type = "Darth_Azard",
+										Parameter_Type = "Darth_Krayt",
+										Parameter_Type = "Darth_Maladi",
+										Parameter_Type = "Darth_Nilh",
+										Parameter_Type = "Darth_Strife",
+										Parameter_Type = "Darth_Talon",
+										Parameter_Type = "Darth_Wyyrlok",
+										Parameter_Type = "Antares_Draco",
+										Parameter_Type = "Imperial_Kight_A",
+										Parameter_Type = "Imperial_Kight_B",
+										Parameter_Type = "Imperial_Kight_C",
+										Parameter_Type = "Imperial_Kight_D",
+										Parameter_Type = "Imperial_Kight_E",
+										Parameter_Type = "Imperial_Kight_F",
+										Parameter_Type = "Marasiah_Fel",
+										Parameter_Type = "Roan_Fel",
+										Parameter_Type = "Shado_Vao",
+										Parameter_Type = "Treis_Sinde",
+										Parameter_Type = "Wolf_Sazen",
+										Parameter_Type = "Kyle_Katarn",
+										Parameter_Type = "Princess_Leia",
+										Parameter_Type = "CLONOBIWAN",
+										Parameter_Type = "Anakin",
+										Parameter_Type = "Ayla_Secura_Advanced",
+										Parameter_Type = "Mace_Windu",
+										Parameter_Type = "PLon",
+										Parameter_Type = "QuinLan_Vos_Advanced",
+										Parameter_Type = "Rep_Shaak_Ti_Advanced",
+										Parameter_Type = "YodaRepublic",
+										Parameter_Type = "Jedi",
+										Parameter_Type = "Jedi_Generic",
+										Parameter_Type = "Sith_generic",
+										Parameter_Type = "Shadow_Trooper",
+										Parameter_Type = "Reborn",
+										Parameter_Type = "Sith",
+										Parameter_Type = "EVFO_Snoke",
+										Parameter_Type = "E_Snoke",
+										Parameter_Type = "E_Kylo_Ren",
+										Parameter_Type = "EVFO_Kylo_Ren",
+										Parameter_Type = "Ri_Ezra_S3_Jedi",
+										Parameter_Type = "Ri_Kanan",
+										Parameter_Type = "Yoda"} > 0.0)
+		*
+		Variable_Target.FriendlyForce
+	</Should_Build_Ysalamiri_Cage>
+	
+	<Should_Build_Sensor_Scrambler>
+		50.0
+		*
+		(Variable_Target.FriendlyForce {Parameter_Category = GameObjectCategoryType[Structure]}
+		+
+		Variable_Target.FriendlyForce {Parameter_Category = GameObjectCategoryType[Vehicle]})
+	</Should_Build_Sensor_Scrambler>
+	
+	<Should_Build_Rocket_Pod>
+		50.0
+		*
+		Variable_Target.EnemyForce
+		*
+		Variable_Target.FriendlyForce
+	</Should_Build_Rocket_Pod>
+	
+</Equations>

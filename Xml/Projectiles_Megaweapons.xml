@@ -1,0 +1,956 @@
+<?xml version="1.0"?>
+<Projectiles>
+	
+	<Projectile Name="Proj_Ship_Disruptor_Violet">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>W_Turbolaser_Violet_DuoMegaBlast.ALO</Space_Model_Name>
+        <Land_Model_Name>W_SuperBlastVioletLaser_Large.ALO</Land_Model_Name>
+        <Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_Disruptor_Ship </Damage_Type>
+		<Max_Speed>50.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+        <LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<Projectile_Max_Flight_Distance>3000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>175.0</Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>3.0</Projectile_Disable_Engines_Duration>
+		
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>3.0</Projectile_Ion_Stun_Duration> 
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.5f</Projectile_Ion_Stun_Speed_Reduction_Percent> 
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.3</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>Yes</Projectile_Ion_Stun_Stack_Duration>
+
+		<Projectile_SFXEvent_Detonate>SFX_Infantry_Blaster_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Infantry_Blaster_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Death_Explosions>p_chiss_detonate_special</Death_Explosions> 
+
+		<Projectile_Object_Detonation_Particle>p_chiss_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>p_chiss_detonate_special</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeV</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Huge_Dud</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Blue_Megaweapon_Damage_One_Shot"><!-- son todos un rayo y disparan más o menos cantidad -->
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_SuperBlastBlueLaser_Large.ALO</Space_Model_Name>
+		<Land_Model_Name>W_SuperBlastRed_Republic_One_Shot.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Blue_Megaweapon_Damage">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_SuperBlastRed_Republic.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastBlueLaser_LargeHvyX.ALO</Space_Model_Name>
+        <Scale_Factor>0.75</Scale_Factor>
+        <Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+        <Max_Speed>100.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<Projectile_Max_Flight_Distance>3500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+
+		 <Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+        <Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Death_Explosions>p_mandator_detonate_special</Death_Explosions> 
+
+		<Projectile_Object_Detonation_Particle>p_mandator_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Huge_Explosion_Space</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeB</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Huge_Dud</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Blue_Megaweapon_Damage_Quad">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastQuadBlue_Republic.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastBlueLaser_LargeHvyX.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Projectile_Damage>750.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>750.0</Projectile_Blast_Area_Damage>
+		<Projectile_Max_Flight_Distance>3500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+    </Projectile>
+	 <Projectile Name="Proj_Ship_Turbolaser_Green_Megaweapon_Damage"><!-- un rayo -->
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Space_Model_Name>W_SuperBlastGreenLaser_Large.ALO</Space_Model_Name>
+        <Land_Model_Name>P_Hvy_Art_EISD_Gun.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+        <Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Max_Flight_Distance>3500.0</Projectile_Max_Flight_Distance>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Red_Megaweapon_Damage"><!-- un rayo -->
+  	    <Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastRed_Rebel.ALO</Land_Model_Name>
+		<Space_Model_Name>W_Red_Turbo_MegaX1.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+        <Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Max_Flight_Distance>3500.0</Projectile_Max_Flight_Distance>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Maser_Chiss_Megaweapon_Damage"><!-- un rayo -->
+  	    <Variant_Of_Existing_Type>Proj_Nemesis_Blast</Variant_Of_Existing_Type>
+        <Space_Model_Name>W_Turbolaser_Violet_DuoMegaBlast.ALO</Space_Model_Name>
+        <Land_Model_Name>P_Hvy_Art_ChISD_Gun.ALO</Land_Model_Name>
+        <Scale_Factor>1.0</Scale_Factor>
+		<Death_Explosions>p_chiss_detonate_special</Death_Explosions> 
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle>Flak_Pod_Explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Flak_Pod_Explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Flak_Pod_Explosion</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Max_Flight_Distance>3500.0</Projectile_Max_Flight_Distance>
+		<AI_Combat_Power>0</AI_Combat_Power>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Bulkwark3_Megaweapon_Damage"><!-- un solo rayo -->
+  	    <Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_HvyX1_SSDE</Variant_Of_Existing_Type>
+        <Space_Model_Name>W_Turbolaser_Bulkwark3_MegaBlast.ALO</Space_Model_Name>
+        <Land_Model_Name>P_Hvy_Art_ChISD_Gun.ALO</Land_Model_Name>
+        <Scale_Factor>3.0</Scale_Factor>
+		<Death_Explosions>p_chiss_detonate_special</Death_Explosions> 
+		<Projectile_Damage>45.0</Projectile_Damage>
+		<Projectile_Max_Flight_Distance>8500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle>Flak_Pod_Explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Flak_Pod_Explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Flak_Pod_Explosion</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Nemesis_Megaweapon_Damage"><!-- dos rayos -->
+  	    <Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_HvyX1_SSDE</Variant_Of_Existing_Type>
+        <Space_Model_Name>W_Turbolaser_Nemesis_DuoMegaBlast.ALO</Space_Model_Name>
+        <Land_Model_Name>P_Hvy_Art_ChISD_Gun.ALO</Land_Model_Name>
+        <Scale_Factor>3.0</Scale_Factor>
+		<Death_Explosions>p_chiss_detonate_special</Death_Explosions> 
+		<Projectile_Damage>45.0</Projectile_Damage>
+		<Projectile_Max_Flight_Distance>8500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle>Flak_Pod_Explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Flak_Pod_Explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Flak_Pod_Explosion</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Vengeance_Megaweapon_Damage"><!-- dos rayos -->
+  	    <Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_HvyX1_SSDE</Variant_Of_Existing_Type>
+        <Space_Model_Name>W_Turbolaser_Vengeance_DuoMegaBlast.ALO</Space_Model_Name>
+        <Land_Model_Name>P_Hvy_Art_ChISD_Gun.ALO</Land_Model_Name>
+        <Scale_Factor>3.0</Scale_Factor>
+		<Death_Explosions>p_Empire_detonate_special</Death_Explosions> 
+		<Projectile_Damage>45.0</Projectile_Damage>
+		<Projectile_Max_Flight_Distance>8500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle>Flak_Pod_Explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Flak_Pod_Explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Flak_Pod_Explosion</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Red_Megaweapon_Damage1x2"><!-- dos rayos -->
+  	    <Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastRed_Rebel.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastRedLaser_LargeHvyX.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Projectile_Damage>750.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>750.0</Projectile_Blast_Area_Damage>
+		<Projectile_Max_Flight_Distance>3500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Green_Megaweapon_Damage_Quad">
+	    <Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastQuadGreen_Empire.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastGreenLaser_LargeHvyX.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Projectile_Damage>750.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>750.0</Projectile_Blast_Area_Damage>
+		<Projectile_Max_Flight_Distance>4500.0</Projectile_Max_Flight_Distance>
+        <Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+    </Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Red_Megaweapon_Damage_Quad">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastQuadRed_Rebel.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastRedLaser_LargeHvyX.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Projectile_Damage>750.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>750.0</Projectile_Blast_Area_Damage>
+		<Projectile_Max_Flight_Distance>4500.0</Projectile_Max_Flight_Distance>
+        <Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+    </Projectile>
+	 <Projectile Name="Proj_Ship_New_Megaweapon_DamageX"><!-- este se usa en el maximun firepower que parece un barrage -->
+	 	<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_NONE</Text_ID>
+        <Land_Model_Name>W_SuperBlastViolet_Empire.ALO</Land_Model_Name>
+		<Space_Model_Name>W_Turbolaser_Violet_DuoMegaBlast.ALO</Space_Model_Name>
+        <Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	 <Projectile Name="Proj_Ship_Bs_BattleCru_Main">
+	 	<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Max_Speed>50.0</Max_Speed>
+        <Land_Model_Name>W_SuperBlastViolet_Empire.ALO</Land_Model_Name>
+		<Space_Model_Name>P_Hvy_Art_UISD_Gun.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+        <Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Ion_Megaweapon">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Cannon</Variant_Of_Existing_Type>
+		<Max_Speed>50.0</Max_Speed>
+		<Space_Model_Name>P_Hvy_Art_ISD_Gun_Ion.ALO</Space_Model_Name>
+		<Land_Model_Name>p_kraytdestoyer_presuperblast.alo</Land_Model_Name>
+		<Damage_Type> Damage_Ion_Planet </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<LandBehavior>IDLE</LandBehavior>
+		<Projectile_Damage>1200.0</Projectile_Damage>
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Disables_Engines_When_Power_Drained>No</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>5.0</Projectile_Disable_Engines_Duration>
+		<Projectile_Ion_Stun_Duration>1.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.01</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.01</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>Yes</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Stun_Duration_Frames>100</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>100</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect> Stunned_Infantry </Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> Corvette | Frigate | Capital | Structure </Projectile_Stun_Victims_Category_Mask>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Projectile_Energy_Per_Shot>100</Projectile_Energy_Per_Shot>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Ion_Rebel_Empire_Megaweapon">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Megaweapon</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Super_IonBlast.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Super_IonBlast.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>50.0</Max_Speed>
+	</Projectile>
+	<Projectile Name="Proj_Hypervelocity_Gun">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_hyper_gun_slug.ALO</Land_Model_Name>
+		<Space_Model_Name>p_hyper_gun_slug.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Hyper_Gun </Damage_Type>
+		<Projectile_Damages_Random_Hard_Points>Yes</Projectile_Damages_Random_Hard_Points>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>100.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		
+		<Projectile_Acceleration_Per_Frame>0.0</Projectile_Acceleration_Per_Frame>
+		<Projectile_Max_Flight_Distance>50000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>15000.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Huge_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle/>
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<AI_Combat_Power>0</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Ion_Cannon_Planetary">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>P_ion_cannon00.alo</Land_Model_Name>
+		<Space_Model_Name>P_ion_cannon00.alo</Space_Model_Name>
+		<Damage_Type> Damage_Ion_Planet </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>200.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		
+		<Projectile_Acceleration_Per_Frame>0.0</Projectile_Acceleration_Per_Frame>
+		<Projectile_Max_Flight_Distance>150000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>15000.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle/>
+		
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>30.0</Projectile_Disable_Engines_Duration>
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>30.0</Projectile_Ion_Stun_Duration>
+		
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+	</Projectile>
+	<Projectile Name="Proj_DS2_Endor_Space">
+		<Variant_Of_Existing_Type>Proj_Hypergun_Space</Variant_Of_Existing_Type>
+		<Space_Model_Name>p_hyper_gun_slug.alo</Space_Model_Name>
+		<Projectile_Damage>9999999</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 9999999 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 250 </Projectile_Blast_Area_Range>
+	</Projectile>	
+	<Projectile Name="Proj_Centralia_Gun">
+		<Variant_Of_Existing_Type>Proj_Hypergun_Space</Variant_Of_Existing_Type>
+		<Space_Model_Name>P_Centralia_Proyectile.ALO</Space_Model_Name>
+		<Max_Speed>100.0</Max_Speed>
+		<Max_Rate_Of_Turn>50</Max_Rate_Of_Turn>
+		
+		<Projectile_Rocket_Curve_Distance>5</Projectile_Rocket_Curve_Distance>
+		<Projectile_Rocket_Curve_Offset>0</Projectile_Rocket_Curve_Offset>
+		<Projectile_Rocket_Straight_Distance>5</Projectile_Rocket_Straight_Distance>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		<Projectile_Blast_Area_Range>500.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>999999.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>999999.0</Projectile_Blast_Area_Damage>
+						
+		<Death_Explosions>Large_Expecial_Explosion5_Space</Death_Explosions> 
+  		<Death_SFXEvent_Start_Die> SFX_Sizemic_Detonation </Death_SFXEvent_Start_Die>
+		<Projectile_SFXEvent_Detonate>SFX_Sizemic_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Object_Detonation_Particle>Large_Expecial_Explosion5_Space</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Expecial_Explosion5_Space</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Large_Expecial_Explosion5_Space</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Large_Expecial_Explosion5_Space</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Hypergun_Space">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>p_hyper_gun_slug.alo</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_hypergunspace </Damage_Type>
+		<Max_Speed>100.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>ROCKET</Projectile_Category>
+		
+		<Projectile_Damages_Random_Hard_Points>Yes</Projectile_Damages_Random_Hard_Points>
+		
+		<Projectile_Rocket_Curve_Distance>500</Projectile_Rocket_Curve_Distance>
+		<Projectile_Rocket_Curve_Offset>0</Projectile_Rocket_Curve_Offset>
+		<Projectile_Rocket_Straight_Distance>500</Projectile_Rocket_Straight_Distance>
+
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>20000.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> No </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+		<Projectile_Blast_Area_Dropoff_Tiers>5</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Damage>15000</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 15000 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 250 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+  		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Huge_Explosion_Space</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		
+		<Projectile_Lifetime_Detonation_Particle>Huge_Dud</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Hypergun_FreeSide_Space">
+		<Variant_Of_Existing_Type>Proj_Hypergun_Space</Variant_Of_Existing_Type>
+		<Space_Model_Name>p_hyper_gun_freeside_slug.alo</Space_Model_Name>
+		<Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>30.0</Projectile_Disable_Engines_Duration>
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>30.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+	</Projectile>
+	<Projectile Name="Proj_Iongun_Space">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>P_IonGun_Proyectile.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>200.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Damage_Type>Damage_IongunSpace</Damage_Type>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>15000.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>10</Projectile_Energy_Per_Shot>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Disables_Engines_When_Power_Drained>Yes</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Disable_Engines_Duration>30.0</Projectile_Disable_Engines_Duration>
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>30.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+	</Projectile>
+	
+	<Projectile Name="Proj_Bombardeo_Infiltrador">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
+		<Space_Model_Name>W_LASER_INVISIBLE.ALO</Space_Model_Name>
+		<Max_Speed>15.0</Max_Speed>
+		<Projectile_Grenade_Gravity>1.0</Projectile_Grenade_Gravity>
+		<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
+		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
+		<Damage_Type>Damage_StickyBomb</Damage_Type>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<Behavior>PROJECTILE, BOMB, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>GRENADE</Projectile_Category>
+		<Projectile_Blast_Area_Range>90.0</Projectile_Blast_Area_Range>
+		<Projectile_Blast_Area_Damage>1600.0</Projectile_Blast_Area_Damage>
+		<Projectile_Grenade_Sticks_On_Collision>yes</Projectile_Grenade_Sticks_On_Collision>
+		<Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+		<Projectile_Blast_Area_Dropoff_Tiers>3</Projectile_Blast_Area_Dropoff_Tiers>
+		
+		<Projectile_Max_Lifetime>900.0</Projectile_Max_Lifetime>
+		
+		<Projectile_Damage>0.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Death_Explosions> Rebel_Bombardeo_Attack_Bomb_Land </Death_Explosions>
+		<Projectile_SFXEvent_Detonate>Unit_Impacto_Torpedo_Artilleria</Projectile_SFXEvent_Detonate>
+		<Death_SFXEvent_Start_Die> Unit_Empire_Ship_Turbolaser </Death_SFXEvent_Start_Die>
+		<AI_Combat_Power>300</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Bombardeo_InfiltradorE">
+		<Variant_Of_Existing_Type>Proj_Bombardeo_Infiltrador</Variant_Of_Existing_Type>
+		<Death_Explosions> Empire_Bombardeo_Attack_Bomb_Land </Death_Explosions>
+	</Projectile>
+	<Projectile Name="Proj_Bombardeo_Dodonna">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>W_LASER_INVISIBLE.alo</Space_Model_Name>
+		<Land_Model_Name>W_LASER_INVISIBLE.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Max_Speed>15.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Blast_Area_Range>250.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>150.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>150.0</Projectile_Blast_Area_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+
+        <Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+        <Projectile_Blast_Area_Dropoff_Tiers>5</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_A_Wing_Fighter_Attack </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_A_Wing_Fighter_Attack </SFXEvent_Engine_Moving_Loop>
+		<Projectile_SFXEvent_Detonate>Unit_A_Wing_Bomb_Attack</Projectile_SFXEvent_Detonate>
+		<Death_SFXEvent_Start_Die>Unit_A_Wing_Bomb_Attack</Death_SFXEvent_Start_Die>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+
+		<Projectile_Object_Detonation_Particle>p_A_Wing_Attack_impact</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>p_A_Wing_Attack_impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+
+		<Projectile_Lifetime_Detonation_Particle>Rebel_A_Wing_Attack_Bomb_Land</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>300</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Aerial_Onager_Max">
+		<Variant_Of_Existing_Type>Proj_Bombardeo_Dodonna</Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>W_Onager_Land_Attack.ALO</Land_Model_Name>
+		<Projectile_Blast_Area_Range>500.0</Projectile_Blast_Area_Range>
+		<Projectile_Damage>1500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1500.0</Projectile_Blast_Area_Damage>
+		<Projectile_Max_Flight_Distance>25050.0</Projectile_Max_Flight_Distance>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage> 
+		<Projectile_Object_Detonation_Particle>p_Onager_Attack_impact</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>p_Onager_Attack_impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>p_Onager_Attack_impact</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>p_orbital_impact</Projectile_Ground_Detonation_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Underworld_Station_Main_Cannon">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>p_ui_spacestation.alo</Space_Model_Name>
+		<Land_Model_Name>p_ui_spacestation.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Max_Speed>100.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<LandBehavior>IDLE</LandBehavior>
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Damage>5000.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>5000.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>100</Projectile_Energy_Per_Shot>
+		<Death_Explosions>p_kraytdestoyer_detonate</Death_Explosions> 
+
+		<Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Huge_Explosion_Space</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>p_kraytdestoyer_detonate</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Lifetime_Detonation_Particle>p_kraytdestoyer_detonate</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+	</Projectile>
+	
+
+	<Projectile Name="Proj_Ship_Krayt_Megaweapon_Ion">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Megaweapon</Variant_Of_Existing_Type>
+		<Space_Model_Name>P_Hvy_Art_ISD_Gun_Ion.alo</Space_Model_Name>
+		<Land_Model_Name>p_kraytdestoyer_presuperblast.alo</Land_Model_Name>
+		<Projectile_Max_Flight_Distance>2500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Object_Detonation_Particle> Ion_Large_Dud </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Ion_Large_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+	</Projectile>
+
+    <Projectile Name="Proj_Ship_Krayt_Megaweapon_Damage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastRed_Rebel.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastRed_Rebel.ALO</Space_Model_Name>
+        <Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	
+	<Projectile Name="Proj_Ship_Krayt_Main_Weapon">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastRed_Rebel.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastRed_Rebel.ALO</Space_Model_Name>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+        <Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Krayt_Tyber_Main_Weapon">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastQuadGreen_Empire.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastQuadGreen_Empire.ALO</Space_Model_Name>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+        <Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+    </Projectile>
+
+    <Projectile Name="Proj_Ship_Krayt_Special_Megaweapon_Damage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_Megaweapon_Damage</Variant_Of_Existing_Type>
+        <Land_Model_Name>W_SuperBlastQuadGreen_Empire.ALO</Land_Model_Name>
+		<Space_Model_Name>W_SuperBlastQuadGreen_Empire.ALO</Space_Model_Name>
+        <Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+    </Projectile>
+	
+	<Projectile Name="Proj_CIS_LNR_I_Gun_Space">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_CIS_LNR_I_proyectile_space.ALO</Land_Model_Name>
+		<Space_Model_Name>W_CIS_LNR_I_proyectile_space.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Hyper_GunLNRI </Damage_Type>
+		<Projectile_Damages_Random_Hard_Points>Yes</Projectile_Damages_Random_Hard_Points>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>200.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+        <LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		
+		<Projectile_Acceleration_Per_Frame>0.0</Projectile_Acceleration_Per_Frame>
+		<Projectile_Max_Flight_Distance>150000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>30000.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>p_moncalcruiser_detonate_special</Projectile_Object_Detonation_Particle>
+        <Projectile_Object_Armor_Reduced_Detonation_Particle>Huge_Explosion_Space</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Huge_Dud</Projectile_Lifetime_Detonation_Particle>
+		
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<AI_Combat_Power>0</AI_Combat_Power>
+				
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Duration>30.0</Projectile_Ion_Stun_Duration>
+		
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.8</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+	</Projectile>
+	<Projectile Name="Proj_Republic_LNR_I_Gun_Space">
+		<Variant_Of_Existing_Type>Proj_CIS_LNR_I_Gun_Space</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_Empire_LNR_I_proyectile_space.ALO</Land_Model_Name>
+		<Space_Model_Name>W_Empire_LNR_I_proyectile_space.ALO</Space_Model_Name>
+		<Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	
+	<Projectile Name="Proj_Republic_LNR_I_Gun_Land">
+		<Variant_Of_Existing_Type>Proj_Main_Cannon_AT-TE</Variant_Of_Existing_Type>
+		<Land_Model_Name>p_athegreen_shot.ALO</Land_Model_Name>
+		<Projectile_Damage>300.0</Projectile_Damage>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Object_Detonation_Particle>LNRI_proyectile_Ground_Republic_impact</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>LNRI_proyectile_Ground_Republic_impact</Projectile_Ground_Detonation_Particle>
+		<Death_Explosions> LNRI_proyectile_Ground_Republic_impact </Death_Explosions>
+		<Projectile_SFXEvent_Detonate>Unit_Impacto_Torpedo_Artilleria</Projectile_SFXEvent_Detonate>
+		<Death_SFXEvent_Start_Die> Unit_Impacto_Torpedo_Artilleria </Death_SFXEvent_Start_Die>
+	</Projectile>
+	
+	<Projectile Name="Proj_CIS_LNR_I_Gun_Land">
+		<Variant_Of_Existing_Type>Proj_Main_Cannon_AT-TE</Variant_Of_Existing_Type>
+		<Land_Model_Name>p_athered_shot.ALO</Land_Model_Name>
+		<Projectile_Damage>300.0</Projectile_Damage>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Object_Detonation_Particle>LNRI_proyectile_Ground_CIS_impact</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>LNRI_proyectile_Ground_CIS_impact</Projectile_Ground_Detonation_Particle>
+		<Death_Explosions> LNRI_proyectile_Ground_CIS_impact </Death_Explosions>
+		<Projectile_SFXEvent_Detonate>Unit_Impacto_Torpedo_Artilleria</Projectile_SFXEvent_Detonate>
+		<Death_SFXEvent_Start_Die> Unit_Impacto_Torpedo_Artilleria </Death_SFXEvent_Start_Die>
+	</Projectile>
+	
+	<Projectile Name="Proj_CIS_LNR_II_Gun_Space">
+		<Variant_Of_Existing_Type>Proj_CIS_LNR_I_Gun_Space</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_CIS_LNR_II_proyectile_space.ALO</Land_Model_Name>
+		<Space_Model_Name>W_CIS_LNR_II_proyectile_space.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Hyper_GunLNRII </Damage_Type>
+		<Projectile_Damage>60000.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Republic_LNR_II_Gun_Space">
+		<Variant_Of_Existing_Type>Proj_CIS_LNR_I_Gun_Space</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_Empire_LNR_II_proyectile_space.ALO</Land_Model_Name>
+		<Space_Model_Name>W_Empire_LNR_II_proyectile_space.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Hyper_GunLNRII </Damage_Type>
+		<Projectile_Damage>60000.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	
+	<Projectile Name="Proj_LNR_II_Spacestructure_Gun_Space">
+		<Variant_Of_Existing_Type>Proj_LNR_I_Spacestructure_Gun_Space</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_Empire_LNR_I_proyectile_spaceS.ALO</Land_Model_Name>
+		<Space_Model_Name>W_Empire_LNR_I_proyectile_spaceS.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Hyper_GunLNRII </Damage_Type>
+		<Projectile_Damage>20000.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>20000.0</Projectile_Blast_Area_Damage>
+		<Projectile_Object_Detonation_Particle>p_kraytdestoyer_detonate_special</Projectile_Object_Detonation_Particle>
+	</Projectile>
+	<Projectile Name="Proj_LNR_I_Spacestructure_Gun_Space">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_CIS_LNR_I_proyectile_spaceS.ALO</Land_Model_Name>
+		<Space_Model_Name>W_CIS_LNR_I_proyectile_spaceS.ALO</Space_Model_Name>
+        <Scale_Factor>1.0</Scale_Factor>
+        <Damage_Type> Damage_Hyper_GunLNRI </Damage_Type>
+        <Max_Speed>200.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+        <LandBehavior>IDLE</LandBehavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<Projectile_Max_Flight_Distance>150000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Damage>10000.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>10000.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>250.0</Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+        <Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle> p_moncalcruiser_detonate_special </Projectile_Object_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Huge_Explosion_Space</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Huge_Dud</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Huge_Dud</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+	</Projectile>
+	
+	
+	<Projectile Name="Proj_Green_Megaweapon_Damage_Implacable_Quad">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_Megaweapon_Damage_Quad</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_SuperBlast_Green_Implacable_Quad.ALO</Space_Model_Name>
+		<Land_Model_Name>W_SuperBlast_Green_Implacable_Quad.ALO</Land_Model_Name>
+	</Projectile>
+		
+	<Projectile Name="Proj_Malevolence_Super_Ion_Gun">
+		<Variant_Of_Existing_Type>Proj_Ion_Cannon_Medium_Laser_Blue</Variant_Of_Existing_Type>
+		<Space_Model_Name>Proj_Malevolence_Super_Ion_Gun.ALO</Space_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Max_Speed>12.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Disables_Engines_When_Power_Drained>No</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Ion_Stun_Duration>10.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.5</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.5</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>Yes</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Stun_Duration_Frames>300</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>300</Projectile_Stun_Radius>
+		
+		<!-- antes era asi
+		<Projectile_Blast_Area_Damage> 500000 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 2000 </Projectile_Blast_Area_Range>
+		
+		<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>100000.0</Projectile_Damage>
+
+		<AI_Combat_Power>0</AI_Combat_Power>-->
+	</Projectile>
+		
+	<Projectile Name="Proj_CIS_Geonosian_Dreadnoutght_Main_Gun">
+		<Variant_Of_Existing_Type>Proj_Hvy_Art_Assault_Frg_Max</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_Proj_CIS_Geonosian_Dreadnoutght.ALO</Land_Model_Name>
+	</Projectile>
+	<!-- Rail guns -->
+	<Projectile Name="Proj_Ship_Ion_Cannon_ISD_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Cannon</Variant_Of_Existing_Type>
+		<Max_Speed>75.0</Max_Speed>
+		<Space_Model_Name>W_ISD_blast_Ion.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Disables_Engines_When_Power_Drained>No</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Ion_Stun_Duration>1.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.01</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.01</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>Yes</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Stun_Duration_Frames>100</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>100</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect> Stunned_Infantry </Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> Corvette | Frigate | Capital | Structure </Projectile_Stun_Victims_Category_Mask>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Ion_CannonH_ISD_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Cannon</Variant_Of_Existing_Type>
+		<Max_Speed>75.0</Max_Speed>
+		<Space_Model_Name>W_ISD_blast_Ion.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Disables_Engines_When_Power_Drained>No</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Ion_Stun_Stack_Duration>Yes</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Stun_Duration_Frames>100</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>100</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect> Stunned_Infantry </Projectile_Stun_Spawn_Effect>
+		
+		<Damage_Type> Damage_IonCannon_LRG </Damage_Type>
+		<Projectile_Max_Flight_Distance>5500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Disable_Engines_Duration>50.0</Projectile_Disable_Engines_Duration>
+		<Projectile_Ion_Stun_Duration>2.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.05</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.05</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Stun_Victims_Category_Mask> Corvette | Frigate | Capital | Structure | Super | Spacehero | Transport</Projectile_Stun_Victims_Category_Mask>
+	</Projectile>
+	<Projectile Name="Proj_Kedalbe_Mass_Driver_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_Hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_mass.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>150</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Object_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Kedalbe_Mass_Driver_2s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_Hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_mass2s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>300</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Object_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Kedalbe_Mass_Driver_4s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_Hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_mass4s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>600</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Object_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Mass_Driver_Damage_Hull_Space</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_G_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboG.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>80</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_G_2s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_Hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboG2s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>150</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_G_4s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_HvyX_SSD</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboG4s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>800</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_R_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboR.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>80</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_R_2s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_Hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboR2s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>150</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_R_4s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_HvyX_SSD</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboR4s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>800</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_V_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Violet</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboV.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>80</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_V_2s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_Hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboV2s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>150</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_V_4s_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_HvyX_SSD</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_ISD_blast_TurboV4s.ALO</Space_Model_Name>
+		<SpaceBehavior>IDLE</SpaceBehavior>
+		<Projectile_Damage>800</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	
+	<Projectile Name="Proj_Galaxy_Gun">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>EV_GalaxyGun.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Damage_Type> Damage_Proton_Torp </Damage_Type>
+		<Max_Speed>50.0</Max_Speed>
+		<Max_Rate_Of_Turn>50</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>ROCKET</Projectile_Category>
+		
+		<Projectile_Rocket_Curve_Distance>500</Projectile_Rocket_Curve_Distance>
+		<Projectile_Rocket_Curve_Offset>0</Projectile_Rocket_Curve_Offset>
+		<Projectile_Rocket_Straight_Distance>500</Projectile_Rocket_Straight_Distance>
+
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>20000.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> No </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+		<Projectile_Blast_Area_Dropoff_Tiers>5</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Damage>999999</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 999999 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 500 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Death_Explosions>Death_Clone_Exp_Space_Empire</Death_Explosions> 
+  		<Death_SFXEvent_Start_Die> SFX_Sizemic_Detonation </Death_SFXEvent_Start_Die>
+		<Projectile_SFXEvent_Detonate>SFX_Sizemic_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>Death_Clone_Exp_Space_Empire</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Death_Clone_Exp_Space_Empire</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Death_Clone_Exp_Space_Empire</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Death_Clone_Exp_Space_Empire</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>0</AI_Combat_Power>
+	</Projectile>
+	
+	
+</Projectiles>

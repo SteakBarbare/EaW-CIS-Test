@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<GroundStructures>
+
+	<GroundStructure Name="Krayt_Anti_Aircraft_Turret">
+
+		<Variant_Of_Existing_Type> Abstract_Anti_Aircraft_Turret </Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>EVK_AA_Turret.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVK_AA_Turret.tga</Icon_Name>
+		
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		
+		<Projectile_Types>Proj_TBAA_AA_Turret</Projectile_Types>
+
+		<Affiliation>Krayt</Affiliation>
+
+		<Ranged_Target_Z_Adjust>8.0</Ranged_Target_Z_Adjust>
+
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+	
+		<Blob_Shadow_Scale>40.0, 40.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
+		<SFXEvent_Sold_Tactical> EHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+	</GroundStructure>
+
+	
+	<GroundStructure Name="Fel_Anti_Aircraft_Turret">
+		<Variant_Of_Existing_Type> Abstract_Anti_Aircraft_Turret </Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>GA_AA_Turret.alo</Land_Model_Name>
+		<Icon_Name>i_button_GA_AA_Turret.tga</Icon_Name>
+		
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		
+		<Projectile_Types>Proj_TBAA_AA_Turret</Projectile_Types>
+		
+		<Affiliation>Fel</Affiliation>
+
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+
+		<Turret_Rotate_Speed>10.0</Turret_Rotate_Speed>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+
+		<Blob_Shadow_Scale>30.0, 30.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<SFXEvent_Sold_Tactical> RHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+	</GroundStructure>
+	
+	<GroundStructure Name="Fel_Anti_Vehicle_Turret">
+
+		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>GA_Vehicle_Turret.ALO</Land_Model_Name>
+		<Icon_Name>i_button_GA_Vehicle_Turret.tga</Icon_Name>
+
+		<Affiliation>Fel</Affiliation>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Green_AVT</Projectile_Types>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
+
+		<Blob_Shadow_Scale>45.0, 45.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
+		<SFXEvent_Sold_Tactical> RHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+	</GroundStructure>
+	
+	<GroundStructure Name="Fel_Anti_Infantry_Turret">
+
+		<Variant_Of_Existing_Type> Abstract_Anti_Infantry_Turret </Variant_Of_Existing_Type>
+
+		<Land_Model_Name>GA_Infantry_Turret.ALO</Land_Model_Name>
+		<Icon_Name>i_button_GA_Infantry_Turret.tga</Icon_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Affiliation>Fel</Affiliation>
+
+		<Projectile_Types>Proj_HRB_Cannon_Green</Projectile_Types>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 30.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
+
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>14</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.03</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+
+		<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<SFXEvent_Sold_Tactical> RHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Turret_Rotating_Loop>Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+   </GroundStructure>
+   
+   <GroundStructure Name="Krayt_Anti_Vehicle_Turret">
+
+		<Variant_Of_Existing_Type> Abstract_Anti_Vehicle_Turret </Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>EVK_Vehicle_Turret.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVK_Vehicle_Turret.tga</Icon_Name>
+
+		<Affiliation>Fel</Affiliation>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_AVT</Projectile_Types>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
+
+		<Blob_Shadow_Scale>45.0, 45.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Square_Shadow</Blob_Shadow_Material_Name>
+		<SFXEvent_Sold_Tactical> EHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+	</GroundStructure>
+	
+	<GroundStructure Name="Krayt_Anti_Infantry_Turret">
+
+		<Variant_Of_Existing_Type> Abstract_Anti_Infantry_Turret </Variant_Of_Existing_Type>
+
+		<Land_Model_Name>EVK_Infantry_Turret.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVK_Infantry_Turret.tga</Icon_Name>
+		
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Affiliation>Fel</Affiliation>
+
+		<Projectile_Types>Proj_HRB_Cannon_Red</Projectile_Types>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 30.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 0.0 </Targeting_Fire_Inaccuracy>
+
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.02</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+
+		<Blob_Shadow_Scale>25.0, 25.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<SFXEvent_Sold_Tactical> EHD_Turret_Sold </SFXEvent_Sold_Tactical>
+		<SFXEvent_Turret_Rotating_Loop>Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	<!-- Event for turret while rotating to fire  -->
+
+   </GroundStructure>
+
+</GroundStructures>

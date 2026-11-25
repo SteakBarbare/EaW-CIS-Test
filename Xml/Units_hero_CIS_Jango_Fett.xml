@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+
+<Jango_FettUnit_Data>
+	
+<HeroUnit Name="Jango_Fett">
+		<Variant_Of_Existing_Type>Boba_Fett</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_HERO_JANGO_FETT_TEAM</Text_ID>
+		<Land_Model_Name>Ei_jangfett.alo</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_JangoFett.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Affiliation>CIS</Affiliation>
+		
+		<Selection_Blob_Material_Name>Selection_CIS_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_CIS_Hero</Highlight_Blob_Material_Name>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_JANGO_FETT TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+	</HeroUnit>
+	
+	<HeroUnit Name="Jango_Fett_NoStealth">
+		<Variant_Of_Existing_Type>Boba_Fett_NoStealth</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_JANGO_FETT</Text_ID>
+		<Land_Model_Name>Ei_jangfett.alo</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_JangoFett.tga</Icon_Name>
+		<Affiliation>CIS</Affiliation>
+		<Selection_Blob_Material_Name>Selection_CIS_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_CIS_Hero</Highlight_Blob_Material_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_JANGO_FETT TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+	</HeroUnit>
+	<HeroCompany Name="Jango_Fett_Team">
+		<Variant_Of_Existing_Type>Boba_Fett_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_JANGO_FETT_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_CIS_JangoFett.tga</Icon_Name>
+		<Affiliation>CIS</Affiliation>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Company_Transport_Unit>Slave_IJ</Company_Transport_Unit>
+		<Company_Units>Jango_Fett</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_JANGO_FETT TEXT_TOOLTIP_REDUCE_TIME_BOUNTYSMUG_10</Encyclopedia_Text>
+	</HeroCompany>
+	<HeroCompany Name="Jango_Fett_Team_NoStealth">
+		<Variant_Of_Existing_Type>Jango_Fett_Team</Variant_Of_Existing_Type>
+		<Company_Units>Jango_Fett_NoStealth</Company_Units>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>	
+	<HeroCompany Name="Jango_Fett_Team_Land_MP">
+		<Variant_Of_Existing_Type>Jango_Fett_Team</Variant_Of_Existing_Type>
+
+		<Tactical_Build_Cost_Multiplayer>1700</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	
+	<HeroCompany Name="Jango_Fett_Team_Space_MP">
+		<Variant_Of_Existing_Type>Jango_Fett_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> X-wing Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette A-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SLAVE_ONEJ </Encyclopedia_Text>
+		
+		<Tactical_Build_Cost_Multiplayer>1700</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>28</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Slave_IJ">
+		<Variant_Of_Existing_Type>Slave_I</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SLAVE_I</Text_ID>
+		<Encyclopedia_Good_Against> Z95_Rep_Squadron REP_V19_Torrent_Squadron REP_ARC-170_Squadron </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Caza_Jedi Anakin_Eta2 ClonObiwanETA_2 </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name> EV_SLAVE1.ALO </Land_Model_Name>
+		<Space_Model_Name> EV_SLAVE1_SPACE.ALO </Space_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_JangoFett.tga</Icon_Name>
+		<Affiliation>CIS</Affiliation>
+		<AI_Combat_Power>4335</AI_Combat_Power>
+		<Landing_Transport_Variant>Slave_I_Landing</Landing_Transport_Variant>
+	</SpaceUnit>
+</Jango_FettUnit_Data>

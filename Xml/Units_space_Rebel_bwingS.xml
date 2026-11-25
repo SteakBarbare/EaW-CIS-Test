@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<BWingS_Files>
+
+
+
+	<SpaceUnit Name="B_WingS1">
+		<Variant_Of_Existing_Type>B-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B_WINGS1</Text_ID>
+		<Space_Model_Name>RV_BwingSuper1.alo</Space_Model_Name>
+		<Icon_Name>i_button_RV_B_WingS1.tga</Icon_Name>
+
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+
+		<Shield_Points>1900</Shield_Points>
+		<Tactical_Health>6000</Tactical_Health>
+		<Shield_Refresh_Rate>2050</Shield_Refresh_Rate>
+		<Energy_Capacity>18000</Energy_Capacity>
+		<Energy_Refresh_Rate>10800</Energy_Refresh_Rate>
+
+		<HardPoints>
+			HP_BWING_BOMBER_Rocket, HP_BOMBER_MAGPULSE, HP_IonShot_00H, HP_R_Bwing_Laser_00, HP_R_Bwing_Laser_01, HP_R_Bwing_Laser_02, HP_R_BwingS1_Laser_03, HP_TIED_Ion_04, HP_TIED_Ion_05, HP_BwingS1_Ion_06, HP_Rocket_Ability_00, HP_Rocket_Ability_01
+		</HardPoints>
+
+	</SpaceUnit>
+	<SpaceUnit Name="B_WingS2">
+		<Variant_Of_Existing_Type>B-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B_WINGS2</Text_ID>
+		<Space_Model_Name>RV_BwingSuper2.alo</Space_Model_Name>
+		<Icon_Name>i_button_RV_B_WingS2.tga</Icon_Name>
+
+		<Max_Speed>3.9</Max_Speed>
+		<Min_Speed>2.6</Min_Speed>
+
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>6000</Tactical_Health>
+		<Shield_Refresh_Rate>2150</Shield_Refresh_Rate>
+		<Energy_Capacity>19000</Energy_Capacity>
+		<Energy_Refresh_Rate>11400</Energy_Refresh_Rate>
+		<HardPoints>
+			HP_BWING_BOMBER_Rocket, HP_BOMBER_IONPULSE, HP_IonShot_00H, HP_R_Bwing_Laser_00, HP_R_Bwing_Laser_01, HP_R_Bwing_Laser_02, HP_R_BwingS1_Laser_03, HP_R_YBwing_Laser_04, HP_R_YBwing_Laser_05, HP_BwingS1_Ion_06, HP_BwingS1_Ion_07, HP_BwingS1_Ion_08, HP_Rocket_Ability_00, HP_Rocket_Ability_01
+		</HardPoints>
+
+	</SpaceUnit>
+	
+
+	<Squadron Name="B_WingS1_Squadron">
+		<Variant_Of_Existing_Type>B-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B_WINGS1_SQUADRON</Text_ID>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Icon_Name>i_button_RV_B_WingS1.tga</Icon_Name>
+
+		<Squadron_Units>B_WingS1, B_WingS1, B_WingS1</Squadron_Units>
+		<Create_Team_Type>B_WingS1_Squadron_Container1</Create_Team_Type>
+	</Squadron>
+	<Container Name="B_WingS1_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_B_WINGS1_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_B_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RV_B_WingS1.tga</Icon_Name>
+
+		<Max_Speed>3.61</Max_Speed>
+		<Min_Speed>2.41</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>	
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-50.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>50.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+	
+	<Squadron Name="B_WingS2_Squadron">
+		<Variant_Of_Existing_Type>B-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B_WINGS2_SQUADRON</Text_ID>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Icon_Name>i_button_RV_B_WingS2.tga</Icon_Name>
+
+		<Squadron_Units>B_WingS2, B_WingS2, B_WingS2</Squadron_Units>
+		<Create_Team_Type>B_WingS2_Squadron_Container1</Create_Team_Type>
+	</Squadron>
+	<Container Name="B_WingS2_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_B_WINGS2_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_B_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RV_B_WingS2.tga</Icon_Name>
+
+		<Max_Speed>3.61</Max_Speed>
+		<Min_Speed>2.41</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>	
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-50.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-25.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>25.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>50.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,20.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-35.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>35.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-75.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>75.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+	
+</BWingS_Files>

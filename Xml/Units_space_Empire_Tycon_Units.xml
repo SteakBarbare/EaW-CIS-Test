@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<TyconUnitsUnit_Data>
+	<SpaceUnit Name="TY_Wombat">
+		<Variant_Of_Existing_Type>Wombat</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_Bajonett">
+		<Variant_Of_Existing_Type>BajonettORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Bajonett_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_Gladiator">
+		<Variant_Of_Existing_Type>GladiatorORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Defender_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Defender_Squadron, 8</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GLADIATOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_UNIT_TIE_DEFENDER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Death_Clone>Damage_Normal, Gladiator_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_ACarrier">
+		<Variant_Of_Existing_Type>Attack_Carrier</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, Attack_Carrier_Death</Death_Clone>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_Eidolon">
+		<Variant_Of_Existing_Type>E_Strike_Up</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Projectile_Types>Proj_Ship_Concussion_Missile_Satellite</Projectile_Types>
+		<SFXEvent_Fire>Unit_Missile_Fire</SFXEvent_Fire>
+		<Death_Clone>Damage_Normal, Eidolon_Death_Clone</Death_Clone>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_Concussion_Missile_Satellite</Projectile_Types_Override>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,3.0f</Mod_Multiplier>
+                <SFXEvent_Target_Ability> Unit_Barrage_Interdictor </SFXEvent_Target_Ability>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>ENERGY_WEAPON</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Eidolon_Energy_Weapon_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Energy_Blast_Piett </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Energy_Blast </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</SpaceUnit>
+	<SpaceUnit Name="TY_Strike2">
+		<Variant_Of_Existing_Type>E_Strike_Up2ORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron, 23</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EV_STRIKECRUISERII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_Lancer">
+		<Variant_Of_Existing_Type>Lancer</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_VSD2">
+		<Variant_Of_Existing_Type>VSD2ORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, VSD2_Death_Clone</Death_Clone>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Defender_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Defender_Squadron4, 5</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VSD2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_TIE_DEFENDER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_ISD2">
+		<Variant_Of_Existing_Type>ISD2_F3</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_ISD2R">
+		<Variant_Of_Existing_Type>ISD2_R</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_GielEscort">
+		<Variant_Of_Existing_Type>GielEscort</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_TSphere">
+		<Variant_Of_Existing_Type>TorpedoSphere</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Projectile_Types>Proj_Ship_rocketB_Drunk</Projectile_Types>
+		<SFXEvent_Fire>Unit_Rocket_Fire</SFXEvent_Fire>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>80</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_rocketB_Drunk_Barrage</Projectile_Types_Override>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,			3.0f</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Attack_Jedi_Cruiser </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="TY_Conqueror">
+		<Variant_Of_Existing_Type>ISD_ConquerorORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, ISD_Conqueror_Death_Clone</Death_Clone>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Tycon</Required_Orbiting_Units>
+		<Required_Special_Structures>Stardock</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+	</SpaceUnit>
+	
+		
+
+</TyconUnitsUnit_Data>

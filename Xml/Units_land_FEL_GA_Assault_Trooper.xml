@@ -1,0 +1,170 @@
+﻿<?xml version="1.0"?>
+
+
+<GA_Assault_TrooperUnit_Data>
+	
+	<GroundInfantry Name="GA_Assault_Trooper">
+		<Variant_Of_Existing_Type> StormtrooperORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_HVY_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_HVY_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_GA_Assault_Trooper.tga</Icon_Name>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Model_Name>GA_Assault_Soldier.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+            		Temperate, 			GA_Assault_Soldier.ALO,
+            		Urban, 				GA_Assault_Soldier.ALO,
+					Arctic, 			GA_Assault_Soldier.ALO,
+            		Volcanic, 			GA_Assault_Soldier.ALO,
+            		Desert, 			GA_Assault_Soldier.ALO,
+            		Forest, 			GA_Assault_Soldier.ALO,
+            		Swamp, 				GA_Assault_Soldier.ALO
+		</Land_Terrain_Model_Mapping>
+		<Tactical_Health>200</Tactical_Health>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Projectile_Types>Proj_Assault_Gun</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+				
+		<Land_FOW_Reveal_Range>150.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+
+		<Death_Clone>Damage_Force_Whirlwind, GA_Assault_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, GA_Assault_Trooper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, GA_Assault_Trooper_Crush_Death_Clone</Death_Clone>
+		<Presence_Induced_Animations>
+			Celebrate, 
+				AT_AT_Walker_Cable_Attack_Death_Clone,
+				AT_AT_Walker_Death_Clone_00,
+				AT_AT_Walker_Death_Clone_01,
+				AT_AT_Walker_Death_Clone_02
+		</Presence_Induced_Animations>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Plex_Soldier</SFXEvent_GUI_Unit_Ability_Activated>		  
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Conversion_Ability_Changes_To_Enemy> GA_Assault_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+<GroundInfantry Name="Squad_GA_Assault_Trooper">
+		<Variant_Of_Existing_Type>GA_Assault_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="GA_Assault_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>GA_Assault_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="GA_Assault_Trooper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>GA_Assault_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="GA_Assault_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>GA_Assault_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="GA_Assault_Trooper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> GA_Assault_Trooper </Variant_Of_Existing_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_GA_Assault_Trooper_B">
+		<Variant_Of_Existing_Type>Squad_GA_Assault_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>GA_Assault_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="GA_Assault_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>GA_Assault_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> GA_Assault_Trooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="GA_Assault_Trooper_Squad">
+		<Variant_Of_Existing_Type> Rebel_Infantry_Squad </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_HVY_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_HVY_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>140</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Company_Transport_Unit>GA_Crix_Shuttle</Company_Transport_Unit>
+		
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Company_Units> 
+		Squad_GA_Assault_Trooper_B,
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper, 
+		Squad_GA_Assault_Trooper
+		</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> GA_Assault_Trooper_Team </Create_Team_Type>
+		<Icon_Name>I_BUTTON_GA_Assault_Trooper.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+	</GroundCompany>
+	<Container Name="GA_Assault_Trooper_Team">
+		<Variant_Of_Existing_Type>Rebel_Trooper_Team</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_UNIT_GA_HVY_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Scout_Trooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_HVY_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		
+		<Icon_Name>I_BUTTON_GA_Assault_Trooper.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.6f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.6f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Rebel_Soldier_Converted</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Container>
+	
+	
+</GA_Assault_TrooperUnit_Data>

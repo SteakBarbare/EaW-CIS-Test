@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" ?>
+
+
+<Story>
+
+     <Event Name="Sandbox_Bonus_00">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	  </Event>
+		
+			
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Sandbox_Bonus_00</Prereq>
+	</Event>	
+	
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Sandbox_Bonus_00</Prereq>
+	</Event>			
+	
+	<Event Name="Destruidos_Todos_los_enemigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Rebel</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Sandbox_Bonus_00</Prereq>
+	</Event>	
+		
+	<Event Name="Destruidos_Todos_Amigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Empire</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Sandbox_Bonus_00</Prereq>
+	</Event>		
+		
+	<Event Name="Derrota_por_Victoria_Rebelde">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>REBEL</Reward_Param1>
+		<Prereq>Destruidos_Todos_Amigos</Prereq>
+	</Event>
+	
+	<Event Name="Victoria_Imperial">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>1</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+	</Event>		
+	
+	<Event Name="DesAnular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+		<Prereq>Destruidos_Todos_Amigos</Prereq>
+	</Event>	
+	
+	<Event Name="DesAnular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+		<Prereq>Destruidos_Todos_Amigos</Prereq>
+	</Event>	
+	
+</Story>

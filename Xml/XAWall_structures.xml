@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<A_WallUnit_Data>
+	
+	
+	
+	<SpecialStructure Name="Template_A_Wall">
+		<Variant_Of_Existing_Type>A_Normal_Wall_GC</Variant_Of_Existing_Type>  
+		<Land_Model_Name>Nb_Attack_Wall.ALO</Land_Model_Name>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Requires_Base_Power>False</Requires_Base_Power>
+		<Layer_Z_Adjust>-10.0</Layer_Z_Adjust>
+		<Behavior> SELECTABLE, TACTICAL_SELL </Behavior>
+		<LandBehavior>LAND_OBSTACLE,TARGETING,POWERED,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION, STUNNABLE,EARTHQUAKE_TARGET </LandBehavior>
+		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Hardpoints>
+				HP_EWall_00,
+				HP_EWall_01,
+				HP_EWall_02,			
+				HP_EWall_03,
+				HP_EWall_04,
+				HP_EWall_05,
+				HP_EWall_06
+		</Hardpoints>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="A_Wall_E">
+		<Variant_Of_Existing_Type>Template_A_Wall</Variant_Of_Existing_Type>  
+		<Affiliation>Empire, Pirates, Republic</Affiliation>
+	</SpecialStructure>
+
+	<GroundBuildable Name="EC_A_Wall_Build">
+		<Variant_Of_Existing_Type>PC_Walls_Build</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust>-10.0</Layer_Z_Adjust>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Land_Model_Name>Nb_Attack_Wall_Building.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> A_Wall_E </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> GC_Walls_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Empire, Pirates, Republic</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>5000</Tactical_Build_Cost_Campaign>
+  	 </GroundBuildable>   
+	 
+	 <SpecialStructure Name="A_Wall_R">
+		<Variant_Of_Existing_Type>Template_A_Wall</Variant_Of_Existing_Type>  
+		<Affiliation>Rebel, CIS</Affiliation>
+	</SpecialStructure>
+
+	<GroundBuildable Name="RC_A_Wall_Build">
+		<Variant_Of_Existing_Type>PC_Walls_Build</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust>-10.0</Layer_Z_Adjust>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Land_Model_Name>Nb_Attack_Wall_Building.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> A_Wall_R </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> GC_Walls_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Rebel, CIS</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>5000</Tactical_Build_Cost_Campaign>
+  	 </GroundBuildable>   
+	 
+	 <SpecialStructure Name="A_Wall_U">
+		<Variant_Of_Existing_Type>Template_A_Wall</Variant_Of_Existing_Type>  
+		<Affiliation>Underworld</Affiliation>
+	</SpecialStructure>
+
+	<GroundBuildable Name="UC_A_Wall_Build">
+		<Variant_Of_Existing_Type>PC_Walls_Build</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust>-10.0</Layer_Z_Adjust>
+		<Icon_Name>I_BUTTON_Wall.tga</Icon_Name>
+		<Text_ID>TEXT_STRUCTURE_WALLARMED</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WALLARMED  </Encyclopedia_Text>
+		<Land_Model_Name>Nb_Attack_Wall_Building.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> A_Wall_U </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> GC_Walls_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Underworld</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>5000</Tactical_Build_Cost_Campaign>
+  	 </GroundBuildable>   
+  
+</A_WallUnit_Data>
+
+
+

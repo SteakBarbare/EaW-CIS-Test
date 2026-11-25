@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<GroundBuildables>
+
+	<!-- ========================================= -->
+	<!-- GROUND-BASED TACTICAL BUILD PADS - REBEL  -->
+	<!-- ========================================= -->
+
+	<GroundBuildable Name="Chiss_Build_Pad">
+
+		<Behavior> TACTICAL_BUILD_OBJECTS, REVEAL, HIDE_WHEN_FOGGED </Behavior>
+		
+		<!-- This is a list of the buildable objects at this pad (defined below) - that will be under construction -->
+		<Tactical_Buildable_Objects_Campaign> 
+		Chiss, 
+			UC_Empire_Buildable_Anti_Vehicle_Turret, 
+			UC_Empire_Buildable_Anti_Infantry_Turret, 
+			UC_Empire_Buildable_Anti_Aircraft_Turret, 
+			UC_Empire_Buildable_Bacta_Tank, 
+			UC_Empire_Buildable_Repair_Facility, 
+			UC_Empire_Buildable_Sensor_Node 
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+		Chiss, 
+			UC_Empire_Buildable_Anti_Vehicle_Turret, 
+			UC_Empire_Buildable_Anti_Infantry_Turret, 
+			UC_Empire_Buildable_Anti_Aircraft_Turret, 
+			UC_Empire_Buildable_Bacta_Tank, 
+			UC_Empire_Buildable_Repair_Facility, 
+			UC_Empire_Buildable_Sensor_Node 
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Text_ID> TEXT_REBEL_BUILD_PAD </Text_ID>
+		<Land_Model_Name>NB_BasePad_Chiss.alo</Land_Model_Name>
+		<Capture_Point_Radius>0</Capture_Point_Radius>
+		<Loop_Idle_Anim_00> No </Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living> No </Collidable_By_Projectile_Living>
+		<Is_Visible_On_Radar>No</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.075  0.075</Radar_Icon_Size>
+		<Select_Box_Scale> 50 </Select_Box_Scale>
+
+		<Space_Layer> Land </Space_Layer>	
+		<UnitCollisionClass> Build Pad </UnitCollisionClass>	
+		<Custom_Hard_XExtent> 10.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		<Respects_Skirmish_Pre_Build_Bases_Option> false </Respects_Skirmish_Pre_Build_Bases_Option>
+		
+		<Scale_Factor> 1.0 </Scale_Factor>
+		<Shield_Points> 0 </Shield_Points>
+		<Tactical_Health> 10000 </Tactical_Health>
+		<Affiliation> Chiss </Affiliation>
+		<Base_Level_Available> 1 </Base_Level_Available>
+		<Required_Ground_Base_Level> 0 </Required_Ground_Base_Level>
+		<Reveal_During_Setup_Phase> False </Reveal_During_Setup_Phase>
+		<Reveal_During_Setup_Phase_Only> False </Reveal_During_Setup_Phase_Only>
+		<Land_FOW_Reveal_Range>100.0</Land_FOW_Reveal_Range>
+		<Victory_Relevant> No </Victory_Relevant>
+		<No_Reflection_Below_Detail_Level> 1 </No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level> 1 </No_Refraction_Below_Detail_Level>
+		<CategoryMask> Structure </CategoryMask>
+		<GUI_Bracket_Width> 20 </GUI_Bracket_Width>
+		<GUI_Bracket_Height> 0 </GUI_Bracket_Height>
+		<GUI_Bracket_Size> 1 </GUI_Bracket_Size> 
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<Immune_To_Damage>True</Immune_To_Damage>
+		<Minimum_Time_Before_Pad_Can_Build_Again> 15 </Minimum_Time_Before_Pad_Can_Build_Again>
+
+	</GroundBuildable>
+	
+	<GroundBuildable Name="Chiss_Build_Pad_Offensive">
+
+		<Variant_Of_Existing_Type> Chiss_Build_Pad </Variant_Of_Existing_Type>
+
+		<!-- This is a list of the buildable objects at this pad (defined below) - that will be under construction -->
+		<Tactical_Buildable_Objects_Campaign> 
+		Chiss, 
+			UC_Empire_Buildable_Anti_Vehicle_Turret, 
+			UC_Empire_Buildable_Anti_Infantry_Turret, 
+			UC_Empire_Buildable_Anti_Aircraft_Turret 
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss, 
+				UC_Empire_Buildable_Anti_Vehicle_Turret, 
+				UC_Empire_Buildable_Anti_Infantry_Turret, 
+				UC_Empire_Buildable_Anti_Aircraft_Turret 
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	</GroundBuildable>
+	
+	<GroundBuildable Name="Chiss_Build_Pad_Defensive">
+
+		<Variant_Of_Existing_Type> Chiss_Build_Pad </Variant_Of_Existing_Type>
+
+		<!-- This is a list of the buildable objects at this pad (defined below) - that will be under construction -->
+		<Tactical_Buildable_Objects_Campaign> Chiss, UC_Empire_Buildable_Bacta_Tank, UC_Empire_Buildable_Repair_Facility, UC_Empire_Buildable_Sensor_Node </Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> Chiss, UC_Empire_Buildable_Bacta_Tank, UC_Empire_Buildable_Repair_Facility, UC_Empire_Buildable_Sensor_Node </Tactical_Buildable_Objects_Multiplayer>
+
+	</GroundBuildable>
+	
+	<GroundBuildable Name="Chiss_Build_Pad_M1">
+
+		<Variant_Of_Existing_Type> Chiss_Build_Pad </Variant_Of_Existing_Type>
+		
+		<!-- This is a list of the buildable objects at this pad (defined below) - that will be under construction -->
+		<Tactical_Buildable_Objects_Campaign> Chiss, UC_Empire_Buildable_Anti_Vehicle_Turret, UC_Empire_Buildable_Anti_Infantry_Turret </Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> Chiss, UC_Empire_Buildable_Anti_Vehicle_Turret, UC_Empire_Buildable_Anti_Infantry_Turret </Tactical_Buildable_Objects_Multiplayer>
+
+		<Visible_To_Enemies_When_Empty> false </Visible_To_Enemies_When_Empty>
+		
+	</GroundBuildable>
+	
+	
+
+</GroundBuildables>
+
+

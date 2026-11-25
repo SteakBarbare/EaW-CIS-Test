@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Edrison_Peavey_Data>
+	<HeroUnit Name="Edrison_Peavey">
+		<Variant_Of_Existing_Type>Basic_Generic_H3</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EVFO_EDRISON_PEAVEY</Text_ID>
+		<Icon_Name>I_BUTTON_EVFO_Edrison_Peavey.TGA</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Spawn_Planet>StarkillerBase</Spawn_Planet>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVFO_EDRISON_PEAVEY TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Edrison_Peavey_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.25</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Time_Ability Name="Edrison_Peavey_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Edrison_Peavey_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Edrison_Peavey_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H3_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EVFO_EDRISON_PEAVEY</Text_ID>
+		<Icon_Name>I_BUTTON_EVFO_Edrison_Peavey.TGA</Icon_Name>
+		<Company_Transport_Unit>EVFO_Transport_Upsilon</Company_Transport_Unit>
+		<Company_Units>Edrison_Peavey</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVFO_EDRISON_PEAVEY TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Respawn_Veers</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Veers</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Veers</SFXEvent_Fleet_Move>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+	
+</Edrison_Peavey_Data>

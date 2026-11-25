@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<Fel_PlextrooperUnit_Data>
+	<GroundInfantry Name="Squad_Fel_PlexTrooper">
+		<Variant_Of_Existing_Type>Fel_Plextrooper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEXTROOPER</Text_ID>
+		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, GARRISON_UNIT, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> 1.4 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+		<Land_Model_Name>Ei_StormTrooperPlex_1D.ALO</Land_Model_Name>
+
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperPlex_1D.ALO,
+			Urban, 				Ei_StormTrooperPlex_1D.ALO,
+			Arctic, 			Ei_StormTrooperPlex_1A.ALO,
+			Volcanic, 			Ei_StormTrooperPlex_1D.ALO,
+			Desert, 			Ei_StormTrooperPlex_1D.ALO,
+			Forest, 			Ei_StormTrooperPlex_1D.ALO,
+			Swamp, 				Ei_StormTrooperPlex_1D.ALO
+		</Land_Terrain_Model_Mapping>
+		<Conversion_Ability_Changes_To_Enemy> Squad_Fel_PlexTrooper_Soldier_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Fel_PlexTrooper_S">
+		<Variant_Of_Existing_Type>Squad_Fel_PlexTrooper</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ei_StormTrooperPlex_1DS.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperPlex_1DS.ALO,
+			Urban, 				Ei_StormTrooperPlex_1DS.ALO,
+			Arctic, 			Ei_StormTrooperPlex_1A.ALO,
+			Volcanic, 			Ei_StormTrooperPlex_1DS.ALO,
+			Desert, 			Ei_StormTrooperPlex_1DS.ALO,
+			Forest, 			Ei_StormTrooperPlex_1DS.ALO,
+			Swamp, 				Ei_StormTrooperPlex_1DS.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Fel_PlexTrooper_L">
+		<Variant_Of_Existing_Type>Squad_Fel_PlexTrooper</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ei_StormTrooperPlex_1DL.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperPlex_1DL.ALO,
+			Urban, 				Ei_StormTrooperPlex_1DL.ALO,
+			Arctic, 			Ei_StormTrooperPlex_1A.ALO,
+			Volcanic, 			Ei_StormTrooperPlex_1DL.ALO,
+			Desert, 			Ei_StormTrooperPlex_1DL.ALO,
+			Forest, 			Ei_StormTrooperPlex_1DL.ALO,
+			Swamp, 				Ei_StormTrooperPlex_1DL.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	<GroundInfantry Name="Fel_Plextrooper">
+		<Variant_Of_Existing_Type> Plex_SoldierORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEXTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank Canderous_Assault_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid Rebel_Trooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Stealth_Capable>No</Stealth_Capable>
+		<Land_Model_Name>Ei_StormTrooperPlex_1D.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ei_StormTrooperPlex.ALO</Land_Model_Anim_Override_Name>
+		
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_StormTrooperPlex_1D.ALO,
+			Urban, 				Ei_StormTrooperPlex_1D.ALO,
+			Arctic, 			Ei_StormTrooperPlex_1A.ALO,
+			Volcanic, 			Ei_StormTrooperPlex_1D.ALO,
+			Desert, 			Ei_StormTrooperPlex_1D.ALO,
+			Forest, 			Ei_StormTrooperPlex_1D.ALO,
+			Swamp, 				Ei_StormTrooperPlex_1D.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Icon_Name>i_button_Plextrooper.tga</Icon_Name>
+			
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+
+		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Plex_Soldier_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_2_Death</Death_SFXEvent_Start_Die>
+		<!-- Placeholder events for Frank -->
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_PLEXTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+
+		<Death_Clone>Damage_Force_Whirlwind, Fel_PlexTrooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Fel_PlexTrooper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Fel_PlexTrooper_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Fel_PlexTrooper_Remote_Bomb_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Attention, 
+				Marasiah_Fel,
+				Roan_Fel
+		</Presence_Induced_Animations>
+
+		<Tactical_Bribe_Cost>25</Tactical_Bribe_Cost>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Conversion_Ability_Changes_To_Enemy> Fel_PlexTrooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+
+	
+	<GroundInfantry Name="Fel_PlexTrooper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Fel_PlexTrooper </Variant_Of_Existing_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Fel_PlexTrooper_NonVictroy">
+		<Variant_Of_Existing_Type> Fel_PlexTrooper </Variant_Of_Existing_Type>
+		<Victory_Relevant>no</Victory_Relevant>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Fel_PlexTrooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Fel_PlexTrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Fel_PlexTrooper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Fel_PlexTrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Fel_PlexTrooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Fel_PlexTrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Fel_PlexTrooper_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Fel_PlexTrooper</Variant_Of_Existing_Type>
+	</GroundInfantry>	
+	
+	<GroundInfantry Name="Squad_Fel_PlexTrooper_Soldier_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Squad_Fel_PlexTrooper </Variant_Of_Existing_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Fel_PlexTrooper_L_B">
+		<Variant_Of_Existing_Type>Squad_Fel_PlexTrooper_L</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Fel_PlexTrooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Fel_PlexTrooper_Squad_B">
+		<Variant_Of_Existing_Type>Fel_PlexTrooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Fel_PlexTrooper_S, Squad_Fel_PlexTrooper, Squad_Fel_PlexTrooper </Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Fel_Plextrooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Fel_PlexTrooper_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEXTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank Canderous_Assault_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid Rebel_Trooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLEXTROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>75</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Company_Units> Squad_Fel_PlexTrooper_L_B, Squad_Fel_PlexTrooper, Squad_Fel_PlexTrooper </Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Fel_Plextrooper_Team </Create_Team_Type>
+		<Icon_Name>i_button_plextrooper.tga</Icon_Name>
+		<GUI_Model_Name>EI_PlexTrooper.ALO</GUI_Model_Name>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Fel_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<Container Name="Fel_Plextrooper_Team">
+		<Variant_Of_Existing_Type> Plex_Soldier_Team </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEXTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank Canderous_Assault_Tank MZ8_Pulse_Cannon_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid Rebel_Trooper Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLEXTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_plextrooper.tga</Icon_Name>
+	
+	</Container>
+</Fel_PlextrooperUnit_Data>

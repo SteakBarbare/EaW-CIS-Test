@@ -1,0 +1,90 @@
+﻿<?xml version="1.0"?>
+
+<SearchShip_Files>
+
+<SpaceUnit Name="SearchShip">
+		<Variant_Of_Existing_Type>SearchShipORG</Variant_Of_Existing_Type>
+		<Required_Planets>Kuat, KuatI, Kuat_Sector</Required_Planets>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+</SpaceUnit>
+<SpaceUnit Name="SearchShipORG">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SEARCHSHIP</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SEARCHSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_WARHEAD TEXT_UNIT_TIE_BOOSTER TEXT_UNIT_TIE_BIZARRO TEXT_UNIT_TIE_BIGGUN TEXT_UNIT_TIE_BOMB TEXT_DESC_CANTIDAD_16</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INVESTIGACION</Encyclopedia_Unit_Class>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_SearchShip.ALO</Space_Model_Name>
+		<GUI_Model_Name>EV_SearchShip.ALO</GUI_Model_Name>
+		<Scale_Factor>0.25</Scale_Factor>
+
+		<Layer_Z_Adjust>-20.0</Layer_Z_Adjust>
+
+		<Death_Clone>Damage_Normal, SearchShip_Death_Clone</Death_Clone>
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Cost_Credits>12500</Build_Cost_Credits>
+		<AI_Combat_Power>2000</AI_Combat_Power>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Starting_Spawned_Units_Tech_0>TIE_Warhead_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Booster_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bizarro_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Biggun_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TieBomb_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Warhead_Squadron, 31</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Booster_Squadron, 31</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bizarro_Squadron, 31</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Biggun_Squadron, 31</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TieBomb_Squadron, 28</Reserve_Spawned_Units_Tech_0>
+
+				
+		<HardPoints> 
+				HP_Fighter_BayH_00,
+				HP_Fighter_BayH_01,
+				HP_Fighter_BayH_02,
+				HP_Fighter_BayH_03,
+				HP_Fighter_BayH_04,
+				HP_Fighter_BayH_05,
+				HP_Fighter_BayH_06,
+				HP_Fighter_BayH_07,
+				HP_Shield_GeneratorH_00,
+				HP_Shield_GeneratorH_01,
+				HP_EnginesH_00
+		</HardPoints>
+		<Icon_Name>I_button_SearchShip.tga</Icon_Name>
+		<GUI_Model_Name>EV_SearchShip.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>12500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>I_RADAR_DEFAULT_BLIP.TGA</Radar_Icon_Name>
+		<Tactical_Bribe_Cost>3125</Tactical_Bribe_Cost>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="SearchShip_Death_Clone">
+		<Text_ID>TEXT_UNIT_NEBULON_FRIGATE</Text_ID>
+		<Space_Model_Name>EV_SearchShip_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+
+</SearchShip_Files>

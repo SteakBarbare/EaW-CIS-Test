@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<MTT_TransportUnit_Data>
+	<GroundVehicle Name="MTT_Transport">
+		<Variant_Of_Existing_Type>AAT_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MTT</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 REP_LAAT TX130_Armor_Group </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MTT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_CIS_MTT.tga</Icon_Name>
+
+		<Select_Box_Scale>200</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Land_Model_Name>CIS_MTTX.alo</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Deploys>Yes</Deploys>
+		<Affiliation>CIS, Rebel, Pirates</Affiliation>
+		
+		<Max_Speed>1.25</Max_Speed>
+		<Min_Speed>0.1</Min_Speed>
+		<OverrideAcceleration> 0.15 </OverrideAcceleration>
+		<OverrideDeceleration> 0.15 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>1</Bank_Turn_Angle>
+		
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<PathFrameDelay> 0 </PathFrameDelay>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>850</Tactical_Health>
+		<Shield_Refresh_Rate>10</Shield_Refresh_Rate>
+		<Energy_Capacity>9999</Energy_Capacity>
+		<Energy_Refresh_Rate>9999</Energy_Refresh_Rate>
+
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>No</Auto_Deploys>
+		<LandBehavior>IDLE, DEPLOY_TROOPERS, AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET, STUNNABLE, DAMAGE_TRACKING, SQUASH</LandBehavior>
+
+		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>320.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>260.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
+
+		<Fire_Weapon_When_Deployed>No</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>Yes</Fire_Weapon_When_Undeployed>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<SFXEvent_Fire>Unit_AT_ST_Fire</SFXEvent_Fire>
+
+		<CategoryMask> Vehicle </CategoryMask>
+		
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		
+		<MovementClass> LargeHover </MovementClass>
+		<Property_Flags> CanContainGarrison </Property_Flags>
+
+		<AI_Combat_Power>75</AI_Combat_Power>
+
+		<Custom_Hard_XExtent> 130.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 40.0 </Custom_Hard_YExtent>
+
+		<Is_Supercrusher>Yes</Is_Supercrusher>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>MTT_Deployed_DroidB1_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>4</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>
+				B_Trooper_00, 
+				B_Trooper_01, 
+				B_Trooper_02, 
+				B_Trooper_03,
+				B_Trooper_04, 
+				B_Trooper_05, 
+				B_Trooper_06, 
+				B_Trooper_07,
+				B_Trooper_08, 
+				B_Trooper_09, 
+				B_Trooper_10, 
+				B_Trooper_11,
+				B_Trooper_12,
+				B_Trooper_13
+				 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Select_Droid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Should_Reinforcements_Move> false </Should_Reinforcements_Move>
+		<Death_Clone>Damage_Normal, MTT_Transport_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="MTT_Transport_Death_Clone_00">
+		<Variant_Of_Existing_Type>MTT_Transport</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_MTTX_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="MTT_Company">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MTT</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 REP_LAAT TX130_Repulsor_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MTT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Icon_Name> I_BUTTON_CIS_MTT.tga </Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>CIS, Pirates, Rebel</Affiliation>
+		<Build_Cost_Credits>1800</Build_Cost_Credits>
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>CIS_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>MTT_Transport</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+	<GroundCompany Name="MTT_Deployed_DroidB1_Squad">
+		<Variant_Of_Existing_Type>C_BattleDroid_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel,
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel
+		</Company_Units>
+		<Max_Squad_Size> 18 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	
+	
+</MTT_TransportUnit_Data>

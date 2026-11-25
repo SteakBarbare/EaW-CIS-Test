@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Republic_ISPUnit_Data>
+	<GroundVehicle Name="Rep_ISP">
+		<Variant_Of_Existing_Type>Swamp_Speeder</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_MAF_team </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ev_ISP_P2.alo</Land_Model_Name>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		
+		<Affiliation>Empire, Republic</Affiliation>
+		
+		<Projectile_Types>Proj_EWEB_Blaster_Blue</Projectile_Types>
+		
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+	</GroundVehicle>
+	<GroundCompany Name="Republic_ISP_Squad">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_PIRATE_SWAMP_SPEEDER_TEAM</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroidB2_Squad C_Stap_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_OG_9_Group C_Hailfire_Tank_Droid_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SWAMP_SPEEDER TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_swamp_speeder.tga</Icon_Name>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Build_Cost_Credits>130</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		
+		<Company_Units>Rep_ISP, Rep_ISP, Rep_ISP</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Select_Clon_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>130</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+</Republic_ISPUnit_Data>

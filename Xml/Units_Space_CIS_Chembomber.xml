@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+
+
+<CIS_ChembomberUnit_Data>
+
+	
+	<SpaceUnit Name="CIS_Chembomber">
+		<Variant_Of_Existing_Type>R41</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_CHEMBOMBER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_CHEMBOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Space_Model_Name>CIS_Chembomber.alo</Space_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_Chembomber.TGA</Icon_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Max_Speed>3.3</Max_Speed>
+		<Min_Speed>2.2</Min_Speed>
+		<Land_Bomber_Type>Vulture_Bombing_Run</Land_Bomber_Type>
+		
+		<HardPoints>
+			HP_Fighter_Missile, HP_R_R41_Laser_00, HP_R_R41_Laser_01, HP_Missile_Ability_00
+		</HardPoints>
+		<CategoryMask> Bomber | Antifrigate </CategoryMask>
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
+				
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+								
+		</Unit_Abilities_Data>
+		
+		<Tactical_Bribe_Cost>13</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<Squadron Name="CIS_Chembomber_Squadron">
+		<Variant_Of_Existing_Type>CIS_Mankvim814_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_SQUADRON_CIS_CHEMBOMBER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_CHEMBOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Squadron_Units>CIS_Chembomber, CIS_Chembomber, CIS_Chembomber</Squadron_Units>
+		
+		<Icon_Name>I_BUTTON_CIS_Chembomber.TGA</Icon_Name>
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>CIS_Chembomber_Squadron_Container1</Create_Team_Type>
+		<GUI_Model_Name>CIS_Chembomber.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_V_WingX</SFXEvent_Build_Complete>
+	</Squadron>
+	<Container Name="CIS_Chembomber_Squadron_Container1">
+		<Variant_Of_Existing_Type>CIS_Mankvim814_Squadron</Variant_Of_Existing_Type>
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_SQUADRON_CIS_CHEMBOMBER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_CHEMBOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_CIS_Chembomber.tga</Icon_Name>
+
+		<Max_Speed>3.3</Max_Speed>
+		<Min_Speed>2.2</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Antifrigate </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+	
+
+</CIS_ChembomberUnit_Data>

@@ -1,0 +1,268 @@
+﻿<?xml version="1.0"?>
+
+<TIE_Defender_Files>
+	<SpaceUnit Name="E_TIE_Def_E">
+		<Variant_Of_Existing_Type>TIE_Defender</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_DEFENDER_E</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER_E TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Space_Model_Name>EVFO_TIE_Defender_E.ALO</Space_Model_Name>
+		<HardPoints>
+			HP_BWING_BOMBER_Rocket, HP_IonShot_00H, HP_G_TIEA_Laser_00, HP_G_TIEA_Laser_01, HP_G_TIEA_Laser_02, HP_G_TIEA_Laser_03, HP_G_TIEA_Laser_04, HP_G_TIEA_Laser_05, HP_TIEDE_Ion_06, HP_TIEDE_Ion_07, HP_TIEDE_Ion_08, HP_TIEDE_Ion_09, HP_TIEDE_Ion_10, HP_TIEDE_Ion_11, HP_Rocket_Ability_00, HP_Rocket_Ability_01
+		</HardPoints>	
+		<Affiliation>Empire</Affiliation>
+		<Icon_Name>i_button_E_TIE_Defender_E.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<Squadron Name="E_TIE_Def_E_Squadron">
+		<Variant_Of_Existing_Type>TIE_Defender_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_DEF_E_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER_E TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Affiliation>Empire</Affiliation>
+		<Squadron_Units>E_TIE_Def_E, E_TIE_Def_E, E_TIE_Def_E</Squadron_Units>
+		<Icon_Name>i_button_E_TIE_Defender_E.tga</Icon_Name>
+
+		<Create_Team_Type>E_TIE_Def_E_Squadron_Container1</Create_Team_Type>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+      
+		
+	</Squadron>
+	<Container Name="E_TIE_Def_E_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_TIE_DEF_E_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER_E TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_E_TIE_Defender_E.tga</Icon_Name>
+
+		<Max_Speed>5.8</Max_Speed>
+		<Min_Speed>3.9</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+	
+	<SpaceUnit Name="TIE_Defender">
+		<Variant_Of_Existing_Type>TIE_Bomber_Basic</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_DEFENDER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_MULTIROLE </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Nebulon_B_Frigate Calamari_Cruiser Krayt_Class_Destroyer </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CR_Hvy_Gunboat Crusader_Gunship Buzz_Droids </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>EV_TIE_DefenderEJ.ALO</Space_Model_Name>
+		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
+
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>5.8</Max_Speed>
+		<Min_Speed>3.9</Min_Speed>
+		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.5</Max_Rate_Of_Roll>
+
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Maintenance_Cost>0.1</Maintenance_Cost>
+		
+		<Land_Bomber_Type>TIE_Bomber_Bombing_Run</Land_Bomber_Type>
+
+		<Affiliation>Empire</Affiliation>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, REVEAL, NEBULA </SpaceBehavior>
+		<Shield_Points>1600</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>1750</Shield_Refresh_Rate>
+		<Energy_Capacity>16000</Energy_Capacity>
+		<Energy_Refresh_Rate>9600</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Fighter </Armor_Type>
+        <Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		
+		
+		<CategoryMask> Bomber | Anticapital </CategoryMask>
+		<Targeting_Priority_Set>Bomber_Multi</Targeting_Priority_Set>
+		
+		<HardPoints>
+			HP_BWING_BOMBER_Rocket, HP_IonShot_00H, HP_G_TIEA_Laser_00, HP_G_TIEA_Laser_01, HP_G_TIEA_Laser_02, HP_G_TIEA_Laser_03, HP_TIED_Ion_04, HP_TIED_Ion_05, HP_Rocket_Ability_00
+		</HardPoints>
+	
+		<SFXEvent_Select> Unit_Select_Tie_Defender </SFXEvent_Select>
+		<SFXEvent_Move> Unit_Move_Tie_Defender </SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Defender</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_Tie_Defender </SFXEvent_Attack>
+		<SFXEvent_Guard> Unit_Guard_Tie_Defender </SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Tie_Defender </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Tie_Defender </SFXEvent_Move_Into_Nebula>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Tie_Defender </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Tie_Defender </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Tie_Defender </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Tie_Defender </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Tie_Defender </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Tie_Defender </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Tie_Defender </SFXEvent_Attack_Hardpoint>      
+
+		<AI_Combat_Power>80</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Bribe_Cost>17</Tactical_Bribe_Cost>
+	</SpaceUnit>
+
+	
+	<Squadron Name="TIE_Defender_Squadron">
+		<Variant_Of_Existing_Type>Y-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_DEF_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Nebulon_B_Frigate Calamari_Cruiser Krayt_Class_Destroyer </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CR_Hvy_Gunboat Crusader_Gunship Buzz_Droids </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MULTIROLE</Encyclopedia_Unit_Class>
+
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+
+		<Tech_Level>99</Tech_Level>
+
+		<Required_Special_Structures>Factoria_Cazas_SIENAR</Required_Special_Structures>
+		
+		<Squadron_Units>TIE_Defender, TIE_Defender, TIE_Defender</Squadron_Units>
+		<Create_Team_Type>TIE_Defender_Squadron_Container1</Create_Team_Type>
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Defender</SFXEvent_Build_Complete>
+
+		<Tactical_Build_Cost_Multiplayer>850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</Squadron>
+	<Container Name="TIE_Defender_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_TIE_DEF_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_DEFENDER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MULTIROLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EV_TIE_Defender.tga</Icon_Name>
+
+		<Max_Speed>5.8</Max_Speed>
+		<Min_Speed>3.9</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</TIE_Defender_Files>

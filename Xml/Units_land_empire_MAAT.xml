@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<MAATUnit_Data>
+	<GroundVehicle Name="MAAT">
+		<Variant_Of_Existing_Type>MAATORG</Variant_Of_Existing_Type>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, MAAT_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="MAATORG">
+		<Variant_Of_Existing_Type>LAAT</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 184, 10, 37, 255 </No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_MAAT</Text_ID>
+		<Encyclopedia_Good_Against>MPTL T4B_Tank Rebel_Infantry_Squad</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>AAC_HOVERTANK Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAAT</Encyclopedia_Text>
+
+		<Land_Model_Name>EV_MAAT.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+
+		<Armor_Type> Armor_Missile_Cruiser </Armor_Type>
+
+		<Tactical_Health>400</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<AI_Combat_Power>125</AI_Combat_Power>
+		
+		<Ranged_Target_Z_Adjust>175.0</Ranged_Target_Z_Adjust>
+		
+		<Turret_Rotate_Extent_Degrees>120</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>MAAT</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Turret_Targets_Ground_Vehicles> 2</Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 3</Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 1</Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4</Turret_Targets_Anything_Else>
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		<Projectile_Types>Proj_Main_Cannon_MAAT</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>500.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		
+		<Hardpoints>
+				HP_Gr_Fighter_Missile_00
+		</Hardpoints>
+	
+		<Death_Explosions>Medium_Explosion_Space6</Death_Explosions>
+
+		<Icon_Name>i_button_ev_maat.tga</Icon_Name>
+
+		<SFXEvent_Fire>Unit_SPMAT_Projectile_Fire</SFXEvent_Fire>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+			
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>MAAT_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L1_Bonus">
+				<Initially_Enabled> Yes </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.15</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> Yes </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		
+	</GroundVehicle>
+	<GroundVehicle Name="MAAT_Death_Clone_00">
+		<Variant_Of_Existing_Type>MAAT</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_MAAT_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_MAAT">
+		<Variant_Of_Existing_Type>Imperial-LAAT</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_MAAT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAAT TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+
+		<Company_Units>MAAT</Company_Units>
+
+		<Icon_Name>i_button_ev_maat.tga</Icon_Name>
+		<GUI_Model_Name>EV_MAAT.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="MAAT_Deployed_Imperial_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Assault_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame,Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame, Squad_Assault_Trooper_Flame</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Assault_Team </Create_Team_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	<GroundCompany Name="Grupo_MAAT">
+		<Variant_Of_Existing_Type>Imperial_MAAT</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_XGRUPOMAAT_SQUAD</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XGRUPOMAAT TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Company_Transport_Unit>LAAT_Landing_Craft</Company_Transport_Unit>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>MAAT, MAFT, MAFT</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_GRUPOMAAT.TGA</Icon_Name>
+		<Build_Cost_Credits>1150</Build_Cost_Credits>
+	</GroundCompany>
+</MAATUnit_Data>

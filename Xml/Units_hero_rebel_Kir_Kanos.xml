@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<Kir_Kanos_Hero_Files>
+	<!--Kir Kanos Data-->
+<GenericHeroUnit Name="Kir_Kanos">
+		<Text_ID>TEXT_HERO_KIR_KANOS_TEAM</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_KIR_KANOS TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Land_Model_Name>EI_RoyalGaurd.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ri_KirKanos.tga</Icon_Name>
+				
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR, IDLE, WEAPON, REVEAL, HIDE_WHEN_FOGGED, SELECTABLE, TARGETING, WEAPON, DAMAGE_TRACKING, UNIT_AI, GARRISON_UNIT</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<SurfaceFX_Name>Generic_Footprint, Good_Ground</SurfaceFX_Name>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Loop_Idle_Anim_00>No</Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<CanCellStack>yes</CanCellStack>
+		<Select_Box_Scale>27</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Mass>1.0</Mass>
+		<GUI_Bracket_Width>5</GUI_Bracket_Width>
+		<GUI_Bracket_Height>0</GUI_Bracket_Height>
+		<GUI_Bracket_Size>0</GUI_Bracket_Size>
+		<Mouse_Collide_Override_Sphere_Radius> 10.0 </Mouse_Collide_Override_Sphere_Radius>
+		<Is_Combustible>yes</Is_Combustible>
+		<On_Fire_Speed_Modifier>1.2f</On_Fire_Speed_Modifier>
+		<Targeting_Allowed_When_Burning>no</Targeting_Allowed_When_Burning>
+		<Burning_Damage_Per_Second>0.1</Burning_Damage_Per_Second>
+		<Is_Squashable> true </Is_Squashable>
+		<Influences_Capture_Point>True</Influences_Capture_Point>
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .5 </FormationSpacing>
+		<MinimumPushReturnDistance> 10 </MinimumPushReturnDistance>
+		<Min_Speed> .192 </Min_Speed>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<FormationOrder> 2 </FormationOrder>
+		<FormationGrouping> Standard </FormationGrouping>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Rebel</Affiliation>
+		<Required_Timeline>0</Required_Timeline>
+		<IsBuildable>Yes</IsBuildable>
+		<Size_Value>10</Size_Value>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Damage>15</Damage>
+		<Tactical_Health>1500</Tactical_Health>
+		<Blob_Shadow_Below_Detail_Level>3</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>10.0, 10.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Blob_Shadow_Bone_Name>B_Chest</Blob_Shadow_Bone_Name>
+		<Is_Stationary_When_Attacking>Yes</Is_Stationary_When_Attacking>
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Projectile_Types>Proj_Force_Pike_RoyalGuard_heroes</Projectile_Types>
+		<Targeting_Max_Attack_Distance>5.0</Targeting_Max_Attack_Distance>
+		<Projectile_Appearance_Delay_Frames> 6 </Projectile_Appearance_Delay_Frames>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 4.0 </Targeting_Fire_Inaccuracy>
+		<Turret_Rotate_Extent_Degrees>100.0</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30.0</Turret_Elevate_Extent_Degrees>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		<AI_Combat_Power>7</AI_Combat_Power>
+		<MovementClass>Infantry</MovementClass>
+		<Victory_Relevant>Yes</Victory_Relevant>
+		<Weather_Category>Infantry</Weather_Category>
+		
+		<Harass_Enemy_Exclusion_Range>100.0</Harass_Enemy_Exclusion_Range>
+		
+		<SFXEvent_Select>Unit_Select_Kanos</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Kanos</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Kanos</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Kanos</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Kanos</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Move_Kanos</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Kanos</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Kanos </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Kanos </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Kanos </Death_SFXEvent_Start_Die>
+		
+		<Selection_Blob_Material_Name>Selection_Rebel_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Rebel_Hero</Highlight_Blob_Material_Name>
+		
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+
+		<Neutralization_Cost>50.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<CategoryMask> Spacehero | LandHero </CategoryMask>
+
+		<Death_Clone>Damage_Force_Whirlwind, Kir_Kanos_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Kir_Kanos_Death_Clone</Death_Clone>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Ground_Infantry_Turret_Target> Yes </Ground_Infantry_Turret_Target>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		<Create_Team> No </Create_Team>
+		<Movie_Object>false</Movie_Object>
+		<Presence_Induced_Animations>
+			Attention, 
+				Princess_Leia
+		</Presence_Induced_Animations>
+		
+		<Presence_Range>100.0</Presence_Range>
+	
+		<Target_Stealth_Units>Yes</Target_Stealth_Units>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+		
+			<Reduce_Production_Time_Ability Name="Kanos_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Neutralize_Hero_Ability Name="Kanos_Neutralize_Hero">
+				<Cost_Mod_By_Base_Level>0.0,0.0, 5.0,1.0</Cost_Mod_By_Base_Level>
+				<Cost_Mod_By_Previous_Neutralizations>0.0,0.0, 1000.0,750.0</Cost_Mod_By_Previous_Neutralizations>
+				<Cost_Mod_By_Planetary_Corruption_Level>0.0,0.0, 1.0,0.25</Cost_Mod_By_Planetary_Corruption_Level>
+				<General_Minor_Hero_Cost_Mod>1.0</General_Minor_Hero_Cost_Mod>
+				<General_Major_Hero_Cost_Mod>1.0</General_Major_Hero_Cost_Mod>
+				<Owner_Respawn_Time_In_Secs>120.0, 150.0</Owner_Respawn_Time_In_Secs>
+				<Target_Respawn_Time_In_Secs>240.0, 300.0</Target_Respawn_Time_In_Secs>
+				<Can_Neutralize_Minor_Heroes>Yes</Can_Neutralize_Minor_Heroes>
+				<Can_Neutralize_Major_Heroes>Yes</Can_Neutralize_Major_Heroes>
+			</Neutralize_Hero_Ability>
+			
+			<Galactic_Stealth_Ability Name="Kanos_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Kanos_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+
+			<Hero_Protection_Ability Name="Kanos_Hero_Protection">
+				<Neutralization_Cost_Multiplier>1.25</Neutralization_Cost_Multiplier>
+				<Stacking_Category>9</Stacking_Category>
+			</Hero_Protection_Ability>
+			
+			<Remove_Corruption_Ability Name="Kanos_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<GenericHeroUnit Name="Kir_Kanos_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Kir_Kanos</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GenericHeroUnit>
+	<GenericHeroUnit Name="Kir_Kanos_Death_Clone">
+		<Variant_Of_Existing_Type>Kir_Kanos</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GenericHeroUnit>
+	<HeroCompany Name="Kir_Kanos_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_KIR_KANOS_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ri_KirKanos.tga</Icon_Name>
+
+		<Affiliation>Rebel</Affiliation>
+		<Company_Transport_Unit>Kir_Kanos_Fighter</Company_Transport_Unit>
+		<Company_Units>Kir_Kanos</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Kanos</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Kanos</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Kanos</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>AREA_EFFECT_STUN</Type>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Han_Solo_Stun_Blast </Spawned_Object_Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 10.0 </Expiration_Seconds>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_KIR_KANOS TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<CategoryMask>LandHero | Spacehero</CategoryMask>
+
+	</HeroCompany>
+	<HeroCompany Name="Kir_Kanos_Team_Land_MP">
+		<Variant_Of_Existing_Type>Kir_Kanos_Team</Variant_Of_Existing_Type>
+		
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	
+	<HeroCompany Name="Kir_Kanos_Team_Space_MP">
+		<Variant_Of_Existing_Type>Kir_Kanos_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KIR_KANOS </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	
+	
+	<SpaceUnit Name="Kir_Kanos_Fighter_MP">
+		<Variant_Of_Existing_Type>Kir_Kanos_Fighter</Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>		
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites/>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>
+	<SpaceUnit Name="Kir_Kanos_Fighter">
+		<Variant_Of_Existing_Type>Mara_Blastboat</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_KIR_KANOS_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KIR_KANOS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOUNTY_HUNTER </Encyclopedia_Unit_Class>
+		<Is_Super_Weapon_Killer>No</Is_Super_Weapon_Killer>
+		<Icon_Name>I_BUTTON_Ri_KirKanos.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<AI_Combat_Power>1580</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Kanos</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Kanos</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Kanos</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Kanos</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Kanos</SFXEvent_Guard>
+		<SFXEvent_Deploy>Unit_Move_Kanos</SFXEvent_Deploy>
+		<SFXEvent_Health_Low_Warning> Unit_Attack_Kanos </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Attack_Kanos </SFXEvent_Health_Critical_Warning>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 10.0</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			 <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> MC30_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Broadside_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		 <Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="MC30_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 3.0 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_Labansat_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_Attack_Broadside_Cruiser</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+	</SpaceUnit>
+</Kir_Kanos_Hero_Files>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+
+
+<BS_MC80AUnit_Data>
+	<SpaceUnit Name="BS_MC80A">
+		<Variant_Of_Existing_Type>Mc80aORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MCS80A</Text_ID>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>UV_Mc80a.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>200</Layer_Z_Adjust>
+
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		
+		<AI_Combat_Power>10250</AI_Combat_Power>
+		
+		<Tech_Level>0</Tech_Level>
+
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, BS_MC80A_Death_Clone</Death_Clone>
+		
+		<Starting_Spawned_Units_Tech_0>T_Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Z95_Headhunter_Underworld_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_SquadronU, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>T_Wing_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Z95_Headhunter_Underworld_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_SquadronU, 11</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<HardPoints>
+			HP_T_BSMC80A2N_01,
+			HP_T_BSMC80A2N_02,
+			HP_T_BSMC80A2N_03,
+			HP_T_BSMC80A2N_04,
+			HP_T_BSMC80A2N_05,
+			HP_T_BSMC80A2N_06,
+			HP_T_BSMC80A2N_07,
+			HP_T_BSMC80A2N_08,
+			HP_T_BSMC80A2N_09,
+			HP_T_BSMC80A2N_10,
+			HP_T_BSMC80A2N_11,
+			HP_T_BSMC80A2N_12,
+			HP_T_BSMC80A2N_13,
+			HP_T_BSMC80A2N_14,
+			HP_T_BSMC80A2N_15,
+			HP_T_BSMC80A2N_16,
+			HP_T_BSMC80A2N_17,
+			HP_T_BSMC80A2N_18,
+			HP_T_BSMC80A2N_19,
+			HP_T_BSMC80A2N_20,
+			HP_T_BSMC80A2N_21,
+			HP_T_BSMC80A2N_22,
+			HP_T_BSMC80A2N_23,
+			HP_T_BSMC80A2N_24,
+			HP_T_BSMC80A2N_25,
+			HP_T_BSMC80A2N_26,
+			HP_T_BSMC80A2N_27,
+			HP_T_BSMC80A2N_28,
+			HP_T_BSMC80A2N_29,
+			HP_T_BSMC80A2N_30,
+			HP_T_BSMC80A2N_31,
+			HP_T_BSMC80A2N_32,
+			HP_T_BSMC80A2N_33,
+			HP_T_BSMC80A2N_34,
+			HP_T_BSMC80A2N_35,
+			HP_T_BSMC80A2N_36,
+			HP_T_BSMC80A2N_37,
+			HP_Shield_GeneratorH_00, 
+			HP_Shield_GeneratorH_01, 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Fighter_BayH_00
+		</HardPoints>
+		<Icon_Name>I_BUTTON_UV_Mc80a.tga</Icon_Name>
+		<GUI_Model_Name>UV_Mc80a.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MCS80A TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_T_WING TEXT_UNIT_Z95_HEADHUNTER TEXT_UNIT_OLDBTLS3YWING TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+
+	</SpaceUnit>
+	<SpaceUnit Name="BS_MC80A_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC80 </Text_ID>
+		<Space_Model_Name> UV_Mc80a_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor> 0.55 </Scale_Factor>
+		<Layer_Z_Adjust> -50.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+    
+</BS_MC80AUnit_Data>

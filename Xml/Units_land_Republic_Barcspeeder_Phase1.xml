@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Rep_Hovermoto_Phase1Unit_Data>
+	
+	<GroundInfantry Name="Rep_Hovermoto_Phase1">
+		<Variant_Of_Existing_Type>Scout_TrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_REP_HOVERMOTO_PHASE1</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Hailfire_Tank_Droid_Brigade C_Stap_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_CIS_walk_DW_Group UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_REP_HOVERMOTO_PHASE1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Rep_HoverMoto_Phase1.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_HoverMoto_Phase1.tga</Icon_Name>
+
+		<Max_Speed>3.0</Max_Speed>
+		<Min_Speed>3.0</Min_Speed>
+
+		<Scale_Factor>0.6</Scale_Factor>
+
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Projectile_Types>Proj_Blaster_Cannon_Blue</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<SFXEvent_Fire>Unit_Rep_HandLaser02_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		<Conversion_Ability_Changes_To_Enemy> Rep_Hovermoto_Phase1_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	
+	</GroundInfantry>
+
+	<GroundInfantry Name="Rep_Hovermoto_Phase1_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Rep_Hovermoto_Phase1 </Variant_Of_Existing_Type>
+	</GroundInfantry>
+
+	
+	<GroundCompany Name="Rep_Hovermoto_Phase1_Squad">
+		<Variant_Of_Existing_Type> Imperial_Light_Scout_Squad </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REP_HOVERMOTO_PHASE1_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Hailfire_Tank_Droid_Brigade C_Stap_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_CIS_walk_DW_Group UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_REP_HOVERMOTO_PHASE1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Company_Units>Rep_Hovermoto_Phase1, Rep_Hovermoto_Phase1, Rep_Hovermoto_Phase1, Rep_Hovermoto_Phase1, Rep_Hovermoto_Phase1</Company_Units>
+
+		<Icon_Name>I_BUTTON_Rep_HoverMoto_Phase1.tga</Icon_Name>
+		<GUI_Model_Name>Rep_HoverMoto_Phase1.ALO</GUI_Model_Name>
+	</GroundCompany>
+	
+</Rep_Hovermoto_Phase1Unit_Data>

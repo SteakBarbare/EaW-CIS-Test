@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+
+<NV_Yevethan_DTypeFighter_Files>
+	
+	<SpaceUnit Name="NV_Yevethan_DTypeFighter">
+		<Variant_Of_Existing_Type>TIE_Avenger_Generic</Variant_Of_Existing_Type>		
+		<Text_ID>TEXT_UNIT_NV_YEVETHAN_DTYPEFIGHTER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NV_YEVETHAN_DTYPEFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Y-Wing B-wing X-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> E-Wing CR_Hvy_Gunboat Ranger </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>NV_Yevethan_DTypeFighter.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>4.2</Max_Speed>
+		<Min_Speed>2.8</Min_Speed>
+		<CategoryMask> Bomber | Anticapital </CategoryMask>
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>	
+		<Hardpoints>
+			HP_BWING_BOMBER_Rocket, HP_G_TIEA_Laser_00, HP_G_TIEA_Laser_01, HP_Rocket_Ability_00
+		</Hardpoints>
+		
+		<Icon_Name>i_button_NV_Yevethan_DTypeFighter.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<!-- Primary ability -->
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>	
+		</Unit_Abilities_Data>
+
+		<Strafe_Distance>500.0</Strafe_Distance>
+		<Tactical_Bribe_Cost>15</Tactical_Bribe_Cost>	
+	</SpaceUnit>
+	
+	<Squadron Name="NV_Yevethan_DTypeFighter_Squadron">
+		<Text_ID>TEXT_UNIT_NV_YEVETHAN_DTYPEFIGHTER</Text_ID>
+		<Encyclopedia_Good_Against> Y-Wing B-wing X-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> A-Wing E-Wing CR_Hvy_Gunboat</Encyclopedia_Vulnerable_To>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Formation_Priority>1</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Damage>25</Damage>
+		<Affiliation>Empire</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Time_Seconds>10</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>NV_Yevethan_DTypeFighter, NV_Yevethan_DTypeFighter, NV_Yevethan_DTypeFighter</Squadron_Units>
+		<Create_Team_Type>NV_Yevethan_DTypeFighter_Squadron_Container1</Create_Team_Type>
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Max_Squad_Size>3</Max_Squad_Size>
+		<Icon_Name>i_button_NV_Yevethan_DTypeFighter.tga</Icon_Name>
+		<GUI_Model_Name>NV_Yevethan_DTypeFighter.ALO</GUI_Model_Name>
+		<GUI_Distance>120</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_Fighter</SFXEvent_Build_Complete>
+		<FormationOrder>3</FormationOrder>
+		<Squadron_Formation_Error_Tolerance>35.0</Squadron_Formation_Error_Tolerance>
+		<Guard_Chase_Range>300.0</Guard_Chase_Range>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>2000.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>2000.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Property_Flags> SmallShip </Property_Flags>
+		<Score_Cost_Credits> 420</Score_Cost_Credits>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>	
+		</Unit_Abilities_Data>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_NV_YEVETHAN_DTYPEFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>180</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites/>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+		<!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		<Population_Value>1</Population_Value>
+	</Squadron>
+	<Container Name="NV_Yevethan_DTypeFighter_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_NV_YEVETHAN_DTYPEFIGHTER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NV_YEVETHAN_DTYPEFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_NV_Yevethan_DTypeFighter.tga</Icon_Name>
+
+		<Max_Speed>4.2</Max_Speed>
+		<Min_Speed>2.8</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Anticapital </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</NV_Yevethan_DTypeFighter_Files>

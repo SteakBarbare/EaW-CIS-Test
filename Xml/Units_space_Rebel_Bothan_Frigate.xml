@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<R_Bothan_FrgUnit_Data>
+
+	<SpaceUnit Name="R_Bothan_Frg">	
+		<Variant_Of_Existing_Type>Assault_FrgORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_BOTHAN_FRIGATE</Text_ID>
+		<Encyclopedia_Good_Against> Nebulon_B2E Rep_AcclamatorI Interdictor_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber ISDORG ISD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RV_BOTHAN_FRIGATE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_XJ_WING TEXT_WAVES_X3 TEXT_UNIT_RVBTLS3YWING TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
+		
+		<!--<Custom_Hard_XExtent> 61.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>-->
+
+		<Space_Model_Name>RV_Bothan_Frigate.alo</Space_Model_Name>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>		
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<Armor_Type> Armor_Assault_Frigate </Armor_Type>
+        <Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Autoresolve_Health>22500</Autoresolve_Health>
+		<Shield_Points>22500</Shield_Points>
+		<Tactical_Health>130000000</Tactical_Health>  
+		<Shield_Refresh_Rate>25500</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>210000</Energy_Refresh_Rate>
+
+		<Affiliation>Rebel, GAC</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes, AdvancedTech_8</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<AI_Combat_Power>4695</AI_Combat_Power>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_XJWing_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>RVBTLS3Y_Wing_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>2</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_XJWing_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RVBTLS3Y_Wing_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+
+		<Death_Clone>Damage_Normal, R_Bothan_Frg_Death_Clone</Death_Clone>
+
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>	
+		<HardPoints>
+			HP_T_BothanFrigate_01,
+			HP_T_BothanFrigate_02,
+			HP_T_BothanFrigate_03,
+			HP_T_BothanFrigate_04,
+			HP_T_BothanFrigate_05,
+			HP_T_BothanFrigate_06,
+			HP_T_BothanFrigate_07,
+			HP_T_BothanFrigate_08,
+			HP_T_BothanFrigate_09,
+			HP_T_BothanFrigate_10,
+			HP_T_BothanFrigate_11,
+			HP_T_BothanFrigate_12,
+			HP_T_BothanFrigate_13,
+			HP_T_BothanFrigate_14,
+			HP_T_BothanFrigate_15,
+			HP_T_BothanFrigate_16,
+			HP_T_BothanFrigate_17,
+			HP_T_BothanFrigate_18,
+			HP_T_BothanFrigate_19,
+			HP_T_BothanFrigate_20,
+			HP_T_BothanFrigate_21,
+			HP_T_BothanFrigate_22,
+			HP_T_BothanFrigate_23,
+			HP_T_BothanFrigate_24,
+			HP_T_BothanFrigate_25,
+			HP_T_BothanFrigate_26,
+			HP_T_BothanFrigate_27,
+			HP_T_BothanFrigate_28,
+			HP_Fighter_Bay_Small_00,
+			HP_Fighter_Bay_Small_01,
+			HP_Shield_Generator_Small_00,
+			HP_Engines_Small_00
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_RV_Bothan_Frigate.tga</Icon_Name>
+		<GUI_Model_Name>RV_Bothan_Frigate.alo</GUI_Model_Name>
+		
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Gunboat</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+            <Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		
+		<Tactical_Build_Cost_Multiplayer>3500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+    <SpaceUnit Name="R_Bothan_Frg_Death_Clone">
+		<Text_ID>TEXT_UNIT_CC9600</Text_ID>
+		<Space_Model_Name>RV_Bothan_Frigate_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</R_Bothan_FrgUnit_Data>

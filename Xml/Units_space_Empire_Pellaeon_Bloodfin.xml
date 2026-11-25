@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<BloodfinUnit_Data>
+	<SpaceUnit Name="Up_E_Firestorm_to_Bloodfin">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FIRESTORMSD</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_SD_BLOODFIN TEXT_TOOLTIP_PELLALLEON</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ei_Pellaeon.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Officer_Academy</Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+		<Required_Orbiting_Units>Firestorm</Required_Orbiting_Units>
+		<Build_Time_Seconds>75</Build_Time_Seconds>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Lua_Script>Up_E_Firestorm_to_Bloodfin</Lua_Script>
+		<Population_Value>3</Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Bloodfin">
+		<Variant_Of_Existing_Type>TurbulentSD</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SD_BLOODFIN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PELLALLEON TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Turbulent_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
+
+		<Ranking_In_Category>3</Ranking_In_Category>
+		
+		<Icon_Name>I_BUTTON_Ei_Pellaeon.TGA</Icon_Name>
+	
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<SFXEvent_Select>Unit_Select_Piett</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Piett</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Piett</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Piett</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Piett</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Piett </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Piett </SFXEvent_Health_Critical_Warning>
+
+
+		<AI_Combat_Power>4600</AI_Combat_Power>
+		
+		<CategoryMask> SpaceHero </CategoryMask>
+				
+		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+  	   <Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Piett</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+				<Unit_Ability>
+					<Type>LASER_DEFENSE</Type>
+					<Recharge_Seconds>30.0</Recharge_Seconds>
+					<GUI_Activated_Ability_Name> Turbulence_Laser_Defense </GUI_Activated_Ability_Name>
+					<Effective_Radius> 1000.0 </Effective_Radius>
+					<SFXEvent_GUI_Unit_Ability_Activated> Unit_Laser_Defense_On_Crusader </SFXEvent_GUI_Unit_Ability_Activated>  
+					<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Laser_Defense_Off_Crusader </SFXEvent_GUI_Unit_Ability_Deactivated>  
+					<Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+					<Supports_Autofire>True</Supports_Autofire>
+			   </Unit_Ability>
+	   </Unit_Abilities_Data>
+	   <Abilities SubObjectList="Yes">
+			<Laser_Defense_Ability Name="Turbulence_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 300.0 </Defense_Duration_In_Secs>
+                <Laser_Color>255, 186, 0, 255</Laser_Color>
+                <Bone_Names>muzzleB_00, muzzleB_01, muzzleB_02, muzzleB_03, muzzleB_04, muzzleB_05, muzzleB_06, muzzleB_07, muzzleB_08, muzzleB_09, muzzleB_10, muzzleB_11</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>1000.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>1000</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.25</Recharge_Time_In_Secs>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Zap_SFXEvent>Unit_Eweb_Fire</Zap_SFXEvent>
+            </Laser_Defense_Ability>
+			<Combat_Bonus_Ability Name="PellaeonIII_Combat_Bonus_General">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Bloodfin | TurbulentSD</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.20</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Time_Ability Name="PellaeonIII_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			<Remove_Corruption_Ability Name="PellaeonI_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</SpaceUnit>	
+	
+	
+	
+</BloodfinUnit_Data>

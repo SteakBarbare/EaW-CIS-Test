@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<EVK_S2_TankUnit_Data>
+	
+	<GroundVehicle Name="EVK_S2_Tank">
+		<Variant_Of_Existing_Type>Ch_S1_Tank</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_S2_TANK</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_S2_TANK</Encyclopedia_Text>
+
+		<Icon_Name>i_button_Ch_S1_Tank.tga</Icon_Name>
+		<Land_Model_Name>EVK_S2_Tank.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Projectile_Types>Proj_Main_Cannon_S1_Tank</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>1.0</Projectile_Fire_Pulse_Delay_Seconds>
+	</GroundVehicle>
+
+	<GroundCompany Name="EVK_S2_Tank_Squad">
+		<Variant_Of_Existing_Type>Ch_S1_Tank_Armor_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_S2_TANK_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_S2_TANK TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_Ch_S1_Tank.tga</Icon_Name>
+		<Required_Special_Structures>Krayt_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>EVK_S2_Tank, EVK_S2_Tank, EVK_S2_Tank, EVK_S2_Tank</Company_Units>
+		<Company_Transport_Unit>Fel_Hvy_Nune_Shuttle</Company_Transport_Unit>
+		
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Krayt_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</EVK_S2_TankUnit_Data>

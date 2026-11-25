@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<U_Structure_XBCommandUnit_Data>
+	
+	<SpecialStructure Name="U_XBCommand">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Behavior>TACTICAL_BUILD_OBJECTS, SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,TURRET,TARGETING,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION, STUNNABLE,EARTHQUAKE_TARGET, ABILITY_COUNTDOWN </LandBehavior>
+		<Tactical_Build_Attachment_Bone_Name> ATTACH_POINT_00 </Tactical_Build_Attachment_Bone_Name>
+		
+		<GUI_Bounds_Scale>0.2</GUI_Bounds_Scale>
+			
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Points>1000</Shield_Points>
+		
+		<Projectile_Types>Proj_Mass_Driver_Tank</Projectile_Types>
+				
+		<Text_ID>TEXT_STRUCTURE_E_XBCOMMAND</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XBCOMMAND </Encyclopedia_Text>
+		<Obstacle_Proxy_Type> E_XBCommand_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>UB_Bridge_CommandX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Underworld, Hutts</Affiliation>
+		<Icon_Name>i_button_UB_Bridge_CommandX.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign>
+			Underworld,
+				UC_Underworld_Sensor_Scrambler,
+				UC_Underworld_Ysalamiri_Cage,
+				UC_Underworld_Rocket_Pod,
+				UC_Underworld_Landing_Pad,
+			Hutts,
+				UC_Underworld_Sensor_Scrambler,
+				UC_Underworld_Ysalamiri_Cage,
+				UC_Underworld_Rocket_Pod,
+				UC_Underworld_Landing_Pad
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer>
+			Underworld,
+				UC_Underworld_Sensor_Scrambler,
+				UC_Underworld_Ysalamiri_Cage,
+				UC_Underworld_Rocket_Pod,
+				UC_Underworld_Landing_Pad,
+			Hutts,
+				UC_Underworld_Sensor_Scrambler,
+				UC_Underworld_Ysalamiri_Cage,
+				UC_Underworld_Rocket_Pod,
+				UC_Underworld_Landing_Pad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Respects_Skirmish_Pre_Build_Bases_Option> false </Respects_Skirmish_Pre_Build_Bases_Option>
+		<Capture_Point_Radius> 0.0 </Capture_Point_Radius>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		<Place_At_Every_Specific_Marker_Position>True</Place_At_Every_Specific_Marker_Position>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<Immune_To_Damage>False</Immune_To_Damage>
+		<Ranged_Target_Z_Adjust>1.0</Ranged_Target_Z_Adjust>
+		
+		<Tactical_Additional_Structure_Type>U_XBCommand</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="PC_U_XBCommand">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> E_XBCommand_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>U_XBCommand</Tactical_Buildable_Constructed>
+		<Land_Model_Name>UB_Bridge_CommandX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Underworld, Hutts</Affiliation>
+		<Icon_Name>i_button_UB_Bridge_CommandX.tga</Icon_Name>
+	</GroundBuildable>	
+	
+</U_Structure_XBCommandUnit_Data>

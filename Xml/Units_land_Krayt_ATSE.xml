@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<EVK_AT_SE_WalkerUnit_Data>
+	<GroundVehicle Name="EVK_AT_SE_Walker">
+		<Variant_Of_Existing_Type>AT_SE_WalkerORG</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Fel, Empire, Rebel</Affiliation>
+		<Hardpoints>
+				HP_AT-AT_00, 
+				HP_AT-AT_01, 
+				HP_ATSE_TurretHead_LASER_01, 
+				HP_ATSE_TurretHead_LASER_02, 
+				HP_ATSE_TurretDown_LASER_01, 
+				HP_ATSE_TurretDown_LASER_02, 
+				HP_ATSE_TurretDown_LASER_03, 
+				HP_ATSE_MainTurret_LASER_00
+		</Hardpoints>
+		
+		<Destruction_Survivors> 
+			Walker_Commander_Survivor, 1.0 
+			Walker_Pilot_Survivor, 1.0
+			Walker_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+		<Death_Clone>Damage_Cable_Attack, AT_SE_Walker_Cable_Attack_Death_Clone</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>AT_SE_Walker_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+	
+	
+	<GroundCompany Name="EVK_AT_SE_Walker_Squad">
+		<Variant_Of_Existing_Type>AT_SE_Walker_Company</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATSE TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Krayt_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Hvy_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVK_AT_SE_Walker, EVK_AT_SE_Walker, EVK_AT_SE_Walker</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+	
+	<GroundCompany Name="EVF_AT_SE_Walker_Squad">
+		<Variant_Of_Existing_Type>AT_SE_Walker_Company</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATSE TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVK_AT_SE_Walker, EVK_AT_SE_Walker, EVK_AT_SE_Walker</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+</EVK_AT_SE_WalkerUnit_Data>

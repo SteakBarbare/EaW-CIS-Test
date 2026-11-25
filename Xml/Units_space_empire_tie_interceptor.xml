@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+
+
+<TIE_Interceptor_Files>
+
+	<SpaceUnit Name="TIE_Interceptor">
+		<Variant_Of_Existing_Type>TIE_Fighter</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_INTERCEPTOR</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_INTERCEPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_FAST </Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Starviper_Fighter X-wing Y-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CR_Hvy_Gunboat Crusader_Gunship Buzz_Droids </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>EV_TIE_InterceptorEJ.ALO</Space_Model_Name>
+
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>4.4</Max_Speed>
+		<Min_Speed>3.0</Min_Speed>
+		<Max_Rate_Of_Turn>3.9</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Tactical_Health>3500</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>3500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+
+		<HardPoints>
+			HP_G_Vwing_Laser_00, HP_G_Vwing_Laser_01, HP_G_Vwing_Laser_02, HP_G_Vwing_Laser_03
+		</HardPoints>
+
+		<Death_Explosions>Small_Explosion_Space_Empire</Death_Explosions>
+	
+		
+		<SFXEvent_Select> Unit_Select_Tie_Interceptor </SFXEvent_Select>
+		<SFXEvent_Move> Unit_Move_Tie_Interceptor </SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Tie_Interceptor</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_Tie_Interceptor </SFXEvent_Attack>
+		<SFXEvent_Guard> Unit_Guard_Tie_Interceptor </SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Tie_Interceptor </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Tie_Interceptor </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Tie_Interceptor</SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Tie_Interceptor </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_Tie_Interceptor </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_Tie_Interceptor </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Tie_Interceptor </SFXEvent_Attack_Hardpoint>
+		
+		<CategoryMask> Fighter | AntiBomber </CategoryMask>
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+
+		<Icon_Name>I_BUTTON_EV_TIE_INTERCEPTOR.TGA</Icon_Name>
+
+		<AI_Combat_Power>80</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Tactical_Bribe_Cost>12</Tactical_Bribe_Cost>
+	</SpaceUnit>
+
+	<Squadron Name="TIE_Interceptor_Squadron">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Starviper_Fighter X-wing Y-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CR_Hvy_Gunboat Crusader_Gunship Buzz_Droids </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Time_Seconds>5</Build_Time_Seconds>
+
+		<Tech_Level>99</Tech_Level>
+
+		<Squadron_Units>TIE_Interceptor, TIE_Interceptor, TIE_Interceptor</Squadron_Units>
+		
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>TIE_Interceptor_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>I_BUTTON_EV_TIE_INTERCEPTOR.TGA</Icon_Name>
+		<GUI_Model_Name>EV_TIE_InterceptorEJ.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_Tie_Interceptor</SFXEvent_Build_Complete>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_INTERCEPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_FAST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</Squadron>
+	<Container Name="TIE_Interceptor_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_INTERCEPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_FAST </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EV_TIE_INTERCEPTOR.tga</Icon_Name>
+
+		<Max_Speed>4.4</Max_Speed>
+		<Min_Speed>3.0</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiBomber </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+
+</TIE_Interceptor_Files>

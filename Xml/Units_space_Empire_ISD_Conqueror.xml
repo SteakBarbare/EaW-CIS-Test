@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<ISD_ConquerorUnit_Data>
+	<SpaceUnit Name="ISD_Conqueror">
+		<Variant_Of_Existing_Type>ISD_ConquerorORG</Variant_Of_Existing_Type>
+		<Required_Planets>Mustafar, MustafarK, Atravis_Sector</Required_Planets>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, ISD_Conqueror_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="ISD_ConquerorORG">
+		<Variant_Of_Existing_Type>ISD3ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ISDCONQUEROR</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ISDCONQUEROR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		
+		<GUI_Row>1</GUI_Row>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Scale_Factor>2.0</Scale_Factor>		
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Space_Model_Name>EV_ISD_Conqueror.ALO</Space_Model_Name>
+		<GUI_Model_Name>EV_ISD_Conqueror.ALO</GUI_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> w_planet_fleet_Conqueror.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>I_BUTTON_ISD_Conqueror.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, IDLE, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		
+		<Build_Cost_Credits>30000</Build_Cost_Credits>
+		
+		<AI_Combat_Power>5280</AI_Combat_Power>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+			
+		<HardPoints> 
+			HP_T_ISD3_Side_01,
+			HP_T_ISD3_Side_02,
+			HP_T_ISD3_Side_03,
+			HP_T_ISD3_Side_04,
+			HP_T_ISD3_Side_05,
+			HP_T_ISD3_Side_06,
+			HP_T_ISD3_Side_07,
+			HP_T_ISD3_Side_08,
+			HP_T_ISD3_Side_09,
+			HP_T_ISD3_Side_10,
+			HP_T_ISD3_Side_11,
+			HP_T_ISD3_Side_12,
+			HP_T_ISD3_Side_13,
+			HP_T_ISD3_Side_14,
+			HP_T_ISD3_Side_18,
+			HP_T_ISD3_Side_19,
+			HP_T_ISD3_Side_20,
+			HP_T_ISD3_Side_21,
+			HP_T_ISD3_Side_22,
+			HP_T_ISD3_Side_23,
+			HP_T_ISD3_Side_24,
+			HP_T_ISD3_Side_25,
+			HP_T_ISD3_Side_26,
+			HP_T_ISD3_Side_27,
+			HP_T_ISD3_SideN_28,
+			HP_T_ISD3_SideN_29,
+			HP_T_ISD3_SideN_30,
+			HP_T_ISD3_SideN_31,
+			HP_T_ISD3_SideN_32,
+			HP_T_ISD3_SideN_33,
+			HP_T_ISD3_SideN_34,
+			HP_T_ISD3_SideN_35,
+			HP_EV_SH_Conqueror_00,
+			HP_EV_SH_Conqueror_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_ISDConqueror_01,
+			HP_T_ISDConqueror_02,
+			HP_T_ISDConqueror_03,
+			HP_T_ISDConqueror_04,
+			HP_T_ISDConqueror_05,
+			HP_T_ISDConqueror_06,
+			HP_T_ISDConqueror_07,
+			HP_T_ISDConqueror_08,
+			HP_T_ISDIII_16,
+			HP_T_ISDIII_17,
+			HP_T_ISDIII_18,
+			HP_T_ISDIII_20,
+			HP_T_ISDIII_21,
+			HP_T_ISDIII_22,
+			HP_T_ISDIII_23,
+			HP_T_ISDIII_26
+		</HardPoints>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Conqueror_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.50f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.50f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	6.0f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+			
+			
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Super_Laser_Ability Name="Conqueror_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+				<Damage_Per_Frame>100000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>25</Line_Width>
+				<Line_Color>0 237 119 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>5.0f</Firing_Cone>
+			</Super_Laser_Ability>
+
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Super | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+				
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>30000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>111</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Bribe_Cost>7500</Tactical_Bribe_Cost>
+
+	</SpaceUnit>	
+	
+
+	<SpaceUnit Name="ISD_Conqueror_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EV_ISD_Conqueror_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Layer_Z_Adjust>600.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</ISD_ConquerorUnit_Data>

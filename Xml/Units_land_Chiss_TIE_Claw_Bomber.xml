@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<TIE_Claw_Bomber_LandUnit_Data>
+	
+	<GroundVehicle Name="TIE_Claw_Bomber_Land">
+		<Variant_Of_Existing_Type>TIE_Bomber_LandORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_TIE_CLAW_BOMBER</Text_ID>
+		<Encyclopedia_Good_Against> T3B_Tank T1B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CLAW_BOMBER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ch_TIE_Claw_Bomber_Land.ALO</Land_Model_Name>
+		<Scale_Factor>1.8</Scale_Factor>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Ranking_In_Category>6</Ranking_In_Category>
+		<Max_Speed>4.5</Max_Speed>
+		<Min_Speed>4.0</Min_Speed>
+		<AI_Combat_Power>130</AI_Combat_Power>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Armor_Type> Armor_Interdictor </Armor_Type>
+		<Shield_Armor_Type>Shield_GBomber</Shield_Armor_Type>
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED,SHIELDED,AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, HUNT</LandBehavior>
+		
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.05</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<HardPoints>
+			HP_Gr_Fighter_Bombas_01, HP_Gr_Fighter_Proton_Torpedo_00, HP_Gr_Fighter_Heavy_Rocket_00
+		</HardPoints>
+		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
+		<Death_Explosions>Medium_Explosion_Space5</Death_Explosions>
+
+		<Icon_Name>i_button_Ch_TIE_Claw_Bomber.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="TIE_Claw_Bomber_Squadron_Land">
+		<Variant_Of_Existing_Type>TIE_Bomber_Squadron_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_CIMITARRA</Text_ID>
+		<Encyclopedia_Good_Against> T3B_Tank T1B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CIMITARRA TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>TIE_Bomber_Land_Transport</Company_Transport_Unit>
+		<Company_Units>TIE_Claw_Bomber_Land, TIE_Claw_Bomber_Land</Company_Units>
+		<Icon_Name>i_button_Ch_TIE_Claw_Bomber.tga</Icon_Name>
+		<GUI_Model>Ch_TIE_Claw_Bomber_Land.alo</GUI_Model>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>14</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	
+</TIE_Claw_Bomber_LandUnit_Data>

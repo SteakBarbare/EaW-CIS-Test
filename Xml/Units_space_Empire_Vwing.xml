@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+
+<V-wing_Fighter_Files>
+	<SpaceUnit Name="V-wing_Fighter">
+		<Variant_Of_Existing_Type>TIE_Fighter</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VWING_FIGHTER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_V_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR</Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Bomber Pirate_Fighter SuprafighterU </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Fighter TIE_Scout Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>Rep_Vwing.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_rep_vwing.tga</Icon_Name>
+
+		<Max_Speed>4.8</Max_Speed>
+		<Min_Speed>3.2</Min_Speed>
+		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Thrust>0.1</Max_Thrust>
+		<Max_Rate_Of_Roll>4.5</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>20</Bank_Turn_Angle>
+		
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>	
+
+		<Hyperspace>No</Hyperspace>
+		<Hyperspace_Speed>0</Hyperspace_Speed>
+		<Affiliation>Empire,Rebel,Pirates</Affiliation>
+
+		<Tactical_Health>3000</Tactical_Health>
+		<Energy_Capacity>3000</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+		<HardPoints>
+			HP_G_Vwing_Laser_00, HP_G_Vwing_Laser_01, HP_G_Vwing_Laser_02, HP_G_Vwing_Laser_03
+		</HardPoints>
+
+		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
+
+		<SFXEvent_Select> Unit_Select_V_Wing </SFXEvent_Select>
+		<SFXEvent_Move> Unit_Move_V_Wing </SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_V_Wing</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_V_Wing </SFXEvent_Attack>
+		<SFXEvent_Guard> Unit_Guard_V_Wing </SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_V_Wing </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_V_Wing </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_V_Wing </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_V_Wing </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_V_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_V_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_V_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_V_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_V_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_V_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_V_Wing </SFXEvent_Attack_Hardpoint>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		
+		<Tactical_Bribe_Cost>20</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="V-wing_Fighter_E">
+		<Variant_Of_Existing_Type>V-Wing_Fighter</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+	</SpaceUnit>
+	
+
+
+
+</V-wing_Fighter_Files>

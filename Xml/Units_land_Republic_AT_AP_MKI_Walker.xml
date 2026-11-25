@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<AT_AP_MKI_WalkerUnit_Data>
+	
+	<GroundVehicle Name="Rep_Pod_Walker">
+		<Variant_Of_Existing_Type>Pod_WalkerORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_NR_N99_Tank_Droid_Brigade C_OG_9_Group UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<No_Colorization_Color> 146, 25, 56, 255 </No_Colorization_Color>
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<Icon_Name>I_BUTTON_Rep_AT_AP_MKI.TGA</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Republic_ATXT</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Republic_ATXT</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Republic_ATXT</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Republic_ATXT</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Republic_ATXT </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Republic_ATXT</SFXEvent_Assist_Attack>
+		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ATXT </Death_SFXEvent_Start_Die>
+		
+		<Death_Clone>Damage_Normal, Pod_Walker_Death_Clone</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>Pod_Walker_Captured</Vehicle_Thief_Inside_Clone>
+		
+	</GroundVehicle>
+		
+	<GroundCompany Name="Republic_AT_AP_Company">
+		<Variant_Of_Existing_Type>Empire_AT_AP_Company</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_NR_N99_Tank_Droid_Brigade C_OG_9_Group UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Company_Units>Rep_Pod_Walker, Rep_Pod_Walker, Rep_Pod_Walker, Rep_Pod_Walker</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+	
+	
+</AT_AP_MKI_WalkerUnit_Data>

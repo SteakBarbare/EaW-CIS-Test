@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<Units_space_structure_XQ_stationsUnit_Data>
+	<SpecialStructure Name="Plattform1">
+		<Variant_Of_Existing_Type>Plattform1_ORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, Plattform1_Death_Clone</Death_Clone>
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform1_ORG">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLATTFORM1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLATTFORM1 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>AR_NV_XQ2X.ALO</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates, CIS, Republic, Underworld, Krayt, Fel, Hutts, Chiss, Hapan, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Autoresolve_Health>15000</Autoresolve_Health>	
+		<Shield_Points>15000</Shield_Points>
+		
+		<Shield_Refresh_Rate>16000</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>90000</Energy_Refresh_Rate>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1800.0</Targeting_Max_Attack_Distance>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, SPAWN_SQUADRON, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_T_XQ_01,
+			HP_T_XQ_02,
+			HP_T_XQ_03,
+			HP_T_XQ_04,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_Shield_Generator_00
+		</HardPoints>
+	
+		<Icon_Name>I_BUTTON_NV_XQ2X.TGA</Icon_Name>
+	
+		
+		<Additional_Population_Capacity>0</Additional_Population_Capacity>
+		<Unit_Abilities_Data SubObjectList="Yes">
+	    
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Empire_Space_Station</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+	   </Unit_Abilities_Data>
+	  
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform1_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>NV_XQ2X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform2">
+		<Variant_Of_Existing_Type>Plattform1_ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLATTFORM2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLATTFORM2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>AR_NV_XQ3X.ALO</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Autoresolve_Health>22200</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		
+		<Shield_Refresh_Rate>23000</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		
+		
+		<HardPoints>
+			HP_T_XQ_01,
+			HP_T_XQ_02,
+			HP_T_XQ_03,
+			HP_T_XQ_04,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_Misil_01,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_Shield_Generator_00
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_NV_XQ3X.TGA</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Plattform2_Death_Clone</Death_Clone>
+		
+		
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform2_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>NV_XQ3X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	<SpecialStructure Name="Ch_XQ3_Defenses">
+		<Variant_Of_Existing_Type>Ch_XQ3</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLATTFORM2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PLATTFORM2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD </Encyclopedia_Text>
+		<Lua_Script>Ch_STR_D_C_STRU</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Chiss</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Ch_XQ3">
+		<Variant_Of_Existing_Type>Plattform2</Variant_Of_Existing_Type>
+		<Space_Model_Name>Ch_XQ3X.ALO</Space_Model_Name>
+		<Affiliation>Chiss</Affiliation>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Chiss,
+				Ch_Lancer,
+				Ch_Attack_Carrier,
+				Ch_Strike_Up2,
+				Ch_Eidolon,
+				Ch_Demolisher,
+				Ch_Faragut,
+				Ch_Harrow,
+				Ch_ISC,
+				Ch_ISC_Int,
+				Ch_Redeye
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<HardPoints>
+			HP_T_ChXQ3_01,
+			HP_T_ChXQ3_02,
+			HP_T_ChXQ3_03,
+			HP_T_ChXQ3_04,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_Misil_01,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_Shield_Generator_00,
+			HP_T_Co_Cargofacility_01,
+			HP_T_Co_Cargofacility_02,
+			HP_T_Co_Cargofacility_03,
+			HP_T_Co_Cargofacility_04,
+			HP_T_Co_Cargofacility_05,
+			HP_T_Co_Cargofacility_06,
+			HP_T_Co_Cargofacility_07,
+			HP_T_Co_Cargofacility_08,
+			HP_T_Co_Cargofacility_09,
+			HP_T_Co_Cargofacility_10,
+			HP_T_Co_Cargofacility_11,
+			HP_T_Co_Cargofacility_12,
+			HP_T_Co_Cargofacility_13,
+			HP_T_Co_Cargofacility_14,
+			HP_T_Co_Cargofacility_15,
+			HP_T_Co_Cargofacility_16
+		</HardPoints>
+	</SpecialStructure>	
+	<SpecialStructure Name="Plattform3">
+		<Variant_Of_Existing_Type>Plattform1_ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLATTFORM3</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLATTFORM3 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>AR_NV_XQ4X.ALO</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		
+
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<HardPoints>
+			HP_T_XQ_01,
+			HP_T_XQ_02,
+			HP_T_XQ_03,
+			HP_T_XQ_04,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_Misil_01,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_Shield_Generator_00
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_NV_XQ4X.TGA</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Plattform3_Death_Clone</Death_Clone>
+		
+		
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform3_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>NV_XQ4X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform4">
+		<Variant_Of_Existing_Type>Plattform1_ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLATTFORM4</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLATTFORM4 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>AR_NV_XQ5X.ALO</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Autoresolve_Health>36000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		<HardPoints>
+			HP_T_XQ_01,
+			HP_T_XQ_02,
+			HP_T_XQ_03,
+			HP_T_XQ_04,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_Shield_Generator_00
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_NV_XQ5X.TGA</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Plattform4_Death_Clone</Death_Clone>
+		
+		
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform4_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>NV_XQ5X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform5">
+		<Variant_Of_Existing_Type>Plattform1_ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLATTFORM5</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLATTFORM5 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>AR_NV_XQ6X.ALO</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Autoresolve_Health>43000</Autoresolve_Health>
+		<Shield_Points>43000</Shield_Points>
+		
+		<Shield_Refresh_Rate>46000</Shield_Refresh_Rate>
+		<Energy_Capacity>1000000</Energy_Capacity>
+		<Energy_Refresh_Rate>600000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		<HardPoints>
+			HP_T_XQ_01,
+			HP_T_XQ_02,
+			HP_T_XQ_03,
+			HP_T_XQ_04,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03, 
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_Misil_01,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_Shield_Generator_00
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_NV_XQ6X.TGA</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Plattform5_Death_Clone</Death_Clone>
+		
+		
+	</SpecialStructure>
+	<SpecialStructure Name="Plattform5_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Space_Model_Name>NV_XQ6X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Empire_Plattform1">
+		<Variant_Of_Existing_Type>Plattform1</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Empire_Plattform2">
+		<Variant_Of_Existing_Type>Plattform2</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Empire_Plattform3">
+		<Variant_Of_Existing_Type>Plattform3</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Empire_Plattform4">
+		<Variant_Of_Existing_Type>Plattform4</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Empire_Plattform5">
+		<Variant_Of_Existing_Type>Plattform5</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Empire_Plattform6">
+		<Variant_Of_Existing_Type>Plattform6</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	
+	
+</Units_space_structure_XQ_stationsUnit_Data>

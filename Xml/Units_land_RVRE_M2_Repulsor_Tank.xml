@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<RVRE_M2_Tank_Data>
+	<GroundVehicle Name="RVRE_M2_Tank">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RVRE_M2_TANK</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> EVFO_ATAT EVFO_M2_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_M2_TANK</Encyclopedia_Text>
+
+		<Land_Model_Name>RVRE_M2_Tank.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Rebel, RVRE</Affiliation>
+
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+
+		<Projectile_Types>Proj_Main_Cannon_RVRE_ATAP</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>1.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Targeting_Max_Attack_Distance>350.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>50.0</Targeting_Min_Attack_Distance>
+
+		<Icon_Name> I_BUTTON_RVRE_M2_Tank.tga </Icon_Name>
+
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+
+		<AI_Combat_Power>140</AI_Combat_Power>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Vehicle_Thief_Inside_Clone>RVRE_M2_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Death_Clone>Damage_Normal, RVRE_M2_Tank_Death_Clone_00</Death_Clone>
+
+	</GroundVehicle>
+	
+	<GroundVehicle Name="RVRE_M2_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>RVRE_M2_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>RVRE_M2_Tank_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundVehicle Name="RVRE_M2_Tank_Captured">
+		<Variant_Of_Existing_Type>RVRE_M2_Tank</Variant_Of_Existing_Type>
+		
+
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+	
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundCompany Name="RVRE_M2_Tank_Squad">
+		<Variant_Of_Existing_Type>TX130_Armor_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_RVRE_M2_TANK_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> EVFO_ATAT EVFO_M2_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>RVRE_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>RVRE_M2_Tank, RVRE_M2_Tank, RVRE_M2_Tank, RVRE_M2_Tank</Company_Units>
+
+		<Icon_Name>I_BUTTON_RVRE_M2_Tank.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RVRE_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_M2_TANK TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+	</GroundCompany>
+	<GroundVehicle Name="RVRE_M2_Sonic_Tank">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RVRE_M2_SONIC_TANK</Text_ID>
+		<Encyclopedia_Good_Against> EVFO_Stormtrooper EVFO_GrenadeTrooper EVFO_Assault_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> EVFO_ATAT EVFO_M2_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_M2_SONIC_TANK</Encyclopedia_Text>
+
+		<Land_Model_Name>RVRE_M2_Tank_Sonic.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Rebel, RVRE</Affiliation>
+
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 2.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<Projectile_Types>Proj_Geonosian_Antivehicle_Sonic_gun</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>10.0</Targeting_Min_Attack_Distance>
+
+		<Icon_Name> I_BUTTON_RVRE_M2_Sonic_Tank.tga </Icon_Name>
+
+		<SFXEvent_Fire>Unit_Geonosian_Fire</SFXEvent_Fire>
+
+		<AI_Combat_Power>140</AI_Combat_Power>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Vehicle_Thief_Inside_Clone>RVRE_M2_Sonic_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Death_Clone>Damage_Normal, RVRE_M2_Sonic_Tank_Death_Clone_00</Death_Clone>
+
+	</GroundVehicle>
+	<GroundVehicle Name="RVRE_M2_Sonic_Tank_Captured">
+		<Variant_Of_Existing_Type>RVRE_M2_Sonic_Tank</Variant_Of_Existing_Type>
+		
+
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+	
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundVehicle Name="RVRE_M2_Sonic_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>RVRE_M2_Sonic_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>RVRE_M2_Tank_Sonic_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="RVRE_M2_Sonic_Tank_Squad">
+		<Variant_Of_Existing_Type>TX130_Armor_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_RVRE_M2_SONIC_TANK_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> EVFO_Stormtrooper EVFO_GrenadeTrooper EVFO_Assault_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> EVFO_ATAT EVFO_M2_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>RVRE_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>RVRE_M2_Sonic_Tank, RVRE_M2_Sonic_Tank, RVRE_M2_Sonic_Tank, RVRE_M2_Sonic_Tank</Company_Units>
+
+		<Icon_Name>I_BUTTON_RVRE_M2_Sonic_Tank.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RVRE_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_M2_SONIC_TANK TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+	</GroundCompany>
+
+</RVRE_M2_Tank_Data>

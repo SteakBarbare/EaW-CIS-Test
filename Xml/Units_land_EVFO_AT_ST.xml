@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<EVFO_AT_ST_WalkerUnit_Data>
+
+<GroundVehicle Name="EVFO_AT_ST_Walker">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+
+		<Land_Model_Name>EVFO_ATST.ALO</Land_Model_Name>
+		
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVFO_ATST.ALO,
+			Urban, 				EVFO_ATST.ALO,
+			Arctic, 			EVFO_ATST.ALO,
+			Volcanic, 			EVFO_ATST.ALO,
+			Desert, 			EVFO_ATST.ALO,
+			Forest, 			EVFO_ATST.ALO,
+			Swamp, 				EVFO_ATST.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATX</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Affiliation>Empire, EVFO</Affiliation>
+
+		<Hardpoints>
+				HP_Gr_Front_T1B_Laser_00,
+				HP_Gr_Front_T1B_Laser_01,
+				HP_EVK_ATST_Missile_00,
+				HP_EVK_ATST_Missile_01
+		</Hardpoints>
+		
+		<Destruction_Survivors> 
+			Atst_Pilot_Survivor, 1.0 
+			Atst_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+		<Text_ID>TEXT_UNIT_AT_ST_WALKER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATST</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EVFO_AT_ST_Walker.tga</Icon_Name>
+
+		<Death_Clone>Damage_Normal, EVFO_AT_ST_Walker_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Normal, EVFO_AT_ST_Walker_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Normal, EVFO_AT_ST_Walker_Death_Clone_02</Death_Clone>
+
+		<Vehicle_Thief_Inside_Clone>EVFO_AT_ST_Walker_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVFO_AT_ST_Walker_Captured">
+		<Variant_Of_Existing_Type>EVFO_AT_ST_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVFO_AT_ST_Walker_Death_Clone_00">
+		<Variant_Of_Existing_Type>EVFO_AT_ST_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVFO_AT_ST_Walker_Death_Clone_01">
+		<Variant_Of_Existing_Type>EVFO_AT_ST_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+      <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVFO_AT_ST_Walker_Death_Clone_02">
+		<Variant_Of_Existing_Type>EVFO_AT_ST_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundCompany Name="EVFO_AT_ST_Walker_Squad">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		<Text_ID>TEXT_IMPERIAL_HEAVY_SCOUT_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATST TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>EVFO_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Affiliation>EVFO</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_AT_ST</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_ST</SFXEvent_Fleet_Move>
+		
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>EVFO_AT_ST_Walker, EVFO_AT_ST_Walker, EVFO_AT_ST_Walker, EVFO_AT_ST_Walker</Company_Units>
+
+		<Icon_Name>I_BUTTON_EVFO_AT_ST_Walker.tga</Icon_Name>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+
+
+</EVFO_AT_ST_WalkerUnit_Data>

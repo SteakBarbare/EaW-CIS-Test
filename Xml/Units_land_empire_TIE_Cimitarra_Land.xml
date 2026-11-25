@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<TIE_Cimitarra_LandUnit_Data>
+	
+	<GroundVehicle Name="TIE_Cimitarra_Land">
+		<Variant_Of_Existing_Type>TIE_Bomber_LandORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_TIE_CIMITARRA</Text_ID>
+		<Encyclopedia_Good_Against> T3B_Tank T1B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CIMITARRA</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Land_Model_Name>EV_TIE_Cimitarra_Land.ALO</Land_Model_Name>
+		<Scale_Factor>2.15</Scale_Factor><!--Reescalado real-->
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Ranking_In_Category>6</Ranking_In_Category>
+		<Max_Speed>4.5</Max_Speed>
+		<Min_Speed>4.0</Min_Speed>
+		<AI_Combat_Power>130</AI_Combat_Power>
+		<Affiliation>Empire</Affiliation>
+		<Armor_Type> Armor_Tartan </Armor_Type>
+		<Shield_Armor_Type>Shield_GBomber</Shield_Armor_Type>
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED,SHIELDED,AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, HUNT</LandBehavior>
+		
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.05</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Fire_Category_Restrictions> LandHero, Infantry, Vehicle, Structure </Fire_Category_Restrictions>
+		
+		<HardPoints>
+			HP_Gr_Fighter_Bombas_01, HP_Gr_Fighter_Proton_Torpedo_00, HP_Gr_Fighter_Heavy_Rocket_00
+		</HardPoints>
+		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
+		<Death_Explosions>Medium_Explosion_Space5</Death_Explosions>
+		
+		<SFXEvent_Ambient_Moving> Unit_TIE_Cimitarra_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Cimitarra_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Icon_Name>i_button_Scimitar_Bomber.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_2M_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="TIE_Cimitarra_Squadron_Land">
+		<Variant_Of_Existing_Type>TIE_Bomber_Squadron_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_CIMITARRA</Text_ID>
+		<Encyclopedia_Good_Against> T3B_Tank T1B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CIMITARRA TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Company_Transport_Unit>TIE_Bomber_Land_Transport</Company_Transport_Unit>
+		<Company_Units>TIE_Cimitarra_Land, TIE_Cimitarra_Land</Company_Units>
+		<Icon_Name>i_button_Scimitar_Bomber.tga</Icon_Name>
+		<GUI_Model>EV_TIE_Cimitarra_Land.alo</GUI_Model>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_2M_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>14</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	
+</TIE_Cimitarra_LandUnit_Data>

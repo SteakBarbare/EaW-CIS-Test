@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<SecondaryStructures>
+	
+  
+  <SecondaryStructure Name="Secondary_Heavy_Factory_E2">
+		<Variant_Of_Existing_Type>Basic_Random_Hvy_Factory</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_SECONDARY_FACTORY_E TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </Encyclopedia_Text>
+		<Secondary_Objective> TEXT_TACTICAL_SECONDARY_E_FACTORY_CAPTURE </Secondary_Objective>
+		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
+		<Land_Model_Name>Co_vehiclefactory.alo</Land_Model_Name>
+		
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Heavy_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Heavy_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		
+		<Starting_Spawned_Units_Tech_0>EV_TX_Tank, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EV_TX_Tank, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>ATACT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ATACT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Striker_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Striker_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Lua_Script>SecondaryHeavyFactory</Lua_Script>
+		<Property_Flags>InBase</Property_Flags>
+	</SecondaryStructure>
+	
+</SecondaryStructures>

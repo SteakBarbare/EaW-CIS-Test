@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<Casino_PlattformUnit_Data>
+	<SpecialStructure Name="Casino_Station">
+		<Variant_Of_Existing_Type>Casino_Plattform</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CASINO</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CASINO2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Fel, Krayt, CIS, Republic, Chiss, Hapan, Hutts, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Base_Position>Orbital</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>1000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<AI_Combat_Power>800</AI_Combat_Power>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>SPACE_OBSTACLE, ABILITY_COUNTDOWN, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Space_FOW_Reveal_Range>1800.0</Space_FOW_Reveal_Range>
+
+		<Build_Cost_Credits>1800</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_Marauder, 3</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Pirate_Fighter_Squadron5, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Pirate_Fighter_Squadron5, -1</Reserve_Spawned_Units_Tech_0>
+				
+		<Required_Planets>
+			Naos_III, The_Wheel, Socorro, NarshaddaK, Ord_Mantell, Myrkr, Abregado_Rae, Bespin, Ryloth, Tatooine, VergessoAsteroids, AnoatAsteroids, NarShadda, Nalhutta, Klatooine, Malastare, Toydaria, Woostri, Atzerri, Saleucami, NalHuttaI, NarshaddaI, Anoat_GJavin_Sector, Parnabe_Sector, Chardaan_Sector, Abrion_Sector, Borleias_Sector, Taris_Sector, The_Wheel_Sector, Roche_Sector, Ord_Mantell_Sector, Vergesso_Sector, Cantonica, Akiva, TatooineK, Tatooine, Siskeen, Nespis, Trogan
+		</Required_Planets>
+				
+		<HardPoints>
+			HP_Shipyard_Shield01, HP_Fighter_Bay_Invisible
+		</HardPoints>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+				
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Gambling_Ability Name="Nb_Casino_Gambling_Income">
+				
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				
+				<Min_Income_Modifier>0.0</Min_Income_Modifier>
+				
+				<Max_Income_Modifier>1.5</Max_Income_Modifier>
+				
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+		</Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Empire_Casino_Plattform">
+		<Variant_Of_Existing_Type>Casino_Plattform</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+	</SpecialStructure>
+	<SpecialStructure Name="Casino_Plattform">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_CASINO</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CASINO</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Casino.ALO</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Shield_Points>1200</Shield_Points>
+		<Tactical_Health>1000000</Tactical_Health>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		<Icon_Name>I_BUTTON_Casino.TGA</Icon_Name>
+		<Death_Clone>Damage_Normal, Casino_Plattform_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, SPAWN_SQUADRON, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_Shipyard_Shield01
+		</HardPoints>
+	</SpecialStructure>
+	<SpecialStructure Name="Casino_Plattform_Death_Clone">
+		<Text_ID>TEXT_UNIT_CASINO</Text_ID>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Casino_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+	
+</Casino_PlattformUnit_Data>

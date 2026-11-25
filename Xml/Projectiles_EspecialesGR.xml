@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Projectiles>
+<Projectile Name="Proj_Stick">
+		<Variant_Of_Existing_Type>Proj_Urai_Cortosis_Blades</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
+		<Projectile_Damage>1.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Small</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>1</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Urai_Cortosis_Blades">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
+		<Damage_Type> Damage_Lightsaber </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>12.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		<Projectile_Max_Flight_Distance>25.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>0.0</Projectile_Damage>
+        <Projectile_Blast_Area_Range>18.0</Projectile_Blast_Area_Range>
+        <Projectile_Blast_Area_Damage>90.0</Projectile_Blast_Area_Damage>
+        <Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle />
+		<Projectile_Ground_Detonation_Particle />
+		<Projectile_Lifetime_Detonation_Particle />
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Medium</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>100</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_CIS_Kul_Teska_A">
+		<Variant_Of_Existing_Type>Proj_Urai_Cortosis_Blades</Variant_Of_Existing_Type>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.3</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire></SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_CIS_Kul_Teska_B">
+		<Variant_Of_Existing_Type>Proj_Hand_Blaster_Red_Hero</Variant_Of_Existing_Type>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Destroyer_Droid_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Special_Land_Hvy_Mptl_FOW_Reveal_Ping_Blast">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
+		<Damage_Type> Damage_Default </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>0.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED, REVEAL </Behavior>
+		<!-- REVEAL for FOW -->
+		<Land_FOW_Reveal_Range>8000.0</Land_FOW_Reveal_Range>
+		<!-- REVEAL for FOW -->
+		<Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+		<!-- REVEAL for FOW -->
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		<Projectile_Max_Flight_Distance>0.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>0.0</Projectile_Damage>
+		<!-- No damage, FOW reveal -->
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+		<!-- Frank STUB PLACEHOLDER -->
+		<Projectile_Object_Detonation_Particle>Red_FOW_Ping_Blast_Particles</Projectile_Object_Detonation_Particle>
+		<!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Ground_Detonation_Particle>Red_FOW_Ping_Blast_Particles</Projectile_Ground_Detonation_Particle>
+		<!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Lifetime_Detonation_Particle>Red_FOW_Ping_Blast_Particles</Projectile_Lifetime_Detonation_Particle>
+		<!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Absorbed_By_Shields_Particle/>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<!-- Oksana: enemy should not be able to see this particle effect. Use this flag with caution - ask me why. -->
+		<Model_Visible_To_Enemy>No</Model_Visible_To_Enemy>
+	</Projectile>
+	<Projectile Name="Proj_Special_Convert_Rebel_Land">
+		<Variant_Of_Existing_Type>Proj_Special_Emperor_Instant_Dark_Side_Corrupt_Blast</Variant_Of_Existing_Type>
+		<Projectile_Object_Detonation_Particle>Rebel_Force_Convert_Particles</Projectile_Object_Detonation_Particle>		 <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Ground_Detonation_Particle>Rebel_Force_Convert_Particles</Projectile_Ground_Detonation_Particle>		 <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Lifetime_Detonation_Particle>Rebel_Force_Convert_Particles</Projectile_Lifetime_Detonation_Particle> <!-- Gary STUB PLACEHOLDER -->
+	</Projectile>
+
+	<!-- Emperor Palpatines's special Dark Side Force corruption/conversion blast projectile that is created by his area effect convert special power, instantly detonates to convert those nearby -->
+	<Projectile Name="Proj_Special_Emperor_Instant_Dark_Side_Corrupt_Blast">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LASER_INVISIBLE.ALO</Land_Model_Name>
+		<Damage_Type> Damage_Default </Damage_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>0.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>DEFAULT</Projectile_Category>
+		<Projectile_Max_Flight_Distance>0.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>0.0</Projectile_Damage> <!-- No damage, stun blast -->
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>No</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Projectile_SFXEvent_Detonate>Unit_Force_Convert</Projectile_SFXEvent_Detonate>						 <!-- Frank STUB PLACEHOLDER -->
+		<Projectile_Object_Detonation_Particle>Emperor_Force_Convert_Particles</Projectile_Object_Detonation_Particle>		 <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Ground_Detonation_Particle>Emperor_Force_Convert_Particles</Projectile_Ground_Detonation_Particle>		 <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Lifetime_Detonation_Particle>Emperor_Force_Convert_Particles</Projectile_Lifetime_Detonation_Particle> <!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Absorbed_By_Shields_Particle />
+		<AI_Combat_Power>0</AI_Combat_Power>
+
+		<!-- Convert enemy specifics -->
+		<Projectile_Convert_Enemy_On_Detonation> Yes </Projectile_Convert_Enemy_On_Detonation>
+		<Projectile_Convert_Enemy_Radius> 100 </Projectile_Convert_Enemy_Radius>
+		<Projectile_Convert_Enemy_Spawn_Effect> Stun_Particles </Projectile_Convert_Enemy_Spawn_Effect> 					<!-- Gary STUB PLACEHOLDER -->
+		<Projectile_Convert_Enemy_Targets_Category_Mask> Infantry | Vehicle </Projectile_Convert_Enemy_Targets_Category_Mask>
+	</Projectile>
+
+	<!-- Emperor Palpatines's special Dark Side Force corruption/conversion blast projectile that is created by his area effect convert special power, instantly detonates to convert those nearby -->
+	<Projectile Name="Proj_Special_Mara_Corrupt_Blast">
+		<Variant_Of_Existing_Type>Proj_Special_Emperor_Instant_Dark_Side_Corrupt_Blast</Variant_Of_Existing_Type>
+		<Projectile_Convert_Enemy_Targets_Category_Mask> Infantry </Projectile_Convert_Enemy_Targets_Category_Mask>
+		<Projectile_Convert_Enemy_Radius> 100 </Projectile_Convert_Enemy_Radius>
+	</Projectile>
+
+	<Projectile Name="XSuper_Convertidor">
+		<Variant_Of_Existing_Type>Proj_Special_Emperor_Instant_Dark_Side_Corrupt_Blast</Variant_Of_Existing_Type>
+		<Projectile_Convert_Enemy_Targets_Category_Mask> Infantry | Vehicle | Air | Landhero </Projectile_Convert_Enemy_Targets_Category_Mask>
+		<Projectile_Convert_Enemy_Radius> 20000 </Projectile_Convert_Enemy_Radius>
+	</Projectile>
+</Projectiles>

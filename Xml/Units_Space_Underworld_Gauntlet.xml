@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+
+
+<GauntletUnit_Data>
+
+
+
+
+	<SpaceUnit Name="Mandalorian_Gauntlet">
+		<Variant_Of_Existing_Type>V-wing_Fighter</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UV_GAUNTLET</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UV_GAUNTLET TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Bomber Y-Wing Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette TartanORG A-Wing </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_UV_GAUNTLET.tga</Icon_Name>
+
+		<Space_Model_Name>UV_Mandalorian_Gauntlet.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Armor_Type> Armor_Fighter </Armor_Type>
+
+		<Max_Speed>4.7</Max_Speed>
+		<Min_Speed>3.5</Min_Speed>
+		<Max_Rate_Of_Turn>2.0</Max_Rate_Of_Turn>
+		<Max_Thrust>0.7</Max_Thrust>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		
+		<Max_Lift>2.67</Max_Lift>
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Affiliation>Underworld, Hutts</Affiliation>
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>3000</Tactical_Health>
+		<Autoresolve_Health>160</Autoresolve_Health>
+		<Damage>12</Damage>
+		<Shield_Refresh_Rate>2050</Shield_Refresh_Rate>
+		<Energy_Capacity>15000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+
+		<HardPoints> 
+			HP_BTLYWING_02, HP_Y_FeoAlaX_Laser_00, HP_Y_FeoAlaX_Laser_01
+		</HardPoints>
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<SFXEvent_Select>Unit_Select_V_WingX</SFXEvent_Select>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Tie_Defender</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+
+
+	<Squadron Name="Mandalorian_Gauntlet_Squadron">
+		<Variant_Of_Existing_Type>Z95_Headhunter_Rebel_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UV_GAUNTLET_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UV_GAUNTLET TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Interceptor X-wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette TartanORG </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Underworld, Hutts</Affiliation>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Time_Seconds>13</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		
+		<Squadron_Units>Mandalorian_Gauntlet, Mandalorian_Gauntlet, Mandalorian_Gauntlet</Squadron_Units>
+		<Create_Team_Type>Mandalorian_Gauntlet_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_UV_GAUNTLET.tga</Icon_Name>
+		<GUI_Model_Name>UV_Mandalorian_Gauntlet.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_ScoutX</SFXEvent_Build_Complete>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+           <Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Tie_Defender</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+				
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>
+	<Container Name="Mandalorian_Gauntlet_Squadron_Container1">
+		<Movie_Object>false</Movie_Object>
+		<Text_ID>TEXT_UV_GAUNTLET_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UV_GAUNTLET TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_UV_GAUNTLET.tga</Icon_Name>
+
+		<Max_Speed>4.7</Max_Speed>
+		<Min_Speed>3.5</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-30.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,0.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-15.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,-30.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,0.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,0.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,30.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,-30.0,-15.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</GauntletUnit_Data>

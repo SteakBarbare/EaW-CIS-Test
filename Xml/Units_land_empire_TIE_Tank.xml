@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<TIE_TankUnit_Data>
+	<GroundVehicle Name="TIE_Tank">
+		<Variant_Of_Existing_Type>TIE_CrawlerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_TANK</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_TANK</Encyclopedia_Text>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Land_Model_Name>EV_Tie_Tank.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+
+		<Death_Explosions>Medium_Damage_Land4</Death_Explosions>
+
+		<Projectile_Types>Proj_Mauler_Cannon_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.20</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.0</Projectile_Fire_Recharge_Seconds>
+
+		<Icon_Name>i_button_tie_TANK.tga</Icon_Name> 
+		<Vehicle_Thief_Inside_Clone>TIE_Tank_Captured</Vehicle_Thief_Inside_Clone>
+
+		<Death_Clone>Damage_Normal, TIE_Tank_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="TIE_Tank_Captured">
+		<Variant_Of_Existing_Type>TIE_Tank</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+						
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundVehicle Name="TIE_Tank_Clone_00">
+		<Variant_Of_Existing_Type>TIE_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_Tie_Tank_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Damage_Land4</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_Tie_Tank_Brigade">
+		<Variant_Of_Existing_Type>Imperial_Anti_Infantry_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_TIE_TANK</Text_ID>
+		<Affiliation>Empire</Affiliation>
+		
+		<Company_Units>TIE_Tank, TIE_Tank, TIE_Tank, TIE_Tank, TIE_Tank</Company_Units>
+		<Icon_Name>i_button_tie_TANK.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	<GroundCompany Name="Grupo_CadenasX1">
+		<Variant_Of_Existing_Type>Imperial_Tie_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_XETRACKS1_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XETRACKS1</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>TIE_Crawler, TIE_Crawler, TIE_Crawler, TIE_Crawler, TIE_Tank, TIE_Tank, TIE_Tank, TIE_Tank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_tie_TANK.tga</Icon_Name>
+		<Build_Cost_Credits>300</Build_Cost_Credits>
+	</GroundCompany>
+
+</TIE_TankUnit_Data>

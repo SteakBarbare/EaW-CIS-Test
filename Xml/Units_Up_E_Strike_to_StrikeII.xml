@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Up_E_Strike_to_StrikeIIUnit_Data>
+
+	<SpaceUnit Name="Up_E_Strike_to_StrikeII">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_STRIKECRUISER_TO_EV_STRIKEII</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_STRIKECRUISER_TO_EV_STRIKEII</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EV_STRIKECRUISERII_UPGRADE.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire, GA</Affiliation>
+		<Required_Orbiting_Units>E_Strike</Required_Orbiting_Units>
+		<Required_Special_Structures>Astilleros_Imperiales, AdvancedTech_6</Required_Special_Structures>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Lua_Script>Up_E_Strike_to_StrikeII</Lua_Script>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="E_Strike_Up2">
+		<Variant_Of_Existing_Type>E_Strike_Up2ORG</Variant_Of_Existing_Type>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, E_StrikeII_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="E_Strike_Up2ORG">
+		<Variant_Of_Existing_Type>StrikeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_STRIKECRUISERII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EV_STRIKECRUISERII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_WAVES_X3 TEXT_UNIT_TIE_BOMBER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>EV_EJ_StrikeCruiser.ALO</Space_Model_Name>
+		<Scale_Factor>0.15</Scale_Factor>
+
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+
+        <Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<AI_Combat_Power>2160</AI_Combat_Power>
+
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		
+		<HardPoints>
+			HP_T_EStrikeII_01, 
+			HP_T_EStrikeII_02, 
+			HP_T_EStrikeII_03,
+			HP_T_EStrikeII_04, 
+			HP_T_EStrikeII_05, 
+			HP_T_EStrikeII_06,  
+			HP_T_EStrikeII_07, 
+			HP_T_EStrikeII_08, 
+			HP_T_EStrikeII_09,
+			HP_T_EStrikeII_10, 
+			HP_T_EStrikeII_11, 
+			HP_T_EStrikeII_12,  
+			HP_T_EStrikeII_13,  
+			HP_T_EStrikeII_14,
+			HP_T_EStrikeII_15,
+			HP_T_EStrikeII_16,
+			HP_T_EStrikeII_17,
+			HP_T_EStrikeII_18,        		  
+			HP_T_EStrikeII_19,
+			HP_T_EStrikeII_20,
+			HP_T_EStrikeII_21,
+			HP_T_EStrikeII_22,
+			HP_T_EStrikeII_23,          
+			HP_Fighter_Bay_Small_00,			
+			HP_Fighter_Bay_Small_01,
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00
+		</HardPoints>
+				
+		<Icon_Name>I_BUTTON_EV_EJSTRIKE.TGA</Icon_Name>
+		<GUI_Model_Name>EV_EJ_StrikeCruiser.alo</GUI_Model_Name>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+						
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+
+	</SpaceUnit>
+     <SpaceUnit Name="E_StrikeII_Death_Clone">
+		<Text_ID>TEXT_UNIT_EIDOLON_CRUISER</Text_ID>
+		<Space_Model_Name>EV_EJ_StrikeCruiser_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>		
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	
+</Up_E_Strike_to_StrikeIIUnit_Data>

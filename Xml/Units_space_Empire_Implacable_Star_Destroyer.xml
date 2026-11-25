@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<ImplacableSDUnit_Data>
+	
+	<SpaceUnit Name="ImplacableSD">
+		<Variant_Of_Existing_Type>ISD2</Variant_Of_Existing_Type>
+		
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+
+		<Icon_Name>I_BUTTON_EV_DORJA.tga</Icon_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_ISD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		
+		<HardPoints> 
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_EV_SH_ISD2_00,
+			HP_EV_SH_ISD2_01,
+			HP_Tractor_Beam_Rebelde,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_ISD2_Side_01,
+			HP_T_ISD2_Side_02,
+			HP_T_ISD2_SideN_03,
+			HP_T_ISD2_SideN_04, 		
+			HP_T_ISD2_Side_05,
+			HP_T_ISD2_Side_06,
+			HP_T_ISD1_SideN_07,
+			HP_T_ISD1_SideN_08,
+			HP_T_ISD1_SideN_09,
+			HP_T_ISD1_SideN_10,
+			HP_T_ISD1_SideN_11,
+			HP_T_ISD1_SideN_12,
+			HP_T_ISD2_Side_13,
+			HP_T_ISD2_Side_14,
+			HP_T_ISD2_Side_15,
+			HP_T_ISD2_Side_16,
+			HP_T_ISD2_Side_17,
+			HP_T_ISD2_Side_18,
+			HP_T_ISD2_Side_19,
+			HP_T_ISD2_SideN_20,
+			HP_T_ISD2_SideN_21,
+			HP_T_ISD2_SideN_22,
+			HP_T_ISD2_SideN_23,
+			HP_T_ISD2_SideN_24,
+			HP_T_ISD2_SideN_25,
+			HP_T_ISD2_SideN_26,
+			HP_T_ISD2_SideN_27,
+			HP_T_ISD2_SideN_28,
+			HP_T_ISD2_SideN_29,
+			HP_T_ISD2_SideN_30,
+			HP_T_ISD2_SideN_31,
+			HP_T_ISD2_SideN_32,
+			HP_T_ISD2_SideN_33,
+			HP_T_ISD2_SideN_34,
+			HP_T_ISD2_SideN_35,
+			HP_T_ISDII_01,
+			HP_T_ISDII_02,
+			HP_T_ISDII_03,
+			HP_T_ISDII_04,
+			HP_T_ISDII_05,
+			HP_T_ISDII_06,
+			HP_T_ISDII_07,
+			HP_T_ISDII_08,
+			HP_T_ISDII_B_09,
+			HP_T_ISDII_B_10,
+			HP_T_ISDII_B_11,
+			HP_T_ISDII_B_12,
+			HP_T_ISDII_B_13,
+			HP_T_ISDI_14,
+			HP_T_ISDI_15,
+			HP_T_ISDI_16,
+			HP_T_ISDI_17,
+			HP_T_ISDI_18,
+			HP_T_ISDI_19,
+			HP_T_ISDI_20,
+			HP_T_ISDI_21,
+			HP_T_ISDI_22,
+			HP_T_ISDI_23,
+			HP_T_ISDI_24,
+			HP_T_ISDI_25,
+			HP_T_ISDI_26
+		</HardPoints>
+	
+		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
+
+		<Text_ID>TEXT_UNIT_SD_IMPLACABLE</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DORJA TEXT_AB_DESC_12 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+
+		
+		<Ranking_In_Category>3</Ranking_In_Category>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<SFXEvent_Select>Unit_Select_Piett</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Piett</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Piett</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Piett</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Piett</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Piett </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Piett </SFXEvent_Health_Critical_Warning>
+		
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Piett </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, Unit_Lost_Tractor_Piett</SFXEvent_Hardpoint_Destroyed>
+		<AI_Combat_Power>9300</AI_Combat_Power>
+
+		<CategoryMask> SpaceHero </CategoryMask>
+
+		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>40</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.6f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Implacable_Tractor_Beam_Attack_Ability</GUI_Activated_Ability_Name>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<SFXEvent_Target_Ability>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+		 
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="Implacable_Tractor_Beam_Attack_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>1000</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>0</Stacking_Category>            
+	        </Tractor_Beam_Attack_Ability>
+			<Combat_Bonus_Ability Name="Implacable_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>ISD2 | IA_ISD2 | Star_Destroyer_Up | ISD2_F1 | ISD2_F2 | ISD2_F3, ImplacableSD</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Remove_Corruption_Ability Name="Implacable_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 		
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+	
+</ImplacableSDUnit_Data>

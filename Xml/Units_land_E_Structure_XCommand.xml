@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<E_Structure_XCommandUnit_Data>
+	
+	<SpecialStructure Name="E_XCommand">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<!--<Lua_Script>Convertir_land_structures_a_bando_poseedor</Lua_Script>-->
+		<Tactical_Health>2000</Tactical_Health>
+		<Shield_Points>1000</Shield_Points>
+		
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Build_Time_Seconds>22</Build_Time_Seconds>
+		
+		<Text_ID>TEXT_STRUCTURE_E_XCOMMAND</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XCOMMAND </Encyclopedia_Text>
+		<Obstacle_Proxy_Type> E_XCommand_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_Command_CenterX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Empire, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Icon_Name>i_button_E_XCommand.tga</Icon_Name>
+
+		
+		<Place_At_Every_Specific_Marker_Position>True</Place_At_Every_Specific_Marker_Position>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Tactical_Additional_Structure_Type>E_XBCommand</Tactical_Additional_Structure_Type>				
+				
+	</SpecialStructure>
+	<GroundBuildable Name="E_XCommand_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Empire, PC_E_XCommand, Rebel, PC_R_XCommand, Underworld, PC_U_XCommand</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Command_CenterX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Icon_Name>i_button_E_XCommand.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<GroundBuildable Name="PC_E_XCommand">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> E_XCommand_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>E_XCommand</Tactical_Buildable_Constructed>
+		<Land_Model_Name>EB_Command_CenterX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Empire, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Icon_Name>i_button_E_XCommand.tga</Icon_Name>
+	</GroundBuildable>	
+	
+</E_Structure_XCommandUnit_Data>

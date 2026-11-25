@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Shore_TrooperUnit_Data>
+	
+	
+	<GroundInfantry Name="Shore_Trooper">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EI_SHORE_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> MPTL Destroyer_Droid  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EI_SHORE_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ei_Shoretrooper.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Ei_Shoretrooper.TGA</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+				
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 12.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Tactical_Build_Started> Unit_Produce_Troops_Arc_Hammer </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Troops_Arc_Hammer </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<Death_Clone>Damage_Force_Whirlwind, Shore_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Shore_Trooper_Crush_Death_Clone</Death_Clone>
+	
+
+	</GroundInfantry>
+	<GroundInfantry Name="Shore_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Shore_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="Shore_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Shore_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Shore_Trooper">
+		<Variant_Of_Existing_Type>Shore_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.7 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Shore_TrooperC">
+		<Variant_Of_Existing_Type>Shore_Trooper</Variant_Of_Existing_Type>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Land_Model_Name>Ei_ShoretrooperC.ALO</Land_Model_Name>
+		<LandBehavior>ABILITY_COUNTDOWN, LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.7 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Shore_TrooperC_B">
+		<Variant_Of_Existing_Type>Squad_Shore_TrooperC</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Shore_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Shore_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>Shore_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Shore_TrooperC, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Create_Team_Type> Shore_Trooper_Team </Create_Team_Type>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Shore_Trooper_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EI_SHORE_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> MPTL Destroyer_Droid  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EI_SHORE_TROOPER TEXT_DESC_CI_CANTIDAD_9 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+
+		<Build_Cost_Credits>900</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		
+		<Company_Units> Squad_Shore_TrooperC_B, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper </Company_Units>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Create_Team_Type> Shore_Trooper_Team </Create_Team_Type>
+		
+		<Icon_Name>i_button_Ei_Shoretrooper.TGA</Icon_Name>
+		<GUI_Model_Name>Ei_Shoretrooper.ALO</GUI_Model_Name>
+		<Land_Model_Name>Ei_Shoretrooper.ALO</Land_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>1150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+				
+	</GroundCompany>
+	<GroundCompany Name="Deployed_Shore_Trooper_Squad">
+		<Variant_Of_Existing_Type>Shore_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper,Squad_Shore_Trooper, Squad_Shore_Trooper, Squad_Shore_Trooper</Company_Units>
+		<Create_Team_Type> Shore_Trooper_Team </Create_Team_Type>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	<Container Name="Shore_Trooper_Team">
+			<Variant_Of_Existing_Type>Assault_Team</Variant_Of_Existing_Type>
+			<Text_ID>TEXT_UNIT_EI_DEATH_TROOPER_SQUAD</Text_ID>
+			<Encyclopedia_Good_Against> MPTL Destroyer_Droid  </Encyclopedia_Good_Against>
+			<Encyclopedia_Vulnerable_To> Plex_Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+			<Encyclopedia_Text>TEXT_TOOLTIP_EI_DEATH_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+			<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+			<Icon_Name>i_button_Ei_Shoretrooper.TGA</Icon_Name>
+	</Container>
+	
+
+
+</Shore_TrooperUnit_Data>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<TIE_Avenger_LandUnit_Data>
+	<GroundVehicle Name="TIE_Avenger_Land">
+		<Variant_Of_Existing_Type>TIE_Avenger_LandORG</Variant_Of_Existing_Type>
+		<Hardpoints>
+			HP_Gr_Fighter_AA_Missile_00, HP_Gr_Fighter_AA_Missile_01
+		</Hardpoints>
+	</GroundVehicle>
+	<GroundVehicle Name="TIE_Avenger_LandORG">
+		<Variant_Of_Existing_Type>TIE_Interceptor_LandORG</Variant_Of_Existing_Type>
+		<No_Colorization_Color>4,4,4,255</No_Colorization_Color>
+		<Scale_Factor>1.7</Scale_Factor><!--Reescalado real-->
+		<Text_ID>TEXT_UNIT_TIE_AVENGER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_AVENGER</Encyclopedia_Text>
+		<Land_Model_Name>EV_TIE_Avenger_Land.ALO</Land_Model_Name>
+		
+		<Armor_Type> Armor_Missile_Cruiser </Armor_Type>
+		<Max_Speed>5.7</Max_Speed>
+		<Shield_Points>150</Shield_Points>
+		<Tactical_Health>205</Tactical_Health>
+		<Shield_Armor_Type>Shield_GFighter</Shield_Armor_Type>
+		<Affiliation>Empire</Affiliation>
+		<Shield_Refresh_Rate>3.8</Shield_Refresh_Rate>
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED,SHIELDED,AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, HUNT</LandBehavior>
+		
+		<SFXEvent_Ambient_Moving> Unit_TIE_Advanced_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Advanced_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Icon_Name>I_BUTTON_VENGADOR.tga</Icon_Name>
+		
+	</GroundVehicle>
+	<GroundCompany Name="TIE_Avenger_Squadron_Land">
+		<Variant_Of_Existing_Type>TIE_Interceptor_Squadron_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_AVENGER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_AVENGER TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>TIE_Avenger_Land, TIE_Avenger_Land, TIE_Avenger_Land</Company_Units>
+		<Icon_Name>I_BUTTON_VENGADOR.tga</Icon_Name>
+		<GUI_Model>EV_TIE_Avenger_Land.alo</GUI_Model>
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+	</GroundCompany>
+</TIE_Avenger_LandUnit_Data>

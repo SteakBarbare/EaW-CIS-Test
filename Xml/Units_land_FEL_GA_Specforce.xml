@@ -1,0 +1,101 @@
+﻿<?xml version="1.0"?>
+
+
+<Ga_SpecforceUnit_Data>
+
+	<GroundVehicle Name="Ga_Specforce">
+		<Variant_Of_Existing_Type>Ha_SpecforceORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, Ga_Specforce_Death_Clone_00</Death_Clone>
+		<Hardpoints>
+				HP_Ha_Specforce_Turret_00,
+				HP_Ha_Specforce_Turret_01
+		</Hardpoints>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		<No_Colorization_Color> 255, 210, 0, 255 </No_Colorization_Color>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SHIELD_FLARE</Type>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Ga_Specforce_Shield_Flare_Vehicle </GUI_Activated_Ability_Name> 
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Shield_Flare_Gargantuan</SFXEvent_GUI_Unit_Ability_Activated>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Shield_Flare_Ability Name="Ga_Specforce_Shield_Flare_Vehicle">
+				<Max_Damage_Per_Victim>5000</Max_Damage_Per_Victim>
+				<Damage_Radius>1000</Damage_Radius>
+				<Charge_Up_Seconds>1</Charge_Up_Seconds>
+				<Activation_Style> User_Input </Activation_Style>
+				<Owner_Particle_Effect>Shield_Flare_Effect</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>0.0, 0.2, 0.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>1.5</Owner_Light_Effect_Duration>
+                <SFXEvent_Activate>Shield_Flare_SFX_Event</SFXEvent_Activate>
+			</Shield_Flare_Ability>
+			
+		</Abilities>
+	</GroundVehicle>
+
+	
+	<GroundVehicle Name="Ga_Specforce_Death_Clone_00">
+		<Variant_Of_Existing_Type>Ha_SpecforceORG</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ha_Specforce_Freerunner_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      	<Scale_Factor>0.8</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="Ga_Specforce_Squad">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_SPECFORCE</Text_ID>
+		<Encyclopedia_Good_Against> UTAT_COMPANY AT-TE_Company Canderous_Assault_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Imperial_Heavy_Assault_Company MAL_Rocket_Vehicle Dark_Trooper_PhaseIII </Encyclopedia_Vulnerable_To>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>1400</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>Ga_Specforce</Company_Units>
+		<Icon_Name>i_button_Ha_Specforce.tga</Icon_Name>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<SFXEvent_Build_Complete>Unit_Complete_LHTC9</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_LHTC9</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_HA_SPECFORCE TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+	</GroundCompany>
+
+</Ga_SpecforceUnit_Data>

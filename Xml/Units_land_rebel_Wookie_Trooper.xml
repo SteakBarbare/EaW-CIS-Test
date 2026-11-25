@@ -1,0 +1,189 @@
+﻿<?xml version="1.0"?>
+
+
+<WookietrooperUnit_Data>
+	<GroundInfantry Name="Squad_Wookietrooper">
+		<Variant_Of_Existing_Type>Wookietrooper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_TROOPER</Text_ID>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Wookietrooper">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_TROOPER</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_WOOKIE_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ri_Wookietrooper.ALO</Land_Model_Name>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Icon_Name>i_button_wookietrooper.tga</Icon_Name>
+		
+		<Scale_Factor>1.2</Scale_Factor>
+		
+		<Affiliation>Rebel</Affiliation>
+		
+		<Tactical_Health>200</Tactical_Health>
+		<AI_Combat_Power>12</AI_Combat_Power>
+		
+		<Projectile_Types>Proj_Wookiee_Bowcaster</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 8.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 8.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Select>Unit_Select_Wookie</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Wookie</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Wookie</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Wookie</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Wookie </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Attack_Wookie </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Wookie_Death</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Fire>Unit_Chewie_Blaster_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Ambient_Moving> Ambient_Wookie_Random_Chatter </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<AI_Combat_Power>10</AI_Combat_Power>
+
+		<Death_Clone>Damage_Force_Whirlwind, Wookietrooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Wookietrooper_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Wookietrooper_Remote_Bomb_Death_Clone</Death_Clone>
+
+		<Presence_Induced_Animations>
+			Attention, 
+				Mon_Mothma,
+				Luke_Skywalker,
+				Han_Solo,
+				Chewbacca,
+				Princess_Leia
+		</Presence_Induced_Animations>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Wookie</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Wookietrooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Wookietrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Wookietrooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Wookietrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Wookietrooper_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Wookietrooper</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	<GroundInfantry Name="Dialogue_Wookietrooper">
+		<Variant_Of_Existing_Type>Wookietrooper</Variant_Of_Existing_Type>
+		<Behavior>HINT</Behavior>
+		<Create_Team>No</Create_Team>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Wookietrooper_B">
+		<Variant_Of_Existing_Type>Squad_Wookietrooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Rebel_Wookie_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Rebel_Wookie_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>Rebel_Wookie_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units>
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper,
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type>WookieTrooper_Team</Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Rebel_Wookie_Trooper_Squad">
+		<Variant_Of_Existing_Type> Rebel_Infantry_Squad </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WOOKIE_TROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_wookietrooper.tga</Icon_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Planets>Kashyyyk, KashyyykCW</Required_Planets>
+		<Build_Cost_Credits>650</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		
+		
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		<Company_Units>
+		Squad_Wookietrooper_B,
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper,
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper, 
+		Squad_Wookietrooper
+		</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type>WookieTrooper_Team</Create_Team_Type>
+		
+
+		<SFXEvent_Build_Complete>Unit_Attack_Wookie</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Move_Wookie</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<Container Name="WookieTrooper_Team">
+		<Variant_Of_Existing_Type> Stormtrooper_Team </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_WOOKIE_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Miliciano_Naval_Squad Imperial_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Noghri_Assassin_Squad UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_wookietrooper.tga</Icon_Name>
+	</Container>
+</WookietrooperUnit_Data>

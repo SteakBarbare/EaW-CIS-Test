@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<Admiral_DaalaUnit_Data>
+		
+	<GenericHeroUnit Name="Admiral_Daala_No_Ship">
+		<Variant_Of_Existing_Type>Basic_Generic_H</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DAALA_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_DAALA.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DAALA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Affiliation>Empire</Affiliation>
+		<Spawn_Planet>Delvardus</Spawn_Planet>
+		<SFXEvent_Select>Unit_Select_Mara_Jade</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mara_Jade</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mara_Jade</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mara_Jade</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mara_Jade</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mara_Jade </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mara_Jade </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mara_Jade </Death_SFXEvent_Start_Die>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Admiral_Daala_No_Ship_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Time_Ability Name="Admiral_Daala_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		
+			<Remove_Corruption_Ability Name="Admiral_Daala_No_Ship_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="Admiral_Daala_No_Ship_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DAALA_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DAALA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_DAALA.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+
+		<Company_Transport_Unit>Daala_Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Admiral_Daala_No_Ship</Company_Units>
+
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Respawn_Mara_Jade</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Mara_Jade</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mara_Jade</SFXEvent_Fleet_Move>
+	</HeroCompany>
+	
+	
+
+	
+	
+	
+</Admiral_DaalaUnit_Data>

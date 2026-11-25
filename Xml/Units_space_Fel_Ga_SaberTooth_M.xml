@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Ga_SaberTooth_MUnit_Data>
+
+	<SpaceUnit Name="Ga_SaberTooth_M">
+		<Variant_Of_Existing_Type>Ga_SaberToothORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_SABERTOOTH_M</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 Demolisher </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber ISDORG ISD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GA_SABERTOOTH_M TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE</Encyclopedia_Unit_Class>
+		<Space_Model_Name>GA_SaberTooth_Frigate_M.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, Ga_SaberTooth_M_Death_Clone</Death_Clone>
+		
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+		<AI_Combat_Power>975</AI_Combat_Power>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>BARRAGE, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>			
+	
+		<Projectile_Types>Proj_Ship_SaberTooth_M</Projectile_Types>
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>8.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
+		<!--<Targeting_Fire_Inaccuracy_Fixed_Radius> 120 </Targeting_Fire_Inaccuracy_Fixed_Radius>-->
+		<Targeting_Min_Attack_Distance>220</Targeting_Min_Attack_Distance>
+
+		<SFXEvent_Fire>Unit_Boron_Missile_Fire</SFXEvent_Fire>
+		<Targeting_Priority_Set>Vengeance_TP</Targeting_Priority_Set>
+		<HardPoints> 
+			HP_Ion_01, 
+			HP_Ion_02,
+			HP_Ion_03, 
+			HP_Ion_04, 
+			HP_Flak_01, 
+			HP_Flak_02,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_MisilA_03,
+			HP_MisilA_04,
+			HP_LaserGX_01,
+			HP_LaserGX_02,
+			HP_LaserGX_03,
+			HP_LaserGX_04,
+			HP_LaserGX_05,
+			HP_LaserGX_06,
+			HP_LaserGX_07,
+			HP_LaserGX_08, 
+			HP_TurboMG_01, 
+			HP_TurboMG_02, 
+			HP_TurboMG_03, 
+			HP_TurboMG_04, 
+			HP_T_GASaberTooth_01,
+			HP_T_GASaberTooth_02,
+			HP_Shield_GeneratorH_00,
+			HP_EnginesH_00
+		</HardPoints>
+		<Icon_Name>I_BUTTON_GA_SaberTooth_M.TGA</Icon_Name>
+						
+		<Tactical_Build_Cost_Multiplayer>4800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		
+		<Lua_Script>ObjectScript_MC30_Z</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_SaberTooth_M_Barrage</Projectile_Types_Override>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,3.0f</Mod_Multiplier>
+                <SFXEvent_Target_Ability> Unit_Barrage_Calamari </SFXEvent_Target_Ability>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+			  <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Sabertooth_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		  <Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="Sabertooth_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 1.0 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_MassPulse_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_Attack_Broadside_Cruiser</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Ga_SaberTooth_M_Death_Clone">
+		<Text_ID>TEXT_UNIT_MC60</Text_ID>
+		<Space_Model_Name>GA_SaberTooth_Frigate_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.875</Scale_Factor>
+		<Layer_Z_Adjust> -310.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> frigate </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</Ga_SaberTooth_MUnit_Data>

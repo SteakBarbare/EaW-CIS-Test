@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<Admiral_GALAK_FYYARUnit_Data>
+	
+	<GenericHeroUnit Name="Ei_GALAK_FYYAR">
+		<Variant_Of_Existing_Type>Dark_Trooper_3ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GALAK_FYYARTEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GALAK_FYYAR TEXT_TOOLTIP_REDUCE_TIME_GRUNITS_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ei_Galak_Fyyar.ALO</Land_Model_Name>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Icon_Name>I_BUTTON_EV_Galak_Fyyar.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Shield_Points>300</Shield_Points>
+		<Tactical_Health>1400</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>99999</Energy_Capacity>
+		<Energy_Refresh_Rate>99999</Energy_Refresh_Rate>
+		<Deploys>No</Deploys>
+		<Auto_Deploys>No</Auto_Deploys>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<CategoryMask> Landhero | Spacehero </CategoryMask>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				Imperial_SwampTrooper,
+				Rocket_Trooper_Company,
+				Imperial_Shadow_Trooper,
+				Imperial_Reborn
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Selection_Blob_Material_Name>Selection_Empire_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<Lua_Script>E_FYYAR_Re</Lua_Script>
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Fyyar_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Infantry | Vehicle | Air</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Fyyar_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Redirect_Blaster_Ability Name="Phase3_Redirect_Blaster">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.75</Redirect_Chance>
+				<Block_Chance>0.75</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 10.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+		</Abilities>
+
+	</GenericHeroUnit>
+
+
+	<HeroCompany Name="Admiral_GALAK_FYYAR">
+		<Variant_Of_Existing_Type>Basic_Generic_H2_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GALAK_FYYARTEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GALAK_FYYAR TEXT_TOOLTIP_REDUCE_TIME_GRUNITS_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EV_Galak_Fyyar.TGA</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Company_Transport_Unit>Doomgiver</Company_Transport_Unit>
+		<Company_Units>
+		Ei_GALAK_FYYAR
+		</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Dark_Trooper_3</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_3</SFXEvent_Fleet_Move>
+		<CategoryMask>Landhero | Spacehero</CategoryMask>
+
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		
+		
+		<Abilities SubObjectList="Yes">
+			<Remove_Corruption_Ability Name="Fyyar_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+			<Redirect_Blaster_Ability Name="Phase3_Redirect_Blaster">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 10.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+	</HeroCompany>
+	
+	
+</Admiral_GALAK_FYYARUnit_Data>

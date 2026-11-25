@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<Projectiles>
+	<Projectile Name="Proj_Ground_ATIC_LASER">
+		<Variant_Of_Existing_Type>Proj_Ground_Hvy_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Land_Model_Name>p_aticred_shot.ALO</Land_Model_Name>
+		<Projectile_Max_Flight_Distance>1500.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>60.0</Projectile_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Projectile_Blast_Area_Damage>60.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>30.0</Projectile_Blast_Area_Range>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>ATLC_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>ATLC_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_SFXEvent_Detonate>Unit_Impacto_Torpedo_Artilleria</Projectile_SFXEvent_Detonate>
+		<AI_Combat_Power>400</AI_Combat_Power>
+	</Projectile>
+		
+	<Projectile Name="Proj_Ground_SPMAT_grenade">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>p_spmat_shot_gr.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_SPMAT_Grenade </Damage_Type>
+		<Max_Speed>45.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>GRENADE</Projectile_Category>
+		<Projectile_Grenade_Gravity>1.636363636</Projectile_Grenade_Gravity>
+		<Projectile_Grenade_Gravity_Lob_Mod>1.0</Projectile_Grenade_Gravity_Lob_Mod>
+		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
+		<Projectile_Max_Lifetime>900.0</Projectile_Max_Lifetime>
+		<Projectile_Damage>15.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>15.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>30.0</Projectile_Blast_Area_Range>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>20</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>Spmat_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Spmat_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>SFX_Grenade_Detonation</Projectile_SFXEvent_Detonate>
+		<AI_Combat_Power>600</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Main_Cannon_HAG">
+		<Variant_Of_Existing_Type>Proj_Ground_SPMAT_grenade</Variant_Of_Existing_Type>
+		<Land_Model_Name>P_hag_shot_gr.ALO</Land_Model_Name>
+		<Projectile_Energy_Per_Shot>20</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>ATLC_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>ATLC_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>600</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Main_Cannon_EVFO_UMHC_Art">
+		<Variant_Of_Existing_Type>Proj_Ground_SPMAT_grenade</Variant_Of_Existing_Type>
+	    <Projectile_Damage>50.0</Projectile_Damage>
+		<Land_Model_Name>P_hag_shot_gr.ALO</Land_Model_Name>
+		<Projectile_Energy_Per_Shot>20</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>ATLC_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>ATLC_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>600</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Clongun_Grenade">
+		<Variant_Of_Existing_Type>Proj_Ground_SPMAT_grenade</Variant_Of_Existing_Type>
+		<Land_Model_Name>p_clongun_shot_gr.ALO</Land_Model_Name>
+		<Projectile_Max_Lifetime>900.0</Projectile_Max_Lifetime>
+		
+		<Projectile_Object_Detonation_Particle>clongun_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Medium_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>clongun_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_SFXEvent_Detonate>Unit_Impacto_Torpedo_Artilleria</Projectile_SFXEvent_Detonate>
+		<AI_Combat_Power>400</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Clongun_Grenade_Large">
+		<Variant_Of_Existing_Type>Proj_Ground_Clongun_Grenade</Variant_Of_Existing_Type>
+		<Max_Speed>75.0</Max_Speed>
+		<Projectile_Max_Flight_Distance>2000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Blast_Area_Damage>90.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>90.0</Projectile_Blast_Area_Range>
+	</Projectile>
+	
+	<Projectile Name="Proj_Defoliator_Main_Gun">
+		<Variant_Of_Existing_Type>Proj_Ground_SPMAT_grenade</Variant_Of_Existing_Type>
+		<Land_Model_Name>P_hag_shot_gr.ALO</Land_Model_Name>
+		<Projectile_Energy_Per_Shot>20</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>ATLC_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>ATLC_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>600</AI_Combat_Power>
+		<Projectile_Max_Flight_Distance>2000.0</Projectile_Max_Flight_Distance>
+		<!-- Stun specifics -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Radius>60.0</Projectile_Ion_Stun_Radius>
+		<Projectile_Ion_Stun_Duration>60.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent> 
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.5</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+
+		<Projectile_Stun_On_Detonation>yes</Projectile_Stun_On_Detonation>
+		<Projectile_Stun_Duration_Frames>3600</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>60</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect>Stunned_Object</Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> Vehicle | Infantry | Air | Structure </Projectile_Stun_Victims_Category_Mask>
+	</Projectile>
+	
+	
+	<Projectile Name="Proj_Stun_Tank_Beam">
+		<Variant_Of_Existing_Type>Proj_SPHAT_Beam</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_Beam_Stun_Tank.ALO</Land_Model_Name>
+		<Projectile_Damage>3.0</Projectile_Damage>
+		<!-- Stun specifics -->
+		<Projectile_Ion_Stun_On_Detonation>true</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Ion_Stun_Radius>20.0</Projectile_Ion_Stun_Radius>
+		<Projectile_Ion_Stun_Duration>28.0</Projectile_Ion_Stun_Duration> <!-- must be same as Projectile_Disable_Engines_Duration in this case -->
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.999f</Projectile_Ion_Stun_Speed_Reduction_Percent> <!-- almost total speed reduction -->
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.5</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent><!-- fire rate reduced to 50% -->
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+
+		<Projectile_Stun_On_Detonation>yes</Projectile_Stun_On_Detonation>
+		<Projectile_Stun_Duration_Frames>1800</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>20</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect>Stunned_Object</Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> Vehicle | Infantry | Air | Structure </Projectile_Stun_Victims_Category_Mask>
+	</Projectile>
+	
+	<Projectile Name="Proj_RV_MPTLII_Torpedo">
+		<Variant_Of_Existing_Type>Proj_Ground_Proton_TorpedoXU</Variant_Of_Existing_Type>
+		<Max_Speed>8.0</Max_Speed>
+		<Land_Model_Name>P_MPTL2_Proyectil.ALO</Land_Model_Name>
+		<Projectile_Object_Detonation_Particle>MPTL2_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>MPTL2_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> rebel_bombard_explosion </Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Proton_TorpedoXU">
+		<Variant_Of_Existing_Type>Proj_Ground_Proton_Torpedo</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_proton_torpedoU.ALO</Land_Model_Name>
+		<Max_Speed>4.0</Max_Speed>
+		<Projectile_Rocket_Curve_Distance>500</Projectile_Rocket_Curve_Distance>
+		<Projectile_Rocket_Curve_Offset>0</Projectile_Rocket_Curve_Offset>
+		<Projectile_Rocket_Straight_Distance>500</Projectile_Rocket_Straight_Distance>
+		<Projectile_Max_Flight_Distance>2000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>7.0</Projectile_Damage>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Projectile_Blast_Area_Damage>90.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>30.0</Projectile_Blast_Area_Range>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Medium_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle> Land_Torpedo_HvyMPTL_Explosion_Land </Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle> Land_Torpedo_HvyMPTL_Explosion_Land </Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle> Empire_Bombing_Run_Explosion_Land </Projectile_Lifetime_Detonation_Particle>
+		<Projectile_SFXEvent_Detonate>Unit_Impacto_Torpedo_Artilleria</Projectile_SFXEvent_Detonate>
+	</Projectile>
+
+	<Projectile Name="Proj_Mortar_Round">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_MORTAR_GRENADE.ALO</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Damage_Type> Damage_SPMAT_Grenade </Damage_Type>
+		<Max_Speed>15.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>GRENADE</Projectile_Category>
+		<Projectile_Grenade_Gravity>0.6</Projectile_Grenade_Gravity>
+		<Projectile_Grenade_Gravity_Lob_Mod>0.6</Projectile_Grenade_Gravity_Lob_Mod>
+		<Projectile_Grenade_Can_Lob_Slower>yes</Projectile_Grenade_Can_Lob_Slower>
+		<Projectile_Max_Lifetime>1000.0</Projectile_Max_Lifetime>
+
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		
+		<Projectile_Damage>0.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 25 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 25 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+        <Projectile_Blast_Area_Dropoff>True</Projectile_Blast_Area_Dropoff>
+        <Projectile_Blast_Area_Dropoff_Tiers>3</Projectile_Blast_Area_Dropoff_Tiers>
+
+		<Projectile_Object_Detonation_Particle> Medium_Explosion_Land </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle> Small_Explosion_Land </Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle> Medium_Explosion_Land </Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Small_Dud</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Small_Explosion_Land</Projectile_Absorbed_By_Shields_Particle>
+		
+		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE_INFANTRY</Projectile_Ground_Detonation_SurfaceFX>
+		<AI_Combat_Power>40</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Grenade_Detonation</Projectile_SFXEvent_Detonate>
+	</Projectile>
+	
+</Projectiles>

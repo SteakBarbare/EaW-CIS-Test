@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<CancillerPalpatine_Files>
+	
+	<GroundVehicle Name="CancillerPalpatineGR">
+		<Variant_Of_Existing_Type>Rep_Proto_Shuttle_Ground</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_PALPATINECW</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CANCILLERPALPATINE TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Rep_Palpatine.tga</Icon_Name>
+		<CategoryMask> LandHero | Vehicle </CategoryMask>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Spawn_Planet>Coruscant</Spawn_Planet>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
+		<SFXEvent_Select>Unit_Select_Canciller</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Canciller</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Canciller</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Canciller</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Canciller</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Canciller</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Canciller</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Canciller </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Group_Move_Canciller </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_Canciller </SFXEvent_Assist_Attack>
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="CancillerPalpatine_Combat_Bonus">
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<Applicable_Unit_Types>CancillerPalpatineGR</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Price_Ability Name="CancillerPalpatine_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="CancillerPalpatine_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+		</Abilities>
+	</GroundVehicle>
+	
+	<HeroUnit Name="CancillerPalpatine">
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_HERO_PALPATINECW</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CANCILLERPALPATINE TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		
+		<Icon_Name>I_BUTTON_Rep_Palpatine.tga</Icon_Name>
+		<Mass>1.0</Mass>
+		<Scale_Factor>1.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Type>Walk</Type>
+		<Affiliation>Republic</Affiliation>
+		<!-- must use a special ability to modify political control in order to stack correctly -->
+		<Political_Control>0</Political_Control>
+		<Political_Faction>Republic</Political_Faction>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<IsBuildable>No</IsBuildable>
+		<Spawn_Planet>Coruscant</Spawn_Planet>
+		<Size_Value>75</Size_Value>
+		<Damage>100</Damage>
+		<Autoresolve_Health>500</Autoresolve_Health>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Ranking_In_Category> 1 </Ranking_In_Category>
+
+		<Neutralization_Cost>1000.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<SFXEvent_Select>Unit_Select_Canciller</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Canciller</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Canciller</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Canciller</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Canciller</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Canciller</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Canciller</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Canciller </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Group_Move_Canciller </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_Canciller </SFXEvent_Assist_Attack>
+
+		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
+
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="CancillerPalpatine_Combat_Bonus">
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<Applicable_Unit_Types>CancillerPalpatineGR</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Price_Ability Name="CancillerPalpatine_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Reduce_Production_Time_Ability Name="CancillerPalpatine_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+		</Abilities>
+		
+	</HeroUnit>
+	<HeroCompany Name="CancillerPalpatine_Team">
+		<Text_ID>TEXT_HERO_PALPATINECW</Text_ID>
+		<Icon_Name>I_BUTTON_Rep_Palpatine.tga</Icon_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Affiliation>Republic</Affiliation>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>Proto_Shuttle_CancillerPalpatine</Company_Transport_Unit>
+		<Company_Units>CancillerPalpatineGR</Company_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CANCILLERPALPATINE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 25000 </Score_Cost_Credits>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Canciller</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Canciller</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Canciller</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>2700</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>Rep_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Build_Time_Seconds>24</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<CategoryMask>LandHero</CategoryMask>
+		<Ranking_In_Category> 1 </Ranking_In_Category>
+		<Population_Value>1</Population_Value>
+	</HeroCompany>
+	<SpaceUnit Name="CancillerPalpatine_Space_MP">
+		<Variant_Of_Existing_Type>Proto_Shuttle_CancillerPalpatine</Variant_Of_Existing_Type>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<CategoryMask> Spacehero </CategoryMask>
+			
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+
+	</SpaceUnit>
+	
+	<TransportUnit Name="Proto_Shuttle_CancillerPalpatine">
+		<Variant_Of_Existing_Type>Proto_Shuttle</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_PALPATINECW</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CANCILLERPALPATINE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<AI_Combat_Power>2655</AI_Combat_Power>
+		<Icon_Name>I_BUTTON_Rep_Palpatine.tga</Icon_Name>
+		<SFXEvent_Select>Unit_Select_Canciller</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Canciller</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Canciller</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Canciller</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Canciller</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Canciller</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Canciller</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Canciller </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Group_Move_Canciller </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_Canciller </SFXEvent_Assist_Attack>
+		<Landing_Transport_Variant>Rep_Proto_Shuttle_Ground_Landing</Landing_Transport_Variant>
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Canciller_Space_Combat_All_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			</Abilities>
+	</TransportUnit>
+</CancillerPalpatine_Files>

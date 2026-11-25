@@ -1,0 +1,743 @@
+<?xml version="1.0"?>
+<CIS_structuresUnit_Data>
+	<SpecialStructure Name="CIS_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_cis_commandcenter.tga</Icon_Name>
+		
+		<LandBehavior>LAND_OBSTACLE, SPACE_OBSTACLE,REVEAL,SELECTABLE, SHIELDED, POWERED, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+				
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS,
+				Dooku_Team,
+				Grievous_Team,
+				CIS_Poggle_Team,
+				CIS_Wat_Tambor_Team,
+				Ventress_Sith_Team,
+				General_Sevran_Team,
+				Sith_Team,
+				Jango_Fett_Team_Land_MP,
+				Durge_Team,
+				Aurra_Team_Land_MP,
+				Cad_Bane_Team_Land_MP,
+				CIS_Kul_Teska_Team,
+				CydonTank_Team,
+				CIS_Comando_Land_MP,
+				C_Ingeniero_BattleDroid_Squad,
+				CIS_Level_Two_Tech_Upgrade,
+				CIS_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+	
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Command_Center_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Command_Center_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Command_Center_Select_SFX</SFXEvent_Select>
+   </SpecialStructure>
+
+	<GroundBuildable Name="CIS_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_cis_commandcenter.tga</Icon_Name>	
+		<Affiliation>CIS, Rebel</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_CIS_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> CIS_Command_Center_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>CIS_CommandCenter.ALO</Land_Model_Name>
+		<Icon_Name>i_button_cis_commandcenter.tga</Icon_Name>	
+		<Affiliation>CIS, Rebel</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Command_Center_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Command_Center_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Command_Center_Select_SFX</SFXEvent_Select>
+   </GroundBuildable>
+	
+	<SpecialStructure Name="CIS_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_CIS_DROID_DISPENSER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_DROID_DISPENSER </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CIS_DROID_DISPENSER </MP_Encyclopedia_Text>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Icon_Name>i_button_CIS_Droid_Dispenser.tga</Icon_Name>
+		<Land_Model_Name>CIS_Droid_Dispenser.ALO</Land_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Obstacle_Proxy_Type> CIS_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		
+		<Starting_Spawned_Units_Tech_0>C_Super_BattleDroidB2_Squad, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>C_Super_BattleDroidB2_Squad, -1</Reserve_Spawned_Units_Tech_0>
+								
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Comm_Array_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Comm_Array_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select> Structure_Comm_Array_Select_SFX </SFXEvent_Select>
+   </SpecialStructure>
+   <GroundBuildable Name="CIS_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_CIS_DROID_DISPENSER</Text_ID>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>CIS_Droid_Dispenser.ALO</Land_Model_Name>
+
+		<Icon_Name>i_button_CIS_Droid_Dispenser.tga</Icon_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_DROID_DISPENSER </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CIS_DROID_DISPENSER </MP_Encyclopedia_Text>
+	</GroundBuildable>
+   <GroundBuildable Name="PC_CIS_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Droid_Dispenser.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> CIS_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> CIS_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Icon_Name>i_button_CIS_Droid_Dispenser.tga</Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+
+   </GroundBuildable>
+   <SpecialStructure Name="CIS_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>CIS_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> CIS_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>CIS_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_UBTurretBunker.tga</Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Red</Projectile_Types>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Special_Weapon_Ready>RHD_Turbo_Tower_Available</SFXEvent_Special_Weapon_Ready>
+		<SFXEvent_Unit_Under_Attack> RHD_Turbo_Tower_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Turbo_Tower_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select> Structure_Turret_Select_SFX </SFXEvent_Select>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor_Turbo </SFXEvent_Turret_Rotating_Loop>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   <SpecialStructure Name="CIS_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_UBTurretBunker.tga</Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<Tactical_Additional_Structure_Type>CIS_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>CIS_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+   <GroundBuildable Name="CIS_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>CIS_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_UBTurretBunker.tga</Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_CIS_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> CIS_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> CIS_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_UBTurretBunker.tga</Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+   </GroundBuildable>
+	<SpecialStructure Name="CIS_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_CIS_GROUND_BASE_TOWER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GROUND_CIS_GROUND_BASE_TOWER  </Encyclopedia_Text>
+		<Land_Model_Name>CIS_Base_Turret.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> CIS_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Projectile_Types>Proj_Turbolaser_Ground_CIS_Base_Tower_Red</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+				HP_GroundStructure_Shield_Generator_00,
+				HP_CIS_Base_Turret_00,
+				HP_CIS_Base_Turret_01
+		</HardPoints>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Special_Weapon_Ready>RHD_Turbo_Tower_Available</SFXEvent_Special_Weapon_Ready>
+		
+		<SFXEvent_Select>Unit_Select_B1Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B1Droid</SFXEvent_Guard>
+		<Death_SFXEvent_Start_Die>Unit_Defeat_B1Droid</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1Droid </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_B1Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B1Droid </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B1Droid </Death_SFXEvent_Start_Die>
+
+		<Icon_Name>i_button_CIS_Base_tower.tga</Icon_Name>
+
+		<Tactical_Additional_Structure_Type>CIS_Power_Generator</Tactical_Additional_Structure_Type>
+
+	</SpecialStructure>
+	<GroundBuildable Name="CIS_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_CIS_GROUND_BASE_TOWER</Text_ID>
+		<Land_Model_Name>CIS_Base_Turret.ALO</Land_Model_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_Base_tower.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GROUND_CIS_GROUND_BASE_TOWER  </Encyclopedia_Text>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_CIS_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> CIS_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>CIS_Base_Turret.ALO</Land_Model_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_Base_tower.tga</Icon_Name>
+		<SFXEvent_Build_Started>EHD_Shield_Generator_Build</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</GroundBuildable>
+
+	<SpecialStructure Name="CIS_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Uplink_Station.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> CIS_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			CIS,
+				RL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS,
+				CIS_Bombing_Run_Use_Upgrade, 
+				CIS_Planetary_Bombard_Use_Upgrade,
+				CIS_Ground_Commander_Team,
+				CIS_Tactical_Droid_Team,
+				CIS_General_Kalani_Team,
+				CIS_Plataforma_Mando_Team,
+				C_Vulture_squadron,
+				C_Nantex_squadron,
+				C_Cis_MAF_team,
+				C_Cis_Gunship_team
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+			
+		<Icon_Name>i_button_CIS_Uplink_Station.tga</Icon_Name>
+			
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Unit_Under_Attack> RHD_Comm_Array_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Comm_Array_Destroyed </SFXEvent_Unit_Lost>
+		
+	</SpecialStructure>
+	<SpecialStructure Name="CIS_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>CIS_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+	<GroundBuildable Name="CIS_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>CIS_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_CIS_Uplink_Station.tga</Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_CIS_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>CIS_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>CIS_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_CIS_Uplink_Station.tga</Icon_Name>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpecialStructure>	
+	
+	<SpecialStructure Name="CIS_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_DROIDWORKS.alo</Land_Model_Name>
+		<Icon_Name>i_button_CIS_DROIDWORKS.tga</Icon_Name>
+		<Obstacle_Proxy_Type> CIS_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Barracks_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Barracks_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS,
+				C_BattleDroid_Squad,
+				C_PlexDroidB1_Squad,
+				C_Air_BattledroidsB1_Squad,
+				C_Super_BattleDroidB2_Squad,
+				C_Super_BattleDroid_Squad,
+				C_Droideka_Mk1_Company,
+				C_Stap_Squad,				
+				B1Droid_Sniper_Squad,
+				MAGNAGUARD_Company,
+		</Tactical_Buildable_Objects_Multiplayer>
+	
+		<Starting_Spawned_Units_Tech_0>C_BattleDroid_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>C_BattleDroid_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>C_PlexDroidB1_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>C_PlexDroidB1_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Stap, 5</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Stap, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Droideka_Mk1, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Droideka_Mk1, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_CONFEDERATION_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_CONFEDERATION_00 </MP_Encyclopedia_Text>
+
+	</SpecialStructure>
+
+	<GroundBuildable Name="CIS_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>CIS_DROIDWORKS.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_DROIDWORKS.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_CONFEDERATION_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_CONFEDERATION_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>	
+	</GroundBuildable>
+	<GroundBuildable Name="PC_CIS_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> CIS_Ground_Barracks_MP </Tactical_Buildable_Constructed>
+
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Land_Model_Name>CIS_DROIDWORKS.ALO</Land_Model_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_DROIDWORKS.tga</Icon_Name>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Barracks_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Barracks_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_CONFEDERATION_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BARRACKS_CONFEDERATION_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>	
+	</GroundBuildable>
+	
+	<SpecialStructure Name="CIS_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Light_Factory.ALO</Land_Model_Name>
+		<Icon_Name>i_button_CIS_vehicle_factory.tga</Icon_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Light_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Light_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Light_Factory_Select_SFX</SFXEvent_Select>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<Starting_Spawned_Units_Tech_0>AAT_Repulsor_Tank, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AAT_Repulsor_Tank, -1</Reserve_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>CIS_walk_DW, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_walk_DW, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_Crabdroid, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Crabdroid, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS,
+				MTT_Company,
+				C_HAG_Group,
+				CIS_Defoliator_Group,
+				C_AAT_Group,
+				C_CIS_walk_DW_Group,
+				C_CIS_walk_Advanced_Group,
+				C_CIS_Chamaleon_Group,
+				C_CIS_Crabdroid_Group,
+				CIS_FighterTank_Alliance,
+				CIS_Super_Tank_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="CIS_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>CIS_Light_Factory.alo</Land_Model_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_CIS_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> CIS_Ground_Light_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>CIS_Light_Factory.alo</Land_Model_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+		
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_vehicle_factory.tga</Icon_Name>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Heavy_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Heavy_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Heavy_Factory_Select_SFX</SFXEvent_Select>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="CIS_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Heavy_Factory.ALO</Land_Model_Name>
+		<Icon_Name>i_button_CIS_Heavy_Factory.tga</Icon_Name>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+
+		<Obstacle_Proxy_Type> CIS_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Special_Structures>CIS_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+				
+		<Starting_Spawned_Units_Tech_0>Hailfire_Tank_Droid, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Hailfire_Tank_Droid, -1</Reserve_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Nantex_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Nantex_Land, -1</Reserve_Spawned_Units_Tech_0>
+				
+		<Starting_Spawned_Units_Tech_0>Vulture_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Vulture_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>HeavyOG_9, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>HeavyOG_9, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>OG_9, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>OG_9, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS,
+				C_Hailfire_Tank_Droid_Brigade,
+				C_NR_N99_Tank_Droid_Brigade,
+				C_OG_9_Group,
+				C_HeavyOG_9_Group,
+				C_OCTUPARRA_Group,
+				C_OG_9_MDU_Group,
+				CIS_UMobileHC_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Abilities SubObjectList="Yes">
+
+			<Force_Healing_Ability Name="X_Heavy_Vehicle_Factory_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			<Redirect_Blaster_Ability Name="X_Magnetically_Sealed_Structure">
+				<Initially_Enabled> No </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				
+				<Applicable_Unit_Categories>Hero | Infantry | Vehicle | Structure</Applicable_Unit_Categories>
+				
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			<Reduce_Production_Time_Ability Name="HvyFactory_Production_Time_Reduction">
+				<Applicable_Unit_Categories> Air | Vehicle </Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.25</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="CIS_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>CIS_Heavy_Factory.alo</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_Heavy_Factory.tga</Icon_Name>
+
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_CIS_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> CIS_Ground_Heavy_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>CIS_Heavy_Factory.alo</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<Icon_Name>i_button_CIS_Heavy_Factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="CIS_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Researchcenter.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> CIS_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Scale_Factor>0.6</Scale_Factor>
+		<HardPoints>
+			HP_GroundStructure_TurboR_01,
+			HP_GroundStructure_TurboR_02,
+			HP_GroundStructure_TurboR_03,
+			HP_GroundStructure_TurboR_04,
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>CIS</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_cis_researchfacility.tga</Icon_Name>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS,
+				RL_Reinforced_Structures_Upgrade,
+				RL_Enhanced_Turret_Firepower_L1_Upgrade,
+				RL_Enhanced_Turret_Firepower_L2_Upgrade,
+				RL_Combat_Armor_L1_Upgrade,
+				RL_Combat_Armor_L2_Upgrade,
+				RL_Weatherproof_Upgrade,
+				RL_Light_Armor_L1_Upgrade,
+				RL_Light_Armor_L2_Upgrade,
+				RL_Enhanced_Repulsors_L1_Upgrade,
+				RL_Enhanced_Repulsors_L2_Upgrade,
+				RL_Heavy_Armor_L1_Upgrade,
+				RL_Heavy_Armor_L2_Upgrade,
+				RL_Improved_Treads_L1_Upgrade,
+				RL_Improved_Treads_L2_Upgrade,
+				RL_Improved_T4B_Damage_L1_Upgrade,
+				RL_Improved_T4B_Damage_L2_Upgrade,
+				RL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="CIS_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>CIS_Researchcenter.alo</Land_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Affiliation>CIS</Affiliation>
+		<Icon_Name>i_button_cis_researchfacility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_CIS_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> CIS_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>CIS_Researchcenter.alo</Land_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Affiliation>CIS</Affiliation>
+		<Icon_Name>i_button_cis_researchfacility.tga</Icon_Name>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Heavy_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Heavy_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+	</GroundBuildable>
+
+	<SpecialStructure Name="CIS_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_CIS_academy.tga</Icon_Name>
+		<Obstacle_Proxy_Type> CIS_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			C_BattleDroid_Squad_Small, 1.0
+			C_BattleDroid_Squad_Medium, 1.0
+			C_BattleDroid_Squad_Large, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>CIS_Ground_Barracks</Required_Special_Structures>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Academy_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Academy_Destroyed </SFXEvent_Unit_Lost>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="CIS_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>CIS, PC_CIS_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>CIS_CommandCenter.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_CIS_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> CIS_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> CIS_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>CIS_CommandCenter.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Icon_Name>i_button_CIS_academy.tga</Icon_Name>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> RHD_Heavy_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> RHD_Heavy_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Heavy_Factory_Select_SFX</SFXEvent_Select>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+	</GroundBuildable>
+	
+	
+</CIS_structuresUnit_Data>
+
+
+

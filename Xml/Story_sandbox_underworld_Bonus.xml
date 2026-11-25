@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+
+
+
+<!--******************************************-->
+<!--******	Bonus missions Black Sun	******-->
+<!--******************************************-->
+
+
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<!--***** Bonus Kuat Battle Land ***********-->
+			<Event Name="Bonus_Kuat_Land_00">
+				<Event_Type>STORY_CONQUER</Event_Type>
+				<Event_Param1>Kuat</Event_Param1>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_BS_Bonus_Land_Battle</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Bonus_Kuat_Land_00_Tag</Story_Tag>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>				
+			<Event Name="Flash_Bonus_Kuat_Land">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_PLANET_GUI</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Reward_Param2>FLASH_PLANET</Reward_Param2>
+				<Prereq>Bonus_Kuat_Land_00</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Land_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Land_00_Tag</Reward_Param1>
+				<Prereq>Bonus_Kuat_Land_00</Prereq>
+			</Event>
+			<Event Name="Centrar_Camara_en_Kuat">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>POSITION_CAMERA</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Prereq>Bonus_Kuat_Land_00</Prereq>	
+			</Event>
+			<Event Name="Bonus_Kuat_Land_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>LINK_TACTICAL</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Reward_Param2>LAND</Reward_Param2>
+				<Reward_Param3>Underworld</Reward_Param3>
+				<Reward_Param4>_Land_Bonus_Kuat_U.ted</Reward_Param4>
+				<Reward_Param5>Empire</Reward_Param5>
+				<Reward_Param7>Story_Plots_Bonus_Land_E.xml</Reward_Param7>
+				<Reward_Param10>0</Reward_Param10>
+				<Reward_Param11>0</Reward_Param11>
+				<Reward_Param13>1</Reward_Param13>	
+				<Prereq>Bonus_Kuat_Land_00</Prereq>
+			</Event>
+			<Event Name="Bonus_Kuat_Land_02">
+				<Event_Type>STORY_WIN_BATTLES</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Event_Param2>LAND</Event_Param2>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_BS_Bonus_Land_Battle</Story_Dialog>
+				<Story_Chapter>1</Story_Chapter>
+				<Story_Tag>Bonus_Kuat_Land_02_Tag</Story_Tag>
+				<Prereq>Bonus_Kuat_Land_01</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Land_02">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Land_02_Tag</Reward_Param1>
+				<Prereq>Bonus_Kuat_Land_02</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Land_02_B">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Land_03</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>CerrarBonus_Kuat_Land_02</Prereq>
+			</Event>
+			<Event Name="Bonus_Kuat_Land_03">
+				<Event_Type>STORY_LOSE_BATTLES</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Event_Param2>LAND</Event_Param2>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_BS_Bonus_Land_Battle</Story_Dialog>
+				<Story_Chapter>2</Story_Chapter>
+				<Story_Tag>Bonus_Kuat_Land_03_Tag</Story_Tag>
+				<Prereq>Bonus_Kuat_Land_01</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Land_03">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Land_03_Tag</Reward_Param1>
+				<Prereq>Bonus_Kuat_Land_03</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Land_03_B">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Land_02</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>CerrarBonus_Kuat_Land_03</Prereq>
+			</Event>
+	<!--***** Final  Bonus Kuat Battle Land ***********-->
+	<!--***** Bonus Kuat Battle Space ***********-->
+			<Event Name="Bonus_Kuat_Space_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Story_Dialog>Dialog_BS_Bonus_Space_Battle</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Bonus_Kuat_Space_00_Tag</Story_Tag>
+				<Prereq>Bonus_Kuat_Land_02</Prereq>
+				<Prereq>Bonus_Kuat_Land_03</Prereq>
+			</Event>				
+			<Event Name="Flash_Bonus_Kuat_Space">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_PLANET_GUI</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Reward_Param2>FLASH_PLANET</Reward_Param2>
+				<Prereq>Bonus_Kuat_Space_00</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Space_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Space_00_Tag</Reward_Param1>
+				<Prereq>Bonus_Kuat_Space_00</Prereq>
+			</Event>
+			<Event Name="Centrar_Camara_en_Kuat">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>POSITION_CAMERA</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Prereq>Bonus_Kuat_Space_00</Prereq>	
+			</Event>
+			<Event Name="Bonus_Kuat_Space_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>LINK_TACTICAL</Reward_Type>
+				<Reward_Param1>Kuat</Reward_Param1>
+				<Reward_Param2>SPACE</Reward_Param2>
+				<Reward_Param3>Underworld</Reward_Param3>
+				<Reward_Param4>_Space_Bonus_Kuat_U.ted</Reward_Param4>
+				<Reward_Param5>Empire</Reward_Param5>
+				<Reward_Param7>Story_Plots_Bonus_Space_E.xml</Reward_Param7>
+				<Reward_Param10>0</Reward_Param10>
+				<Reward_Param11>0</Reward_Param11>
+				<Reward_Param13>1</Reward_Param13>	
+				<Prereq>Bonus_Kuat_Space_00</Prereq>
+			</Event>
+			<Event Name="Bonus_Kuat_Space_02">
+				<Event_Type>STORY_WIN_BATTLES</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Event_Param2>SPACE</Event_Param2>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_BS_Bonus_Space_Battle</Story_Dialog>
+				<Story_Chapter>1</Story_Chapter>
+				<Story_Tag>Bonus_Kuat_Space_02_Tag</Story_Tag>
+				<Prereq>Bonus_Kuat_Space_01</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Space_02">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Space_02_Tag</Reward_Param1>
+				<Prereq>Bonus_Kuat_Space_02</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Space_02_B">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Space_03</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>CerrarBonus_Kuat_Space_02</Prereq>
+			</Event>
+			<Event Name="Bonus_Kuat_Space_03">
+				<Event_Type>STORY_LOSE_BATTLES</Event_Type>
+				<Event_Param1>1</Event_Param1>
+				<Event_Param2>SPACE</Event_Param2>
+				<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+				<Story_Dialog>Dialog_BS_Bonus_Space_Battle</Story_Dialog>
+				<Story_Chapter>2</Story_Chapter>
+				<Story_Tag>Bonus_Kuat_Space_03_Tag</Story_Tag>
+				<Prereq>Bonus_Kuat_Space_01</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Space_03">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Space_03_Tag</Reward_Param1>
+				<Prereq>Bonus_Kuat_Space_03</Prereq>
+			</Event>
+			<Event Name="CerrarBonus_Kuat_Space_03_B">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>DISABLE_STORY_EVENT</Reward_Type>
+				<Reward_Param1>Bonus_Kuat_Space_02</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>CerrarBonus_Kuat_Space_03</Prereq>
+			</Event>
+	<!--***** Final  Bonus Kuat Battle Space ***********-->
+</Story>

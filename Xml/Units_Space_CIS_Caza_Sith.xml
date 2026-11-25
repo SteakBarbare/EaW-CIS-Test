@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+
+
+<Caza_SithUnit_Data>
+	<SpaceUnit Name="Caza_Sith">
+		<Variant_Of_Existing_Type>Moldy_Crow</Variant_Of_Existing_Type>	
+		<Text_ID>TEXT_UNIT_SITH</Text_ID>
+		<Encyclopedia_Good_Against> Z95_Rep_Squadron REP_V19_Torrent_Squadron REP_ARC-170_Squadron </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Caza_Jedi Anakin_Eta2 ClonObiwanETA_2 </Encyclopedia_Vulnerable_To>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_CazaSith_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SITH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_LORD_SITH </Encyclopedia_Unit_Class>
+		<Space_Model_Name>CIS_SithInfiltrator.ALO</Space_Model_Name>
+		<Land_Model_Name>CIS_SithInfiltratorLand.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_SITHINFILTRATOR.TGA</Icon_Name>
+
+		<Scale_Factor>0.7</Scale_Factor>
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.6</Min_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		
+		<Begin_Turn_Towards_Distance>800.0</Begin_Turn_Towards_Distance>
+		<Turret_Rotate_Extent_Degrees>35</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		
+		<HardPoints>
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+		
+		<SFXEvent_Fire>Unit_TIE_Fighter_Fire</SFXEvent_Fire>
+		<SFXEvent_Ambient_Moving> Unit_TIE_Fighter_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Fighter_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<SFXEvent_Select>Unit_Select_Sith</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Sith</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Sith</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Sith</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Sith</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Attack_Sith </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Attack_Sith </SFXEvent_Move_Into_Nebula>
+		<Death_SFXEvent_Start_Die>Unit_Defeat_Sith</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_Sith </SFXEvent_Attack_Hardpoint>
+		
+		<Targeting_Priority_Set>Fighter_Super</Targeting_Priority_Set>
+		
+		<Death_Clone>Damage_Normal, Caza_Sith_Death_Clone</Death_Clone>
+
+		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			 <Unit_Ability>
+				 <Type>STEALTH</Type>
+				 <Alternate_Icon_Name>i_sa_stealth.tga</Alternate_Icon_Name>
+				 <Alternate_Name_Text>TEXT_TOOLTIP_CLOAK</Alternate_Name_Text>
+				 <GUI_Activated_Ability_Name>Stealth_Peacebringer</GUI_Activated_Ability_Name> 
+				 <Recharge_Seconds>10.0</Recharge_Seconds>
+				 <Expiration_Seconds>180.0</Expiration_Seconds>
+				 <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+				 <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Sith</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>LUCKY_SHOT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+	     
+		  <Stealth_Ability Name="Stealth_Peacebringer">
+                <Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 255</Stealth_Color>
+                <Stealth_Transition_Time>.3</Stealth_Transition_Time>
+                <SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+			</Stealth_Ability>
+
+	   </Abilities>
+		<Landing_Transport_Variant>Caza_Sith_Landing_Transport</Landing_Transport_Variant>
+		
+		<Tactical_Bribe_Cost>800</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="Caza_Sith_Death_Clone">
+		<Text_ID>TEXT_UNIT_GINIVEX</Text_ID>
+		<Space_Model_Name>CIS_SithInfiltrator.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Medium_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.375</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Caza_Sith_Landing_Transport">
+		<Variant_Of_Existing_Type>Caza_Sith</Variant_Of_Existing_Type>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Land_Model_Name>CIS_SithInfiltratorLand.ALO</Land_Model_Name>
+		<Behavior>TRANSPORT, HINT</Behavior>
+		<Scale_Factor>2.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-50, -50, 0</User_Bound_Min>
+		<User_Bound_Max>50, 50, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</SpaceUnit>
+	
+	
+	
+	
+	
+</Caza_SithUnit_Data>

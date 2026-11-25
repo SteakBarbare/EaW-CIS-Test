@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<EVFO_DreadnoughtUnit_Data>
+	
+	
+	<SpaceUnit Name="EVFO_Dreadnought">
+		<Variant_Of_Existing_Type>EVFO_DreadnoughtORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, EVFO_Dreadnought_Death_Clone</Death_Clone>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Super_Astilleros_Imperiales</Required_Special_Structures>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 4</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 32</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+	</SpaceUnit>	
+	
+	
+	
+	<SpaceUnit Name="EVFO_DreadnoughtORG">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_EVFO_DREADNOUGHT</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a R_Dreadnought_Up </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> K-wing B-Wing MC90 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVFO_DREADNOUGHT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_WARHAMMER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>		
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BATTLECRUISER </Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>EVFO_Dreadnought.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		
+		<Max_Speed>2.0</Max_Speed>
+		<Layer_Z_Adjust>700.0</Layer_Z_Adjust>
+
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Tech_Level>99</Tech_Level>
+
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>500000000</Tactical_Health>
+		<Shield_Refresh_Rate>264000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+		
+		<Max_Thrust>0.1</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>1</Hyperspace_Speed>
+		<Maintenance_Cost>0.3</Maintenance_Cost>
+
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_Warhammer</Shield_Armor_Type>
+		
+		<Build_Cost_Credits>55000</Build_Cost_Credits>
+		<AI_Combat_Power>6500</AI_Combat_Power>
+		<Build_Time_Seconds>240</Build_Time_Seconds>
+		
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Behavior>DUMMY_STARSHIP, SELECTABLE, POWERED, SHIELDED</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON </SpaceBehavior>
+		
+		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>20000.0</Targeting_Max_Attack_Distance>
+				
+		<Targeting_Priority_Set>AACapital</Targeting_Priority_Set>
+						
+		<HardPoints> 
+			HP_T_Mandator4_01,
+			HP_T_Mandator4_02,
+			HP_T_FO_Dread_01, 
+			HP_T_FO_Dread_02, 
+			HP_T_FO_Dread_03, 
+			HP_T_FO_Dread_04,
+			HP_T_FO_Dread_05, 
+			HP_T_FO_Dread_06,
+			HP_T_FO_Dread_07,
+			HP_T_FO_Dread_08,
+			HP_T_FO_Dread_09,
+			HP_T_FO_Dread_10,
+			HP_T_FO_Dread_11,
+			HP_T_FO_Dread_12,
+			HP_T_FO_Dread_13,
+			HP_T_FO_Dread_14,
+			HP_T_FO_Dread_15,
+			HP_T_FO_Dread_16,
+			HP_T_FO_Dread_17,
+			HP_T_FO_Dread_18,
+			HP_T_FO_Dread_19,
+			HP_T_FO_Dread_20,
+			HP_T_FO_Dread_21,
+			HP_T_FO_Dread_22,
+			HP_T_FO_Dread_23,
+			HP_T_FO_Dread_24,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Shield_GeneratorH_05,
+			HP_Tractor_Beam_Rebelde,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_EnginesH_03,
+			HP_T_Lusankya_01,
+			HP_T_Lusankya_02,
+			HP_T_SSDMKI_03,
+			HP_T_SSDMKI_04,
+			HP_T_SSDMKI_05,
+			HP_T_SSDMKI_06,
+			HP_T_Lusankya_07,
+			HP_T_Lusankya_08,
+			HP_T_Lusankya_09,
+			HP_T_Lusankya_10,
+			HP_T_Lusankya_11,
+			HP_T_Lusankya_12,
+			HP_T_SSDMKI_13,
+			HP_T_SSDMKI_14,
+			HP_T_SSDMKI_15,
+			HP_T_SSDMKI_16,
+			HP_T_SSDMKI_17,
+			HP_T_SSDMKI_18,
+			HP_T_Lusankya_19,
+			HP_T_Lusankya_20,
+			HP_T_Lusankya_21,
+			HP_T_Lusankya_22,
+			HP_T_Lusankya_23,
+			HP_T_Lusankya_24,
+			HP_T_Lusankya_25,
+			HP_T_Lusankya_26,
+			HP_T_Lusankya_27,
+			HP_T_Lusankya_28,
+			HP_T_SSDMKI_29,
+			HP_T_SSDMKI_30,
+			HP_T_SSDMKI_31,
+			HP_T_SSDMKI_32,
+			HP_T_SSDMKI_34,
+			HP_T_Lusankya_35,
+			HP_T_Lusankya_36,
+			HP_T_Lusankya_37,
+			HP_T_Lusankya_38,
+			HP_T_Lusankya_39,
+			HP_T_Lusankya_43,
+			HP_T_Lusankya_44,
+			HP_T_Lusankya_45,
+			HP_T_Lusankya_46,
+			HP_T_Lusankya_47,
+			HP_T_Lusankya_48,
+			HP_T_Dominance_49,
+			HP_T_Dominance_50,
+			HP_T_Lusankya_51,
+			HP_T_Lusankya_52,
+			HP_T_Lusankya_53,
+			HP_T_Lusankya_54,
+			HP_T_Dominance_55,
+			HP_T_Dominance_56,
+			HP_T_Lusankya_57,
+			HP_T_Lusankya_58,
+			HP_T_Lusankya_59,
+			HP_T_Lusankya_60,
+			HP_T_Lusankya_61,
+			HP_T_Lusankya_62,
+			HP_T_Lusankya_63,
+			HP_T_Lusankya_64,
+			HP_T_Dominance_65,
+			HP_T_Dominance_66,
+			HP_T_Lusankya_67,
+			HP_T_Lusankya_68,
+			HP_T_Lusankya_69,
+			HP_T_Lusankya_70,
+			HP_T_Lusankya_71,
+			HP_T_Lusankya_72,
+			HP_T_Lusankya_73,
+			HP_T_Lusankya_74,
+			HP_T_Lusankya_75,
+			HP_T_Lusankya_76,
+			HP_T_Lusankya_77,
+			HP_T_Lusankya_78,
+			HP_T_Lusankya_79,
+			HP_T_Lusankya_80
+		</HardPoints>
+		
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.11  0.20817</Radar_Icon_Size>  
+		
+		<CategoryMask> Capital | AntiTransport </CategoryMask>
+		<Icon_Name>I_BUTTON_EVFO_Dreadnought.TGA</Icon_Name>
+		<GUI_Model_Name>EVFO_Dreadnought.ALO</GUI_Model_Name>
+		
+		 <Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+	      <Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> EVFO_Dreadnought_Tractor_Beam_Attack_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	      </Unit_Ability>
+			
+	   </Unit_Abilities_Data>
+	   <Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="EVFO_Dreadnought_Tractor_Beam_Attack_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>5100</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.95</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>0</Stacking_Category>            
+	      </Tractor_Beam_Attack_Ability>
+		  <Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>	
+		</Abilities>
+
+
+		<Tactical_Build_Cost_Multiplayer>55000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>66</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>13750</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_Dreadnought_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EVFO_Dreadnought_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Death_Explosions>Death_Explosion_Flash_8000</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>600.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</EVFO_DreadnoughtUnit_Data>

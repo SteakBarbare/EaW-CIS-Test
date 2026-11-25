@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Yull_Acib_Hero_Files>
+
+<HeroUnit Name="Yull_Acib">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_HERO_YULL_ACIB_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_YULL_ACIB TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRIMELORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ui_Yull_Acib.tga</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+
+		<Selection_Blob_Material_Name>Selection_Empire_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Underworld_Hero</Highlight_Blob_Material_Name>
+		<Bribe_Modifier_On_Uncorrupted_Planets>1.0</Bribe_Modifier_On_Uncorrupted_Planets>
+		<Bribe_Modifier_On_Corrupted_Planets>0.75</Bribe_Modifier_On_Corrupted_Planets>
+
+        <Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Yull_Acib_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Yull_Acib_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+            <Galactic_Stealth_Ability Name="Saboteur_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+            <Black_Market_Ability Name="Yull_Acib_Black_Market">
+                <Initially_Enabled>Yes</Initially_Enabled>
+                <Causes_Despawn>Yes</Causes_Despawn>
+               
+                <Min_Respawn_Times>90.0, 90.0, 90.0, 90.0, 90.0</Min_Respawn_Times>
+                <Max_Respawn_Times>90.0, 90.0, 90.0, 90.0, 90.0</Max_Respawn_Times>
+                
+                <Price_Modifier>1.0</Price_Modifier>
+                <Tech_Level_Adjustment>-1</Tech_Level_Adjustment>
+            </Black_Market_Ability>
+
+            <Stealth_Ability Name="Stealth_Yull_Acib">
+                <Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 255</Stealth_Color>
+                <Stealth_Transition_Time>.6</Stealth_Transition_Time>
+            </Stealth_Ability>
+
+      		<Corruption_Ability Name="Yull_Acib_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>Unit_Corrupt_Sabateur</SFXEvent_Activate>
+			</Corruption_Ability>
+			<System_Spy_Ability Name="Yull_Acib_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+        </Abilities>
+
+
+	</HeroUnit>
+
+	<HeroCompany Name="Yull_Acib_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_YULL_ACIB_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_YULL_ACIB TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRIMELORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ui_Yull_Acib.tga</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+	
+		<Company_Transport_Unit>Underworld_Hero_Shuttle</Company_Transport_Unit>
+		<Company_Units>Yull_Acib</Company_Units>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+
+	</HeroCompany>
+	
+</Yull_Acib_Hero_Files>

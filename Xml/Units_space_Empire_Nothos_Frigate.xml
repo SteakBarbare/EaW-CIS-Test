@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<Bane_NothosUnit_Data>
+	
+	<SpaceUnit Name="Bane_Nothos">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_HERO_BANE_NOTHOS</Text_ID>
+		<Encyclopedia_Good_Against> Corellian_Corvette Rep_Carrack CR_Hvy_Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing Calamari_Cruiser Mc80a </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BANE_NOTHOS TEXT_TOOLTIP_REDUCE_TIME_FRIGATE_10 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_WAVES_X3 TEXT_UNIT_TIE_BOMBER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_NebulobBHero.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_NebulonB_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Ranking_In_Category>3</Ranking_In_Category>
+		<Max_Speed>2.3</Max_Speed>
+		<Space_Layer> Frigate </Space_Layer>
+		<Layer_Z_Adjust>140.0</Layer_Z_Adjust>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<AI_Combat_Power>2000</AI_Combat_Power>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, Quenfis_Death_Clone</Death_Clone>
+		
+		<HardPoints>
+		  	HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_EV_Nebulon_B_01,
+			HP_EV_Nebulon_B_02,
+			HP_EV_Nebulon_B_03,
+			HP_EV_Nebulon_B_04, 
+			HP_EV_Nebulon_B_05,
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00,
+			HP_Fighter_Bay_Small_00
+		</HardPoints>
+		
+		<CategoryMask> Spacehero | AntiCorvette</CategoryMask>
+		<Icon_Name>i_button_EV_Bane_Nothos.tga</Icon_Name>
+		<GUI_Model_Name>RV_NebulobBHero.ALO</GUI_Model_Name>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Antilles</SFXEvent_Build_Complete>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			 <Unit_Ability>
+				<Type>ENERGY_WEAPON</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Nothos_Energy_Weapon_Attack_Ability </GUI_Activated_Ability_Name>
+				<!-- GUI Command Bar support -->
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Energy_Blast_Piett </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Energy_Blast </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Energy_Weapon_Attack_Ability Name="Nothos_Energy_Weapon_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter | Bomber | Transport | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>Misil02</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+				<Activation_Max_Range>1500</Activation_Max_Range>
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Beam_Color>4, 254, 104, 255</Beam_Color>
+				<Beam_Width>20.0</Beam_Width>
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Damage_Per_Frame>400</Damage_Per_Frame>
+			</Energy_Weapon_Attack_Ability>
+			<Combat_Bonus_Ability Name="Nothos_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Nebulon_B2E | E_Nebulon_B | IA_Nebulon_B2E_Frigate | Bane_Nothos</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.15</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<!-- note stacking category, this stacks with other hero combat bonuses -->
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Time_Ability Name="Nothos_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Frigate</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Nothos_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.1</Corruption_Removal_Cost_Multiplier> <!--1.2 means 20% more expensive than base cost, 0.8 means 20% cheaper-->				
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> <!-- Time it takes to remove corruption-->
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+		<Score_Cost_Credits> 2250</Score_Cost_Credits>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites/>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+
+	
+</Bane_NothosUnit_Data>

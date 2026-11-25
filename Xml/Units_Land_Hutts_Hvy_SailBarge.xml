@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+
+<Hu_Hvy_SailBargeUnit_Data>
+	
+	<GroundVehicle Name="Hu_Hvy_SailBarge">
+		<Variant_Of_Existing_Type> Hvy_SailBarge </Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, SailBarge_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Hvy_SailBarge">
+		<Variant_Of_Existing_Type> Hutt_SailBarge </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_HVY_SAILBARGE</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Rebel_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank M1_Repulsor_Tank </Encyclopedia_Vulnerable_To>		
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_HVY_SAILBARGE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Hu_Hvy_Sail_Barge.ALO</Land_Model_Name>
+		<Icon_Name> I_BUTTON_Hu_Hvy_SAILBARGE.tga </Icon_Name>
+		<Affiliation>Pirates, Hutts, GAC</Affiliation>
+		
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>1000</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<AI_Combat_Power>435</AI_Combat_Power>
+
+		<Hardpoints>
+				HP_Hvy_Sailbarge_Turret_00, 
+				HP_Hvy_Sailbarge_Turret_01, 
+				HP_Hvy_Sailbarge_Turret_02, 
+				HP_Hvy_Sailbarge_Turret_03		
+		</Hardpoints>
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Select_B2Droid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+              	<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_INFANTRY_REINFORCES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_R_FIELD_COMMANDER_RE</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>SailBarge_troopers_Marker</Spawned_Object_Type>
+				<Effective_Radius> 10.0 </Effective_Radius>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 10 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Hu_Hvy_SailBarge_Company">
+		<Variant_Of_Existing_Type> Hutt_SailBarge_Company </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_HVY_SAILBARGE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_HVY_SAILBARGE</Encyclopedia_Text>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hutts_Ground_Advanced_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		<Build_Cost_Credits>750</Build_Cost_Credits>
+		<Icon_Name> I_BUTTON_Hu_Hvy_SAILBARGE.tga </Icon_Name>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>Hu_Hvy_SailBarge</Company_Units>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+        
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+
+	<GroundVehicle Name="Hu_Adv_Hvy_SailBarge">
+		<Variant_Of_Existing_Type> Hu_Hvy_SailBarge </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_ADV_HVY_SAILBARGE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_ADV_HVY_SAILBARGE</Encyclopedia_Text>
+
+		<Land_Model_Name>Hu_Adv_Hvy_Sail_Barge.ALO</Land_Model_Name>
+		<Icon_Name> I_BUTTON_HU_ADV_HVY_SAILBARGE.tga </Icon_Name>
+		<Affiliation>Pirates, Hutts, GAC</Affiliation>
+		
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 15.5</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.5</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>280.0</Targeting_Max_Attack_Distance>
+		
+		<AI_Combat_Power>445</AI_Combat_Power>
+		
+		<Hardpoints>
+				HP_Hvy_Sailbarge_Turret_00, 
+				HP_Hvy_Sailbarge_Turret_01, 
+				HP_Hvy_Sailbarge_Turret_02, 
+				HP_Hvy_Sailbarge_Turret_03		
+		</Hardpoints>
+		<Fire_SFXEvent>Unit_EV_Implacable_Turbolaser_Fire</Fire_SFXEvent>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Adv_Hvy_SailBarge_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Adv_Hvy_SailBarge_Death_Clone_00">
+		<Variant_Of_Existing_Type>SailBarge_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Adv_Hvy_Sail_Barge_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	<GroundCompany Name="Hu_Adv_Hvy_SailBarge_Company">
+		<Variant_Of_Existing_Type> Hu_Hvy_SailBarge_Company </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_ADV_HVY_SAILBARGE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_ADV_HVY_SAILBARGE</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		
+		<Build_Cost_Credits>950</Build_Cost_Credits>
+		<Icon_Name> I_BUTTON_HU_ADV_HVY_SAILBARGE.TGA </Icon_Name>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Company_Units>Hu_Adv_Hvy_SailBarge</Company_Units>
+		
+		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+</Hu_Hvy_SailBargeUnit_Data>

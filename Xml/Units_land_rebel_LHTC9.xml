@@ -1,0 +1,388 @@
+﻿<?xml version="1.0"?>
+
+
+<LHTC9Unit_Data>
+	
+	<GroundVehicle Name="LHTC9">
+		<Variant_Of_Existing_Type>LHTC9ORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, LHTC91_Death_Clone_00</Death_Clone>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+	</GroundVehicle>
+	<GroundVehicle Name="LHTC91_Death_Clone_00">
+		<Variant_Of_Existing_Type>LHTC9</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_LHTC9X_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundVehicle Name="LHTC9ORG">
+		<Variant_Of_Existing_Type>Ha_SpecforceORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LHTC9</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker Underworld_Mass_Driver_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LHTC9</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RV_LHTC9X.ALO</Land_Model_Name>
+		<Select_Box_Scale>20</Select_Box_Scale>
+	
+		<Scale_Factor>0.7</Scale_Factor>
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>No</Auto_Deploys>
+		<Affiliation>Rebel</Affiliation>
+	
+		<Max_Speed>4.0</Max_Speed>
+		<Movement_Animation_Speed> 2.30 </Movement_Animation_Speed>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn>40</Stopped_Rate_Of_Turn>
+
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_Missile_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>400</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+		<LandBehavior>ABILITY_COUNTDOWN, DEPLOY_TROOPERS, AFFECTED_BY_SHIELD, SHIELDED, WALK_LOCOMOTOR, HUNT, IDLE, TARGETING, WEAPON, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, WIND_DISTURBANCE, SURFACE_FX,DAMAGE_TRACKING, GARRISON_VEHICLE</LandBehavior>
+		
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Garrison_Bone_Names>B_Ropemaster</Garrison_Bone_Names>
+		
+		<Turret_Rotate_Extent_Degrees>120</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>FOCAlliance2.3</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Turret_Targets_Ground_Vehicles> 2</Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 3</Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4</Turret_Targets_Anything_Else>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		
+		<Projectile_Types>Proj_Snowspeeder_Laser_Cannon</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Land_FOW_Reveal_Range>500.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		
+		<Hardpoints>
+				HP_Gr_Fighter_Missile_00
+		</Hardpoints>
+		
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+		<Icon_Name>i_button_LHTC93.tga</Icon_Name>
+		<MovementClass>Flying</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+
+		<Air_Vehicle_Turret_Target> Yes </Air_Vehicle_Turret_Target>
+
+		<AI_Combat_Power>130</AI_Combat_Power>
+
+		<Weather_Category>Flying</Weather_Category>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LHTC9_DEPLOY_SquadX1</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<GroundVehicle Name="LHTC92">
+		<Variant_Of_Existing_Type>LHTC9ORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LHTC92</Encyclopedia_Text>
+		<Land_Model_Name>RV_LHTC9X2.ALO</Land_Model_Name>
+		<Num_Garrison_Slots>0</Num_Garrison_Slots>	
+		<Scale_Factor>0.7</Scale_Factor>
+	
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+		<Icon_Name>I_BUTTON_LHTC92.TGA</Icon_Name>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LHTC9_DEPLOY_SquadX2</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, LHTC92_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="LHTC92_Death_Clone_00">
+		<Variant_Of_Existing_Type>LHTC92</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_LHTC9X2_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundVehicle Name="LHTC9_SquadRebel_Soldiers">
+		<Variant_Of_Existing_Type>LHTC9</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_LHTC93.tga</Icon_Name>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LHTC9_DEPLOY_SquadRebel_Soldiers</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="LHTC9_SquadNewRebel_Soldiers">
+		<Variant_Of_Existing_Type>LHTC9</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_LHTC93.TGA</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LHTC9_DEPLOY_New_RebelAssault_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<GroundCompany Name="LHTC9_Company">
+		<Variant_Of_Existing_Type>Ha_Specforce_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LHTC9</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker Underworld_Mass_Driver_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LHTC9 TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Icon_Name>i_button_LHTC93.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>800</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		<Company_Units>LHTC9</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<GroundCompany Name="LHTC9_DEPLOY_SquadX1">
+		<Variant_Of_Existing_Type>Rebel_Assault_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper,Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper, Squad_Rebel_Assault_Trooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	<GroundCompany Name="LHTC9_2_Company">
+		<Variant_Of_Existing_Type>LHTC9_Company</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LHTC92 TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_LHTC92.TGA</Icon_Name>
+
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_XLanding, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>LHTC92</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<GroundCompany Name="LHTC9_DEPLOY_SquadX2">
+		<Variant_Of_Existing_Type>Rebel_New_Assault_Flame_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper,Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper, Squad_New_Rebel_Assault_Flame_Trooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	<GroundCompany Name="LHTC9_SquadRebel_Old_Assault_Company">
+		<Variant_Of_Existing_Type>LHTC9_Company</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_LHTC93.tga</Icon_Name>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Transport_Unit>Gallofree_TransportLHTC9</Company_Transport_Unit>
+		<Company_Units>LHTC9_SquadRebel_Soldiers</Company_Units>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LHTC9_DEPLOY_SquadRebel_Soldiers</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	<GroundCompany Name="LHTC9_DEPLOY_SquadRebel_Soldiers">
+		<Variant_Of_Existing_Type>Rebel_Old_Assault_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper,Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper, Squad_Old_Rebel_Assault_Trooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	
+	<GroundCompany Name="LHTC9_SquadRebel_New_Assault_Company">
+		<Variant_Of_Existing_Type>LHTC9_Company</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_LHTC93.TGA</Icon_Name>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Transport_Unit>Gallofree_TransportLHTC9</Company_Transport_Unit>
+		<Company_Units>LHTC9_SquadNewRebel_Soldiers</Company_Units>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<!-- make it faster to recharge -->
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LHTC9_DEPLOY_New_RebelAssault_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	<GroundCompany Name="LHTC9_DEPLOY_New_RebelAssault_Squad">
+		<Variant_Of_Existing_Type>Rebel_New_Assault_Squad_X_B</Variant_Of_Existing_Type>
+		<Company_Units> Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X, Squad_New_Rebel_Assault_Trooper_X</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	
+
+</LHTC9Unit_Data>

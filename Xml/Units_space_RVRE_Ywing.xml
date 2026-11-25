@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<RVRE_Ywingunit_Files>
+
+	<SpaceUnit Name="RVRE_Ywing">
+		<Variant_Of_Existing_Type>Y_Wing_Basic</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 68, 109, 131, 255 </No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_RVRE_Y_WING</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_Y_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Nebulon_B_Frigate Victory_Destroyer AcclamatorI </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Fighter Lancer T-Wing </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>RVRE_YWing.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>3.2</Max_Speed>
+		<Min_Speed>2.1</Min_Speed>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		
+		<HardPoints> 
+			HP_Fighter_Proton_Torpedo_Adv, HP_R_DefenderF_Laser_00, HP_R_DefenderF_Laser_01, HP_RVRE_Ywing_Turret, HP_Torpedoadv_Ability_00
+		</HardPoints>
+
+		<Icon_Name>i_button_RVRE_Ywing.tga</Icon_Name>
+		<Land_Bomber_Type>Resistance_Ywing_Bombing_Run</Land_Bomber_Type>
+	</SpaceUnit>
+	
+	
+	<Squadron Name="RVRE_Ywing_Squadron">
+		<Variant_Of_Existing_Type>Y-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_RVRE_Y_WING_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Star_Destroyer Victory_Destroyer Acclamator_Assault_Ship </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Fighter Tartan_Patrol_Cruiser Pirate_Fighter </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_Y_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Build_Cost_Credits>210</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Factoria_Cazas_Rebeldes</Required_Special_Structures>
+		<GUI_Row> 1 </GUI_Row>
+		<Squadron_Units>RVRE_Ywing, RVRE_Ywing, RVRE_Ywing</Squadron_Units>
+		<Create_Team_Type>RVRE_Ywing_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_RVRE_Ywing.tga</Icon_Name>
+		<GUI_Model_Name>RVRE_YWing.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>550</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>17</Tactical_Build_Time_Seconds>
+	</Squadron>
+	<Container Name="RVRE_Ywing_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_RVRE_Y_WING_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_Y_WING TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RVRE_Ywing.tga</Icon_Name>
+
+		<Max_Speed>3.2</Max_Speed>
+		<Min_Speed>2.1</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Antifrigate</CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</RVRE_Ywingunit_Files>

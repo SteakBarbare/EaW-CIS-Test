@@ -1,0 +1,493 @@
+<?xml version="1.0"?>
+
+
+<CIS_Malevolence_Data>
+		<SpaceUnit Name="Malevolence_Cruiser_MP">
+		<Variant_Of_Existing_Type>Malevolence_Cruiser</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust>1000.0</Layer_Z_Adjust>
+		<Lua_Script>ObjectScript_Blast</Lua_Script>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+	</SpaceUnit>		
+	<SpaceUnit Name="Malevolence_Cruiser">
+		<Text_ID>TEXT_UNIT_MALEVOLENCE</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MALEVOLENCE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_SSD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_VULTURE TEXT_WAVES_X3 TEXT_UNIT_CIS_HYENA TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DREADNAUGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> REP_AcclamatorI Rep_AcclamatorII Rep_VictorII </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rep_Venator REP_Valiant Rep_MandatorI </Encyclopedia_Vulnerable_To>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Malevolence_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Space_Model_Name>CIS_Malevolence.ALO</Space_Model_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>	
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Ranking_In_Category>5</Ranking_In_Category>
+	
+	    <GUI_Bracket_Height>500</GUI_Bracket_Height>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		
+		<GUI_Bounds_Scale>0.15</GUI_Bounds_Scale>
+
+		<Select_Box_Scale>4</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-50</Select_Box_Z_Adjust>
+
+		<Scale_Factor>1.8</Scale_Factor>
+		<Mass>0.999</Mass>
+		<Dense_FOW_Reveal_Range_Multiplier>0.24</Dense_FOW_Reveal_Range_Multiplier>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_SSD</Shield_Armor_Type>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Max_Speed>2.5</Max_Speed>
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Frigate </Space_Layer>
+		<Layer_Z_Adjust>350.0</Layer_Z_Adjust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		
+		<Max_Thrust>0.1</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Maintenance_Cost>0.3</Maintenance_Cost>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Damage>70</Damage>
+		<Autoresolve_Health>10000000</Autoresolve_Health>
+		<Shield_Points>500000</Shield_Points>
+		<Tactical_Health>5000000</Tactical_Health>
+		<Shield_Refresh_Rate>524000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+
+		<Ship_Class>capital</Ship_Class>
+		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
+		<!--<Political_Control>1</Political_Control>-->
+		<Political_Faction>CIS, Rebel</Political_Faction>
+		<Squadron_Capacity>40</Squadron_Capacity>
+		<Build_Cost_Credits>75000</Build_Cost_Credits>
+		<Piracy_Value_Credits>250</Piracy_Value_Credits>
+		<AI_Combat_Power>6000</AI_Combat_Power>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Size_Value>8</Size_Value>
+
+		<Death_Clone>Damage_Normal, Malevolence_Cruiser_Death_Clone</Death_Clone>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		
+		<Space_FOW_Reveal_Range>1800.0</Space_FOW_Reveal_Range>
+		
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+
+		<HardPoints>
+			HP_CIS_LHR_01,
+			HP_CIS_LHR_02,
+			HP_CIS_LHR_03,
+			HP_CIS_LHR_04,
+			HP_CIS_LHR_05,
+			HP_CIS_LHR_06,
+			HP_CIS_LHR_07,
+			HP_CIS_LHR_08,
+			HP_CIS_LHR_09,
+			HP_CIS_LHR_10,
+			HP_CIS_LHR_11,
+			HP_CIS_LHR_12,
+			HP_CIS_LHR_13,
+			HP_CIS_LHR_14,
+			HP_CIS_LHR_15,
+			HP_CIS_LHR_16,
+			HP_CIS_LHR_17,
+			HP_CIS_LHR_18,
+			HP_CIS_LHR_19,
+			HP_CIS_LHR_20,
+			HP_CIS_LHR_21,
+			HP_CIS_LHR_22,
+			HP_CIS_LHR_23,
+			HP_CIS_LHR_24,
+			HP_CIS_LHR_25,
+			HP_CIS_LHR_26,
+			HP_CIS_LHR_27,
+			HP_CIS_LHR_28,
+			HP_CIS_LHR_29,
+			HP_CIS_LHR_30,
+			HP_CIS_LHR_31,
+			HP_CIS_LHR_32,
+			HP_CIS_LHR_33,
+			HP_CIS_LHR_34,
+			HP_CIS_LHR_35,
+			HP_CIS_LHR_36,
+			HP_CIS_LHR_37,
+			HP_CIS_LHR_38,
+			HP_CIS_LHR_39,
+			HP_CIS_LHR_40,
+			HP_CIS_LHR_41,
+			HP_CIS_LHR_42,
+			HP_CIS_LHR_43,
+			HP_CIS_LHR_44,
+			HP_CIS_LHR_45,
+			HP_CIS_LHR_46,
+			HP_CIS_LHR_47,
+			HP_CIS_LHR_48,
+			HP_CIS_LHR_49,
+			HP_CIS_LHR_50,
+			HP_CIS_LHR_51,
+			HP_CIS_LHR_52,
+			HP_CIS_LHR_53,
+			HP_CIS_LHR_54,
+			HP_CIS_LHR_55,
+			HP_CIS_LHR_56,
+			HP_CIS_LHR_57,
+			HP_CIS_LHR_58,
+			HP_CIS_LHR_59,
+			HP_CIS_LHR_60,
+			HP_CIS_LHR_61,
+			HP_CIS_LHR_62,
+			HP_CIS_LHR_63,
+			HP_CIS_LHR_64,
+			HP_CIS_LHR_65,
+			HP_CIS_LHR_66,
+			HP_CIS_LHR_67,
+			HP_CIS_LHR_68,
+			HP_CIS_LHR_69,
+			HP_CIS_LHR_70,
+			HP_CIS_LHR_71,
+			HP_CIS_LHR_72,
+			HP_CIS_LHR_73,
+			HP_CIS_LHR_74,
+			HP_CIS_LHR_75,
+			HP_CIS_LHR_76,
+			HP_CIS_LHR_77,
+			HP_CIS_LHR_78,
+			HP_CIS_LHR_79,
+			HP_CIS_LHR_80,
+			HP_CIS_Malevolence_TH_01,
+			HP_CIS_Malevolence_TH_02,
+			HP_CIS_Malevolence_TH_03,
+			HP_CIS_Malevolence_TH_04,
+			HP_CIS_Malevolence_TH_05,
+			HP_CIS_Malevolence_TH_06,
+			HP_CIS_Malevolence_TH_07,
+			HP_CIS_Malevolence_TH_08,
+			HP_CIS_Malevolence_TH_09,
+			HP_CIS_Malevolence_TH_10,
+			HP_CIS_Malevolence_TB_01,
+			HP_CIS_Malevolence_TB_02,
+			HP_CIS_Malevolence_TB_03,
+			HP_CIS_Malevolence_TB_04,
+			HP_CIS_Malevolence_TB_05,
+			HP_CIS_Malevolence_TB_06,
+			HP_CIS_Malevolence_TB_07,
+			HP_CIS_Malevolence_TB_08,
+			HP_CIS_Malevolence_TB_09,
+			HP_CIS_Malevolence_TB_10,
+			HP_CIS_Malevolence_TB_11,
+			HP_CIS_Malevolence_TB_12,
+			HP_CIS_Malevolence_TB_13,
+			HP_CIS_Malevolence_TB_14,
+			HP_CIS_Malevolence_TB_15,
+			HP_CIS_Malevolence_TB_16,
+			HP_CIS_Malevolence_TB_17,
+			HP_CIS_Malevolence_TB_18,
+			HP_CIS_Malevolence_TB_19,
+			HP_CIS_Malevolence_TB_20,
+			HP_CIS_Malevolence_TB_21,
+			HP_CIS_Malevolence_TB_22,
+			HP_CIS_Malevolence_TB_23,
+			HP_CIS_Malevolence_TB_24,
+			HP_CIS_Malevolence_TB_25,
+			HP_CIS_Malevolence_TB_26,
+			HP_CIS_Malevolence_TB_27,
+			HP_CIS_Malevolence_TB_28,
+			HP_CIS_Malevolence_TB_29,
+			HP_CIS_Malevolence_TB_30,
+			HP_CIS_Malevolence_TB_31,
+			HP_CIS_Malevolence_TB_32,
+			HP_CIS_Malevolence_TB_33,
+			HP_CIS_Malevolence_TB_34,
+			HP_CIS_Malevolence_TB_35,
+			HP_CIS_Malevolence_TB_36,
+			HP_CIS_Malevolence_TB_37,
+			HP_CIS_Malevolence_TB_38,
+			HP_CIS_Malevolence_TB_39,
+			HP_CIS_Malevolence_TB_40,
+			HP_CIS_Malevolence_TB_41,
+			HP_CIS_Malevolence_TB_42,
+			HP_CIS_Malevolence_TB_43,
+			HP_CIS_Malevolence_TB_44,
+			HP_CIS_Malevolence_TB_45,
+			HP_CIS_Malevolence_TB_46,
+			HP_CIS_Malevolence_TB_47,
+			HP_CIS_Malevolence_TB_48,
+			HP_CIS_Malevolence_TB_49,
+			HP_CIS_Malevolence_TB_50,
+			HP_CIS_Malevolence_TB_51,
+			HP_CIS_Malevolence_TB_52,
+			HP_CIS_Malevolence_TB_53,
+			HP_CIS_Malevolence_TB_54,
+			HP_CIS_Malevolence_TB_55,
+			HP_CIS_Malevolence_TB_56,
+			HP_CIS_Malevolence_TB_57,
+			HP_CIS_Malevolence_TB_58,
+			HP_CIS_Malevolence_TB_59,
+			HP_CIS_Malevolence_TB_60,
+			HP_CIS_Malevolence_TB_61,
+			HP_CIS_Malevolence_TB_62,
+			HP_CIS_Malevolence_TB_63,
+			HP_CIS_Malevolence_TB_64,
+			HP_CIS_Malevolence_TB_65,
+			HP_CIS_Malevolence_TB_66,
+			HP_CIS_Malevolence_TB_67,
+			HP_CIS_Malevolence_TB_68,
+			HP_CIS_Malevolence_TB_69,
+			HP_CIS_Malevolence_TB_70,
+			HP_CIS_Malevolence_TB_71,
+			HP_CIS_Malevolence_TB_72,
+			HP_CIS_Malevolence_TB_73,
+			HP_CIS_Malevolence_TB_74,
+			HP_CIS_Malevolence_TB_75,
+			HP_CIS_Malevolence_TB_76,
+			HP_CIS_Malevolence_TB_77,
+			HP_CIS_Malevolence_TB_78,
+			HP_CIS_Malevolence_TB_79,
+			HP_CIS_Malevolence_TB_80,
+			HP_CIS_Malevolence_TB_81,
+			HP_CIS_Malevolence_TB_82,
+			HP_CIS_Malevolence_TB_83,
+			HP_CIS_Malevolence_TB_84,
+			HP_CIS_Malevolence_TM_01,
+			HP_CIS_Malevolence_TM_02,
+			HP_CIS_Malevolence_TM_03,
+			HP_CIS_Malevolence_TM_04,
+			HP_CIS_Malevolence_TM_05,
+			HP_CIS_Malevolence_TM_06,
+			HP_CIS_Malevolence_TM_07,
+			HP_CIS_Malevolence_TM_08,
+			HP_CIS_Malevolence_TM_09,
+			HP_CIS_Malevolence_TM_10,
+			HP_CIS_Malevolence_TM_11,
+			HP_CIS_Malevolence_TM_12,
+			HP_CIS_Malevolence_TM_13,
+			HP_CIS_Malevolence_TM_14,
+			HP_CIS_Malevolence_TM_15,
+			HP_CIS_Malevolence_TM_16,
+			HP_CIS_Malevolence_TM_17,
+			HP_CIS_Malevolence_TM_18,
+			HP_CIS_Malevolence_TM_19,
+			HP_CIS_Malevolence_TM_20,
+			HP_CIS_Malevolence_TM_21,
+			HP_CIS_Malevolence_TM_22,
+			HP_CIS_Malevolence_TM_23,
+			HP_CIS_Malevolence_TM_24,
+			HP_CIS_Malevolence_TM_25,
+			HP_CIS_Malevolence_TM_26,
+			HP_CIS_Malevolence_TM_27,
+			HP_CIS_Malevolence_TM_28,
+			HP_CIS_Malevolence_TM_29,
+			HP_CIS_Malevolence_TM_30,
+			HP_CIS_Malevolence_TM_31,
+			HP_CIS_Malevolence_TM_32,
+			HP_CIS_Malevolence_TM_33,
+			HP_CIS_Malevolence_TM_34,
+			HP_CIS_Malevolence_TM_35,
+			HP_CIS_Malevolence_TM_36,
+			HP_CIS_Malevolence_TM_37,
+			HP_CIS_Malevolence_TM_38,
+			HP_CIS_Malevolence_TM_39,
+			HP_CIS_Malevolence_TM_40,
+			HP_CIS_Malevolence_TM_41,
+			HP_CIS_Malevolence_TM_42,
+			HP_CIS_Malevolence_TM_43,
+			HP_CIS_Malevolence_TM_44,
+			HP_CIS_Malevolence_TM_45,
+			HP_CIS_Malevolence_TM_46,
+			HP_CIS_Malevolence_TM_47,
+			HP_CIS_Malevolence_TM_48,
+			HP_CIS_Malevolence_TM_49,
+			HP_CIS_Malevolence_TM_50,
+			HP_CIS_Malevolence_TM_51,
+			HP_CIS_Malevolence_TM_52,
+			HP_CIS_Malevolence_TM_53,
+			HP_CIS_Malevolence_TM_54,
+			HP_CIS_Malevolence_TM_55,
+			HP_CIS_Malevolence_TM_56,
+			HP_CIS_Malevolence_TM_57,
+			HP_CIS_Malevolence_TM_58,
+			HP_CIS_Malevolence_TM_59,
+			HP_CIS_Malevolence_TM_60,
+			HP_CIS_Malevolence_TM_61,
+			HP_CIS_Malevolence_TM_62,
+			HP_CIS_Malevolence_TM_63,
+			HP_CIS_Malevolence_TM_64,
+			HP_CIS_Malevolence_TM_65,
+			HP_CIS_Malevolence_TM_66,
+			HP_CIS_Malevolence_TM_67,
+			HP_CIS_Malevolence_TM_68,
+			HP_CIS_Malevolence_TM_69,
+			HP_CIS_Malevolence_TM_70,
+			HP_CIS_Malevolence_TM_71,
+			HP_CIS_Malevolence_TM_72,
+			HP_CIS_Malevolence_TM_73,
+			HP_CIS_Malevolence_TM_74,
+			HP_CIS_Malevolence_TM_75,
+			HP_CIS_Malevolence_TM_76,
+			HP_CIS_Malevolence_TM_77,
+			HP_CIS_Malevolence_TM_78,
+			HP_CIS_Malevolence_TM_79,
+			HP_CIS_Malevolence_TM_80,
+			HP_CIS_Malevolence_TM_81,
+			HP_CIS_Malevolence_TM_82,
+			HP_CIS_Malevolence_TM_83,
+			HP_CIS_Malevolence_TM_84,
+			HP_CIS_Malevolence_TM_85,
+			HP_CIS_Malevolence_TM_86,
+			HP_CIS_Malevolence_TM_87,
+			HP_CIS_Malevolence_TM_88,
+			HP_CIS_Malevolence_TM_89,
+			HP_CIS_Malevolence_TM_90,
+			HP_CIS_Malevolence_TM_91,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_EspecialMalevolence_01,
+			HP_EspecialMalevolence_02
+	  </HardPoints>
+		<Icon_Name>I_BUTTON_CIS_Malevolence.tga</Icon_Name>
+		<GUI_Model_Name>CIS_Malevolence.ALO</GUI_Model_Name>
+		
+
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Bombard_Select_Target> RHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> RHD_Bombard_Incoming </SFXEvent_Bombard_Incoming>
+		<SFXEvent_Build_Complete>Unit_Complete_DroidShip1</SFXEvent_Build_Complete>
+		
+		<SFXEvent_Select>Unit_Select_DroidShip1</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_DroidShip1</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_DroidShip1</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_DroidShip1</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_DroidShip1</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Move_DroidShip1</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Attack_DroidShip1</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Attack_DroidShip1 </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Attack_DroidShip1 </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> Unit_Attack_DroidShip1 </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_DroidShip1 </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_DroidShip1 </SFXEvent_Health_Critical_Warning>
+				
+		<SFXEvent_Ambient_Loop>Unit_Acclamator_Moving_Engine_Loop</SFXEvent_Ambient_Loop>
+		<SFXEvent_Engine_Idle_Loop> Unit_Acclamator_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Acclamator_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Acclamator_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Cruiser_Death_SFX</Death_SFXEvent_Start_Die>
+
+		
+		<Land_Damage_Thresholds>1, 0.75, 0.50</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+
+		<CategoryMask> Capital | AntiFrigate </CategoryMask>
+
+		<GUI_Distance>2300</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Space_Full_Stop_Command> Yes </Space_Full_Stop_Command>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		 
+		<Guard_Chase_Range>300.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
+
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+				
+		<Radar_Icon_Size>0.0838  0.11178</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+
+		<Starting_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Hyena_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Hyena_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+
+		<Tactical_Bribe_Cost>1475</Tactical_Bribe_Cost>
+		
+	   <Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_DroidShip1</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+								
+		</Unit_Abilities_Data>
+		
+		<Score_Cost_Credits> 42500 </Score_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>15000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>120</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>7</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Malevolence_Cruiser_Death_Clone">
+		<Text_ID> TEXT_UNIT_PROVIDENCE </Text_ID>
+		<Space_Model_Name>CIS_Malevolence_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Scale_Factor> 1.8 </Scale_Factor>
+		<Layer_Z_Adjust>350.0</Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel, Pirates, Underworld, Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Death_Explosions>Death_Explosion_Flash_5000</Death_Explosions>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+	</SpaceUnit>
+	
+</CIS_Malevolence_Data>

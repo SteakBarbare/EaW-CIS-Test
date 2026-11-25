@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+
+
+
+<RVRE_Land_Units2_Data>
+	<SpecialStructure Name="RVRE_Air_Landing_TZ">
+		<Variant_Of_Existing_Type>Basic_Air_Landing</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>R_Air_Landing.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_RVRE_Y_WING TEXT_DESC_C_CANTIDAD_2 TEXT_UNIT_RVRE_Z95 TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Affiliation>RVRE</Affiliation>
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Starting_Spawned_Units_Tech_0>RVRE_Z95_Fighter_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RVRE_Z95_Fighter_Land, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>RVRE_Y_Wing_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RVRE_Y_Wing_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Destruction_Survivors> 
+			RVRE_Survivors_Small, 1.0
+			RVRE_Survivors_Medium, 1.0
+			RVRE_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>		
+	
+	 <GroundInfantry Name="RVRE_Fleet_RegimentB">
+		<Variant_Of_Existing_Type> Squad_RVRE_Assault_Trooper_B </Variant_Of_Existing_Type>
+		<Lua_Script>RVRE_A_RBGround_01</Lua_Script>
+		<Icon_Name>i_button_RVRE_Fleet_Regiment.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+		<AI_Combat_Power>200</AI_Combat_Power>
+	 </GroundInfantry>
+
+	<HeroCompany Name="RVRE_Fleet_Regiment">
+		<Variant_Of_Existing_Type>Rebel_Sniper_Team</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_RB_RVRE_FLEET_REGIMENT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_RVRE_E50 TEXT_UNIT_RVRE_TROOPER TEXT_UNIT_PLEX_SOLDIER TEXT_UNIT_RVRE_V4XD TEXT_UNIT_RVRE_M2_TANK TEXT_UNIT_RVRE_AEROCHASER TEXT_UNIT_RVRE_Z95  TEXT_UNIT_RVRE_Y_WING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INF_MECH</Encyclopedia_Unit_Class>
+		<Autoresolve_Health>1000</Autoresolve_Health>
+		<Affiliation>RVRE</Affiliation>
+		<Build_Cost_Credits>1385</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>RVRE_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>R_MCC_Transport</Company_Transport_Unit>
+		<Company_Units> RVRE_Fleet_RegimentB </Company_Units>
+		<Icon_Name>i_button_RVRE_Fleet_Regiment.tga</Icon_Name>
+		<Population_Value>2</Population_Value>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Infantry | LandHero</CategoryMask>
+	</HeroCompany>
+	
+	
+	<SpecialStructure Name="RVRE_Air_Landing_T82">
+		<Variant_Of_Existing_Type>Basic_Air_Landing</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>R_Air_Landing.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_R_XWINGT70 TEXT_DESC_C_CANTIDAD_2 TEXT_UNIT_RVRE_T82 TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Affiliation>RVRE</Affiliation>
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Starting_Spawned_Units_Tech_0>RVRE_T82, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RVRE_T82, -1</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>RVRE_X_Wing_Fighter_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RVRE_X_Wing_Fighter_Land, -1</Reserve_Spawned_Units_Tech_0>
+		<Destruction_Survivors> 
+			RVRE_Survivors_Small, 1.0
+			RVRE_Survivors_Medium, 1.0
+			RVRE_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>		
+	
+	
+	<GroundVehicle Name="RVRE_Army_RegimentB">
+		<Variant_Of_Existing_Type>RVRE_ATAP</Variant_Of_Existing_Type>
+		<Custom_Hard_XExtent> 8.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<Lua_Script>RVRE_A_RBGround_02</Lua_Script>
+		<Icon_Name>I_BUTTON_RVRE_Army_Regiment.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask> Vehicle | LandHero </CategoryMask>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+		<AI_Combat_Power>800</AI_Combat_Power>
+	</GroundVehicle>
+	<HeroCompany Name="RVRE_Army_Regiment">
+		<Variant_Of_Existing_Type>RVRE_ATAP_Squad</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_RB_RVRE_ARMY_REGIMENT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_RVRE_E50 TEXT_UNIT_RVRE_ATAP TEXT_UNIT_RVRE_AT_TE TEXT_UNIT_RVRE_AAT TEXT_UNIT_RVRE_M2_TANK TEXT_UNIT_RVRE_M2_SONIC_TANK TEXT_UNIT_RVRE_T82 TEXT_UNIT_R_XWINGT70</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARMOR</Encyclopedia_Unit_Class>
+		<Autoresolve_Health>500</Autoresolve_Health>
+		<Affiliation>RVRE</Affiliation>
+		<Build_Cost_Credits>2422</Build_Cost_Credits>
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>RVRE_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>R_Strike_Transport</Company_Transport_Unit>
+		<Company_Units>RVRE_Army_RegimentB, RVRE_ATAP, RVRE_ATAP, RVRE_ATAP</Company_Units>
+		<Icon_Name>I_BUTTON_RVRE_Army_Regiment.tga</Icon_Name>
+		<Population_Value>3</Population_Value>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Slice_Cost_Credits>1500</Slice_Cost_Credits>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>No</Show_Hero_Head>
+		<CategoryMask>Vehicle | LandHero</CategoryMask>
+	</HeroCompany>
+
+</RVRE_Land_Units2_Data>

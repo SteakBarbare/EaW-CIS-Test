@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<CIS_ProvidenceUnit_Data>
+	<SpaceUnit Name="P_Providence">
+		<Variant_Of_Existing_Type>CIS_Providence</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Pirates</Affiliation>		
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+	</SpaceUnit>	
+	<SpaceUnit Name="CIS_Providence">
+		<Variant_Of_Existing_Type>ProvidenceORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>CIS_Providence.ALO</Space_Model_Name>
+
+		<Death_Clone>Damage_Normal, CIS_Providence_Death_Clone</Death_Clone>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Layer_Z_Adjust>568.253</Layer_Z_Adjust>
+		<Space_Layer> Corvette </Space_Layer>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<AI_Combat_Power>2295</AI_Combat_Power>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+						
+		<HardPoints>
+			HP_Flak_CIS_01,
+			HP_Flak_CIS_02,
+			HP_Flak_CIS_03,
+			HP_Flak_CIS_04,
+			HP_Flak_CIS_05,
+			HP_Flak_CIS_06,
+			HP_Flak_CIS_07,
+			HP_Flak_CIS_08,
+			HP_Flak_CIS_09,
+			HP_Flak_CIS_10,
+			HP_Flak_CIS_11,
+			HP_Flak_CIS_12,
+			HP_Flak_CIS_13,
+			HP_Flak_CIS_14,
+			HP_Ion_01, 
+			HP_Ion_02,
+			HP_Ion_03, 
+			HP_Ion_04, 
+			HP_Ion_05, 
+			HP_Ion_06,
+			HP_Ion_07, 
+			HP_Ion_08,
+			HP_T_CISProvidence_01,
+			HP_T_CISProvidence_02,
+			HP_T_CISProvidence_03,
+			HP_T_CISProvidence_04,
+			HP_T_CISProvidence_05,
+			HP_T_CISProvidence_06,
+			HP_T_CISProvidence_07,
+			HP_T_CISProvidence_08,
+			HP_T_CISProvidence_09,
+			HP_T_CISProvidence_10,
+			HP_T_CISProvidence_11,
+			HP_T_CISProvidence_12,
+			HP_T_CISProvidence_13,
+			HP_T_CISProvidence_14,
+			HP_T_CISProvidence_15,
+			HP_T_CISProvidence_16,
+			HP_Shield_Generator_00, 
+			HP_Engines_00,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01
+	  </HardPoints>
+		<Icon_Name>I_BUTTON_CIS_PROVIDENCE.TGA</Icon_Name>
+		<GUI_Model_Name>CIS_Providence.ALO</GUI_Model_Name>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Hyena_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 4</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Hyena_Squadron5, 6</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+						
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	2.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.30f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.30f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_DroidShip1</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_DroidShip1</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+		</Unit_Abilities_Data>
+		
+				
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_Providence_Death_Clone">
+		<Text_ID> TEXT_UNIT_PROVIDENCE </Text_ID>
+		<Space_Model_Name>CIS_Providence_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Scale_Factor> 0.4 </Scale_Factor>
+		<Layer_Z_Adjust> -30.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel, Pirates, Underworld, Empire </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+</CIS_ProvidenceUnit_Data>

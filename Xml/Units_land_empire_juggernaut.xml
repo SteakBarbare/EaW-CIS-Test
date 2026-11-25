@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<JuggernautUnit_Data>
+	<GroundVehicle Name="HAV_Juggernaut_A5_Troopers">
+		<Variant_Of_Existing_Type>Rep_HAV_Juggernaut_A5</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<SFXEvent_Select>Unit_Select_Juggernaut</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Juggernaut</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Juggernaut</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Juggernaut</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Juggernaut </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Juggernaut</SFXEvent_Assist_Attack>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Juggernaut_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Juggernaut_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<Lua_Script>ObjectScript_Summon_AutoFire</Lua_Script>
+
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+              	<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_INFANTRY_REINFORCES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_Juggernauth_A5_RE</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>Juggernaut_troopers_Marker</Spawned_Object_Type>
+				<Effective_Radius> 10.0 </Effective_Radius>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 10 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="Juggernaut_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 28.0 </Defense_Duration_In_Secs>
+                <Laser_Color>227, 16, 21, 255</Laser_Color>
+                <Bone_Names>muzzleb_00, muzzleb_01</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>350.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>40</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.25</Recharge_Time_In_Secs>
+            </Laser_Defense_Ability>
+		</Abilities>
+        
+
+	</GroundVehicle>
+	
+	<GroundCompany Name="HAV_Juggernaut_A5_Troopers_Company">
+		<Variant_Of_Existing_Type>Rep_HAV_Juggernaut_A5_Company</Variant_Of_Existing_Type>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_A5_TROOPERS</Encyclopedia_Text>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Company_Units>HAV_Juggernaut_A5_Troopers</Company_Units>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+        <Lua_Script>ObjectScript_Summon_AutoFire</Lua_Script>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+              	<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_INFANTRY_REINFORCES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_Juggernauth_A5_RE</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>Juggernaut_troopers_Marker</Spawned_Object_Type>
+				<Effective_Radius> 10.0 </Effective_Radius>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 10 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="Juggernaut_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 28.0 </Defense_Duration_In_Secs>
+                <Laser_Color>34, 34, 235, 255</Laser_Color>
+                <Bone_Names>muzzleb_00, muzzleb_01</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>350.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>40</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.25</Recharge_Time_In_Secs>
+            </Laser_Defense_Ability>
+		</Abilities>
+
+	</GroundCompany>	
+
+	<GroundVehicle Name="HAV_Juggernaut">
+		<Variant_Of_Existing_Type>Rep_HAV_Juggernaut_A6</Variant_Of_Existing_Type>
+	</GroundVehicle>
+	
+
+
+
+</JuggernautUnit_Data>

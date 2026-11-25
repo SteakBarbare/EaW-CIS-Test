@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<Story>
+
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Enter_Tech_2">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>EVFO_To_Tech_2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Enter_Tech_3">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>EVFO_To_Tech_3</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Enter_Tech_4">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>EVFO_To_Tech_4</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Enter_Tech_5">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>EVFO_To_Tech_5</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_RVRE_Leia_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>RVRE_Leia_Team</Reward_Param1>
+		<Reward_Param2>D_Qar</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	
+	<Event Name="Spawn_Admiral_Ackbar_Raddus">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Admiral_Ackbar_Raddus</Reward_Param1>
+		<Reward_Param2>D_Qar</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Vice_Admiral_Holdo">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Vice_Admiral_Holdo</Reward_Param1>
+		<Reward_Param2>D_Qar</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_RVRE_Poe_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>RVRE_Poe_Team</Reward_Param1>
+		<Reward_Param2>Jakku</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_RVRE_Finn_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>RVRE_Finn_Team</Reward_Param1>
+		<Reward_Param2>Jakku</Reward_Param2>
+		<Prereq>Enter_Tech_2</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_RVRE_Rey_Jedi_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>RVRE_Rey_Jedi_Team</Reward_Param1>
+		<Reward_Param2>D_Qar</Reward_Param2>
+		<Prereq>Enter_Tech_3</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_RVRE_Chewi_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>RVRE_Chewi_Team</Reward_Param1>
+		<Reward_Param2>D_Qar</Reward_Param2>
+		<Prereq>Enter_Tech_4</Prereq>
+	</Event>
+	
+</Story>

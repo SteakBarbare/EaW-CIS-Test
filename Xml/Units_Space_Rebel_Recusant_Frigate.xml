@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+
+<RV_RecusantUnit_Data>
+
+	
+
+	<SpaceUnit Name="RV_Recusant">
+		<Variant_Of_Existing_Type>RecusantORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>RV_Recusant_Destroyer.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_RV_Recusant.tga</Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+
+
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<Affiliation>Rebel, RVRE</Affiliation>
+
+		<Death_Clone>Damage_Normal, RV_Recusant_Death_Clone</Death_Clone>
+		
+		<HardPoints>
+			HP_Ion_01,
+			HP_Ion_02,
+			HP_Ion_03,
+			HP_TurboR_01, 
+			HP_TurboR_02, 
+			HP_TurboR_03, 
+			HP_TurboR_04,
+			HP_TurboR_05, 
+			HP_TurboR_06, 
+			HP_TurboR_07, 
+			HP_TurboR_08, 
+			HP_Shield_Generator_00, 
+			HP_Engines_00
+		</HardPoints>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="RV_Recusant_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>RV_Recusant_Destroyer_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+</RV_RecusantUnit_Data>

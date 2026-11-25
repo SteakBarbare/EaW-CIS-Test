@@ -1,0 +1,346 @@
+<?xml version="1.0"?>
+<Rep_MandatorIIUnit_Data>
+	<SpaceUnit Name="Up_E_MandatorI_to_II">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MANDATOR</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_MANDATORMKII TEXT_TOOLTIP_MANDATORMKII</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_E_MandatorI_Upgrade.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Required_Orbiting_Units>E_MandatorI</Required_Orbiting_Units>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Lua_Script>Up_E_MandatorI_to_II</Lua_Script>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+
+		<Population_Value>10</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Up_Rep_MandatorI_to_II">
+		<Variant_Of_Existing_Type>Up_E_MandatorI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MANDATOR</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_MANDATORMKII TEXT_TOOLTIP_MANDATORMKII</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Rep_MandatorI_Upgrade.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Required_Orbiting_Units>Rep_MandatorI</Required_Orbiting_Units>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Lua_Script>Up_Rep_MandatorI_to_II</Lua_Script>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Population_Value>10</Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="E_MandatorI_Up">
+		<Variant_Of_Existing_Type>MandatorIIORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="E_MandatorII">
+		<Variant_Of_Existing_Type>MandatorIIORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<AI_Combat_Power>9900</AI_Combat_Power>
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_MandatorII">
+		<Variant_Of_Existing_Type>MandatorIIORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_MandatorI_Up">
+		<Variant_Of_Existing_Type>MandatorIIORG</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<!--<Space_Override_Population_Value>5</Space_Override_Population_Value>-->
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="MandatorIIORG">
+		<Variant_Of_Existing_Type>VenatorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MANDATORMKII</Text_ID>
+		<Encyclopedia_Good_Against> CIS_LucrehulkB CIS_Providence CIS_Pinance </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_DroidBomber CIS_Chembomber_SquadronB CIS_Geo_Dread </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MANDATORMKII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_SSD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_VWING_FIGHTER TEXT_WAVES_X2 TEXT_UNIT_ARC_170 TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DREADNAUGHT </Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Rep_Mandator_MKII_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>REP_MandatorMKII.ALO</Space_Model_Name>
+		<Required_Planets>Fondor</Required_Planets>
+		<Scale_Factor>0.65</Scale_Factor>
+
+		<Max_Speed>2.2</Max_Speed>
+
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.2</Max_Thrust>
+		
+		<GUI_Bounds_Scale>0.15</GUI_Bounds_Scale>
+		
+		<Layer_Z_Adjust>575.0</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_SSD2</Shield_Armor_Type>
+		<Space_Layer> SuperCapital </Space_Layer>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<CategoryMask> Capital | AntiSuper </CategoryMask>
+		<Death_Clone>Damage_Normal, Rep_MandatorII_Death_Clone</Death_Clone>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>500000</Shield_Points>
+		<Tactical_Health>750000000</Tactical_Health>
+		<Shield_Refresh_Rate>506000</Shield_Refresh_Rate>
+		<Energy_Capacity>3500000</Energy_Capacity>
+		<Energy_Refresh_Rate>2100000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>14000</Build_Cost_Credits>
+		<AI_Combat_Power>3855</AI_Combat_Power>
+		<Build_Time_Seconds>200</Build_Time_Seconds>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+
+		<HardPoints> 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Fighter_BayH_00,
+			HP_Torpedo_01,
+			HP_Torpedo_02,
+			HP_IonM_01,
+			HP_IonM_02,
+			HP_IonM_03,
+			HP_IonM_04,
+			HP_IonM_05,
+			HP_IonM_06,
+			HP_IonM_07,
+			HP_IonM_08,
+			HP_IonM_09,
+			HP_IonM_10,
+			HP_T_MandatorII_01,
+			HP_T_MandatorII_02,
+			HP_T_MandatorII_03,
+			HP_T_MandatorII_04,
+			HP_T_MandatorII_05,
+			HP_T_MandatorII_06,
+			HP_T_MandatorII_07,
+			HP_T_MandatorII_08,
+			HP_T_MandatorII_09,
+			HP_T_MandatorII_10,
+			HP_T_MandatorII_11,
+			HP_T_MandatorII_12,
+			HP_T_MandatorII_13,
+			HP_T_MandatorII_14,
+			HP_T_MandatorII_15,
+			HP_T_MandatorII_16,
+			HP_T_MandatorII_17,
+			HP_T_MandatorII_18,
+			HP_T_MandatorII_19,
+			HP_T_MandatorII_20,
+			HP_T_MandatorII_21,
+			HP_T_MandatorII_22,
+			HP_T_MandatorII_23,
+			HP_T_MandatorII_24,
+			HP_T_MandatorII_25,
+			HP_T_MandatorII_26,
+			HP_T_MandatorII_27,
+			HP_T_MandatorII_28,
+			HP_T_MandatorII_29,
+			HP_T_MandatorII_30,
+			HP_T_MandatorI_31,
+			HP_T_MandatorI_32,
+			HP_T_MandatorI_33,
+			HP_T_MandatorI_34,
+			HP_T_MandatorI_35,
+			HP_T_MandatorI_36,
+			HP_T_MandatorI_37,
+			HP_T_MandatorI_38,
+			HP_T_MandatorI_39,
+			HP_T_MandatorI_40,
+			HP_T_MandatorI_41,
+			HP_T_MandatorI_42,
+			HP_T_MandatorI_43,
+			HP_T_MandatorI_44,
+			HP_T_MandatorI_45,
+			HP_T_MandatorI_46,
+			HP_T_MandatorI_47,
+			HP_T_MandatorII_48,
+			HP_T_MandatorII_49,
+			HP_T_MandatorII_50,
+			HP_T_MandatorII_51,
+			HP_T_MandatorII_52,
+			HP_TurboMB_01,
+			HP_TurboMB_02,
+			HP_TurboMB_03,
+			HP_TurboMB_04,
+			HP_TurboMB_05,
+			HP_TurboMB_06,
+			HP_TurboMB_07,
+			HP_TurboMB_08,
+			HP_TurboMB_09,
+			HP_TurboMB_10,
+			HP_EspecialBQ_00,
+			HP_EspecialBQ_01,
+			HP_EspecialBQ_02,
+			HP_EspecialBQ_03,
+			HP_EspecialBQ_04,
+			HP_EspecialBQ_05,
+			HP_GENERIC_SHIELD_LEECH_00B
+		</HardPoints>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_VWing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rep_VWing_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		
+		<Icon_Name>I_BUTTON_REP_MANDATOR_MKII.TGA</Icon_Name>
+		<GUI_Model_Name>REP_MandatorMKII.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Select>Unit_Select_REP_MANDATORII</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_E_BC</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_E_BC</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_E_BC</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_E_BC</SFXEvent_Guard>
+		<SFXEvent_Move_Opposite>Unit_Move_Opposite_E_BC</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Barrage_E_BC</SFXEvent_Barrage>
+		<SFXEvent_Stop>Unit_Stop_E_BC</SFXEvent_Stop>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_E_BC </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_E_BC </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target>	EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_Attack_E_BC </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Ambient_Loop>Unit_E_BC_Idle_Engine_Loop</SFXEvent_Ambient_Loop>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+         
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_REP_MANDATORII</SFXEvent_Build_Complete>
+		
+		<Radar_Icon_Size>0.0838  0.11178</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			 <Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+                <Type>LEECH_SHIELDS</Type>
+                <Recharge_Seconds>55.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> MandatorII_Leech_Shields </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 3000.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Leech_Sheilds_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_Target_Ability> Unit_Leech_Sheilds_Kadalbe </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+ 				<Supports_Autofire>True</Supports_Autofire>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	4000.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	200.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+           </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		 <Abilities SubObjectList="Yes">
+
+            <Leech_Shields_Ability Name="MandatorII_Leech_Shields">
+                <Activation_Style> User_Input </Activation_Style>
+                <Applicable_Unit_Categories> Corvette | Frigate | Capital </Applicable_Unit_Categories>
+                <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+                <Activation_Min_Range>10</Activation_Min_Range>
+                <Activation_Max_Range>3000</Activation_Max_Range>
+                <Duration_In_Secs> 25.0 </Duration_In_Secs>
+                <Shield_Damage_Per_Second> 100000.0 </Shield_Damage_Per_Second>
+                <Damage_Multiplier> 3.0 </Damage_Multiplier>
+                <Beam_Color>146, 25, 56, 255</Beam_Color>
+                <Beam_Bone_Name>HP_SHL_00_BONE</Beam_Bone_Name>
+                <Beam_Frames>10</Beam_Frames>
+                <Beam_Width>40.0</Beam_Width>
+                <Beam_Texture_Name>tractor_beam00.tga</Beam_Texture_Name>
+                <Beam_Effect_Name>Leech_Shields</Beam_Effect_Name>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Leech_Effect>Leech_Effect</Leech_Effect>
+            </Leech_Shields_Ability>
+            
+        </Abilities>
+		
+		
+		<Tactical_Build_Cost_Multiplayer>14000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>100</Tactical_Build_Time_Seconds>
+
+		<Population_Value>10</Population_Value>
+		<!--<Space_Override_Population_Value>4</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Rep_MandatorII_Death_Clone">
+		<Text_ID> TEXT_UNIT_MANDATORMKII </Text_ID>
+		<Space_Model_Name>REP_MandatorMKII_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.65</Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Rep_MandatorIIUnit_Data>

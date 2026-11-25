@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<Mc80AJMUnit_Data>
+	<SpaceUnit Name="Mc80AJM">
+		<Variant_Of_Existing_Type>MC80AJMORG</Variant_Of_Existing_Type>
+
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosR</Required_Special_Structures>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y_Wing_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y_Wing_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+		
+		<Death_Clone>Damage_Normal, Mc80AJM_Death_Clone</Death_Clone>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MC80AJM_CRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_X_WING_SQUADRON TEXT_WAVES_X2 TEXT_UNIT_OLDBTLS3YWING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		
+		
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="MC80AJMORG">
+		<Variant_Of_Existing_Type>Mc80aORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MC80AJM</Text_ID>
+		<Space_Model_Name>RV_MC80AJM.ALO</Space_Model_Name>
+		<Scale_Factor>0.55</Scale_Factor>
+
+		<Layer_Z_Adjust>169.416</Layer_Z_Adjust>
+		<Ranged_Target_Z_Adjust>0.0</Ranged_Target_Z_Adjust>
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Affiliation>Rebel</Affiliation>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Build_Cost_Credits>5500</Build_Cost_Credits>
+		<AI_Combat_Power>3495</AI_Combat_Power>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+
+
+		<HardPoints>
+			HP_T_MC80AN_01,
+			HP_T_MC80AN_02,
+			HP_T_MC80AN_03,
+			HP_T_MC80AN_04,
+			HP_T_MC80N1_05,
+			HP_T_MC80N1_06,
+			HP_T_MC80AN_07,
+			HP_T_MC80AN_08,
+			HP_T_MC80AN_09,
+			HP_T_MC80AN_10,
+			HP_T_MC80AN_11,
+			HP_T_MC80AN_12,
+			HP_T_MC80N1_13,
+			HP_T_MC80AN_14,
+			HP_T_MC80AN_15,
+			HP_T_MC80AN_16,
+			HP_T_MC80AN_17,
+			HP_T_MC80AN_18,
+			HP_T_MC80AN_19,
+			HP_T_MC80AN_20,
+			HP_T_MC80AN_21,
+			HP_T_MC80AN_22,
+			HP_T_MC80AN_23,
+			HP_T_MC80AN_24,
+			HP_T_MC80AN_25,
+			HP_T_MC80AN_26,
+			HP_T_MC80AN_27,
+			HP_T_MC80AN_28,
+			HP_T_MC80AN_29,
+			HP_T_MC80N1_30,
+			HP_T_MC80AN_31,
+			HP_T_MC80AN_32,
+			HP_T_MC80AN_33,
+			HP_T_MC80AN_34,
+			HP_T_MC80AN_35,
+			HP_T_MC80N1_36,
+			HP_T_MC80N1_37,
+			HP_T_MC80BN_38,
+			HP_T_MC80BN_39,
+			HP_T_MC80N1_40,
+			HP_T_MC80BN_41,
+			HP_T_MC80BN_42,
+			HP_T_MC80BN_43,
+			HP_T_MC80BN_44,
+			HP_T_MC80BN_45,
+			HP_T_MC80N1_46,
+			HP_T_MC80N1_47,
+			HP_Shield_Generator_00, 
+			HP_Shield_Generator_01, 
+			HP_Engines_00,
+			HP_Engines_01,
+			HP_Fighter_Bay_00
+		</HardPoints>
+		<Icon_Name>I_BUTTON_Mc80AJM.tga</Icon_Name>
+		<GUI_Model_Name>RV_MC80AJM.ALO</GUI_Model_Name>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_MC80AJM_CRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_X_WING_SQUADRON TEXT_WAVES_X2 TEXT_UNIT_OLDBTLS3YWING TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+		<Tactical_Build_Cost_Multiplayer>5500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+	<SpaceUnit Name="Mc80AJM_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC80 </Text_ID>
+		<Space_Model_Name> RV_MC80AJM_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor> 0.55 </Scale_Factor>
+		<Layer_Z_Adjust> -50.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Mc80_EJ">
+		<Variant_Of_Existing_Type>MC80AJMORG</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_RV_Mc80_EJ.tga</Icon_Name>
+		<Space_Model_Name> RV_MC80_ver02.ALO </Space_Model_Name>
+		<Affiliation>Rebel</Affiliation>
+		<AI_Combat_Power>3495</AI_Combat_Power>
+
+		<Starting_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y_Wing_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X_Wing_Squadron5, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y_Wing_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, Mc80_EJ_Death_Clone</Death_Clone>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<HardPoints>
+			HP_T_MC80AN_01,
+			HP_T_MC80AN_02,
+			HP_T_MC80AN_03,
+			HP_T_MC80AN_04,
+			HP_T_MC80N1_05,
+			HP_T_MC80N1_06,
+			HP_T_MC80AN_07,
+			HP_T_MC80AN_08,
+			HP_T_MC80AN_09,
+			HP_T_MC80AN_10,
+			HP_T_MC80AN_11,
+			HP_T_MC80AN_12,
+			HP_T_MC80N1_13,
+			HP_T_MC80AN_14,
+			HP_T_MC80AN_15,
+			HP_T_MC80AN_16,
+			HP_T_MC80AN_17,
+			HP_T_MC80AN_18,
+			HP_T_MC80AN_19,
+			HP_T_MC80AN_20,
+			HP_T_MC80AN_21,
+			HP_T_MC80AN_22,
+			HP_T_MC80AN_23,
+			HP_T_MC80AN_24,
+			HP_T_MC80AN_25,
+			HP_T_MC80AN_26,
+			HP_T_MC80AN_27,
+			HP_T_MC80AN_28,
+			HP_T_MC80AN_29,
+			HP_T_MC80N1_30,
+			HP_T_MC80AN_31,
+			HP_T_MC80AN_32,
+			HP_T_MC80AN_33,
+			HP_T_MC80AN_34,
+			HP_T_MC80AN_35,
+			HP_T_MC80N1_36,
+			HP_T_MC80N1_37,
+			HP_T_MC80BN_38,
+			HP_T_MC80BN_39,
+			HP_T_MC80N1_40,
+			HP_T_MC80BN_41,
+			HP_T_MC80BN_42,
+			HP_T_MC80BN_43,
+			HP_T_MC80BN_44,
+			HP_T_MC80BN_45,
+			HP_T_MC80N1_46,
+			HP_T_MC80N1_47,
+			HP_Shield_Generator_00, 
+			HP_Shield_Generator_01, 
+			HP_Engines_00,
+			HP_Engines_01,
+			HP_Fighter_Bay_00
+		</HardPoints>		
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Mc80_EJ_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC80 </Text_ID>
+		<Space_Model_Name> RV_MC80_ver02_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor> 0.55 </Scale_Factor>
+		<Layer_Z_Adjust> -50.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Mc80_EJ_II">
+		<Variant_Of_Existing_Type>Mc80AJM_Up</Variant_Of_Existing_Type>
+		<AI_Combat_Power>4215</AI_Combat_Power>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+	</SpaceUnit>
+</Mc80AJMUnit_Data>

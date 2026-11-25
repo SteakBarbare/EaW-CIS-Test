@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<ATRTUnit_Data>
+	<GroundInfantry Name="Scout_Trooper_No_Bike_Green">
+		<Variant_Of_Existing_Type> Scout_Trooper_No_Bike </Variant_Of_Existing_Type>
+		<Land_Model_Name>EI_BIKER_Green.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>EI_BIKER_Green.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EI_BIKER_Green.ALO,
+			Urban, 				EI_BIKER_Green.ALO,
+			Arctic, 			EI_BIKER_Green.alo,
+			Volcanic, 			EI_BIKER_Green.ALO,
+			Desert, 			EI_BIKER_Green.ALO,
+			Forest, 			EI_BIKER_Green.ALO,
+			Swamp, 				EI_BIKER_Green.ALO
+		</Land_Terrain_Model_Mapping>
+	</GroundInfantry>	
+	<GroundVehicle Name="AT_RT_Walker">
+		<Variant_Of_Existing_Type> Rep_AT_RT_WalkerORG </Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Rebel_Trooper Rebel_Sullustan_Squad MPTL </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Empire</Affiliation>
+		<Destruction_Survivors> 
+			Scout_Trooper_No_Bike_Green, 1.0 
+		</Destruction_Survivors>	
+
+		<CategoryMask> Vehicle | AntiVehicle </CategoryMask>
+		<Icon_Name>i_button_Rep_atrt.tga</Icon_Name>
+
+		<Death_Clone>Damage_Normal, ATRT_Death_Clone</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="ATRT_Death_Clone">
+		<Variant_Of_Existing_Type>AT_RT_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 20 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathClone> true </IsDeathClone>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_Light_Recon_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_RT_WALKER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATRT TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Rebel_Trooper Rebel_Sullustan_Squad MPTL </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>125</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Imperial_Landing_Craft_Loader</Company_Transport_Unit>
+		<Company_Units>AT_RT_Walker, AT_RT_Walker, AT_RT_Walker, AT_RT_Walker</Company_Units>
+
+		<Icon_Name>i_button_Rep_atrt.tga</Icon_Name>
+		<GUI_Model_Name>Rep_ATRT.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Republic_ATXT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_ATXT</SFXEvent_Fleet_Move>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>125</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+	</GroundCompany>
+
+</ATRTUnit_Data>

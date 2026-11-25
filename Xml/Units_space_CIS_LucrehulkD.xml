@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<CIS_LucrehulkDUnit_Data>
+
+	<SpaceUnit Name="CIS_LucrehulkD">
+		<Variant_Of_Existing_Type>CIS_LucrehulkBORG</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_UNIT_LUCREHULKDD</Text_ID>
+		<Encyclopedia_Good_Against> REP_AcclamatorI REP_AcclamatorII REP_Venator </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> REP_ARC-170_Squadron REP_Valiant Rep_MandatorI </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LUCREHULKDD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_VULTURE TEXT_WAVES_X3 TEXT_UNIT_CIS_HYENA TEXT_WAVES_X2 TEXT_UNIT_CIS_DROIDBOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<Space_Model_Name>CIS_LucrehulkDD.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>300.0</Layer_Z_Adjust>
+
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Space_Layer> Frigate </Space_Layer>
+
+		<Build_Cost_Credits>4800</Build_Cost_Credits>
+		<AI_Combat_Power>2535</AI_Combat_Power>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+
+		<Death_Clone>Damage_Normal, CIS_LucrehulkD_Death_Clone</Death_Clone>
+		
+		<Targeting_Priority_Set>Frigate</Targeting_Priority_Set>
+
+		<HardPoints>
+			HP_TurboMR_01, 
+			HP_TurboMR_02, 
+			HP_TurboMR_03, 
+			HP_TurboMR_04, 
+			HP_TurboMR_05,
+			HP_TurboMR_06, 
+			HP_TurboMR_07,
+			HP_TurboMR_08,
+			HP_Shield_Generator_00, 
+			HP_Fighter_Bay_00
+	  </HardPoints>
+		<Icon_Name>I_BUTTON_CIS_LucrehulkDD.TGA</Icon_Name>
+		<GUI_Model_Name>CIS_LucrehulkDD.ALO</GUI_Model_Name>
+		
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		
+		<Starting_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>CIS_Hyena_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Cis_DroidBomber_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>CIS_Vulture_Squadron7, 7</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>CIS_Hyena_Squadron5, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Cis_DroidBomber_Squadron5, 11</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>4800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>1200</Tactical_Bribe_Cost>
+		<Population_Value>2</Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="CIS_LucrehulkD_Death_Clone">
+		<Text_ID> TEXT_UNIT_LUCREHULKDD </Text_ID>
+		<Space_Model_Name> CIS_LucrehulkDD_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor> 0.65 </Scale_Factor>
+		<Layer_Z_Adjust> 300.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel, Pirates, Underworld, Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</CIS_LucrehulkDUnit_Data>

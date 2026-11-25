@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<ATIC_WalkerUnit_Data>
+<GroundVehicle Name="ATIC_Walker">
+		<Variant_Of_Existing_Type>AT_AT_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_IC_WALKER</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATIC</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>EV_ATIC.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EV_ATIC.tga</Icon_Name>
+
+		<Scale_Factor>1.75</Scale_Factor>
+
+		<Affiliation>Empire</Affiliation>
+		
+		<Targeting_Max_Attack_Distance>1250.0</Targeting_Max_Attack_Distance>
+		
+		<CategoryMask> Vehicle | AntiStructure </CategoryMask>
+		<Targeting_Priority_Set>AntiStructure</Targeting_Priority_Set>
+		
+		<LandBehavior>GARRISON_UNIT, HUNT, ABILITY_COUNTDOWN, DEPLOY_TROOPERS, WALK_LOCOMOTOR,IDLE,TARGETING,POWERED,REVEAL,HIDE_WHEN_FOGGED,UNIT_AI,STUNNABLE,DAMAGE_TRACKING,SQUASH,AFFECTED_BY_SHIELD</LandBehavior>
+
+		<Hardpoints>
+				HP_ATIC_Head_00, HP_ATIC_Head_01, HP_ATIC_Head_02, HP_ATIC_Head_03, HP_ATIC_Turret_ION
+		</Hardpoints>
+		
+		<Destruction_Survivors> 
+			Walker_Commander_Survivor, 1.0 
+			Walker_Pilot_Survivor, 1.0
+			Walker_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+		
+		<Death_Clone>Damage_Cable_Attack, ATIC_Walker_Cable_Attack_Death_Clone</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>ATIC_Walker_Captured</Vehicle_Thief_Inside_Clone>
+
+		<Lua_Script>ObjectScript_Blast_Land</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BLAST</Type>
+                <Recharge_Seconds>180.0</Recharge_Seconds>
+	            <GUI_Activated_Ability_Name> ATIC_Blast </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_BARRAGE_AREA.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Land_Hvy_Mptl_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius> <!-- 0.0 means no distance factor, unlimited to entire map -->
+				<Area_Effect_Decal_Distance> 2000.0 </Area_Effect_Decal_Distance> 
+				<GUI_Activated_Ability_Name>  </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Blast_Ability Name="ATIC_Blast">
+				<Activation_Style> User_Input </Activation_Style>
+				<Charge_Up_Seconds>5</Charge_Up_Seconds>
+				<Damage_Multiplier>100</Damage_Multiplier>
+				<SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
+			</Blast_Ability>       
+			
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L1_Bonus">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.15</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+	
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> No </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		 
+	</GroundVehicle>
+	
+	<GroundVehicle Name="ATIC_Walker_Captured">
+		<Variant_Of_Existing_Type>ATIC_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="ATIC_Walker_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>ATIC_Walker</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+      <Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		<Presence_Range>200.0</Presence_Range>
+
+	</GroundVehicle>
+
+	
+	<GroundCompany Name="Imperial_ATIC_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_ATIC_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATIC TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1400</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Units>ATIC_Walker</Company_Units>
+		<Icon_Name>i_button_EV_ATIC.tga</Icon_Name>
+		<GUI_Model_Name>EV_ATIC.ALO</GUI_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</ATIC_WalkerUnit_Data>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Super_Test_Unit_Files>
+	
+	<SpaceUnit Name="ATest_SP1">
+		<Variant_Of_Existing_Type>SSD2</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		
+	</SpaceUnit>	
+	<SpaceUnit Name="ATest_SP2">
+		<Variant_Of_Existing_Type>ISD3</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+	      <Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> ISD3_Tractor_Beam_Attack_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	      </Unit_Ability>
+		  			
+	   </Unit_Abilities_Data>
+	   <Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="ISD3_Tractor_Beam_Attack_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>2500</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>9</Stacking_Category>            
+	      </Tractor_Beam_Attack_Ability>
+		</Abilities>
+		
+	</SpaceUnit>	
+
+</Super_Test_Unit_Files>

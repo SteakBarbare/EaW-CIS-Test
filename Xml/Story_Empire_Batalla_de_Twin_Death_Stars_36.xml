@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+
+<Story>
+
+
+	<Event Name="Empire_Batalla_de_Twin_Death_Stars_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+		
+	<Event Name="Empire_Batalla_de_Twin_Death_Stars_Autoresolve_Off">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIDE_AUTORESOLVE</Reward_Type>
+		<Prereq>Empire_Batalla_de_Twin_Death_Stars_Begin</Prereq>
+	</Event>
+
+	<Event Name="Empire_Batalla_de_Twin_Death_Stars_Allow_Win">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Empire_Batalla_de_Twin_Death_Stars_Begin</Prereq>
+	</Event>
+	
+	<Event Name="Victoria_Imperial">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Prereq>Empire_Batalla_de_Twin_Death_Stars_Allow_Win</Prereq>
+	</Event>
+		
+	<Event Name="Mini_Death_Star_04_Destruida">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>DeathStar_Mini01</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Empire_Batalla_de_Twin_Death_Stars_Begin</Prereq>
+	</Event>		
+	
+	<Event Name="Mini_Death_Star_05_Destruida">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>DeathStar_Mini02</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Empire_Batalla_de_Twin_Death_Stars_Begin</Prereq>
+	</Event>		
+
+	<Event Name="Victoria_Rebelde">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>REBEL</Reward_Param1>
+		<Prereq>Mini_Death_Star_04_Destruida Mini_Death_Star_05_Destruida</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Unidad_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Defiance_Twin_Death_Stars</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Victoria_Imperial</Prereq>
+		<Prereq>Victoria_Rebelde</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Unidad_02">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Rogue_Squadron_Space_Futuro</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Victoria_Imperial</Prereq>
+		<Prereq>Victoria_Rebelde</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Unidad_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Millennium_Falcon</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Victoria_Imperial</Prereq>
+		<Prereq>Victoria_Rebelde</Prereq>
+	</Event>
+</Story>

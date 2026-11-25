@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<XR_85_Tank_DroidUnit_Data>
+	
+	<GroundVehicle Name="XR_85_Tank_Droid">
+		<Variant_Of_Existing_Type>TIE_CrawlerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_XR_85</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MPTL T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T3B_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XR_85</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_xr85.tga</Icon_Name>
+		<Land_Model_Name>EV_XR85X.alo</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+		<Max_Speed>1.8</Max_Speed>
+		<Max_Rate_Of_Turn>6.0</Max_Rate_Of_Turn>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 22.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_T2B </Armor_Type>
+		<Tactical_Health>300</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<LandBehavior>GARRISON_UNIT,AFFECTED_BY_SHIELD, HUNT, TREAD_SCROLL, SPAWN_SQUADRON, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE,DAMAGE_TRACKING</LandBehavior>
+
+		<HardPoints>
+			HP_Gr_Front_Eweb_Laser_Green_01, HP_Gr_Front_Laser_Green_01
+		</HardPoints>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 2 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Green_ATBT</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>4.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Fire_Weapon_When_In_Rocket_Attack_Mode>No</Fire_Weapon_When_In_Rocket_Attack_Mode>
+		<Fire_Weapon_When_In_Normal_Attack_Mode>Yes</Fire_Weapon_When_In_Normal_Attack_Mode>
+		
+		<Land_FOW_Reveal_Range>260.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>3.0</Ranged_Target_Z_Adjust>
+		
+		<AI_Combat_Power>65</AI_Combat_Power>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<Death_Explosions>Medium_Explosion_Space3</Death_Explosions>
+		
+		<SFXEvent_Fire>Unit_Turbo_Tower_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Droid</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Droid </SFXEvent_Assist_Attack>
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Engine_Idle_Loop> Unit_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, XR_85_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="XR_85_Death_Clone_00">
+		<Variant_Of_Existing_Type>XR_85_Tank_Droid</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_XR85X_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_XR_85_Squad">
+		<Variant_Of_Existing_Type>Imperial_Anti_Infantry_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_XR_85</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MAL_Rocket_Vehicle AAC_Hovertank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T3B_Tank Canderous_Assault_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XR_85 TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_xr85.tga</Icon_Name>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>XR_85_Tank_Droid, XR_85_Tank_Droid, XR_85_Tank_Droid, XR_85_Tank_Droid</Company_Units>
+		<GUI_Model_Name>EV_XR85X.alo</GUI_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Droid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</XR_85_Tank_DroidUnit_Data>

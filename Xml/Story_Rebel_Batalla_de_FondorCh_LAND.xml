@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+
+<Story>
+
+
+	<Event Name="Rebel_Batalla_de_Challenge_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Reactivar_IA_Imperial_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>BasicEmpire</Reward_Param2>
+		<Prereq>Rebel_Batalla_de_Challenge_Begin</Prereq>
+	</Event>
+		
+	<Event Name="Rebel_Batalla_de_Challenge_Autoresolve_Off">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIDE_AUTORESOLVE</Reward_Type>
+		<Prereq>Rebel_Batalla_de_Challenge_Begin</Prereq>
+	</Event>
+
+	<Event Name="Rebel_Batalla_de_Challenge_Allow_Win">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>EMPIRE</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Rebel_Batalla_de_Challenge_Begin</Prereq>
+	</Event>
+	
+	<Event Name="Victoria_Rebelde">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Prereq>Rebel_Batalla_de_Ganada_Allow_Win</Prereq>
+	</Event>
+		
+	<Event Name="Rebel_Batalla_de_Challenge_Allow_Lose">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Rebel_Batalla_de_Challenge_Begin</Prereq>
+	</Event>
+
+	<Event Name="Victoria_Imperial">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Prereq>Rebel_Batalla_de_Challenge_Allow_Lose</Prereq>
+	</Event>
+	
+	<Event Name="Desactivar_IA_Imperial_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SWITCH_CONTROL</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>None</Reward_Param2>
+		<Prereq>Victoria_Rebelde</Prereq>
+		<Prereq>Victoria_Imperial</Prereq>
+	</Event>
+		
+</Story>

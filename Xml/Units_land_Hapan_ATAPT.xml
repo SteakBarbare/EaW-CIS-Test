@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<Ha_AT_APT_WalkerUnit_Data>
+	
+	<GroundVehicle Name="Ha_AT_APT">
+		<Variant_Of_Existing_Type>Pod_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_APT</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank AAC_Hovertank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T3B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AT_APT</Encyclopedia_Text>
+		<Land_Model_Name>Ha_AT_APT.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Ha_atapt.tga</Icon_Name>
+
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire, Hapan, GA</Affiliation>
+		<Walk_Transition>Yes</Walk_Transition>
+
+		<Select_Box_Scale>50</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Size_Value>75</Size_Value>
+		<Armor_Type> Armor_ATST </Armor_Type>
+	
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+	
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+	
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>295.0</Targeting_Max_Attack_Distance>
+	
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		
+		<HardPoints>
+			HP_Ground_Plex_Missile, HP_Gr_Front_Laser_Green_01
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Walker_Pilot_Survivor, 1.0 
+		</Destruction_Survivors>
+		
+		<Death_Explosions>Small_Explosion_Land_06</Death_Explosions>
+		
+		<SFXEvent_Select>Unit_Select_Pod_Walker</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Pod_Walker</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Pod_Walker</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Pod_Walker</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_AT_ST_Fire</SFXEvent_Fire>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Pod_Walker </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Pod_Walker</SFXEvent_Assist_Attack>
+		<CategoryMask> Vehicle | AntiVehicle </CategoryMask>
+	
+		<AI_Combat_Power>50</AI_Combat_Power>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+	
+		<Death_Clone>Damage_Normal, Ha_AT_APT_Death_Clone</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Ha_AT_APT_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_AT_APT</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 20 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathClone> true </IsDeathClone>
+	</GroundVehicle>
+	<GroundCompany Name="Ha_AT_APT_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_APT</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank AAC_Hovertank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T3B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AT_APT TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Affiliation>Empire</Affiliation>
+		<Icon_Name>i_button_Ha_atapt.tga</Icon_Name>
+		<Build_Cost_Credits>125</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, AdvancedTech_6</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Loader</Company_Transport_Unit>
+		<Company_Units>Ha_AT_APT, Ha_AT_APT, Ha_AT_APT</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Pod_Walker</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pod_Walker</SFXEvent_Fleet_Move>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>125</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	<GroundCompany Name="Hapan_AT_APT_Company">
+		<Variant_Of_Existing_Type>Ha_AT_APT_Company</Variant_Of_Existing_Type>
+	
+		<Affiliation>Hapan</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Hapan_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Loader</Company_Transport_Unit>
+		<Company_Units>Ha_AT_APT, Ha_AT_APT, Ha_AT_APT</Company_Units>
+		
+		<Tactical_Build_Cost_Multiplayer>125</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	
+</Ha_AT_APT_WalkerUnit_Data>

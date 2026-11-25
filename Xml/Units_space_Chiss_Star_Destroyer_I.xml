@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<CH_SDIUnit_Data>
+	
+	<SpaceUnit Name="CH_SDI">
+		<Variant_Of_Existing_Type>ISD3ORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>Ch_New_StarDestroyer_I.ALO</Space_Model_Name>
+		<Scale_Factor>1.8</Scale_Factor>
+		<!--<Custom_Hard_XExtent> 265.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 115.0 </Custom_Hard_YExtent>-->
+		<Armor_Type> Armor_Star_Destroyer </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		<Tactical_Health>300000000</Tactical_Health>
+		<Affiliation>Chiss, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<!--<Layer_Z_Adjust>600.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>202.0</Layer_Z_Adjust>
+		<AI_Combat_Power>3800</AI_Combat_Power>
+		
+		<Starting_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		
+		<Death_Clone>Damage_Normal, CH_SDI_Death_Clone</Death_Clone>
+		
+		<Text_ID>TEXT_UNIT_CH_STAR_DESTROYERI</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a R_Dreadnought_Up </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> K-wing B-Wing MC90X </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CH_STAR_DESTROYERI TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD3 TEXT_UNIT_TIE_CLAW TEXT_WAVES_X3 TEXT_UNIT_TIE_CLAW_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+				
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+					
+		<HardPoints> 
+			HP_Ch_IonM_01, 
+			HP_Ch_IonM_02, 
+			HP_Ch_IonM_03, 
+			HP_Ch_IonM_04, 
+			HP_Ch_IonM_05,
+			HP_Ch_IonM_06,
+			HP_Ch_IonM_07,
+			HP_Ch_IonM_08, 
+			HP_T_Ch_ISD_Side_01,
+			HP_T_Ch_ISD_Side_02,
+			HP_T_Ch_ISD_Side_03,
+			HP_T_Ch_ISD_Side_04,
+			HP_T_Ch_ISD_Side_05,
+			HP_T_Ch_ISD_Side_06,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10,
+			HP_ChMaserMG_01,
+			HP_ChMaserMG_02,
+			HP_ChMaserMG_03, 
+			HP_ChMaserMG_04,
+			HP_ChMaserMG_05,
+			HP_ChMaserMG_06,
+			HP_ChMaserMG_07,
+			HP_ChMaserMG_08,
+			HP_ChMaserMG_09,
+			HP_ChMaserMG_10,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Star_Destroyer_Tractor_Beam,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_Ch_ISD_01,
+			HP_T_Ch_ISD_02,
+			HP_T_Ch_ISD_03,
+			HP_T_Ch_ISD_04,
+			HP_T_Ch_ISD_05,
+			HP_T_Ch_ISD_06,
+			HP_T_Ch_ISD_07,
+			HP_T_Ch_ISD_08,
+			HP_EspecialCh_00,
+			HP_EspecialCh_01,
+			HP_EspecialCh_02,
+			HP_EspecialCh_03,
+			HP_EspecialCh_04,
+			HP_EspecialCh_05,
+			HP_EspecialCh_06,
+			HP_EspecialCh_07
+		</HardPoints>
+		<Icon_Name>I_BUTTON_Ch_New_StarDestroyer_I.TGA</Icon_Name>
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.0675  0.081</Radar_Icon_Size> 
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			 <Unit_Ability>
+				<Type>ENERGY_WEAPON</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Ch_SD_I_Energy_Weapon_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Energy_Blast_Piett </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Energy_Blast </SFXEvent_Special_Ability_Loop> 
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Energy_Weapon_Attack_Ability Name="Ch_SD_I_Energy_Weapon_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>Tractorbeam</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>2500</Activation_Max_Range>
+				<Beam_Color>242, 4, 251, 255</Beam_Color>
+				<Beam_Width>20.0</Beam_Width>
+				<Damage_Per_Frame>400</Damage_Per_Frame>
+			</Energy_Weapon_Attack_Ability>
+						
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>6700</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>66</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+	<SpaceUnit Name="CH_SDI_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC80 </Text_ID>
+		<Space_Model_Name> Ch_New_StarDestroyer_I_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Star_Destroyer_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_2000</Death_Explosions>
+		<Scale_Factor>1.8</Scale_Factor>
+		<Layer_Z_Adjust> -50.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>	
+	
+	
+	
+</CH_SDIUnit_Data>

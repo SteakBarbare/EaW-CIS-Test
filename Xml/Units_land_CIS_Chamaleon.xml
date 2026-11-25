@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<CIS_ChamaleonUnit_Data>
+	
+	<GroundVehicle Name="CIS_Chamaleon">
+		<Variant_Of_Existing_Type>CIS_Crabdroid</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CHAMALEON</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Recon_Squad REP_LAAT Republic_AT_AP_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CHAMALEON</Encyclopedia_Text>
+
+		<Land_Model_Name>CIS_Chamaleon.ALO</Land_Model_Name>
+		<Scale_Factor>0.12</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<Max_Speed> .65 </Max_Speed>
+
+		<Custom_Hard_XExtent> 14.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 16.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_ATST </Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Sniper_Blaster</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.02</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>3.0</Projectile_Fire_Recharge_Seconds>
+
+		<SFXEvent_Fire>Unit_Crabdroid_Fire</SFXEvent_Fire>
+
+		<Icon_Name>I_BUTTON_CIS_Chamaleon.tga</Icon_Name>
+		
+		<AI_Combat_Power>20</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>240</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.02f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 10.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Chamaleon_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Sniper_Blaster</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Crabdroid</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Assist_Attack_Crabdroid </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>STEALTH</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_TYBER_CLOAKING</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TYBER_CLOAKING_DESCRIPTION</Alternate_Description_Text>
+                <Recharge_Seconds>10.0</Recharge_Seconds>
+				<Expiration_Seconds>35.0</Expiration_Seconds>
+                <GUI_Activated_Ability_Name>Stealth_Tyber_Zann</GUI_Activated_Ability_Name> 
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Select_Crabdroid</SFXEvent_GUI_Unit_Ability_Activated>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			 <Stealth_Ability Name="Stealth_Tyber_Zann">
+                <Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 255</Stealth_Color>
+                <Stealth_Transition_Time>.6</Stealth_Transition_Time>
+            </Stealth_Ability>
+			<Maximum_Firepower_Attack_Ability Name="Chamaleon_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+			
+		</Abilities>
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	
+	
+	<GroundCompany Name="C_CIS_Chamaleon_Group">
+		<Variant_Of_Existing_Type>C_CIS_Crabdroid_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CHAMALEON</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Recon_Squad REP_LAAT Republic_AT_AP_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CHAMALEON</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Icon_Name> I_BUTTON_CIS_Chamaleon.tga </Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>CIS_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Sheathipede_Shuttle</Company_Transport_Unit>
+		<Company_Units>CIS_Chamaleon, CIS_Chamaleon, CIS_Chamaleon</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</CIS_ChamaleonUnit_Data>

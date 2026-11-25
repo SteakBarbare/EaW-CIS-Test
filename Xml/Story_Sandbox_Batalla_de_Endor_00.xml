@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE Endor ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+      <Event Name="Batalla_de_Endor_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+	  
+		  
+	  <Event Name="Defender_Prevent_Retreat">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>REBEL</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Endor_Space</Prereq>
+	  </Event> 
+	  
+	  <Event Name="Defender_Destroyed">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Batalla_de_Endor_Space</Prereq>
+	 </Event>
+	  	  
+	  
+	  <Event Name="Defender_Enable_Retreat">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>REBEL</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Defender_Destroyed</Prereq>
+	  </Event> 				
+	
+					<Event Name="Sonido_Death_Star_00">
+						<Event_Type>STORY_ELAPSED</Event_Type>
+						<Event_Param1>39</Event_Param1>
+						<Reward_Type>SPEECH</Reward_Type>
+						<Reward_Param1>BATALLA_DE_ENDOR_R_MISSION_09</Reward_Param1>
+						<Prereq>Batalla_de_Endor_Space</Prereq>
+					</Event>
+							<Event Name="Sonido_Death_Star_00_Stop">
+								<Event_Type>STORY_SPEECH_DONE</Event_Type>
+								<Event_Param1>BATALLA_DE_ENDOR_R_MISSION_09</Event_Param1>
+								<Prereq>Sonido_Death_Star_00</Prereq>
+							</Event>	
+					<Event Name="Destruir_Eventos_Tacticos_Mc80b_Endor">
+						<Event_Type>STORY_ELAPSED</Event_Type>
+						<Event_Param1>0</Event_Param1>
+						<Reward_Type>DESTROY_OBJECT</Reward_Type>
+						<Reward_Param1>Calamari_Cruiser</Reward_Param1>
+						<Prereq>Sonido_Death_Star_00</Prereq>
+					</Event>
+					<Event Name="Sonido_Death_Star_01">
+						<Event_Type>STORY_ELAPSED</Event_Type>
+						<Event_Param1>15</Event_Param1>
+						<Reward_Type>SPEECH</Reward_Type>
+						<Reward_Param1>BATALLA_DE_ENDOR_R_MISSION_09</Reward_Param1>
+						<Prereq>Destruir_Eventos_Tacticos_Mc80b_Endor</Prereq>
+					</Event>
+							<Event Name="Sonido_Death_Star_01_Stop">
+								<Event_Type>STORY_SPEECH_DONE</Event_Type>
+								<Event_Param1>BATALLA_DE_ENDOR_R_MISSION_09</Event_Param1>
+								<Prereq>Sonido_Death_Star_01</Prereq>
+							</Event>	
+					<Event Name="Destruir_Eventos_Tacticos_Mc80a_Endor">
+						<Event_Type>STORY_ELAPSED</Event_Type>
+						<Event_Param1>0</Event_Param1>
+						<Reward_Type>DESTROY_OBJECT</Reward_Type>
+						<Reward_Param1>Mc80a</Reward_Param1>
+						<Prereq>Sonido_Death_Star_01</Prereq>
+					</Event>
+			
+				
+						
+	<Event Name="Destruir_EVENTOS_TACTICOS_EXECUTOR">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Executor_Super_Star_Destroyer</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>		
+			<Event Name="Ejecutor_Destruido_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>0</Event_Param1>
+				<Reward_Type>MULTIMEDIA</Reward_Type>
+				<Reward_Param2>20</Reward_Param2>
+				<Reward_Param8>BATALLA_DE_ENDOR_R_MISSION_07</Reward_Param8>
+				<Prereq>Destruir_EVENTOS_TACTICOS_EXECUTOR</Prereq>
+			</Event>
+					<Event Name="Ejecutor_Destruido_00_Stop">
+						<Event_Type>STORY_SPEECH_DONE</Event_Type>
+						<Event_Param1>BATALLA_DE_ENDOR_R_MISSION_07</Event_Param1>
+						<Prereq>Ejecutor_Destruido_00</Prereq>
+					</Event>	
+			
+	<Event Name="Destruir_Death_Star_II_tras_destruir_Executor">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Reward_Type>DESTROY_OBJECT</Reward_Type>
+		<Reward_Param1>DS_II_Endor_R</Reward_Param1>
+		<Prereq>Ejecutor_Destruido_00</Prereq>
+	</Event>		
+					
+	<Event Name="Destruir_DEATH_STAR_II">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>DS_II_Endor_R</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>
+			<Event Name="DEATH_STAR_II_Destruida_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>0</Event_Param1>
+				<Reward_Type>MULTIMEDIA</Reward_Type>
+				<Reward_Param2>68</Reward_Param2>
+				<Reward_Param8>BATALLA_DE_ENDOR_R_MISSION_08</Reward_Param8>
+				<Prereq>Destruir_DEATH_STAR_II</Prereq>
+			</Event>
+					<Event Name="DEATH_STAR_II_Destruida_00_Stop">
+						<Event_Type>STORY_SPEECH_DONE</Event_Type>
+						<Event_Param1>BATALLA_DE_ENDOR_R_MISSION_08</Event_Param1>
+						<Prereq>DEATH_STAR_II_Destruida_00</Prereq>
+					</Event>	
+	
+	<Event Name="Prevenir_victoria_prematura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>0</Reward_Param1>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Todos_los_enemigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>FILTER_ENEMY_ONLY</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>		
+		
+	<Event Name="Destruidos_Todos_Amigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>FILTER_FRIENDLY_ONLY</Event_Param1>
+		<Event_Param2>DESTROY_ALL_UNITS</Event_Param2>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>		
+		
+	<Event Name="Activar_Victoria">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>1</Reward_Param1>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+		<Prereq>Destruidos_Todos_Amigos</Prereq>
+	</Event>				
+</Story>

@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<BS_Fleet_HuUnit_Data>
+	<SpaceUnit Name="BS_Fleet_Hu_AI">
+		<Variant_Of_Existing_Type>BS_Fleet_Hu</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, UXSoloIA_STR_01</Required_Special_Structures>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+		<!--<Space_Override_Population_Value>30</Space_Override_Population_Value>-->
+	</SpaceUnit>	
+	<SpaceUnit Name="Hu_Fleet_Hu_AI">
+		<Variant_Of_Existing_Type>BS_Fleet_Hu</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, UXSoloIA_STR_01</Required_Special_Structures>
+		<Affiliation>Hutts</Affiliation>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+	</SpaceUnit>	
+	<SpaceUnit Name="Pi_Fleet_Hu">
+		<Variant_Of_Existing_Type>BS_Fleet_Hu</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Affiliation>Hutts</Affiliation>
+	</SpaceUnit>	
+	<SpaceUnit Name="GAC_Fleet_Hu">
+		<Variant_Of_Existing_Type>BS_Fleet_Hu</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Affiliation>GAC</Affiliation>
+	</SpaceUnit>	
+	<SpaceUnit Name="BS_Fleet_Hu">
+		<Variant_Of_Existing_Type>Hu_SSD</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_HUTT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_HU_SSD TEXT_UNIT_HU_BATTLESHIP TEXT_UNIT_HU_HEAVY_CRUISER TEXT_UNIT_HU_CRUISER TEXT_UNIT_HU_HUTT_CORVETTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Hu_SSD_Fleet2.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>I_BUTTON_UI_Hutt_Fleet.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Cost_Credits>60000</Build_Cost_Credits>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		<Affiliation>Underworld</Affiliation>
+		<Population_Value>40</Population_Value>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Space_Override_Population_Value>3</Space_Override_Population_Value>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<Tactical_Build_Cost_Multiplayer>60000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>BS_fleet_Hu_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                 <SFXEvent_Target_Ability> UHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>UHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>4000</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FULL_SALVO.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>LEECH_SHIELDS</Type>
+                <Recharge_Seconds>55.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Hu_SSD_Leech_Shields </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 3500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Leech_Sheilds_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_Target_Ability> Unit_Leech_Sheilds_Kadalbe </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+ 				<Supports_Autofire>True</Supports_Autofire>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	4000.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	200.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+           </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		 <Abilities SubObjectList="Yes">
+
+	   		 <Leech_Shields_Ability Name="Hu_SSD_Leech_Shields">
+                <Activation_Style> User_Input </Activation_Style>
+                <Applicable_Unit_Categories> Corvette | Frigate | Capital </Applicable_Unit_Categories>
+                <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+                <Activation_Min_Range>10</Activation_Min_Range>
+                <Activation_Max_Range>3500</Activation_Max_Range>
+                <Duration_In_Secs> 25.0 </Duration_In_Secs>
+                <Shield_Damage_Per_Second> 10000.0 </Shield_Damage_Per_Second>
+                <Damage_Multiplier> 3.0 </Damage_Multiplier>
+                <Beam_Color>192, 143, 82, 255</Beam_Color>
+                <Beam_Bone_Name>HP_SHL_00_BONE</Beam_Bone_Name>
+                <Beam_Frames>10</Beam_Frames>
+                <Beam_Width>40.0</Beam_Width>
+                <Beam_Texture_Name>tractor_beam00.tga</Beam_Texture_Name>
+                <Beam_Effect_Name>Leech_Shields</Beam_Effect_Name>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+                <Leech_Effect>Leech_Effect</Leech_Effect>
+            </Leech_Shields_Ability>
+			
+		</Abilities>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="Disband_GAC_Fleet_Hu">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_HUTT TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>GAC</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>GAC_Fleet_Hu</Required_Orbiting_Units>
+		<Lua_Script>Disband_GAC_Fleet_Hu</Lua_Script>
+		<SFXEvent_Build_Started>UHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>		
+	<SpaceUnit Name="Disband_Pi_Fleet_Hu">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_HUTT TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Hutts</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>Pi_Fleet_Hu</Required_Orbiting_Units>
+		<Lua_Script>Disband_Pi_Fleet_Hu</Lua_Script>
+		<SFXEvent_Build_Started>UHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>		
+	<SpaceUnit Name="Disband_BS_Fleet_Hu">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_HUTT TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>BS_Fleet_Hu</Required_Orbiting_Units>
+		<Lua_Script>Disband_BS_Fleet_Hu</Lua_Script>
+		<SFXEvent_Build_Started>UHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>		
+	
+</BS_Fleet_HuUnit_Data>

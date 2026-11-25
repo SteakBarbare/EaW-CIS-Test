@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+
+
+
+<Canderous_TankUnit_Data>
+	<GroundVehicle Name="Canderous_Assault_Tank">
+		<Variant_Of_Existing_Type>CanderousORG</Variant_Of_Existing_Type>
+		<Vehicle_Thief_Inside_Clone>Canderous_Assault_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Canderous_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Canderous_Death_Clone_00">
+		<Variant_Of_Existing_Type>M1_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>UV_CanderousAssaultTank_D.alo</Land_Model_Name>
+		<Scale_Factor>0.17</Scale_Factor>
+	</GroundVehicle>
+	<GroundVehicle Name="CanderousORG">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CANDEROUS_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder AT_AT_Walker M1_Repulsor_Tank  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL SPMAT_Walker </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TEXT_UNIT_CANDEROUS_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name> i_button_uv_cander_tank.tga </Icon_Name>
+
+		<Land_Model_Name>UV_CanderousAssaultTank.alo</Land_Model_Name>
+		<Scale_Factor>0.17</Scale_Factor>
+		<Select_Box_Scale>540</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Affiliation>Underworld</Affiliation>
+        
+		<Max_Speed>1.25</Max_Speed>
+		<Movement_Animation_Speed> 1.0 </Movement_Animation_Speed>
+		<Max_Rate_Of_Turn>4.5</Max_Rate_Of_Turn>
+
+		<Armor_Type> Armor_T4B </Armor_Type>
+        <Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+
+		<Tactical_Health>425</Tactical_Health>
+		<Shield_Points>300</Shield_Points>
+		<Shield_Refresh_Rate>17</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Ranged_Target_Z_Adjust>12.0</Ranged_Target_Z_Adjust>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>b_turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>b_barrel</Barrel_Bone_Name>
+		
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 2 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+
+		<Projectile_Types>Proj_Mass_Driver_Tank</Projectile_Types>
+		
+		<Land_FOW_Reveal_Range>260.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 55.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<CategoryMask> Vehicle | AntiVehicle | AntiAir</CategoryMask>
+
+		<SFXEvent_Select>Unit_Select_Canderous_Tank</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Canderous_Tank</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Canderous_Tank</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Canderous_Tank</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Canderous_Tank</SFXEvent_Guard>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Canderous_Tank </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Canderous_Tank</SFXEvent_Assist_Attack>
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> UHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> UHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> UHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+        <FormationSpacing> 2.75 </FormationSpacing>
+		<MaxJiggleDistance> 0 </MaxJiggleDistance>
+		<Custom_Hard_XExtent> 55.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 35.0 </Custom_Hard_YExtent>
+
+		<AI_Combat_Power>325</AI_Combat_Power>
+
+		<Tactical_Bribe_Cost>100</Tactical_Bribe_Cost>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>LURE</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_SYSTEM_CONTROL</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_SYSTEM_CONTROL_DESCRIPTION</Alternate_Description_Text>
+				<Effective_Radius>350</Effective_Radius>
+
+				<Target_Types>
+						AT_AT_Walker,
+						AT_ST_Walker,
+						AT_AA_Walker,
+						SPMAT_Walker,
+						Snowspeeder,
+						MPTL,
+						T2B_Tank,
+						T4B_Tank,
+						TIE_Crawler,
+						M1_Repulsor_Tank,
+						Pirate_Skiff,
+						Pirate_Skiff_E,
+						Pirate_Skiff_R,
+						Pirate_Skiff_U,
+						Empire_Anti_Infantry_Turret,
+						Rebel_Anti_Infantry_Turret,
+						Pirate_Anti_Infantry_Turret,
+						Empire_Anti_Vehicle_Turret,
+						Rebel_Anti_Vehicle_Turret,
+						Pirate_Anti_Vehicle_Turret,
+						Underworld_Mass_Driver_Turret,
+						Underworld_Torpedo_Turret,
+						Underworld_Rocket_Pod,
+						Empire_Grenade_Mortar,
+						Hutt_Grenade_Mortar,
+						Rebel_Rapid_Fire_Laser_Turret,
+						Hutt_Rapid_Fire_Laser_Turret,
+						Dark_Trooper_PhaseI,
+						Dark_Trooper_PhaseII,
+						Dark_Trooper_PhaseIII,
+						HAV_Juggernaut,
+						Lancet_Air_Artillery,
+						Gallofree_HTT_Transport,
+						Canderous_Assault_Tank,
+						Destroyer_Droid,
+						MAL_Rocket_Vehicle,
+						MZ8_Pulse_Cannon_Tank,
+						Swamp_Speeder_E,
+						Swamp_Speeder_R,
+						Swamp_Speeder_U,
+						Swamp_Speeder_P,
+						Pod_Walker_Rebel,
+						Pod_Walker_Empire,
+						Pod_Walker_Underworld,
+						Pod_Walker_Pirate,
+						Hutt_Pod_Walker,
+						Hutt_Skiff,
+						Hutt_Swamp_Speeder
+				</Target_Types>
+
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>6</Expiration_Seconds>
+				
+				<Is_Pulsing>Yes</Is_Pulsing>
+				<Pulse_Frequency_Secs>0.5</Pulse_Frequency_Secs>
+				<Max_Number_Of_Pulses>40</Max_Number_Of_Pulses>
+				<Particle_Effect>canderous_lure</Particle_Effect>
+	
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER,	0.25f</Mod_Multiplier><!-- Invulnerable -->
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+
+	</GroundVehicle>
+
+	<GroundVehicle Name="Canderous_Assault_Tank_Captured">
+		<Variant_Of_Existing_Type>Canderous_Assault_Tank</Variant_Of_Existing_Type>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+
+
+	<GroundCompany Name="Canderous_Assault_Tank_Company">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CANDEROUS_TANK_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder AT_AT_Walker M1_Repulsor_Tank  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL SPMAT_Walker </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TEXT_UNIT_CANDEROUS_TANK TEXT_DESC_C_CANTIDAD_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_uv_cander_tank.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+				
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+				
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>Canderous_Assault_Tank, Canderous_Assault_Tank, Canderous_Assault_Tank, Canderous_Assault_Tank, Canderous_Assault_Tank</Company_Units>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Canderous_Tank</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Canderous_Tank</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+	</GroundCompany>
+	
+	
+
+
+
+</Canderous_TankUnit_Data>

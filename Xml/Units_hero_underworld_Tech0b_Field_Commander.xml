@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<U_Tech0b_Field_Commander_Hero_Files>
+	<GroundInfantry Name="Squad_Battledroid_BSGuard">
+		<Variant_Of_Existing_Type>Squad_Battledroid_Guard</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+	</GroundInfantry>
+		
+
+	<GroundVehicle Name="Squad_U_Tech0b_Field_Commander">
+		<Variant_Of_Existing_Type>BS_AAT</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_U_TECH0</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_U_TECH0 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_BATTLEDROIDS TEXT_UNIT_PLEX_DROIDB1_SQUAD TEXT_UNIT_B1_SNIPER_SQUAD TEXT_UNIT_MTT TEXT_UNIT_STAP TEXT_UNIT_DROIDEKA_MK1 TEXT_UNIT_VULTURE TEXT_UNIT_HAILFIRE_TANK TEXT_UNIT_HAG_REPULSOR_TANK TEXT_UNIT_AAT_REPULSOR_TANK TEXT_UNIT_HEAVY_OG9 TEXT_UNIT_OG9 TEXT_UNIT_OG9_MDU TEXT_UNIT_CIS_FIGHTERTANK TEXT_UNIT_ENFORCER TEXT_UNIT_CRABDROID TEXT_UNIT_CIS_WALK_ADVANCED TEXT_UNIT_CIS_MAF TEXT_UNIT_CIS_GUNSHIP TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+
+		<Icon_Name>I_BUTTON_UI_FIELD_COMMANDER_Tech0b.tga</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1Droid </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Select>Unit_Select_B1Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B1Droid</SFXEvent_Guard>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_B1Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B1Droid </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B1Droid </Death_SFXEvent_Start_Die>
+
+		<CategoryMask> LandHero </CategoryMask>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>BS_Tech0b_Field_Re_1X</Lua_Script>
+
+	</GroundVehicle>
+
+	<HeroCompany Name="U_Tech0b_Field_Com_BlackSun_Team">
+		<Variant_Of_Existing_Type>U_Tech0_Field_Com_BlackSun_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_U_TECH0 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_BATTLEDROIDS TEXT_UNIT_PLEX_DROIDB1_SQUAD TEXT_UNIT_B1_SNIPER_SQUAD TEXT_UNIT_MTT TEXT_UNIT_STAP TEXT_UNIT_DROIDEKA_MK1 TEXT_UNIT_VULTURE TEXT_UNIT_HAILFIRE_TANK TEXT_UNIT_HAG_REPULSOR_TANK TEXT_UNIT_AAT_REPULSOR_TANK TEXT_UNIT_HEAVY_OG9 TEXT_UNIT_OG9 TEXT_UNIT_OG9_MDU TEXT_UNIT_CIS_FIGHTERTANK TEXT_UNIT_ENFORCER TEXT_UNIT_CRABDROID TEXT_UNIT_CIS_WALK_ADVANCED TEXT_UNIT_CIS_MAF TEXT_UNIT_CIS_GUNSHIP TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_UI_FIELD_COMMANDER_Tech0b.TGA</Icon_Name>
+		<Build_Cost_Credits>12550</Build_Cost_Credits>
+		<Company_Transport_Unit>LucrehulkB_U_Tech0b_Field_Commander</Company_Transport_Unit>
+		<Company_Units> 
+		Squad_U_Tech0b_Field_Commander, 
+		Squad_U_T0b_Commander_Auxiliar
+		</Company_Units>
+		<Tactical_Build_Cost_Multiplayer>12550</Tactical_Build_Cost_Multiplayer>
+		<SFXEvent_Build_Complete>Unit_Select_B3Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_B3Droid</SFXEvent_Fleet_Move>
+		
+	</HeroCompany>
+	<TransportUnit Name="LucrehulkB_U_Tech0b_Field_Commander">
+		<Variant_Of_Existing_Type>BS_LucrehulkB</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Fleet_Commander_MKI_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LUCREHULKB TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_LUCREHULKB TEXT_UNIT_RECUSANT TEXT_UNIT_PIRATE_MUNIFICENT</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Landing_Transport_Variant>Underworld_Vehicle_Transport_Landing</Landing_Transport_Variant>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space3</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_REP_FLEET_REINFORCES.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>240</Recharge_Seconds>
+			    <Spawned_Object_Type>BS_Tech0b_Fl_Sh</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> UHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>UHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.1</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>30</Expiration_Seconds>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>i_sa_assault.tga</Alternate_Icon_Name>
+			</Unit_Ability>	
+		</Unit_Abilities_Data>
+	</TransportUnit>
+	
+	<GroundVehicle Name="BS_OG_9_X_I">
+		<Variant_Of_Existing_Type>OG_9</Variant_Of_Existing_Type>
+		<Lua_Script>BS_Tech0b_Field_Re_2X</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="BS_OG_9_Sq_X_I">
+		<Variant_Of_Existing_Type>U_OG_9_Group</Variant_Of_Existing_Type>
+		<Company_Units>BS_OG_9_X_I</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>Lucrehulk_Craft</Company_Transport_Unit>
+	</GroundCompany>
+
+</U_Tech0b_Field_Commander_Hero_Files>

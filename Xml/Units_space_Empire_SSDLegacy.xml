@@ -1,0 +1,425 @@
+<?xml version="1.0"?>
+<SSDLegacyUnit_Data>
+
+	<SpaceUnit Name="SSDLegacy">
+		<Variant_Of_Existing_Type>SSDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EXECUTOR_SSDLEGACY</Text_ID>
+		<Encyclopedia_Good_Against> Mc104 Colossus Mediator </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing B-Wing T42 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SSDLEGACY TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_SSD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_TIE_CIMITARRA TEXT_WAVES_X2 TEXT_UNIT_TIE_DEFENDER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_12</Encyclopedia_Text>
+
+		<Space_Model_Name>EV_SSDLegacy.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> w_planet_fleet_SSDLegacy.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+		<Scale_Factor>1.27</Scale_Factor>
+
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_SSD2</Shield_Armor_Type>
+		
+		<Max_Speed>2.0</Max_Speed>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<!--<Layer_Z_Adjust>0.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>350.0</Layer_Z_Adjust>
+		
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Super_Astilleros_Imperiales</Required_Special_Structures>
+
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>750000</Shield_Points>
+		<Tactical_Health>750000000</Tactical_Health>
+		<Shield_Refresh_Rate>798000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>85000</Build_Cost_Credits>
+		<AI_Combat_Power>6000</AI_Combat_Power>
+		<Build_Time_Seconds>230</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Cimitarra_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Defender_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Cimitarra_Squadron4, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Defender_Squadron4, 23</Reserve_Spawned_Units_Tech_0>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Death_Explosions>Death_Clone_Legacy_Space_Empire</Death_Explosions>
+		
+		<Death_Clone>Damage_Normal, SSDLegacy_Death_Clone</Death_Clone>
+		<HardPoints>
+			HP_LegacySSD_Blast_01,
+			HP_LegacySSD_Blast_02,
+			HP_LegacySSD_Blast_03,
+			HP_LegacySSD_Blast_04,
+			HP_LegacySSD_Blast_05,
+			HP_LegacySSD_Blast_06,
+			HP_LegacySSD_Blast_07,
+			HP_LegacySSD_Blast_08,
+			HP_LegacySSD_Blast_09,
+			HP_LegacySSD_Blast_10,
+			HP_LegacySSD_Blast_11,
+			HP_LegacySSD_Blast_12,
+			HP_LegacySSD_Blast_13,
+			HP_LegacySSD_Blast_14,
+			HP_LegacySSD_Blast_15,
+			HP_LegacySSD_Blast_16,
+			HP_LegacySSD_Blast_17,
+			HP_LegacySSD_Blast_18,
+			HP_LegacySSD_Blast_19,
+			HP_LegacySSD_Blast_20,
+			HP_LegacySSD_Blast_21,
+			HP_LegacySSD_Blast_22,
+			HP_LegacySSD_Blast_23,
+			HP_LegacySSD_Blast_24,
+			HP_LegacySSD_Blast_25,
+			HP_LegacySSD_Blast_26,
+			HP_LegacySSD_Blast_27,
+			HP_LegacySSD_Blast_28,
+			HP_LegacySSD_Blast_29,
+			HP_LegacySSD_Blast_30,
+			HP_SHIP_Comm_Array,
+			HP_Tractor_Beam_Rebelde,
+			HP_T_E_SSD2_01,
+			HP_T_E_SSD2_02,
+			HP_T_E_SSD2_03,
+			HP_T_E_SSD2_04,
+			HP_T_E_SSD2_05,
+			HP_T_E_SSD2_06,
+			HP_T_E_SSD2_07,
+			HP_T_E_SSD2_08,
+			HP_T_E_SSD2_09,
+			HP_T_E_SSD2_10,
+			HP_T_E_SSD2_11,
+			HP_T_E_SSD2_12,
+			HP_T_E_SSD2_13,
+			HP_T_E_SSD2_14,
+			HP_T_E_SSD2_15,
+			HP_T_E_SSD2_16,
+			HP_T_E_SSD2_17,
+			HP_T_E_SSD2_18,
+			HP_T_E_SSD2_19,
+			HP_T_E_SSD2_20,
+			HP_T_E_SSD2_21,
+			HP_T_E_SSD2_22,
+			HP_T_E_SSD2_23,
+			HP_T_E_SSD2_24,
+			HP_T_E_SSD2_25,
+			HP_T_E_SSD2_26,
+			HP_T_E_SSD2_27,
+			HP_T_E_SSD2_28,
+			HP_T_E_SSD2_29,
+			HP_T_E_SSD2_30,
+			HP_T_E_SSD2_31,
+			HP_T_E_SSD2_32,
+			HP_T_E_SSD2_33,
+			HP_T_E_SSD2_34,
+			HP_T_E_SSD2_35,
+			HP_T_E_SSD2_36,
+			HP_T_E_SSD2_37,
+			HP_T_E_SSD2_38,
+			HP_T_E_SSD2_39,
+			HP_T_E_SSD2_40,
+			HP_T_E_SSD2_41,
+			HP_T_E_SSD2_42,
+			HP_T_E_SSD2_43,
+			HP_T_E_SSD2_44,
+			HP_T_E_SSD2_45,
+			HP_T_E_SSD2_46,
+			HP_T_E_SSD2_47,
+			HP_T_E_SSD2_48,
+			HP_T_E_SSD2_49,
+			HP_T_E_SSD2_50,
+			HP_T_E_SSD2_51,
+			HP_T_E_SSD2_52,
+			HP_T_E_SSD2_53,
+			HP_T_E_SSD2_54,
+			HP_T_E_SSD2_55,
+			HP_T_E_SSD2_56,
+			HP_T_E_SSD2_57,
+			HP_T_E_SSD2_58,
+			HP_T_E_SSD2_59,
+			HP_T_E_SSD2_60,
+			HP_T_E_SSD2_61,
+			HP_T_E_SSD2_62,
+			HP_T_E_SSD2_63,
+			HP_T_E_SSD2_64,
+			HP_T_E_SSD2_65,
+			HP_T_E_SSD2_66,
+			HP_T_E_SSD2_67,
+			HP_T_E_SSD2_68,
+			HP_T_E_SSD2_69,
+			HP_T_E_SSD2_70,
+			HP_T_E_SSD2_71,
+			HP_T_E_SSD2_72,
+			HP_T_E_SSD2_73,
+			HP_T_E_SSD2_74,
+			HP_T_E_SSD2_75,
+			HP_T_E_SSD2_76,
+			HP_T_E_SSD2_77,
+			HP_T_E_SSD2_78,
+			HP_T_E_SSD2_79,
+			HP_T_E_SSD2_80,
+			HP_T_E_SSD2_81,
+			HP_T_E_SSD2_82,
+			HP_T_E_SSD2_83,
+			HP_T_E_SSD2_84,
+			HP_T_E_SSD2_85,
+			HP_T_E_SSD2_86,
+			HP_T_E_SSD2_87,
+			HP_T_E_SSD2_88,
+			HP_T_E_SSD2_89,
+			HP_T_E_SSD2_90,
+			HP_T_E_SSD2_91,
+			HP_T_E_SSD2_92,
+			HP_T_E_SSD2_93,
+			HP_T_E_SSD2_94,
+			HP_T_E_SSD2_95,
+			HP_T_E_SSD2_96,
+			HP_T_E_SSD2_97,
+			HP_T_E_SSD2_98,
+			HP_T_E_SSD2_99,
+			HP_T_E_SSD2_100,
+			HP_T_E_SSD2_101,
+			HP_T_E_SSD2_102,
+			HP_T_E_SSD2_103,
+			HP_T_E_SSD2_104,
+			HP_T_E_SSD2_105,
+			HP_T_E_SSD2_106,
+			HP_T_E_SSD2_107,
+			HP_T_E_SSD2_108,
+			HP_T_E_SSD2_109,
+			HP_T_E_SSD2_110,
+			HP_T_E_SSD2_111,
+			HP_T_E_SSD2_112,
+			HP_T_E_SSD2_113,
+			HP_T_E_SSD2_114,
+			HP_T_E_SSD2_115,
+			HP_T_E_SSD2_116,
+			HP_T_E_SSD2_117,
+			HP_T_E_SSD2_118,
+			HP_T_E_SSD2_119,
+			HP_T_E_SSD2_120,
+			HP_T_E_SSD2_121,
+			HP_T_E_SSD2_122,
+			HP_T_E_SSD2_123,
+			HP_T_E_SSD2_124,
+			HP_T_E_SSD2_125,
+			HP_T_E_SSD2_126,
+			HP_T_E_SSD2_127,
+			HP_T_E_SSD2_128,
+			HP_T_E_SSD2_129,
+			HP_T_E_SSD2_130,
+			HP_T_E_SSD2_131,
+			HP_T_E_SSD2_132,
+			HP_T_E_SSD2_133,
+			HP_T_E_SSD2_134,
+			HP_T_E_SSD2_135,
+			HP_T_E_SSD2_136,
+			HP_T_E_SSD2_137,
+			HP_T_E_SSD2_138,
+			HP_T_E_SSD2_139,
+			HP_T_E_SSD2_140,
+			HP_MisilA_01, 
+			HP_MisilA_02,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Shield_GeneratorH_05,
+			HP_Shield_GeneratorH_06,
+			HP_Shield_GeneratorH_07,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_TM_SSDMKII_01,
+			HP_TM_SSDMKII_02,
+			HP_TM_SSDMKII_03,
+			HP_TM_SSDMKII_04,
+			HP_TM_SSDMKII_05,
+			HP_TM_SSDMKII_06,
+			HP_TM_SSDMKII_07,
+			HP_TM_SSDMKII_08,
+			HP_TM_SSDMKII_09,
+			HP_TM_SSDMKII_10,
+			HP_TM_SSDMKII_11,
+			HP_TM_SSDMKII_12,
+			HP_TM_SSDMKII_13,
+			HP_TM_SSDMKII_14,
+			HP_TM_SSDMKII_15,
+			HP_TM_SSDMKII_16,
+			HP_TM_SSDMKII_17,
+			HP_TM_SSDMKII_18,
+			HP_TM_SSDMKII_19,
+			HP_TM_SSDMKII_20,
+			HP_TM_SSDMKII_21,
+			HP_TM_SSDMKII_22,
+			HP_TM_SSDMKII_23,
+			HP_TM_SSDMKII_24,
+			HP_TM_SSDMKII_25,
+			HP_TM_SSDMKII_26,
+			HP_TM_SSDMKII_27,
+			HP_TM_SSDMKII_28,
+			HP_TM_SSDMKII_29,
+			HP_TM_SSDMKII_30,
+			HP_TM_SSDMKII_31,
+			HP_TM_SSDMKII_32,
+			HP_TM_SSDMKII_33,
+			HP_TM_SSDMKII_34,
+			HP_TM_SSDMKII_35,
+			HP_TM_SSDMKII_36,
+			HP_TM_SSDMKII_37,
+			HP_TM_SSDMKII_38,
+			HP_TM_SSDMKII_39,
+			HP_TM_SSDMKII_40,
+			HP_TM_SSDMKII_41,
+			HP_TM_SSDMKII_42,
+		</HardPoints>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+
+		<Icon_Name>I_BUTTON_SSDLegacy.tga</Icon_Name>
+		
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_SSDLEGACY_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+				
+		<Build_Speech_Underway> EHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Respawn_Vader_Executor </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Unit_Canceled </Build_Speech_Stopped>
+		
+		<Build_Speech_Countdowns> EHD_Build_Vehicle </Build_Speech_Countdowns>
+
+		<Build_Music_Completed> Galactic_Death_Star_Complete_Music_Event </Build_Music_Completed>
+		
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> LegacySSD_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>4000</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FULL_SALVO.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> SSDMK2L_Tractor_Beam_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	        </Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="SSDMK2L_Tractor_Beam_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>4000</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>0</Stacking_Category>            
+	      	</Tractor_Beam_Attack_Ability>
+			<Super_Laser_Ability Name="LegacySSD_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+		
+				<Damage_Per_Frame>100000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>45</Line_Width>
+				<Line_Color>233 4 4 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+			</Super_Laser_Ability>
+			<Force_Healing_Ability Name="SSDLegacy_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>SSDLegacy</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>85000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>111</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>21250</Tactical_Bribe_Cost>
+		<Population_Value>12</Population_Value>
+		<!--<Space_Override_Population_Value>7</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="SSDLegacy_Death_Clone">
+		<Text_ID>TEXT_UNIT_EXECUTOR_SSDLEGACY</Text_ID>
+		<Space_Model_Name>EV_SSDLegacy_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<Scale_Factor>1.27</Scale_Factor>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>True</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</SSDLegacyUnit_Data>

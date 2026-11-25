@@ -1,0 +1,274 @@
+<?xml version="1.0"?>
+<Ha_Ciborg_trooperUnit_Data>
+	<GroundInfantry Name="Ha_Ciborg_trooper_A">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_CIBORG_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ha_Ciborg_Trooper_A.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_HA_CIBORG_TROOPER.tga</Icon_Name>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Tactical_Health>200</Tactical_Health>
+
+		<Death_Clone>Damage_Force_Whirlwind, Ha_Ciborg_trooper_A_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Ha_Ciborg_trooper_A_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Ha_Ciborg_trooper_A_Remote_Bomb_Death_Clone</Death_Clone>
+		
+		<AI_Combat_Power>9</AI_Combat_Power>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_A_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_A</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Ha_Ciborg_trooper_A_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_A</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_A_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_A</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_B">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_CIBORG_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ha_Ciborg_Trooper_B.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_HA_CIBORG_TROOPER.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Tactical_Health>40</Tactical_Health>
+
+		<Death_Clone>Damage_Force_Whirlwind, Ha_Ciborg_trooper_B_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Ha_Ciborg_trooper_B_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Ha_Ciborg_trooper_B_Remote_Bomb_Death_Clone</Death_Clone>
+		
+		<AI_Combat_Power>9</AI_Combat_Power>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_B_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_B</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Ha_Ciborg_trooper_B_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_B</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_B_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_B</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	<GroundInfantry Name="Ha_Ciborg_trooper_C">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_CIBORG_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ha_Ciborg_Trooper_C.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_HA_CIBORG_TROOPER.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Tactical_Health>40</Tactical_Health>
+
+		<Death_Clone>Damage_Force_Whirlwind, Ha_Ciborg_trooper_C_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Ha_Ciborg_trooper_C_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Ha_Ciborg_trooper_C_Remote_Bomb_Death_Clone</Death_Clone>
+		
+		<AI_Combat_Power>9</AI_Combat_Power>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_C_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_C</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Ha_Ciborg_trooper_C_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_C</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Ha_Ciborg_trooper_C_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_C</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Ha_Ciborg_trooper_A">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_A</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Ha_Ciborg_trooper_B">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_B</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Ha_Ciborg_trooper_C">
+		<Variant_Of_Existing_Type>Ha_Ciborg_trooper_C</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Ha_Ciborg_trooper_A_B">
+		<Variant_Of_Existing_Type>Squad_Ha_Ciborg_trooper_A</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Ha_Ciborg_troopers_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Ha_Ciborg_troopers_Squad_B">
+		<Variant_Of_Existing_Type>Ha_Ciborg_troopers_Squad</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_Ha_Ciborg_trooper_A, 
+		Squad_Ha_Ciborg_trooper_B, 
+		Squad_Ha_Ciborg_trooper_C, 
+		Squad_Ha_Ciborg_trooper_B, 
+		Squad_Ha_Ciborg_trooper_A, 
+		Squad_Ha_Ciborg_trooper_C, 
+		Squad_Ha_Ciborg_trooper_A, 
+		Squad_Ha_Ciborg_trooper_C, 
+		Squad_Ha_Ciborg_trooper_B
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Create_Team_Type> Ha_Ciborg_trooper_Team </Create_Team_Type>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Ha_Ciborg_troopers_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_CIBORG_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Cost_Credits>260</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>Hapan_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Underworld_Infantry_Droid_Shuttle</Company_Transport_Unit>
+		
+    		
+		<Company_Units> 
+		Squad_Ha_Ciborg_trooper_A_B, 
+		Squad_Ha_Ciborg_trooper_B, 
+		Squad_Ha_Ciborg_trooper_C, 
+		Squad_Ha_Ciborg_trooper_B, 
+		Squad_Ha_Ciborg_trooper_A, 
+		Squad_Ha_Ciborg_trooper_C, 
+		Squad_Ha_Ciborg_trooper_A, 
+		Squad_Ha_Ciborg_trooper_C, 
+		Squad_Ha_Ciborg_trooper_B
+		</Company_Units>
+		<Create_Team_Type> Ha_Ciborg_trooper_Team </Create_Team_Type>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		
+		<Icon_Name>i_button_HA_CIBORG_TROOPER.tga</Icon_Name>
+		
+	</GroundCompany>
+
+	
+
+	<GroundCompany Name="Ha_Ciborg_trooper_Deployed_Squad">
+		<Variant_Of_Existing_Type>Utrooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Ha_Ciborg_trooper_A, Squad_Ha_Ciborg_trooper_B, Squad_Ha_Ciborg_trooper_C, Squad_Ha_Ciborg_trooper_A, Squad_Ha_Ciborg_trooper_B, Squad_Ha_Ciborg_trooper_C,Squad_Ha_Ciborg_trooper_A, Squad_Ha_Ciborg_trooper_B, Squad_Ha_Ciborg_trooper_C</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+	
+	<Container Name="Ha_Ciborg_trooper_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_HA_CIBORG_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Dark_Trooper_PhaseII AT_ST_Walker T4B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler T2B_Tank UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HA_CIBORG_TROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_HA_CIBORG_TROOPER.tga</Icon_Name>
+	</Container>
+</Ha_Ciborg_trooperUnit_Data>

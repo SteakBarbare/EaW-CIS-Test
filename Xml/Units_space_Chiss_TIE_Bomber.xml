@@ -1,0 +1,180 @@
+﻿<?xml version="1.0"?>
+
+<Ch_TIE_Bomber_Data>
+	<SpaceUnit Name="Ch_TIE_Bomber">
+		<Variant_Of_Existing_Type>TIE_Bomber</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_TIE_BOMBER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_TIE_BOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BOMBER </Encyclopedia_Unit_Class>
+		<Space_Model_Name>Ch_TIE_Bomber.ALO</Space_Model_Name>
+		<Icon_Name>i_button_Ch_TIE_Bomber.tga</Icon_Name>
+
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+	
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+
+		<Affiliation>Chiss</Affiliation>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>3000</Tactical_Health>
+		<Shield_Refresh_Rate>1100</Shield_Refresh_Rate>
+		<Energy_Capacity>15000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Infantry_H </Armor_Type>
+		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+
+		<SpaceBehavior>FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, ABILITY_COUNTDOWN, HUNT, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+
+		<HardPoints>
+			 HP_Fighter_Proton_Torpedo_Adv, HP_Fighter_Proton_Torpedo_Adv02, HP_G_TIEA_Laser_00, HP_G_TIEA_Laser_01, HP_Torpedoadv_Ability_00
+		</HardPoints>
+		
+		
+		<CategoryMask> Bomber | Antifrigate </CategoryMask>
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+     
+	</SpaceUnit>
+
+	<Squadron Name="Ch_TIE_Bomber_Squadron">
+		<Variant_Of_Existing_Type>TIE_Bomber_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_CH_TIE_BOMBER_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Alliance_Assault_Frigate Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_TIE_BOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOMBER</Encyclopedia_Unit_Class>
+
+		<Affiliation>Chiss</Affiliation>
+
+		<Tech_Level>99</Tech_Level>
+
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<Squadron_Units>Ch_TIE_Bomber, Ch_TIE_Bomber, Ch_TIE_Bomber</Squadron_Units>
+		<Max_Squad_Size>3</Max_Squad_Size>
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>Ch_TIE_Bomber_Container1</Create_Team_Type>
+		
+		<Icon_Name>i_button_Ch_TIE_Bomber.tga</Icon_Name>
+		<GUI_Model_Name>Ch_TIE_Bomber.ALO</GUI_Model_Name>
+				
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</Squadron>
+	
+	<Container Name="Ch_TIE_Bomber_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_CH_TIE_BOMBER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_TIE_BOMBER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BOMBER</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Ch_TIE_Bomber.tga</Icon_Name>
+
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | Antifrigate </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+	<Container Name="Ch_TIE_Bomber_Container7">
+		<Variant_Of_Existing_Type>Ch_TIE_Bomber_Container1</Variant_Of_Existing_Type>
+		<Max_Squad_Size> 7 </Max_Squad_Size>
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+	</Container>
+	<Container Name="Ch_TIE_Bomber_Container12">
+		<Variant_Of_Existing_Type>Ch_TIE_Bomber_Container1</Variant_Of_Existing_Type>
+		<Max_Squad_Size> 12 </Max_Squad_Size>
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+	</Container>
+</Ch_TIE_Bomber_Data>

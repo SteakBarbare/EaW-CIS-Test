@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<Miliciano_NavalUnit_Data>
+	<GroundInfantry Name="Miliciano_Naval">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NAVALTROOPER</Text_ID>
+		<Land_Model_Name>Ei_NavyTrooperE11_1U.alo</Land_Model_Name>
+		
+		<Land_Model_Anim_Override_Name>Ei_ArmyTrooperE11.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_NavyTrooperE11_1U.ALO,
+			Urban, 				Ei_NavyTrooperE11_1U.ALO,
+			Arctic, 			Ei_NavyTrooperE11_1U.ALO,
+			Volcanic, 			Ei_NavyTrooperE11_1U.ALO,
+			Desert, 			Ei_NavyTrooperE11_1U.ALO,
+			Forest, 			Ei_NavyTrooperE11_1U.ALO,
+			Swamp, 				Ei_NavyTrooperE11_1U.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Icon_Name>i_button_NavalTroopers.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+
+		<Scale_Factor>1.2</Scale_Factor>
+		<Autoresolve_Health>30</Autoresolve_Health>
+		<Tactical_Health>100</Tactical_Health>
+		<AI_Combat_Power>8</AI_Combat_Power>
+
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+
+		<Create_Team>No</Create_Team>
+		<AI_Combat_Power>8</AI_Combat_Power>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_NAVALTROOPERS TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+	
+		</Unit_Abilities_Data>
+	
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Miliciano_Naval_Empire">
+		<Variant_Of_Existing_Type>Miliciano_Naval</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, GARRISON_UNIT, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>8.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Create_Team>Yes</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Miliciano_Naval_Empire_B">
+		<Variant_Of_Existing_Type>Squad_Miliciano_Naval_Empire</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Imperial_Miliciano_Naval_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+	</GroundInfantry>	
+	<GroundCompany Name="Imperial_Miliciano_Naval_Squad_B">
+		<Variant_Of_Existing_Type>Imperial_Miliciano_Naval_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Miliciano_Naval_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Imperial_Miliciano_Naval_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_NAVALTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NAVALTROOPERS TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>60</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		
+		<Company_Units> Squad_Miliciano_Naval_Empire_B, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire, Squad_Miliciano_Naval_Empire </Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Miliciano_Naval_Team </Create_Team_Type>
+		<Icon_Name>i_button_NavalTroopers.tga</Icon_Name>
+		<GUI_Model_Name>Ei_NavyTrooperE11_1U.ALO</GUI_Model_Name>
+		<Land_Model_Name>Ei_NavyTrooperE11_1U.ALO</Land_Model_Name>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Empire_Field</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Move_Empire_Field</SFXEvent_Fleet_Move>
+
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>60</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+	
+		</Unit_Abilities_Data>
+	
+
+	</GroundCompany>
+	<Container Name="Miliciano_Naval_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_NAVALTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NAVALTROOPERS TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Icon_Name>i_button_NavalTroopers.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	
+
+
+	</Container>
+</Miliciano_NavalUnit_Data>

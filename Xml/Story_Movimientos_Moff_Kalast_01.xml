@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO MOVIMIENTOS ESPECIALES ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Spawn_Units_Kalast">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Dar_Planeta_a_Rebeldes_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>PLANET_FACTION</Reward_Type>
+				<Reward_Param1>Atzerri</Reward_Param1>
+				<Reward_Param2>Rebel</Reward_Param2>
+				<Prereq>Spawn_Units_Kalast</Prereq>
+			</Event> 		
+	
+</Story>

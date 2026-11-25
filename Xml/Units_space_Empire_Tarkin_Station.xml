@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<TarkinStationTestUnit_Data>
+	<SpaceUnit Name="Tarkin_Station_Sk">
+		<Variant_Of_Existing_Type>Tarkin_Station_Test</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Scale_Factor>0.1</Scale_Factor>
+		<Lua_Script>ObjectScript_ZLayer_tarkin_Sk</Lua_Script>
+		<HardPoints> 
+			HP_SHIP_Comm_Array,
+		</HardPoints>
+	</SpaceUnit>		
+	<UniqueUnit Name="Tarkin_Station_SkB">
+		<Variant_Of_Existing_Type>Tarkin_Station_Test</Variant_Of_Existing_Type>
+		<Space_Model_Name>EV_Tarkin_Station_B_Turret.ALO</Space_Model_Name>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, IDLE, SHIELDED, TURRET, POWERED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+				
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>20</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>0.15</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Lua_Script>ObjectScript_None</Lua_Script>
+	</UniqueUnit>	
+	<SpaceUnit Name="Tarkin_Station_Test">
+		<Variant_Of_Existing_Type>E_Hvy_Art_ISDORG</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_UNIT_TARKIN_STATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TARKIN_STATION TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_DEATHSTAR TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_SCOUT TEXT_UNIT_TIE_FIGHTER TEXT_DESC_CANTIDAD_U</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_BATTLE_STATION</Encyclopedia_Unit_Class>
+		
+		<Encyclopedia_Good_Against> </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> </Encyclopedia_Vulnerable_To>
+		
+		<Space_Model_Name>EV_Tarkin_Station_Test.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> w_planet_fleet_EV_Tarkin_Station.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>1.0</Scale_Factor>
+				
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		<Shield_Armor_Type>Shield_DeathStar</Shield_Armor_Type>
+		
+		<Max_Speed> 0.5 </Max_Speed>		
+		<Max_Thrust> 0.02 </Max_Thrust>	
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.01</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+				
+		
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Supercapital </Space_Layer>
+		<Layer_Z_Adjust>-1000.0</Layer_Z_Adjust>
+		
+		<OverrideAcceleration> 0.02 </OverrideAcceleration>
+		<OverrideDeceleration> 0.02 </OverrideDeceleration>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Scout_Squadron, 5</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 5</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Scout_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Max_Thrust>3.0</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Maintenance_Cost>0.5</Maintenance_Cost>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Planets>
+			Honoghr, Jabiim, NalHutta, Abregado_Rae, AetenII, AlzocIII,	Atzerri, Dagobah, Dantooine, Hoth, Ilum, Korriban, Myrkr, Ryloth, Shola, Tatooine, Wayland,	Yavin,
+			Mustafar, Utapau, Felucia, Saleucami, Rattatak, Ord_Mantell, Toydaria, Aridus, Klatooine, Rishi, Serpindal,	Aquaris, Trandosha,	Kiffu, Kiffex, Selvaris, Ossus,
+			Pantolomin,	TossBeacon, Allyen, Xagobah, Ylesia, PolisMassa, Bozpity, Yagdul, Endor, Hypori, Yavin_Old, AnoatAsteroids, Arkania, Endor_New, Sluis_Sector, Anoat_GJavin_Sector, Seswenna_Sector, Atravis_Sector, Parnabe_Sector, Chardaan_Sector, Bothan_Sector, Abrion_Sector, Mindor_Sector, Taris_Sector, Pallaxides_Sector, Mandalore_Sector, The_Wheel_Sector, Escarte_Sector, Roche_Sector, Ciutric_Sector, Nirauan_Sector, Ord_Mantell_Sector, Orinda_Sector, Vladet_Sector, Bannistar_Sector, Vergesso_Sector, Denon_Sector 
+		</Required_Planets>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+				
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>2000000000</Tactical_Health>
+		<Shield_Refresh_Rate>20000000</Shield_Refresh_Rate>
+		<Energy_Capacity>90000000</Energy_Capacity>
+		<Energy_Refresh_Rate>34000000</Energy_Refresh_Rate>
+		
+		<Ship_Class>Super</Ship_Class>
+		<Surface_Bombardment_Capable>yes</Surface_Bombardment_Capable>
+		<Build_Cost_Credits>165000</Build_Cost_Credits>
+		
+		<Tactical_Bribe_Cost>10250</Tactical_Bribe_Cost>
+		<AI_Combat_Power>5500</AI_Combat_Power>
+		<Build_Time_Seconds>610</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+				
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, IDLE, SHIELDED, POWERED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Death_Clone>Damage_Normal, TarkinStationTest_Death_Clone</Death_Clone>
+		<In_Background>Yes</In_Background>
+				
+		<CategoryMask> Capital | AntiSuper </CategoryMask>
+		<Icon_Name>I_BUTTON_EV_TARKIN_STATION.tga</Icon_Name>
+		
+		<HardPoints> 
+			HP_World_Devastator_Hangar_00,
+			HP_SHIP_Comm_Array,
+			HP_T_DS_01,
+			HP_T_DS_02,
+			HP_T_DS_03,
+			HP_T_DS_04,
+			HP_T_DS_05,
+			HP_T_DS_06,
+			HP_T_DS_07,
+			HP_T_DS_08,
+			HP_T_DS_09,
+			HP_T_DS_10,
+			HP_T_DS_11,
+			HP_T_DS_12,
+			HP_T_DS_13,
+			HP_T_DS_14,
+			HP_T_DS_15,
+			HP_T_DS_16,
+			HP_T_DS_17,
+			HP_T_DS_18,
+			HP_T_DS_19,
+			HP_T_DS_20,
+			HP_T_DS_21,
+			HP_T_DS_22,
+			HP_T_DS_23,
+			HP_T_DS_24,
+			HP_T_DS_25,
+			HP_T_DS_26,
+			HP_T_DS_27,
+			HP_T_DS_28,
+			HP_T_DS_29,
+			HP_T_DS_30,
+			HP_T_DS_31,
+			HP_T_DS_32,
+			HP_T_DS_33,
+			HP_T_DS_34,
+			HP_T_DS_35,
+			HP_T_DS_36,
+			HP_T_DS_37,
+			HP_T_DS_38,
+			HP_T_DS_39,
+			HP_T_DS_40,
+			HP_T_DS_41,
+			HP_T_DS_42,
+			HP_T_DS_43,
+			HP_T_DS_44,
+			HP_T_DS_45,
+			HP_T_DS_46,
+			HP_T_DS_47,
+			HP_T_DS_48,
+			HP_T_DS_49,
+			HP_T_DS_50,
+			HP_T_DS_51,
+			HP_T_DS_52,
+			HP_T_DS_53,
+			HP_T_DS_54,
+			HP_T_DS_55,
+			HP_T_DS_56,
+			HP_T_DS_57,
+			HP_T_DS_58,
+			HP_T_DS_59,
+			HP_T_DS_60,
+			HP_T_DS_61,
+			HP_T_DS_62,
+			HP_T_DS_63,
+			HP_T_DS_63,
+			HP_T_DS_64,
+			HP_T_DS_65,
+			HP_T_DS_66,
+			HP_T_DS_67,
+			HP_T_DS_68,
+			HP_T_DS_69,
+			HP_T_DS_70,
+			HP_T_DS_71,
+			HP_T_DS_72,
+			HP_T_DS_73,
+			HP_T_DS_74,
+			HP_T_DS_75,
+			HP_T_DS_76,
+			HP_T_DS_77,
+			HP_T_DS_78,
+			HP_T_DS_79,
+			HP_T_DS_80,
+			HP_T_DS_81,
+			HP_T_DS_82,
+			HP_T_DS_83,
+			HP_T_DS_84,
+			HP_T_DS_85,
+			HP_T_DS_86,
+			HP_T_DS_87,
+			HP_T_DS_88,
+			HP_T_DS_89,
+			HP_T_DS_90,
+			HP_T_DS_91,
+			HP_T_DS_92,
+			HP_T_DS_93,
+			HP_T_DS_94,
+			HP_T_DS_95,
+			HP_T_DS_96,
+			HP_T_DS_97,
+			HP_T_DS_98,
+			HP_T_DS_99,
+			HP_T_DS_100,
+			HP_T_DS_101,
+			HP_T_DS_102,
+			HP_T_DS_103,
+			HP_T_DS_104,
+			HP_T_DS_105,
+			HP_T_DS_106,
+			HP_T_DS_107,
+			HP_T_DS_108,
+			HP_T_DS_109,
+			HP_T_DS_110,
+			HP_T_DS_111,
+			HP_T_DS_112,
+			HP_T_DS_113,
+			HP_T_DS_114,
+			HP_T_DS_115,
+			HP_T_DS_116,
+			HP_T_DS_117,
+			HP_T_DS_118,
+			HP_T_DS_119,
+			HP_T_DS_120,
+			HP_T_DS_121,
+			HP_T_DS_122
+		</HardPoints>
+		
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_TARKIN_STATION_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+		<Build_Speech_Underway> EHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Respawn_Vader_Executor </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Unit_Canceled </Build_Speech_Stopped>
+		
+		<Build_Speech_Countdowns> EHD_Build_Vehicle </Build_Speech_Countdowns>
+		<Build_Music_Completed> Galactic_Death_Star_Complete_Music_Event </Build_Music_Completed>
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>	
+		<Radar_Icon_Name>i_radar_Tarkin_station.tga</Radar_Icon_Name> 
+		<Radar_Icon_Size>0.5  0.5</Radar_Icon_Size>
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+		
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
+		
+		<Victory_Relevant>Yes</Victory_Relevant>
+		<Lua_Script>ObjectScript_ZLayer_ds</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> TarkinStationTest_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Super_Laser_Ability Name="TarkinStationTest_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+				<Damage_Per_Frame>100000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>35</Line_Width>
+				<Line_Color>104 181 230 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+				<Fire_Delay>0</Fire_Delay>
+				<Fire_Continuation>0.01</Fire_Continuation>
+			</Super_Laser_Ability>
+			
+			<Planet_Destruction_Ability Name="Death_Star_Planet_Destruction">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<SFXEvent_Target_Affected>Planet_Death_SFX</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Planet_Explosion_Galactic</Target_Particle_Effect>
+				<Target_Particle_Bone_Name />
+			</Planet_Destruction_Ability>
+		</Abilities>
+		<Tactical_Build_Cost_Multiplayer>165000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>180</Tactical_Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>15</Population_Value>
+		<Space_Override_Population_Value>1</Space_Override_Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="TarkinStationTest_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>EV_Tarkin_Station_Test.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EV_Tarkin_Station_Test.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Planet_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>DeathStar_Explosion_Space_Empire</Death_Explosions>
+		<In_Background>Yes</In_Background>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-2500.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</TarkinStationTestUnit_Data>

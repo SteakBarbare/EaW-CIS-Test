@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<Chopper_Hero_Files>
+
+
+	<GenericHeroUnit Name="Ri_Chopper">
+		<Text_ID>TEXT_HERO_UNIT_RI_CHOPPER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RI_CHOPPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DROID </Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ri_Chopper.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Ri_Chopper.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<GUI_Bracket_Width>5</GUI_Bracket_Width>
+		<GUI_Bracket_Height>0</GUI_Bracket_Height>
+		<GUI_Bracket_Size>0</GUI_Bracket_Size>
+
+		<!-- Individual unit case (non-team): Since R2 needs a TARGETING behavior for his hack ability, we are giving him a bogus WEAPON ability (required) as well -->
+		<!-- If part of a team, don't give a TARGETING and WEAPON behavior -->
+		<!-- LAND_TEAM_INFANTRY_LOCOMOTOR is required for droid team -->
+		<GalacticBehavior> SELECTABLE </GalacticBehavior>
+		<LandBehavior> SELECTABLE, SURFACE_FX, WALK_LOCOMOTOR, IDLE, REVEAL, HIDE_WHEN_FOGGED, STUNNABLE, ABILITY_COUNTDOWN, GARRISON_UNIT </LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+
+		<Mass>1.0</Mass>
+
+		<Uses_Multiple_Locomotors> Yes </Uses_Multiple_Locomotors>
+		<Hover_Offset>16.0</Hover_Offset>
+		<Primary_Locomotor_Name>WALK_LOCOMOTOR</Primary_Locomotor_Name>
+		<Secondary_Locomotor_Name>JETPACK_LOCOMOTOR</Secondary_Locomotor_Name>
+
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+		<Max_Speed>0.8</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>	
+		<Custom_Soft_Footprint_Radius> 3.5 </Custom_Soft_Footprint_Radius>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Space_Layer> None </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationSpacing> .3 </FormationSpacing> 
+		<OverrideAcceleration> .075 </OverrideAcceleration>
+		<OverrideDeceleration> .075 </OverrideDeceleration>
+		<FormationOrder> 1 </FormationOrder>
+		<FormationRaggedness> .8 </FormationRaggedness>
+		<MaxJiggleDistance> 2.0 </MaxJiggleDistance>		
+		<Scale_Factor>1.2</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Type>Walk</Type>
+		<Affiliation>Rebel</Affiliation>
+		<Select_Box_Scale>27</Select_Box_Scale>
+		<Selection_Blob_Material_Name>Selection_Rebel_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Rebel_Hero</Highlight_Blob_Material_Name>
+		
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Tactical_Health>1300</Tactical_Health>
+		<Autoresolve_Health>500</Autoresolve_Health>
+		<Damage>3</Damage>
+		<Stealth_Capable>No</Stealth_Capable>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Armor_Type> Armor_Hero </Armor_Type>
+		<Collidable_By_Projectile_Living> Yes </Collidable_By_Projectile_Living>
+		<SurfaceFX_Name>R2D2_Footprint, Infantry_Terrain_Modifier</SurfaceFX_Name>
+
+		<IsBuildable>No</IsBuildable>
+		<Spawn_Planet />
+		<Size_Value>75</Size_Value>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<SFXEvent_Select>Unit_Select_R2D2</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_R2D2</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_R2D2</SFXEvent_Fleet_Move>
+		<SFXEvent_Attacked>Unit_Attacked_R2D2</SFXEvent_Attacked>
+		<SFXEvent_Guard>Unit_Guard_R2D2</SFXEvent_Guard>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_R2D2 </Death_SFXEvent_Start_Die> 
+
+		<SFXEvent_Engine_Moving_Loop> Unit_R2_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<CategoryMask> LandHero </CategoryMask>
+		<Ranking_In_Category> 5 </Ranking_In_Category>
+		<MovementClass>Infantry</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Occlusion_Silhouette_Enabled>1</Occlusion_Silhouette_Enabled>
+		
+		<Neutralization_Cost>2000.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<AI_Combat_Power>100</AI_Combat_Power>
+
+		
+		<Score_Cost_Credits> 0 </Score_Cost_Credits>
+		
+
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+
+		<Abilities SubObjectList="Yes">
+			<Galactic_Stealth_Ability Name="Chopper_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Hack_Ability Name="Ri_Chopper_Hack_Ability">
+					<Team_Member_With_Ability> Ri_Chopper </Team_Member_With_Ability>	<!-- REQUIRED: One team member -->
+					<Activation_Style> User_Input </Activation_Style>
+					<Activation_Min_Range> 5.0 </Activation_Min_Range>
+					<Activation_Max_Range> 30.0 </Activation_Max_Range>
+					<Applicable_Unit_Categories> </Applicable_Unit_Categories>
+				
+					<Applicable_Unit_Categories>Landhero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+					
+	<!--	  		<Damage_Amount> 0.0 </Damage_Amount> -->
+	<!--	  		<Damage_Application_Time_In_Secs> 2.3893 </Damage_Application_Time_In_Secs> -->
+					<Lightning_Effect_Name> Hack_Electicity_Zaps </Lightning_Effect_Name>
+					<Lightning_Source_Bone_Name> </Lightning_Source_Bone_Name>
+					<Lightning_Target_Bone_Name> B_Turret </Lightning_Target_Bone_Name>
+					<Lightning_Max_Targets> 1 </Lightning_Max_Targets> 					
+					<Lightning_Targets_Radius> 0.0 </Lightning_Targets_Radius>		
+					<SFXEvent_Activate> Unit_Force_Lightning </SFXEvent_Activate> 					<!-- STUB PLACEHOLDER for Frank -->
+					<SFXEvent_Target_Affected />
+					<Target_Particle_Effect> Force_Lightning_Smoke </Target_Particle_Effect> 	<!-- STUB PLACEHOLDER for Gary -->
+					<Target_Particle_Bone_Name> B_Turret </Target_Particle_Bone_Name>
+					<Target_Light_Effect_Type> Linear_Pulse </Target_Light_Effect_Type>
+					<Target_Light_Effect_Color> 0.3, 0.3, 0.8 </Target_Light_Effect_Color>
+					<Target_Light_Effect_Color2 />
+					<Target_Light_Effect_Duration> 2.3893 </Target_Light_Effect_Duration>
+					<Target_Light_Effect_Pulse_Count> 25 </Target_Light_Effect_Pulse_Count>
+				</Hack_Ability>
+	
+			 <!-- REQUIRED HERE FOR TEAM -->
+				
+
+			<!-- DUE TO TEAM, DO NOT ADD TACTICAL SPECIAL ABILITIES TO THIS OBJECT - <Hack_Ability Name="R2D2_Hack_Ability"> -->
+			<!-- DUE TO TEAM, DO NOT ADD TACTICAL SPECIAL ABILITIES TO THIS OBJECT - <Repair_Ability Name="R2D2_Repair_Ability"> -->
+
+		</Abilities>
+
+		<!-- This is not required since R2 and 3PO are a team, and this data is on another container object -->
+		<!-- If we wanted R2 to have the special abilities and he was not part of the team, then we would need there -->
+		 <!-- Oksana: commenting this breaks the ability. The ability should be _indicated_ on the container object(i.e. only 
+			the ability type, with no parameters). The ability should be DEFINED on the unit itself. This would be valid 
+			if the ability was a _team ability_ like ION CANNON SHOT -->
+			<Unit_Abilities_Data SubObjectList="Yes">
+			
+				<Unit_Ability>
+					<Type>TARGETED_HACK</Type>
+					<Recharge_Seconds>45.0</Recharge_Seconds>
+					<GUI_Activated_Ability_Name> Ri_Chopper_Hack_Ability </GUI_Activated_Ability_Name>
+					<SFXEvent_Target_Ability> Unit_Hack_Turret_C3PO </SFXEvent_Target_Ability> 
+					<Supports_Autofire>True</Supports_Autofire>
+				</Unit_Ability>
+	
+				<Unit_Ability>
+					<Type>JET_PACK</Type>
+					<Alternate_Name_Text>TEXT_TOOLTIP_DT_JETPACK</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_DT_JETPACK_DESCRIPTION</Alternate_Description_Text>
+					<Recharge_Seconds>60.0</Recharge_Seconds>
+					<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+					<SFXEvent_Target_Ability> Unit_DT_Jet_Pack_Takeoff</SFXEvent_Target_Ability>
+					<Effective_Radius> -1.0 </Effective_Radius>
+				</Unit_Ability>
+				
+			</Unit_Abilities_Data>
+
+
+
+	</GenericHeroUnit>
+
+</Chopper_Hero_Files>

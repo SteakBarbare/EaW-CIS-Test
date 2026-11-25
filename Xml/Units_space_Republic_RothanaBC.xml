@@ -1,0 +1,309 @@
+<?xml version="1.0"?>
+<Rep_RothanaBC_Data>
+
+	<SpaceUnit Name="E_RothanaBC">
+		<Variant_Of_Existing_Type>RothanaBCORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>EV_Rothana_BC.ALO</Space_Model_Name>
+		<Affiliation>Empire</Affiliation>
+		<Icon_Name>I_BUTTON_E_Rothana_BC.TGA</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ROTHANABC TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_ALLIGATOR TEXT_WAVES_X3 TEXT_UNIT_ARC_170 TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, E_RothanaBC_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="E_RothanaBC_Death_Clone">
+		<Text_ID> TEXT_UNIT_VALIANT </Text_ID>
+		<Space_Model_Name>EV_Rothana_BC_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Layer_Z_Adjust> -30.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_RothanaBC">
+		<Variant_Of_Existing_Type>RothanaBCORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Layer_Z_Adjust>363.145</Layer_Z_Adjust>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Death_Clone>Damage_Normal, Rep_RothanaBC_Death_Clone</Death_Clone>
+		<Starting_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Alligator_Rep_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ARC_170_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+	</SpaceUnit>
+	<SpaceUnit Name="RothanaBCORG">
+		<Variant_Of_Existing_Type>REP_ValiantORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROTHANABC</Text_ID>
+		<Encyclopedia_Good_Against> CIS_LucrehulkB CIS_Providence CIS_Pinance </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_DroidBomber CIS_Chembomber_SquadronB CIS_Geo_Dread </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ROTHANABC TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_ALLIGATOR TEXT_UNIT_ARC_170 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>Rep_Rothana_BC.ALO</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor><!-- Reducido a la mitad en 3Dmax -->
+		
+		<Layer_Z_Adjust>100.0</Layer_Z_Adjust>
+		<Max_Speed>2.2</Max_Speed>
+
+		<Affiliation>Empire</Affiliation>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_SSD2</Shield_Armor_Type>
+		
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>500000</Shield_Points>
+		<Tactical_Health>750000000</Tactical_Health>
+		<Shield_Refresh_Rate>506000</Shield_Refresh_Rate>
+		<Energy_Capacity>3500000</Energy_Capacity>
+		<Energy_Refresh_Rate>2100000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>16000</Build_Cost_Credits>
+		<AI_Combat_Power>4120</AI_Combat_Power>
+		<Build_Time_Seconds>200</Build_Time_Seconds>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>AACapital</Targeting_Priority_Set>	
+
+		<HardPoints>
+			HP_T_RothanaBC_01,
+			HP_T_RothanaBC_02,
+			HP_T_RothanaBC_03,
+			HP_T_RothanaBC_04,
+			HP_T_RothanaBC_05,
+			HP_T_RothanaBC_06,
+			HP_T_RothanaBC_07,
+			HP_T_RothanaBC_08,
+			HP_T_RothanaBC_09,
+			HP_T_RothanaBC_10,
+			HP_T_RothanaBC_11,
+			HP_T_RothanaBC_12,
+			HP_T_RothanaBC_13,
+			HP_T_RothanaBC_14,
+			HP_T_RothanaBC_15,
+			HP_T_RothanaBC_16,
+			HP_T_RothanaBC_17,
+			HP_T_RothanaBC_18,
+			HP_T_RothanaBC_19,
+			HP_T_RothanaBC_20,
+			HP_T_RothanaBC_21,
+			HP_T_RothanaBC_22,
+			HP_T_RothanaBC_23,
+			HP_T_RothanaBC_24,
+			HP_T_RothanaBC_25,
+			HP_T_RothanaBC_26,
+			HP_T_RothanaBC_27,
+			HP_T_RothanaBC_28,
+			HP_T_RothanaBC_29,
+			HP_T_RothanaBC_30,
+			HP_T_RothanaBC_31,
+			HP_T_RothanaBC_32,
+			HP_T_RothanaBC_33,
+			HP_T_RothanaBC_34,
+			HP_T_RothanaBC_35,
+			HP_T_RothanaBC_36,
+			HP_T_RothanaBC_37,
+			HP_T_RothanaBC_38,
+			HP_T_RothanaBC_39,
+			HP_T_RothanaBC_40,
+			HP_T_RothanaBC_41,
+			HP_T_RothanaBC_42,
+			HP_T_RothanaBC_43,
+			HP_T_RothanaBC_44,
+			HP_T_RothanaBC_45,
+			HP_T_RothanaBC_46,
+			HP_T_RothanaBC_47,
+			HP_T_RothanaBC_48,
+			HP_T_RothanaBC_49,
+			HP_T_RothanaBC_50,
+			HP_T_RothanaBC_51,
+			HP_T_RothanaBC_52,
+			HP_T_RothanaBC_53,
+			HP_T_RothanaBC_54,
+			HP_T_RothanaBC_55,
+			HP_T_RothanaBC_56,
+			HP_T_RothanaBC_57,
+			HP_T_RothanaBC_58,
+			HP_T_RothanaBC_59,
+			HP_T_RothanaBC_60,
+			HP_T_RothanaBC_61,
+			HP_T_RothanaBC_62,
+			HP_T_RothanaBC_63,
+			HP_T_RothanaBC_64,
+			HP_T_RothanaBC_65,
+			HP_T_RothanaBC_66,
+			HP_T_RothanaBC_67,
+			HP_T_RothanaBC_68,
+			HP_T_RothanaBC_69,
+			HP_T_RothanaBC_70,
+			HP_T_RothanaBC_71,
+			HP_T_RothanaBC_72,
+			HP_Shield_GeneratorH_00, 
+			HP_Shield_GeneratorH_01,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Fighter_BayH_05,
+			HP_Fighter_BayH_06,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Fel_SD_Blast_00,
+			HP_Fel_SD_Blast_01,
+			HP_Fel_SD_Blast_02,
+			HP_Fel_SD_Blast_03,
+			HP_Fel_SD_Blast_04,
+			HP_Fel_SD_Blast_05,
+			HP_Fel_SD_Blast_06,
+			HP_Fel_SD_Blast_07,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_MisilA_03,
+			HP_MisilA_04,
+			HP_MisilA_05,
+			HP_MisilA_06,
+			HP_MisilA_07,
+			HP_MisilA_08,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_TorpedoA_03,
+			HP_TorpedoA_04,
+			HP_TorpedoA_05,
+			HP_TorpedoA_06,
+			HP_TorpedoM_01,
+			HP_TorpedoM_02,
+			HP_TorpedoM_03,
+			HP_TorpedoM_04,
+			HP_RocketM_01,
+			HP_RocketM_02
+   		</HardPoints>
+	
+		<Icon_Name>I_BUTTON_Rep_Rothana_BC.TGA</Icon_Name>
+		<GUI_Model_Name>Rep_Rothana_BC.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Select>Unit_Select_REP_ROTHANABC</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_E_BC</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_E_BC</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_E_BC</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_E_BC</SFXEvent_Guard>
+		<SFXEvent_Move_Opposite>Unit_Move_Opposite_E_BC</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Barrage_E_BC</SFXEvent_Barrage>
+		<SFXEvent_Stop>Unit_Stop_E_BC</SFXEvent_Stop>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_E_BC </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_E_BC </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target>	EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_Attack_E_BC </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Ambient_Loop>Unit_E_BC_Idle_Engine_Loop</SFXEvent_Ambient_Loop>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+         
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_REP_ROTHANABC</SFXEvent_Build_Complete>
+	
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.0838  0.11178</Radar_Icon_Size>
+		
+		<Lua_Script>ObjectScript_ZLayer_BC</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>3000</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_LASER_ACC</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_LASER_ACC_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_LASER_DEFENSE.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>4000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="Rep_RothanaBC_Death_Clone">
+		<Text_ID> TEXT_UNIT_VALIANT </Text_ID>
+		<Space_Model_Name>Rep_Rothana_BC_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Layer_Z_Adjust> -30.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</Rep_RothanaBC_Data>

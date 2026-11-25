@@ -1,0 +1,691 @@
+<?xml version="1.0"?>
+<EVFO_Space_Units1>
+	
+	<!-- usa mismos astilleros que el imperio -->
+	
+
+	<SpaceUnit Name="EVFO_Gozanti">
+		<Variant_Of_Existing_Type>TartanORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_GOZANTI</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_GOZANTI TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_CRUISER</Encyclopedia_Unit_Class>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>EVFO</Affiliation>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Space_Model_Name>EV_Gozanti.ALO</Space_Model_Name>
+		<Icon_Name>i_button_EV_Gozanti.tga</Icon_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron, 4</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<AI_Combat_Power>1250</AI_Combat_Power>
+		<HardPoints>
+			HP_T_EV_Gozanti_01,
+			HP_T_EV_Gozanti_02,
+			HP_EVFO_Gozanti_Hangar
+	    </HardPoints>
+		
+		<Death_Clone>Damage_Normal, E_Gozanti_Death_Clone </Death_Clone>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Tartan</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Unit_Ability>
+			<Unit_Ability>
+                <Type>DEPLOY_SQUAD</Type>
+	            <Recharge_Seconds>5</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated> Unit_Guard_Tartan </SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+
+	<SpaceUnit Name="EVFO_Quasar">
+		<Variant_Of_Existing_Type>QuasarORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_REBEL_CARRIER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_WAVES_X2 TEXT_UNIT_EVFO_TIE_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Affiliation>EVFO</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Space_Model_Name>EV_Quasar.ALO</Space_Model_Name>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON, SELF_DESTRUCT </SpaceBehavior>
+		<Icon_Name>I_BUTTON_EV_Quasar.tga</Icon_Name>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<AI_Combat_Power>1700</AI_Combat_Power>
+		
+		<HardPoints> 
+			HP_T_EV_Quasar_01,
+			HP_T_EV_Quasar_02,
+			HP_T_EV_Quasar_03,
+			HP_T_EV_Quasar_04,
+			HP_T_EV_Quasar_05, 
+			HP_T_EV_Quasar_06,
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00,
+			HP_Fighter_Bay_Small_00,
+			HP_Fighter_Bay_Small_01,
+			HP_Fighter_Bay_Small_02,
+			HP_Fighter_Bay_Small_03
+		</HardPoints>
+
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, E_Quasar_Deathclone</Death_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>		
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="EV_Quasar_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_Nebulon_B2">
+		<Variant_Of_Existing_Type>Nebulon_B2ORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Corellian_Corvette Rep_Marauder E_CR_CVM </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MC40 R_Dreadnought_Up Y-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_NEBULON_B2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_E_FO TEXT_UNIT_EVFO_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_NebulonB2.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>-20.0</Layer_Z_Adjust>
+		<Affiliation>EVFO</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<AI_Combat_Power>2000</AI_Combat_Power>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<GUI_Model_Name>EV_NebulonB2.ALO</GUI_Model_Name>
+		<Death_Clone>Damage_Normal, Nebulon_B2E_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_Strike">
+		<Variant_Of_Existing_Type>E_Strike_Up2ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_STRIKECRUISERII</Text_ID>
+		<Space_Model_Name>EVFO_EJ_StrikeCruiser.ALO</Space_Model_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EV_STRIKECRUISERII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_E_FO TEXT_WAVES_X3 TEXT_UNIT_EVFO_TIE_BOMBER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Affiliation>EVFO</Affiliation>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron4, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 3</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, EVFO_Strike_Death_Clone</Death_Clone>
+		<AI_Combat_Power>3200</AI_Combat_Power>
+	</SpaceUnit>
+	 <SpaceUnit Name="EVFO_Strike_Death_Clone">
+		<Variant_Of_Existing_Type>E_StrikeII_Death_Clone</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVFO_EJ_StrikeCruiser_D.ALO</Space_Model_Name>
+	</SpaceUnit>
+
+	<SpaceUnit Name="EVFO_Command_Arquitens">
+		<Variant_Of_Existing_Type>ArquitensORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_C_ARQUITENS</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Missile_Frg CIS_Diamond CIS_Hardcell </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_LucrehulkC CIS_Providence CIS_Wavecrest </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_E_C_ARQUITENS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron7, 4</Starting_Spawned_Units_Tech_0>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Icon_Name>i_button_ev_light_cruiserx.tga</Icon_Name>
+		<GUI_Model_Name>EV_ArquitentsC.ALO</GUI_Model_Name>
+		<Space_Model_Name>EV_ArquitentsC.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, E_Command_Arquitens_Death_Clone</Death_Clone>
+		<Affiliation>EVFO</Affiliation>
+		<AI_Combat_Power>3050</AI_Combat_Power>
+		<HardPoints>
+			HP_T_ArquitensC_01,
+			HP_T_ArquitensC_02,
+			HP_T_ArquitensC_03,
+			HP_T_ArquitensC_04,
+			HP_T_ArquitensC_05,
+			HP_T_ArquitensC_06,
+			HP_T_ArquitensC_07,
+			HP_T_ArquitensC_08,
+			HP_T_ArquitensC_09,
+			HP_T_ArquitensC_10,
+			HP_Fighter_Bay_Small_00,
+			HP_Shield_Generator_Small_00,
+			HP_Shield_Generator_Small_01,
+			HP_Engines_Small_00
+		</HardPoints>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>	
+	<SpaceUnit Name="EVFO_Gladiator">
+		<Variant_Of_Existing_Type>GladiatorORG</Variant_Of_Existing_Type>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 9</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron4, 9</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GLADIATOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_WAVES_X2 TEXT_UNIT_TIE_FIGHTER_E_FO TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Affiliation>EVFO</Affiliation>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>		
+		<Death_Clone>Damage_Normal, Gladiator_Death_Clone</Death_Clone>
+		<AI_Combat_Power>3500</AI_Combat_Power>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="EVFO_AcclamatorII">
+		<Variant_Of_Existing_Type>AcclamatorII</Variant_Of_Existing_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SHIELDED, BARRAGE, SIMPLE_SPACE_LOCOMOTOR, TARGETING, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<AI_Combat_Power>3350</AI_Combat_Power>
+		<Affiliation>EVFO</Affiliation>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ACCLAMATORMKII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVFO_TIE_INTERCEPTOR TEXT_WAVES_X3 TEXT_UNIT_EVFO_TIE_BOMBER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron7, 4</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron7, 4</Reserve_Spawned_Units_Tech_0>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Death_Clone>Damage_Normal, AcclamatorII_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_DreadOld">
+		<Variant_Of_Existing_Type>DreadnoughtORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVFO_DreadOld.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Affiliation>EVFO</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DREADNAUGHT_IMP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_UNIT_EVFO_TIE_BOMBER TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, EVFO_DreadOld_Death_Clone</Death_Clone>
+		<AI_Combat_Power>2300</AI_Combat_Power>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_DreadOld_Death_Clone">
+		<Variant_Of_Existing_Type>E_Dreadnought_Death_Clone</Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>EVFO_DreadOld_D.ALO</Space_Model_Name>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_VSD1">
+		<Variant_Of_Existing_Type>Victory_Destroyer_No_Fighters</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VICTORY_DESTROYER</Text_ID>
+		<Encyclopedia_Good_Against> Corellian_Corvette Corellian_Gunboat Crusader_Gunship </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing Skipray_Blastboat Calamari_Cruiser </Encyclopedia_Vulnerable_To>
+		<Death_Clone>Damage_Normal, Victory_Destroyer_Death_Clone</Death_Clone>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VICTORY TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_UNIT_EVFO_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>EVFO</Affiliation>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Tactical_Bribe_Cost>2800</Tactical_Bribe_Cost>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<AI_Combat_Power>4700</AI_Combat_Power>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_VSD2">
+		<Variant_Of_Existing_Type>VSD2ORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, VSD2_Death_Clone</Death_Clone>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VSD2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVFO_TIE_INTERCEPTOR TEXT_UNIT_EVFO_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>EVFO</Affiliation>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron4, 6</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 6</Reserve_Spawned_Units_Tech_0>
+		<Tactical_Bribe_Cost>2800</Tactical_Bribe_Cost>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<AI_Combat_Power>4850</AI_Combat_Power>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_Attack_Carrier">
+		<Variant_Of_Existing_Type>Attack_CarrierORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_ACARRIER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVFO_ACARRIER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVFO_TIE_INTERCEPTORB TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>EVFO, Empire</Affiliation>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>EVFO_Attack_Carrier.alo</Space_Model_Name>
+		<Icon_Name>i_button_EVFO_Attack_Carrier.tga</Icon_Name>
+		<HardPoints>
+			HP_T_EVFOCarrier_01, 
+			HP_T_EVFOCarrier_02,
+  		    HP_T_EVFOCarrier_05, 
+			HP_T_EVFOCarrier_06, 
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+      		HP_Fighter_BayH_00,			
+			HP_Fighter_BayH_01,			
+			HP_Fighter_BayH_02,			
+			HP_Fighter_BayH_03			
+			HP_Shield_GeneratorH_00, 
+			HP_EnginesH_00
+		</HardPoints>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Int_Baron_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Int_Baron_Squadron7, 22</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, EVFO_Attack_Carrier_Death</Death_Clone>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Acclamator</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		<AI_Combat_Power>4100</AI_Combat_Power>
+	</SpaceUnit>	
+	<SpaceUnit Name="EVFO_Attack_Carrier_Death">
+		<Variant_Of_Existing_Type>EVFO_Interdictor_Death_Clone</Variant_Of_Existing_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>EVFO_Attack_Carrier_D.ALO</Space_Model_Name>
+	</SpaceUnit>
+
+	<SpaceUnit Name="EVFO_VSD3">
+		<Variant_Of_Existing_Type>Victory_Destroyer_No_Fighters</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_VSD3</Text_ID>
+		<Space_Model_Name>EVFO_VSD.ALO</Space_Model_Name>
+		<Icon_Name>i_button_EVFO_VSD3.tga</Icon_Name>
+		<Scale_Factor>0.30</Scale_Factor>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		<Space_Layer> Frigate </Space_Layer>
+		<Layer_Z_Adjust>-43.344</Layer_Z_Adjust>
+		<Max_Speed>2.3</Max_Speed>
+		<HardPoints> 
+			HP_TurboMG_01,
+			HP_TurboMG_02,
+			HP_TurboMG_03,
+			HP_TurboMG_04,
+			HP_TurboMG_05,
+			HP_TurboMG_06,
+			HP_TurboMG_07,
+			HP_TurboMG_08,
+			HP_TurboMG_09,
+			HP_TurboMG_10,
+			HP_TurboMG_11,
+			HP_TurboMG_12,
+			HP_TurboMG_13,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_T_EVFOSD_01,
+			HP_T_EVFOSD_02,
+			HP_T_EVFOSD_03,
+			HP_T_EVFOSD_04,
+			HP_T_EVFOSD_05,
+			HP_T_EVFOSD_06
+		</HardPoints>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron7, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVFO_VSD3 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVFO_TIE_INTERCEPTOR TEXT_WAVES_X3 TEXT_UNIT_EVFO_TIE_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Death_Clone>Damage_Normal, EVFO_VSD3_Death_Clone</Death_Clone>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Affiliation>EVFO, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Cost_Credits>3500</Build_Cost_Credits>
+		<AI_Combat_Power>5300</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Tactical_Build_Cost_Multiplayer>3500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_VSD3_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Destroyer_Death_Clone</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVFO_VSD_D.ALO</Space_Model_Name>
+		<Scale_Factor>0.30</Scale_Factor>
+	</SpaceUnit>
+
+	<SpaceUnit Name="EVFO_Nar_SD">
+		<Variant_Of_Existing_Type>EV_Nar_SDORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EV_NARSHADDASD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_UNIT_EVFO_TIE_BOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Space_Model_Name>EVFO_Nar_SD.ALO</Space_Model_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<AI_Combat_Power>4400</AI_Combat_Power>
+		<Death_Clone>Damage_Normal, EVFO_Nar_SD_Death_Clone</Death_Clone>
+		<Affiliation>EVFO</Affiliation>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+
+		<HardPoints>
+			HP_Engines_00,
+			HP_Shield_Generator_00,
+			HP_Shield_Generator_01,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Fighter_Bay_02,
+			HP_T_EVNarSD_01,
+			HP_T_EVNarSD_02,
+			HP_T_EVNarSD_03,
+			HP_T_EVNarSD_04,
+			HP_T_EVNarSD_05,
+			HP_T_EVNarSD_06,
+			HP_T_EVNarSD_07,
+			HP_T_EVNarSD_08,
+			HP_T_EVNarSD_09,
+			HP_T_EVNarSD_10,
+			HP_T_EVNarSD_11,
+			HP_T_EVNarSD_12,
+			HP_T_EVNarSD_13,
+			HP_T_EVNarSD_14,
+			HP_T_EVNarSD_15,
+			HP_T_EVNarSD_16,
+			HP_T_EVNarSD_17,
+			HP_T_EVNarSD_18,
+			HP_T_EVNarSD_19,
+			HP_T_EVNarSD_20,
+			HP_T_EVNarSD_21,
+			HP_T_EVNarSD_22,
+			HP_T_EVNarSD_23,
+			HP_T_EVNarSD_24,
+			HP_T_EVNarSD_25,
+			HP_T_EVNarSD_26,
+			HP_T_EVNarSD_27,
+			HP_T_EVNarSD_28,
+			HP_T_EVNarSD_29,
+			HP_T_EVNarSD_30,
+			HP_T_EVNarSD_31,
+			HP_T_EVNarSD_32,
+			HP_T_EVNarSD_33,
+			HP_T_EVNarSD_34,
+			HP_T_EVNarSD_35,
+			HP_T_EVNarSD_36,
+			HP_T_EVNarSD_37,
+			HP_T_EVNarSD_38,
+			HP_T_EVNarSD_39
+		</HardPoints>
+	</SpaceUnit>	
+	<SpaceUnit Name="EVFO_Nar_SD_Death_Clone">
+		<Variant_Of_Existing_Type>EV_Nar_SD_Death_Clone</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVFO_Nar_SD_D.ALO</Space_Model_Name>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_ISD2">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>EV_ISDMKII.ALO</Space_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Death_Clone>Damage_Normal, EVFO_ISD2_Death_Clone</Death_Clone>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Affiliation>EVFO</Affiliation>
+		<AI_Combat_Power>5600</AI_Combat_Power>
+		<HardPoints> 
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_EV_SH_ISD2_00,
+			HP_EV_SH_ISD2_01,
+			HP_Tractor_Beam_Rebelde,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_ISD2_Side_01,
+			HP_T_ISD2_Side_02,
+			HP_T_ISD2_SideN_03,
+			HP_T_ISD2_SideN_04, 		
+			HP_T_ISD2_SideN_05
+			HP_T_ISD2_SideN_06,
+			HP_T_ISD2_SideN_07,
+			HP_T_ISD2_SideN_08,
+			HP_T_ISD2_SideN_09,
+			HP_T_ISD2_SideN_10,
+			HP_T_ISD2_SideN_11,
+			HP_T_ISD2_SideN_12,
+			HP_T_ISD2_SideN_13,
+			HP_T_ISD2_SideN_14,
+			HP_T_ISD2_Side_15,
+			HP_T_ISD2_Side_16,
+			HP_T_ISD2_Side_17,
+			HP_T_ISD2_Side_18,
+			HP_T_ISD2_Side_19,
+			HP_T_ISD2_SideN_20,
+			HP_T_ISD2_SideN_21,
+			HP_T_ISD2_SideN_22,
+			HP_T_ISD2_SideN_23,
+			HP_T_ISD2_SideN_24,
+			HP_T_ISD2_SideN_25,
+			HP_T_ISD2_SideN_26,
+			HP_T_ISD2_SideN_27,
+			HP_T_ISD2_SideN_28,
+			HP_T_ISD2_SideN_29,
+			HP_T_ISD2_SideN_30,
+			HP_T_ISD2_SideN_31,
+			HP_T_ISD2_SideN_32,
+			HP_T_ISD2_SideN_33,
+			HP_T_ISD2_SideN_34,
+			HP_T_ISD2_SideN_35,
+			HP_T_ISDII_01,
+			HP_T_ISDII_02,
+			HP_T_ISDII_03,
+			HP_T_ISDII_04,
+			HP_T_ISDII_05,
+			HP_T_ISDII_06,
+			HP_T_ISDII_07,
+			HP_T_ISDII_08,
+			HP_T_ISDII_B_09,
+			HP_T_ISDII_B_10,
+			HP_T_ISDII_B_11,
+			HP_T_ISDI_14,
+			HP_T_ISDI_15,
+			HP_T_ISDII_B_16,
+			HP_T_ISDII_B_17,
+			HP_T_ISDI_18,
+			HP_T_ISDI_19,
+			HP_T_ISDII_B_20,
+			HP_T_ISDII_B_21,
+			HP_T_ISDII_B_22,
+			HP_T_ISDII_B_23,
+			HP_T_ISDII_B_24,
+			HP_T_ISDII_B_25,
+			HP_T_ISDI_26
+		</HardPoints>
+
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Squadron7, 7</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron7, 7</Reserve_Spawned_Units_Tech_0> 
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 11</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STAR_DESTROYERII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVFO_TIE_INTERCEPTOR TEXT_WAVES_X3 TEXT_UNIT_TIE_FIGHTER_FO TEXT_WAVES_X3 TEXT_UNIT_EVFO_TIE_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Space_FOW_Reveal_Range>1800.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_ISD2_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EVFO_ISD2_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Layer_Z_Adjust>400.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_TorpedoSphere">
+		<Variant_Of_Existing_Type>TorpedoSphereORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Affiliation>EVFO</Affiliation>
+		<Death_Clone>Damage_Normal, TorpedoSphere_Death_Clone</Death_Clone>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<AI_Combat_Power>6200</AI_Combat_Power>
+	</SpaceUnit>
+	
+</EVFO_Space_Units1>

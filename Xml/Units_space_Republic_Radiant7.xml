@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<REP_Radiant7Unit_Data>
+	<SpaceUnit Name="REP_Radiant7">
+		<Variant_Of_Existing_Type>REP_Radiant7_FighterORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Space_Model_Name>Rep_Radian7armed.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, REP_Radiant7_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="EV_Radiant7">
+		<Variant_Of_Existing_Type>REP_Radiant7_FighterORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>EV_Radian7armed.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, EV_Radiant7_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="REP_Radiant7_FighterORG">
+		<Variant_Of_Existing_Type>CR_CV_Basic</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RADIANT7ARMED</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Chembomber_SquadronB Cis_DroidBomber_SquadronB Nantex_SquadronB </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Recusant_PSD CIS_Recusant CIS_Munificent </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>Rep_Radian7armed.ALO</Space_Model_Name>
+		<GUI_Model_Name>Rep_Radian7armed.ALO</GUI_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RADIANT7ARMED TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+
+		<Scale_Factor>0.15</Scale_Factor>
+
+		<Max_Speed>2.45</Max_Speed>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<Layer_Z_Adjust>305.71</Layer_Z_Adjust>
+
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Required_Planets>Corellia, Tralus, Duro, Commenor, Nubia, Tynna, Naboo, Balmorra, DuroK, CorelliaK, Corellia_Sector, Kuat_Sector, Vladet_Sector, Chardaan_Sector</Required_Planets>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+
+		<Build_Cost_Credits>1250</Build_Cost_Credits>
+
+		<AI_Combat_Power>495</AI_Combat_Power>
+
+		<Icon_Name>i_button_Rep_RADIANT7armed.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Radian7armed.ALO</GUI_Model_Name>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+
+		<HardPoints>
+			HP_T_CR_Radiant7_01,
+			HP_T_CR_Radiant7_02,
+			HP_T_CR_Radiant7_03,
+			HP_T_CR_Radiant7_04,
+			HP_T_CR_Radiant7_05,
+			HP_T_CR_Radiant7_06
+		</HardPoints>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_REP_IPV</SFXEvent_Build_Complete>
+		<SFXEvent_Select>Unit_Select_REP_IPV</SFXEvent_Select>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="REP_Radiant7_Death_Clone">
+		<Text_ID>TEXT_UNIT_RADIANT7</Text_ID>
+		<Space_Model_Name>Rep_Radian7armed.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Medium_Explosion_Space_Empire</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<SpaceUnit Name="EV_Radiant7_Death_Clone">
+		<Text_ID>TEXT_UNIT_RADIANT7</Text_ID>
+		<Space_Model_Name>EV_Radian7armed.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Medium_Explosion_Space_Empire</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	<!--<Squadron Name="EV_Radiant7">
+		<Variant_Of_Existing_Type>REP_Radiant7</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Squadron_Units>EV_Radiant7_Fighter</Squadron_Units>
+	</Squadron>		
+		
+	<Squadron Name="REP_Radiant7">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RADIANT7ARMED</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Chembomber_SquadronB Cis_DroidBomber_SquadronB Nantex_SquadronB </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_Recusant_PSD CIS_Recusant CIS_Munificent </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RADIANT7ARMED TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+
+		<Affiliation>Republic</Affiliation>
+		
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Required_Planets>Corellia, Tralus, Duro, Commenor, Nubia, Tynna, Naboo, Balmorra, DuroK, CorelliaK, Corellia_Sector, Kuat_Sector, Vladet_Sector, Chardaan_Sector</Required_Planets>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		
+		<Squadron_Units>REP_Radiant7_Fighter</Squadron_Units>
+		<Max_Squad_Size>1</Max_Squad_Size>
+		
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<FormationOrder>1</FormationOrder>
+		<Formation_Priority>1</Formation_Priority>
+
+		<Icon_Name>i_button_Rep_RADIANT7armed.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Radian7armed.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_REP_IPV</SFXEvent_Build_Complete>
+		<SFXEvent_Select>Unit_Select_REP_IPV</SFXEvent_Select>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+				
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>-->
+	
+</REP_Radiant7Unit_Data>

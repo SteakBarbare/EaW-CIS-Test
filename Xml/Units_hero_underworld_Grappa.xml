@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<GrappaUnit_Data>
+
+	<HeroUnit Name="Grappa">
+		<Variant_Of_Existing_Type>Durga</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_GRAPPA</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GRAPPA TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ui_Grappa_the_Hutt.tga</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Urai_Fen</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Urai_Fen</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Urai_Fen</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Urai_Fen</SFXEvent_Guard>
+		<SFXEvent_Fire></SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Urai_Fen</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Urai_Fen</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Urai_Fen</Death_SFXEvent_Start_Die>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<!-- Primary ability -->
+            <Unit_Ability>
+                <Type>TACTICAL_BRIBE</Type>
+                <Recharge_Seconds>50.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Grappa_Tactical_Bribe </GUI_Activated_Ability_Name>
+                <SFXEvent_Target_Ability> Unit_Bribe_Tyber_Zann </SFXEvent_Target_Ability>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+
+           <Unit_Ability>
+				<Type>FORCE_WHIRLWIND</Type>
+				<Recharge_Seconds>25.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Grappa_Whirlwind </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Effective_Radius> 250.0 </Effective_Radius>
+				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_TREMORS_WHIRLWIND_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_TREMORS_WHIRLWIND_DESCR</Alternate_Description_Text>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+			<Hero_Protection_Ability Name="Grappa_Hero_Protection">
+				<Neutralization_Cost_Multiplier>2.0</Neutralization_Cost_Multiplier>
+				<Stacking_Category>9</Stacking_Category>
+			</Hero_Protection_Ability>
+			
+			<Force_Whirlwind_Ability Name="Grappa_Whirlwind">
+				<!-- <Activation_Style>Special_Attack</Activation_Style> -->
+				<Activation_Style> User_Input </Activation_Style>
+				<!-- We need to be within this distance of the clicked target to consider activating Force Whirlwind -->
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>250.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<!-- How long does it take for the shockwave to spread from the hero to the max range? -->
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<!-- Percentage chance to activate given a certain number of valid targets in range. -->
+				<!-- First number in the pair is the number of valid targets, second is the chance to activate. -->
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<!--				<Activation_Chance>0,0.0, 500,0.0</Activation_Chance>	< ! - - never activate -->
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name />
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count />
+			</Force_Whirlwind_Ability>
+
+            <Black_Market_Ability Name="Grappa_Black_Market">
+                <Initially_Enabled>Yes</Initially_Enabled>
+                <Causes_Despawn>Yes</Causes_Despawn>
+               
+                <Min_Respawn_Times>90.0, 90.0, 90.0, 90.0, 90.0</Min_Respawn_Times>
+                <Max_Respawn_Times>90.0, 90.0, 90.0, 90.0, 90.0</Max_Respawn_Times>
+                
+                <Price_Modifier>1.0</Price_Modifier>
+                <Tech_Level_Adjustment>-1</Tech_Level_Adjustment>
+            </Black_Market_Ability>
+
+            <Tactical_Bribe_Ability Name="Grappa_Tactical_Bribe">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>0.0</Activation_Min_Range>
+                <Activation_Max_Range>100.0</Activation_Max_Range>
+                <Bribed_Effect> Bribed_Particle_Effect </Bribed_Effect> 
+                <Bribed_Effect_Small> Bribed_Particle_Effect_Small </Bribed_Effect_Small> 
+                <Effect_Z_Offset>35.0</Effect_Z_Offset>
+                <SFXEvent_Success>GUI_Bribe_SFX</SFXEvent_Success>
+                <SFXEvent_Fail>Unit_Bribe_Fail_Tyber_Zann</SFXEvent_Fail>
+            </Tactical_Bribe_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Grappa_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Corruption_Ability Name="Grappa_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>Yes</Causes_Despawn>
+				<SFXEvent_Activate>Unit_Corrupt_Sabateur</SFXEvent_Activate>
+			</Corruption_Ability>
+			
+        </Abilities>
+
+	</HeroUnit>
+
+	<HeroCompany Name="Grappa_The_Hutt_Team">
+		<Variant_Of_Existing_Type>Durga_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GRAPPA</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GRAPPA TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ui_Grappa_the_Hutt.tga</Icon_Name>
+		<Company_Units>Grappa</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Select_Urai_Fen</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Urai_Fen</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Urai_Fen</SFXEvent_Fleet_Move>
+	</HeroCompany>
+
+
+	
+
+</GrappaUnit_Data>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Rep_LAAT_Phase2Unit_Data>
+	
+	
+
+	<GroundVehicle Name="Rep_LAAT_Phase2">
+		<Variant_Of_Existing_Type> Rep_LAAT_Phase1 </Variant_Of_Existing_Type>
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+		<Land_Model_Name>REP_LAAT_502.ALO</Land_Model_Name>
+		
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Phase2_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_LAAT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_LAAT_Phase1_MKII">
+		<Variant_Of_Existing_Type> Republic_LAAT_Phase1 </Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LAAT TEXT_PHASE2 TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+	
+		<Company_Transport_Unit>REP_LAAT_Transport</Company_Transport_Unit>
+		<Company_Units>REP_LAAT_Phase2</Company_Units>
+		<Icon_Name>I_BUTTON_Rep_LAAT.TGA</Icon_Name>
+		<GUI_Model_Name>REP_LAAT_502.ALO</GUI_Model_Name>
+	
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Phase2_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+	</GroundCompany>
+	<GroundCompany Name="LAAT_Phase2_Deployed_Republic_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Republic_Stormtrooper_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper, Republic_Squad_Stormtrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+		<Icon_Name>I_BUTTON_Rep_Phase2Clones.tga</Icon_Name>
+	</GroundCompany>
+</Rep_LAAT_Phase2Unit_Data>

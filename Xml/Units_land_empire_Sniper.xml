@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Empire_SniperUnit_Data>
+
+	
+	<GroundInfantry Name="Empire_Sniper">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EMPIRE_SNIPER</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Destroyer_Droid UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SNIPER</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Ei_SniperTrooper.ALO</Land_Model_Name>
+		<CategoryMask> Infantry | AntiInfantry </CategoryMask>
+						
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Empire, Chiss</Affiliation>
+
+		<Tactical_Health>150</Tactical_Health>
+		<AI_Combat_Power>8</AI_Combat_Power>
+
+		<SFXEvent_Select>Unit_Select_Scout_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Scout_Trooper</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Scout_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Scout_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_2_Death</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Scout_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Scout_Trooper </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<Death_Clone>Damage_Force_Whirlwind, Empire_Sniper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Empire_Sniper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Empire_Sniper_Crush_Death_Clone</Death_Clone>
+
+		<Icon_Name>i_button_eisniper.tga</Icon_Name>
+		<Conversion_Ability_Changes_To_Enemy> Empire_Sniper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+
+	  <GroundInfantry Name="Empire_Sniper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Empire_Sniper </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="Empire_Sniper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+	<GroundInfantry Name="Empire_Sniper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Empire_Sniper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	
+	<GroundInfantry Name="Empire_Sniper_B">
+		<Variant_Of_Existing_Type>Empire_Sniper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Imperial_Sniper_Team_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="Imperial_Sniper_Team_B">
+		<Variant_Of_Existing_Type>Imperial_Sniper_Team</Variant_Of_Existing_Type>
+		<Company_Units> Empire_Sniper, Empire_Sniper, Empire_Sniper, Empire_Sniper, Empire_Sniper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Imperial_Sniper_Team">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EMPIRE_SNIPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SNIPER</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Units> Empire_Sniper_B </Company_Units>
+
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		<Icon_Name>i_button_eisniper.tga</Icon_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+	
+</Empire_SniperUnit_Data>

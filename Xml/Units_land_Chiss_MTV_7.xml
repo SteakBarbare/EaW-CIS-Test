@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"?>
+
+
+<Ch_MTV_7Unit_Data>
+	<GroundVehicle Name="Ch_MTV_7">
+		<Variant_Of_Existing_Type>RV_Stank</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_MTV_7</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_MTV_7</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ch_MTV_7.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Ch_MTV_7.TGA</Icon_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ch_MTV_7.ALO,
+			Urban, 				Ch_MTV_7.ALO,
+			Arctic, 			Ch_MTV_7_Snow.ALO,
+			Volcanic, 			Ch_MTV_7.ALO,
+			Desert, 			Ch_MTV_7.ALO,
+			Forest, 			Ch_MTV_7.ALO,
+			Swamp, 				Ch_MTV_7.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Destruction_Survivors> 
+			Stormtrooper, 1.0
+		</Destruction_Survivors>
+
+		<Scale_Factor>1.2</Scale_Factor>
+		<Select_Box_Scale>35</Select_Box_Scale>
+
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Armor_Type> Armor_T2B </Armor_Type>
+		<AI_Combat_Power>30</AI_Combat_Power>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>100</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Ch_MTV_7_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Ch_MTV_7_Death_Clone_00">
+		<Variant_Of_Existing_Type>T4B_Tank_Death_Clone_00</Variant_Of_Existing_Type>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Land_Model_Name>Ch_MTV_7_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	<GroundCompany Name="Ch_MTV_7_Company">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_CH_MTV_7_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CH_MTV_7 TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Chiss_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft_Loader</Company_Transport_Unit>
+		<Company_Units>Ch_MTV_7, Ch_MTV_7, Ch_MTV_7, Ch_MTV_7</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_Ch_MTV_7.tga</Icon_Name>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_T3B</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+
+</Ch_MTV_7Unit_Data>

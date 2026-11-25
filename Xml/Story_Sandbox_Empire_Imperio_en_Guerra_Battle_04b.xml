@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE Hoth ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Hoth_land">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+
+	<Event Name="Video_Speeders_Attack_Inicio">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>START_MOVIE</Reward_Type>
+		<Reward_Param1>ATAT_attack</Reward_Param1>
+		<Prereq>Batalla_de_Hoth_land</Prereq>
+	</Event>
+
+	<Event Name="Video_Speeders_Attack_Fin">
+		<Event_Type>STORY_MOVIE_DONE</Event_Type>
+		<Prereq>Video_Speeders_Attack_Inicio</Prereq>
+	</Event>		  
+	
+	<Event Name="Empire_Batalla_de_Hoth_Land_Autoresolve_Off">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIDE_AUTORESOLVE</Reward_Type>
+		<Prereq>Batalla_de_Hoth_land</Prereq>
+	</Event>
+			
+			
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Hoth_land</Prereq>
+	</Event>	
+	
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_LAND_HISTORY_BATTLEOFHOTHE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Hoth_land</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="AT_AT_Walker1_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>AT_AT_Walker</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Hoth_land</Prereq>
+	</Event>		
+			<Event Name="Video_AT_AT_Walker1_Destruido_Inicio">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>ATAT_Destroyed1</Reward_Param1>
+				<Prereq>AT_AT_Walker1_Destruido</Prereq>
+			</Event>
+
+			<Event Name="Video_AT_AT_Walker1_Destruido_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_AT_AT_Walker1_Destruido_Inicio</Prereq>
+			</Event>		
+	<Event Name="AT_AT_Walker2_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>AT_AT_Walker</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Video_AT_AT_Walker1_Destruido_Fin</Prereq>
+	</Event>		
+			<Event Name="Video_AT_AT_Walker2_Destruido_Inicio">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>ATAT_Destroyed2</Reward_Param1>
+				<Prereq>AT_AT_Walker2_Destruido</Prereq>
+			</Event>
+
+			<Event Name="Video_AT_AT_Walker2_Destruido_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_AT_AT_Walker2_Destruido_Inicio</Prereq>
+			</Event>				
+	
+	<Event Name="Veers_Walker_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Veers_AT_AT_Walker_Hoth</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Hoth_land</Prereq>
+	</Event>		
+			<Event Name="Video_Veers_Walker_Destruido_Inicio">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>Veers_Destroyed</Reward_Param1>
+				<Prereq>Veers_Walker_Destruido</Prereq>
+			</Event>
+
+			<Event Name="Video_Veers_Walker_Destruido_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_Veers_Walker_Destruido_Inicio</Prereq>
+			</Event>		
+			
+	<Event Name="Power_generator_R_Hoth_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Power_generator_R_Hoth</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Hoth_land</Prereq>
+	</Event>		
+			<Event Name="Video_Power_generator_R_Hoth_Inicio">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>Veers_Destroy_Shield</Reward_Param1>
+				<Prereq>Power_generator_R_Hoth_Destruido</Prereq>
+			</Event>
+
+			<Event Name="Video_Power_generator_R_Hoth_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_Power_generator_R_Hoth_Inicio</Prereq>
+			</Event>						
+		
+	<Event Name="Rebeldes_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+			
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Empìre</Reward_Param1>
+				<Prereq>Rebeldes_Destruidos</Prereq>
+			</Event>
+		
+	<Event Name="Imperiales_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>EMPIRE</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+		
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_HOTH_E</Reward_Param1>
+		<Prereq>Imperiales_Destruidos</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Objetivos_InCompletados1</Prereq>
+			</Event>
+			
+			
+</Story>

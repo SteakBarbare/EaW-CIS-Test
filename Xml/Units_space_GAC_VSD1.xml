@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+
+
+<GAC_VSD1>
+	<SpaceUnit Name="GAC_VSD1">
+		<Variant_Of_Existing_Type>Victory_Destroyer_No_Fighters</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VICTORY_DESTROYERU</Text_ID>
+		<Encyclopedia_Good_Against> Assault_FrgORG Victory_Destroyer </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MC30_Frigate B-wing TIE_Defender </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VICTORYU TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_FEOALAX TEXT_WAVES_X3 TEXT_UNIT_FEOALAY TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>GAC_VictoryI.alo</Space_Model_Name>
+		<Affiliation>GAC</Affiliation>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		
+		<AI_Combat_Power>9250</AI_Combat_Power>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, GAC_VSD1_Death_Clone</Death_Clone>
+		
+		<Starting_Spawned_Units_Tech_0>FeoAlaXU_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>FeoAlaYU_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>FeoAlaXU_Squadron7, 7</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>FeoAlaYU_Squadron7, 7</Reserve_Spawned_Units_Tech_0>
+		
+		
+
+		<HardPoints>
+			HP_T_GACVSD1_01,
+			HP_T_GACVSD1_02,
+			HP_T_GACVSD1_03,
+			HP_T_GACVSD1_04,
+			HP_T_GACVSD1_05,
+			HP_T_GACVSD1_06,
+			HP_T_GACVSD1_07,
+			HP_T_GACVSD1_08,
+			HP_T_GACVSD1_09,
+			HP_T_GACVSD1_10,
+			HP_T_GACVSD1_11,
+			HP_T_GACVSD1_12,
+			HP_T_GACVSD1_13,
+			HP_T_GACVSD1_14,
+			HP_T_GACVSD1_15,
+			HP_T_GACVSD1_16,
+			HP_T_GACVSD1_17,
+			HP_T_GACVSD1_18,
+			HP_T_GACVSD1_19,
+			HP_T_GACVSD1_20,
+			HP_T_GACVSD1_21,
+			HP_T_GACVSD1_22,
+			HP_T_GACVSD1_23,
+			HP_T_GACVSD1_24,
+			HP_T_GACVSD1_25,
+			HP_T_GACVSD1_26,
+			HP_T_GACVSD1_27,
+			HP_T_GACVSD1_28,
+			HP_T_GACVSD1_29,
+			HP_T_GACVSD1_30,
+			HP_T_GACVSD1_31,
+			HP_T_GACVSD1_32,
+			HP_T_GACVSD1_33,
+			HP_T_GACVSD1_34,
+			HP_T_GACVSD1_35,
+			HP_T_GACVSD1_36,
+			HP_T_GACVSD1_37,
+			HP_T_GACVSD1_38,
+			HP_T_GACVSD1_39,
+			HP_T_GACVSD1_40,
+			HP_T_GACVSD1_41,
+			HP_T_GACVSD1_42,
+			HP_T_GACVSD1_43,
+			HP_T_GACVSD1_44,
+			HP_T_GACVSD1_45,
+			HP_T_GACVSD1_46,
+			HP_T_GACVSD1_47,
+			HP_T_GACVSD1_48,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Fighter_Bay_Small_00,
+			HP_Shield_Generator_Small_00,
+			HP_Shield_Generator_Small_01,
+			HP_Engines_Small_00,	
+			HP_Engines_Small_01
+    	</HardPoints>
+		<Icon_Name>I_BUTTON_UV_VSD.TGA</Icon_Name>
+		<GUI_Model_Name>GAC_VictoryI.alo</GUI_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>3100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="GAC_VSD1_Death_Clone">
+		<Text_ID>TEXT_UNIT_VICTORY_DESTROYER</Text_ID>
+		<Space_Model_Name>GAC_VictoryI_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+    
+</GAC_VSD1>

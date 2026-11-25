@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<Giant_DroidUnit_Data>
+	
+
+	<GroundInfantry Name="Giant_Droid">
+		<Variant_Of_Existing_Type>Urai_FenORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_GIANT_DROID</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Z95Land_squadron Rebel_Speeder_Wing Rebel_AAC-1_Tank_Brigade </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_GIANT_DROID</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EV_Giant_Droid.tga</Icon_Name>
+
+		<Land_Model_Name>EV_Terror_Giant_Droid.ALO</Land_Model_Name>
+		<Scale_Factor>2.2</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+
+		<Armor_Type> Armor_ATAT </Armor_Type>
+		
+		<Tactical_Health>1000</Tactical_Health>
+		
+		<Death_Explosions>Large_Damage_Land10</Death_Explosions>
+
+		<Death_SFXEvent_Start_Die>Unit_AT_AT_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Select>Unit_Select_Crabdroid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Crabdroid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Crabdroid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Crabdroid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Assist_Attack_Crabdroid</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Attack_Crabdroid</SFXEvent_Fire>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Crabdroid </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Crabdroid </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Unit_Lost> Unit_AT_ST_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<CategoryMask> Vehicle | AntiInfantry | AntiVehicle | AntiStructure </CategoryMask>
+				
+		<AI_Combat_Power>1000</AI_Combat_Power>
+	
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+
+            <Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 8.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Crabdroid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+
+            <Unit_Ability>
+                <Type>STEALTH</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_TYBER_CLOAKING</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TYBER_CLOAKING_DESCRIPTION</Alternate_Description_Text>
+                <Recharge_Seconds>10.0</Recharge_Seconds>
+				<Expiration_Seconds>35.0</Expiration_Seconds>
+                <GUI_Activated_Ability_Name>Stealth_Giant_Droid</GUI_Activated_Ability_Name> 
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Assist_Attack_Crabdroid</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Assist_Attack_Crabdroid</SFXEvent_GUI_Unit_Ability_Deactivated>
+            </Unit_Ability>
+
+        </Unit_Abilities_Data>
+		
+		  <Abilities SubObjectList="Yes">
+			
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.45</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+            <Stealth_Ability Name="Stealth_Giant_Droid">
+                <Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 64, 64, 120</Stealth_Color>
+                <Stealth_Transition_Time>.6</Stealth_Transition_Time>
+            </Stealth_Ability>
+
+        </Abilities>
+		
+		<Vehicle_Thief_Inside_Clone>Giant_Droid_Captured</Vehicle_Thief_Inside_Clone>
+		
+		<Remove_Upon_Death>false</Remove_Upon_Death>
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>20.0</Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+
+		
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundInfantry>
+	
+
+	<GroundInfantry Name="Giant_Droid_Captured">
+		<Variant_Of_Existing_Type>Giant_Droid</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+					
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+
+	
+	<GroundCompany Name="Giant_Droid_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_GIANT_DROID</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_V-Wing_airspeeder_squadronRebel_V-Wing_airspeeder_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_GIANT_DROID TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_WALKER</Encyclopedia_Unit_Class>
+		
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Piracy_Value_Credits>50</Piracy_Value_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Arc_Hammer</Required_Orbiting_Units>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>Giant_Droid</Company_Units>
+		<Icon_Name>i_button_EV_Giant_Droid.tga</Icon_Name>
+		<GUI_Model_Name>EV_Terror_Giant_Droid.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Build_Complete>Unit_Select_Crabdroid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Crabdroid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+	
+	</GroundCompany>
+</Giant_DroidUnit_Data>

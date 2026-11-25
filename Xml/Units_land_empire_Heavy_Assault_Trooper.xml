@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<Heavy_Assault_TrooperUnit_Data>
+	<GroundInfantry Name="Heavy_Assault_Trooper_Flame">
+		<Variant_Of_Existing_Type>Heavy_Assault_Trooper</Variant_Of_Existing_Type>
+		<Land_Model_Name>EI_Trooper_NSH_Flame.alo</Land_Model_Name>
+		<Text_ID>TEXT_UNIT_HEAVY_STORMTROOPER_FLAME</Text_ID>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EI_Trooper_NSH_Flame.alo,
+			Urban, 				EI_Trooper_NSH_Flame.alo,
+			Arctic, 			EI_Trooper_NSH_Flame.alo,
+			Volcanic, 			EI_Trooper_NSH_Flame.alo,
+			Desert, 			EI_Trooper_NSH_Flame.alo,
+			Forest, 			EI_Trooper_NSH_Flame.alo,
+			Swamp, 				EI_Trooper_NSH_Flame.alo
+		</Land_Terrain_Model_Mapping>
+		
+		<Projectile_Types>Proj_Assault_Flame_Gun</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<Targeting_Max_Attack_Distance>100.0</Targeting_Max_Attack_Distance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Assault_Trooper_Flame">
+		<Variant_Of_Existing_Type>Heavy_Assault_Trooper_Flame</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.7 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Heavy_Assault_Trooper">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_STORMTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>EI_AssaultTrooper.ALO</Land_Model_Name>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EI_AssaultTrooper_Heavy.ALO,
+			Urban, 				EI_AssaultTrooper_Heavy.ALO,
+			Arctic, 			EI_AssaultTrooper_Snow.ALO,
+			Volcanic, 			EI_AssaultTrooper_Heavy.alo,
+			Desert, 			EI_AssaultTrooper_Heavy.ALO,
+			Forest, 			EI_AssaultTrooper_Heavy.alo,
+			Swamp, 				EI_AssaultTrooper_Heavy.alo
+		</Land_Terrain_Model_Mapping>
+		
+		<Icon_Name>I_BUTTON_SHOCK_TROOPER.TGA</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Tactical_Health>200</Tactical_Health>
+		<Projectile_Types>Proj_Assault_Gun</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<AI_Combat_Power>10</AI_Combat_Power>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVY_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Death_Clone>Damage_Force_Whirlwind, Heavy_Assault_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Heavy_Assault_Trooper_Crush_Death_Clone</Death_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	<GroundInfantry Name="Heavy_Assault_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Heavy_Assault_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="Heavy_Assault_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Heavy_Assault_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Assault_Trooper">
+		<Variant_Of_Existing_Type>Heavy_Assault_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.7 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Assault_Trooper_M">
+		<Variant_Of_Existing_Type>Squad_Assault_Trooper</Variant_Of_Existing_Type>
+			
+		<Land_Model_Anim_Override_Name>Ei_NavyCommandoE11a.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_NavyCommandoE11_2TM.ALO,
+			Urban, 				Ei_NavyCommandoE11_2UM.ALO,
+			Arctic, 			Ei_StormTrooperE11_1TM.ALO,
+			Volcanic, 			Ei_NavyCommandoE11_2DM.ALO,
+			Desert, 			Ei_NavyCommandoE11_2DM.ALO,
+			Forest, 			Ei_NavyCommandoE11_2TM.ALO,
+			Swamp, 				Ei_NavyCommandoE11_2TM.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Abilities SubObjectList="Yes">
+		
+			<Force_Healing_Ability Name="Medic_Healing">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount>5.0</Heal_Amount>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_Chest</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Assault_Trooper_S">
+		<Variant_Of_Existing_Type>Squad_Assault_Trooper</Variant_Of_Existing_Type>
+				
+		<Land_Model_Anim_Override_Name>Ei_NavyCommandoE11a.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_NavyCommandoE11_2TS.ALO,
+			Urban, 				Ei_StormTrooperE11_2TS.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_NavyCommandoE11_2DS.ALO,
+			Desert, 			Ei_NavyCommandoE11_2DS.ALO,
+			Forest, 			Ei_NavyCommandoE11_2TS.ALO,
+			Swamp, 				Ei_NavyCommandoE11_2TS.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Assault_Trooper_L">
+		<Variant_Of_Existing_Type>Squad_Assault_Trooper</Variant_Of_Existing_Type>
+				
+		<Land_Model_Anim_Override_Name>Ei_NavyCommandoE11a.ALO</Land_Model_Anim_Override_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_NavyCommandoE11_2TL.ALO,
+			Urban, 				Ei_NavyCommandoE11_2TL.ALO,
+			Arctic, 			Ei_StormTrooperE11_1A.ALO,
+			Volcanic, 			Ei_NavyCommandoE11_2DL.ALO,
+			Desert, 			Ei_NavyCommandoE11_2DL.ALO,
+			Forest, 			Ei_NavyCommandoE11_2TL.ALO,
+			Swamp, 				Ei_NavyCommandoE11_2TL.ALO
+		</Land_Terrain_Model_Mapping>
+				
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Assault_Trooper_L_B">
+		<Variant_Of_Existing_Type>Squad_Assault_Trooper_L</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Imperial_Assault_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Imperial_Assault_Squad_B">
+		<Variant_Of_Existing_Type>Imperial_Assault_Squad</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_Assault_Trooper_L, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper_S, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper_M
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Create_Team_Type> Assault_Team </Create_Team_Type>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Imperial_Assault_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_STORMTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVY_STORMTROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>900</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Units> 
+		Squad_Assault_Trooper_L_B,
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper_S, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper, 
+		Squad_Assault_Trooper_M
+		</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Assault_Team </Create_Team_Type>
+		<Icon_Name>I_BUTTON_SHOCK_TROOPER.TGA</Icon_Name>
+		<GUI_Model_Name>EI_TROOPER.ALO</GUI_Model_Name>
+		<Land_Model_Name>EI_TROOPER.ALO</Land_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</GroundCompany>
+	
+
+		
+	<Container Name="Assault_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVY_STORMTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EMPIRE_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Icon_Name>I_BUTTON_SHOCK_TROOPER.TGA</Icon_Name>
+
+
+			<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+	</Container>
+</Heavy_Assault_TrooperUnit_Data>

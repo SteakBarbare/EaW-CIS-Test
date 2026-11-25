@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<Treis_SindeUnit_Data>
+
+
+	
+	<HeroUnit Name="Treis_Sinde">
+		<Variant_Of_Existing_Type>Luke_Skywalker_Jedi</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_TREIS_SINDE_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TREIS_SINDE TEXT_TOOLTIP_REDUCE_TIME_JEDIK_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_IMPERIAL_KNIGHT </Encyclopedia_Unit_Class>
+		<Land_Model_Name>EVF_Treis_Sinde.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVF_Treis_Sinde.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<Scale_Factor>1.1</Scale_Factor>
+		<SFXEvent_Select>Unit_Select_Obi_Wan</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Obi_Wan</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Obi_Wan</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Obi_Wan</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Obi_Wan</SFXEvent_Guard>
+		<SFXEvent_Deploy>Unit_Select_Obi_Wan</SFXEvent_Deploy>
+		<SFXEvent_Group_Move>Unit_Group_Move_Obi_Wan</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Obi_Wan</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Obi_Wan </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Obi_Wan </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Obi_Wan </Death_SFXEvent_Start_Die>
+		
+		<CategoryMask>LandHero</CategoryMask>
+
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_FEL_GA_Hero</Highlight_Blob_Material_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+                <Type>SABER_THROW</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Treis_Sinde_Saber_Throw </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 500.0 </Effective_Radius>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+            <Unit_Ability>
+				<Type>AREA_EFFECT_CONVERT</Type>
+				<Recharge_Seconds>70.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Convert_Treis_Sinde_Land </Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Guard_Obi_Wan </SFXEvent_Target_Ability>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Treis_Sinde_Production_Time_Reduction">
+				<Applicable_Unit_Types>Imperial_Kights_Team, EVF_Sigma_Shuttle_Land_Squad</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Redirect_Blaster_Ability Name="Treis_Sinde_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+                <Applicable_Unit_Categories>Infantry | Vehicle | Air | Landhero</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+			<Earthquake_Attack_Ability Name="Treis_Sinde_Attack_Structures">
+				<Activation_Style>Special_Attack</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>120.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.02</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.5</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Structure</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
+			</Earthquake_Attack_Ability>
+
+            <Absorb_Blaster_Ability Name="Treis_Sinde_Absorb_Blaster">
+                <Activation_Style>Take_Damage</Activation_Style>
+                <Absorb_Chance>.4</Absorb_Chance>
+                <Damage_Absorb_Percentage>0.2</Damage_Absorb_Percentage>
+                <Damage_Absorb_Amount>.8</Damage_Absorb_Amount>
+                <Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+                <SFXEvent_Activate>Unit_Force_Absorb</SFXEvent_Activate>
+                <Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+                <Owner_Light_Effect_Color>2.0, 0.4, 0.4</Owner_Light_Effect_Color>
+                <Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+            </Absorb_Blaster_Ability>
+
+            <Saber_Throw_Ability Name="Treis_Sinde_Saber_Throw">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>200.0</Activation_Max_Range>
+                <Saber_Name>Treis_Sinde_Light_Saber</Saber_Name>
+                <Catch_Dist>15.0</Catch_Dist>
+            </Saber_Throw_Ability>
+
+			<Combat_Bonus_Ability Name="Treis_Sinde_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+
+			<Remove_Corruption_Ability Name="Treis_Sinde_Remove_Corruption">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>1</Corruption_Removal_Cost_Multiplier> 
+				<Corruption_Removal_Time_In_Secs>10</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+		</Abilities>
+	</HeroUnit>
+	
+
+
+
+<!-- COMPANY DATA -->
+
+	
+	<HeroCompany Name="Treis_Sinde_Team">
+		<Variant_Of_Existing_Type>Emperor_Palpatine_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_TREIS_SINDE_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TREIS_SINDE TEXT_TOOLTIP_REDUCE_TIME_JEDIK_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_IMPERIAL_KNIGHT </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EVF_Treis_Sinde.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>Treis_Sinde</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Select_Obi_Wan</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Obi_Wan</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Obi_Wan</SFXEvent_Fleet_Move>
+
+		<CategoryMask>LandHero</CategoryMask>
+
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</HeroCompany>
+	
+
+</Treis_SindeUnit_Data>

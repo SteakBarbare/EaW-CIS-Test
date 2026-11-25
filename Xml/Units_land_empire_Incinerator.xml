@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<Ei_IncineratorUnit_Data>
+	<GroundInfantry Name="Ei_Incinerator">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_Ei_INCINERATOR</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_Ei_INCINERATOR TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Icon_Name>i_button_Ei_Incinerator.tga</Icon_Name>
+		<No_Colorization_Color> 107, 4, 8, 255 </No_Colorization_Color>
+		<Land_Model_Name>Ei_ShockTrooperIncinerator_4U.alo</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			Ei_ShockTrooperIncinerator_4T.ALO,
+			Urban, 				Ei_ShockTrooperIncinerator_4U.ALO,
+			Arctic, 			Ei_ShockTrooperIncinerator_4A.ALO,
+			Volcanic, 			Ei_ShockTrooperIncinerator_4T.ALO,
+			Desert, 			Ei_ShockTrooperIncinerator_4T.ALO,
+			Forest, 			Ei_ShockTrooperIncinerator_4T.ALO,
+			Swamp, 				Ei_ShockTrooperIncinerator_4T.ALO
+		</Land_Terrain_Model_Mapping>
+				
+		<Scale_Factor>1.2</Scale_Factor>
+		
+		<Affiliation>Empire</Affiliation>
+		<Tactical_Health>200</Tactical_Health>
+		<Autoresolve_Health>30</Autoresolve_Health>
+
+		<Projectile_Types> Proj_Hand_Blaster_Red </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>325.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		
+		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<CategoryMask> Infantry | AntiInfantry </CategoryMask>
+		<Create_Team>No</Create_Team>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<AI_Combat_Power>12</AI_Combat_Power>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+
+		<Death_Fade_Time>0.0</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>FLAME_THROWER</Type>
+				<Recharge_Seconds>28.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Ei_Incinerator_Flame_Thrower </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Personal_Flame_Thrower_Ability Name="Ei_Incinerator_Flame_Thrower">
+				<Activation_Style> User_Input </Activation_Style>
+				
+				<!-- We need to be within this distance of the clicked target to consider activating the flame thrower -->
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>100.0</Activation_Max_Range>
+				<Damage_Arc_In_Degrees>90.0</Damage_Arc_In_Degrees>
+				<Damage_Amount>225.0</Damage_Amount>
+				<Fire_Time_In_Secs>10.0</Fire_Time_In_Secs>
+				<Damage_Delay_In_Secs>0.5</Damage_Delay_In_Secs>
+				
+				<!-- We only consider the following unit types "valid targets": -->
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Activate>Unit_Flamethrower_Fire</SFXEvent_Activate>
+				<Flame_Emitter_Model_Name>p_flamethrower00</Flame_Emitter_Model_Name>
+			</Personal_Flame_Thrower_Ability>
+			
+		</Abilities>
+	</GroundInfantry>
+	<GroundInfantry Name="Ei_IncineratorSP">
+		<Variant_Of_Existing_Type>Ei_Incinerator</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Ei_Incinerator_Squad, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>
+	<GroundCompany Name="Ei_Incinerator_Squad">
+		<Variant_Of_Existing_Type>Imperial_Assault_Squad</Variant_Of_Existing_Type>
+		<Company_Units>Ei_Incinerator, Ei_Incinerator, Ei_Incinerator, Ei_Incinerator</Company_Units>
+		<Text_ID>TEXT_Ei_INCINERATOR_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_Ei_INCINERATOR TEXT_DESC_CI_CANTIDAD_5 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Ei_Incinerator.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 4 </Max_Squad_Size>
+	</GroundCompany>
+	<GroundCompany Name="Imperial_Assault_SquadS">
+		<Variant_Of_Existing_Type>DarkTrooper_P1_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_ARMYTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_HEAVY_STORMTROOPER TEXT_Ei_INCINERATOR_SQUAD TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Units>Ei_IncineratorSP</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		<Icon_Name>I_BUTTON_SHOCK_TROOPER.tga</Icon_Name>
+		
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+	
+</Ei_IncineratorUnit_Data>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0"?>
+
+<E_Raiderunit_Data>
+			
+
+	<SpaceUnit Name="E_Raider">
+		<Variant_Of_Existing_Type>E_RaiderORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RAIDER_CRV_I</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RAIDER_CRV_I TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+			
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Victory_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Victory_Destroyer</SFXEvent_Hero_Respawned>
+		
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		
+		<Icon_Name>I_BUTTON_EV_Raider.TGA</Icon_Name>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Affiliation>Empire, GA</Affiliation>	
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+	   	</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		
+	</SpaceUnit>		
+	<SpaceUnit Name="E_RaiderORG">
+			<Variant_Of_Existing_Type>DemolisherORG</Variant_Of_Existing_Type>
+			<Text_ID>TEXT_IMPERIAL_STORMCOMMANDO_SQUAD</Text_ID>
+			<Encyclopedia_Text>TEXT_TOOLTIP_STORMCOMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+			<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
+			<Icon_Name>i_button_stormcommando.tga</Icon_Name>
+			<Galactic_Fleet_Override_Model_Name> W_EV_Corvus_Raider_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+			<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+			<Tech_Level>99</Tech_Level>
+			<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+
+			<Select_Box_Scale>175</Select_Box_Scale>
+			<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+
+			<Selection_Blob_Material_Name>Selection_Spaceunit</Selection_Blob_Material_Name>
+			<Highlight_Blob_Material_Name>Highlight_Spaceunit</Highlight_Blob_Material_Name>
+			
+			<Space_Model_Name>EV_Corvus_Raider.ALO</Space_Model_Name>
+			<Scale_Factor>0.5</Scale_Factor>
+			<Shield_Points>15000</Shield_Points>
+			<Tactical_Health>75000000</Tactical_Health>
+			<Autoresolve_Health>14000</Autoresolve_Health>
+			<Shield_Refresh_Rate>17000</Shield_Refresh_Rate>
+			<Energy_Capacity>240000</Energy_Capacity>
+			<Energy_Refresh_Rate>21875</Energy_Refresh_Rate>
+
+			<Build_Cost_Credits>1500</Build_Cost_Credits>
+			<AI_Combat_Power>500</AI_Combat_Power>
+			<Build_Time_Seconds>30</Build_Time_Seconds>
+						
+			<HardPoints> 
+			HP_T_CR_ERaider_01,
+			HP_T_CR_ERaider_02,
+			HP_T_CR_ERaider_03,
+			HP_T_CR_ERaider_04,
+			HP_T_CR_ERaider_05,
+			HP_T_CR_ERaider_06,
+			HP_EnginesH_00,
+			HP_Fighter_Bay_Invisible,
+			HP_LaserGX_01, 
+			HP_LaserGX_02, 
+			HP_LaserGX_03, 
+			HP_LaserGX_04, 
+			HP_LaserGX_05, 
+			HP_LaserGX_06,
+			HP_Shield_GeneratorH_00
+		  </HardPoints>
+		  
+		  <Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		
+			<Affiliation>Empire</Affiliation>	
+			<Death_Clone>Damage_Normal, EV_Corvus_Raider_Death_Clone</Death_Clone>
+			<Lua_Script>ObjectScript_NONE</Lua_Script>
+
+			<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+			
+			<Abilities SubObjectList="Yes">
+			
+				<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+					<Initially_Enabled> Yes </Initially_Enabled>		
+					<Activation_Style>Take_Damage</Activation_Style>
+
+					<Redirect_Chance>0.0</Redirect_Chance>
+					<Block_Chance>0.30</Block_Chance>
+					<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+					<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+					<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+
+					<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Super | Structure</Applicable_Unit_Categories>
+					<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+				</Redirect_Blaster_Ability>
+		</Abilities>
+		<Landing_Transport_Variant>Stormtransport_Landing</Landing_Transport_Variant>
+	</SpaceUnit>
+	<SpaceUnit Name="EV_Corvus_Raider_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>EV_Corvus_Raider_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>EV_Corvus_Raider.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>	
+	
+	<!--<Squadron Name="E_Raider">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RAIDER_CRV_I</Text_ID>
+		<Encyclopedia_Good_Against> Quasar Corellian_Gunboat Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RAIDER_CRV_I TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CORVETTE </Encyclopedia_Unit_Class>
+
+		<GUI_Row> 1 </GUI_Row>
+
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+			
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+
+		
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+
+
+		<Squadron_Units>E_Raider_Fighter</Squadron_Units>
+		<Max_Squad_Size>1</Max_Squad_Size>
+		
+		<Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+		<FormationOrder>1</FormationOrder>
+		<Formation_Priority>1</Formation_Priority>
+
+		<Icon_Name>I_BUTTON_EV_Raider.tga</Icon_Name>
+		<GUI_Model_Name>EV_Corvus_Raider.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Victory_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Victory_Destroyer</SFXEvent_Hero_Respawned>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_IPV</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+	   	</Unit_Abilities_Data>
+				
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>-->
+</E_Raiderunit_Data>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<R_StrikeUnit_Data>
+
+	<SpaceUnit Name="R_Strike">
+		<Variant_Of_Existing_Type>StrikeORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STRIKECRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_X_WING_SQUADRON TEXT_UNIT_OLDBTLS3YWING TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_DTMStrikeCruiser.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>100</Layer_Z_Adjust>
+		<Affiliation>Rebel, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		
+		<Death_Clone>Damage_Normal, E_Strike_Death</Death_Clone>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Y-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Y-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<GUI_Model_Name>EV_DTMStrikeCruiser.ALO</GUI_Model_Name>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+	</SpaceUnit>
+	
+	
+	
+</R_StrikeUnit_Data>

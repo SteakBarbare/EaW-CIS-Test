@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Nantex_LandUnit_Data>
+	
+	<GroundVehicle Name="Nantex_Land">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NANTEX</Text_ID>
+		<Encyclopedia_Good_Against> Republic_AT-TE_Company Republic_UTAT_COMPANY TX130_Armor_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>REP_LAAT Republic_LAFT ARC_170_Squadron_Land </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NANTEX_LAND</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_NantexLand.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_CIS_NANTEX.tga</Icon_Name>
+		<Select_Box_Scale>40</Select_Box_Scale>
+
+		<Hover_Offset>100.0</Hover_Offset>
+
+		<Scale_Factor>0.25</Scale_Factor>
+
+		<Max_Speed>5.2</Max_Speed>
+		<Min_Speed>4.7</Min_Speed>
+		<OverrideAcceleration> .4</OverrideAcceleration>
+		<OverrideDeceleration> .4</OverrideDeceleration>
+		<Max_Rate_Of_Turn>1.3</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		<Max_Lift>3.5</Max_Lift>
+		<Hover_Height>100.0</Hover_Height>
+		<Begin_Turn_Towards_Distance>700.0</Begin_Turn_Towards_Distance>
+		<Prepare_Strafe_Height>500.0</Prepare_Strafe_Height>
+
+		<Custom_Hard_XExtent> 100.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 100.0 </Custom_Hard_YExtent>
+			
+		<AI_Combat_Power>70</AI_Combat_Power>
+		<Affiliation>CIS, Rebel</Affiliation>
+		
+		<Shield_Armor_Type>Shield_GFighter</Shield_Armor_Type>
+
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>30</Shield_Points>
+		<Tactical_Health>175</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Turret_Rotate_Extent_Degrees>45.0</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60.0</Turret_Elevate_Extent_Degrees>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_Fighter</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.2</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Fire_Category_Restrictions> Vehicle, Structure </Fire_Category_Restrictions>	
+
+		<SFXEvent_Fire>Unit_CIS_NantexFighter_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Nantex</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Nantex</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Nantex</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Nantex</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Nantex</SFXEvent_Guard>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Nantex </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Nantex </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Nantex </Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Ambient_Moving> Unit_Nantex_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Nantex_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<CategoryMask> Air </CategoryMask>
+		<Targeting_Priority_Set>AntiAirI</Targeting_Priority_Set>
+		
+    	<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	<GroundCompany Name="C_Nantex_squadron">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NANTEX</Text_ID>
+		<Encyclopedia_Good_Against> Republic_AT_TE_Company Republic_UTAT_COMPANY TX130_Repulsor_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>REP_LAAT Republic_LAFT ARC_170_Squadron_Land </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NANTEX_LAND</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY</Encyclopedia_Unit_Class>
+		
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>CIS_Nantex_Transport</Company_Transport_Unit>
+		<Company_Units>Nantex_Land, Nantex_Land, Nantex_Land</Company_Units>
+		<Icon_Name>I_BUTTON_CIS_NANTEX.tga</Icon_Name>
+		<GUI_Model>CIS_NantexLand.ALO</GUI_Model>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Nantex</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Nantex</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>550</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+	<TransportUnit Name="CIS_Nantex_Transport">
+		<Variant_Of_Existing_Type>C9979_Landing_Craft</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Nantex_Landing.ALO</Land_Model_Name>
+		<Space_Model_Name>CIS_C9979.ALO</Space_Model_Name>
+		<Landing_Transport_Variant>CIS_Nantex_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<TransportUnit Name="CIS_Nantex_Landing">
+		<Variant_Of_Existing_Type>CIS_Nantex_Transport</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>0.25</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>CIS_Nantex_Landing.ALO</Land_Model_Name>
+	</TransportUnit>
+</Nantex_LandUnit_Data>

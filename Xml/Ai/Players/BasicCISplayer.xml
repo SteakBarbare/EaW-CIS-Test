@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<AIPlayerType>
+
+	<Name> BasicCIS </Name>
+	
+	<Personality>
+		<Focus> .5 </Focus>
+		<Aggressiveness> .5 </Aggressiveness>
+	</Personality>
+
+    <GalacticFreeStoreScript>GalacticFreeStore</GalacticFreeStoreScript>
+    <SpaceFreeStoreScript>BusyTacticalFreeStore</SpaceFreeStoreScript>
+    <LandFreeStoreScript>BusyTacticalFreeStore</LandFreeStoreScript>
+	
+	<GoalProposalFunctionSets>
+		SystemFunctions
+		BasicOffensiveGalacticSet
+		BasicDefensiveGalacticSet
+		BasicInfrastructureGalacticSet
+		BasicInformationGalacticSet
+		BasicOffensiveSpaceSet
+		BasicLandGoalSet
+	</GoalProposalFunctionSets>
+
+	<Templates>
+		<Space>
+			Test_Space_New
+		</Space>
+		<Land>
+			Test_Land_New
+		</Land>
+		<Galactic>
+			Basic_NewFaction_Default
+			Shutdown_Offense
+		</Galactic>
+	</Templates>
+
+	<Difficulty_Adjustments>
+		<Easy>Easy_Default</Easy>
+		<Normal>Normal_CW</Normal>
+		<Hard>Hard_CW</Hard>
+	</Difficulty_Adjustments>
+	
+</AIPlayerType>

@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Noghri_AssassinUnit_Data>
+
+	<GroundInfantry Name="Squad_Noghri_Guards">
+		<Variant_Of_Existing_Type>Noghri_Assassin</Variant_Of_Existing_Type>
+		<Tactical_Health>200</Tactical_Health>
+		<Create_Team>No</Create_Team>
+		<Selection_Blob_Material_Name>Selection_Empire_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Empire_Hero</Highlight_Blob_Material_Name>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+	</GroundInfantry>
+	<GroundInfantry Name="Noghri_Assassin">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NOGHRI_ASSASSIN</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_NOGHRI_ASSASSIN TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_noghri_assassin.tga</Icon_Name>
+
+		<Land_Model_Name>NI_Noghri.alo</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Stealth_Capable>Yes</Stealth_Capable>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+
+		<Tactical_Health>200</Tactical_Health>
+		<Victory_Relevant>yes</Victory_Relevant>
+
+		<Targeting_Max_Attack_Distance>325.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>325.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types> Proj_Infiltrator_Blaster </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 0.1 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Select>Unit_Select_Noghri</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Noghri</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Noghri</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Noghri</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Noghri</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_3_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Move_Noghri </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_Noghri </SFXEvent_Assist_Attack>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Noghri</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Noghri</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+            <Unit_Ability>
+                <Type>STEALTH</Type>
+                <GUI_Activated_Ability_Name>Stealth</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>30.0</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Stealth_On_Noghri </SFXEvent_GUI_Unit_Ability_Activated>  <!--(by pressing the activate button)-->
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Stealth_Off_Noghri </SFXEvent_GUI_Unit_Ability_Deactivated>  <!--(by pressing deactivate)-->
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+			<Stealth_Ability Name="Stealth">
+				<Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 64</Stealth_Color>
+                <Stealth_Transition_Time>.5</Stealth_Transition_Time>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Stealth_Ability>
+		</Abilities>
+
+	</GroundInfantry>
+
+	<GroundCompany Name="Rebel_Noghri_Assassin_Squad">
+		<Variant_Of_Existing_Type>Noghri_Assassin_Squad</Variant_Of_Existing_Type>
+
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RNOGHRI_ASSASSIN TEXT_DESC_CI_CANTIDAD_3S TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>		
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+	</GroundCompany>
+
+
+	<GroundCompany Name="Noghri_Assassin_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_NOGHRI_ASSASSIN_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Destroyer_Droid UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_NOGHRI_ASSASSIN TEXT_DESC_CI_CANTIDAD_3S TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_noghri_assassin.tga</Icon_Name>
+		
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>300</Build_Cost_Credits>
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Required_Planets>Honoghr</Required_Planets>
+		
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Noghri_Assassin, Noghri_Assassin, Noghri_Assassin</Company_Units>
+				
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Noghri</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Noghri</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>		
+	</GroundCompany>
+
+</Noghri_AssassinUnit_Data>

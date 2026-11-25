@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<BroadsideUnit_Data>
+	<SpaceUnit Name="Broadside_Class_Cruiser">
+		<Variant_Of_Existing_Type>BroadsideORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Broadside_Class_Cruiser_Death_Clone</Death_Clone>
+
+		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Fire_Inaccuracy_Fixed_Radius> 120 </Targeting_Fire_Inaccuracy_Fixed_Radius>
+		<Targeting_Min_Attack_Distance>220</Targeting_Min_Attack_Distance>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BroadsideORG">
+		<Text_ID>TEXT_UNIT_BROADSIDE_CRUISER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Star_Base_1 X-wing Skipray_Blastboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Vengeance_Frigate Alliance_Assault_Frigate Corellian_Gunboat </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_Broadside.alo</Space_Model_Name>
+		<Icon_Name>i_button_broadside.tga</Icon_Name>
+		<Select_Box_Scale>2</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+		<Mass>0.9995</Mass>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+        <Ranking_In_Category>7</Ranking_In_Category>
+		<Max_Speed>2.0</Max_Speed>
+		<Max_Rate_Of_Turn>1.4</Max_Rate_Of_Turn>
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Corvette </Space_Layer>
+		<Layer_Z_Adjust>100.0</Layer_Z_Adjust>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .06 </OverrideAcceleration>
+		<OverrideDeceleration> .06 </OverrideDeceleration>
+		<Ranged_Target_Z_Adjust>0</Ranged_Target_Z_Adjust>
+		<Armor_Type> Armor_Missile_Cruiser </Armor_Type>
+        <Shield_Armor_Type>Shield_Corvette</Shield_Armor_Type>
+		<Max_Thrust>1.5</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+
+		
+		<Damage>20</Damage>
+		<Autoresolve_Health>18000</Autoresolve_Health> 
+		<Shield_Points>18000</Shield_Points>
+		<Tactical_Health>75000000</Tactical_Health>
+		<Shield_Refresh_Rate>18500</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>210000</Energy_Refresh_Rate>
+		<Ship_Class>corvette</Ship_Class>
+		<Formation_Priority>3</Formation_Priority>
+		<Is_Escort>Yes</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Political_Control>0</Political_Control>
+		<Squadron_Capacity>5</Squadron_Capacity>
+		<Transport_Capacity>4</Transport_Capacity>
+		<Number_per_Squadron>1</Number_per_Squadron>
+		<Build_Cost_Credits>1800</Build_Cost_Credits>
+		<Piracy_Value_Credits>50</Piracy_Value_Credits>
+		<AI_Combat_Power>1200</AI_Combat_Power>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Size_Value>120</Size_Value>
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior>BARRAGE, ABILITY_COUNTDOWN, POWERED, SHIELDED, SIMPLE_SPACE_LOCOMOTOR, TARGETING, WEAPON, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON </SpaceBehavior>
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Projectile_Types>Proj_Ship_Diamond_Boron_Missile</Projectile_Types>
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>8.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		
+		<HardPoints>
+			HP_TorpedoM_01,
+			HP_TorpedoM_02,
+			HP_TorpedoM_03,
+			HP_TorpedoM_04,
+			HP_RocketM_01,
+			HP_RocketM_02,
+			HP_RocketM_03,
+			HP_RocketM_04,
+			HP_WS_00,
+			HP_WS_01,
+			HP_WS_02,
+			HP_WS_03,
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00
+		</HardPoints>
+		<CategoryMask> Corvette | AntiFrigate </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		<SFXEvent_Fire>Unit_Boron_Missile_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Broadside_Cruiser</SFXEvent_Build_Complete>
+		<SFXEvent_Select>Unit_Select_Broadside_Cruiser</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Broadside_Cruiser</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Broadside_Cruiser</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Broadside_Cruiser</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Broadside_Cruiser</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Broadside_Cruiser </SFXEvent_Move_Into_Nebula>
+
+		<SFXEvent_Attack_With_Non_Hero_Ability>Unit_Barrage_Broadside_Cruiser</SFXEvent_Attack_With_Non_Hero_Ability>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Broadside_Cruiser </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_ATAT_Barge_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_ATAT_Barge_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_ATAT_Barge_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		 
+		<MovementClass> Space </MovementClass>
+		<Guard_Chase_Range>300.0</Guard_Chase_Range>
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>2000.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>5.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>Vengeance_TP</Targeting_Priority_Set>
+		<Autonomous_Move_Extension_Vs_Attacker>2000.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Tactical_Bribe_Cost>450</Tactical_Bribe_Cost>
+		<Lua_Script>ObjectScript_MC30</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_Diamond_Boron_Missile_Barrage</Projectile_Types_Override>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,3.0f</Mod_Multiplier>
+                <SFXEvent_Target_Ability> Unit_Attack_Broadside_Cruiser </SFXEvent_Target_Ability>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+			  <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> MC30_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Broadside_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		  <Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="MC30_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 3.0 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_Broadside_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_Attack_Broadside_Cruiser</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+				
+		<Encyclopedia_Text>TEXT_TOOLTIP_BROADSIDE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 1400</Score_Cost_Credits>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Broadside_Class_Cruiser_Death_Clone">
+		<Text_ID>TEXT_UNIT_BROADSIDE_CRUISER</Text_ID>
+		<Space_Model_Name>EV_Broadside_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.8</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</BroadsideUnit_Data>

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0"?>
+
+<GA_X38_Files>
+
+	<SpaceUnit Name="GA_X38">
+		<Variant_Of_Existing_Type>X-Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_X38</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Interceptor TIE_Avenger TIE_Defender </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Lancer Missile_Gunboat TIE_Phantom </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_X38 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Space_Model_Name>GA_X38_TwinTail_Space.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		
+		
+		<Max_Speed>4.4</Max_Speed>
+		<Min_Speed>2.9</Min_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green_Hero</Projectile_Types>
+
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>5000</Tactical_Health>
+		<Shield_Refresh_Rate>2150</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+	
+		<HardPoints>
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+
+		<Icon_Name>i_button_GA_X38.tga</Icon_Name>
+	</SpaceUnit>
+	
+	
+	<Squadron Name="GA_X38_Squadron">
+		<Variant_Of_Existing_Type>Rebel_X-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GA_X38_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Interceptor TIE_Avenger TIE_Defender </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Lancer Missile_Gunboat TIE_Phantom </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_X38 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>99</Tech_Level>
+		
+		
+
+		<Squadron_Units>GA_X38</Squadron_Units>
+		<Create_Team_Type>GA_X38_Squadron_Container1</Create_Team_Type>
+
+		<Icon_Name>i_button_GA_X38.tga</Icon_Name>
+		<GUI_Model_Name>GA_X38_TwinTail.ALO</GUI_Model_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</Squadron>
+	
+	<Container Name="GA_X38_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_GA_X38_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_X38 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_GA_X38.tga</Icon_Name>
+
+		<Max_Speed>4.4</Max_Speed>
+		<Min_Speed>2.9</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>60.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</GA_X38_Files>

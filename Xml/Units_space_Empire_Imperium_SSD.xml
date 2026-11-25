@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+<ImperiumUnit_Data>
+	
+	
+	<SpaceUnit Name="Imperium">
+		<Variant_Of_Existing_Type>SSDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_IMPERIUM_SSD</Text_ID>
+		<Encyclopedia_Good_Against> Mc104 Colossus SSDLusankya </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T42 B-Wing K-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EV_IMPERIUM_SSD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_DEATHSTAR TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_GUNBOAT TEXT_WAVES_X2 TEXT_UNIT_SHADOWDROID TEXT_WAVES_X2 TEXT_UNIT_A9 TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_20</Encyclopedia_Text>
+
+		<Space_Model_Name>EV_Imperium_SSD.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_ImperiumSSD_Fleet.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<GUI_Row>1</GUI_Row>
+		
+		<!--<Custom_Hard_XExtent> 6398.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 1609.0 </Custom_Hard_YExtent>-->
+
+		<GUI_Model_Name>EV_Imperium_SSD.ALO</GUI_Model_Name>
+		<Scale_Factor>1.75</Scale_Factor><!-- 1.75 para 60km, 6.65 para 230 de largo -->
+
+		<Armor_Type> Armor_DeathStar </Armor_Type>
+		<Shield_Armor_Type>Shield_DeathStar</Shield_Armor_Type>
+		<Max_Speed>2.3</Max_Speed>
+		
+		<!--<Layer_Z_Adjust>-1000.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>-500.0</Layer_Z_Adjust>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+
+		<OverrideAcceleration>0.035</OverrideAcceleration>
+		<OverrideDeceleration>0.035</OverrideDeceleration>
+
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Super_Astilleros_Imperiales, AdvancedTech_8</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>10000000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>2000000000</Tactical_Health>
+		<Shield_Refresh_Rate>15000000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000000</Energy_Capacity>
+		<Energy_Refresh_Rate>50000000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>575000</Build_Cost_Credits>
+		<AI_Combat_Power>6720</AI_Combat_Power>
+		<Build_Time_Seconds>500</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Ship_Class>super</Ship_Class><!-- en naves muy grandes, ponerlas como capital, hace que todas se dispersen fuera de los limites -->
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Gunboat_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>ShadowDroid_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A9_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Gunboat_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ShadowDroid_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>A9_Squadron6, 19</Reserve_Spawned_Units_Tech_0>
+		
+		<Space_FOW_Reveal_Range>6000.0</Space_FOW_Reveal_Range>
+		
+		<Death_Explosions>Death_Clone_Legacy_Space_Empire</Death_Explosions>
+		<In_Background>Yes</In_Background>
+
+		<Radar_Icon_Name>Executor_Radar.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>1.0  1.0</Radar_Icon_Size>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+				
+		<HardPoints>
+			HP_T_ImperiumNew_01,
+			HP_T_ImperiumNew_02,
+			HP_T_ImperiumNew_03,
+			HP_T_ImperiumNew_04,
+			HP_T_ImperiumNew_05,
+			HP_T_ImperiumNew_06,
+			HP_T_ImperiumNew_07,
+			HP_T_ImperiumNew_08,
+			HP_T_ImperiumNew_09,
+			HP_T_ImperiumNew_10,
+			HP_T_ImperiumNew_11,
+			HP_T_ImperiumNew_12,
+			HP_T_ImperiumNew_13,
+			HP_T_ImperiumNew_14,
+			HP_T_ImperiumNew_15,
+			HP_T_ImperiumNew_16,
+			HP_T_ImperiumNew_17,
+			HP_T_ImperiumNew_18,
+			HP_T_ImperiumNew_19,
+			HP_T_ImperiumNew_20,
+			HP_T_ImperiumNew_21,
+			HP_T_ImperiumNew_22,
+			HP_T_ImperiumNew_23,
+			HP_T_ImperiumNew_24,
+			HP_T_ImperiumNew_25,
+			HP_T_ImperiumNew_26,
+			HP_T_ImperiumNew_27,
+			HP_T_ImperiumNew_28,
+			HP_T_ImperiumNew_29,
+			HP_T_ImperiumNew_30,
+			HP_T_ImperiumNew_31,
+			HP_T_ImperiumNew_32,
+			HP_T_ImperiumNew_33,
+			HP_T_ImperiumNew_34,
+			HP_T_ImperiumNew_35,
+			HP_T_ImperiumNew_36,
+			HP_T_ImperiumNew_37,
+			HP_T_ImperiumNew_38,
+			HP_T_ImperiumNew_39,
+			HP_T_ImperiumNew_40,
+			HP_T_ImperiumNew_41,
+			HP_T_ImperiumNew_42,
+			HP_T_ImperiumNew_43,
+			HP_T_ImperiumNew_44,
+			HP_T_ImperiumNew_45,
+			HP_T_ImperiumNew_46,
+			HP_T_ImperiumNew_47,
+			HP_T_ImperiumNew_48,
+			HP_T_ImperiumNew_49,
+			HP_T_ImperiumNew_50,
+			HP_T_ImperiumNew_51,
+			HP_T_ImperiumNew_52,
+			HP_T_ImperiumNew_53,
+			HP_T_ImperiumNew_54,
+			HP_T_ImperiumNew_55,
+			HP_T_ImperiumNew_56,
+			HP_T_ImperiumNew_57,
+			HP_T_ImperiumNew_58,
+			HP_T_ImperiumNew_59,
+			HP_T_ImperiumNew_60,
+			HP_T_ImperiumNew_61,
+			HP_T_ImperiumNew_62,
+			HP_T_ImperiumNew_63,
+			HP_T_ImperiumNew_64,
+			HP_T_ImperiumNew_65,
+			HP_T_ImperiumNew_66,
+			HP_T_ImperiumNew_67,
+			HP_T_ImperiumNew_68,
+			HP_T_ImperiumNew_69,
+			HP_T_ImperiumNew_70,
+			HP_T_ImperiumNew_71,
+			HP_T_ImperiumNew_72,
+			HP_T_ImperiumNew_73,
+			HP_T_ImperiumNew_74,
+			HP_T_ImperiumNew_75,
+			HP_T_ImperiumNew_76,
+			HP_T_ImperiumNew_77,
+			HP_T_ImperiumNew_78,
+			HP_T_ImperiumNew_79,
+			HP_T_ImperiumNew_80,
+			HP_T_ImperiumNew_81,
+			HP_T_ImperiumNew_82,
+			HP_T_ImperiumNew_83,
+			HP_T_ImperiumNew_84,
+			HP_T_ImperiumNew_85,
+			HP_T_ImperiumNew_86,
+			HP_T_ImperiumNew_87,
+			HP_T_ImperiumNew_88,
+			HP_T_ImperiumNew_89,
+			HP_T_ImperiumNew_90,
+			HP_T_ImperiumNew_91,
+			HP_T_ImperiumNew_92,
+			HP_T_ImperiumNew_93,
+			HP_T_ImperiumNew_94,
+			HP_T_ImperiumNew_95,
+			HP_T_ImperiumNew_96,
+			HP_T_ImperiumNew_97,
+			HP_T_ImperiumNew_98,
+			HP_T_ImperiumNew_99,
+			HP_T_ImperiumNew_100,
+			HP_T_ImperiumNew_101,
+			HP_T_ImperiumNew_102,
+			HP_T_ImperiumNew_103,
+			HP_T_ImperiumNew_104,
+			HP_T_ImperiumNew_105,
+			HP_T_ImperiumNew_106,
+			HP_T_ImperiumNew_107,
+			HP_T_ImperiumNew_108,
+			HP_T_ImperiumNew_109,
+			HP_T_ImperiumNew_110,
+			HP_T_ImperiumNew_111,
+			HP_T_ImperiumNew_112,
+			HP_T_ImperiumNew_113,
+			HP_T_ImperiumNew_114,
+			HP_T_ImperiumNew_115,
+			HP_T_ImperiumNew_116,
+			HP_T_ImperiumNew_117,
+			HP_T_ImperiumNew_118,
+			HP_T_ImperiumNew_119,
+			HP_T_ImperiumNew_120,
+			HP_T_ImperiumNew_121,
+			HP_T_ImperiumNew_122,
+			HP_T_ImperiumNew_123,
+			HP_T_ImperiumNew_124,
+			HP_T_ImperiumNew_125,
+			HP_T_ImperiumNew_126,
+			HP_T_ImperiumNew_127,
+			HP_T_ImperiumNew_128,
+			HP_T_ImperiumNew_129,
+			HP_T_ImperiumNew_130,
+			HP_T_ImperiumNew_131,
+			HP_T_ImperiumNew_132,
+			HP_T_ImperiumNew_133,
+			HP_T_ImperiumNew_134,
+			HP_T_ImperiumNew_135,
+			HP_T_ImperiumNew_136,
+			HP_T_ImperiumNew_137,
+			HP_T_ImperiumNew_138,
+			HP_T_ImperiumNew_139,
+			HP_T_ImperiumNew_140,
+			HP_T_ImperiumNew_141,
+			HP_T_ImperiumNew_142,
+			HP_T_ImperiumNew_143,
+			HP_T_ImperiumNew_144,
+			HP_T_ImperiumNew_145,
+			HP_T_ImperiumNew_146,
+			HP_T_ImperiumNew_147,
+			HP_T_ImperiumNew_148,
+			HP_T_ImperiumNew_149,
+			HP_T_ImperiumNew_150,
+			HP_T_ImperiumNew_151,
+			HP_T_ImperiumNew_152,
+			HP_T_ImperiumNew_153,
+			HP_T_ImperiumNew_154,
+			HP_T_ImperiumNew_155,
+			HP_T_ImperiumNew_156,
+			HP_T_ImperiumNew_157,
+			HP_T_ImperiumNew_158,
+			HP_T_ImperiumNew_159,
+			HP_T_ImperiumNew_160,
+			HP_T_ImperiumNew_161,
+			HP_T_ImperiumNew_162,
+			HP_T_ImperiumNew_163,
+			HP_T_ImperiumNew_164,
+			HP_T_ImperiumNew_165,
+			HP_T_ImperiumNew_166,
+			HP_T_ImperiumNew_167,
+			HP_T_ImperiumNew_168,
+			HP_T_ImperiumNew_169,
+			HP_T_ImperiumNew_170,
+			HP_T_ImperiumNew_171,
+			HP_TN_Imperium_01,
+			HP_TN_Imperium_02,
+			HP_TN_Imperium_03,
+			HP_TN_Imperium_04,
+			HP_TN_Imperium_05,
+			HP_TN_Imperium_06,
+			HP_TN_Imperium_07,
+			HP_TN_Imperium_08,
+			HP_TN_Imperium_09,
+			HP_TN_Imperium_10,
+			HP_TN_Imperium_11,
+			HP_TN_Imperium_12,
+			HP_TN_Imperium_13,
+			HP_TN_Imperium_14,
+			HP_TN_Imperium_15,
+			HP_TN_Imperium_16,
+			HP_TN_Imperium_17,
+			HP_TN_Imperium_18,
+			HP_TN_Imperium_19,
+			HP_TN_Imperium_20,
+			HP_TN_Imperium_21,
+			HP_TN_Imperium_22,
+			HP_TN_Imperium_23,
+			HP_TN_Imperium_24,
+			HP_TN_Imperium_25,
+			HP_TN_Imperium_26,
+			HP_TN_Imperium_27,
+			HP_TN_Imperium_28,
+			HP_TN_Imperium_29,
+			HP_TN_Imperium_30,
+			HP_TN_Imperium_31,
+			HP_TN_Imperium_32,
+			HP_TN_Imperium_33,
+			HP_TN_Imperium_34,
+			HP_TN_Imperium_35,
+			HP_TN_Imperium_36,
+			HP_TN_Imperium_37,
+			HP_TN_Imperium_38,
+			HP_TN_Imperium_39,
+			HP_TN_Imperium_40,
+			HP_TN_Imperium_41,
+			HP_TN_Imperium_42,
+			HP_TN_Imperium_43,
+			HP_TN_Imperium_44,
+			HP_TN_Imperium_45,
+			HP_TN_Imperium_46,
+			HP_TN_Imperium_47,
+			HP_TN_Imperium_48,
+			HP_TN_Imperium_49,
+			HP_TN_Imperium_50,
+			HP_TN_Imperium_51,
+			HP_TN_Imperium_52,
+			HP_TN_Imperium_53,
+			HP_TN_Imperium_54,
+			HP_TN_Imperium_55,
+			HP_TN_Imperium_56,
+			HP_TN_Imperium_57,
+			HP_TN_Imperium_58,
+			HP_TN_Imperium_59,
+			HP_TN_Imperium_60,
+			HP_TN_Imperium_61,
+			HP_TN_Imperium_62,
+			HP_TN_Imperium_63,
+			HP_TN_Imperium_64,
+			HP_TN_Imperium_65,
+			HP_TN_Imperium_66,
+			HP_TN_Imperium_67,
+			HP_TN_Imperium_68,
+			HP_TN_Imperium_69,
+			HP_TN_Imperium_70,
+			HP_TN_Imperium_71,
+			HP_TN_Imperium_72,
+			HP_TN_Imperium_73,
+			HP_TN_Imperium_74,
+			HP_TN_Imperium_75,
+			HP_TN_Imperium_76,
+			HP_TN_Imperium_77,
+			HP_TN_Imperium_78,
+			HP_TN_Imperium_79,
+			HP_TN_Imperium_80,
+			HP_EnginesSVH_00,
+			HP_EnginesSVH_01,
+			HP_EnginesSVH_02,
+			HP_Shield_GeneratorSVH_00,
+			HP_Shield_GeneratorSVH_01,
+			HP_Shield_GeneratorSVH_02,
+			HP_MisilA_01, 
+			HP_MisilA_02,
+			HP_MisilA_03, 
+			HP_MisilA_04,
+			HP_MisilA_05, 
+			HP_MisilA_06,
+			HP_MisilA_07, 
+			HP_MisilA_08,
+			HP_LaserGX_SSD_01,
+			HP_LaserGX_SSD_02,
+			HP_LaserGX_SSD_03,
+			HP_LaserGX_SSD_04,
+			HP_LaserGX_SSD_05,
+			HP_LaserGX_SSD_06,
+			HP_LaserGX_SSD_07,
+			HP_LaserGX_SSD_08,
+			HP_LaserGX_SSD_09,
+			HP_LaserGX_SSD_10,
+			HP_LaserRXC_SSD_01,
+			HP_LaserRXC_SSD_02,
+			HP_LaserRXC_SSD_03,
+			HP_LaserRXC_SSD_04,
+			HP_LaserRXC_SSD_05,
+			HP_LaserRXC_SSD_06,
+			HP_LaserRXC_SSD_07,
+			HP_LaserRXC_SSD_08,
+			HP_LaserRXC_SSD_09,
+			HP_LaserRXC_SSD_10,
+			HP_LaserRXC_SSD_11,
+			HP_LaserRXC_SSD_12,
+			HP_LaserBX_SSD_01,
+			HP_LaserBX_SSD_02,
+			HP_LaserBX_SSD_03,
+			HP_LaserBX_SSD_04,
+			HP_LaserBX_SSD_05,
+			HP_LaserBX_SSD_06,
+			HP_LaserBX_SSD_07,
+			HP_LaserBX_SSD_08,
+			HP_LaserBX_SSD_09,
+			HP_LaserBX_SSD_10,
+			HP_LaserBX_SSD_11,
+			HP_LaserBX_SSD_12,
+			HP_Imperium_Blast_01,
+			HP_Imperium_Blast_02,
+			HP_Imperium_Blast_03,
+			HP_Imperium_Blast_04,
+			HP_Imperium_Blast_05,
+			HP_Imperium_Blast_06,
+			HP_Imperium_Blast_07,
+			HP_Imperium_Blast_08,
+			HP_Imperium_Blast_09,
+			HP_Imperium_Blast_10,
+			HP_Imperium_Blast_11,
+			HP_Imperium_Blast_12,
+			HP_Imperium_Blast_13,
+			HP_Imperium_Blast_14,
+			HP_Imperium_Blast_15,
+			HP_Imperium_Blast_16,
+			HP_Imperium_Blast_17,
+			HP_Imperium_Blast_18,
+			HP_Imperium_Blast_19,
+			HP_Imperium_Blast_20,
+			HP_Imperium_Blast_21,
+			HP_Imperium_Blast_22,
+			HP_Imperium_Blast_23,
+			HP_Imperium_Blast_24,
+			HP_Imperium_Blast_25,
+			HP_Imperium_Blast_26,
+			HP_Imperium_Blast_27,
+			HP_Imperium_Blast_28,
+			HP_Imperium_Blast_29,
+			HP_Imperium_Blast_30,
+			HP_Fighter_BaySVH_00,
+   		</HardPoints>
+
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+
+		<Icon_Name>I_BUTTON_EV_ImperiumSSD.TGA</Icon_Name>
+		
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_IMPERIUM_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+				
+		<Build_Speech_Underway> EHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Select_Jedi_Cruiser </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Unit_Canceled </Build_Speech_Stopped>
+
+		<Build_Speech_Countdowns> EHD_Build_Vehicle </Build_Speech_Countdowns>
+
+		<Build_Music_Completed> Galactic_Death_Star_Complete_Music_Event </Build_Music_Completed>
+				
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+		<Lua_Script>interdictor_E</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Imperium_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>INTERDICT</Type>
+				<Disable_Movement>No</Disable_Movement>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Interdictor_Interdictor</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Super_Laser_Ability Name="Imperium_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>22000</Activation_Max_Range>
+				<Damage_Per_Frame>100000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>45</Line_Width>
+				<Line_Color>233 4 4 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+			</Super_Laser_Ability>
+			
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Super | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+			<Force_Healing_Ability Name="Imperium_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>Imperium</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>TractorBeam</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>75000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>111</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>18750</Tactical_Bribe_Cost>
+		<Population_Value>15</Population_Value>
+		<!--<Space_Override_Population_Value>10</Space_Override_Population_Value>-->
+		<Death_Clone>Damage_Normal, Imperium_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="Imperium_Death_Clone">
+		<Text_ID> TEXT_UNIT_ECLIPSE2_SSD </Text_ID>
+		<Space_Model_Name>EV_Imperium_SSD_D.ALO</Space_Model_Name>
+		<In_Background>Yes</In_Background>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<Scale_Factor>1.75</Scale_Factor>
+		<Layer_Z_Adjust> -3000.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Empire </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</ImperiumUnit_Data>

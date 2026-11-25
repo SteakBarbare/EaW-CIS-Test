@@ -1,0 +1,626 @@
+<?xml version="1.0"?>
+<Republic_structuresUnit_Data>
+	<SpecialStructure Name="Republic_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+	
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Republic,
+				ClonObiwan_old_Team,
+				ClonAnakin_old_Team,
+				YodaRepublic_Team,
+				MACEWINDU_Team,
+				AylaSecura_Advanced_Team,
+				Rep_Shaak_Ti_Advanced_Team,
+				QuinLan_Vos_Advanced_Team,
+				PLON_Team,
+				CancillerPalpatine_Team,
+				Rep_Jedi_Team,
+				ARC_Alpha_Team_Land_MP,
+				ARC_Alpha_Phase2_Team_Land_MP,
+				Republic_LAAT_ARC_Team_Land_MP,
+				Republic_LAAT_ARC_PHASE2_Team_Land_MP,
+				Republic_Engineer_Squad,
+				Delta_Team_Land_MP,
+				Rep_Level_Two_Tech_Upgrade,
+				Rep_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+	
+		<Affiliation>Republic, Empire</Affiliation>
+	
+   </SpecialStructure>
+
+	<GroundBuildable Name="Republic_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Republic, Empire</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Republic_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Command_Center_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_CommandCenter.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Republic, Empire</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Republic_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+				
+		<Starting_Spawned_Units_Tech_0>Rep_LAFT, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_LAFT, -1</Reserve_Spawned_Units_Tech_0>
+						
+		<Affiliation>Republic, Empire</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Republic_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Republic_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Republic_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Republic_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Republic_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Republic_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Republic_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Republic_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<Tactical_Additional_Structure_Type>Republic_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Republic_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Republic_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+
+		<Affiliation>Republic, Empire</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Republic_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Republic_Turbolaser </Tactical_Buildable_Constructed>
+
+		<Obstacle_Proxy_Type> Republic_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Republic_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Base_Heavy_Turret.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Projectile_Types>Proj_Turbolaser_Ground_Rep_Base_Tower_Ion</Projectile_Types>
+		
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+				HP_GroundStructure_Shield_Generator_00,
+				HP_REP_Base_Turret_00,
+				HP_REP_Base_Turret_01
+		</HardPoints>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+		<Icon_Name>i_button_REP_Base_tower.tga</Icon_Name>
+		<Tactical_Additional_Structure_Type>Republic_Power_Generator</Tactical_Additional_Structure_Type>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Republic_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Base_Heavy_Turret.ALO</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_REP_Base_tower.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Republic_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_Base_Heavy_Turret.ALO</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_REP_Base_tower.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Republic_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Uplink_Station.ALO</Land_Model_Name>
+		
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Republic,
+				Rep_Bombing_Run_Use_Upgrade, 
+				Rep_Planetary_Bombard_Use_Upgrade,
+				Republic_Field_Commander_Phase1_Team,
+				Republic_Field_Commander_Phase2_Team,
+				Rep_Plataforma_Mando_MKI_Team,
+				Republic_ARC_Field_Commander_Phase1_Team,
+				Republic_LAAT_Phase1,
+				Republic_ShuttleAttack,
+				Republic_LAAT_Phase1_MKII,
+				Republic_LAFT,
+				Republic_LAAT_C,
+				Republic_Vwing_Land_Company,
+				Republic_TIE_Land_Company,
+				Republic_Y_WingLand_squadron,
+				Republic_ARC_170_Squadron_Land
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Obstacle_Proxy_Type> Republic_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+
+		<Affiliation>Republic, Empire</Affiliation>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Republic_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Republic_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Republic_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Republic_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Republic_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="Republic_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>Rep_InfantryBarracks.alo</Land_Model_Name>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, TURRET, WEAPON, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET, ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+
+		<Projectile_Types>Proj_EWEB_Blaster_Blue</Projectile_Types>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Republic,
+				Imperial_Guard_Company_E,
+				Republic_CloneTrooper_Squad,
+				ClonPhase1Plex_Squad,
+				Republic_EWEB_troopers_Phase1_Squad,
+				Republic_Mortar_troopers_P1_Squad,
+				Republic_Clon_Sniper_Phase1_Squad,
+				Rep_Hovermoto_Phase1_Squad,
+				Republic_Stormtrooper_Squad,
+				ClonPhase2Plex_Squad,
+				Republic_EWEB_troopers_Phase2_Squad,
+				Republic_Mortar_troopers_P2_Squad,
+				Republic_Clon_Sniper_Phase2_Squad,
+				Rep_Hovermoto_Phase2_Squad,
+				Republic_Assault_Squad,
+				Republic_Assault_Flame_Squad,
+				Rep_StormCommando_Squad_Land_MP,
+				Republic_Wookie_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Republic_CloneTrooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Republic_CloneTrooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>ClonPhase1Plex_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ClonPhase1Plex_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_Hovermoto_Phase1, 5</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Hovermoto_Phase1, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Republic_EWEB_troopers_Phase1, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Republic_EWEB_troopers_Phase1, -1</Reserve_Spawned_Units_Tech_0>
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="Republic_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Rep_InfantryBarracks.ALO</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Republic_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Barracks_MP </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Rep_InfantryBarracks.ALO</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Republic_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_LightFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Republic,
+				Republic_CombatSpeeder_Company,
+				Republic_Seraph_Company,
+				Republic_ISP_Squad,
+				Republic_Light_Recon_Squad,
+				Republic_AT_AP_Company,
+				Republic_AT_APMk2_Company,
+				Republic_ATXT_Scout_Squad,
+				Republic_ClonGun_Corp
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Spawned_Squadron_Delay_Seconds>25</Spawned_Squadron_Delay_Seconds>		
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>110.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Pod_Walkermk2, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Pod_Walkermk2, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_ISP, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_ISP, -1</Reserve_Spawned_Units_Tech_0>
+					
+		<Starting_Spawned_Units_Tech_0>Republic_Combatspeeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Republic_Combatspeeder, -1</Reserve_Spawned_Units_Tech_0>
+			
+		<Starting_Spawned_Units_Tech_0>Rep_Seraph_class_landspeeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Seraph_class_landspeeder, -1</Reserve_Spawned_Units_Tech_0>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Republic_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Republic_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Light_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Rep_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Republic_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_VehicleFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Republic,
+				Republic_TX130_Armor_Group,
+				Rep_Stun_Tank_Corp,
+				Republic_Heavy_Artillery_Corp,
+				Republic_UTAT_COMPANY,
+				Republic_AT_TE_Company,
+				Rep_AT_HE_Company,
+				Republic_ATOT_Company,
+				Republic_Heavy_Assault_Company,
+				Rep_HAV_Juggernaut_A5_Company,
+				Rep_HAV_Juggernaut_A6_Company,
+				Rep_HAV_Juggernaut_A7_Company,
+				Rep_A5RX_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		
+		<Starting_Spawned_Units_Tech_0>Rep_LAAT_Phase1, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_LAAT_Phase1, -1</Reserve_Spawned_Units_Tech_0>
+			
+		<Starting_Spawned_Units_Tech_0>Rep_TX130_Repulsor_Tank, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_TX130_Repulsor_Tank, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Republic_ARC_170_Fighter_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Republic_ARC_170_Fighter_Land, -1</Reserve_Spawned_Units_Tech_0>
+				
+		
+	</SpecialStructure>
+	<GroundBuildable Name="Republic_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_VehicleFactory.alo</Land_Model_Name>
+
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Republic_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Heavy_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Republic_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE, ABILITY_COUNTDOWN,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+				
+		<Starting_Spawned_Units_Tech_0>Rep_UTAT_Repulsor_Tank, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_UTAT_Repulsor_Tank, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_AT_TE_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_AT_TE_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_SPHAT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_SPHAT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	
+
+	<GroundBuildable Name="Republic_Ground_Advanced_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Rep_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Republic_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Rep_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+	<SpecialStructure Name="Republic_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Republic</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+		<Tactical_Buildable_Objects_Campaign> 
+			Republic,
+				EL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Republic,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Republic_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Republic</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Republic_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Republic</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Republic_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_OfficerAcademy.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Republic_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET, ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Blaster_Blue</Projectile_Types>
+		<Destruction_Survivors> 
+			Republic_Mini_Stormtrooper_Squad, 1.0
+			Republic_Medium_Stormtrooper_Squad, 1.0
+			Republic_Large_Clontrooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures> Republic_Ground_Barracks </Required_Special_Structures>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+
+		<Starting_Spawned_Units_Tech_0>Republic_ARC_Field_Commander_Phase1_Team, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Republic_ARC_Field_Commander_Phase1_Team, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Republic_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Republic, PC_Republic_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Republic_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Republic_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Republic_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Rep_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+</Republic_structuresUnit_Data>
+
+
+

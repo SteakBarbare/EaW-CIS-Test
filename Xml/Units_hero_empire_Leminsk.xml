@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Leminsk2Unit_Data>
+
+	<HeroUnit Name="Leminsk2">
+		<Variant_Of_Existing_Type>TarkinORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LEMINSK</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LEMINSK2 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_LEMINSK.tga</Icon_Name>
+		<Spawn_Planet>The_Maw</Spawn_Planet>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Abilities SubObjectList="Yes">
+			
+			<Reduce_Production_Price_Ability Name="Leminsk_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Leminsk_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Leminsk_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	
+	<HeroCompany Name="Leminsk2_Team">	
+		<Variant_Of_Existing_Type>Grand_Moff_Tarkin_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LEMINSK</Text_ID>
+		<Icon_Name>I_BUTTON_LEMINSK.tga</Icon_Name>
+		<Company_Transport_Unit>Leminsk2_Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Leminsk2</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LEMINSK2 TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Respawn_Ackbar</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Ackbar</SFXEvent_Hero_Respawned>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>50000</Build_Cost_Credits>
+		<Required_Planets>The_Maw</Required_Planets>
+		<Build_Tab_Heroes>No</Build_Tab_Heroes>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>1</Build_Limit_Lifetime_For_All_Allies>  
+	</HeroCompany>	
+
+
+</Leminsk2Unit_Data>

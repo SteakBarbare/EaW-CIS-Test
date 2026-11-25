@@ -1,0 +1,234 @@
+<?xml version="1.0" ?>
+
+
+
+<Story>
+
+<!-- Because the Underworld has no Tech Levels, all heroes release at the beginning of the campaign -->
+
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	<Event Name="Lock_Astilleros_RB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros</Reward_Param1>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+	<Event Name="Spawn_Leminsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Leminsk_Team</Reward_Param1>
+		<Reward_Param2>Hoth</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>
+	<Event Name="Spawn_Durga">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Durga_Team</Reward_Param1>
+		<Reward_Param2>NalHutta</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Grappa">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grappa_The_Hutt_Team</Reward_Param1>
+		<Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>		
+	<Event Name="Spawn_Sol_Mon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Sol_Mon</Reward_Param1>
+		<Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>		
+	<Event Name="Spawn_Yull_Acib_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Yull_Acib_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>		
+
+	<Event Name="Spawn_Tyber">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Tyber_Zann_Team</Reward_Param1>
+		<Reward_Param2>Tatooine</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<Event Name="Spawn_Bossk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Bossk_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Urai">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Urai_Fen_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_IG88">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>IG88_Team</Reward_Param1>
+        <Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Silri">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Silri_Team</Reward_Param1>
+		<Reward_Param2>Hypori</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Xizor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Xizor_Team</Reward_Param1>
+		<Reward_Param2>Tatooine</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Guri">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Guri_Team</Reward_Param1>
+		<Reward_Param2>Tatooine</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Jabba_The_Hutt">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Jabba_The_Hutt_Team</Reward_Param1>
+		<Reward_Param2>NalHutta</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Batalla_de_Endor">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Endor</Event_Param1>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Remove_Xizor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Xizor</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Endor</Prereq>
+	</Event>
+	<Event Name="Remove_Jabba_The_Hutt">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Jabba_The_Hutt</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Endor</Prereq>
+	</Event>
+	<Event Name="Spawn_Durga">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Durga_Team</Reward_Param1>
+		<Reward_Param2>NalHutta</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_EspadaOscura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EspadaOscura</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Invasion_de_las_Fauces">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>The_Maw</Event_Param1>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Dar_creditos_al_Sol_Negro_para_EspadaOscura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>CREDITS</Reward_Type>
+		<Reward_Param1>500000</Reward_Param1>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>
+	
+	<Event Name="Hacer_Hoth_del_SolNegro">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Hoth</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>Underworld_Star_Base_1</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_02">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>U_Ground_Palace</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_03">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>U_IA_Gr_Barracks</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+			<Event Name="Spawn_Unidades_SolNegro_en_Hoth_04">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>UNIQUE_UNIT</Reward_Type>
+				<Reward_Param1>U_IA_Gr_Veh_Factory</Reward_Param1>
+				<Reward_Param2>Hoth</Reward_Param2>
+				<Prereq>Hacer_Hoth_del_SolNegro</Prereq>
+			</Event>
+	<Event Name="Spawn_Leminsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Leminsk_Team</Reward_Param1>
+		<Reward_Param2>Hoth</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>
+	<Event Name="Spawn_Espada_Oscura">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>83</Event_Param1>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>EspadaOscura</Reward_Param1>		
+		<Reward_Param2>Hoth</Reward_Param2>
+		<Prereq>Invasion_de_las_Fauces</Prereq>
+	</Event>
+
+
+	<Event Name="Limitar_EspadaOscura_00">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>EspadaOscura</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Limitar_EspadaOscura_01">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>EspadaOscura</Reward_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Limitar_EspadaOscura_00</Prereq>
+		</Event>		
+		
+
+</Story>

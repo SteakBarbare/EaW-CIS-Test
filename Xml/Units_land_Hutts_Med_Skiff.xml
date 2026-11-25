@@ -1,0 +1,103 @@
+﻿<?xml version="1.0"?>
+
+
+<Hutts_Med_SkiffUnit_Data>
+	<GroundVehicle Name="Hutts_Med_Skiff">
+		<Variant_Of_Existing_Type>Republic_Combatspeeder</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_MED_SKIFF</Text_ID>
+		<Encyclopedia_Good_Against> AT_ST_Walker T2B_Tank Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier M1_Repulsor_Tank MZ8_Pulse_Cannon_Tank</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_MED_SKIFF</Encyclopedia_Text>
+
+		<Land_Model_Name>Hu_Multi_Skiff.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Hu_Multi_Med_Skiff.tga</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Max_Speed>3.0</Max_Speed>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Tactical_Health>250</Tactical_Health>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Gun01</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_Blaster_Cannon_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<Ranged_Target_Z_Adjust>15.0</Ranged_Target_Z_Adjust>
+		<AI_Combat_Power>60</AI_Combat_Power>
+		
+		<Hardpoints>
+				HP_Multi_Med_Skiff_Turret_01
+		</Hardpoints>
+
+		<SFXEvent_Select>Unit_Select_Pirate_Skiff</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Pirate_Skiff</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pirate_Skiff</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Pirate_Skiff</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Pirate_Skiff</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Pirate_Skiff </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Pirate_Skiff </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Fire>Unit_Blaster_Cannon_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Snow_Speeder_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Engine_Idle_Loop> Unit_Skiff_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Skiff_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+        <Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_2M_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Hutts_Med_Skiff_Company">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_MED_SKIFF</Text_ID>
+		<Encyclopedia_Good_Against> AT_ST_Walker T2B_Tank Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier M1_Repulsor_Tank MZ8_Pulse_Cannon_Tank</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_MED_SKIFF</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Icon_Name>i_button_Hu_Multi_Med_Skiff.tga</Icon_Name>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hutts_Ground_Light_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>Hutts_Med_Skiff, Hutts_Med_Skiff, Hutts_Med_Skiff</Company_Units>
+		
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Pirate_Skiff</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pirate_Skiff</SFXEvent_Fleet_Move>
+       
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+
+</Hutts_Med_SkiffUnit_Data>

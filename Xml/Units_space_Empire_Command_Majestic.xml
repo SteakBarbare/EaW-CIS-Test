@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<Command_MajesticUnit_Data>
+	
+	<SpaceUnit Name="Up_E_Emperor1_to_Emperor2">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_EMPEROR_PALPATINE</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_HERO_EMPEROR_PALPATINE2 TEXT_TOOLTIP_PALPATINE2_01</Encyclopedia_Text>
+		<Icon_Name>i_button_Palpatine_Young.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Special_Structures>E_Ground_Officer_Academy</Required_Special_Structures>
+		<Required_Planets>Byss</Required_Planets>
+		<Required_Orbiting_Units>Command_Majestic</Required_Orbiting_Units>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>100000</Build_Cost_Credits>
+		<Lua_Script>Up_E_Emperor1_to_Emperor2</Lua_Script>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	
+	
+	<SpaceUnit Name="Command_Majestic">
+		<Variant_Of_Existing_Type>ISD2_F2</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_SD_MAJESTIC</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SDMAJESTIC TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_STAR_DESTROYERII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_GUNBOAT TEXT_WAVES_X2 TEXT_UNIT_TIE_DEFENDER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Kedalbe_Battleship Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> B-Wing MC30_Frigate Skipray_Blastboat </Encyclopedia_Vulnerable_To>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_ISD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>i_button_emperor_palpatine.tga</Icon_Name>
+
+		<Death_Clone>Damage_Normal, ISD2_Death_Clone</Death_Clone>
+
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>50000</Shield_Points>
+		<Shield_Refresh_Rate>52000</Shield_Refresh_Rate>
+		<AI_Combat_Power>4900</AI_Combat_Power>
+		
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		
+		<Space_FOW_Reveal_Range>1500.0</Space_FOW_Reveal_Range>
+		
+		<SFXEvent_Select>Unit_Select_Emperor</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Emperor</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Emperor</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Emperor</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Emperor</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Emperor</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Emperor</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Emperor </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Emperor </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Emperor </Death_SFXEvent_Start_Die>
+		
+		<HardPoints> 
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_EV_SH_ISD2_00,
+			HP_EV_SH_ISD2_01,
+			HP_Tractor_Beam_Rebelde,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_ISD2_Side_01,
+			HP_T_ISD2_Side_02,
+			HP_T_ISD2_SideN_03,
+			HP_T_ISD2_SideN_04, 		
+			HP_T_ISD2_Side_05,
+			HP_T_ISD2_Side_06,
+			HP_T_ISD1_SideN_07,
+			HP_T_ISD1_SideN_08,
+			HP_T_ISD1_SideN_09,
+			HP_T_ISD1_SideN_10,
+			HP_T_ISD1_SideN_11,
+			HP_T_ISD1_SideN_12,
+			HP_T_ISD2_Side_13,
+			HP_T_ISD2_Side_14,
+			HP_T_ISD2_Side_15,
+			HP_T_ISD2_Side_16,
+			HP_T_ISD2_Side_17,
+			HP_T_ISD2_Side_18,
+			HP_T_ISD2_Side_19,
+			HP_T_ISD2_SideN_20,
+			HP_T_ISD2_SideN_21,
+			HP_T_ISD2_SideN_22,
+			HP_T_ISD2_SideN_23,
+			HP_T_ISD2_SideN_24,
+			HP_T_ISD2_SideN_25,
+			HP_T_ISD2_SideN_26,
+			HP_T_ISD2_SideN_27,
+			HP_T_ISD2_SideN_28,
+			HP_T_ISD2_SideN_29,
+			HP_T_ISD2_SideN_30,
+			HP_T_ISD2_SideN_31,
+			HP_T_ISD2_SideN_32,
+			HP_T_ISD2_SideN_33,
+			HP_T_ISD2_SideN_34,
+			HP_T_ISD2_SideN_35,
+			HP_T_ISDII_01,
+			HP_T_ISDII_02,
+			HP_T_ISDII_03,
+			HP_T_ISDII_04,
+			HP_T_ISDII_05,
+			HP_T_ISDII_06,
+			HP_T_ISDII_07,
+			HP_T_ISDII_08,
+			HP_T_ISDII_B_09,
+			HP_T_ISDII_B_10,
+			HP_T_ISDII_B_11,
+			HP_T_ISDII_B_12,
+			HP_T_ISDII_B_13,
+			HP_T_ISDI_14,
+			HP_T_ISDI_15,
+			HP_T_ISDI_16,
+			HP_T_ISDI_17,
+			HP_T_ISDI_18,
+			HP_T_ISDI_19,
+			HP_T_ISDI_20,
+			HP_T_ISDI_21,
+			HP_T_ISDI_22,
+			HP_T_ISDI_23,
+			HP_T_ISDI_24,
+			HP_T_ISDI_25,
+			HP_T_ISDI_26
+		</HardPoints>
+		
+
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>Majestic_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Combat_Bonus_Ability Name="Emperor_Space_Combat_All_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Enable_Radar_Ability Name="Majestic_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>     
+			
+		</Abilities>
+
+		<CategoryMask> SpaceHero </CategoryMask>
+
+		<Landing_Transport_Variant>Shuttle_TyderiumX_Landing</Landing_Transport_Variant>
+
+		<Tactical_Build_Cost_Multiplayer>6200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>28</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+	</SpaceUnit>			
+</Command_MajesticUnit_Data>

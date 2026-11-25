@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+
+
+
+<LAATUUnit_Data>
+	<!--<GroundVehicle Name="LAATU_Special"> posiblemente innecesario
+		<Variant_Of_Existing_Type>LAATU</Variant_Of_Existing_Type>
+		<Lua_Script>BS_A_Mixto_02</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="LAATU_Company_Special">
+		<Variant_Of_Existing_Type>LAATU_Company</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Units>LAATU_Special</Company_Units>
+	</GroundCompany>-->
+
+	<GroundVehicle Name="LAATU">
+		<Variant_Of_Existing_Type>LAATUORG</Variant_Of_Existing_Type>
+	</GroundVehicle>
+	<GroundVehicle Name="LAATUORG">
+		<Variant_Of_Existing_Type>LAAT</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_LAATBS.ALO</Land_Model_Name>
+		<Affiliation>Underworld, Pirates</Affiliation>
+
+		<Projectile_Types>Proj_Mass_Driver_Tank</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>500.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>140.0</Ranged_Target_Z_Adjust>
+		
+		<Hardpoints>
+				HP_Gr_Fighter_Missile_00, HP_LAAT_Yellow_Beam_00, HP_LAAT_Yellow_Beam_01, HP_Gr_Rear_Turret_Yellow_00
+		</Hardpoints>
+		<AI_Combat_Power>125</AI_Combat_Power>
+
+		<Icon_Name>I_BUTTON_Rep_LAAT.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LaatU_Deployed_Utrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+		
+	<GroundCompany Name="LAATU_Company">
+		<Variant_Of_Existing_Type>Imperial-LAAT</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>LAAT_Land_Transport</Company_Transport_Unit>
+		<Company_Units>LAATU</Company_Units>
+		<GUI_Model>EV_LAATBS.ALO</GUI_Model>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+		<Tactical_Build_Prerequisites>UC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LaatU_Deployed_Utrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundCompany>
+	
+	
+
+</LAATUUnit_Data>

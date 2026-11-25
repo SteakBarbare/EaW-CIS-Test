@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO Batalla_de_D34_Space ********-->
+<!--**************************************************************************-->
+
+<Story>
+	
+		
+      <Event Name="Batalla_de_D34_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+	  
+	   <Event Name="Orden_de_Ataque_01">
+			<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+			<Event_Param2>Story_Trigger_Zone_01</Event_Param2>
+			<Event_Param3>500</Event_Param3>
+			<Prereq>Batalla_de_D34_Space</Prereq>
+	   </Event>
+	   <Event Name="Orden_de_Ataque_02">
+			<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+			<Event_Param2>Story_Trigger_Zone_02</Event_Param2>
+			<Event_Param3>500</Event_Param3>
+			<Prereq>Batalla_de_D34_Space</Prereq>
+	   </Event>
+	   <Event Name="Orden_de_Ataque_03">
+			<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+			<Event_Param2>Story_Trigger_Zone_03</Event_Param2>
+			<Event_Param3>500</Event_Param3>
+			<Prereq>Batalla_de_D34_Space</Prereq>
+	   </Event>
+	   <Event Name="Orden_de_Ataque_04">
+			<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+			<Event_Param2>Story_Trigger_Zone_16</Event_Param2>
+			<Event_Param3>500</Event_Param3>
+			<Prereq>Batalla_de_D34_Space</Prereq>
+	   </Event>
+	  
+	  
+	  <Event Name="Defender_Prevent_Retreat">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_D34_Space</Prereq>
+	  </Event> 
+	  
+	  <Event Name="Defender_Destroyed">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Empire</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Batalla_de_D34_Space</Prereq>
+	 </Event>
+	  	  
+	  
+	  <Event Name="Defender_Enable_Retreat">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Defender_Destroyed</Prereq>
+	  </Event> 				
+	
+	<Event Name="Prevenir_victoria_prematura">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>0</Reward_Param1>
+		<Prereq>Batalla_de_D34_Space</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Todos_los_enemigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Empire</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Batalla_de_D34_Space</Prereq>
+	</Event>
+		
+	<Event Name="Destruidos_Todos_Amigos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>Rebel</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Batalla_de_D34_Space</Prereq>
+	</Event>		
+		
+	<Event Name="Activar_Victoria">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>1</Reward_Param1>
+		<Prereq>Destruidos_Todos_los_enemigos</Prereq>
+		<Prereq>Destruidos_Todos_Amigos</Prereq>
+	</Event>				
+	
+	<Event Name="Informe_00">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_00_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_00_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_E_INTERVENTION_D34_SPACE_00</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_00</Prereq>
+	</Event>
+			<Event Name="Informe_00_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_00_Text</Prereq>
+			</Event>
+	<Event Name="Informe_01">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_01_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_01_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_E_INTERVENTION_KOTHLIS_SPACE_01</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_01</Prereq>
+	</Event>
+			<Event Name="Informe_01_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_01_Text</Prereq>
+			</Event>		
+			
+</Story>

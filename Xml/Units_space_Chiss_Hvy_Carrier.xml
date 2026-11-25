@@ -1,0 +1,296 @@
+<?xml version="1.0"?>
+<Ch_Hvy_Carrier_Data>
+	<SpaceUnit Name="Ch_Hvy_Carrier">
+		<Variant_Of_Existing_Type>Ch_Hvy_CarrierORG</Variant_Of_Existing_Type>
+				
+		<Starting_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron7, 2</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron7, 14</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ch_TIE_Claw_B_Squadron7, 14</Reserve_Spawned_Units_Tech_0>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust><!--era 420 antes de dejarlo en cero-->
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Ch_Hvy_Carrier_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="Ch_Hvy_CarrierORG">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CH_CSYLLA</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CH_CSYLLA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_WARHAMMER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_CLAW TEXT_WAVES_X3 TEXT_UNIT_TIE_CLAW_BOMBER TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_8</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_CARRIER </Encyclopedia_Unit_Class>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>Ch_New_Heavy_Carrier.ALO</Space_Model_Name>
+
+		<Scale_Factor>1.0</Scale_Factor>
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_Warhammer</Shield_Armor_Type>
+		<!--<Custom_Hard_XExtent> 763.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 452.0 </Custom_Hard_YExtent>-->
+		
+		<GUI_Bounds_Scale>0.15</GUI_Bounds_Scale>
+
+		<Max_Speed>2.4</Max_Speed>
+		
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Supercapital </Space_Layer>
+		<!--<Layer_Z_Adjust>1000.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		
+		
+
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>500000000</Tactical_Health>
+		<Shield_Refresh_Rate>264000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+				
+		<AI_Combat_Power>4800</AI_Combat_Power>
+		<Build_Time_Seconds>200</Build_Time_Seconds>
+		<Build_Cost_Credits>18000</Build_Cost_Credits>
+		
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		
+		
+		<Affiliation>Chiss</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Space_FOW_Reveal_Range>2500.0</Space_FOW_Reveal_Range>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<HardPoints> 
+			HP_Misil_01, 
+			HP_Misil_02,
+			HP_T_Ch_Hvy_Carrier_01,
+			HP_T_Ch_Hvy_Carrier_02,
+			HP_T_Ch_Hvy_Carrier_03,
+			HP_T_Ch_Hvy_Carrier_04,
+			HP_T_Ch_Hvy_Carrier_05,
+			HP_T_Ch_Hvy_Carrier_06,
+			HP_T_Ch_Hvy_Carrier_07,
+			HP_T_Ch_Hvy_Carrier_08,
+			HP_T_Ch_Hvy_Carrier_09,
+			HP_T_Ch_Hvy_Carrier_10,
+			HP_T_Ch_Hvy_Carrier_11,
+			HP_T_Ch_Hvy_Carrier_12,
+			HP_T_Ch_Hvy_Carrier_13,
+			HP_T_Ch_Hvy_Carrier_14,
+			HP_T_Ch_Hvy_Carrier_15,
+			HP_T_Ch_Hvy_Carrier_16,
+			HP_T_Ch_Hvy_Carrier_17,
+			HP_T_Ch_Hvy_Carrier_18,
+			HP_T_Ch_Hvy_Carrier_19,
+			HP_T_Ch_Hvy_Carrier_20,
+			HP_T_Ch_Hvy_Carrier_21,
+			HP_T_Ch_Hvy_Carrier_22,
+			HP_T_Ch_Hvy_Carrier_23,
+			HP_T_Ch_Hvy_Carrier_24,
+			HP_T_Ch_Hvy_Carrier_25,
+			HP_T_Ch_Hvy_Carrier_26,
+			HP_T_Ch_Hvy_Carrier_27,
+			HP_T_Ch_Hvy_Carrier_28,
+			HP_T_Ch_Hvy_Carrier_29,
+			HP_T_Ch_Hvy_Carrier_30,
+			HP_T_Ch_Hvy_Carrier_31,
+			HP_T_Ch_Hvy_Carrier_32,
+			HP_T_Ch_Hvy_Carrier_33,
+			HP_T_Ch_Hvy_Carrier_34,
+			HP_T_Ch_Hvy_Carrier_35,
+			HP_T_Ch_Hvy_Carrier_36,
+			HP_T_Ch_Hvy_Carrier_37,
+			HP_T_Ch_Hvy_Carrier_38,
+			HP_T_Ch_Hvy_Carrier_39,
+			HP_T_Ch_Hvy_Carrier_40,
+			HP_T_Ch_Hvy_Carrier_41,
+			HP_T_Ch_Hvy_Carrier_42,
+			HP_T_Ch_Hvy_Carrier_43,
+			HP_T_Ch_Hvy_Carrier_44,
+			HP_T_Ch_Hvy_Carrier_45,
+			HP_T_Ch_Hvy_Carrier_46,
+			HP_T_Ch_Hvy_Carrier_47,
+			HP_T_Ch_Hvy_Carrier_48,
+			HP_T_Ch_Hvy_Carrier_49,
+			HP_T_Ch_Hvy_Carrier_50,
+			HP_T_Ch_Hvy_Carrier_51,
+			HP_T_Ch_Hvy_Carrier_52,
+			HP_T_Ch_Hvy_Carrier_53,
+			HP_T_Ch_Hvy_Carrier_54,
+			HP_T_Ch_Hvy_Carrier_55,
+			HP_T_Ch_Hvy_Carrier_56,
+			HP_T_Ch_Hvy_Carrier_57,
+			HP_T_Ch_Hvy_Carrier_58,
+			HP_T_Ch_Hvy_Carrier_59,
+			HP_T_Ch_Hvy_Carrier_60,
+			HP_T_Ch_Hvy_Carrier_61,
+			HP_T_Ch_Hvy_Carrier_62,
+			HP_T_Ch_Hvy_Carrier_63,
+			HP_T_Ch_Hvy_Carrier_64,
+			HP_T_Ch_Hvy_Carrier_65,
+			HP_T_Ch_Hvy_Carrier_66,
+			HP_T_Ch_Hvy_Carrier_67,
+			HP_T_Ch_Hvy_Carrier_68,
+			HP_T_Ch_Hvy_Carrier_69,
+			HP_T_Ch_Hvy_Carrier_70,
+			HP_T_Ch_Hvy_Carrier_71,
+			HP_T_Ch_Hvy_Carrier_72,
+			HP_T_Ch_Hvy_Carrier_73,
+			HP_T_Ch_Hvy_Carrier_74,
+			HP_T_Ch_Hvy_Carrier_75,
+			HP_T_Ch_Hvy_Carrier_76,
+			HP_T_Ch_Hvy_Carrier_77,
+			HP_T_Ch_Hvy_Carrier_78,
+			HP_T_Ch_Hvy_Carrier_79,
+			HP_T_Ch_Hvy_Carrier_80,
+			HP_T_Ch_Hvy_Carrier_81,
+			HP_T_Ch_Hvy_Carrier_82,
+			HP_T_Ch_Hvy_Carrier_83,
+			HP_T_Ch_Hvy_Carrier_84,
+			HP_T_Ch_Hvy_Carrier_85,
+			HP_T_Ch_Hvy_Carrier_86,
+			HP_T_Ch_Hvy_Carrier_87,
+			HP_T_Ch_Hvy_Carrier_88,
+			HP_T_Ch_Hvy_Carrier_89,
+			HP_T_Ch_Hvy_Carrier_90,
+			HP_T_Ch_Hvy_Carrier_91,
+			HP_T_Ch_Hvy_Carrier_92,
+			HP_T_Ch_Hvy_Carrier_93,
+			HP_T_Ch_Hvy_Carrier_94,
+			HP_T_Ch_Hvy_Carrier_95,
+			HP_T_Ch_Hvy_Carrier_96,
+			HP_T_Ch_Hvy_Carrier_97,
+			HP_T_Ch_Hvy_Carrier_98,
+			HP_T_Ch_Hvy_Carrier_99,
+			HP_T_Ch_Hvy_Carrier_100,
+			HP_T_Ch_Hvy_Carrier_101,
+			HP_T_Ch_Hvy_Carrier_102,
+			HP_T_Ch_Hvy_Carrier_103,
+			HP_T_Ch_Hvy_Carrier_104,
+			HP_T_Ch_Hvy_Carrier_105,
+			HP_T_Ch_Hvy_Carrier_106,
+			HP_T_Ch_Hvy_Carrier_107,
+			HP_T_Ch_Hvy_Carrier_108,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Fighter_BayH_05,
+			HP_Fighter_BayH_06,
+			HP_Fighter_BayH_07,
+			HP_Fighter_BayH_08,
+			HP_Fighter_BayH_09,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_LaserYXC_01,
+			HP_LaserYXC_02,
+			HP_LaserYXC_03,
+			HP_LaserYXC_04,
+			HP_LaserYXC_05,
+			HP_LaserYXC_06,
+			HP_LaserYXC_07,
+			HP_LaserYXC_08,
+			HP_LaserYXC_09,
+			HP_LaserYXC_10,
+			HP_LaserYXC_11,
+			HP_LaserYXC_12,
+			HP_LaserRXC_01,
+			HP_LaserRXC_02,
+			HP_LaserRXC_03,
+			HP_LaserRXC_04,
+			HP_LaserRXC_05,
+			HP_LaserRXC_06,
+			HP_LaserRXC_07,
+			HP_LaserRXC_08,
+			HP_LaserRXC_09,
+			HP_LaserRXC_10,
+			HP_LaserRXC_11,
+			HP_LaserRXC_12,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08
+		</HardPoints>
+		<CategoryMask> Capital | AntiTransport </CategoryMask>
+		<Icon_Name>I_BUTTON_Ch_Hvy_Carrier.TGA</Icon_Name>
+		<GUI_Model_Name>Ch_Hvy_Carrier.ALO</GUI_Model_Name>
+
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.0752  0.0752</Radar_Icon_Size>  
+				
+		<Tactical_Build_Cost_Multiplayer>18000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>74</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>4500</Tactical_Bribe_Cost>
+		<Population_Value>6</Population_Value>
+		<!--<Space_Override_Population_Value>5</Space_Override_Population_Value>-->
+		
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+	</SpaceUnit>
+	<SpaceUnit Name="Ch_Hvy_Carrier_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_CORELLIANSD</Text_ID>
+		<Space_Model_Name>Ch_New_Heavy_Carrier_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Death_Explosions>Death_Explosion_Flash_8000</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>1000.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Ch_Hvy_Carrier_Data>

@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<Command_AdmonitorUnit_Data>
+
+	<SpaceUnit Name="Up_E_Thrawn1_to_Thrawn2">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_THRAWN_TEAM</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_SD_ADMONITOR TEXT_UNIT_SD_QUIMERA</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_THRAWNA.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Special_Structures>E_Ground_Officer_Academy</Required_Special_Structures>
+		
+		<Required_Orbiting_Units>Command_Admonitor</Required_Orbiting_Units>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>30000</Build_Cost_Credits>
+		<Lua_Script>Up_E_Thrawn1_to_Thrawn2</Lua_Script>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Command_Admonitor">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_UNIT_SD_ADMONITOR</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SD_ADMONITOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_DEFENDER TEXT_WAVES_X3 TEXT_UNIT_MISSILE_GUNBOAT TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_6 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Kedalbe_Battleship Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> B-Wing MC30_Frigate Skipray_Blastboat </Encyclopedia_Vulnerable_To>
+		<Icon_Name>I_BUTTON_THRAWN.tga</Icon_Name>
+
+		<Galactic_Fleet_Override_Model_Name> W_Empire_ISD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+		<Ranking_In_Category>3</Ranking_In_Category>
+	
+		<Layer_Z_Adjust>400.0</Layer_Z_Adjust>
+
+		<Death_Clone>Damage_Normal, ISD2_Death_Clone</Death_Clone>
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>50000</Shield_Points>
+		<Shield_Refresh_Rate>52000</Shield_Refresh_Rate>
+
+		<AI_Combat_Power>4700</AI_Combat_Power>
+
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		
+
+		<Starting_Spawned_Units_Tech_0>TIE_Defender_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Missile_Gunboat_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Reserve_Spawned_Units_Tech_0>TIE_Defender_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Missile_Gunboat_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+
+		<SFXEvent_Select>Unit_Select_Thrawn</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Thrawn</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Thrawn</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Thrawn</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Thrawn</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Thrawn </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning>Unit_Defeat_Thrawn</SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Bombard_Select_Target>	EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+        <Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Thrawn </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_Thrawn </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Thrawn </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Thrawn </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_Thrawn </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, Unit_Lost_Tractor_Thrawn</SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Star_Destroyer_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Star_Destroyer_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Star_Destroyer_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Thrawn</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Thrawn</SFXEvent_Hero_Respawned>
+		
+		<HardPoints> 
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_EV_SH_ISD2_00,
+			HP_EV_SH_ISD2_01,
+			HP_Tractor_Beam_Rebelde,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_T_ISD2_Side_01,
+			HP_T_ISD2_Side_02,
+			HP_T_ISD2_SideN_03,
+			HP_T_ISD2_SideN_04, 		
+			HP_T_ISD2_Side_05,
+			HP_T_ISD2_Side_06,
+			HP_T_ISD1_SideN_07,
+			HP_T_ISD1_SideN_08,
+			HP_T_ISD1_SideN_09,
+			HP_T_ISD1_SideN_10,
+			HP_T_ISD1_SideN_11,
+			HP_T_ISD1_SideN_12,
+			HP_T_ISD2_Side_13,
+			HP_T_ISD2_Side_14,
+			HP_T_ISD2_Side_15,
+			HP_T_ISD2_Side_16,
+			HP_T_ISD2_Side_17,
+			HP_T_ISD2_Side_18,
+			HP_T_ISD2_Side_19,
+			HP_T_ISD2_SideN_20,
+			HP_T_ISD2_SideN_21,
+			HP_T_ISD2_SideN_22,
+			HP_T_ISD2_SideN_23,
+			HP_T_ISD2_SideN_24,
+			HP_T_ISD2_SideN_25,
+			HP_T_ISD2_SideN_26,
+			HP_T_ISD2_SideN_27,
+			HP_T_ISD2_SideN_28,
+			HP_T_ISD2_SideN_29,
+			HP_T_ISD2_SideN_30,
+			HP_T_ISD2_SideN_31,
+			HP_T_ISD2_SideN_32,
+			HP_T_ISD2_SideN_33,
+			HP_T_ISD2_SideN_34,
+			HP_T_ISD2_SideN_35,
+			HP_T_ISDII_01,
+			HP_T_ISDII_02,
+			HP_T_ISDII_03,
+			HP_T_ISDII_04,
+			HP_T_ISDII_05,
+			HP_T_ISDII_06,
+			HP_T_ISDII_07,
+			HP_T_ISDII_08,
+			HP_T_ISDII_B_09,
+			HP_T_ISDII_B_10,
+			HP_T_ISDII_B_11,
+			HP_T_ISDII_B_12,
+			HP_T_ISDII_B_13,
+			HP_T_ISDI_14,
+			HP_T_ISDI_15,
+			HP_T_ISDI_16,
+			HP_T_ISDI_17,
+			HP_T_ISDI_18,
+			HP_T_ISDI_19,
+			HP_T_ISDI_20,
+			HP_T_ISDI_21,
+			HP_T_ISDI_22,
+			HP_T_ISDI_23,
+			HP_T_ISDI_24,
+			HP_T_ISDI_25,
+			HP_T_ISDI_26
+		</HardPoints>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+            	<Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ADMONITOR_FLEET_REINFORCES_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>Admonitor_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+
+			
+			<Enable_Radar_Ability Name="Admonitor_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>     
+			<Battlefield_Modifier_Ability Name="Admonitor_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>10.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			<Combat_Bonus_Ability Name="Admonitor_Space_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Command_Admonitor</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>1.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>1.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Remove_Corruption_Ability Name="Admonitor_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+		</Abilities>
+	
+		<CategoryMask> SpaceHero </CategoryMask>
+		<Landing_Transport_Variant>Shuttle_TyderiumX_Landing</Landing_Transport_Variant>
+		
+		<Tactical_Build_Cost_Multiplayer>7000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>28</Tactical_Build_Time_Seconds>
+	
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+	</SpaceUnit>
+</Command_AdmonitorUnit_Data>

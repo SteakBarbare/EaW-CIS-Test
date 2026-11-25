@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Pod_Walkermk2Unit_Data>
+	<GroundVehicle Name="Pod_Walkermk2">
+		<Variant_Of_Existing_Type>Pod_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_POD_WALKERMK2</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Scout_Trooper Rebel_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PODWALKERMK2</Encyclopedia_Text>
+		<Land_Model_Name>EV_PODWALKERMK2.ALO</Land_Model_Name>
+		
+		<AI_Combat_Power>60</AI_Combat_Power>
+
+		<Hardpoints>
+				HP_Gr_Front_Eweb_Laser_Blue_01
+		</Hardpoints>
+		
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		
+		<Destruction_Survivors> 
+			Atst_Pilot_Survivor, 1.0 
+			Atst_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+		
+		<Icon_Name>I_BUTTON_Rep_AT_AP_MKII.tga</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Pod_Walkermk2_Death_Clone</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>Pod_Walkermk2_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Pod_Walkermk2_Empire">
+		<Variant_Of_Existing_Type>Pod_Walkermk2</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</GroundVehicle>
+	<GroundVehicle Name="Pod_Walkermk2_Rebel">
+		<Variant_Of_Existing_Type>Pod_Walkermk2</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</GroundVehicle>
+	<GroundVehicle Name="Pod_Walkermk2_Underworld">
+		<Variant_Of_Existing_Type>Pod_Walkermk2</Variant_Of_Existing_Type>
+		<Affiliation>Underworld</Affiliation>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</GroundVehicle>
+	<GroundVehicle Name="Pod_Walker2_Pirate">
+		<Variant_Of_Existing_Type>Pod_Walkermk2</Variant_Of_Existing_Type>
+		<Affiliation>Pirates</Affiliation>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</GroundVehicle>
+	<GroundVehicle Name="Pod_Walkermk2_Death_Clone">
+		<Variant_Of_Existing_Type>Pod_Walkermk2</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 20 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathClone> true </IsDeathClone>
+	</GroundVehicle>
+	<GroundVehicle Name="Pod_Walkermk2_Captured">
+		<Variant_Of_Existing_Type>Pod_Walkermk2</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Empire_AT_APMk2_Company">
+		<Variant_Of_Existing_Type>Empire_AT_AP_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_POD_WALKER_COMPANYMK2</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_ISP_Company RebelSeraph_class_landspeeder_Company RebelV_19_landspeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rebel_Fast_Tank_Brigade Rebel_AAC-1_Tank_Brigade Rebel_V-Wing_airspeeder_squadron </Encyclopedia_Vulnerable_To>
+		<Build_Cost_Credits>300</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Affiliation>Empire</Affiliation>
+		<Company_Units>Pod_Walkermk2_Empire, Pod_Walkermk2_Empire, Pod_Walkermk2_Empire, Pod_Walkermk2_Empire</Company_Units>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_PODWALKERMK2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Icon_Name>I_BUTTON_Rep_AT_AP_MKII.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<!--multiplayer cantina-->
+	
+	<!--multiplayer cantina-->
+	<GroundCompany Name="Empire_Pod_Walker2_Company">
+		<Variant_Of_Existing_Type>Empire_AT_APMk2_Company</Variant_Of_Existing_Type>
+	</GroundCompany>
+	
+	<!--multiplayer cantina-->
+	<GroundCompany Name="EN_Imperial_Pod_Walker2_Company">
+		<Variant_Of_Existing_Type>Empire_Pod_Walker2_Company</Variant_Of_Existing_Type>
+	</GroundCompany>
+	<!--multiplayer cantina-->
+	<GroundCompany Name="Rebel_Pod_Walker2_Company">
+		<Variant_Of_Existing_Type>Empire_Pod_Walker2_Company</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+		
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>Pod_Walkermk2_Rebel, Pod_Walkermk2_Rebel, Pod_Walkermk2_Rebel, Pod_Walkermk2_Rebel</Company_Units>
+		
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+	</GroundCompany>
+	
+	<!--multiplayer cantina-->
+	<GroundCompany Name="RN_Rebel_Pod_Walker2_Company">
+		<Variant_Of_Existing_Type>Rebel_Pod_Walker2_Company</Variant_Of_Existing_Type>
+		<Company_Units>Pod_Walkermk2_Rebel, Pod_Walkermk2_Rebel, Pod_Walkermk2_Rebel, Pod_Walkermk2_Rebel</Company_Units>
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+	</GroundCompany>
+</Pod_Walkermk2Unit_Data>

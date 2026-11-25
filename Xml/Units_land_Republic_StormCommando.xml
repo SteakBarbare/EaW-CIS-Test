@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<Republic_StormCommandoUnit_Data>
+	<GenericHeroUnit Name="Rep_CommandoH">
+		<Variant_Of_Existing_Type>Rep_Commando</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Rep_Commando, 8</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<HardPoints> 
+			HP_Ground_Bay_Invisible
+		</HardPoints>
+		<CategoryMask> LandHero </CategoryMask>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+	</GenericHeroUnit>
+	<GroundInfantry Name="Rep_Commando">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_CLON_STORMCOMMANDO_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Model_Name>RI_ClonCommando.alo</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			RI_ClonCommando.ALO,
+			Urban, 				RI_ClonCommando.ALO,
+			Arctic, 			RI_ClonCommando.ALO,
+			Volcanic, 			RI_ClonCommando.ALO,
+			Desert, 			RI_ClonCommando.ALO,
+			Forest, 			RI_ClonCommando.ALO,
+			Swamp, 				RI_ClonCommando.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Scale_Factor>1.2</Scale_Factor>
+		
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Health>200</Tactical_Health>
+		<Autoresolve_Health>30</Autoresolve_Health>
+		
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Icon_Name>I_BUTTON_Rep_Commando_Clon.tga</Icon_Name>
+		
+		<Projectile_Types> Proj_Infiltrator_BlasterBlue </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+				
+		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>325.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rep_HandLaser02_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<CategoryMask> Infantry | AntiInfantry </CategoryMask>
+		<Create_Team>No</Create_Team>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<AI_Combat_Power>15</AI_Combat_Power>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_STORMCOMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
+
+		<Death_Clone>Damage_Force_Whirlwind, Rep_Commando_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Rep_Commando_Death_Clone</Death_Clone>
+		
+		<Death_Fade_Time>0.25</Death_Fade_Time>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>2</Bomb_Countdown_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	<GroundInfantry Name="Rep_Commando_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Rep_Commando</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Rep_Commando_Death_Clone">
+		<Variant_Of_Existing_Type>Rep_Commando</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<HeroCompany Name="Republic_StormCommando_Squad">
+		<Variant_Of_Existing_Type>Imperial_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_CLON_STORMCOMMANDO_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_STORMCOMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Company_Units> Rep_CommandoH </Company_Units>
+		<Company_Transport_Unit>REP_Stealthship_B</Company_Transport_Unit>
+		<Icon_Name>I_BUTTON_Rep_Commando_Clon.tga</Icon_Name>
+		<Population_Value>1</Population_Value>
+	</HeroCompany>
+	<HeroCompany Name="Rep_StormCommando_Squad_Space_MP">
+		<Variant_Of_Existing_Type>Republic_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>ComandoGenericoTransport_MP</Company_Transport_Unit>
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</HeroCompany>
+	<HeroCompany Name="Rep_StormCommando_Squad_Land_MP">
+		<Variant_Of_Existing_Type>Republic_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Tactical_Build_Prerequisites>Rep_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+	</HeroCompany>
+	<!-- la nueva variante espacial de escaramuza, samhill usaba algo asi y funcionaba muy bien, asi que puse esto aqui -->
+	<Squadron Name="Rep_StormCommando_A_Sh_Squadron">
+			<Variant_Of_Existing_Type>REP_VWing_Squadron</Variant_Of_Existing_Type>
+			<Text_ID>TEXT_CLON_STORMCOMMANDO_SQUAD</Text_ID>
+			<Encyclopedia_Text>TEXT_TOOLTIP_CLON_STORMCOMMANDO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+			<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
+			<Icon_Name>I_BUTTON_Rep_Commando_Clon.tga</Icon_Name>
+			<Squadron_Units>ComandoGenericoTransport_MP</Squadron_Units>
+			<Tech_Level>99</Tech_Level>
+			<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+			<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+			<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+			<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+			
+			<Unit_Abilities_Data SubObjectList="Yes">
+				<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_BOARDING_ASSAULT</Alternate_Name_Text>
+					<Alternate_Description_Text>TEXT_TOOLTIP_BOARDING_ASSAULT_DESC</Alternate_Description_Text>
+					<Recharge_Seconds>45</Recharge_Seconds>
+					<Spawned_Object_Type>Comm_Ship_orders3d</Spawned_Object_Type>
+					<Effective_Radius> 1000.0 </Effective_Radius>
+					<SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+					<SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+					<Area_Effect_Decal_Distance> 1000 </Area_Effect_Decal_Distance>
+				</Unit_Ability>
+				
+		</Unit_Abilities_Data>
+	</Squadron>
+	
+	
+</Republic_StormCommandoUnit_Data>

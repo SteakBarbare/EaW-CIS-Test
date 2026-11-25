@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<UpgradeObjects_GC_battle_Empire>
+		
+	
+	<UpgradeObject Name="Star_Destroyer2_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_E</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 6700 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 6700 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 55 </Tactical_Build_Time_Seconds>
+		<Build_Limit_Current_For_All_Allies>100</Build_Limit_Current_For_All_Allies>
+		<Icon_Name>I_BUTTON_EV_ISD_MKII.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_STAR_DESTROYERII</Text_ID>
+		<Encyclopedia_Good_Against> Corellian_Corvette Interceptor4_Frigate Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> OLD_BTLS3Ywing Skipray_Blastboat MC30_Frigate </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STAR_DESTROYERII </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Star_Destroyer</SFXEvent_Build_Complete>
+	  	<Lua_Script>Builded_GC_Battle_ISD2</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Allegiance_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 7000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 7000 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 55 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_ALLEGIANCE.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_ALLEGIANCE_DESTROYER</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Rebel_Strike_Cruiser Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Mc90_Cruiser OLD_BTLS3Ywing B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ALLEGIANCE_DESTROYER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_GUNBOAT TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+	  	<Lua_Script>Builded_GC_Battle_Allegiance</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Imperial_Attack_Carrier_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 4500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 4500 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 22 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_ATTACK_CARRIER.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_IMP_ATTACK_CARRIER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_IMP_ATTACK_CARRIER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_HUNTER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Corellian_Corvette Modified_Corellian_Corvette Marauder_Corvette </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser Alliance_Assault_Frigate2 OLD_BTLS3Ywing </Encyclopedia_Vulnerable_To>
+	  	<Lua_Script>Builded_GC_Battle_Imperial_Attack_Carrier</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Gladiator_Cruiser_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 2500 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 22 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_Gladiator.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_GLADIATOR</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_carrier Corellian_Gunboat Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> OLD_BTLS3Ywing Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GLADIATOR TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+	  	<Lua_Script>Builded_GC_Battle_Gladiator_Cruiser</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Enforcer_Cruiser_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 2800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 2800 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 22 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_Enforcership.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_ENFORCERSHIP</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_carrier Rebel_Strike_Cruiser Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> OLD_BTLS3Ywing Mc80a_Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ENFORCERSHIP TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+	  	<Lua_Script>Builded_GC_Battle_Enforcer_Cruiser</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Harrow_Destroyer_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 3500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 3500 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 29 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_HARROW.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_HARROW</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_carrier Corellian_Heavy_Gunboat Nebulon_B2_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Mc80a_Calamari_Cruiser Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HARROW TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_INTERCEPTOR TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+	  	<Lua_Script>Builded_GC_Battle_Harrow_Destroyer</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="ISC_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 5200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 5200 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 44 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_ISC.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_STAR_CRUISER</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a_Calamari_Cruiser Alliance_Assault_Frigate2 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> K-wing B-Wing MC90_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STAR_CRUISER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_UNIT_GUNBOAT TEXT_DESC_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+	  	<Lua_Script>Builded_GC_Battle_ISC</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="ISD3_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 6700 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 6700 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 66 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_ISD_MKIII.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_STAR_DESTROYERIII</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a_Calamari_Cruiser Alliance_Assault_Frigate2 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> K-wing B-Wing MC90_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_STAR_DESTROYERIII TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_UNIT_TIE_CIMITARRA TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+	  	<Lua_Script>Builded_GC_Battle_ISD3</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Imperial_Lancer_Frigate_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 1800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 1800 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_LANCER.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_LANCER_FRIGATE</Text_ID>
+		<Encyclopedia_Good_Against> A-Wing X-Wing OLD_BTLS3Ywing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser Mc80AJM_Calamari_Cruiser Mc80a_Calamari_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LANCER_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FRIGATE </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Complete_Acclamator</SFXEvent_Build_Complete>
+	  	<Lua_Script>Builded_GC_Battle_Imperial_Lancer_Frigate</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="Bajonett_Cruiser_IMP_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 1300 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 1300 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 15 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_BAYONETT.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_BAJONET</Text_ID>
+		<Encyclopedia_Good_Against> X-Wing A-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser Alliance_Assault_Frigate Y-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_BAJONET</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_CRUISER</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Complete_Corvette</SFXEvent_Build_Complete>
+	  	<Lua_Script>Builded_GC_Battle_Bajonett_Cruiser_IMP</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="VSD2_Tedaroc_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 4500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 4500 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 33 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_VSD_MKII.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_VSD2</Text_ID>
+		<Encyclopedia_Good_Against> Corellian_Corvette Corellian_Gunboat Crusader_Gunship </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> OLD_BTLS3Ywing Skipray_Blastboat Calamari_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VSD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_INTERCEPTOR TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Complete_Victory_Destroyer</SFXEvent_Build_Complete>
+	  	<Lua_Script>Builded_GC_Battle_VSD2_Tedaroc</Lua_Script>
+	</UpgradeObject>
+	<UpgradeObject Name="VictoryIII_Destroyer_Builded_GC_Battle">
+		<Variant_Of_Existing_Type>Star_Destroyer2_Builded_GC_Battle</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 5000 </Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 33 </Tactical_Build_Time_Seconds>
+		<Icon_Name>I_BUTTON_EV_VSD_MKIII.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_VSD3</Text_ID>
+		<Encyclopedia_Good_Against> CC9600 CC7700 Ranger_Fragata </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Mc80c_Calamari_Cruiser Bulwark_Cruiser Mc90_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VSD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_INTERCEPTOR TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_DESTROYER </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Complete_Victory_Destroyer</SFXEvent_Build_Complete>
+	  	<Lua_Script>Builded_GC_Battle_VictoryIII_Destroyer</Lua_Script>
+	</UpgradeObject>
+</UpgradeObjects_GC_battle_Empire>

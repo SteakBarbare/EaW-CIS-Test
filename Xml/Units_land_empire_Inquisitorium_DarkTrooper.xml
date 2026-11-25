@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<Inquisitorium_DarkTrooperUnit_Data>
+	
+	<GroundInfantry Name="Inquisitorium_DarkTrooper">
+		<Variant_Of_Existing_Type>Dark_Trooper_PhaseI</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EI_INQUISITORIUM_DARKTROOPER</Text_ID>
+		<Encyclopedia_Good_Against> MPTL Destroyer_Droid  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EI_INQUISITORIUM_DARKTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ei_Inquisitorium_Darktrooper.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Ei_Inquisitorium_Darktrooper.tga</Icon_Name>
+		<Armor_Type> Armor_Infantry_SH </Armor_Type>
+		<Affiliation>Empire</Affiliation>
+		<Max_Speed>0.8</Max_Speed>
+		<Custom_Hard_XExtent> 2.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 2.0 </Custom_Hard_YExtent>
+		<Scale_Factor>1.5</Scale_Factor>
+
+		<Tactical_Health>250</Tactical_Health>
+		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>325.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		
+		<Projectile_Types>Proj_Rockettrooper_Blaster_Yellow</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+		
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.35f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.4f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Redirect_Blaster_Ability Name="Phase3_Redirect_Blaster">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.75</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 10.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+		</Abilities>
+		
+	</GroundInfantry>
+	
+	
+	<GroundCompany Name="Imperial_Inquisitorium_DarkTrooper">
+		<Variant_Of_Existing_Type>DarkTrooper_P1_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_DARKTOOPERSOLDIER</Text_ID>
+		<Encyclopedia_Good_Against> MPTL Destroyer_Droid  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DARKTROOPERSOLDIER2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Build_Cost_Credits>900</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Company_Units> 
+		Inquisitorium_DarkTrooper
+		</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_Ei_Inquisitorium_Darktrooper.TGA</Icon_Name>
+		<GUI_Model_Name>Ei_Inquisitorium_Darktrooper.ALO</GUI_Model_Name>
+		<Land_Model_Name>Ei_Inquisitorium_Darktrooper.ALO</Land_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+	
+
+	
+
+</Inquisitorium_DarkTrooperUnit_Data>

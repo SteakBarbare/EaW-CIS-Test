@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<StarBases>
+	<StarBase Name="Pirate_Asteroid_Base">
+		<Variant_Of_Existing_Type>U_Star_BaseORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_STAR_BASE_SP_1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_1 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_Z95_HEADHUNTER TEXT_UNIT_R41 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<!--<Space_Model_Name>NV_Defense_Neutral_Station.ALO</Space_Model_Name>-->
+		<!--<Galactic_Model_Name>I_NV_station_compartida.alo</Galactic_Model_Name>-->
+		<Space_Model_Name>NV_Baas_class_ST.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_NV_Baas_class_ST.alo</Galactic_Model_Name>
+		
+		<Affiliation>Pirates</Affiliation>
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Station>Yes</Build_Tab_Space_Station>
+
+		<Tech_Level>1</Tech_Level>
+		<Base_Level>1</Base_Level>
+
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		<CategoryMask> Capital </CategoryMask>
+
+		<Death_Explosions>Huge_Explosion_Space_Empire</Death_Explosions>
+		<Behavior>SELECTABLE, DUMMY_STAR_BASE</Behavior>
+		<SpaceBehavior> SPACE_OBSTACLE, TACTICAL_BUILD_OBJECTS, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, ABILITY_COUNTDOWN, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		
+		
+		<Autoresolve_Health>10500000</Autoresolve_Health>
+		<Shield_Points>43000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		
+		<Starting_Spawned_Units_tech_0>R41_Squadron4, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>R41_Squadron4, 3</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>Z95_HeadhunterU_Squadron7, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>Z95_HeadhunterU_Squadron7, 3</Reserve_Spawned_Units_tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Hu_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Pi_Comm_Ship1_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Pi_Comm_Ship3_SB1, 1</Starting_Spawned_Units_Tech_0>
+						
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Pi_STR1, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_Pi_STR1, 1</Starting_Spawned_Units_Tech_0>
+		
+		<HardPoints>
+			HP_T_Baas_Y_01,
+			HP_T_Baas_Y_02,
+			HP_T_Baas_Y_03,
+			HP_T_Baas_Y_04,
+			HP_T_Baas_Y_05,
+			HP_T_Baas_Y_06,
+			HP_T_Baas_07,
+			HP_T_Baas_08,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Empire_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+		
+		<Radar_Icon_Name>i_radar_Fel_station1_2.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+		
+		<Score_Cost_Credits> 1500 </Score_Cost_Credits>
+		<Icon_Name>I_BUTTON_Pi_st_Baas_1.tga</Icon_Name>
+		<Death_Clone>Damage_Normal, NV_Baas_class_ST_Death_Clone</Death_Clone>
+
+		<!--<Icon_Name>i_button_NV_Defense_Neutral_Station_5.tga</Icon_Name>-->
+		
+		<!--<Death_Clone>Damage_Normal, NV_Defense_Neutral_Station_Death_Clone</Death_Clone>-->
+		<Additional_Population_Capacity>10</Additional_Population_Capacity>
+	</StarBase>
+	
+	
+	
+	
+	<StarBase Name="Skirmish_Pirates_Star_Base_1">
+		<Variant_Of_Existing_Type>Pirate_Asteroid_Base</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_1</Text_ID>
+		
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				Co_Marauder,
+				Hu_Hutt_CorvetteR,
+				Ch_Patrol,
+				Hapan_Patrolship,
+				Hu_Jabba_Hutt_Cruiser,
+				ES_Enhanced_Reactors_L1_Upgrade,
+				ES_Reinforced_Armor_L1_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base/>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="REP_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>90</Base_Income_Value>
+				<Base_Interval_In_Secs>10</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="REP_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>20</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Pirates_Star_Base_1</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="REP_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	
+
+	
+	
+	
+</StarBases>

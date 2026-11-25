@@ -1,0 +1,71 @@
+﻿<?xml version="1.0"?>
+
+
+<NV_HapanMiytil_LandUnit_Data>
+
+	<GroundVehicle Name="NV_HapanMiytil_Land">
+		<Variant_Of_Existing_Type>A_Wing_Fighter_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MIYTILFIGHTER</Text_ID>
+		<Encyclopedia_Good_Against>LAAT SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker TIE_Fighter_Squadron_Land UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_X_WING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NV_HapanMiytil_Land.ALO</Land_Model_Name>
+		<Scale_Factor>1.7</Scale_Factor>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Ranking_In_Category>6</Ranking_In_Category>
+		<Affiliation>Pirates, Hapan</Affiliation>
+
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+
+		<HardPoints>
+			HP_Gr_Fighter_Proton_Torpedo_00
+		</HardPoints>
+		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_A_WingX</SFXEvent_Select>
+		
+		<AI_Combat_Power>240</AI_Combat_Power>
+
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+		<Icon_Name>i_button_MiytilFighter.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="NV_HapanMiytil_Land_squadron">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_SQUADRON_MIYTILFIGHTER</Text_ID>
+		<Encyclopedia_Good_Against>LAAT SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker TIE_Fighter_Squadron_Land UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MIYTILFIGHTER TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hapan_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>X_Wing_Fighter_Land_Transport</Company_Transport_Unit>
+		<Company_Units>NV_HapanMiytil_Land, NV_HapanMiytil_Land, NV_HapanMiytil_Land</Company_Units>
+		<Icon_Name>i_button_MiytilFighter.tga</Icon_Name>
+		<GUI_Model>NV_HapanMiytil_Land.ALO</GUI_Model>
+
+		<SFXEvent_Build_Complete>Unit_Complete_A_WingX</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Complete_A_WingX</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+	
+</NV_HapanMiytil_LandUnit_Data>

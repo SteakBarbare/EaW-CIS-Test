@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO MOVIMIENTOS ESPECIALES ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Inicio_Spawn_Rebel_Units">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+		  
+	  <Event Name="Spawn_Rebel_Units">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>15</Event_Param1>
+		<Prereq>Inicio_Spawn_Rebel_Units</Prereq>
+	  </Event>
+
+</Story>

@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<EVK_Assault_Bomber_LandUnit_Data>
+	<GroundVehicle Name="EVK_Assault_Bomber_Land">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Scale_Factor>0.65</Scale_Factor>
+		
+		<Text_ID>TEXT_UNIT_EVK_ASSAULTB</Text_ID>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_ASSAULTB</Encyclopedia_Text>
+		
+		<LandBehavior>ABILITY_COUNTDOWN, HUNT, FLYING_LOCOMOTOR, SHIELDED, REVEAL,HIDE_WHEN_FOGGED, AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SELF_DESTRUCT</LandBehavior>		
+		
+		<Shield_Points>250</Shield_Points>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+
+		<Land_Model_Name>EVK_Assault_Bomber_Land.ALO</Land_Model_Name>
+		
+		<Custom_Hard_XExtent> 30.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 30.0 </Custom_Hard_YExtent>
+		
+		<Prepare_Strafe_Height>150.0</Prepare_Strafe_Height>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_Fighter</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.05</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
+		
+		<Hardpoints>
+				HP_Gr_Assault_Bomber_Missile_00, HP_Gr_Assault_Bomber_Missile_01
+		</Hardpoints>
+	
+		<Icon_Name>i_button_EVK_Assault_Bomber.tga</Icon_Name>
+
+		<AI_Combat_Power>200</AI_Combat_Power>
+
+		<Select_Box_Scale>80</Select_Box_Scale>
+		<Select_Box_Z_Adjust>150.0f</Select_Box_Z_Adjust>
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+		<Death_Clone>Damage_Normal, EVK_Assault_Bomber_Land_Death_Clone_00</Death_Clone>
+	
+	</GroundVehicle>
+	<GroundVehicle Name="EVK_Assault_Bomber_Land_Death_Clone_00">
+		<Variant_Of_Existing_Type>EVK_Assault_Bomber_Land</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVK_Assault_Bomber_Land_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>0.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="EVK_Assault_Bomber_Land_Squad">
+		<Variant_Of_Existing_Type>Lancet_Air_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_ASSAULTB</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_ASSAULTB TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+
+		<GUI_Row> 0 </GUI_Row>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Tech_Level>0</Tech_Level>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Company_Units>EVK_Assault_Bomber_Land, EVK_Assault_Bomber_Land, EVK_Assault_Bomber_Land</Company_Units>
+		<Company_Transport_Unit>EVK_TIE_Neutralizer_Land_Transport</Company_Transport_Unit>
+		<Required_Special_Structures>Krayt_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Icon_Name>i_button_EVK_Assault_Bomber.tga</Icon_Name>
+		<GUI_Model_Name>EVK_Assault_Bomber_Land.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</EVK_Assault_Bomber_LandUnit_Data>

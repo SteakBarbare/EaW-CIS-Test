@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<Tech2_Field_Commander_EmpireUnit_Data>
+	
+
+	<GroundVehicle Name="Squad_E_Tech2_Field_Commander_Empire">
+		<Variant_Of_Existing_Type>EV_Lambda_GroundORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_TECH2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_E_TECH2 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_ATHE TEXT_UNIT_ATOT_COMPANY TEXT_UNIT_UTAT TEXT_UNIT_SPHAT_WALKER TEXT_UNIT_POD_WALKERMK2 TEXT_UNIT_AT_RT_WALKER TEXT_UNIT_TIE_CRAWLER TEXT_UNIT_1L TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech2.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+
+		<CategoryMask> LandHero </CategoryMask>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<Lua_Script>E_Tech2_Field_Re_1X</Lua_Script>
+		
+		<Abilities SubObjectList="Yes">
+			<Remove_Corruption_Ability Name="Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GroundVehicle>
+
+
+<HeroCompany Name="E_Tech2_Field_Com_Empire_Team">
+		<Variant_Of_Existing_Type>E_Tech1_Field_Com_Empire_Team</Variant_Of_Existing_Type>
+		<GUI_Row>0</GUI_Row>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_TECH2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_E_TECH2 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_ATHE TEXT_UNIT_ATOT_COMPANY TEXT_UNIT_UTAT TEXT_UNIT_SPHAT_WALKER TEXT_UNIT_POD_WALKERMK2 TEXT_UNIT_AT_RT_WALKER TEXT_UNIT_TIE_CRAWLER TEXT_UNIT_1L TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech2.tga</Icon_Name>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Company_Transport_Unit>Acclamator_Assault_Cruiser_E_Tech2_Field_Commander</Company_Transport_Unit>
+		<Company_Units> 
+		Squad_E_Tech2_Field_Commander_Empire, 
+		Squad_E_T1_Commander_Auxiliar
+		</Company_Units>
+	
+		<Tactical_Build_Cost_Multiplayer>10000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+</HeroCompany>
+
+	<TransportUnit Name="Acclamator_Assault_Cruiser_E_Tech2_Field_Commander">
+		<Variant_Of_Existing_Type>Victory_Destroyer</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_VSD_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VICTORY TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_VICTORY_DESTROYER TEXT_UNIT_ACCLAMATORSTARFRIGATE</Encyclopedia_Text>
+
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		
+		<Icon_Name>I_BUTTON_EI_FIELD_COMMANDER_Tech2.tga</Icon_Name>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space3</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_REP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>E_Tech2_Fl_Sh</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+		<Landing_Transport_Variant>EV_Lambda_Ground_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<GroundVehicle Name="EV_AT_HE_X_I">
+		<Variant_Of_Existing_Type>AT_HE_Walker</Variant_Of_Existing_Type>
+		<Lua_Script>E_Tech2_Field_Re_2X</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="EV_AT_HE_Sq_X_I">
+		<Variant_Of_Existing_Type>AT_HE_Company</Variant_Of_Existing_Type>
+		<Company_Units>EV_AT_HE_X_I</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>EV_VSD_Craft</Company_Transport_Unit>
+	</GroundCompany>
+	
+	<TransportUnit Name="EV_VSD_Craft">
+		<Variant_Of_Existing_Type>Imperial_Landing_Craft</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_VSD_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>EV_VSD_Craft_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	<TransportUnit Name="EV_VSD_Craft_Landing">
+		<Variant_Of_Existing_Type>EV_VSD_Craft</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CR20</Text_ID>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>3.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING, REVEAL</LandBehavior>
+		
+		<HardPoints> 
+			HP_TurboMG_01, 
+			HP_TurboMG_02, 
+			HP_TurboMG_03, 
+			HP_TurboMG_04,
+			HP_TurboMG_05,
+			HP_TurboMG_06,   
+			HP_TurboG_01, 
+			HP_TurboG_02, 
+			HP_TurboG_03, 
+			HP_TurboG_04,
+			HP_TurboG_05,
+			HP_TurboG_06,   
+			HP_TurboG_07, 
+			HP_Ion_01, 
+			HP_Ion_02,
+			HP_Ion_03,
+			HP_Ion_04,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03
+		</HardPoints>
+		
+	</TransportUnit>
+</Tech2_Field_Commander_EmpireUnit_Data>

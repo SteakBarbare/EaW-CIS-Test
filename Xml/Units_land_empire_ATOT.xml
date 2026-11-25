@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<ATOT_WalkerUnit_Data>
+	
+	<GroundVehicle Name="ATOT_Walker">
+		<Variant_Of_Existing_Type>AT_AT_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATOT_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> C_AAT_Group C_HAG_Group C_CIS_walk_DW_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_OG_9_Group C_Hailfire_Tank_Droid_Brigade UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATOT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Rep_AT_OT.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_REP_ATOT.tga</Icon_Name>
+
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Armor_Type> Armor_T4B </Armor_Type>
+
+		<Tactical_Health>1000</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Ranged_Target_Z_Adjust>40.0</Ranged_Target_Z_Adjust>
+		
+		<Turret_Rotate_Extent_Degrees>25</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>BN_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_ATXT_Blaster_Cannon_Blue</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Hardpoints>
+				HP_ATOT_Turret_LASER_01, HP_ATOT_Turret_LASER_02, HP_ATOT_Turret_LASER_03, HP_ATOT_Turret_LASER_04
+		</Hardpoints>
+		
+		<Destruction_Survivors> 
+			Walker_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+		
+		<CategoryMask> Vehicle | AntiInfantry </CategoryMask>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+		
+	
+		<AI_Combat_Power>170</AI_Combat_Power>
+
+		<Death_Clone>Damage_Cable_Attack, AT_OT_Walker_Cable_Attack_Death_Clone</Death_Clone>
+
+		<Vehicle_Thief_Inside_Clone>AT_OT_Walker_Captured</Vehicle_Thief_Inside_Clone>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Veers_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+
+	</GroundVehicle>
+
+	<GroundVehicle Name="AT_OT_Walker_Captured">
+		<Variant_Of_Existing_Type>ATOT_Walker</Variant_Of_Existing_Type>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="AT_OT_Walker_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>ATOT_Walker</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+      <Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		<Presence_Range>200.0</Presence_Range>
+
+	</GroundVehicle>
+
+	
+	<GroundCompany Name="ATOT_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATOT_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> C_AAT_Group C_HAG_Group C_CIS_walk_DW_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_OG_9_Group C_Hailfire_Tank_Droid_Brigade UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Units>ATOT_Walker</Company_Units>
+
+		<Icon_Name>I_BUTTON_REP_ATOT.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_AT_AA</SFXEvent_Build_Complete>
+
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>24</Tactical_Build_Time_Seconds>
+	
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATOT TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+</ATOT_WalkerUnit_Data>

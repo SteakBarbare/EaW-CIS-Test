@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<Rep_ShuttleAttackUnit_Data>
+	<GroundVehicle Name="Rep_ShuttleAttack">
+		<Variant_Of_Existing_Type> LAATORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SHUTTLEATTACK</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Nantex_squadron C_Vulture_squadron UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SHUTTLEATTACK</Encyclopedia_Text>
+
+		<Land_Model_Name>REP_SHUTTLEATTACK.ALO</Land_Model_Name>
+
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Empire, Republic</Affiliation>
+
+		<Max_Speed>3.0</Max_Speed>
+
+		<Armor_Type> Armor_Interdictor </Armor_Type>
+		<Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+
+		<UseSecondaryFacing> false </UseSecondaryFacing>
+
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>400</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		
+		<LandBehavior>ABILITY_COUNTDOWN, DEPLOY_TROOPERS, AFFECTED_BY_SHIELD, HUNT, SHIELDED, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, WIND_DISTURBANCE, SURFACE_FX,DAMAGE_TRACKING</LandBehavior>
+				
+		<Turret_Rotate_Extent_Degrees>120</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_T4BX</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		
+		<Fire_Weapon_When_Deployed>No</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>Yes</Fire_Weapon_When_Undeployed>
+		
+		<AI_Combat_Power>110</AI_Combat_Power>
+		
+		<HardPoints>
+			HP_LAAT_Green_Beam_00, HP_LAAT_Green_Beam_01
+		</HardPoints>
+
+		<Death_Explosions>Medium_Explosion_Space</Death_Explosions>
+
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+		
+		<Icon_Name>I_BUTTON_Rep_Shuttleattack.tga</Icon_Name>
+
+		<SFXEvent_Fire>Unit_Rep_TIE_Fighter_Fire</SFXEvent_Fire>
+
+		<Select_Box_Scale>80</Select_Box_Scale>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>SHUTTLEATTACK_Deployed_Republic_Clon_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Death_Clone>Damage_Normal, Rep_ShuttleAttack_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_ShuttleAttack_Death_Clone_00">
+		<Variant_Of_Existing_Type>LAAT_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>REP_SHUTTLEATTACK_D.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Republic_ShuttleAttack">
+		<Variant_Of_Existing_Type> Imperial-LAAT </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SHUTTLEATTACK</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Nantex_squadron C_Vulture_squadron UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>REP_LAAT_Transport</Company_Transport_Unit>
+		<Company_Units>Rep_ShuttleAttack</Company_Units>
+		<Icon_Name>I_BUTTON_Rep_Shuttleattack.tga</Icon_Name>
+		<GUI_Model_Name>REP_SHUTTLEATTACK.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Republic_LAAT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_Republic_LAAT</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_SHUTTLEATTACK TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+	</GroundCompany>
+	<GroundCompany Name="SHUTTLEATTACK_Deployed_Republic_Clon_Squad">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper,Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+	</GroundCompany>
+</Rep_ShuttleAttackUnit_Data>

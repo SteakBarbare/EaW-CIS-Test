@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<BS_BattleCRUUnit_Data>
+
+	<SpaceUnit Name="BS_BattleCRU">
+		<Variant_Of_Existing_Type>KedalbeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UVNEWBATTLECRUISERX</Text_ID>
+		<Encyclopedia_Good_Against> Victory_Destroyer VSD2 AcclamatorI </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Gunboat ISD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_UVNEWBATTLECRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_TITAN</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_CRUISER </Encyclopedia_Unit_Class>
+		
+		<Space_Model_Name>UV_NewBattleCruiserX.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+
+		<Max_Speed>2.0</Max_Speed>
+
+		<Layer_Z_Adjust>50.0</Layer_Z_Adjust>
+		
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+		<Death_Clone>Damage_Normal, BS_BattleCRU_Death_Clone</Death_Clone>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+
+		<Autoresolve_Health>38000</Autoresolve_Health>
+		<Shield_Points>38000</Shield_Points>
+		
+		<Shield_Refresh_Rate>44000</Shield_Refresh_Rate>
+		<Energy_Capacity>1000000</Energy_Capacity>
+		<Energy_Refresh_Rate>600000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>7500</Build_Cost_Credits>
+		<AI_Combat_Power>19750</AI_Combat_Power>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, WEAPON, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+						
+		<Turret_Rotate_Extent_Degrees>90</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_Ship_Bs_BattleCru_Main</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>5</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>15.0</Projectile_Fire_Recharge_Seconds>
+				
+		<Targeting_Fire_Inaccuracy> Fighter, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+				
+		<SFXEvent_Fire>Unit_Underworld_Plasma_Fire</SFXEvent_Fire>
+		
+		<Targeting_Max_Attack_Distance>2500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Fire_Inaccuracy_Fixed_Radius> 120 </Targeting_Fire_Inaccuracy_Fixed_Radius>
+		
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>	
+
+		<HardPoints>
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_T_New_MandalorMV_01, 
+			HP_T_New_MandalorMV_02,
+			HP_T_New_MandalorMV_03,
+			HP_T_New_MandalorMV_04,
+			HP_T_New_MandalorMV_05,
+			HP_T_New_MandalorMV_06,
+			HP_T_New_MandalorMV_07, 
+			HP_T_New_MandalorMV_08,
+			HP_T_New_MandalorMV_09,
+			HP_T_New_MandalorMV_10,
+			HP_T_New_MandalorMV_11,
+			HP_T_New_MandalorMV_12,
+			HP_T_New_MandalorMDSSD_13, 
+			HP_T_New_MandalorMDSSD_14, 
+			HP_T_New_MandalorMDSSD_15, 
+			HP_T_New_MandalorMDSSD_16, 
+			HP_T_New_MandalorMDSSD_17, 
+			HP_T_New_MandalorMDSSD_18, 
+			HP_T_New_MandalorMDSSD_19, 
+			HP_T_New_MandalorMDSSD_20, 
+			HP_T_Kedalbe3_21,
+			HP_T_Kedalbe3_22,
+			HP_T_Kedalbe3_23,
+			HP_T_Kedalbe3_24,
+			HP_T_Kedalbe3_25,
+			HP_T_Kedalbe3_26,
+			HP_T_Kedalbe3_27,
+			HP_T_Kedalbe3_28,
+			HP_T_Kedalbe3_29,
+			HP_T_Kedalbe3_30,
+			HP_T_Kedalbe3_31,
+			HP_T_Kedalbe3_32,
+			HP_T_Kedalbe3_33,
+			HP_T_Kedalbe3_34,
+			HP_T_New_MandalorMDSSD_35,
+			HP_T_New_MandalorMDSSD_36,
+			HP_T_New_MandalorMDSSD_37,
+			HP_T_New_MandalorMDSSD_38,
+			HP_Shield_GeneratorH_00, 
+			HP_Shield_GeneratorH_01, 
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_EnginesH_03,
+			HP_GENERIC_SHIELD_LEECH_00B			
+		</HardPoints>
+		<Icon_Name>I_BUTTON_NewBattleCruiserX.tga</Icon_Name>
+		<GUI_Model_Name>UV_NewBattleCruiserX.ALO</GUI_Model_Name>
+
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+             <Unit_Ability>
+                <Type>LEECH_SHIELDS</Type>
+                <Recharge_Seconds>55.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> BTU_Leech_Shields </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 2000.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Leech_Sheilds_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_Target_Ability> Unit_Leech_Sheilds_Kadalbe </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+ 				<Supports_Autofire>True</Supports_Autofire>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	4000.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	200.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+           </Unit_Ability>
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+	
+             <Leech_Shields_Ability Name="BTU_Leech_Shields">
+                <Activation_Style> User_Input </Activation_Style>
+                <Applicable_Unit_Categories> Corvette | Frigate | Capital </Applicable_Unit_Categories>
+                <Applicable_Unit_Types>Millennium_Falcon</Applicable_Unit_Types>
+                <Activation_Min_Range>10</Activation_Min_Range>
+                <Activation_Max_Range>2500</Activation_Max_Range>
+                <Duration_In_Secs> 25.0 </Duration_In_Secs>
+                <Shield_Damage_Per_Second> 100000.0 </Shield_Damage_Per_Second>
+                <Damage_Multiplier> 3.0 </Damage_Multiplier>
+                <Beam_Color>146, 25, 56, 255</Beam_Color>
+                <Beam_Bone_Name>HP_SHL_00_BONE</Beam_Bone_Name>
+                <Beam_Frames>10</Beam_Frames>
+                <Beam_Width>40.0</Beam_Width>
+                <Beam_Texture_Name>tractor_beam00.tga</Beam_Texture_Name>
+                <Beam_Effect_Name>Leech_Shields</Beam_Effect_Name>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+                <Leech_Effect>Leech_Effect</Leech_Effect>
+            </Leech_Shields_Ability>
+            
+        </Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>7500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+	<SpaceUnit Name="BS_BattleCRU_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC80 </Text_ID>
+		<Space_Model_Name> UV_NewBattleCruiserX_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Scale_Factor> 0.75 </Scale_Factor>
+		<Layer_Z_Adjust> -50.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+</BS_BattleCRUUnit_Data>

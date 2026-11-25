@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Deliah_BlueUnit_Data>
+	<HeroUnit Name="Deliah_Blue">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DELIAH_BLUE_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DELIAH_BLUE TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Land_Model_Name> GA_DeliahBlue.ALO </Land_Model_Name>
+		<Icon_Name>I_BUTTON_GA_DeliahBlue.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+
+		<CategoryMask> LandHero </CategoryMask>
+		
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+	
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_FEL_GA_Hero</Highlight_Blob_Material_Name>
+
+		<SFXEvent_Select>Unit_Select_Mirith</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mirith</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirith</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mirith</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mirith</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Mirith </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Mirith </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Mirith </Death_SFXEvent_Start_Die>
+				
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>CAPTURE_VEHICLE</Type>
+				<Recharge_Seconds> 55.0 </Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Deliah_Blue_Vehicle_Thief </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Attack_Mirith </SFXEvent_GUI_Unit_Ability_Activated>
+		  	</Unit_Ability>
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Fleet_Move_Mirith</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Deliah_Blue_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.14</Time_Reduction_Percentage>
+				<Stacking_Category>3</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Galactic_Stealth_Ability Name="Deliah_Blue_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Vehicle_Thief_Ability Name="Deliah_Blue_Vehicle_Thief">
+  				<Activation_Style> User_Input </Activation_Style>
+  				<Applicable_Unit_Categories>Vehicle | Air | Structure</Applicable_Unit_Categories>
+  				<Activation_Min_Range>0.0</Activation_Min_Range>
+  				<Activation_Max_Range>50.0</Activation_Max_Range>
+  				<Activation_Chance>1.0</Activation_Chance>
+  				<SFXEvent_Activate>Unit_Guard_Mirith</SFXEvent_Activate>
+  			</Vehicle_Thief_Ability>
+			<Force_Healing_Ability Name="Deliah_Blue_Self_Heal">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>30.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			<Remove_Corruption_Ability Name="Deliah_Blue_Remove_Corruption">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+		
+	</HeroUnit>
+
+	<HeroUnit Name="Deliah_Blue_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Deliah_Blue</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</HeroUnit>
+
+	<HeroUnit Name="Deliah_Blue_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Deliah_Blue</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</HeroUnit>
+	<HeroCompany Name="Deliah_Blue_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DELIAH_BLUE_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_GA_DeliahBlue.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+
+		<Company_Transport_Unit>GA_Crix_Shuttle</Company_Transport_Unit>
+		<Company_Units>Deliah_Blue</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Mirith</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Mirith</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirith</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_DELIAH_BLUE TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<CategoryMask>LandHero</CategoryMask>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>STICKY_BOMB</Type>
+				<Recharge_Seconds>26.0f </Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Mara_Jade_Grenade_Attack </GUI_Activated_Ability_Name>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+   		 	<Unit_Ability>
+				<Type>TACTICAL_BRIBE</Type>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Lando_Tactical_Bribe </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Sprint_Katarn </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</HeroCompany>
+
+</Deliah_BlueUnit_Data>

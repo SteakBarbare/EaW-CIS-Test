@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<ATPT_WalkerUnit_Data>
+	
+	<GroundVehicle Name="AT_PT">
+		<Variant_Of_Existing_Type>Pod_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_PT</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank AAC_Hovertank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T3B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATPT</Encyclopedia_Text>
+		<Land_Model_Name>EV_ATPTX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_atpt.tga</Icon_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+		<UnitCollisionClass> Vehicle </UnitCollisionClass>
+		
+		<Custom_Hard_XExtent> 9.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 12.0 </Custom_Hard_YExtent>
+				
+		<Armor_Type> Armor_ATST </Armor_Type>
+		
+		<Tactical_Health>200</Tactical_Health>
+				
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<Ranged_Target_Z_Adjust>10.0</Ranged_Target_Z_Adjust>
+		
+		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
+				
+		<Destruction_Survivors> 
+			Walker_Pilot_Survivor, 1.0 
+		</Destruction_Survivors>
+		
+		<Death_Explosions>Small_Explosion_Land_06</Death_Explosions>
+
+		<AI_Combat_Power>25</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+				
+		<Death_Clone>Damage_Normal, ATPT_Death_Clone</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="ATPT_Death_Clone">
+		<Variant_Of_Existing_Type>AT_PT</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		<!--<Death_Persistence_Duration> 20 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathClone> true </IsDeathClone>
+	</GroundVehicle>
+	<GroundCompany Name="AT_PT_Company">
+		<Variant_Of_Existing_Type>Empire_AT_AP_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_PT</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MAL_Rocket_Vehicle </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T3B_Tank Canderous_Assault_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_WALKER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATPT TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Icon_Name>i_button_atpt.tga</Icon_Name>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>62</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+
+		<Formation_Priority>3</Formation_Priority>
+
+		<Company_Transport_Unit>Imperial_Landing_Craft_Loader</Company_Transport_Unit>
+		<Company_Units>AT_PT, AT_PT, AT_PT</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+	
+		<Tactical_Build_Cost_Multiplayer>125</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+
+	</GroundCompany>
+	
+	<GroundCompany Name="Imperial_Heavy_Scout_Squad_Alliance">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_XHEAVYSCOUT</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_Z95Land_squadron </Encyclopedia_Vulnerable_To>
+
+		<Autoresolve_Health>200</Autoresolve_Health>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Formation_Priority>1</Formation_Priority>
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>AT_ST_Walker, AT_ST_Walker, AT_ST_Walker, AT_ST_Walker, AT_PT, AT_PT, AT_PT, AT_AR_Walker, AT_AR_Walker, AT_AR_Walker, AT_AR_Walker</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_atst.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_XHEAVYSCOUT TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_AT_ST_WALKER TEXT_UNIT_AT_PT TEXT_UNIT_AT_AR_WALKER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SCOUTARMOR</Encyclopedia_Unit_Class>
+	</GroundCompany>
+</ATPT_WalkerUnit_Data>

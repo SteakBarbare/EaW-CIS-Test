@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<Construction_Vehicles_CWUnit_Data>
+	
+
+	<SpaceUnit Name="BuildShipA_CIS_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_CIS_STR2</Variant_Of_Existing_Type>
+		<Affiliation>CIS</Affiliation>
+		<Lua_Script>CIS_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_CIS_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS</Affiliation>
+		<Lua_Script>CIS_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> RHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>RHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_CIS_STR3">
+		<Variant_Of_Existing_Type>BuildShipA_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS</Affiliation>
+		<Lua_Script>CIS_STR3_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>RHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA3</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_CIS_STR4">
+		<Variant_Of_Existing_Type>BuildShipA_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS</Affiliation>
+		<Lua_Script>CIS_STR4_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>RHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA4</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_CIS_STR5">
+		<Variant_Of_Existing_Type>BuildShipA_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS</Affiliation>
+		<Lua_Script>CIS_STR5_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipA_Rep_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_Rep_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Republic</Affiliation>
+		<Lua_Script>Rep_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Rep_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic</Affiliation>
+		<Lua_Script>Rep_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Rep_STR3">
+		<Variant_Of_Existing_Type>BuildShipA_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic</Affiliation>
+		<Lua_Script>Rep_STR3_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA3</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Rep_STR4">
+		<Variant_Of_Existing_Type>BuildShipA_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic</Affiliation>
+		<Lua_Script>Rep_STR4_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA4</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Rep_STR5">
+		<Variant_Of_Existing_Type>BuildShipA_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic</Affiliation>
+		<Lua_Script>Rep_STR5_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	
+	
+	
+	<SpaceUnit Name="BuildShipB_CIS_STR1">
+		<Variant_Of_Existing_Type>BuildShipB_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			CIS, 
+				UC_NV_Ion_Ring_S,
+			Rebel, 
+				UC_NV_Ion_Ring_S
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_CIS_STR2">
+		<Variant_Of_Existing_Type>BuildShipB_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			CIS, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+			Rebel, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_CIS_STR3">
+		<Variant_Of_Existing_Type>BuildShipB_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			CIS, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+			Rebel, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_CIS_STR4">
+		<Variant_Of_Existing_Type>BuildShipB_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS, 
+				UC_CIS_Outpost_1,
+			Rebel, 
+				UC_CIS_Outpost_1	
+		</Tactical_Buildable_Objects_Multiplayer>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_CIS_STR5">
+		<Variant_Of_Existing_Type>BuildShipB_CIS</Variant_Of_Existing_Type>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS, 
+				UC_CIS_Outpost_1,
+				UC_CIS_Outpost_2,
+			Rebel, 
+				UC_CIS_Outpost_1,
+				UC_CIS_Outpost_2	
+		</Tactical_Buildable_Objects_Multiplayer>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipB_Rep_STR1">
+		<Variant_Of_Existing_Type>BuildShipB_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Republic, 
+				UC_NV_Ion_Ring_S,
+			Empire, 
+				UC_NV_Ion_Ring_S
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Rep_STR2">
+		<Variant_Of_Existing_Type>BuildShipB_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Republic, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+			Empire, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Rep_STR3">
+		<Variant_Of_Existing_Type>BuildShipB_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Republic, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+			Empire, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Rep_STR4">
+		<Variant_Of_Existing_Type>BuildShipB_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Republic, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_Rep_Outpost_1,
+			Empire, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_Rep_Outpost_1	
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Rep_STR5">
+		<Variant_Of_Existing_Type>BuildShipB_Rep</Variant_Of_Existing_Type>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Republic, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_Rep_Outpost_1,
+				UC_Rep_Outpost_2,
+			Empire, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_Rep_Outpost_1,
+				UC_Rep_Outpost_2	
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	
+	
+	<SpaceUnit Name="BuildShipB_CIS">
+		<Variant_Of_Existing_Type>BuildShipBORG</Variant_Of_Existing_Type>
+		<Affiliation>CIS, Underworld, Rebel, Empire</Affiliation>
+		<Space_Model_Name>CIS_HARDCELL.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Autoresolve_Health>3600</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+
+		<Shield_Refresh_Rate>16650</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			CIS, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_CIS_Outpost_1,
+				UC_CIS_Outpost_2,
+			Republic, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_Rep_Outpost_1,
+				UC_Rep_Outpost_2,
+			Rebel, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_CIS_Outpost_1,
+				UC_CIS_Outpost_2,
+			Empire, 
+				UC_NV_Ion_Ring_S,
+				UC_NV_Laser_Ring_S,
+				UC_NV_Missile_Ring_S,
+				UC_Rep_Outpost_1,
+				UC_Rep_Outpost_2	
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<HardPoints>
+			HP_Misil_01, 
+			HP_Misil_02, 
+			HP_TurboR_01, 
+			HP_TurboR_02, 
+			HP_TurboR_03, 
+			HP_TurboR_04, 
+			HP_Engines_00
+  	   </HardPoints>
+		<Icon_Name>I_BUTTON_CIS_HARDCELL.TGA</Icon_Name>
+	
+		<Death_Clone>Damage_Normal, CIS_Hardcell_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Rep">
+		<Variant_Of_Existing_Type>BuildShipBORG</Variant_Of_Existing_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Republic</Affiliation>
+		<Space_Model_Name>Rep_Botajef.ALO</Space_Model_Name>
+		<Icon_Name>I_button_Rep_Botajef.tga</Icon_Name>
+	
+		
+		<Death_Clone>Damage_Normal, BuildShipB_Rep_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipB_Rep_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>Rep_Botajef.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_X_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>100.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>Corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Fade_Time>0</Death_Fade_Time>
+	</SpaceUnit>
+	
+	
+	<SpaceUnit Name="BuildShipA_Rep">
+		<Variant_Of_Existing_Type>CR_CVORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPA</Text_ID>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Affiliation>Empire, Rebel, Underworld, Republic, CIS, Pirates</Affiliation>
+		<Space_Model_Name>Rep_Corellian_Shuttle.ALO</Space_Model_Name>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Max_Speed>2.45</Max_Speed>
+		<HardPoints>
+			HP_T_CR_Shuttle_01
+		</HardPoints>
+		
+		<Icon_Name>i_button_Rep_Corellian_Shuttle.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Corellian_Shuttle.ALO</GUI_Model_Name>
+		
+		<Space_Layer> Corvette </Space_Layer>
+		
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Death_Clone>Damage_Normal, REP_CR_Shuttle_Death_Clone</Death_Clone>
+
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>	
+	<SpaceUnit Name="BuildShipA_CIS">
+		<Variant_Of_Existing_Type>CR_CVORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPA</Text_ID>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_PATROL_CRAFT</Encyclopedia_Unit_Class>
+		<Affiliation>Empire, Rebel, Underworld, Republic, CIS, Pirates</Affiliation>
+		<Space_Model_Name>CIS_BoardingCraft.alo</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>2.2</Max_Speed>
+		<Space_Layer> Corvette </Space_Layer>
+		<Death_Clone>Damage_Normal, CIS_Boarding_Death_Clone</Death_Clone>
+		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+		<SFXEvent_Select>Unit_Select_DroidShip1</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_DroidShip1</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_DroidShip1</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_DroidShip1</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_DroidShip1</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Move_DroidShip1</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Attack_DroidShip1</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Attack_DroidShip1 </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Attack_DroidShip1 </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> Unit_Attack_DroidShip1 </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_Attack_DroidShip1 </SFXEvent_Attack_Hardpoint>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_DroidShip1 </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_DroidShip1 </SFXEvent_Health_Critical_Warning>
+		<HardPoints> 
+				HP_Misil_01, 
+				HP_Misil_02,
+				HP_Misil_03,
+				HP_R_Tridroid_Laser_00,
+				HP_R_Tridroid_Laser_01,
+				HP_R_Tridroid_Laser_02,
+				HP_R_Tridroid_Laser_03,
+				HP_Shield_Generator_Small_00, 
+				HP_Engines_Small_00
+		</HardPoints>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Icon_Name>I_BUTTON_CIS_BoardingCraft.tga</Icon_Name>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> RHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>RHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+</Construction_Vehicles_CWUnit_Data>

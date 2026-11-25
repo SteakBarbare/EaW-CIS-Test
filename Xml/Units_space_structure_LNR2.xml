@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<space_structure_LNR2_Space_Data>
+
+	<SpecialStructure Name="NV_LNR2_Space">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_LNR_II</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_LNR_II TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Space_Model_Name>NV_LNR2_Space.alo</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Pirates, CIS, Republic, Underworld, EVFO, RVRE, GA, GAC, Krayt, Fel, Chiss, Corporate, Hapan, Hutts</Affiliation>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Autoresolve_Health>36000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>2000000</Tactical_Health>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>SELF_DESTRUCT, ABILITY_COUNTDOWN, SPACE_OBSTACLE, WEAPON, TURRET, POWERED, TARGETING, TACTICAL_SELL, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		<Icon_Name>I_BUTTON_REP_LNRIImixto.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+				
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 500 </Targeting_Min_Attack_Distance>
+		<!-- Esto es solo para apuntar y disparar a algo lejano, nisiquiera se ve el modelo rotar porque solo giran dos bones invisibles -->
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>H_Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed> 0.3 </Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 10.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 8.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 7.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 6.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Category_Restrictions> Fighter, Bomber </Fire_Category_Restrictions>
+		
+		<Projectile_Types>Proj_LNR_II_Spacestructure_Gun_Space</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>16</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Fire>Unit_Rep_LNR_Fire</SFXEvent_Fire>
+		
+		<HardPoints>
+     		HP_Shield_GeneratorSVH_00, HP_Shield_GeneratorSVH_01, HP_SpaceLNR2_Gun_01
+	  	</HardPoints>
+				
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		
+		<Death_Clone>Damage_Normal, NV_LNR2_Space_Death_Clone</Death_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_HYPERGUN_DESTRUCT_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>1</Recharge_Seconds> 
+				<Spawned_Object_Type> Hypergun_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>Yes</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_TIE_Mauler_Self_Destruct</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpecialStructure>
+	<SpecialStructure Name="NV_LNR2_Space_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>NV_LNR2_Space.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>110.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpecialStructure>
+	
+</space_structure_LNR2_Space_Data>

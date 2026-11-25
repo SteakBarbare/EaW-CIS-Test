@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE MON CALAMARI TERRESTRE ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_MonCalamariDE_Land">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_MonCalamariDE_Land_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARIDE_LAND</Reward_Param1>
+				<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+			</Event>
+			
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+	</Event>		
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_LAND_HISTORY_DARKEMPIREMONCALAMARIR</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+		<Reward_Param8>REBEL_ACT03_MISSION_SEVEN_25</Reward_Param8>
+		<Reward_Param9>Rebel_Trooper_Loop</Reward_Param9>
+		<Reward_Param10>1</Reward_Param10>
+        <Prereq>Batalla_de_MonCalamariDE_Land</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	<Event Name="Destruir_ATAT_HOVER">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>ATAT_HOVER</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_TIE_DROIDE">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>EVENTOS_TACTICOS_TIE_DROIDE_LAND_WD</Event_Param1>
+		<Event_Param3>30</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+	<Event Name="Destruir_M1_REPULSOR_TANK">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>EVENTOS_TACTICOS_M1_REPULSOR_TANK_WD</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>		
+			
+	
+			
+	<Event Name="Objetivos_Completados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_MONCALAMARIDE_LAND_E</Reward_Param1>
+		<Prereq>Destruir_ATAT_HOVER Destruir_TIE_DROIDE Destruir_M1_REPULSOR_TANK</Prereq>
+	</Event>
+
+			<Event Name="Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>25</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Rebel</Reward_Param1>
+				<Prereq>Objetivos_Completados</Prereq>
+			</Event>
+
+</Story>

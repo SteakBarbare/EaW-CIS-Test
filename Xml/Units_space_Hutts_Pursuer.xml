@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+
+
+<Hu_PursuerUnit_Data>
+
+
+
+	<SpaceUnit Name="Hu_Pursuer">
+		<Variant_Of_Existing_Type>TIE_Avenger_Generic</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_PURSUER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_PURSUER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Bomber Y-Wing Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette TartanORG A-Wing </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_Hu_Pursuer.tga</Icon_Name>
+
+		<Space_Model_Name>Hu_Pursuer.ALO</Space_Model_Name>
+		
+		<Scale_Factor>0.7</Scale_Factor>
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<Max_Rate_Of_Turn>3.9</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		<Begin_Turn_Towards_Distance>300.0</Begin_Turn_Towards_Distance>
+		<Fires_Forward>no</Fires_Forward>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>7000</Tactical_Health>
+		<Shield_Refresh_Rate>2150</Shield_Refresh_Rate>
+		<Energy_Capacity>19000</Energy_Capacity>
+		<Energy_Refresh_Rate>11400</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Infantry_SH </Armor_Type>
+	
+
+		<HardPoints> 
+			HP_Fighter_Adv_Missile_B, HP_Y_Pursuer_Laser_00, HP_Y_Pursuer_Laser_01, HP_Y_Pursuer_Laser_02, HP_Y_Pursuer_Laser_03, HP_Y_Pursuer_Laser_04
+		</HardPoints>
+		
+		<CategoryMask> Fighter | AntiFighter </CategoryMask> 
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>
+				
+		<SFXEvent_Fire>Unit_TIE_Bomber_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_TIE_BomberX</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Tie_BomberX</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_BomberX</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_TIE_BomberX</SFXEvent_Attack>
+		<SFXEvent_Select>Unit_Select_TIE_BomberX</SFXEvent_Select>
+		<SFXEvent_Guard>Unit_Guard_TIE_Bomber</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_TIE_Bomber </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_TIE_Bomber </SFXEvent_Move_Into_Nebula>
+
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_TIE_Bomber </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_TIE_Bomber </SFXEvent_Health_Critical_Warning>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_TIE_Bomber </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_TIE_Bomber </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_TIE_Bomber </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_TIE_Bomber </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_TIE_Bomber </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_TIE_Bomber </SFXEvent_Attack_Hardpoint>
+		
+		<SFXEvent_Ambient_Moving> Unit_A_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_A_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+
+
+	
+	
+	<Squadron Name="Hu_Pursuer_Squadron">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HU_PURSUER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_PURSUER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Interceptor X-wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette TartanORG </Encyclopedia_Vulnerable_To>
+		
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Hutts, Underworld</Affiliation>
+		<Build_Cost_Credits>270</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Squadron_Units>Hu_Pursuer, Hu_Pursuer, Hu_Pursuer</Squadron_Units>
+		<Create_Team_Type>Hu_Pursuer_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_Hu_Pursuer.TGA</Icon_Name>
+		<GUI_Model_Name>Hu_Pursuer.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Tie_BomberX</SFXEvent_Build_Complete>
+						
+		<Tactical_Build_Cost_Multiplayer>270</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>
+	<Container Name="Hu_Pursuer_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_HU_PURSUER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HU_PURSUER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIGHTER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Hu_Pursuer.tga</Icon_Name>
+
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+
+	
+	
+
+
+
+</Hu_PursuerUnit_Data>

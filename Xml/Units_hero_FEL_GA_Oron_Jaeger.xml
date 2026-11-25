@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<Oron_JaegerUnit_Data>
+
+	<HeroUnit Name="General_Oron_Jaeger">
+		<Variant_Of_Existing_Type>TarkinORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ORON_JAEGER_TEAM</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ORON_JAEGER TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVF_Oron_Jaeger.tga</Icon_Name>
+
+		<SFXEvent_Select>Unit_Select_Rebel_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Rebel_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Rebel_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Rebel_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Rebel_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Rebel_Field</SFXEvent_Group_Attack>
+		
+		<CategoryMask>Spacehero</CategoryMask>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Galactic_Influence_Range>100.0</Galactic_Influence_Range>
+
+		<Abilities SubObjectList="Yes">
+			<System_Spy_Ability Name="General_Oron_Jaeger_Ship_Reveal">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>Yes</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			<Enhance_Defense_Ability Name="General_Oron_Jaeger_Enhance_Defense">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.25</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+				<Unit_Strength_Category>Vehicle | Air | Infantry</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="General_Oron_Jaeger_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.5</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			<Reduce_Production_Time_Ability Name="General_Oron_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="General_Oron_Jaeger_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			<Reduce_Production_Price_Ability Name="General_Oron_Jaeger_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+		</Abilities>
+
+	</HeroUnit>
+
+	<HeroCompany Name="General_Oron_Jaeger_Team">
+		<Variant_Of_Existing_Type>Grand_Moff_Tarkin_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ORON_JAEGER_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_EVF_Oron_Jaeger.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<Company_Transport_Unit>Oron_Jaeger_PellaeonSDT</Company_Transport_Unit>
+		<Company_Units>General_Oron_Jaeger</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ORON_JAEGER TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+			
+		<SFXEvent_Build_Complete>GUI_R_Fleet_Commander_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>GUI_R_Fleet_Commander_Complete</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Rebel_Field</SFXEvent_Fleet_Move>
+		<CategoryMask>Spacehero</CategoryMask>
+	</HeroCompany>
+	<SpaceUnit Name="Oron_Jaeger_PellaeonSDT">
+		<Variant_Of_Existing_Type>Moff_Morlish_Veed_PellaeonSD</Variant_Of_Existing_Type>
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		<Landing_Transport_Variant>Fel_Nune_Shuttle_Landing</Landing_Transport_Variant>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Oron_Jaeger_PellaeonSD">
+		<Variant_Of_Existing_Type>EVF_PellaeonSD</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ORON_JAEGER_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ORON_JAEGER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_IMPLACABLE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_EVF_Pellaeon_SD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask>Spacehero</CategoryMask>
+		<Icon_Name>I_BUTTON_EVF_Oron_Jaeger.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<AI_Combat_Power>3495</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Rebel_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Rebel_Field</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Group_Move_Rebel_Field</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Rebel_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Katarn</SFXEvent_Guard>
+		<SFXEvent_Move_Opposite>Unit_Move_Rebel_Field</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Attack_Rebel_Field</SFXEvent_Barrage>
+		<SFXEvent_Stop>Unit_Guard_Rebel_Field</SFXEvent_Stop>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Star_Destroyer </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Star_Destroyer </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target> EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+				
+		<SFXEvent_Health_Low_Warning> Unit_Attack_Rebel_Field </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Guard_Katarn </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Rebel_Soldier_Death </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Rebel_Field</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Move_Rebel_Field</SFXEvent_Hero_Respawned>
+		<Neutralization_Cost>3000.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Tactical_Build_Cost_Multiplayer>12000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>28</Tactical_Build_Time_Seconds>
+	
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Oron_Jaeger_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			    <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Tractor_Beam_Attack_Ability Name="Oron_Jaeger_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>2500</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			<Battlefield_Modifier_Ability Name="Oron_Jaeger_Beam_Attack_Ability_FOW_Increase">
+				<Activation_Style>Space_Automatic</Activation_Style>												
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<FOW_Reveal_Range_Multiplier>10.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			<Combat_Bonus_Ability Name="Oron_Jaeger_Beam_Attack_Ability_Space_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Oron_Jaeger_PellaeonSD</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>1.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>1.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Remove_Corruption_Ability Name="Oron_Jaeger_Beam_Attack_Ability_Remove_Corruption">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+</Oron_JaegerUnit_Data>

@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<Legacy_ConstructionUnit_Data>
+
+	<SpaceUnit Name="BuildShipA_Krayt">
+		<Variant_Of_Existing_Type>CR_CVORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPA</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>EVF_Hvy_Nune_Shuttle.ALO</Space_Model_Name>
+		<GUI_Model_Name>EVF_Hvy_Nune_Shuttle.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+		<Max_Speed>1.8</Max_Speed>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>1200</Tactical_Health>
+		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+		
+		<Projectile_Types>Proj_Ship_Large_Laser_Cannon_Red</Projectile_Types>
+		<Turret_Rotate_Extent_Degrees>180</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Death_Clone>Damage_Normal, BuildShipA_Death_Clone</Death_Clone>
+		<Affiliation>Krayt</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+
+		<Icon_Name>i_button_EVF_Hvy_Nune_Shuttle.tga</Icon_Name>
+		<GUI_Model_Name>EVF_Hvy_Nune_Shuttle.ALO</GUI_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>2</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipB_Krayt">
+		<Variant_Of_Existing_Type>CR_CVORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPB</Text_ID>
+		<Encyclopedia_Good_Against> Bulk_Freighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Pirate_Fighter Acclamator_Assault_Ship </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>EVF_Hvy_Nune_Shuttle.ALO</Space_Model_Name>
+		<GUI_Model_Name>EVF_Hvy_Nune_Shuttle.ALO</GUI_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, NEBULA, TACTICAL_BUILD_OBJECTS </SpaceBehavior>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<Hides_When_Built_On>True</Hides_When_Built_On>
+		<Destroy_When_Child_Dies>True</Destroy_When_Child_Dies>
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+		<Max_Speed>1.8</Max_Speed>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>1200</Tactical_Health>
+		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+		
+		<Projectile_Types>Proj_Ship_Large_Laser_Cannon_Red</Projectile_Types>
+		<Turret_Rotate_Extent_Degrees>180</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Death_Clone>Damage_Normal, BuildShipA_Death_Clone</Death_Clone>
+		<Affiliation>Krayt</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+
+		<Icon_Name>i_button_EVF_Hvy_Nune_Shuttle.tga</Icon_Name>
+		<GUI_Model_Name>EVF_Hvy_Nune_Shuttle.ALO</GUI_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>2</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt, 
+				UC_NV_Ion_Ring_S_EVF,
+				UC_NV_Laser_Ring_S_EVF,
+				UC_NV_Missile_Ring_S_EVF,
+				UC_SmallGolanIV,
+				UC_SmallGolanV,				
+				UC_SmallGolanVI
+		</Tactical_Buildable_Objects_Multiplayer>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipA_Krayt_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Krayt_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Krayt_STR3">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR3_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA3</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Krayt_STR4">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR4_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA4</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Krayt_STR5">
+		<Variant_Of_Existing_Type>BuildShipA_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR5_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipB_Krayt_STR1">
+		<Variant_Of_Existing_Type>BuildShipB_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR1_Re</Lua_Script>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt, 
+				UC_NV_Ion_Ring_S_EVF,
+				UC_NV_Laser_Ring_S_EVF
+		</Tactical_Buildable_Objects_Multiplayer>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Krayt_STR2">
+		<Variant_Of_Existing_Type>BuildShipB_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR2_Re</Lua_Script>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt, 
+				UC_NV_Ion_Ring_S_EVF,
+				UC_NV_Laser_Ring_S_EVF,
+				UC_NV_Missile_Ring_S_EVF
+		</Tactical_Buildable_Objects_Multiplayer>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Krayt_STR3">
+		<Variant_Of_Existing_Type>BuildShipB_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR3_Re</Lua_Script>
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt, 
+				UC_NV_Ion_Ring_S_EVF,
+				UC_NV_Laser_Ring_S_EVF,
+				UC_NV_Missile_Ring_S_EVF,
+				UC_SmallGolanIV,
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Krayt_STR4">
+		<Variant_Of_Existing_Type>BuildShipB_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR4_Re</Lua_Script>
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt, 
+				UC_NV_Ion_Ring_S_EVF,
+				UC_NV_Laser_Ring_S_EVF,
+				UC_NV_Missile_Ring_S_EVF,
+				UC_SmallGolanIV,
+				UC_SmallGolanV,				
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Krayt_STR5">
+		<Variant_Of_Existing_Type>BuildShipB_Krayt</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Lua_Script>EVK_STR5_Re</Lua_Script>
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt, 
+				UC_NV_Ion_Ring_S_EVF,
+				UC_NV_Laser_Ring_S_EVF,
+				UC_NV_Missile_Ring_S_EVF,
+				UC_SmallGolanIV,
+				UC_SmallGolanV,				
+				UC_SmallGolanVI
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipA_Fel">
+		<Variant_Of_Existing_Type>BuildShipBORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPA</Text_ID>
+		<Affiliation>Fel</Affiliation>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Space_Model_Name>GA_Constructor_ShipA.ALO</Space_Model_Name>
+		<Icon_Name>i_button_GA_Constructor_ShipA.tga</Icon_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Death_Clone>Damage_Normal, BuildShipA_Fel_Death_Clone</Death_Clone>
+		
+		<HardPoints> 
+			HP_LaserNG_01,
+			HP_LaserNG_02
+		</HardPoints>
+		
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>2</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>	
+	<SpaceUnit Name="BuildShipA_Fel_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>GA_Constructor_ShipA_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipB_Fel">
+		<Variant_Of_Existing_Type>BuildShipBORG</Variant_Of_Existing_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Fel</Affiliation>
+		<Space_Model_Name>GA_Constructor_Ship.ALO</Space_Model_Name>
+		
+		<HardPoints> 
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03,
+			HP_LaserNG_04
+		</HardPoints>
+		
+		<Icon_Name>I_button_GA_Constructor_Ship.tga</Icon_Name>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel, 
+				UC_NV_Ion_Ring_S_GA,
+				UC_NV_Laser_Ring_S_GA,
+				UC_NV_Missile_Ring_S_GA,
+				UC_SmallGolanIV,
+				UC_SmallGolanV,				
+				UC_SmallGolanVI
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		
+		<Death_Clone>Damage_Normal, BuildShipB_Fel_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Fel_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>GA_Constructor_Ship_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+
+	
+	<SpaceUnit Name="BuildShipA_Fel_STR1">
+		<Variant_Of_Existing_Type>BuildShipA_Fel_STR2</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Lua_Script>EVF_STR1_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Fel_STR2">
+		<Variant_Of_Existing_Type>BuildShipA_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Lua_Script>EVF_STR2_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA2</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Fel_STR3">
+		<Variant_Of_Existing_Type>BuildShipA_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Lua_Script>EVF_STR3_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA3</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Fel_STR4">
+		<Variant_Of_Existing_Type>BuildShipA_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Lua_Script>EVF_STR4_IA_D_STRU</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsA4</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipA_Fel_STR5">
+		<Variant_Of_Existing_Type>BuildShipA_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Lua_Script>EVF_STR5_IA_D_STRU</Lua_Script>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BuildShipB_Fel_STR1">
+		<Variant_Of_Existing_Type>BuildShipB_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_NV_Ion_Ring_S_GA,
+				UC_NV_Laser_Ring_S_GA
+		</Tactical_Buildable_Objects_Campaign>	
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Fel_STR2">
+		<Variant_Of_Existing_Type>BuildShipB_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_NV_Ion_Ring_S_GA,
+				UC_NV_Laser_Ring_S_GA,
+				UC_NV_Missile_Ring_S_GA
+		</Tactical_Buildable_Objects_Campaign>	
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Fel_STR3">
+		<Variant_Of_Existing_Type>BuildShipB_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_NV_Ion_Ring_S_GA,
+				UC_NV_Laser_Ring_S_GA,
+				UC_NV_Missile_Ring_S_GA,
+				UC_SmallGolanIV,
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Fel_STR4">
+		<Variant_Of_Existing_Type>BuildShipB_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_NV_Ion_Ring_S_GA,
+				UC_NV_Laser_Ring_S_GA,
+				UC_NV_Missile_Ring_S_GA,
+				UC_SmallGolanIV,
+				UC_SmallGolanV,				
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	<SpaceUnit Name="BuildShipB_Fel_STR5">
+		<Variant_Of_Existing_Type>BuildShipB_Fel</Variant_Of_Existing_Type>
+		<Affiliation>Fel</Affiliation>
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_NV_Ion_Ring_S_GA,
+				UC_NV_Laser_Ring_S_GA,
+				UC_NV_Missile_Ring_S_GA,
+				UC_SmallGolanIV,
+				UC_SmallGolanV,				
+				UC_SmallGolanVI
+		</Tactical_Buildable_Objects_Campaign>
+	</SpaceUnit>
+	
+</Legacy_ConstructionUnit_Data>

@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<GielEscortUnit_Data>
+	<SpaceUnit Name="GielEscort03">
+		<Variant_Of_Existing_Type>GielEscort</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust>404.0</Layer_Z_Adjust>
+	</SpaceUnit>	
+	<SpaceUnit Name="GielEscort02">
+		<Variant_Of_Existing_Type>GielEscort</Variant_Of_Existing_Type>
+		<Layer_Z_Adjust>202.0</Layer_Z_Adjust>
+	</SpaceUnit>	
+	<SpaceUnit Name="GielEscort">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GIELESCORT</Text_ID>
+		<Encyclopedia_Good_Against> MC40 Quasar Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Mc85 Y-Wing B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GIELESCORT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_WAVES_X3 TEXT_UNIT_TIE_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_BATTLECRUISER </Encyclopedia_Unit_Class>
+		<Space_Model_Name>EV_TaggeShip.ALO</Space_Model_Name>
+		<Scale_Factor>1.8</Scale_Factor>
+
+		<Max_Speed>2.2</Max_Speed>
+
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+
+		<Affiliation>Empire</Affiliation>
+		<AI_Combat_Power>8300</AI_Combat_Power>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>15</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron7, 11</Reserve_Spawned_Units_Tech_0>
+		
+		<HardPoints>
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Tractor_Beam_Rebelde,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_EnginesH_03,
+			HP_EnginesH_04,
+			HP_T_ISD2_Side_01,
+			HP_T_ISD2_Side_02,
+			HP_T_ISD2_Side_03,
+			HP_T_ISD2_Side_04,
+			HP_T_ISD2_Side_05,
+			HP_T_ISD2_Side_06,
+			HP_T_ISD2_Side_07,
+			HP_T_ISD2_Side_08,
+			HP_T_ISD2_Side_09,
+			HP_T_ISD2_Side_10,
+			HP_T_ISD2_Side_11,
+			HP_T_ISD2_Side_12,
+			HP_T_ISDII_01,
+			HP_T_ISDII_02,
+			HP_T_ISDII_03,
+			HP_T_ISDII_04,
+			HP_T_ISDII_05,
+			HP_T_ISDII_06,
+			HP_T_ISDII_07,
+			HP_T_ISDII_08,
+			HP_T_TaggeSD_09,
+			HP_T_TaggeSD_10,
+			HP_T_TaggeSD_11,
+			HP_T_TaggeSD_12,
+			HP_T_TaggeSD_13,
+			HP_T_TaggeSD_14,
+			HP_T_TaggeSD_15,
+			HP_T_TaggeSD_16,
+			HP_T_TaggeSD_17,
+			HP_T_TaggeSD_18,
+			HP_T_TaggeSD_19,
+			HP_T_TaggeSD_20,
+			HP_T_TaggeSD_21,
+			HP_T_TaggeSD_22,
+			HP_T_TaggeSD_23,
+			HP_T_TaggeSD_24,
+			HP_T_TaggeSD_25,
+			HP_T_TaggeSD_26,
+			HP_T_TaggeSD_27,
+			HP_T_TaggeSD_28,
+			HP_T_TaggeSD_29
+		</HardPoints>
+		
+		<Targeting_Priority_Set>Capital</Targeting_Priority_Set>
+		
+		<Icon_Name>I_BUTTON_GielEscort.tga</Icon_Name>
+		<GUI_Model_Name>EV_TaggeShip.ALO</GUI_Model_Name>
+
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.4</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.4</Radar_Icon_Scale_Space>
+
+		<Death_Clone>Damage_Normal, GielEscort_Death_Clone</Death_Clone>
+
+		<Tactical_Build_Cost_Multiplayer>8500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>66</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> GielSDE_Tractor_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="GielSDE_Tractor_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>1800</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+		</Abilities>
+
+	</SpaceUnit>
+	<SpaceUnit Name="GielEscort_Death_Clone">
+		<Text_ID>TEXT_UNIT_PRAETOR</Text_ID>
+		<Space_Model_Name>EV_TaggeShip_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Scale_Factor>1.8</Scale_Factor>
+		<Layer_Z_Adjust>1300.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Ship_Class>capital</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</GielEscortUnit_Data>

@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<TIE_Interceptor_181_Squadron_Data>
+	
+	<SpaceUnit Name="181_TIE_Interceptor">
+		<Variant_Of_Existing_Type>181_TIE_Interceptor_Normal</Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+	</SpaceUnit>
+	<SpaceUnit Name="181_TIE_Interceptor_Normal">
+		<Variant_Of_Existing_Type>TIE_Interceptor</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_181_TIE_INTERCEPTOR</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_FIGHTER_SQUADRON </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_181_TIE_INTERCEPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>5000</Tactical_Health>
+		<Shield_Refresh_Rate>1250</Shield_Refresh_Rate>
+		<Energy_Capacity>16000</Energy_Capacity>
+		<Energy_Refresh_Rate>9600</Energy_Refresh_Rate>
+		
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.40</Hyperspace_Speed>
+		
+		<Armor_Type> Armor_Hero_Transport </Armor_Type>
+        <Shield_Armor_Type>Shield_Fighter</Shield_Armor_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, HUNT, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, SHIELDED, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Green_Hero</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>18</Projectile_Fire_Pulse_Count>
+		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
+		<Icon_Name>I_ENCYCLOPEDIA_EMPIRE_SYMBOL.TGA</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<Squadron Name="181_TIE_Interceptor_Squadron">
+		<Variant_Of_Existing_Type>TIE_Interceptor_Squadron</Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Text_ID>TEXT_181_TIE_INTERCEPTOR_SQUADRON</Text_ID>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+
+		<Squadron_Units>181_TIE_Interceptor,181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal</Squadron_Units>
+		<Squadron_Units>181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal</Squadron_Units>
+		<Squadron_Units>181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal</Squadron_Units>
+		<Squadron_Units>181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal,181_TIE_Interceptor_Normal</Squadron_Units>
+
+		<Icon_Name>I_ENCYCLOPEDIA_EMPIRE_SYMBOL.TGA</Icon_Name>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_181_TIE_INTERCEPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_FIGHTER_SQUADRON</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</Squadron>
+	
+	
+</TIE_Interceptor_181_Squadron_Data>

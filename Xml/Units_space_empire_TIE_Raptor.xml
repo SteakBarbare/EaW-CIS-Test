@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+
+
+<TIE_Raptor_Files>
+
+	<SpaceUnit Name="TIE_Raptor">
+		<Variant_Of_Existing_Type>TIE_Fighter</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_RAPTOR</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_RAPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST</Encyclopedia_Text>
+
+		<Space_Model_Name>EV_TIE_Raptor.ALO</Space_Model_Name>
+
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>4.6</Max_Speed>
+		<Min_Speed>3.1</Min_Speed>
+		<Max_Rate_Of_Turn>3.9</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Tactical_Health>3500</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>3500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+	
+		<Death_Explosions>Small_Explosion_Space_Empire</Death_Explosions>
+		<HardPoints>
+			HP_G_TIEA_Laser_00, HP_G_TIEA_Laser_01, HP_G_TIEA_Laser_02, HP_G_TIEA_Laser_03, HP_G_TIERAP_Laser_04, HP_G_TIERAP_Laser_05
+		</HardPoints>
+		
+		<CategoryMask> Fighter | AntiBomber </CategoryMask>
+		<Targeting_Priority_Set>Fighter</Targeting_Priority_Set>	
+
+		<Icon_Name>I_BUTTON_EV_TIE_Raptor.TGA</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Tactical_Bribe_Cost>15</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	
+
+	<Squadron Name="TIE_Raptor_Squadron">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_TIE_RAPTOR_SQUADRON</Text_ID>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Tech_Level>99</Tech_Level>
+
+		<Squadron_Units>TIE_Raptor, TIE_Raptor, TIE_Raptor</Squadron_Units>
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>TIE_Raptor_Squadron_Container1</Create_Team_Type>
+
+		<Icon_Name>I_BUTTON_EV_TIE_Raptor.TGA</Icon_Name>
+		<GUI_Model_Name>EV_TIE_Raptor.ALO</GUI_Model_Name>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_RAPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</Squadron>
+	<Container Name="TIE_Raptor_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_TIE_RAPTOR</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERCEPTOR </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_RAPTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EV_TIE_Raptor.tga</Icon_Name>
+
+		<Max_Speed>4.6</Max_Speed>
+		<Min_Speed>3.1</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiBomber </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+
+
+</TIE_Raptor_Files>

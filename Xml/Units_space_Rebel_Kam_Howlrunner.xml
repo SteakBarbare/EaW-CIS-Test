@@ -1,0 +1,96 @@
+﻿<?xml version="1.0"?>
+
+<Kam_Howlrunner_Files>
+	
+	<SpaceUnit Name="Kam_Howlrunner"> 
+	  <Variant_Of_Existing_Type>Moldy_CrowORG</Variant_Of_Existing_Type>	
+	  <Text_ID>TEXT_UNIT_KAM_HOWLRUNNER</Text_ID>
+	  <Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+	  <Encyclopedia_Good_Against> TIE_Fighter TIE_Scout Rep_Clockshape </Encyclopedia_Good_Against>
+	  <Encyclopedia_Vulnerable_To> TIE_Interceptor TIE_Avenger TartanORG </Encyclopedia_Vulnerable_To>
+	  <Encyclopedia_Text>TEXT_TOOLTIP_KAM_SOLUSAR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+	  <Galactic_Fleet_Override_Model_Name> W_Rebel_Solusar_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+	  <Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+	  <Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+ 	  <Land_Model_Name>RV_Kam_HowlrunnerLand.ALO</Land_Model_Name>
+	  <Space_Model_Name>RV_Kam_Howlrunner.ALO</Space_Model_Name>
+
+	  <Icon_Name>i_button_KAM_SOLUSAR.tga</Icon_Name>
+	  <Scale_Factor>0.7</Scale_Factor>
+	  <Max_Speed>4.1</Max_Speed>
+	  <Min_Speed>2.7</Min_Speed>
+	  <AI_Combat_Power>1460</AI_Combat_Power>	
+	  <Affiliation>Rebel</Affiliation>
+	  <Shield_Points>6000</Shield_Points>
+	  <Tactical_Health>10000</Tactical_Health>
+	  <Autoresolve_Health>130</Autoresolve_Health>
+	  <Shield_Refresh_Rate>6150</Shield_Refresh_Rate>
+	  <Energy_Capacity>800</Energy_Capacity>
+	  <Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+	  <Projectile_Types>Proj_Ship_Small_Laser_Cannon_Yellow_Hero</Projectile_Types>
+	  <Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
+	  <Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+	  <Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+
+	  <HardPoints> 
+		HP_Hero_Fighter_Force_Proyectile
+	  </HardPoints>
+	  
+	  <SFXEvent_Fire>Unit_Corvette_Fire</SFXEvent_Fire>
+
+	  <Landing_Transport_Variant>Kam_Howlrunner_Landing</Landing_Transport_Variant>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>INVULNERABILITY</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, Kam_Howlrunner_Death_Clone</Death_Clone>
+	  </SpaceUnit>
+	
+	 <SpaceUnit Name="Kam_Howlrunner_Landing">
+		<Variant_Of_Existing_Type>Kam_Howlrunner</Variant_Of_Existing_Type>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>8.0</Scale_Factor>
+	</SpaceUnit>
+	  <SpaceUnit Name="Kam_Howlrunner_Death_Clone">
+		<Text_ID>TEXT_UNIT_SALVAJE</Text_ID>
+		<Space_Model_Name>RV_Kam_Howlrunner.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>	
+
+
+</Kam_Howlrunner_Files>

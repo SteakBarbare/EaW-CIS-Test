@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+
+<BS_MarauderUnit_Data>
+	
+		
+	<SpaceUnit Name="BS_Marauder">
+		<Variant_Of_Existing_Type>MarauderORG</Variant_Of_Existing_Type>
+
+		<Encyclopedia_Good_Against> TartanORG Interdictor_Cruiser IPV1ORG </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber ISDORG Victory_Destroyer </Encyclopedia_Vulnerable_To>
+
+		<Space_Model_Name>UV_Marauder_Corvette_ver02.ALO</Space_Model_Name>
+		<GUI_Model_Name>UV_Marauder_Corvette_ver02.ALO</GUI_Model_Name>
+		<Scale_Factor>0.30</Scale_Factor>
+		<Max_Speed>2.45</Max_Speed>
+
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+
+		<Death_Clone>Damage_Normal, BS_Marauder_Death_Clone</Death_Clone>
+
+		<Affiliation>Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Piratas</Required_Special_Structures>
+				
+		<Tech_Level>0</Tech_Level>
+
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<AI_Combat_Power>2250</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+
+		<Icon_Name>i_button_UV_marauder.tga</Icon_Name>
+		<GUI_Model_Name>UV_Marauder_Corvette_ver02.ALO</GUI_Model_Name>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_MARAUDER_CORVETTE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_CORVETTE</Encyclopedia_Unit_Class>
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 45.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Marauder_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Marauder_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+
+    <SpaceUnit Name="BS_Marauder_Death_Clone">
+		<Text_ID>TEXT_UNIT_MARAUDER_CRUISER</Text_ID>
+		<Space_Model_Name>UV_Marauder_Corvette_ver02_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>UV_Marauder_Corvette_ver02.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.30</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Pirates, Underworld</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</BS_MarauderUnit_Data>

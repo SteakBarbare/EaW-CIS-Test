@@ -1,0 +1,51 @@
+﻿<?xml version="1.0"?>
+
+
+<EVK_LightSpeederUnit_Data>
+	<GroundInfantry Name="EVK_LightSpeeder">
+		<Variant_Of_Existing_Type>Scout_TrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_LTSPEEDER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_LTSPEEDER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		
+		<No_Colorization_Color> 255, 210, 0, 255 </No_Colorization_Color>
+		<Land_Model_Name>EVK_LightSpeeder.ALO</Land_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Armor_Type> Armor_Corellian_Corvette </Armor_Type>
+		<Tactical_Health>120</Tactical_Health>
+		<Garrison_Value>1</Garrison_Value>
+		
+		<Prepare_Strafe_Height>50.0</Prepare_Strafe_Height>
+		
+		<LandBehavior>ABILITY_COUNTDOWN, GARRISON_UNIT, AFFECTED_BY_SHIELD, HUNT, FLYING_LOCOMOTOR, IDLE,TARGETING, WEAPON, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red</Projectile_Types>
+		
+		
+		
+		<Icon_Name>I_BUTTON_EVK_LightSpeeder.tga</Icon_Name>
+
+	</GroundInfantry>
+	<GroundCompany Name="EVK_LightSpeeder_Squad">
+		<Variant_Of_Existing_Type>LIGHT_SCOUT_SPEEDER_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_LTSPEEDER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_LTSPEEDER TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Icon_Name>I_BUTTON_EVK_LightSpeeder.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Krayt_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVK_LightSpeeder, EVK_LightSpeeder</Company_Units>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+		<Tactical_Build_Cost_Multiplayer>110</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+</EVK_LightSpeederUnit_Data>

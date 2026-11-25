@@ -1,0 +1,141 @@
+﻿<?xml version="1.0"?>
+
+
+<GA_Ionizer_LandUnit_Data>
+	<GroundVehicle Name="GA_Ionizer_Land">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_IONIZER</Text_ID>
+		<Encyclopedia_Good_Against>SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_IONIZER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>GA_Ionizer_Bomber_Land.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Ranking_In_Category>6</Ranking_In_Category>
+		<Max_Speed>4.0</Max_Speed>
+		<Min_Speed>4.0</Min_Speed>
+		<OverrideAcceleration> .2 </OverrideAcceleration>
+		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>1.3</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		<Max_Lift>2.5</Max_Lift>
+		<Bank_Turn_Angle>30</Bank_Turn_Angle>
+		<PathFrameDelay> 8 </PathFrameDelay>
+		
+		<Custom_Hard_XExtent> 30.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 30.0 </Custom_Hard_YExtent>
+		<Begin_Turn_Towards_Distance>700.0</Begin_Turn_Towards_Distance>
+		<Prepare_Strafe_Height>700.0</Prepare_Strafe_Height>
+		
+		<OccupationStyle>1x1</OccupationStyle>
+		
+		<AI_Combat_Power>160</AI_Combat_Power>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+
+		<Armor_Type> Armor_Tartan </Armor_Type>
+		<Shield_Armor_Type>Shield_GBomber</Shield_Armor_Type>
+
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Ship_LaserconIon_Land</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		
+		<CategoryMask> Air | AntiStructure</CategoryMask>
+		
+		<Targeting_Priority_Set>AntiStructure</Targeting_Priority_Set>
+
+		<HardPoints>
+			HP_Gr_Fighter_Bombas_00
+		</HardPoints>
+
+		<SFXEvent_Fire> Unit_Ion_Fighter_Fire </SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Y_Wing</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Y_Wing</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Y_Wing</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Y_Wing</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Y_Wing</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Y_Wing </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Y_Wing </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Y_Wing </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Y_Wing </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_Y_Wing </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Ambient_Moving> Unit_Y_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Y_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<Icon_Name>i_button_GA_Ionizer.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Death_Clone>Damage_Normal, GA_Ionizer_Land_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="GA_Ionizer_Land_Death_Clone_00">
+		<Variant_Of_Existing_Type>GA_Ionizer_Land</Variant_Of_Existing_Type>
+		<Land_Model_Name>GA_Ionizer_Bomber_Land.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>0.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="GA_Ionizer_Land_squadron">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_IONIZER</Text_ID>
+		<Encyclopedia_Good_Against>SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>GA_Crossfire_Land_Transport</Company_Transport_Unit>
+		<Company_Units>GA_Ionizer_Land, GA_Ionizer_Land</Company_Units>
+		<Icon_Name>i_button_GA_Ionizer.tga</Icon_Name>
+		<GUI_Model>GA_Ionizer_Bomber_Land.ALO</GUI_Model>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Y_Wing</SFXEvent_Build_Complete>
+
+		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_IONIZER TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+
+	
+	
+</GA_Ionizer_LandUnit_Data>

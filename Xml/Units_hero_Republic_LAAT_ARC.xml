@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<Rep_LAAT_ARCUnit_Data>
+	<GroundVehicle Name="Rep_LAAT_ARC">
+		<Variant_Of_Existing_Type> Rep_LAAT_ORG </Variant_Of_Existing_Type>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+
+		<Land_Model_Name>REP_LAAT_Special.ALO</Land_Model_Name>
+		<CategoryMask> LandHero </CategoryMask>
+		<Affiliation>Republic</Affiliation>
+
+		<Icon_Name>I_BUTTON_Rep_LAAT_ARC.tga</Icon_Name>
+
+		<AI_Combat_Power>130</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_ARC_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_LAAT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L1_Bonus">
+				<Initially_Enabled> No </Initially_Enabled>
+				<!-- Must be enabled via the EL_Heavy_Reflective_Armor_L1_Upgrade -->
+				<Activation_Style>Take_Damage</Activation_Style>
+				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.15</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> No </Initially_Enabled>
+				<!-- Must be enabled via the EL_Heavy_Reflective_Armor_L2_Upgrade -->
+				<Activation_Style>Take_Damage</Activation_Style>
+				<!-- Redirection chance is rolled first. If failed, we roll block chance. If failed, we take the damage. -->
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Rep_LAAT_ARC_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_LAAT_ARC_Death_Clone_00">
+		<Variant_Of_Existing_Type>LAAT</Variant_Of_Existing_Type>
+		<Land_Model_Name>REP_LAAT_ARC_D.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+	</GroundVehicle>
+	<HeroCompany Name="Republic_LAAT_ARC">
+		<Variant_Of_Existing_Type> Republic_LAAT_Phase1 </Variant_Of_Existing_Type>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Icon_Name>I_BUTTON_Rep_LAAT_ARC.tga</Icon_Name>
+
+		<Affiliation>Republic</Affiliation>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>REP_LAAT_Transport</Company_Transport_Unit>
+		<Company_Units>REP_LAAT_ARC</Company_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+		<Available_In_Skirmish>yes</Available_In_Skirmish>
+		<Can_Be_Only_One>true</Can_Be_Only_One>
+
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Republic_LAAT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_Republic_LAAT</SFXEvent_Fleet_Move>
+
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_ARC_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<CategoryMask> LandHero </CategoryMask>
+		<Ranking_In_Category> 3 </Ranking_In_Category>
+		<Population_Value>1</Population_Value>
+	</HeroCompany>
+	
+		
+	<HeroCompany Name="Republic_LAAT_ARC_Team_Land_MP">
+		<Variant_Of_Existing_Type>Republic_LAAT_ARC</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	
+	
+	<GroundCompany Name="LAAT_ARC_Deployed_Republic_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Republic_Squad_CloneTrooper, Republic_ARC_Soldier_Squad, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+		<Icon_Name>I_BUTTON_Rep_Phase1Clones.tga</Icon_Name>
+	</GroundCompany>
+</Rep_LAAT_ARCUnit_Data>

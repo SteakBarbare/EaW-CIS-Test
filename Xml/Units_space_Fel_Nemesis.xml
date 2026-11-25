@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<EVF_NemesisUnit_Data>
+	
+	<SpaceUnit Name="EVF_Nemesis">
+		<Variant_Of_Existing_Type>EVF_NemesisORG</Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_NoIA4</Required_Special_Structures>
+		<Space_Model_Name>EVF_Nemesis.ALO</Space_Model_Name>
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Starting_Spawned_Units_Tech_0>EVF_TIE_Predator_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVF_TIE_Neutralizer_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVF_TIE_Predator_Squadron7, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVF_TIE_Neutralizer_Squadron5, 35</Reserve_Spawned_Units_Tech_0>
+		
+		<Death_Clone>Damage_Normal, EVF_Nemesis_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="EVF_Nemesis_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EVF_Nemesis_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Layer_Z_Adjust>-110.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	<SpaceUnit Name="EVF_NemesisORG">
+		<Variant_Of_Existing_Type>SSDORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_EVF_NEMESIS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVF_NEMESIS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ECLIPSE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVF_TIE_PREDATOR TEXT_WAVES_X3 TEXT_UNIT_EVF_TIE_NEUTRALIZER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_12</Encyclopedia_Text>
+		<Required_Special_Structures>Astilleros_NoIA4</Required_Special_Structures>
+		
+		<Galactic_Fleet_Override_Model_Name> W_EVF_Nemesis_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		
+		<!--<Custom_Hard_XExtent> 1379.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 279.0 </Custom_Hard_YExtent>-->
+
+		<Space_Model_Name>EVF_Nemesis.ALO</Space_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Max_Speed>2.1</Max_Speed>
+		<Armor_Type> Armor_Eclipse </Armor_Type>
+		<Shield_Armor_Type>Shield_Eclipse</Shield_Armor_Type>
+		<Space_Layer> Supercapital </Space_Layer>
+		
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>1000000</Shield_Points>
+		<Tactical_Health>1000000000</Tactical_Health>
+		<Shield_Refresh_Rate>1192000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+		
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Affiliation>Neutral</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<AI_Combat_Power>2415</AI_Combat_Power>
+		<Build_Cost_Credits>32000</Build_Cost_Credits>
+		<Build_Time_Seconds>240</Build_Time_Seconds>
+
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Space_FOW_Reveal_Range>3500.0</Space_FOW_Reveal_Range>
+		
+		<Radar_Icon_Name>Executor_Radar.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.30267  0.30267</Radar_Icon_Size>  
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		
+
+		<HardPoints> 
+			HP_Nemesis_Blast_01,
+			HP_Nemesis_Blast_02,
+			HP_Nemesis_Blast_03,
+			HP_Nemesis_Blast_04,
+			HP_Nemesis_Blast_05,
+			HP_Nemesis_Blast_06,
+			HP_Nemesis_Blast_07,
+			HP_Nemesis_Blast_08,
+			HP_Nemesis_Blast_09,
+			HP_Nemesis_Blast_10,
+			HP_Nemesis_Blast_11,
+			HP_Nemesis_Blast_12,
+			HP_Nemesis_Blast_13,
+			HP_Nemesis_Blast_14,
+			HP_Nemesis_Blast_15,
+			HP_Nemesis_Blast_16,
+			HP_Nemesis_Blast_17,
+			HP_Nemesis_Blast_18,
+			HP_Nemesis_Blast_19,
+			HP_Nemesis_Blast_20,
+			HP_Nemesis_Blast_21,
+			HP_Nemesis_Blast_22,
+			HP_Nemesis_Blast_23,
+			HP_Nemesis_Blast_24,
+			HP_Nemesis_Blast_25,
+			HP_Nemesis_Blast_26,
+			HP_Nemesis_Blast_27,
+			HP_Nemesis_Blast_28,
+			HP_Nemesis_Blast_29,
+			HP_Nemesis_Blast_30,
+			HP_T_Nemesis_01,
+			HP_T_Nemesis_02,
+			HP_T_Nemesis_03,
+			HP_T_Nemesis_04,
+			HP_T_Nemesis_05,
+			HP_T_Nemesis_06,
+			HP_T_Nemesis_07,
+			HP_T_Nemesis_08,
+			HP_T_Nemesis_09,
+			HP_T_Nemesis_10,
+			HP_T_Nemesis_11,
+			HP_T_Nemesis_12,
+			HP_T_Nemesis_13,
+			HP_T_Nemesis_14,
+			HP_T_Nemesis_15,
+			HP_T_Nemesis_16,
+			HP_T_Nemesis_17,
+			HP_T_Nemesis_18,
+			HP_TM_Nemesis_01,
+			HP_TM_Nemesis_02,
+			HP_TM_Nemesis_03,
+			HP_TM_Nemesis_04,
+			HP_TM_Nemesis_05,
+			HP_TM_Nemesis_06,
+			HP_TM_Nemesis_07,
+			HP_TH_Nemesis_01,
+			HP_TH_Nemesis_02,
+			HP_TH_Nemesis_03,
+			HP_TH_Nemesis_04,
+			HP_TH_Nemesis_05,
+			HP_TH_Nemesis_06,
+			HP_TH_Nemesis_07,
+			HP_TM_Nemesis_08,
+			HP_TM_Nemesis_09,
+			HP_TM_Nemesis_10,
+			HP_TM_Nemesis_11,
+			HP_TM_Nemesis_12,
+			HP_TM_Nemesis_13,
+			HP_TM_Nemesis_14,
+			HP_TM_Nemesis_15,
+			HP_TM_Nemesis_16,
+			HP_TM_Nemesis_17,
+			HP_TM_Nemesis_18,
+			HP_TM_Nemesis_19,
+			HP_TM_Nemesis_20,
+			HP_TM_Nemesis_21,
+			HP_TM_Nemesis_22,
+			HP_TM_Nemesis_23,
+			HP_TM_Nemesis_24,
+			HP_TM_Nemesis_25,
+			HP_TM_Nemesis_26,
+			HP_TM_Nemesis_27,
+			HP_TM_Nemesis_28,
+			HP_TM_Nemesis_29,
+			HP_TM_Nemesis_30,
+			HP_TM_Nemesis_31,
+			HP_TM_Nemesis_32,
+			HP_TM_Nemesis_33,
+			HP_TM_Nemesis_34,
+			HP_TM_Nemesis_35,
+			HP_TM_Nemesis_36,
+			HP_TM_Nemesis_37,
+			HP_TH_Nemesis_08,
+			HP_TH_Nemesis_09,
+			HP_TH_Nemesis_10,
+			HP_TH_Nemesis_11,
+			HP_TH_Nemesis_12,
+			HP_TH_Nemesis_13,
+			HP_TH_Nemesis_14,
+			HP_TH_Nemesis_15,
+			HP_TH_Nemesis_16,
+			HP_TH_Nemesis_17,
+			HP_TH_Nemesis_18,
+			HP_TH_Nemesis_19,
+			HP_TH_Nemesis_20,
+			HP_TH_Nemesis_21,
+			HP_TH_Nemesis_22,
+			HP_TH_Nemesis_23,
+			HP_TH_Nemesis_24,
+			HP_TH_Nemesis_25,
+			HP_TH_Nemesis_26,
+			HP_TH_Nemesis_27,
+			HP_TH_Nemesis_28,
+			HP_TH_Nemesis_29,
+			HP_TH_Nemesis_30,
+			HP_TH_Nemesis_31,
+			HP_TH_Nemesis_32,
+			HP_TH_Nemesis_33,
+			HP_TH_Nemesis_34,
+			HP_TH_Nemesis_35,
+			HP_TH_Nemesis_36,
+			HP_TH_Nemesis_37,
+			HP_TH_Nemesis_38,
+			HP_TH_Nemesis_39,
+			HP_TH_Nemesis_40,
+			HP_TH_Nemesis_41,
+			HP_TH_Nemesis_42,
+			HP_TH_Nemesis_43,
+			HP_TH_Nemesis_44,
+			HP_TH_Nemesis_45,
+			HP_TH_Nemesis_46,
+			HP_TH_Nemesis_47,
+			HP_TH_Nemesis_48,
+			HP_TH_Nemesis_49,
+			HP_TH_Nemesis_50,
+			HP_TH_Nemesis_51,
+			HP_TH_Nemesis_52,
+			HP_TH_Nemesis_53,
+			HP_TH_Nemesis_54,
+			HP_TH_Nemesis_55,
+			HP_TH_Nemesis_56,
+			HP_TH_Nemesis_57,
+			HP_TH_Nemesis_58,
+			HP_TH_Nemesis_59,
+			HP_TH_Nemesis_60,
+			HP_TH_Nemesis_61,
+			HP_TH_Nemesis_62,
+			HP_TH_Nemesis_63,
+			HP_TH_Nemesis_64,
+			HP_TH_Nemesis_65,
+			HP_TH_Nemesis_66,
+			HP_TH_Nemesis_67,
+			HP_TH_Nemesis_68,
+			HP_TH_Nemesis_69,
+			HP_TH_Nemesis_70,
+			HP_TH_Nemesis_71,
+			HP_TH_Nemesis_72,
+			HP_TH_Nemesis_73,
+			HP_TH_Nemesis_74,
+			HP_TH_Nemesis_75,
+			HP_TH_Nemesis_76,
+			HP_TH_Nemesis_77,
+			HP_TH_Nemesis_78,
+			HP_TH_Nemesis_79,
+			HP_TH_Nemesis_80,
+			HP_TH_Nemesis_81,
+			HP_TH_Nemesis_82,
+			HP_TH_Nemesis_83,
+			HP_TH_Nemesis_84,
+			HP_TH_Nemesis_85,
+			HP_TH_Nemesis_86,
+			HP_TH_Nemesis_87,
+			HP_TH_Nemesis_88,
+			HP_TH_Nemesis_89,
+			HP_TH_Nemesis_90,
+			HP_TH_Nemesis_91,
+			HP_TH_Nemesis_92,
+			HP_TH_Nemesis_93,
+			HP_TH_Nemesis_94,
+			HP_TH_Nemesis_95,
+			HP_TH_Nemesis_96,
+			HP_TH_Nemesis_97,
+			HP_TH_Nemesis_98,
+			HP_TH_Nemesis_99,
+			HP_TH_Nemesis_100,
+			HP_TH_Nemesis_101,
+			HP_TH_Nemesis_102,
+			HP_TH_Nemesis_103,
+			HP_TH_Nemesis_104,
+			HP_TH_Nemesis_105,
+			HP_TH_Nemesis_106,
+			HP_TH_Nemesis_107,
+			HP_TH_Nemesis_108,
+			HP_TH_Nemesis_109,
+			HP_TH_Nemesis_110,
+			HP_TH_Nemesis_111,
+			HP_TH_Nemesis_112,
+			HP_TH_Nemesis_113,
+			HP_TH_Nemesis_114,
+			HP_TH_Nemesis_115,
+			HP_TH_Nemesis_116,
+			HP_TH_Nemesis_117,
+			HP_TH_Nemesis_118,
+			HP_TH_Nemesis_119,
+			HP_TH_Nemesis_120,
+			HP_TH_Nemesis_121,
+			HP_TH_Nemesis_122,
+			HP_TH_Nemesis_123,
+			HP_TH_Nemesis_124,
+			HP_TH_Nemesis_125,
+			HP_TH_Nemesis_126,
+			HP_TH_Nemesis_127,
+			HP_TH_Nemesis_128,
+			HP_TH_Nemesis_129,
+			HP_TH_Nemesis_130,
+			HP_TH_Nemesis_131,
+			HP_TH_Nemesis_132,
+			HP_TH_Nemesis_133,
+			HP_TH_Nemesis_134,
+			HP_TH_Nemesis_135,
+			HP_TH_Nemesis_136,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Fighter_BayH_05,
+			HP_Fighter_BayH_06,
+			HP_Fighter_BayH_07,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Tractor_Beam_Rebelde
+		</HardPoints>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<SFXEvent_Select>Unit_Select_EVK_NEMESIS</SFXEvent_Select>
+		<SFXEvent_Build_Complete>Unit_Complete_EVK_NEMESIS</SFXEvent_Build_Complete>
+		
+		<Icon_Name>I_BUTTON_EVF_Nemesis.TGA</Icon_Name>
+		<GUI_Model_Name>EVF_Nemesis.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>9600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>74</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FULL_SALVO.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> EVF_Nemesis_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			    <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="EVF_Nemesis_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>5000</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+		</Abilities>
+		
+	</SpaceUnit>
+	
+	
+	
+	
+</EVF_NemesisUnit_Data>

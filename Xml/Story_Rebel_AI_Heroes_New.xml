@@ -1,0 +1,1052 @@
+<?xml version="1.0" ?>
+<Story>
+
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Lock_Research_R_MC80v1"><!--Solo usado en EAW Campaign -->
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Research_R_MC80v1</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<!--Evitamos que la IA pierda tiempo construyendo estas cosas que no usa-->
+		<Event Name="Lock_Rebels_To_Tech_2">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>Rebels_To_Tech_2</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="Lock_Rebels_To_Tech_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>Rebels_To_Tech_3</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="Lock_Rebels_To_Tech_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>Rebels_To_Tech_4</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="Lock_Rebels_To_Tech_5">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>Rebels_To_Tech_5</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>	
+		
+		<Event Name="Enter_Tech_RES">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Empire_To_Tech_FO</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Spawn_RVRE_Leia_Team">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>SPAWN_HERO</Reward_Type>
+			<Reward_Param1>RVRE_Leia_Team</Reward_Param1>
+			<Reward_Param2>Hosnian_Prime</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>	
+		
+		<Event Name="Spawn_Admiral_Ackbar_Raddus">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>UNIQUE_UNIT</Reward_Type>
+			<Reward_Param1>Admiral_Ackbar_Raddus</Reward_Param1>
+			<Reward_Param2>Hosnian_Prime</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>
+		
+		<Event Name="Spawn_Vice_Admiral_Holdo">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>UNIQUE_UNIT</Reward_Type>
+			<Reward_Param1>Vice_Admiral_Holdo</Reward_Param1>
+			<Reward_Param2>Hosnian_Prime</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>
+		
+		<Event Name="Spawn_RVRE_Poe_Team">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>SPAWN_HERO</Reward_Type>
+			<Reward_Param1>RVRE_Poe_Team</Reward_Param1>
+			<Reward_Param2>Hosnian_Prime</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>
+		
+		<Event Name="Spawn_RVRE_Finn_Team">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>SPAWN_HERO</Reward_Type>
+			<Reward_Param1>RVRE_Finn_Team</Reward_Param1>
+			<Reward_Param2>Jakku</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>
+		
+		<Event Name="Spawn_RVRE_Rey_Jedi_Team">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>SPAWN_HERO</Reward_Type>
+			<Reward_Param1>RVRE_Rey_Jedi_Team</Reward_Param1>
+			<Reward_Param2>Jakku</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>
+		
+		<Event Name="Spawn_RVRE_Chewi_Team">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>SPAWN_HERO</Reward_Type>
+			<Reward_Param1>RVRE_Chewi_Team</Reward_Param1>
+			<Reward_Param2>D_Qar</Reward_Param2>
+			<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+		</Event>
+		
+		
+	<Event Name="Set_Rebels_at_Nivel_3"><!-- Galactic Empire era -->
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Limitar_Nivel_Tech_Max_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_MAX_TECH_LEVEL</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>2</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Lock_Astilleros_RB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Belbullab22_Probe">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Belbullab22_Probe</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	 </Event>
+	 
+	 <Event Name="Lock_Ga_Twighlight_Probe">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Ga_Twighlight_Probe</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_IA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_IA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Turbolaser_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Turbolaser_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Base_Shield">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Base_Shield</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Barracks">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Barracks</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Light_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Light_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Heavy_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Advanced_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_Ground_Officer_Academy">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Ground_Officer_Academy</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Turbolaser_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Turbolaser_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Base_Shield">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Base_Shield</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Barracks">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Barracks</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Light_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Light_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Heavy_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Advanced_Vehicle_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Advanced_Vehicle_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_Ground_Officer_Academy">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_Ground_Officer_Academy</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<!-- Limites de estructuras que teoricamente la IA no construiria nunca pero que pueden estorbar si quieres ver que construye-->
+
+	<Event Name="Lock_Astilleros_PesadosR">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_PesadosR</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_Rebeldes">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_Rebeldes</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Factoria_Cazas_REBELDES">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Factoria_Cazas_REBELDES</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Empire_Orbital_Long_Range_ScannerX">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Empire_Orbital_Long_Range_ScannerX</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Super_Astilleros_Rebeldes">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Super_Astilleros_Rebeldes</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Orbital_aumentador_de_poblacion">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Orbital_aumentador_de_poblacion</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RV_GolanI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>RV_GolanI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RV_GolanII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>RV_GolanII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RV_GolanIII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>RV_GolanIII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_E_Modular_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>R_Modular_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Casino_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Casino_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Trade_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Trade_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Factoria_CazasRVRE">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Factoria_CazasRVRE</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Orbital_Mine">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Orbital_Mine</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Rebel_Ground_Mining_Facility">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Rebel_Ground_Mining_Facility</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_R_XCommand">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>R_XCommand</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Nb_Sales_Market">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Nb_Sales_Market</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Nb_Desert_Farm">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Nb_Desert_Farm</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Nb_Temperate_Farm">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Nb_Temperate_Farm</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvancedTech_6">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvancedTech_6</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvancedTech_7">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvancedTech_7</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvancedTech_8">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvancedTech_8</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_Modular_Station">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_Modular_Station</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Factoria_Cazas_separatistas</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_CIS_ST_Base_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_ST_Base_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_GolanI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_GolanI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_GolanII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_GolanII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_CIS_GolanIII_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>CIS_GolanIII_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_NoIA4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_NoIA4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_Sienar_Factory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_Sienar_Factory</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Fel_ST_Base_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Fel_ST_Base_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_GolanIV_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_GolanIV_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_GolanV_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_GolanV_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_RB_EVF_GolanVI_Defenses">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVF_GolanVI_Defenses</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+<!-- Force Rebels to get X-wing instead of Z-95 to start -->
+	<Event Name="Unlock_X_wings">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>Rebel_X-Wing_Squadron</Reward_Param1>
+		<Reward_Param2>Z95_Headhunter_Rebel_Squadron</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_AdvTech_7IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_7IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_AdvTech_8IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_8IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="UnLock_AdvTech_7IA">
+		<Event_Type>STORY_BASE_DESTROYED</Event_Type>
+		<Event_Param1>Bilbringi</Event_Param1>
+		<Event_Param2>Space</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_7IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	<Event Name="UnLock_AdvTech_8IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+		<Reward_Param1>AdvTech_8IA</Reward_Param1>
+		<Prereq>UnLock_AdvTech_7IA</Prereq>
+	</Event>	
+	
+	<Event Name="Spawn_Mon_Mothma">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Mon_Mothma_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Spawn_Winter_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Droids_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Larkhess_Hero">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Larkhess</Reward_Param1>
+		<Reward_Param2>Sluis_Van</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Leia_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Princess_Leia_Team</Reward_Param1>
+		<Reward_Param2>Alderaan</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<!-- Spawn Tech 1 Heroes -->
+
+	<Event Name="Rebels_Enter_Tech_01">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>1</Event_Param1>
+	</Event>
+
+	<Event Name="Spawn_Han_Solo">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Han_Solo_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Luke_Skywalker_Jedi">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Luke_Skywalker_Jedi_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<!-- Spawn Tech 2 Heroes -->
+
+	<Event Name="Rebels_Enter_Tech_02">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+
+	<Event Name="Spawn_General_Rieekan">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>General_Rieekan_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Dodonna">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>General_Dodonna_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+	<!-- Spawn Tech 3 Heroes -->
+
+	<Event Name="Rebels_Enter_Tech_03">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>3</Event_Param1>
+	</Event>
+
+	<Event Name="Spawn_Ackbar">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Defiance</Reward_Param1>
+        <Reward_Param2>MonCalamari</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Katarn">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>SPAWN_HERO</Reward_Type>
+        <Reward_Param1>KatarnFuturo_Team</Reward_Param1>
+        <Reward_Param2>Sullust</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	
+
+	<!-- Spawn Tech 4 Heroes -->
+
+	<Event Name="Rebels_Enter_Tech_04">
+		<Event_Type>STORY_TECH_LEVEL</Event_Type>
+		<Event_Param1>4</Event_Param1>
+	</Event>
+	
+	<Event Name="Spawn_MaraR_Hero">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Mara_JadeREBEL_Team</Reward_Param1>
+		<Reward_Param2>Myrkr</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Salvaje_Hero">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Salvaje</Reward_Param1>
+		<Reward_Param2>Myrkr</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+			
+	<Event Name="Spawn_Lando_Calrissian">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Lando_Calrissian_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Spawn_Garm_Bel_Iblis_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Garm_Bel_Iblis_Team</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Quenfis_Hero">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>Quenfis</Reward_Param1>
+		<Reward_Param2>Coruscant</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+			
+	<Event Name="Borrar_Heroe_01">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Mon_Mothma_Team</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Mon_Mothma</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Borrar_Heroe_02">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Droids_Team</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Winter</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>True</Perpetual>
+		<Prereq>Enter_Tech_4 Enter_Tech_5</Prereq>
+	</Event>
+	<Event Name="Borrar_Heroe_05">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Han_Solo_Team</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Han_Solo</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Borrar_Heroe_03">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Luke_Skywalker_Jedi_Team</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Luke_Skywalker_Jedi</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Borrar_Heroe_06">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>General_Dodonna_Team</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>General_Dodonna</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Borrar_Heroe_11">
+		<Event_Type>STORY_DESTROY</Event_Type>
+		<Event_Param1>Defiance</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Defiance</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Perpetual>True</Perpetual>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<!-- Filtros Resistence -->
+	
+	<Event Name="Ocultar05_RVRE_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Ninka</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar06_RVRE_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Vigil</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+					      
+<!-- Bloquear Corbetas Final -->
+<!-- Bloquear Fragatas Principio -->
+	
+		
+		<Event Name="Ocultar06_RVRE_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_MC20</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar07_RVRE_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Anodyne</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+<!-- Bloquear Fragatas Final -->
+
+
+	
+<!-- Bloquear Cruceros Principio -->
+		<Event Name="Ocultar06_RVRE_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Defender_Cruiser</Reward_Param1>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+<!-- Bloquear Cruceros Final -->
+<!-- Bloquear Destructores Principio -->
+		
+		<Event Name="Ocultar01_RVRE_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Starhawk</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar02_RVRE_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Starhawk2</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+	
+<!-- Bloquear Destructores Final -->
+		<Event Name="Ocultar01_RVRE_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Quasar</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+	
+<!-- Bloquear Cruceros_Pesados Principio -->
+		
+		
+		<Event Name="Ocultar03_RVRE_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Raddus</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar04_RVRE_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Raddus_variantB</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+	<!-- Bloquear Cruceros_Pesados Final -->
+<!-- Bloquear Cruceros_de_Batalla Principio -->
+	
+<!-- Bloquear Cruceros_de_Batalla Final -->
+
+<!-- Bloquear Super_Destructores Principio -->
+	
+		<Event Name="Ocultar0_RVRE_Super_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_MC99</Reward_Param1>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+<!-- Bloquear Super_Destructores Final -->
+
+<!-- DesBloquear Corbetas Principio -->
+       
+
+		<Event Name="DesOcultar05_RVRE_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Ninka</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar06_RVRE_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Vigil</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+<!-- DesBloquear Corbetas Final -->
+<!-- DesBloquear Fragatas Principio -->
+	
+		
+		<Event Name="DesOcultar06_RVRE_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_MC20</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		<Event Name="DesOcultar07_RVRE_Fragatas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Anodyne</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+<!-- DesBloquear Fragatas Final -->
+
+
+<!-- DesBloquear Cruceros Principio -->
+		<Event Name="DesOcultar06_RVRE_Cruceros">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Defender_Cruiser</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+<!-- DesBloquear Cruceros Final -->
+<!-- DesBloquear Destructores Principio -->
+		
+		<Event Name="DesOcultar01_RVRE_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Starhawk</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		<Event Name="DesOcultar02_RVRE_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Starhawk2</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+	
+<!-- DesBloquear Destructores Final -->
+		<Event Name="DesOcultar01_RVRE_Portanaves">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Quasar</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+
+<!-- DesBloquear Cruceros_Pesados Principio -->
+		
+	
+		<Event Name="DesOcultar03_RVRE_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Raddus</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		<Event Name="DesOcultar04_RVRE_Cruceros_Pesados">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+               <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_Raddus_variantB</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+
+	<!-- DesBloquear Cruceros_Pesados Final -->
+<!-- DesBloquear Cruceros_de_Batalla Principio -->
+		
+	
+<!-- DesBloquear Cruceros_de_Batalla Final -->
+
+<!-- DesBloquear Super_Destructores Principio -->
+		<Event Name="DesOcultar01_RVRE_Super_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_R_MC99</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+<!-- DesBloquear Super_Destructores Final -->
+		
+<!-- Estructuras terrestres -->		  
+		 
+		<Event Name="Ocultar07_RVRE_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Barracks</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar08_RVRE_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Light_Vehicle_Factory</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar09_RVRE_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar10_RVRE_Estructuras_terrestres">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Officer_Academy</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+	
+		<Event Name="DesOcultar_RVRE_Estructuras_terrestres_07">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Barracks</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Capturar_click_estructuras_15 Enter_Tech_RES</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_RVRE_Estructuras_terrestres_08">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Light_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_RVRE_Estructuras_terrestres_09">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Heavy_Vehicle_Factory</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>		
+		<Event Name="DesOcultar_RVRE_Estructuras_terrestres_10">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Ground_Officer_Academy</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>		
+	
+		<Event Name="Ocultar01_RVRE_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_IA_Gr_Unit_01X</Reward_Param1>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="Ocultar02_RVRE_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_IA_Gr_Unit_02X</Reward_Param1>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar01_RVRE_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_IA_Gr_Unit_01X</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		<Event Name="DesOcultar02_RVRE_RB_Ground">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_IA_Gr_Unit_02X</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+		
+		<!--Ground and fleet Commanders filter-->
+			
+		<Event Name="Ocultar_RVRE_Commanders_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Fleet_Tech_1_IA</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+			
+		<Event Name="Ocultar_RVRE_Commanders_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Fleet_Tech_2_IA</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Ocultar_RVRE_Commanders_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Fleet_Tech_3_IA</Reward_Param1>
+                <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+				
+		<Event Name="DesOcultar_RVRE_Commanders_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Fleet_Tech_1_IA</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_RVRE_Commanders_02">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Fleet_Tech_2_IA</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+		
+		<Event Name="DesOcultar_RVRE_Commanders_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>RVRE_Fleet_Tech_3_IA</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>Universal_Story_Start Enter_Tech_RES</Prereq>
+        </Event>
+
+</Story>

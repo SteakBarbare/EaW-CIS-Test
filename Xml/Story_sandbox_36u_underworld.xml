@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+
+
+
+<!--**********************************************************-->
+<!--******	Campaign: Rim World Conflict (Underworld)	******-->
+<!--**********************************************************-->
+
+
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_Expansion_GC_Solo</Story_Dialog>
+		<Story_Chapter>4</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+	</Event>
+	
+	<Event Name="Capturar_click_Cazas_01">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters4</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Capturar_click_Corbetas_02">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters5</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	  
+	<Event Name="Capturar_click_Cruceros_04">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters7</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	  
+	<Event Name="Capturar_click_Destructores_05">
+			<Event_Type>STORY_CLICK_GUI</Event_Type>
+			<Event_Param1>b_filters8</Event_Param1>
+			<Perpetual>True</Perpetual>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<!--***** Indicador nuevas caracteristicas ***********-->
+			<Event Name="Indicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Story_Dialog>Dialog_BS_Indicador_nuevas_caracteristicas</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Indicador_nuevas_caracteristicas_Tag</Story_Tag>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>			
+			<Event Name="Flash_Buttons">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param2>
+				<Prereq>Indicador_nuevas_caracteristicas_00</Prereq>
+			</Event>	
+			<Event Name="Hide_Indicador_nuevas_caracteristicas">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			<Event Name="CerrarIndicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			
+		<!--***** Indicador nuevas caracteristicas ***********-->
+	<Event Name="Lock_Astilleros_RB">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Video_Inicio">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>START_MOVIE</Reward_Type>
+		<Reward_Param1>Inicio_SW_Darksaber</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Video_Inicio_Fin">
+		<Event_Type>STORY_MOVIE_DONE</Event_Type>
+		<Prereq>Video_Inicio</Prereq>
+	</Event>	
+	
+	<Event Name="Reveal_Todos_los_Planetas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	<Event Name="Lock_Astilleros_IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		
+		<Event Name="Lock_UXSoloIA_STR_01">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>UXSoloIA_STR_01</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+		<Event Name="Lock_Armed_Walls">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>GC_Walls_IU</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="Lock_AdvTech_UIA">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>LOCK_UNIT</Reward_Type>
+			<Reward_Param1>AdvTech_UIA</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+	
+	
+	<Event Name="Spawn_Grappa_The_Hutt">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Grappa_The_Hutt_Team</Reward_Param1>
+		<Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Sol_Mon">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>Sol_Mon</Reward_Param1>
+        <Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Yull_Acib">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Yull_Acib_Team</Reward_Param1>
+		<Reward_Param2>Tatooine</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Bossk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Bossk_Team</Reward_Param1>
+		<Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_IG88">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>UNIQUE_UNIT</Reward_Type>
+        <Reward_Param1>IG88_Team</Reward_Param1>
+        <Reward_Param2>Genon</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Corrupt_Kuat">
+		<Event_Type>STORY_CORRUPTION_CHANGED</Event_Type>
+		<Event_Param1>Kuat</Event_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Leminsk">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Leminsk_Team</Reward_Param1>
+		<Reward_Param2>Hoth</Reward_Param2>
+		<Prereq>Corrupt_Kuat</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Durga">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Durga_Team</Reward_Param1>
+		<Reward_Param2>NalHutta</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+
+		
+		
+</Story>

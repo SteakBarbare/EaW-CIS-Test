@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+<SovereignUnit_Data>
+	<SpaceUnit Name="Sovereign">
+		<Variant_Of_Existing_Type>SovereignORG</Variant_Of_Existing_Type>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Super_Astilleros_Imperiales, AdvancedTech_7</Required_Special_Structures>
+	</SpaceUnit>
+	<SpaceUnit Name="SovereignORG">	
+		<Variant_Of_Existing_Type>SSDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SOVEREIGN_SSD</Text_ID>
+		<Encyclopedia_Good_Against> Mc104 Colossus SSDLusankya </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T42 B-Wing K-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SOVEREIGN TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ECLIPSE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_GUNBOAT TEXT_WAVES_X2 TEXT_UNIT_SHADOWDROID TEXT_WAVES_X2 TEXT_UNIT_A9 TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_20</Encyclopedia_Text>
+
+		<Space_Model_Name>EV_Sovereign.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> w_planet_fleet_Sovereign.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+		<GUI_Row>1</GUI_Row>
+		<Scale_Factor>1.1</Scale_Factor>
+
+		<Armor_Type> Armor_Eclipse </Armor_Type>
+		<Shield_Armor_Type>Shield_Eclipse</Shield_Armor_Type>
+
+		<!--<Layer_Z_Adjust>-1000.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>350.0</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Affiliation>Empire</Affiliation>
+		
+		<Tech_Level>99</Tech_Level>
+		
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>10000000</Shield_Points>
+		<Tactical_Health>1000000000</Tactical_Health>
+		<Shield_Refresh_Rate>10096000</Shield_Refresh_Rate>
+		<Energy_Capacity>20000000</Energy_Capacity>
+		<Energy_Refresh_Rate>12000000</Energy_Refresh_Rate>
+				
+		<Build_Cost_Credits>48000</Build_Cost_Credits>
+		<AI_Combat_Power>6360</AI_Combat_Power>
+		<Build_Time_Seconds>250</Build_Time_Seconds>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Gunboat_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>ShadowDroid_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A9_Squadron6, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Gunboat_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ShadowDroid_Squadron5, 29</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>A9_Squadron6, 19</Reserve_Spawned_Units_Tech_0>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+				
+		
+		<Space_FOW_Reveal_Range>6000.0</Space_FOW_Reveal_Range>
+
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+
+		<Death_Clone>Damage_Normal, Sovereign_Death_Clone</Death_Clone>
+
+		<In_Background>No</In_Background>
+		<HardPoints>
+			HP_Mirar_al_Frente,
+			HP_EclipseSSD_Blast_00,			
+			HP_EclipseSSD_Blast_01,
+			HP_EclipseSSD_Blast_02,
+			HP_EclipseSSD_Blast_03,
+			HP_EclipseSSD_Blast_04,
+			HP_EclipseSSD_Blast_05,
+			HP_EclipseSSD_Blast_06,
+			HP_EclipseSSD_Blast_07,
+			HP_EclipseSSD_Blast_08,
+			HP_EclipseSSD_Blast_09,
+			HP_Tractor_Beam_Rebelde,
+			HP_T_E_SSD2_01,
+			HP_T_E_SSD2_02,
+			HP_T_E_SSD2_03,
+			HP_T_E_SSD2_04,
+			HP_T_E_SSD2_05,
+			HP_T_E_SSD2_06,
+			HP_T_E_SSD2_07,
+			HP_T_E_SSD2_08,
+			HP_T_E_SSD2_09,
+			HP_T_E_SSD2_10,
+			HP_T_E_SSD2_11,
+			HP_T_E_SSD2_12,
+			HP_T_E_SSD2_13,
+			HP_T_E_SSD2_14,
+			HP_T_E_SSD2_15,
+			HP_T_E_SSD2_16,
+			HP_T_E_SSD2_17,
+			HP_T_E_SSD2_18,
+			HP_T_E_SSD2_19,
+			HP_T_E_SSD2_20,
+			HP_T_E_SSD2_21,
+			HP_T_E_SSD2_22,
+			HP_T_E_SSD2_23,
+			HP_T_E_SSD2_24,
+			HP_T_E_SSD2_25,
+			HP_T_E_SSD2_26,
+			HP_T_E_SSD2_27,
+			HP_T_E_SSD2_28,
+			HP_T_E_SSD2_29,
+			HP_T_E_SSD2_30,
+			HP_T_E_SSD2_31,
+			HP_T_E_SSD2_32,
+			HP_T_E_SSD2_33,
+			HP_T_E_SSD2_34,
+			HP_T_E_SSD2_35,
+			HP_T_E_SSD2_36,
+			HP_T_E_SSD2_37,
+			HP_T_E_SSD2_38,
+			HP_T_E_SSD2_39,
+			HP_T_E_SSD2_40,
+			HP_T_E_SSD2_41,
+			HP_T_E_SSD2_42,
+			HP_T_E_SSD2_43,
+			HP_T_E_SSD2_44,
+			HP_T_E_SSD2_45,
+			HP_T_E_SSD2_46,
+			HP_T_E_SSD2_47,
+			HP_T_E_SSD2_48,
+			HP_T_E_SSD2_49,
+			HP_T_E_SSD2_50,
+			HP_T_E_SSD2_51,
+			HP_T_E_SSD2_52,
+			HP_T_E_SSD2_53,
+			HP_T_E_SSD2_54,
+			HP_T_E_SSD2_55,
+			HP_T_E_SSD2_56,
+			HP_T_E_SSD2_57,
+			HP_T_E_SSD2_58,
+			HP_T_E_SSD2_59,
+			HP_T_E_SSD2_60,
+			HP_T_E_SSD2_61,
+			HP_T_E_SSD2_62,
+			HP_T_E_SSD2_63,
+			HP_T_E_SSD2_64,
+			HP_T_E_SSD2_65,
+			HP_T_E_SSD2_66,
+			HP_T_E_SSD2_67,
+			HP_T_E_SSD2_68,
+			HP_T_E_SSD2_69,
+			HP_T_E_SSD2_70,
+			HP_T_E_SSD2_71,
+			HP_T_E_SSD2_72,
+			HP_T_E_SSD2_73,
+			HP_T_E_SSD2_74,
+			HP_T_E_SSD2_75,
+			HP_T_E_SSD2_76,
+			HP_T_E_SSD2_77,
+			HP_T_E_SSD2_78,
+			HP_T_E_SSD2_79,
+			HP_T_E_SSD2_80,
+			HP_T_E_SSD2_81,
+			HP_T_E_SSD2_82,
+			HP_T_E_SSD2_83,
+			HP_T_E_SSD2_84,
+			HP_T_E_SSD2_85,
+			HP_T_E_SSD2_86,
+			HP_T_E_SSD2_87,
+			HP_T_E_SSD2_88,
+			HP_T_E_SSD2_89,
+			HP_T_E_SSD2_90,
+			HP_T_E_SSD2_91,
+			HP_T_E_SSD2_92,
+			HP_T_E_SSD2_93,
+			HP_T_E_SSD2_94,
+			HP_T_E_SSD2_95,
+			HP_T_E_SSD2_96,
+			HP_T_E_SSD2_97,
+			HP_T_E_SSD2_98,
+			HP_T_E_SSD2_99,
+			HP_T_E_SSD2_100,
+			HP_T_E_SSD2_101,
+			HP_T_E_SSD2_102,
+			HP_T_E_SSD2_103,
+			HP_T_E_SSD2_104,
+			HP_T_E_SSD2_105,
+			HP_T_E_SSD2_106,
+			HP_T_E_SSD2_107,
+			HP_T_E_SSD2_108,
+			HP_T_E_SSD2_109,
+			HP_T_E_SSD2_110,
+			HP_T_E_SSD2_111,
+			HP_T_E_SSD2_112,
+			HP_T_E_SSD2_113,
+			HP_T_E_SSD2_114,
+			HP_T_E_SSD2_115,
+			HP_T_E_SSD2_116,
+			HP_T_E_SSD2_117,
+			HP_T_E_SSD2_118,
+			HP_T_E_SSD2_119,
+			HP_T_E_SSD2_120,
+			HP_T_E_SSD2_121,
+			HP_T_E_SSD2_122,
+			HP_T_E_SSD2_123,
+			HP_T_E_SSD2_124,
+			HP_T_E_SSD2_125,
+			HP_T_E_SSD2_126,
+			HP_T_E_SSD2_127,
+			HP_T_E_SSD2_128,
+			HP_T_E_SSD2_129,
+			HP_T_E_SSD2_130,
+			HP_T_E_SSD2_131,
+			HP_T_E_SSD2_132,
+			HP_T_E_SSD2_133,
+			HP_T_E_SSD2_134,
+			HP_T_E_SSD2_135,
+			HP_T_E_SSD2_136,
+			HP_T_E_SSD2_137,
+			HP_T_E_SSD2_138,
+			HP_T_E_SSD2_139,
+			HP_T_E_SSD2_140,
+			HP_TM_ECLIPSE1_09,
+			HP_TM_ECLIPSE1_10,
+			HP_TM_ECLIPSE1_11,
+			HP_TM_ECLIPSE1_12,
+			HP_TM_ECLIPSE1_13,
+			HP_TM_ECLIPSE1_14,
+			HP_TM_ECLIPSE1_15,
+			HP_TM_ECLIPSE1_16,
+			HP_TM_ECLIPSE1_17,
+			HP_TM_ECLIPSE1_18,
+			HP_TM_ECLIPSE1_19,
+			HP_TM_ECLIPSE1_20,
+			HP_TM_ECLIPSE1_21,
+			HP_TM_ECLIPSE1_22,
+			HP_TM_ECLIPSE1_23,
+			HP_TM_ECLIPSE1_24,
+			HP_TM_ECLIPSE1_25,
+			HP_TM_ECLIPSE1_26,
+			HP_TM_ECLIPSE1_27,
+			HP_TM_ECLIPSE1_28,
+			HP_TM_ECLIPSE1_29,
+			HP_TM_ECLIPSE1_30,
+			HP_T_Sovereign_63,
+			HP_T_Sovereign_64,
+			HP_T_Sovereign_65,
+			HP_T_Sovereign_66,
+			HP_T_Sovereign_67,
+			HP_T_Sovereign_68,
+			HP_T_Sovereign_69,
+			HP_T_Sovereign_70,
+			HP_T_Sovereign_71,
+			HP_T_Sovereign_72,
+			HP_T_Sovereign_73,
+			HP_T_Sovereign_74,
+			HP_T_Sovereign_75,
+			HP_T_Sovereign_76,
+			HP_T_Sovereign_77,
+			HP_T_Sovereign_78,
+			HP_T_Sovereign_79,
+			HP_T_Sovereign_80,
+			HP_T_Sovereign_81,
+			HP_T_Sovereign_82,
+			HP_T_Sovereign_83,
+			HP_T_Sovereign_84,
+			HP_T_Sovereign_85,
+			HP_T_Sovereign_86,
+			HP_T_Sovereign_87,
+			HP_T_Sovereign_88,
+			HP_T_Sovereign_89,
+			HP_T_Sovereign_90,
+			HP_T_Sovereign_91,
+			HP_T_Sovereign_92,
+			HP_T_Sovereign_93,
+			HP_T_Sovereign_94,
+			HP_T_Sovereign_95,
+			HP_T_Sovereign_96,
+			HP_T_Sovereign_97,
+			HP_T_Sovereign_98,
+			HP_T_Sovereign_99,
+			HP_T_Sovereign_100,
+			HP_T_Sovereign_101,
+			HP_T_Sovereign_102,
+			HP_T_Sovereign_103,
+			HP_T_Sovereign_104,
+			HP_T_Sovereign_105,
+			HP_T_Sovereign_106,
+			HP_T_Sovereign_107,
+			HP_T_Sovereign_108,
+			HP_T_Sovereign_109,
+			HP_T_Sovereign_110,
+			HP_T_Sovereign_111,
+			HP_T_Sovereign_112,
+			HP_T_Sovereign_113,
+			HP_T_Sovereign_114,
+			HP_T_Sovereign_115,
+			HP_T_Sovereign_116,
+			HP_T_Sovereign_117,
+			HP_T_Sovereign_118,
+			HP_T_Sovereign_119,
+			HP_T_Sovereign_120,
+			HP_T_Sovereign_121,
+			HP_T_Sovereign_122,
+			HP_T_Sovereign_123,
+			HP_T_Sovereign_124,
+			HP_MisilA_01, 
+			HP_MisilA_02,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorSH_00,
+			HP_EnginesSH_00,
+			HP_EnginesSH_01,
+			HP_EnginesSH_02
+		</HardPoints>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+
+		<Icon_Name>I_BUTTON_SOVEREIGN.TGA</Icon_Name>
+
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_SOVEREIGN_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+				
+		<Build_Speech_Underway> EHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Select_Jedi_Cruiser </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Unit_Canceled </Build_Speech_Stopped>
+		<!-- Intentially called "Speech_Death_Star_Build_" (with trailing underscore)  for varied countdown references in SpeechEvents.xml -->
+		<Build_Speech_Countdowns> EHD_Build_Vehicle </Build_Speech_Countdowns>
+
+		<Build_Music_Completed> Galactic_Death_Star_Complete_Music_Event </Build_Music_Completed>
+		
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.25  0.30800</Radar_Icon_Size>  
+		
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+
+		<Death_Clone>Damage_Normal, Sovereign_Death_Clone</Death_Clone>
+		
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>SUPER_LASER</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Sovereign_Super_Laser_Attack_Ability </GUI_Activated_Ability_Name> 
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Attack_Tyber_Zann</SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Death_Star_2_Fire </SFXEvent_Special_Ability_Loop> 
+				<Alternate_Description_Text>TEXT_TOOLTIP_ECLIPSE_SL_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> Sovereign_Tractor_Beam_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	        </Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+			<Tractor_Beam_Attack_Ability Name="Sovereign_Tractor_Beam_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>5000</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>0</Stacking_Category>            
+	      	</Tractor_Beam_Attack_Ability>
+
+			<Super_Laser_Ability Name="Sovereign_Super_Laser_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories> Capital | Corvette | Frigate | Structure | Transport | Spacehero</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>MuzzleA_00</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>70000</Activation_Max_Range>
+				
+				<Damage_Per_Frame>100000000</Damage_Per_Frame>			
+				<Fire_Frame>106</Fire_Frame>
+				<Beam_Texture_Name>tractor_beam01.tga</Beam_Texture_Name>
+				<Num_Anim_Frames>5</Num_Anim_Frames>
+				<Line_Width>45</Line_Width>
+				<Line_Color>0 237 119 255</Line_Color>
+				<Face_Target>true</Face_Target>
+				<Turn_Rate>-1.0f</Turn_Rate>
+				<Firing_Cone>10.0f</Firing_Cone>
+			</Super_Laser_Ability>
+			
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+				
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<!-- We can block/redirect shots from the following units types: -->
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Super | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			
+			<Combat_Bonus_Ability Name="SOV_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Sovereign</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>100.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Force_Healing_Ability Name="SOV_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>Sovereign</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>TractorBeam</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>48000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>111</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Bribe_Cost>12000</Tactical_Bribe_Cost>
+
+		<Population_Value>15</Population_Value>
+		<Space_Override_Population_Value>10</Space_Override_Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Sovereign_Death_Clone">
+		<Text_ID>TEXT_UNIT_SOVEREIGN_SSD</Text_ID>
+		<Space_Model_Name>EV_SOVEREIGN_D.ALO</Space_Model_Name>
+		<In_Background>No</In_Background>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Layer_Z_Adjust>-2000.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+	</SpaceUnit>
+	
+	
+</SovereignUnit_Data>

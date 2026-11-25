@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<EVFO_Nebulon_B_Data>
+	
+	<SpaceUnit Name="EVFO_Nebulon_B">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Corellian_Corvette Rep_Marauder E_CR_CVM </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MC40 R_Dreadnought_Up Y-Wing </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>EVFO_Nebulon_B.ALO</Space_Model_Name>
+		<Scale_Factor>0.275</Scale_Factor>
+		<CategoryMask> Frigate | AntiCorvette</CategoryMask>
+		<Icon_Name>i_button_EVFO_Nebulon_B.tga</Icon_Name>
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		
+		<Death_Clone>Damage_Normal, EVFO_Nebulon_B_Death_Clone</Death_Clone>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_NEBULON_B TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		
+		<HardPoints>
+		  	HP_EVFO_Nebulon_B_01, 
+			HP_EVFO_Nebulon_B_02, 
+			HP_EVFO_Nebulon_B_03, 
+			HP_EVFO_Nebulon_B_04, 
+			HP_EVFO_Nebulon_B_05, 
+			HP_EVFO_Nebulon_B_06, 
+			HP_EVFO_Nebulon_B_07, 
+			HP_EVFO_Nebulon_B_08, 
+			HP_EVFO_Nebulon_B_09, 
+			HP_EVFO_Nebulon_B_10, 
+			HP_EVFO_Nebulon_B_11, 
+			HP_EVFO_Nebulon_B_12, 
+			HP_EVFO_Nebulon_B_13, 
+			HP_Shield_Generator_00, 
+			HP_Engines_00,
+			HP_Fighter_Bay_01
+		</HardPoints>
+		
+		 <Unit_Abilities_Data SubObjectList="Yes">
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>	
+		  
+	   </Unit_Abilities_Data>
+	</SpaceUnit>	
+	<SpaceUnit Name="EVFO_Nebulon_B_Death_Clone">
+		<Text_ID>TEXT_UNIT_NEBULON_FRIGATE</Text_ID>
+		<Space_Model_Name>EVFO_Nebulon_B_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.275</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+</EVFO_Nebulon_B_Data>

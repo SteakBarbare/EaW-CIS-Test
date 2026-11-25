@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO MOVIMIENTOS ESPECIALES ********-->
+<!--**************************************************************************-->
+
+<Story>
+	
+	 <Event Name="Inicio_Spawn_Sol_Negro_Units">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+		
+	 <Event Name="Dar_planeta_a_bando_SolNegro_00_V">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>NarShadda</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>
+			
+	<Event Name="Dar_planeta_a_bando_SolNegro_01_V">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Abregado_Rae</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>
+			
+	<Event Name="Dar_planeta_a_bando_SolNegro_02_V">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Ord_Mantell</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>
+			
+	<Event Name="Dar_planeta_a_bando_SolNegro_03_V">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Myrkr</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>
+			
+	<Event Name="Dar_planeta_a_bando_SolNegro_04_V">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Bonadan</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>
+			
+	<Event Name="Dar_planeta_a_bando_SolNegro_05_V">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Kessel</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>		
+	
+	<Event Name="Dar_planeta_a_bando_SolNegro_06_V">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>VergessoAsteroids</Reward_Param1>
+		<Reward_Param2>Underworld</Reward_Param2>
+		<Prereq>Inicio_Spawn_Sol_Negro_Units</Prereq>
+	</Event>		
+		
+      <Event Name="Spawn_Sol_Negro_Units_00">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>15</Event_Param1>
+		<Prereq>Dar_planeta_a_bando_SolNegro_06_V</Prereq>
+	  </Event>
+	  
+	  <Event Name="Spawn_Sol_Negro_Units_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Spawn_Sol_Negro_Units_00</Prereq>
+	  </Event>
+	  
+	  <Event Name="Spawn_Sol_Negro_Units_02">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Spawn_Sol_Negro_Units_01</Prereq>
+	  </Event>
+	  
+	  <Event Name="Spawn_Sol_Negro_Units_03">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Spawn_Sol_Negro_Units_02</Prereq>
+	  </Event>
+	  
+	  <Event Name="Spawn_Sol_Negro_Units_04">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Spawn_Sol_Negro_Units_03</Prereq>
+	  </Event>
+	  
+	  <Event Name="Spawn_Sol_Negro_Units_05">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Spawn_Sol_Negro_Units_04</Prereq>
+	  </Event>
+	  
+	  <Event Name="Spawn_Sol_Negro_Units_06">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Prereq>Spawn_Sol_Negro_Units_04</Prereq>
+	  </Event>
+	  
+	  
+				
+	
+</Story>

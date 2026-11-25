@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+<Units_Astilleros_RBUnit_Data>
+	
+	<SpecialStructure Name="Astilleros_NoIA3"><!-- Clon Wars era desbloquea para humano esas unidades -->
+		<Variant_Of_Existing_Type>Astilleros_NoIA</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOSCW</Text_ID>
+		<Affiliation>Empire, Rebel, Republic, CIS</Affiliation>	
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Astilleros_NoIA4"><!-- Legacy era desbloquea para humano esas unidades -->
+		<Variant_Of_Existing_Type>Astilleros_NoIA</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOSLE</Text_ID>
+		<Affiliation>Empire, Rebel, Krayt, Fel</Affiliation>		
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Astilleros_IA3"><!-- Clon Wars era desbloquea para la IA esas unidades -->
+		<Variant_Of_Existing_Type>Astilleros_NoIA</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOSCW</Text_ID>
+		<Lua_Script>SSD_Shipy_IA</Lua_Script>
+		<AI_Combat_Power>8500</AI_Combat_Power>
+		<Affiliation>Empire, Rebel, Republic, CIS</Affiliation>		
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Mining_Income_Bonus">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
+				<Percentage_Income_Modifier>0.0</Percentage_Income_Modifier>
+				<Absolute_Income_Modifier>250.0</Absolute_Income_Modifier>
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Astilleros_IA4"><!-- Legacy era desbloquea para la IA esas unidades -->
+		<Variant_Of_Existing_Type>Astilleros_NoIA</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOSLE</Text_ID>
+		<Lua_Script>SSD_Shipy_IA</Lua_Script>
+		<AI_Combat_Power>8500</AI_Combat_Power>
+		<Affiliation>Empire, Rebel, Krayt, Fel</Affiliation>		
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Mining_Income_Bonus">
+				<Specific_Mod_Source_Text>TEXT_ECONOMY_MINING_FACILITIES</Specific_Mod_Source_Text>
+				<Percentage_Income_Modifier>0.0</Percentage_Income_Modifier>
+				<Absolute_Income_Modifier>250.0</Absolute_Income_Modifier>
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+	
+		
+
+	<!-- no usado porque resulto que quizas todo el sistema de aumentador de tiempos ralentizaba el juego y lo hacia hasta menos divertido -->
+	<SpaceUnit Name="Astilleros">
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Space_Model_Name>NV_Shipyard.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Shipyard10.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<GUI_Row>0</GUI_Row>
+		<Affiliation>Empire, Rebel</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Cost_Credits>1200</Build_Cost_Credits>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Lua_Script>Up_Astilleros_PesadosRB</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Time_Reduced_By_Multiple_Factories>no</Build_Time_Reduced_By_Multiple_Factories>
+		<behavior> DUMMY_STARSHIP </behavior>
+		<CategoryMask>Upgrade</CategoryMask>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+		
+	<SpecialStructure Name="Astilleros_Pesados_1">
+		<Variant_Of_Existing_Type>Astilleros_Pesados</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Icon_Name>I_BUTTON_Shipyard10.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Astilleros_Pesados_10_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Upgrade | Fighter | Bomber | Corvette | Frigate | Capital | Air | Vehicle | Infantry | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.05</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+	   </Abilities>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="Astilleros_Pesados_1_10">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>I_BUTTON_Shipyard20.tga</Icon_Name>
+		<Space_Model_Name>NV_RepairYardX2.ALO</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<HardPoints>
+			HP_Shipyard_Shield01,
+			HP_Shipyard_Shield02,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04,
+			HP_IonBatShot_01,
+			HP_IonBatShot_02,
+			HP_IonBatShot_03,
+			HP_IonBatShot_04
+		</HardPoints>
+		<Death_Clone>Damage_Normal, Repairyardx2_Plattform_Death_Clone</Death_Clone>
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Astilleros_Pesados_10_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Upgrade | Fighter | Bomber | Corvette | Frigate | Capital | Air | Vehicle | Infantry | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.1</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+	   </Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Astilleros_Pesados_1_10_20">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY20 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>I_BUTTON_Shipyard30.tga</Icon_Name>
+		<Space_Model_Name>NV_RepairYardRebelX1.ALO</Space_Model_Name>
+		<HardPoints>
+			HP_Shipyard_Shield01,
+			HP_Shipyard_Shield02,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04,
+			HP_IonBatShot_01,
+			HP_IonBatShot_02,
+			HP_IonBatShot_03,
+			HP_IonBatShot_04
+		</HardPoints>
+		<Death_Clone>Damage_Normal, Repairyard2x1_Plattform_Death_Clone</Death_Clone>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Astilleros_Pesados_20_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Upgrade | Fighter | Bomber | Corvette | Frigate | Capital | Air | Vehicle | Infantry | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.15</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+	   </Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Astilleros_Pesados_1_10_20_30">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY30 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>I_BUTTON_Shipyard40.tga</Icon_Name>
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03
+		</HardPoints>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Space_Model_Name>NV_Station01.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, AdvancedTech_6_Death_Clone</Death_Clone>	
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Astilleros_Pesados_30_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Upgrade | Fighter | Bomber | Corvette | Frigate | Capital | Air | Vehicle | Infantry | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.2</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+	   </Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Astilleros_Pesados_1_10_20_30_40">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY40 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>I_BUTTON_Shipyard50.tga</Icon_Name>
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03
+		</HardPoints>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Space_Model_Name>NV_Station02.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, AdvancedTech_7_Death_Clone</Death_Clone>	
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Astilleros_Pesados_40_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Upgrade | Fighter | Bomber | Corvette | Frigate | Capital | Air | Vehicle | Infantry | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.25</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+	   </Abilities>
+	</SpecialStructure>
+	<SpecialStructure Name="Astilleros_Pesados_1_10_20_30_40_50">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY50 </Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Icon_Name>I_BUTTON_Shipyard60.tga</Icon_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Station03.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, AdvancedTech_8_Death_Clone</Death_Clone>	
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Shield_GeneratorH_05
+		</HardPoints>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Astilleros_Pesados_50_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Upgrade | Fighter | Bomber | Corvette | Frigate | Capital | Air | Vehicle | Infantry | Structure</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.30</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+	   </Abilities>
+	</SpecialStructure>
+	
+	<SpaceUnit Name="Up_Astilleros_Pesados_10">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard20.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1</Required_Special_Structures>
+		<Lua_Script>Up_Astilleros_Pesados_10</Lua_Script>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="Up_Astilleros_Pesados_20">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY20 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard30.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10</Required_Special_Structures>
+		<Lua_Script>Up_Astilleros_Pesados_20</Lua_Script>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="Up_Astilleros_Pesados_30">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY30 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard40.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20</Required_Special_Structures>
+		<Lua_Script>Up_Astilleros_Pesados_30</Lua_Script>
+		<Build_Cost_Credits>7000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="Up_Astilleros_Pesados_40">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY40 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard50.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20_30</Required_Special_Structures>
+		<Lua_Script>Up_Astilleros_Pesados_40</Lua_Script>
+		<Build_Cost_Credits>8000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="Up_Astilleros_Pesados_50">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_BUILDCAPABILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BUILDCAPABILITY50 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard60.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20_30_40</Required_Special_Structures>
+		<Lua_Script>Up_Astilleros_Pesados_50</Lua_Script>
+		<Build_Cost_Credits>9000</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="V_1">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Encyclopedia_Text>TEXT_TOOLTIP_BUILDCAPABILITY10</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Shipyard10.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1</Required_Special_Structures>
+		<Lua_Script>V_1</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="V_1_10">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Encyclopedia_Text>TEXT_TOOLTIP_BUILDCAPABILITY20</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Shipyard20.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10</Required_Special_Structures>
+		<Lua_Script>V_1_10</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="V_1_10_20">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Encyclopedia_Text>TEXT_TOOLTIP_BUILDCAPABILITY30</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Shipyard30.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20</Required_Special_Structures>
+		<Lua_Script>V_1_10_20</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="V_1_10_20_30">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Encyclopedia_Text>TEXT_TOOLTIP_BUILDCAPABILITY40</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Shipyard40.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20_30</Required_Special_Structures>
+		<Lua_Script>V_1_10_20_30</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="V_1_10_20_30_40">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Encyclopedia_Text>TEXT_TOOLTIP_BUILDCAPABILITY40</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Shipyard50.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20_30_40</Required_Special_Structures>
+		<Lua_Script>V_1_10_20_30_40</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="V_1_10_20_30_40_50">
+		<Variant_Of_Existing_Type>V_Orbital_Mine</Variant_Of_Existing_Type>
+        <Encyclopedia_Text>TEXT_TOOLTIP_BUILDCAPABILITY50</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Shipyard60.tga</Icon_Name>
+		<Affiliation>Empire, Rebel, Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_Pesados_1_10_20_30_40_50</Required_Special_Structures>
+		<Lua_Script>V_1_10_20_30_40_50</Lua_Script>
+	</SpaceUnit>
+	
+	
+</Units_Astilleros_RBUnit_Data>

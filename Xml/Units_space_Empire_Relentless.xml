@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<RelentlessUnit_Data>
+	<SpaceUnit Name="Relentless">
+		<Variant_Of_Existing_Type>RelentlessORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		<Starting_Spawned_Units_Tech_0>Gunboat_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Gunboat_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, Relentless_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="RelentlessORG">
+		<Variant_Of_Existing_Type>ISD2ORG</Variant_Of_Existing_Type>
+
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Text_ID>TEXT_UNIT_RELENTLESS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RELENTLESS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_GUNBOAT TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_CARRIER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a R_Dreadnought_Up </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> K-wing B-Wing MC90 </Encyclopedia_Vulnerable_To>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Relentless_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_Relentless.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+
+		<Max_Speed>2.0</Max_Speed>
+
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Affiliation>Empire</Affiliation>
+		
+		<Tech_Level>99</Tech_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+				
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>125000</Shield_Points> 
+		<Tactical_Health>300000000</Tactical_Health>
+		<Shield_Refresh_Rate>131000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate><!-- 60% redondeado del valor de la energia -->
+		
+		<Build_Cost_Credits>21000</Build_Cost_Credits>
+		<AI_Combat_Power>4200</AI_Combat_Power>
+		
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Space_FOW_Reveal_Range>1500.0</Space_FOW_Reveal_Range>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				Wombat,
+				ISD2_R
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<HardPoints> 
+			HP_EspecialGH_00, 
+			HP_EspecialGH_01,
+			HP_EspecialGH_02,
+			HP_EspecialGH_03,
+			HP_EspecialGH_04,
+			HP_EspecialGH_05,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Rocket_01,
+			HP_Rocket_02,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_TH_Relentless_01,
+			HP_TH_Relentless_02,
+			HP_TH_Relentless_03,
+			HP_TH_Relentless_04,
+			HP_TH_Relentless_05,
+			HP_TH_Relentless_06,
+			HP_TH_Relentless_07,
+			HP_TH_Relentless_08,
+			HP_TH_Relentless_09,
+			HP_TH_Relentless_10,
+			HP_TH_Relentless_11,
+			HP_TH_Relentless_12,
+			HP_TH_Relentless_13,
+			HP_TH_Relentless_14,
+			HP_TH_Relentless_15,
+			HP_TH_Relentless_16,
+			HP_TH_Relentless_17,
+			HP_TH_Relentless_18,
+			HP_TH_Relentless_19,
+			HP_TH_Relentless_20,
+			HP_TH_Relentless_21,
+			HP_TH_Relentless_22,
+			HP_TH_Relentless_23,
+			HP_TH_Relentless_24,
+			HP_TH_Relentless_25,
+			HP_TH_Relentless_26,
+			HP_TH_Relentless_27,
+			HP_TH_Relentless_28,
+			HP_TH_Relentless_29,
+			HP_TH_Relentless_30,
+			HP_TH_Relentless_31,
+			HP_TH_Relentless_32,
+			HP_TH_Relentless_33,
+			HP_TH_Relentless_34,
+			HP_TH_Relentless_35,
+			HP_TH_Relentless_36,
+			HP_TH_Relentless_37,
+			HP_TH_Relentless_38,
+			HP_TH_Relentless_39,
+			HP_TH_Relentless_40,
+			HP_TH_Relentless_41,
+			HP_TH_Relentless_42,
+			HP_TH_Relentless_43,
+			HP_TH_Relentless_44,
+			HP_T_Relentless_37,
+			HP_T_Relentless_38,
+			HP_T_Relentless_39,
+			HP_T_Relentless_40,
+			HP_T_Relentless_41,
+			HP_T_Relentless_42,
+			HP_T_Relentless_43,
+			HP_T_Relentless_44,
+			HP_T_Relentless_45,
+			HP_T_Relentless_46,
+			HP_T_Relentless_47,
+			HP_T_Relentless_48,
+			HP_T_Relentless_49,
+			HP_T_Relentless_50,
+			HP_T_Relentless_51,
+			HP_T_Relentless_52,
+			HP_T_Relentless_53,
+			HP_T_Relentless_54,
+			HP_T_Relentless_55,
+			HP_T_Relentless_56,
+			HP_T_Relentless_57,
+			HP_T_Relentless_58,
+			HP_T_Relentless_59,
+			HP_T_Relentless_60,
+			HP_T_Relentless_61,
+			HP_T_Relentless_62,
+			HP_T_Relentless_63,
+			HP_T_Relentless_64
+		</HardPoints>
+		<CategoryMask> SpaceHero </CategoryMask>
+		<Icon_Name>I_BUTTON_RELENTLESS.TGA</Icon_Name>
+		<GUI_Model_Name>EV_Relentless.ALO</GUI_Model_Name>
+		
+		<SFXEvent_Select>Unit_Select_E_RELENTLESS</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_E_BC</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_E_BC</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_E_BC</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_E_BC</SFXEvent_Guard>
+		<SFXEvent_Move_Opposite>Unit_Move_Opposite_E_BC</SFXEvent_Move_Opposite>
+		<SFXEvent_Barrage>Unit_Barrage_E_BC</SFXEvent_Barrage>
+		<SFXEvent_Stop>Unit_Stop_E_BC</SFXEvent_Stop>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_E_BC </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_E_BC </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target>	EHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> EHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_E_BC </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_FIGHTER_BAY, Unit_Attack_E_BC </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Ambient_Loop>Unit_E_BC_Idle_Engine_Loop</SFXEvent_Ambient_Loop>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_MISSILE,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_TORPEDO,  </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_ION_CANNON, Unit_Lost_Ion_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_GRAVITY_WELL, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_FIGHTER_BAY, Unit_Lost_Bay_E_BC </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_TRACTOR_BEAM, </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENABLE_SPECIAL_ABILITY, </SFXEvent_Hardpoint_Destroyed>
+         
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_E_RELENTLESS</SFXEvent_Build_Complete>
+
+		<Radar_Icon_Name>I_RADAR_CAPITAL_SHIP_BOX.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.11178  0.11178</Radar_Icon_Size>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_RELENT_FLEET_REINFORCES_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>E_Rele_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			
+
+	   	</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>21000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>66</Tactical_Build_Time_Seconds>
+		<Population_Value>20</Population_Value>
+		<Space_Override_Population_Value>5</Space_Override_Population_Value>
+		<Tactical_Bribe_Cost>5250</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="Relentless_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EV_Relentless_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>500.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.01</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+	
+	
+</RelentlessUnit_Data>

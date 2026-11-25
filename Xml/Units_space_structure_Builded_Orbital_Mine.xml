@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<Orbital_MineUnit_Data>
+	
+	<SpecialStructure Name="Orbital_Mine">
+		<Text_ID>TEXT_ORBITAL_MINING_FACILITY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ORBITAL_MINING </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_ORBITAL_MINING </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Space_Model_Name>NB_AsteroidMining_Full.ALO</Space_Model_Name>
+		<Select_Box_Scale>3</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+		<Layer_Z_Adjust>-400.0</Layer_Z_Adjust>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Fel, Krayt, CIS, Republic, Chiss, Hapan, Hutts, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 2 </Build_Max_Instances_Per_Planet>
+		
+		<Required_Planets>
+			BilbringiCh, Bilbringi, FondorCh, Fondor, Vahaba, Tedaroc, RocheAsteroids, Ikon, PolisMassa, DespayreDestroyed, CaridaDestroyed, ByssDestroyed, AlderaanDestroyed, AnoatAsteroids, VergessoAsteroids, Hoth, Escarte, Koornatch_Cluster, Zhina, Z_Fell, Wakiza, Tizon, Polneye, N_zoth, New_Brigia, Pirol, Kojash, ILC_905, Doornik_1142, Doornik_881, Doornik_628, Dandalas, KafreneAsteroids, Station_Theta_Black, Sinta
+		</Required_Planets>
+
+		<Size_Value>30</Size_Value>
+		<Base_Position>Orbital</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Tactical_Health>1700</Tactical_Health>
+		<AI_Combat_Power>200</AI_Combat_Power>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, POWERED, TARGETING, TACTICAL_SELL, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI</SpaceBehavior>
+		<Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Icon_Name>I_BUTTON_NV_Orbital_Mine.TGA</Icon_Name>
+		<Victory_Relevant>Yes</Victory_Relevant>
+		<GUI_Model_Name>NB_AsteroidMining_Full.ALO</GUI_Model_Name>
+		<GUI_Distance>1000</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Mining_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Mining_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Mining_Select_SFX</SFXEvent_Select>
+		<CategoryMask> Structure </CategoryMask>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Radar_Show_Facing>No</Radar_Show_Facing>
+		<Radar_Icon_Name>mini_map_mining_facilities.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+		<Armor_Type> Armor_Satellite </Armor_Type>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Gambling_Ability Name="Orbital_Mine_Gambling_Income">
+				
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				
+				<Min_Income_Modifier>0.0</Min_Income_Modifier>
+				
+				<Max_Income_Modifier>0.99</Max_Income_Modifier>
+				
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+		</Abilities>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Score_Cost_Credits> 21000 </Score_Cost_Credits>
+		<Custom_Soft_Footprint_Radius> 200 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> StaticObject </Space_Layer>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpecialStructure>
+	
+	
+</Orbital_MineUnit_Data>

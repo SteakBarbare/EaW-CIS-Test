@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<space_structure_SmallGolanIIIUnit_Data>
+	
+	<UniqueUnit Name="SmallGolanIII">
+		<Variant_Of_Existing_Type>SmallGolanIeORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_SmallGolanIII.alo</Space_Model_Name>
+		<Death_Clone>Damage_Normal, SmallGolanIII_Death_Clone</Death_Clone>
+		<Text_ID>TEXT_UNIT_SGOLANIII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEFSTATION TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_NV_SmallGolanIII.tga</Icon_Name>
+		<Autoresolve_Health>36000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 0.0 </Fire_Inaccuracy_Distance>
+		
+		<Projectile_Types>Proj_SmallGolanIII_Gun</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<SFXEvent_Fire>SmallGolan3</SFXEvent_Fire>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,
+				TIE_Fighter_FO_SquadronB,
+				TIE_Fighter_E_FO_SquadronB,
+				EVFO_TIE_Bomber_SquadronB,
+				EVFO_TIE_Interceptor_SquadronB,
+				EVFO_TIE_Invader_SquadronB,
+				EVFO_TIE_Silencer_SquadronB,
+				EVFO_M_Gunboat_SquadronB,
+				EVFO_TIE_Def_E_SquadronB,
+				EVFO_TIE_Dagger_SquadronB,
+				EVFO_Light_Cruiser,
+				EVFO_Carrier,
+				EVFO_Interdictor,
+				EVFO_Medium_Cruiser,
+				EVFO_VSD3,
+				EVFO_Destroyer,
+				Resurgent,
+				ResurgentT,
+				EVFO_Xyston,
+				EVFO_Onager,
+				EVFO_Dreadnought,
+				EVFO_MandatorV,
+				EVFO_Supremacy,
+			Rebel,
+				RVRE_Ywing_SquadronB,
+				R_XwingT70_SquadronB,
+				RVRE_Awing_SquadronB,
+				RVRE_MG100_SquadronB,
+				RVRE_Ninka,
+				RVRE_Vigil,
+				RVRE_Anodyne,
+				RVRE_MC20,
+				RVRE_Defender_Cruiser,
+				RVRE_MC95,
+				RVRE_MC95A,
+				RVRE_Starhawk,
+				RVRE_Starhawk2,
+				RVRE_Raddus,
+				RVRE_Raddus_variantB,
+				RVRE_Raddus_W,
+				RVRE_Raddus_WB
+				RVRE_Raddus_variantBS,
+				RVRE_MC97,
+				RVRE_MC99
+		</Tactical_Buildable_Objects_Multiplayer>
+				
+		<HardPoints>
+			HP_TurboMO_01,
+			HP_TurboMO_02,
+			HP_TurboMO_03,
+			HP_TurboMO_04,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Shield_GeneratorH_00
+		</HardPoints>
+	
+	</UniqueUnit>
+	
+	
+	<UniqueUnit Name="SmallGolanIII_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>NV_SmallGolanIII.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>NV_SmallGolanIII.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.225</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</UniqueUnit>
+	
+</space_structure_SmallGolanIIIUnit_Data>

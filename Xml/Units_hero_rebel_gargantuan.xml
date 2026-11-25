@@ -1,0 +1,375 @@
+<?xml version="1.0"?>
+
+
+<Gargantuan_Battle_PlatformUnit_Data>
+	
+
+	<GroundVehicle Name="Gargantuan_Battle_Platform">
+		<Variant_Of_Existing_Type>Ha_SpecforceORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GARM_BEL_IBLIS</Text_ID>
+		<Encyclopedia_Good_Against> AT_AT_Walker Canderous_Assault_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MAL_Rocket_Vehicle Dark_Trooper_PhaseIII </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GARM_BEL_IBLIS TEXT_TOOLTIP_REDUCE_TIME_VEHICLES_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIELD_COMMANDER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RI_garm_bel.tga</Icon_Name>
+	
+		<Land_Model_Name>RV_GARGANTUAN.ALO</Land_Model_Name>
+		<Select_Box_Scale>200</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Max_Speed>1.1</Max_Speed>
+		<Max_Rate_Of_Turn>2</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn>1</Stopped_Rate_Of_Turn>
+	
+		<Garrison_Category> Infantry, Vehicle </Garrison_Category>
+        <Num_Garrison_Slots>4</Num_Garrison_Slots>
+        <Garrison_Bone_Names>b_garrison_00</Garrison_Bone_Names>
+		<Garrison_Exit_Dist>0</Garrison_Exit_Dist>
+		<Garrison_Enter_Dist>0</Garrison_Enter_Dist>
+        <Garrison_Radius>30</Garrison_Radius>
+		
+		<LandBehavior>AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, HUNT,WALK_LOCOMOTOR, GARRISON_VEHICLE, IDLE,TARGETING, TURRET, SHIELDED, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, HUNT</LandBehavior>
+		
+		<Affiliation>Rebel</Affiliation>
+
+		<AI_Combat_Power>1000</AI_Combat_Power>
+		<Land_FOW_Reveal_Range>550.0</Land_FOW_Reveal_Range>
+
+		<HardPoints>
+			HP_Underworld_Gagantuan_Shield_Gen_Left,
+			HP_Underworld_Gagantuan_Shield_Gen_Right,
+			HP_Gargantuan_Main_Turret_Front,
+			HP_Gargantuan_Main_Turret_Back,
+			HP_Gargantuan_Small_Turret_Front_Left,
+			HP_Gargantuan_Small_Turret_Front_Right,
+			HP_Gargantuan_Small_Turret_Back_Left,
+			HP_Gargantuan_Small_Turret_Back_Right
+		</HardPoints>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Select>Unit_Select_Gargantuan</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Gargantuan</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gargantuan</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Gargantuan</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Gargantuan</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Gargantuan </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Gargantuan </SFXEvent_Health_Critical_Warning>
+  		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+        <Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+		
+		<SFXEvent_Engine_Idle_Loop> Unit_Gargantuan_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Gargantuan_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+ 		
+		<Death_SFXEvent_Start_Die>Unit_AT_AT_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor_Turbo </SFXEvent_Turret_Rotating_Loop>
+		<SFXEvent_Unit_Lost> Unit_Defeat_Gargantuan </SFXEvent_Unit_Lost>
+
+		<Overall_Length>60.0</Overall_Length>
+
+		<CategoryMask> LandHero | Vehicle | AntiVehicle | AntiStructure </CategoryMask>
+	
+		<Targeting_Priority_Set>AntiVehicleStructure</Targeting_Priority_Set>	
+		<Score_Cost_Credits> 18000 </Score_Cost_Credits>
+		<Population_Value>1</Population_Value>
+
+		<Death_Clone>Damage_Normal, Gargantuan_Battle_Platform_Death_Clone</Death_Clone>
+
+		<Neutralization_Cost>2500.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+	
+		<Lua_Script>R_Gar_Re_1X</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>SHIELD_FLARE</Type>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Gargantuan_Shield_Flare_Vehicle </GUI_Activated_Ability_Name> 
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Shield_Flare_Gargantuan</SFXEvent_GUI_Unit_Ability_Activated>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+		
+			<Shield_Flare_Ability Name="Gargantuan_Shield_Flare_Vehicle">
+				<Max_Damage_Per_Victim>100000</Max_Damage_Per_Victim>
+				<Damage_Radius>1000</Damage_Radius>
+				<Charge_Up_Seconds>1</Charge_Up_Seconds>
+				<Activation_Style> User_Input </Activation_Style>
+				<Owner_Particle_Effect>Shield_FlareRED_Space_Effect</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>184.0, 26.0, 41.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>1.5</Owner_Light_Effect_Duration>
+                <SFXEvent_Activate>Shield_Flare_SFX_Event</SFXEvent_Activate>
+			</Shield_Flare_Ability>
+
+			<Combat_Bonus_Ability Name="Gargantuan_Space_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.20</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Gargantuan_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Vehicle</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+
+			<Combat_Bonus_Ability Name="Gargantuan_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.20</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Remove_Corruption_Ability Name="Gargantuan_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+		</Abilities>
+
+	</GroundVehicle>
+
+
+	<UniqueUnit Name="Gargantuan_Battle_Platform_Death_Clone">
+		<Variant_Of_Existing_Type>Gargantuan_Battle_Platform</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>DIE</Specific_Death_Anim_Type>
+		<Land_Model_Name>RV_gargantuan_DC.alo</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,LAND_OBSTACLE</LandBehavior>
+		<Obstacle_Width>40.0</Obstacle_Width>
+		<Obstacle_Height>40.0</Obstacle_Height>
+		<Obstacle_X_Offset>0.0</Obstacle_X_Offset>
+		<Obstacle_Y_Offset>-20.0</Obstacle_Y_Offset>
+		<!--<Death_Persistence_Duration> 20 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathClone> true </IsDeathClone>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+	</UniqueUnit>
+
+
+	
+	<HeroCompany Name="Garm_Bel_Iblis_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GARM_BEL_IBLIS_TEAM</Text_ID>
+		<Encyclopedia_Good_Against> AT_AT_Walker Canderous_Assault_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MAL_Rocket_Vehicle Dark_Trooper_PhaseIII </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GARM_BEL_IBLIS TEXT_TOOLTIP_REDUCE_TIME_VEHICLES_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FIELD_COMMANDER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RI_garm_bel.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+
+		<Company_Transport_Unit>Peregrino_Dreadnought</Company_Transport_Unit>
+		<Company_Units>Gargantuan_Battle_Platform</Company_Units>
+		
+		<CategoryMask>LandHero | Spacehero</CategoryMask>
+		<Score_Cost_Credits> 20000 </Score_Cost_Credits>
+
+		<SFXEvent_Build_Complete>Unit_Select_Gargantuan</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Gargantuan</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gargantuan</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>5600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Peregrino_Dreadnought_MP">
+		<Variant_Of_Existing_Type>R_Dreadnought</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Abilities SubObjectList="Yes">
+			<Concentrate_Fire_Attack_Ability Name="Peregrino_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Fighter | Bomber | Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Target_Damage_Increase_Percent>0.0</Target_Damage_Increase_Percent>
+				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Concentrate_Fire_Attack_Ability>
+			
+			<Enable_Radar_Ability Name="Peregrino_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			
+			<Combat_Bonus_Ability Name="Gargantuan_Space_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.20</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Shield_Flare_Ability Name="Peregrino_Shield_Flare_Vehicle">
+				<Max_Damage_Per_Victim>100000</Max_Damage_Per_Victim>
+				<Damage_Radius>2000</Damage_Radius>
+				<Charge_Up_Seconds>1</Charge_Up_Seconds>
+				<Activation_Style> User_Input </Activation_Style>
+				<Owner_Particle_Effect>Shield_FlareRED_Space_Effect</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>184.0, 26.0, 41.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>1.5</Owner_Light_Effect_Duration>
+                <SFXEvent_Activate>Shield_Flare_SFX_Event</SFXEvent_Activate>
+			</Shield_Flare_Ability>
+
+		</Abilities>
+	</SpaceUnit>		
+	
+	<SpaceUnit Name="Peregrino_Escort">
+		<Variant_Of_Existing_Type>R_Katana_Dreadnought</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Tactical_Health>40000</Tactical_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Shield_Refresh_Rate>24000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>55000</Energy_Refresh_Rate>
+	</SpaceUnit>
+	<SpaceUnit Name="Peregrino_Dreadnought">
+		<Variant_Of_Existing_Type>R_Katana_Dreadnought</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		
+		<Text_ID>TEXT_UNIT_PEREGRINO</Text_ID>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_Peregrino_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Tech_Level>99</Tech_Level>
+
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Tactical_Health>40000</Tactical_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Shield_Refresh_Rate>24000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>68750</Energy_Refresh_Rate>
+		
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		
+		<Starting_Spawned_Units_Tech_0>Peregrino_Escort, 5</Starting_Spawned_Units_Tech_0>
+		
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<AI_Combat_Power>2780</AI_Combat_Power>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		
+		<CategoryMask> Corvette | SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		<Icon_Name>i_button_RI_garm_bel.TGA</Icon_Name>
+
+		<Landing_Transport_Variant>Gallofree_Transport_Landing</Landing_Transport_Variant>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SHIELD_FLARE</Type>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Peregrino_Shield_Flare_Vehicle </GUI_Activated_Ability_Name> 
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Shield_Flare_Gargantuan</SFXEvent_GUI_Unit_Ability_Activated>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>CONCENTRATE_FIRE</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.1f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 50.0</Mod_Multiplier>
+				<Effective_Radius>4000</Effective_Radius>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Particle_Effect>Home_One_Target_Particles</Particle_Effect>
+				<GUI_Activated_Ability_Name>Peregrino_Ability</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Barrage_Tartan </SFXEvent_Target_Ability>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Concentrate_Fire_Attack_Ability Name="Peregrino_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital | Super | Structure | Spacehero</Applicable_Unit_Categories>
+				<Target_Damage_Increase_Percent>0.0</Target_Damage_Increase_Percent>
+				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Concentrate_Fire_Attack_Ability>
+			
+			<Enable_Radar_Ability Name="Peregrino_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			
+			<Shield_Flare_Ability Name="Peregrino_Shield_Flare_Vehicle">
+				<Max_Damage_Per_Victim>100000</Max_Damage_Per_Victim>
+				<Damage_Radius>2000</Damage_Radius>
+				<Charge_Up_Seconds>1</Charge_Up_Seconds>
+				<Activation_Style> User_Input </Activation_Style>
+				<Owner_Particle_Effect>Shield_FlareRED_Space_Effect</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>184.0, 26.0, 41.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>1.5</Owner_Light_Effect_Duration>
+                <SFXEvent_Activate>Shield_Flare_SFX_Event</SFXEvent_Activate>
+			</Shield_Flare_Ability>
+
+			<Combat_Bonus_Ability Name="Gargantuan_Space_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.20</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.20</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_PEREGRINO TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+
+		<Tactical_Build_Cost_Multiplayer>5600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+
+</Gargantuan_Battle_PlatformUnit_Data>

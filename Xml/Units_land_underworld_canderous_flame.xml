@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+
+
+
+<Canderous_FlameUnit_Data>
+	
+	
+	<!-- Version lanzallamas -->
+	
+	<GroundVehicle Name="Canderous_Flame_Tank">
+		<Variant_Of_Existing_Type>CanderousORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CANDEROUSFLAME_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder AT_AT_Walker M1_Repulsor_Tank  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL SPMAT_Walker </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CANDEROUSFLAME_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name> i_button_uv_flamecander_tank.tga </Icon_Name>
+		<Land_Model_Name>UV_CanderousAssaultTank.alo</Land_Model_Name>
+		
+		<Armor_Type> Armor_ATAT </Armor_Type>
+
+		<Projectile_Types>LanzallamasM2</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+		
+		<Land_FOW_Reveal_Range>260.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<CategoryMask> Vehicle | AntiInfantry </CategoryMask>
+		<Targeting_Priority_Set>AntiInfantry</Targeting_Priority_Set>
+
+		<SFXEvent_Fire>Unit_Flamethrower_Fire</SFXEvent_Fire>
+		<AI_Combat_Power>350</AI_Combat_Power>
+
+		<Vehicle_Thief_Inside_Clone>Canderous_Flame_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Canderous_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="Canderous_Flame_Tank_Captured">
+		<Variant_Of_Existing_Type>Canderous_Flame_Tank</Variant_Of_Existing_Type>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> <!-- time that the user can't eject thief, kicks in right away -->
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+
+
+	<GroundCompany Name="Canderous_Flame_Tank_Company">
+		<Variant_Of_Existing_Type>Canderous_Assault_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CANDEROUSFLAME_TANK_COMPANY</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder AT_AT_Walker M1_Repulsor_Tank  </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank MPTL SPMAT_Walker </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CANDEROUSFLAME_TANK TEXT_DESC_C_CANTIDAD_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_uv_flamecander_tank.tga</Icon_Name>
+
+		<Build_Cost_Credits>1400</Build_Cost_Credits>
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		<Company_Units>Canderous_Flame_Tank, Canderous_Flame_Tank, Canderous_Flame_Tank, Canderous_Flame_Tank, Canderous_Flame_Tank</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+	</GroundCompany>
+
+
+
+
+</Canderous_FlameUnit_Data>

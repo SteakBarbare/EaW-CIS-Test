@@ -1,0 +1,122 @@
+﻿<?xml version="1.0"?>
+
+
+<GA_TBAAUnit_Data>
+	<GroundVehicle Name="GA_TBAA">
+		<Variant_Of_Existing_Type>MPTLORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_TBAA</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_GA_TBAA</Encyclopedia_Text>
+		<Scale_Factor>1.8</Scale_Factor><!--Reescalado real-->
+		<Land_Model_Name>GA_TBAA.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Tactical_Health>400</Tactical_Health>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+
+		<Land_FOW_Reveal_Range>550.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 30 </Targeting_Min_Attack_Distance>
+
+		<Projectile_Types>Proj_TBAA_AA_Turret</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+
+		<Attack_Category_Restrictions> Vehicle | Structure | Landhero </Attack_Category_Restrictions>
+		
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles> 9999 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles> 1 </Turret_Targets_Air_Vehicles>       
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+				
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<CategoryMask> Vehicle | AntiAir </CategoryMask>
+		<Targeting_Priority_Set>AntiAir</Targeting_Priority_Set>
+		
+		<Icon_Name>i_button_GA_TBAA.tga</Icon_Name>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, GA_TBAA_Death_Clone</Death_Clone>
+	
+		<Vehicle_Thief_Inside_Clone>GA_TBAA_Captured</Vehicle_Thief_Inside_Clone>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Attack_MPTL </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Flak_Pod</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</GroundVehicle>
+	
+	<GroundVehicle Name="GA_TBAA_Death_Clone">
+		<Variant_Of_Existing_Type>GA_TBAA</Variant_Of_Existing_Type>
+		<Land_Model_Name>GA_TBAA_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="GA_TBAA_Captured">
+		<Variant_Of_Existing_Type>GA_TBAA</Variant_Of_Existing_Type>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundCompany Name="GA_TBAA_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Artillery_BrigadeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GA_TBAA_BRIGADE</Text_ID>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>820</Build_Cost_Credits>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Company_Units>GA_TBAA, GA_TBAA</Company_Units>
+		<Company_Transport_Unit>GA_Crix_Transport</Company_Transport_Unit>
+		<Required_Special_Structures>Fel_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Icon_Name>i_button_GA_TBAA.tga</Icon_Name>
+	
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_GA_TBAA TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+	</GroundCompany>
+</GA_TBAAUnit_Data>

@@ -1,0 +1,650 @@
+<?xml version="1.0" ?>
+<Story>
+
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Fel_Enter_Tech_2">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Fel_To_Tech_2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Fel_Enter_Tech_3">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Fel_To_Tech_3</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Fel_Enter_Tech_4">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Fel_To_Tech_4</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Fel_Enter_Tech_5">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Fel_To_Tech_5</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_ENEMY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>		
+
+	<Event Name="Investigando_Nivel_2">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>90</Event_Param1>
+		<Prereq>Fel_Enter_Tech_2</Prereq>	
+	</Event>
+
+	<Event Name="Investigando_Nivel_3">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>90</Event_Param1>
+		<Prereq>Fel_Enter_Tech_3</Prereq>
+	</Event>
+
+	<Event Name="Investigando_Nivel_4">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>90</Event_Param1>
+		<Prereq>Fel_Enter_Tech_4</Prereq>
+	</Event>
+
+	<Event Name="Investigando_Nivel_5">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>90</Event_Param1>
+		<Prereq>Fel_Enter_Tech_5</Prereq>
+	</Event>
+
+	
+		<Event Name="LE_Enter_Tech_2">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Prereq>Investigando_Nivel_2</Prereq>
+		</Event>
+
+		<Event Name="LE_Enter_Tech_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Prereq>Investigando_Nivel_3</Prereq>
+		</Event>
+
+		<Event Name="LE_Enter_Tech_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Prereq>Investigando_Nivel_4</Prereq>
+		</Event>
+				
+		<Event Name="LE_Enter_Tech_5">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Prereq>Investigando_Nivel_5</Prereq>
+		</Event>
+		
+	<!-- Set Tech Levels -->
+		
+		<!-- Special locks structuras y unidades al comienzo -->
+	
+	<Event Name="Spawn_Darth_Krayt_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Krayt_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_01_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Krayt_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_01_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Krayt_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_01_LE_A</Prereq>
+		</Event>
+		
+	<Event Name="Spawn_Darth_Wyyrlok_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Wyyrlok_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_02_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Wyyrlok_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_02_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Wyyrlok_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_02_LE_A</Prereq>
+		</Event>
+		
+	<Event Name="Spawn_Darth_Talon_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Talon_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_03_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Talon_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_03_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Talon_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_03_LE_A</Prereq>
+		</Event>
+		
+	<Event Name="Spawn_Moff_Morlish_Veed_PellaeonSD">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Moff_Morlish_Veed_PellaeonSD</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_04_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Moff_Morlish_Veed_PellaeonSD</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_04_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Moff_Morlish_Veed_PellaeonSD</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_04_LE_A</Prereq>
+		</Event>
+	
+	<Event Name="Spawn_Moff_Fehlaaur_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Moff_Fehlaaur_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_05_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Moff_Fehlaaur_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_05_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Moff_Fehlaaur_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_05_LE_A</Prereq>
+		</Event>
+		
+	<Event Name="Spawn_Moff_Nyna_Calixte_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Moff_Nyna_Calixte_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_06_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Moff_Nyna_Calixte_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_06_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Moff_Nyna_Calixte_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_06_LE_A</Prereq>
+		</Event>
+	
+	<Event Name="Spawn_Captain_Meeshal">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Captain_Meeshal</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_07_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Captain_Meeshal</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_07_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Captain_Meeshal</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_07_LE_A</Prereq>
+		</Event>
+		
+	<Event Name="Spawn_Darth_Strife_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Strife_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_08_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Strife_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_08_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Strife_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_08_LE_A</Prereq>
+		</Event>
+	
+	<Event Name="Spawn_Darth_Maladi_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Maladi_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_09_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Maladi_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_09_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Strife_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_09_LE_A</Prereq>
+		</Event>
+	
+	<Event Name="Spawn_Darth_Nilh_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Nilh_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_10_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Nilh_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_10_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Nilh_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_10_LE_A</Prereq>
+		</Event>
+	
+	<Event Name="Spawn_Darth_Azard_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Darth_Azard_Team</Reward_Param1>
+		<Reward_Param2>KorribanK</Reward_Param2>
+		<Prereq>Universal_Story_Start LE_Enter_Tech_5</Prereq>
+	</Event>
+		<Event Name="Borrar_Heroe_11_LE_A">
+			<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+			<Event_Param1>Darth_Azard_Team</Event_Param1>
+			<Event_Param2></Event_Param2>
+			<Event_Param3>1</Event_Param3>
+			<Perpetual>true</Perpetual>
+		</Event>	
+		<Event Name="Borrar_Heroe_11_LE_B">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>REMOVE_UNIT</Reward_Type>
+			<Reward_Param1>Darth_Azard_Team</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Perpetual>True</Perpetual>
+			<Prereq>Borrar_Heroe_11_LE_A</Prereq>
+		</Event>
+		
+	<!-- Bloquear Corbetas Principio -->
+		<Event Name="RB_Krayt_Ocultar02_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Assassin_Corvette_H</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="RB_Krayt_Ocultar03_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Assassin_Corvette_H</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+<!-- Bloquear Cruceros Final -->
+<!-- Bloquear Destructores Principio -->
+
+		
+		<Event Name="RB_Krayt_Ocultar02_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_PellaeonSD_A</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+<!-- Bloquear Cruceros_Pesados Final -->
+<!-- Bloquear Cruceros_de_Batalla Principio -->
+		<Event Name="RB_Krayt_Ocultar01_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Dragon</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+<!-- Bloquear Cruceros_de_Batalla Final -->
+
+<!-- Bloquear Super_Destructores Principio -->
+		<Event Name="RB_Krayt_Ocultar01_Super_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Imperious</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="RB_Krayt_Ocultar02_Super_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Nemesis</Reward_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+<!-- Bloquear Super_Destructores Final -->
+
+
+
+<!-- Activar Cazas Final -->
+<!-- Activar corbetas Principio -->
+
+		<Event Name="RB_Krayt_DesOcultar02_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Assassin_Corvette_H</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_3</Prereq>
+        </Event>
+		
+		<Event Name="RB_Krayt_DesOcultar03_Corbetas">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Assassin_Corvette_H</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_4</Prereq>
+        </Event>
+
+						
+<!-- Activar capitals Final -->
+<!-- Activar Destructores Principio -->
+		
+		<Event Name="RB_Krayt_DesOcultar02_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_PellaeonSD_A</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_4</Prereq>
+        </Event>
+
+<!-- Activar Destructores Final -->
+ <!-- Activar Cruceros_Pesados Final -->
+ 
+ <!-- Activar Cruceros_de_Batalla Principio -->
+ 		<Event Name="RB_Krayt_DesOcultar01_Cruceros_de_Batalla">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Dragon</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+			
+ <!-- Activar Cruceros_de_Batalla Final -->
+ 
+ <!-- Activar Super_Destructores Principio -->
+ 		<Event Name="RB_Krayt_DesOcultar01_Super_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Imperious</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		
+		<Event Name="RB_Krayt_DesOcultar02_Super_Destructores">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>IA_EVK_Nemesis</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		
+	
+		
+ <!-- Activar Super_Destructores Final -->
+  <!-- FILTROS UNIDADES TERRESTRES-->
+
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_B">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_B</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_C">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_C</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_D">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_D</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_E">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_E</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_F">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_F</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_G">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_G</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_EVK_ATSHW_Squad_SM_H">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_H</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> Universal_Story_Start</Prereq>
+        </Event>
+		
+		
+		
+<!-- Bloquear Vehiculos Aereos Final -->			
+		
+<!-- Activar Infanteria Principio -->
+
+		
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_B">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_B</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_C">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_C</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_D">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_D</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_E">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_E</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_F">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_F</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_G">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_G</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_EVK_ATSHW_Squad_SM_H">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_ATSHW_Squad_SM_H</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq> LE_Enter_Tech_5</Prereq>
+        </Event>
+		
+		<Event Name="RB_Krayt_Ocultar_Estructuras_espaciales_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_GolanIV_Defenses</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_Estructuras_espaciales_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_GolanV_Defenses</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_Ocultar_Estructuras_espaciales_06">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>LOCK_UNIT</Reward_Type>
+                <Reward_Param1>EVK_GolanVI_Defenses</Reward_Param1>
+                <Perpetual>True</Perpetual>
+		        <Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+
+		<Event Name="RB_Krayt_DesOcultar_Estructuras_espaciales_04">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_GolanIV_Defenses</Reward_Param1>
+				<Perpetual>True</Perpetual>
+			    <Prereq>  LE_Enter_Tech_3</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_Estructuras_espaciales_05">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_GolanV_Defenses</Reward_Param1>
+				<Perpetual>True</Perpetual>
+			    <Prereq>  LE_Enter_Tech_4</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_Estructuras_espaciales_06">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_GolanVI_Defenses</Reward_Param1>
+				<Perpetual>True</Perpetual>
+			    <Prereq>  LE_Enter_Tech_5</Prereq>
+        </Event>
+		
+		<Event Name="RB_Krayt_DesOcultar_Commanders_01">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>Krayt_Field_Com_Team</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>LE_Enter_Tech_5</Prereq>
+        </Event>
+		<Event Name="RB_Krayt_DesOcultar_Commanders_03">
+                <Event_Type>STORY_TRIGGER</Event_Type>
+                <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+                <Reward_Param1>EVK_Fleet_AI</Reward_Param1>
+                <Perpetual>True</Perpetual>
+			    <Prereq>LE_Enter_Tech_5</Prereq>
+        </Event>
+
+</Story>

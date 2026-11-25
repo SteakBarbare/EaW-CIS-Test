@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<E_Troop_TransportUnit_Data>
+
+	
+	<GroundVehicle Name="E_Troop_Transport">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_TROOP_TRANSPORT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_TROOP_TRANSPORT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		
+		<LandBehavior>GARRISON_UNIT,ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD, LURE, HUNT, DEPLOY_TROOPERS, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE, SURFACE_FX,DAMAGE_TRACKING</LandBehavior>
+		
+		<Deploys>Yes</Deploys>
+		<Auto_Deploys>No</Auto_Deploys>
+		
+		<Death_Clone>Damage_Normal, E_Troop_Transport_Death</Death_Clone>
+		
+		<Land_Model_Name>EV_Troop_Transport.ALO</Land_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire</Affiliation>
+		<Max_Speed>1.5</Max_Speed>
+		<Tactical_Health>450</Tactical_Health>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Targeting_Max_Attack_Distance>250.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>5</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel</Barrel_Bone_Name>
+		
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		
+		<Hardpoints>
+				HP_E_Troop_Transport_TB
+		</Hardpoints>
+
+		<CategoryMask> Vehicle </CategoryMask>
+		
+		<Icon_Name> i_button_E_Troop_Transport.tga </Icon_Name>
+		
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT2_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+        <Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		
+	</GroundVehicle>
+	
+	<GroundVehicle Name="E_Troop_Transport_Death">
+		<Variant_Of_Existing_Type>1H_Death_Clone_00</Variant_Of_Existing_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Land_Model_Name>EV_Troop_Transport_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	
+	<GroundCompany Name="E_Troop_Transport_Group">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_E_TROOP_TRANSPORT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_E_TROOP_TRANSPORT</Encyclopedia_Text>
+		
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>E_Troop_Transport, E_Troop_Transport</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_E_Troop_Transport.tga</Icon_Name>
+
+
+		<Tactical_Build_Cost_Multiplayer>550</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+</E_Troop_TransportUnit_Data>

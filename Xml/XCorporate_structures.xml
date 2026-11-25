@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+<Corporate_structures_Data>
+	<SpecialStructure Name="Corporate_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		 
+	    <Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+				Corporate_Level_Two_Tech_Upgrade,
+				Corporate_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Corporate</Affiliation>
+
+   </SpecialStructure>
+
+	<GroundBuildable Name="Corporate_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Corporate</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Corporate_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Command_Center </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Corporate</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Corporate_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Corporate_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+				Corporate_Bombing_Run_Use_Upgrade,
+				Corporate_Planetary_Bombard_Use_Upgrade,
+				Co_Scout_Airspeeder_squadron,
+				Co_Z95Land_squadron,
+				Co_Ird_Fighter_Land_Squadron,
+				Corporate_LAAT_Company,
+				Co_Gall_Assault_Squad,
+				Co_Y_WingLand_squadron
+		</Tactical_Buildable_Objects_Multiplayer>
+				
+		<Starting_Spawned_Units_Tech_0>Co_Ird_Fighter_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Co_Ird_Fighter_Land, -1</Reserve_Spawned_Units_Tech_0>
+		<Affiliation>Corporate</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Corporate_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Fighter_Plattform.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Corporate_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Fighter_Plattform.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Corporate_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Corporate_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Corporate</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Corporate_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Corporate_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Corporate_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Corporate_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Corporate_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Corporate_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Corporate_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Corporate_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Corporate_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Corporate_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Corporate_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> Corporate_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Corporate</Affiliation>
+
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Corporate_Power_Generator</Tactical_Additional_Structure_Type>	
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Corporate_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Corporate_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> Corporate_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Corporate_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Radar_Generator_00
+		</HardPoints>
+		
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Obstacle_Proxy_Type> Power_Generator_E_Build_Pad </Obstacle_Proxy_Type>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Corporate_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Corporate_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Corporate_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Corporate_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Corporate_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_Uplink_Station.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Rep_Uplink_Station.tga</Icon_Name>
+	</SpecialStructure>	
+	<SpecialStructure Name="Corporate_Ground_Barracks">
+	<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_InfantryBarracks.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Corporate_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, TURRET, WEAPON, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Corporate</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+				Corporate_Espo_Trooper,
+				Corporate_Espo_Plex_Trooper_Company,
+				Co_Infiltrator
+		</Tactical_Buildable_Objects_Multiplayer>
+	
+		<Starting_Spawned_Units_Tech_0>Corporate_Espo_Trooper, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Corporate_Espo_Trooper, -1</Reserve_Spawned_Units_Tech_0>
+
+
+		
+		<Starting_Spawned_Units_Tech_0>Corporate_Espo_Plex_Trooper_Company, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Corporate_Espo_Plex_Trooper_Company, -1</Reserve_Spawned_Units_Tech_0>
+
+
+
+	</SpecialStructure>
+
+	<GroundBuildable Name="Corporate_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Corporate_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Ground_Barracks </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Corporate_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Corporate_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+	
+		<Affiliation>Corporate</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+	
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+				Imperial_Tie_Tank_Brigade,
+				X10_ground_patrol_Brigade,
+				Co_T2BAA_Brigade,
+				Co_EspoWalker_91_Brigade,
+				Co_EspoWalker_101_Brigade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+			
+		<Starting_Spawned_Units_Tech_0>Co_EspoWalker_91, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Co_EspoWalker_91, -1</Reserve_Spawned_Units_Tech_0>
+
+				
+		<Starting_Spawned_Units_Tech_0>X10_ground_patrol, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>X10_ground_patrol, -1</Reserve_Spawned_Units_Tech_0>
+
+				
+		<Starting_Spawned_Units_Tech_0>Co_Scout_Airspeeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Co_Scout_Airspeeder, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Corporate_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Corporate_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Corporate_Ground_Light_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Corporate_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<Obstacle_Proxy_Type> Corporate_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Corporate</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Corporate_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+					Rep_Stun_Tank_Corp,
+					Co_UTAT_Squad,
+					Co_Artillery_Brigade,
+					Espo_Hovervan_Brigade,
+					Co_T3B_Squad,
+					Co_T4B_Squad,
+					Co_Sphat_Squad,
+					Corporate_AT_TE_Walker_Company,
+					Corporate_Heavy_Assault_Company,
+					Co_A5_Squad,
+					Co_Attack_Tank_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>Espo_Hovervan, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Espo_Hovervan, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+		<Starting_Spawned_Units_Tech_0>Corporate_LAAT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Corporate_LAAT, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+		<Starting_Spawned_Units_Tech_0>Corporate_AT_TE_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Corporate_AT_TE_Walker, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+		<Starting_Spawned_Units_Tech_0>Rep_Y_Wing_Land, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Y_Wing_Land, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+	</SpecialStructure>
+	<GroundBuildable Name="Corporate_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+
+		<Affiliation>Corporate</Affiliation>
+
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Corporate_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Ground_Heavy_Vehicle_Factory </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Corporate_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<Obstacle_Proxy_Type> Corporate_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Corporate</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Corporate_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+
+		
+		<Starting_Spawned_Units_Tech_0>Rep_SPHAT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_SPHAT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+		<Starting_Spawned_Units_Tech_0>Rep_UTAT_Repulsor_Tank, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_UTAT_Repulsor_Tank, -1</Reserve_Spawned_Units_Tech_0>
+
+			
+		<Starting_Spawned_Units_Tech_0>Corporate_AT_ATs_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Corporate_AT_ATs_Walker, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	<GroundBuildable Name="Corporate_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Corporate_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+	<SpecialStructure Name="Corporate_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Corporate_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		<Affiliation>Corporate</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Corporate,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Corporate_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Corporate_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Corporate_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_OfficerAcademy.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Corporate_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		<Destruction_Survivors> 
+			Mini_Corporate_Espo_Trooper_Squad, 1.0
+			Medium_Corporate_Espo_Trooper_Squad, 1.0
+			Large_Corporate_Espo_Trooper_Squad, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Corporate</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Corporate_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Corporate_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Corporate, PC_Corporate_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Corporate_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Corporate_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Corporate_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Icon_Name>i_button_rep_officer_academy.tga</Icon_Name>
+	</GroundBuildable>
+</Corporate_structures_Data>
+
+
+

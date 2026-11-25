@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<TX130_Repulsor_TankUnit_Data>
+	<GroundVehicle Name="TX130_Repulsor_Tank">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TX130_REPULSOR_TANK</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MPTL T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T3B_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TX130_REPULSOR TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>REP_TX130TANK.ALO</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<Armor_Type> Armor_2M </Armor_Type>
+        <Shield_Armor_Type>Shield_LtTank</Shield_Armor_Type>
+
+		<Shield_Points>100</Shield_Points>
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Turret_Bone_Name>FOCAllianceCW1.0</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+
+		<Projectile_Types>Proj_TX130_Laser_Cannon</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>180.0</Targeting_Max_Attack_Distance>
+		
+		<HardPoints>
+				HP_Gr_Front_Eweb_Laser_Green_01
+		</HardPoints>
+		<CategoryMask> Vehicle | AntiInfantry </CategoryMask>
+		<Icon_Name> I_BUTTON_Rep_TX130TANK.tga </Icon_Name>
+
+		<SFXEvent_Fire>Unit_Tank_Repulsor_Fire</SFXEvent_Fire>
+
+		<AI_Combat_Power>75</AI_Combat_Power>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		
+		<Death_Clone>Damage_Normal, TX130_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="TX130_Death_Clone_00">
+		<Variant_Of_Existing_Type>TX130_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>REP_TX130TANK_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="TX130_Armor_Group">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_TX130_ARMOR_GROUP</Text_ID>
+		<Encyclopedia_Good_Against> T2B_Tank MPTL T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank T3B_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TX130_REPULSOR </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>450</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		<Company_Units>TX130_Repulsor_Tank, TX130_Repulsor_Tank, TX130_Repulsor_Tank, TX130_Repulsor_Tank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_Rep_TX130TANK.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+
+</TX130_Repulsor_TankUnit_Data>

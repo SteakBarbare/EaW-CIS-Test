@@ -1,0 +1,117 @@
+﻿<?xml version="1.0"?>
+
+
+<T1B_TankUnit_Data>
+	<GroundVehicle Name="T1B_Tank_WD">
+		<Variant_Of_Existing_Type>T1B_Tank</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+	</GroundVehicle>
+	<GroundVehicle Name="T1B_Tank">
+		<Variant_Of_Existing_Type>T2B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_T1B_TANK</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_T1B</Encyclopedia_Text>
+
+		<Icon_Name>i_button_t1b.tga</Icon_Name>
+		<Land_Model_Name>RV_T1bX.alo</Land_Model_Name>
+		<Scale_Factor>1.4</Scale_Factor><!--Reescalado real-->
+		<AI_Combat_Power>50</AI_Combat_Power>
+
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Max_Speed>2.4</Max_Speed>
+		<Movement_Animation_Speed> 2.3 </Movement_Animation_Speed>
+
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.02</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Attack_Category_Restrictions> Air </Attack_Category_Restrictions>
+
+		<SFXEvent_Select>Unit_Select_T1B</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_T1B</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T1B</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_T1B</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T1B</SFXEvent_Guard>
+		<Hardpoints>
+				HP_HOVERNAUT_01
+		</Hardpoints>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T1B </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T1B</SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_T1B_Death_SFX</Death_SFXEvent_Start_Die>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+                <SFXEvent_Target_Ability> Unit_Barrage_Interdictor </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Plex_Missile_AAC_Barrage</Projectile_Types_Override>
+                <Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Death_Clone>Damage_Normal, T1B_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="T1B_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>T1B_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_T1BX_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Rebel_Fast_Tank_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_FAST_TANK_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_T1B TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+
+        <Icon_Name>i_button_t1b.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>T1B_Tank, T1B_Tank, T1B_Tank, T1B_Tank, T1B_Tank</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Complete_T1B</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T1B</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<GroundCompany Name="Rebel_Light_Tank_Brigade_Alliance">
+		<Variant_Of_Existing_Type>Rebel_Fast_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_LIGHT_TANKS_BRIGADE</Text_ID>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>T2B_Tank, T2B_Tank, T2B_Tank, T1B_Tank, T1B_Tank, T1B_Tank</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LIGHT_TANKS_BRIGADE TEXT_DESC_C_CANTIDAD_6</Encyclopedia_Text>
+	</GroundCompany>
+	
+</T1B_TankUnit_Data>

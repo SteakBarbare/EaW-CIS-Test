@@ -1,0 +1,146 @@
+﻿<?xml version="1.0"?>
+
+
+<Espo_TrooperUnit_Data>
+	
+	<GroundInfantry Name="Espo_Trooper">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CO_ESPO_TROOPER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator Destroyer_Droid </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Co_Espo_Trooper.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPO_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Co_Espo_Trooper.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Tactical_Health>100</Tactical_Health>
+		<Armor_Type> Armor_Infantry </Armor_Type>
+
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		
+		<Death_Clone>Damage_Force_Whirlwind, Espo_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Espo_Trooper_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Espo_Trooper_Remote_Bomb_Death_Clone</Death_Clone>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Espo_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+
+	<GroundInfantry Name="Espo_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index />
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Espo_Trooper_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Espo_Trooper</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_Espo_Trooper">
+		<Variant_Of_Existing_Type>Espo_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Espo_Trooper_B">
+		<Variant_Of_Existing_Type>Squad_Espo_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Corporate_Espo_Trooper_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Corporate_Espo_Trooper_B">
+		<Variant_Of_Existing_Type>Corporate_Espo_Trooper</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Espo_Trooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Corporate_Espo_Trooper">
+		<Variant_Of_Existing_Type>X10_ground_patrol_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CO_ESPO_TROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPO_TROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Build_Cost_Credits>60</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Corporate_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Imperial_Landing_Craft</Company_Transport_Unit>
+		
+        <!-- AI  Changed to 18 troopers in squads of 9 -->
+		<Company_Units> Squad_Espo_Trooper_B, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper </Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> Espo_Trooper_Team </Create_Team_Type>
+		<Icon_Name>i_button_Co_Espo_Trooper.tga</Icon_Name>
+		<GUI_Model_Name>Co_Espo_Trooper.ALO</GUI_Model_Name>
+		<Land_Model_Name>Co_Espo_Trooper.ALO</Land_Model_Name>
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	
+	<GroundCompany Name="Large_Corporate_Espo_Trooper_Squad">
+		<Variant_Of_Existing_Type>Corporate_Espo_Trooper_B</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Damage>9</Damage> 
+	</GroundCompany>
+
+	<GroundCompany Name="Medium_Corporate_Espo_Trooper_Squad">
+		<Variant_Of_Existing_Type>Corporate_Espo_Trooper_B</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper</Company_Units>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Damage>9</Damage> 
+	</GroundCompany>
+
+	<GroundCompany Name="Mini_Corporate_Espo_Trooper_Squad">
+		<Variant_Of_Existing_Type>Corporate_Espo_Trooper_B</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Espo_Trooper, Squad_Espo_Trooper, Squad_Espo_Trooper</Company_Units>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Damage>3</Damage> 
+	</GroundCompany>
+	
+	<Container Name="Espo_Trooper_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_CO_ESPO_TROOPER_SQUAD</Text_ID>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_CO_ESPO_TROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Icon_Name>i_button_Co_Espo_Trooper.tga</Icon_Name>
+	</Container>
+	
+</Espo_TrooperUnit_Data>

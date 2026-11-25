@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<R_MassPulseMine_SpawnedUnit_Data>
+	
+	
+	<SpecialStructure Name="R_MassPulseMine_Spawned">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MASSPULSEMINE</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MASSPULSEMINE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MINEFIELD</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Space_Model_Name>NV_MasspulseMine.ALO</Space_Model_Name>
+		<Icon_Name>i_button_MasspulseMine.tga</Icon_Name>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Shield_Points>800</Shield_Points>
+		<Tactical_Health>500</Tactical_Health>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>5000</Energy_Capacity>
+		<Energy_Refresh_Rate>1000</Energy_Refresh_Rate>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 1000 </Reinforcement_Prevention_Radius>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Corvette</Shield_Armor_Type>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior> SPACE_OBSTACLE, ABILITY_COUNTDOWN, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SELF_DESTRUCT, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<Damage_Type>Damage_Fighter</Damage_Type>
+		<Projectile_Types>Proj_BlancoVacio_MassPulse</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Max_Attack_Distance>1500.0</Targeting_Max_Attack_Distance>
+		<Fire_Inaccuracy_Distance> Fighter, 75.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 75.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Category_Restrictions>Fighter, Bomber</Fire_Category_Restrictions>
+		<SFXEvent_Attack>Unit_Ion_Fighter_Fire</SFXEvent_Attack>
+		<HardPoints> 
+			HP_MassMineIon_01, HP_MassMineIon_02, HP_MassMineIon_03, HP_MassMineIon_04
+		</HardPoints>
+		<Victory_Relevant>no</Victory_Relevant>
+		
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>300.0</Space_FOW_Reveal_Range>
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Name>mini_map_structure.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.08  0.08</Radar_Icon_Size>
+		<Radar_Rotate_Icon>Yes</Radar_Rotate_Icon>
+		
+		<Reinforcement_Prevention_Radius> 2200 </Reinforcement_Prevention_Radius>
+		<Lua_Script>Hapan_Mass_Mine</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>INTERDICT</Type>
+				<Disable_Movement>Yes</Disable_Movement>
+				<Effective_Radius>2200</Effective_Radius>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>120</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Interdictor_Interdictor</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Recharge_Seconds>15</Recharge_Seconds>
+			    <Alternate_Icon_Name>I_SA_FORCE_LIGHTING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MASSMINE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MASSMINE_DESCRIPTION</Alternate_Description_Text>
+				<!-- This is the radius within which we can "drop" the projectile (targeting radius) -->
+				<!-- The actual radius of ability is in projectile XML -->
+				<Effective_Radius> 1000.0 </Effective_Radius>
+				<Spawned_Object_Type>Desarmar_Unidades_Enemigas</Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+				<!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+				<Area_Effect_Decal_Distance> 320 </Area_Effect_Decal_Distance>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, R_MassPulseMine_Spawned_Death_Clone</Death_Clone>
+	</SpecialStructure>
+	<SpecialStructure Name="R_MassPulseMine_Spawned_Death_Clone">
+		<Text_ID>TEXT_UNIT_COMMRELAY</Text_ID>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Space_Model_Name>NV_MasspulseMine.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+</R_MassPulseMine_SpawnedUnit_Data>

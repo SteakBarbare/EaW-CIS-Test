@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Rep_LAAT_CUnit_Data>
+	<GroundVehicle Name="Rep_LAAT_C">
+		<Variant_Of_Existing_Type>LAAT_C</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LAAT_C</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Nantex_squadron C_Vulture_squadron UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LAAT_C</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Rep_LAAT_C.tga</Icon_Name>
+
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Fire>Unit_LAAT_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Republic_LAAT</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Select_Republic_LAAT</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_LAAT</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Republic_LAAT</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Republic_LAAT</SFXEvent_Guard>
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<SFXEvent_Engine_Idle_Loop>Unit_LAAT_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_LAAT_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop>Unit_LAAT_Idle_Engine_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+		<SFXEvent_Ambient_Moving> Unit_LAAT_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Republic_LAAT</SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Republic_LAAT</SFXEvent_Assist_Attack>
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_LAAT_C">
+		<Variant_Of_Existing_Type>Imperial_LAAT_C</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LAAT_C</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Nantex_squadron C_Vulture_squadron UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+
+		<Autoresolve_Health>150</Autoresolve_Health>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Company_Transport_Unit>REP_LAAT_Transport</Company_Transport_Unit>
+		<Company_Units>Rep_LAAT_C</Company_Units>
+		<Icon_Name>I_BUTTON_Rep_LAAT_C.tga</Icon_Name>
+		<GUI_Model_Name>REP_LAAT_C.ALO</GUI_Model_Name>
+
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Republic_LAAT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_Republic_LAAT</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_LAAT_C</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_GUNSHIP</Encyclopedia_Unit_Class>
+
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	
+
+</Rep_LAAT_CUnit_Data>

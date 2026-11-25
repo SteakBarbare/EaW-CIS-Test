@@ -1,0 +1,211 @@
+﻿<?xml version="1.0"?>
+
+<TIE_Cimitarra_Files>
+
+	<SpaceUnit Name="TIE_Cimitarra">
+		<Variant_Of_Existing_Type>TIE_Bomber_Basic</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIE_CIMITARRA</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CIMITARRA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> MC60_01 MC75 MC108 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> E-Wing A-wing Ranger </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>Ev_TIE_Cimitarra.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Max_Speed>3.7</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<Max_Rate_Of_Turn>1.3</Max_Rate_Of_Turn>
+		<Max_Lift>3</Max_Lift>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+
+		<Affiliation>Empire</Affiliation>
+		<Armor_Type> Armor_Bomber </Armor_Type>
+		 <Shield_Armor_Type>Shield_Tank</Shield_Armor_Type>
+		<Land_Bomber_Type>TIE_Cimitarra_Bombing_Run</Land_Bomber_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, REVEAL, NEBULA </SpaceBehavior>
+		<Shield_Points>1500</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>1600</Shield_Refresh_Rate>
+		<Energy_Capacity>16000</Energy_Capacity>
+		<Energy_Refresh_Rate>9600</Energy_Refresh_Rate>
+	
+		<CategoryMask> Bomber | Anticorvette </CategoryMask>
+		<Targeting_Priority_Set>Bomber</Targeting_Priority_Set>
+		
+		<HardPoints>
+			HP_Fighter_Adv_Missile, HP_Fighter_Proton_Torpedo_Adv, HP_BWING_BOMBER_Rocket, HP_G_TIEB_Laser_00, HP_G_TIEB_Laser_01, HP_Torpedoadv_Ability_00
+		</HardPoints>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Death_Explosions>Small_Explosion_Space_Empire</Death_Explosions>
+				
+		<SFXEvent_Ambient_Moving> Unit_TIE_Cimitarra_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_TIE_Cimitarra_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Icon_Name>i_button_Scimitar_Bomber.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>TIE_Cimitarra_Cluster_Bombs</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>180</Recharge_Seconds>
+                <SFXEvent_Target_Ability> Unit_Attack_TIE_Bomber </SFXEvent_Target_Ability>
+				
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_DROP_MINES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_DROP_MINES_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_DROP_BOMB.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="TIE_Cimitarra_Cluster_Bombs">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 200 </Activation_Max_Range>
+				
+                <Chase_Radius>200</Chase_Radius>
+                <Damage_Radius> 175 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 50 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 5 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>Unit_Cluster_Mine_Explosion</Activate_SFX>
+                <Object_Type>Minas_Cimitarra</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+		
+		<Tactical_Bribe_Cost>11</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	
+	<Squadron Name="TIE_Cimitarra_Squadron">
+		<Variant_Of_Existing_Type>TIE_Bomber_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_TIE_CIMITARRA_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Alliance_Assault_Frigate Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Gunboat X-wing A-Wing </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Cost_Credits>110</Build_Cost_Credits>
+		<Build_Time_Seconds>6</Build_Time_Seconds>
+
+		<Tech_Level>99</Tech_Level>
+
+		<Squadron_Units>TIE_Cimitarra, TIE_Cimitarra, TIE_Cimitarra</Squadron_Units>
+
+		<Create_Team_Type> TIE_Cimitarra_Squadron_Container1 </Create_Team_Type>
+
+		<Icon_Name>i_button_Scimitar_Bomber.tga</Icon_Name>
+		<GUI_Model_Name>Ev_TIE_Cimitarra.ALO</GUI_Model_Name>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CIMITARRA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+		<Tactical_Build_Cost_Multiplayer>110</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			 <Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>TIE_Cimitarra_Cluster_Bombs</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_TIE_Bomber</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_DROP_MINES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_DROP_MINES_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_DROP_BOMB.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+	</Squadron>
+	<Container Name="TIE_Cimitarra_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_TIE_CIMITARRA_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_TIE_CIMITARRA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Scimitar_Bomber.tga</Icon_Name>
+
+		<Max_Speed>3.7</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Bomber | AntiCapital </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>TIE_Cimitarra_Cluster_Bombs</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>180</Recharge_Seconds>
+                <SFXEvent_Target_Ability> Unit_Attack_TIE_Bomber </SFXEvent_Target_Ability>
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_DROP_MINES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_DROP_MINES_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_DROP_BOMB.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="TIE_Cimitarra_Cluster_Bombs">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 200 </Activation_Max_Range>
+                <Chase_Radius>200</Chase_Radius>
+                <Damage_Radius> 175 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 50 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 5 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>Unit_Cluster_Mine_Explosion</Activate_SFX>
+                <Object_Type>Minas_Cimitarra</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</Container>
+	
+	
+
+</TIE_Cimitarra_Files>

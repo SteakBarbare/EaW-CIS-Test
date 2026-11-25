@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<Moff_Nyna_CalixteUnit_Data>
+	<HeroUnit Name="Moff_Nyna_Calixte">
+		<Variant_Of_Existing_Type>TarkinORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_NYNA_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_EVK_Moff_Nyna.TGA</Icon_Name>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Affiliation>Krayt</Affiliation>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask>NonCombatHero</CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_NYNA TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10</Encyclopedia_Text>
+		
+		<Abilities SubObjectList="Yes">
+
+			<Political_Transition_Bonus_Ability Name="Tarkin_Political_Transition_Bonus">
+				<Time_Reduction_Percentage>0.25</Time_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Political_Transition_Bonus_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Tarkin_Production_Time_Reduction">
+				<Applicable_Unit_Types> Krayt_Storm_Commando_Space_Squad, Krayt_Storm_Commando_Squad </Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Political_Control_Protection_Ability Name="Tarkin_Political_Protection">
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+			</Political_Control_Protection_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Tarkin_Reduce_Production_Price">
+				<Applicable_Unit_Types>E_Ground_Research_Facility</Applicable_Unit_Types>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+
+			<Combat_Bonus_Ability Name="Tarkin_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.1</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.1</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.1</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.1</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			
+			<Remove_Corruption_Ability Name="Emperor_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> <!--1.2 means 20% more expensive than base cost, 0.8 means 20% cheaper-->				
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> <!-- Time it takes to remove corruption-->
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Moff_Nyna_Calixte_Team">
+		<Variant_Of_Existing_Type>Grand_Moff_Tarkin_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_NYNA_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_EVK_Moff_Nyna.TGA</Icon_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Company_Transport_Unit>Moff_Nyna_Calixte_EVK_Fury</Company_Transport_Unit>
+		<Company_Units>Moff_Nyna_Calixte</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_NYNA TEXT_TOOLTIP_REDUCE_TIME_COMMANDOS_10</Encyclopedia_Text>
+		
+		<SFXEvent_Build_Complete>Unit_Respawn_Mirax</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Mirax</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirax</SFXEvent_Fleet_Move>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Moff_Nyna_Calixte_EVK_Fury"> 
+		<Variant_Of_Existing_Type>EVK_Fury</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_NYNA_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_NYNA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Moff_Nyna.tga</Icon_Name>
+		<AI_Combat_Power>2175</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Mirith</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Mirith</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Mirith</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Mirith</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Mirith</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+	</SpaceUnit>	
+</Moff_Nyna_CalixteUnit_Data>

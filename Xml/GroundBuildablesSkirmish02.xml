@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<GroundBuildables>
+
+	<GroundBuildable Name="ASkirmish_Build_PadW">
+		<Variant_Of_Existing_Type> Skirmish_Build_Pad </Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Campaign> 
+			Empire, 
+				UC_Normal_Wall,
+			EVFO, 
+				UC_Normal_Wall,
+			Rebel,
+				UC_Normal_Wall, 
+			RVRE,
+				UC_Normal_Wall, 
+			GA,
+				UC_Normal_Wall, 
+			GAC,
+				UC_Normal_Wall, 
+			Pirates,
+				UC_Normal_Wall, 
+			CIS,
+				UC_Normal_Wall, 
+			Republic,
+				UC_Normal_Wall, 
+			Underworld,
+				UC_Normal_Wall, 
+			Krayt, 
+				UC_Normal_Wall, 
+			Fel, 
+				UC_Normal_Wall, 		
+			Corporate, 
+				UC_Normal_Wall,
+			Chiss, 
+				UC_Normal_Wall, 		
+			Hapan, 
+				UC_Normal_Wall,
+			Hutts, 
+				UC_Normal_Wall
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire, 
+				UC_Normal_Wall,
+			EVFO, 
+				UC_Normal_Wall,
+			Rebel,
+				UC_Normal_Wall, 
+			RVRE,
+				UC_Normal_Wall, 
+			GA,
+				UC_Normal_Wall, 
+			GAC,
+				UC_Normal_Wall, 
+			Pirates,
+				UC_Normal_Wall, 
+			CIS,
+				UC_Normal_Wall, 
+			Republic,
+				UC_Normal_Wall, 
+			Underworld,
+				UC_Normal_Wall, 
+			Krayt, 
+				UC_Normal_Wall, 
+			Fel, 
+				UC_Normal_Wall, 		
+			Corporate, 
+				UC_Normal_Wall,
+			Chiss, 
+				UC_Normal_Wall, 		
+			Hapan, 
+				UC_Normal_Wall,
+			Hutts, 
+				UC_Normal_Wall 		
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name> Nb_Wall_Normal_Pad.alo </Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Capture_Point_Radius>400</Capture_Point_Radius>
+	</GroundBuildable>
+
+	<GroundBuildable Name="UC_Normal_Wall">
+		<Variant_Of_Existing_Type> UC_Rebel_Buildable_Bacta_Tank </Variant_Of_Existing_Type>
+		<Text_ID> TEXT_STRUCTURE_WALL </Text_ID>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+
+		<Tactical_Buildable_Constructed> A_Normal_Wall </Tactical_Buildable_Constructed>		<!-- Defined in GroundTurrets.xml -->
+		<Tactical_Build_Cost_Multiplayer> 20 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>20</Tactical_Build_Cost_Campaign>
+		
+		<Land_Model_Name> Nb_Wall_Normal.alo </Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<SFXEvent_Build_Started>RHD_Turret_Build</SFXEvent_Build_Started>
+		<SFXEvent_Select>Structure_Turret_Select_SFX</SFXEvent_Select>
+
+		<Armor_Type> Armor_Wall </Armor_Type>
+		
+		<Affiliation>Neutral, Rebel, Empire, Pirates, CIS, Republic, Underworld, Krayt, Fel, Corporate, Hutts, Hapan, Chiss, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<Icon_Name>i_button_x_wing.tga</Icon_Name>
+
+	</GroundBuildable>
+
+	
+</GroundBuildables>

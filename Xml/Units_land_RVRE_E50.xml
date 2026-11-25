@@ -1,0 +1,165 @@
+﻿<?xml version="1.0"?>
+
+
+<RVRE_E50_Data>
+
+
+	<GroundVehicle Name="RVRE_E50">
+		<Variant_Of_Existing_Type>Ha_SpecforceORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RVRE_E50</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_E50</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_RVRE_E50.tga</Icon_Name>
+		<Land_Model_Name>RVRE_E50.ALO</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<AI_Combat_Power>350</AI_Combat_Power>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 4 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 3 </Turret_Targets_Anything_Else>
+		
+		<Land_FOW_Reveal_Range>210.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATMKV</Projectile_Types>
+
+		<SFXEvent_Select>Unit_Select_Juggernaut</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Juggernaut</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Juggernaut</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Juggernaut</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Juggernaut </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Juggernaut</SFXEvent_Assist_Attack>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		
+		<Reinforcement_Enabling_Radius>250.0</Reinforcement_Enabling_Radius>
+		<Control_Point_Domination_Condition_Relevant>No</Control_Point_Domination_Condition_Relevant>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Additional_Population_Capacity>5</Additional_Population_Capacity>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>SHIELD_FLARE</Type>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Shield_Flare_Vehicle </GUI_Activated_Ability_Name> 
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Shield_Flare_Gargantuan</SFXEvent_GUI_Unit_Ability_Activated>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+              	<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_INFANTRY_REINFORCES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_Juggernauth_A5_RE</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>RVRE_E50_troopers_Marker</Spawned_Object_Type>
+				<Effective_Radius> 10.0 </Effective_Radius>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+                <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 10 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Shield_Flare_Ability Name="Shield_Flare_Vehicle">
+				<Max_Damage_Per_Victim>5000</Max_Damage_Per_Victim>
+				<Damage_Radius>1000</Damage_Radius>
+				<Charge_Up_Seconds>1</Charge_Up_Seconds>
+				<Activation_Style> User_Input </Activation_Style>
+				<Owner_Particle_Effect>Shield_Flare_Effect</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>0.2, 0.0, 0.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>1.5</Owner_Light_Effect_Duration>
+                <SFXEvent_Activate>Shield_Flare_SFX_Event</SFXEvent_Activate>
+			</Shield_Flare_Ability>
+			<Force_Healing_Ability Name="Medic_Healing">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>70.0</Heal_Range>
+				<Heal_Amount>5.0</Heal_Amount>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>RVRE_E50</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Death_Clone>Damage_Normal, RVRE_E50_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="RVRE_E50_Death_Clone_00">
+		<Variant_Of_Existing_Type>RVRE_E50</Variant_Of_Existing_Type>
+		<Land_Model_Name>RVRE_E50_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      	<Scale_Factor>2.0</Scale_Factor>
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="RVRE_E50_Squad">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_RVRE_E50_GROUP</Text_ID>
+		<Encyclopedia_Good_Against> UTAT_COMPANY AT-TE_Company Canderous_Assault_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Imperial_Heavy_Assault_Company MAL_Rocket_Vehicle Dark_Trooper_PhaseIII </Encyclopedia_Vulnerable_To>
+		<Affiliation>Rebel, RVRE</Affiliation>
+		<Build_Cost_Credits>20000</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>RVRE_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>RVRE_E50</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_RVRE_E50.tga</Icon_Name>
+		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RVRE_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_E50 TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+
+</RVRE_E50_Data>

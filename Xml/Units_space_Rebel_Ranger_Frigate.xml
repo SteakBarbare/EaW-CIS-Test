@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<RangerUnit_Data>
+
+	<SpaceUnit Name="Ranger">
+		<Variant_Of_Existing_Type>CR_GunboatORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RANGER_GUNSHIP</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber Gunboat </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> ISDORG Victory_Destroyer VSD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RANGER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_GUNBOAT</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>RV_Ranger.alo</Space_Model_Name>
+		<Icon_Name>I_BUTTON_RV_RANGER.TGA</Icon_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+
+		<Max_Speed>2.75</Max_Speed>
+
+		<Armor_Type> Armor_Corellian_Gunboat </Armor_Type>
+        <Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Max_Thrust>2.8</Max_Thrust>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Death_Clone>Damage_Normal, Ranger_Death_Clone</Death_Clone>
+
+		<Affiliation>Rebel, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes, AdvancedTech_8</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Autoresolve_Health>15000</Autoresolve_Health>
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>50000000</Tactical_Health>  
+		<Shield_Refresh_Rate>18000</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>33750</Energy_Refresh_Rate>
+		
+		<Space_Layer> Corvette </Space_Layer>
+		<Ship_Class>corvette</Ship_Class>
+
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<AI_Combat_Power>2175</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior> ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, TARGETING, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, ASTEROID_FIELD_DAMAGE, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+						
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>Corvette</Targeting_Priority_Set>
+
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+						
+		<HardPoints>
+			HP_MisilA_01, 
+			HP_MisilA_02,
+			HP_MisilA_03,
+			HP_MisilA_04,
+			HP_MisilA_05,
+			HP_MisilA_06,
+			HP_MisilA_07,
+			HP_T_RangerGunship_01,
+			HP_T_RangerGunship_02,
+			HP_T_RangerGunship_03,
+			HP_T_RangerGunship_19,
+			HP_T_RangerGunship_05,
+			HP_T_RangerGunship_06,
+			HP_T_RangerGunship_07,
+			HP_T_RangerGunship_08,
+			HP_T_RangerGunship_09,
+			HP_T_RangerGunship_10,
+			HP_T_RangerGunship_11,
+			HP_T_RangerGunship_12,
+			HP_T_RangerGunship_13,
+			HP_T_RangerGunship_14,
+			HP_T_RangerGunship_15,
+			HP_T_RangerGunship_16,
+			HP_T_RangerGunship_17,
+			HP_T_RangerGunship_18,
+			HP_Ranger_Missile_Blast_00,
+			HP_Ranger_Missile_Blast_01,
+			HP_Ranger_Missile_Blast_02,
+			HP_Ranger_Missile_Blast_03,
+			HP_Ranger_Missile_Blast_04,
+			HP_Ranger_Missile_Blast_05,
+			HP_Ranger_Missile_Blast_06
+		</HardPoints>
+
+		<CategoryMask> Corvette | AntiFighter | AntiBomber | AntiCorvette </CategoryMask>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Gunboat_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Gunboat_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Gunboat_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		 <Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>4000</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FULL_SALVO.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Assault_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		
+	
+		<Tactical_Build_Cost_Multiplayer>2100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+
+	<SpaceUnit Name="Ranger_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>RV_Ranger_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</RangerUnit_Data>

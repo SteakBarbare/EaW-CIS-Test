@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE ENDOR ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Endor_space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Endor_space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_ENDOR_E</Reward_Param1>
+				<Prereq>Batalla_de_Endor_space</Prereq>
+			</Event>
+		 <Event Name="Anular_Retirada_Rebelde">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>DISABLE_RETREAT</Reward_Type>
+			<Reward_Param1>Rebel</Reward_Param1>
+			<Reward_Param2>1</Reward_Param2>
+			<Prereq>Batalla_de_Endor_space</Prereq>
+		 </Event>	
+		
+
+		
+	
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+    <Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_SPACE_HISTORY_BATTLEOFENDORE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_Endor_space</Prereq>
+    </Event>
+
+    <Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	<Event Name="Report_00">
+			<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+			<Event_Param2>Story_Trigger_Zone_01</Event_Param2>
+			<Event_Param3>1000</Event_Param3>
+			<Reward_Type>MULTIMEDIA</Reward_Type>
+			<Reward_Param2>9</Reward_Param2>
+			<Reward_Param8>BATALLA_DE_ENDOR_E_MISSION_00</Reward_Param8>
+			<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>
+			<Event Name="Report_00_Stop">
+				<Event_Type>STORY_SPEECH_DONE</Event_Type>
+				<Event_Param1>BATALLA_DE_ENDOR_E_MISSION_00</Event_Param1>
+				<Prereq>Report_00</Prereq>
+			</Event>	
+			
+		<Event Name="Video_E_Battle_of_Endor_01_Inicio">
+			<Event_Type>STORY_ELAPSED</Event_Type>
+			<Event_Param1>5</Event_Param1>
+			<Reward_Type>START_MOVIE</Reward_Type>
+			<Reward_Param1>E_Battle_of_Endor_01</Reward_Param1>
+			<Prereq>Report_00_Stop</Prereq>
+		</Event>
+
+		<Event Name="Video_E_Battle_of_Endor_01_Fin">
+			<Event_Type>STORY_MOVIE_DONE</Event_Type>
+			<Prereq>Video_E_Battle_of_Endor_01_Inicio</Prereq>
+		</Event>				
+	
+		
+	<Event Name="Proteger_DEATH_STAR_II">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>DEATH_STAR_II</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>
+	
+			<Event Name="Video_R_Battle_of_Endor_02_Inicio">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>5</Event_Param1>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>R_Battle_of_Endor_02</Reward_Param1>
+				<Prereq>Proteger_DEATH_STAR_II</Prereq>
+			</Event>
+
+			<Event Name="Video_R_Battle_of_Endor_02_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_R_Battle_of_Endor_02_Inicio</Prereq>
+			</Event>				
+		
+	<Event Name="Destruir_EVENTOS_TACTICOS_EXECUTOR">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Executor_Endor</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Endor_space</Prereq>
+	</Event>		
+			<Event Name="Ejecutor_Destruido_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>0</Event_Param1>
+				<Reward_Type>MULTIMEDIA</Reward_Type>
+				<Reward_Param2>12</Reward_Param2>
+				<Reward_Param8>BATALLA_DE_ENDOR_E_MISSION_01</Reward_Param8>
+				<Prereq>Destruir_EVENTOS_TACTICOS_EXECUTOR</Prereq>
+			</Event>
+					<Event Name="Ejecutor_Destruido_00_Stop">
+						<Event_Type>STORY_SPEECH_DONE</Event_Type>
+						<Event_Param1>BATALLA_DE_ENDOR_E_MISSION_01</Event_Param1>
+						<Prereq>Ejecutor_Destruido_00</Prereq>
+					</Event>	
+					
+			<Event Name="Video_R_Battle_of_Endor_01_Inicio">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>5</Event_Param1>
+				<Reward_Type>START_MOVIE</Reward_Type>
+				<Reward_Param1>R_Battle_of_Endor_01</Reward_Param1>
+				<Prereq>Ejecutor_Destruido_00_Stop</Prereq>
+			</Event>
+
+			<Event Name="Video_R_Battle_of_Endor_01_Fin">
+				<Event_Type>STORY_MOVIE_DONE</Event_Type>
+				<Prereq>Video_R_Battle_of_Endor_01_Inicio</Prereq>
+			</Event>						
+			
+			<Event Name="Objetivos_InCompletados1">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_ENDOR_E</Reward_Param1>
+				<Prereq>Destruir_EVENTOS_TACTICOS_EXECUTOR Proteger_DEATH_STAR_II</Prereq>
+			</Event>
+					
+	<Event Name="Derrota_por_Victoria_Rebelde">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>25</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>REBEL</Reward_Param1>
+		<Prereq>Objetivos_InCompletados1</Prereq>
+	</Event>		
+			
+			
+</Story>

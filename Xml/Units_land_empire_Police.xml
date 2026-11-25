@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<EV_PoliceRepublicUnit_Data>
+	<GroundVehicle Name="EV_PoliceRepublic">
+		<Variant_Of_Existing_Type>MAATORG</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 184, 10, 37, 255 </No_Colorization_Color>
+
+		<Text_ID>TEXT_UNIT_EV_REPUBLICPOLICE</Text_ID>
+		<Encyclopedia_Good_Against>MPTL T4B_Tank Rebel_Infantry_Squad</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>AAC_HOVERTANK Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_REPUBLICPOLICE</Encyclopedia_Text>
+
+		<Land_Model_Name>EV_PoliceRepublic.ALO</Land_Model_Name>
+		<Affiliation>Empire</Affiliation>
+		<Turret_Bone_Name>Mesh_BodyHidden</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+		
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Tank_Repulsor_Fire</SFXEvent_Fire>
+		
+		<Hardpoints>
+				HP_RepublicPolice_Rear_Green_Laser
+		</Hardpoints>
+		
+		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>
+		<SFXEvent_Select> Unit_Select_TIE_Fighter </SFXEvent_Select>
+		<SFXEvent_Move> Unit_Move_TIE_Fighter </SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_TIE_Fighter</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack> Unit_Attack_TIE_Fighter </SFXEvent_Attack>
+		<SFXEvent_Guard> Unit_Guard_TIE_Fighter </SFXEvent_Guard>
+		
+		<SFXEvent_Engine_Idle_Loop>Unit_TIE_Fighter_Cinematic_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_TIE_Fighter_Fly_By</SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop>Unit_TIE_Fighter_Cinematic_Engine_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+		<SFXEvent_Ambient_Moving> Unit_TIE_Fighter_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+
+		<Spin_Away_On_Death_SFXEvent_Start_Die>Unit_TIE_Fighter_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+	
+		<Death_Explosions>Medium_Explosion_Space6</Death_Explosions>
+
+		<Icon_Name>i_button_EV_PoliceRepublic.tga</Icon_Name>
+
+		<AI_Combat_Power>135</AI_Combat_Power>
+
+		<Select_Box_Scale>80</Select_Box_Scale>
+		<Select_Box_Z_Adjust>150.0f</Select_Box_Z_Adjust>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT2_Deployed_Imperial_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_AT_AT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L1_Bonus">
+				<Initially_Enabled> Yes </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.15</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			<Redirect_Blaster_Ability Name="EL_Heavy_Reflective_Armor_L2_Bonus">
+				<Initially_Enabled> Yes </Initially_Enabled>
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | LandHero | Vehicle | Air | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+		</Abilities>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, EV_PoliceRepublic_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="EV_PoliceRepublic_Death_Clone_00">
+		<Variant_Of_Existing_Type>EV_PoliceRepublic</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_PoliceRepublic_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_PoliceRepublic">
+		<Variant_Of_Existing_Type>Imperial-LAAT</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_REPUBLICPOLICE</Text_ID>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_REPUBLICPOLICE TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Build_Cost_Credits>950</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+		<Company_Units>EV_PoliceRepublic</Company_Units>
+
+		<Icon_Name>i_button_EV_PoliceRepublic.tga</Icon_Name>
+		<GUI_Model_Name>EV_PoliceRepublic.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>950</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</EV_PoliceRepublicUnit_Data>

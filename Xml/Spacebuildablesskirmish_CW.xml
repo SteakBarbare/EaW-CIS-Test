@@ -1,0 +1,437 @@
+<?xml version="1.0"?>
+<SpaceBuildables>
+		
+	<SpaceBuildable Name="UC_Republic_Defense_Satellite_Laser">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GOLANIII</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GOLANSE</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_GOLANSE</MP_Encyclopedia_Text>
+		
+		<Tactical_Buildable_Constructed> Golan_III_Republic_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Space_Model_Name>Rep_GolanIII_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Icon_Name>I_BUTTON_Old_GOLAN3.tga</Icon_Name>
+		<Affiliation>Republic</Affiliation>
+		<GUI_Model_Name>Rep_GolanIII_Build.ALO</GUI_Model_Name>
+	</SpaceBuildable>		
+	
+	<SpaceBuildable Name="UC_CIS_Defense_Satellite_Laser">
+		<Variant_Of_Existing_Type>UC_Republic_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Golan_III_CIS_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 875 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+
+		<Affiliation>CIS</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>		
+	
+	<SpaceBuildable Name="UC_CIS_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+   		<Text_ID>TEXT_UNIT_HEAVYLAUNCHER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HEAVYLAUNCHER</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_HEAVYLAUNCHER</MP_Encyclopedia_Text>
+
+		<Space_Model_Name>NV_Defense_CIS_Missile_Station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_Defense_CIS_Missile_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> NV_Defense_CIS_Missile_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>CIS</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+
+
+	<SpaceBuildable Name="UC_Republic_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_CIS_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Defense_Rep_Missile_Station_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_Defense_Rep_Missile_Station.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> NV_Defense_Rep_Missile_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 950 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Republic</Affiliation>
+		
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+
+	</SpaceBuildable>
+	
+   	<SpaceBuildable Name="UC_Republic_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> NV_Defense_Corsec_Station_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_CORSECSTATION</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CORSECSTATION </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CORSECSTATION </MP_Encyclopedia_Text>
+
+		<Space_Model_Name>NV_Defense_Corsec_Station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_Defense_Corsec_Station.tga</Icon_Name>
+
+		<Affiliation>Republic</Affiliation>
+
+		<GUI_Model_Name>NV_Defense_Corsec_Station_Build.ALO</GUI_Model_Name>
+   </SpaceBuildable>	
+	
+   <SpaceBuildable Name="UC_CIS_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> NV_Defense_Beacon_Station </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 850 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Text_ID>TEXT_UNIT_BEACONSTATION</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BEACONSTATION </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_BEACONSTATION </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+
+		<Space_Model_Name>NV_Defense_Beacon_Station_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Icon_Name>I_BUTTON_NV_Defense_Beacon_Station.tga</Icon_Name>
+		<Affiliation>CIS</Affiliation>
+
+		<GUI_Model_Name>NV_Defense_Beacon_Station_Build.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	
+	</SpaceBuildable>
+
+	
+	<SpaceBuildable Name="UC_CIS_Outpost_1">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_CIS_Outpost_Station_1 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_CIS_OUTPOST_STATION1</Text_ID>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>CIS, Rebel, RVRE, GA, GAC</Affiliation>
+		<Icon_Name>I_BUTTON_NV_CIS_Outpost_Station_1.tga</Icon_Name>
+		<GUI_Model_Name>CIS_Outpost_Station_1.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION1 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION1 </MP_Encyclopedia_Text>
+	</SpaceBuildable>		
+	
+	<SpaceBuildable Name="UC_CIS_Outpost_2">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_CIS_Outpost_Station_2 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_CIS_OUTPOST_STATION2</Text_ID>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>CIS, Rebel, RVRE, GA, GAC</Affiliation>
+		<Icon_Name>I_BUTTON_NV_CIS_Outpost_Station_2.tga</Icon_Name>
+		<GUI_Model_Name>CIS_Outpost_Station_2.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION2 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION2 </MP_Encyclopedia_Text>
+	</SpaceBuildable>	
+
+	<SpaceBuildable Name="UC_BS_Outpost_1">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_BS_Outpost_Station_1 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_CIS_OUTPOST_STATION1</Text_ID>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Icon_Name>I_BUTTON_NV_CIS_Outpost_Station_1.tga</Icon_Name>
+		<GUI_Model_Name>CIS_Outpost_Station_1.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION1 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION1 </MP_Encyclopedia_Text>
+	</SpaceBuildable>		
+	
+	<SpaceBuildable Name="UC_BS_Outpost_2">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_BS_Outpost_Station_2 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_CIS_OUTPOST_STATION2</Text_ID>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Icon_Name>I_BUTTON_NV_CIS_Outpost_Station_2.tga</Icon_Name>
+		<GUI_Model_Name>CIS_Outpost_Station_2.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION2 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_CIS_OUTPOST_STATION2 </MP_Encyclopedia_Text>
+	</SpaceBuildable>			
+	
+	
+	
+	<SpaceBuildable Name="UC_NV_Ion_Ring_S">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_Ion_Ring_S </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_IONBAT</Text_ID>
+		<Space_Model_Name>Rep_Botajef_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Republic, Empire, Rebel, Underworld, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		<Icon_Name>I_BUTTON_IONBAT.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Botajef_Build.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_IONBAT </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_IONBAT </MP_Encyclopedia_Text>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Ion_Ring_S_E">
+		<Variant_Of_Existing_Type>UC_NV_Ion_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Construction_ShipB_Build2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Ion_Ring_S_BS">
+		<Variant_Of_Existing_Type>UC_NV_Ion_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Ion_Ring_S_EVF">
+		<Variant_Of_Existing_Type>UC_NV_Ion_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVF_Constructor_Build2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Ion_Ring_S_GA">
+		<Variant_Of_Existing_Type>UC_NV_Ion_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>GA_Constructor_Ship_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="NV_Ion_Ring_S">
+		<Variant_Of_Existing_Type>SB_Defense_Ion_Circle</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Defense_SmallRing_Plattform.ALO</Space_Model_Name>
+		<Affiliation>Republic, Empire, Rebel, Underworld, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		
+		<HardPoints> 
+			HP_T_Ion_Ring_01,
+			HP_T_Ion_Ring_02,
+			HP_T_Ion_Ring_03,
+			HP_T_Ion_Ring_04,
+			HP_T_Ion_Ring_05
+		</HardPoints>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>1</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>Yes</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceBuildable>				
+	
+	<SpaceBuildable Name="UC_NV_Laser_Ring_S">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_Laser_Ring_S </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 650 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>650</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_GUNPAD</Text_ID>
+		<Space_Model_Name>Rep_Botajef_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Republic, Empire, Rebel, Underworld, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		<Icon_Name>I_BUTTON_GUNPADLASER.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Botajef_Build.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPAD </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPAD </MP_Encyclopedia_Text>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Laser_Ring_S_E">
+		<Variant_Of_Existing_Type>UC_NV_Laser_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Construction_ShipB_Build2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_NV_Laser_Ring_S_BS">
+		<Variant_Of_Existing_Type>UC_NV_Laser_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_NV_Laser_Ring_S_EVF">
+		<Variant_Of_Existing_Type>UC_NV_Laser_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVF_Constructor_Build2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Laser_Ring_S_GA">
+		<Variant_Of_Existing_Type>UC_NV_Laser_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>GA_Constructor_Ship_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="NV_Laser_Ring_S">
+		<Variant_Of_Existing_Type>SB_Defense_Laser_Circle</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Defense_SmallRing_Plattform.ALO</Space_Model_Name>
+		<Affiliation>Republic, Empire, Rebel, Underworld, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		
+		<Armor_Type> Armor_Acclamator </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+		<Autoresolve_Health>24000</Autoresolve_Health>
+		<Shield_Points>24000</Shield_Points>
+		<Tactical_Health>22000</Tactical_Health>
+		<Shield_Refresh_Rate>25000</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>210000</Energy_Refresh_Rate>
+		<HardPoints> 
+			HP_T_Laser_Ring_01,
+			HP_T_Laser_Ring_02,
+			HP_T_Laser_Ring_03,
+			HP_T_Laser_Ring_04,
+			HP_T_Laser_Ring_05
+		</HardPoints>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>1</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>Yes</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceBuildable>				
+	
+	<SpaceBuildable Name="UC_NV_Missile_Ring_S">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> NV_Missile_Ring_S </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 750 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>750</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_GUNWARHEADPAD</Text_ID>
+		<Space_Model_Name>Rep_Botajef_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Republic, Empire, Rebel, Underworld, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		<Icon_Name>I_BUTTON_GUNPAD.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Botajef_Build.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNWARHEADPAD </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNWARHEADPAD </MP_Encyclopedia_Text>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_NV_Missile_Ring_S_E">
+		<Variant_Of_Existing_Type>UC_NV_Missile_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Construction_ShipB_Build2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_NV_Missile_Ring_S_BS">
+		<Variant_Of_Existing_Type>UC_NV_Missile_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>CIS_HARDCELL_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_NV_Missile_Ring_S_EVF">
+		<Variant_Of_Existing_Type>UC_NV_Missile_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>EVF_Constructor_Build2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="UC_NV_Missile_Ring_S_GA">
+		<Variant_Of_Existing_Type>UC_NV_Missile_Ring_S</Variant_Of_Existing_Type>
+		<Space_Model_Name>GA_Constructor_Ship_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+	</SpaceBuildable>			
+	<SpaceBuildable Name="NV_Missile_Ring_S">
+		<Variant_Of_Existing_Type>SB_Defense_Missile_Circle</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_Defense_SmallRing_Plattform.ALO</Space_Model_Name>
+		<Affiliation>Republic, Empire, Rebel, Underworld, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<SpaceBehavior> ABILITY_COUNTDOWN, TARGETING, POWERED, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Autoresolve_Health>22200</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		<Tactical_Health>31000</Tactical_Health>
+		<Shield_Refresh_Rate>22700</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<HardPoints> 
+			HP_T_Missile_Ring_01,
+			HP_T_Missile_Ring_02,
+			HP_T_Missile_Ring_03,
+			HP_T_Missile_Ring_04,
+			HP_T_Missile_Ring_05
+		</HardPoints>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>1</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>Yes</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceBuildable>			
+	
+	<SpaceBuildable Name="UC_Rep_Outpost_1">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> Rep_Outpost_Station_1 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_GUNPLATFORM1</Text_ID>
+		<Space_Model_Name>Rep_Botajef_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Republic, Empire, EVFO</Affiliation>
+		<Icon_Name>I_BUTTON_NV_Rep_Outpost_Station_1.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Botajef_Build.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPLATFORM1 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPLATFORM1 </MP_Encyclopedia_Text>
+	</SpaceBuildable>			
+	
+	<SpaceBuildable Name="UC_Rep_Outpost_2">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> Rep_Outpost_Station_2 </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Text_ID>TEXT_UNIT_GUNPLATFORM2</Text_ID>
+		<Space_Model_Name>Rep_Botajef_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Republic, Empire, EVFO</Affiliation>
+		<Icon_Name>I_BUTTON_NV_Rep_Outpost_Station_2.tga</Icon_Name>
+		<GUI_Model_Name>Rep_Botajef_Build.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPLATFORM2 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPLATFORM2 </MP_Encyclopedia_Text>
+	</SpaceBuildable>			
+</SpaceBuildables>

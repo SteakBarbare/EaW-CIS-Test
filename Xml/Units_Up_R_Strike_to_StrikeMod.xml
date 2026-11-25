@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<Up_R_Strike_to_StrikeModUnit_Data>
+	
+	<SpaceUnit Name="Up_R_Strike_to_StrikeMod">
+		<Text_ID>TEXT_UNIT_RV_STRIKECRUISER_TO_RV_MODSTRIKECRUISER</Text_ID>
+        <Encyclopedia_Text>TEXT_TOOLTIP_RV_STRIKECRUISER_TO_RV_MODSTRIKECRUISER</Encyclopedia_Text>
+        <Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ADVANCE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_DTMSTRIKE_Upgrade.tga</Icon_Name>
+		<GUI_Row>1</GUI_Row>
+		<Affiliation>Rebel, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		
+		<Required_Orbiting_Units>R_Strike</Required_Orbiting_Units>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Lua_Script>Up_R_Strike_to_StrikeMod</Lua_Script>
+		<Population_Value>1</Population_Value>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Build_Time_Reduced_By_Multiple_Factories>no</Build_Time_Reduced_By_Multiple_Factories>
+		<behavior> DUMMY_STARSHIP </behavior>
+		<CategoryMask>Upgrade</CategoryMask>
+		<SFXEvent_Build_Started>RHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+
+	
+	<SpaceUnit Name="R_Strike_Up">
+		<Variant_Of_Existing_Type>StrikeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MODSTRIKECRUISER</Text_ID>
+		<Encyclopedia_Good_Against> Corellian_Corvette TartanORG E_CR_CVM </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> VSD2 ISDORG TIE_Bomber </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MODSTRIKECRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_A_WING TEXT_UNIT_X_WING TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERDICTOR </Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>RV_DTMStrikeCruiserMod.ALO</Space_Model_Name>
+
+		<Affiliation>Rebel, GA</Affiliation>
+		<AI_Combat_Power>1215</AI_Combat_Power>
+		
+		<Death_Clone>Damage_Normal, StrikeMod_Death</Death_Clone>
+		
+		<Starting_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>A_Wing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Rebel_X-Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>A_Wing_Squadron, 5</Reserve_Spawned_Units_Tech_0>
+
+		<HardPoints>
+		  HP_T_EStrike_01, 
+		  HP_T_EStrike_02, 
+		  HP_T_EStrike_03,
+		  HP_T_EStrike_04, 
+		  HP_T_EStrike_05, 
+		  HP_T_EStrike_06,  
+		  HP_T_EStrike_09,
+		  HP_T_EStrike_10, 
+		  HP_T_EStrike_11, 
+		  HP_T_EStrike_12,  
+		  HP_T_EStrike_13,  
+		  HP_Engines_00,
+		  HP_Shield_Generator_Small_00,
+		  HP_Fighter_Bay_Small_00,
+		  HP_Gravedad_01,
+		  HP_Gravedad_02
+	    </HardPoints>
+		
+		
+		<Icon_Name>I_button_Modstrikecruiser.tga</Icon_Name>
+		<GUI_Model_Name>RV_DTMStrikeCruiserMod.ALO</GUI_Model_Name>
+
+		<Is_Interdictor>Yes</Is_Interdictor>
+		<Disallows_Hyperspace_Retreat> No </Disallows_Hyperspace_Retreat>
+		
+		<Lua_Script>Interdictor_R</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>INTERDICT</Type>
+				<Disable_Movement>Yes</Disable_Movement>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Interdictor_Interdictor</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>MISSILE_SHIELD</Type>
+				<Disable_Movement>Yes</Disable_Movement>
+				<Effective_Radius>450</Effective_Radius>
+				<Recharge_Seconds>0</Recharge_Seconds>
+				<Expiration_Seconds>0</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Missile_Field_Interdictor</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>1850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="StrikeMod_Death">
+		<Text_ID>TEXT_UNIT_MODSTRIKECRUISER</Text_ID>
+		<Space_Model_Name>RV_DTMStrikeCruiserMod_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.15</Scale_Factor>
+		<Layer_Z_Adjust>-100.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	
+</Up_R_Strike_to_StrikeModUnit_Data>

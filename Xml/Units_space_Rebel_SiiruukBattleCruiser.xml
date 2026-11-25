@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<NV_Ssi_ruukBattleCruiserUnit_Data>
+
+	
+	
+	<SpaceUnit Name="NV_Ssi_ruukBattleCruiser">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SIIRUUBATTLECRUISER</Text_ID>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_SIIRUUBATTLECRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_SIIRUUSWARMDROID</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_CARRIER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_NV_Ssi_ruukBattleCruiser.TGA</Icon_Name>
+		<GUI_Model_Name>NV_Ssi_ruukBattleCruiser.ALO</GUI_Model_Name>
+		<Space_Model_Name>NV_Ssi_ruukBattleCruiser.ALO</Space_Model_Name>
+		<Scale_Factor>0.45</Scale_Factor>
+		<Max_Speed>2.3</Max_Speed>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Layer_Z_Adjust>250.0</Layer_Z_Adjust>
+		<Death_Clone>Damage_Normal, NV_Ssi_ruukBattleCruiser_Death_Clone</Death_Clone>
+		<Political_Faction>Pirates, Underworld</Political_Faction>
+
+		<Starting_Spawned_Units_Tech_0>SwarmDroid_Squadron, 3</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>SwarmDroid_Squadron, -1</Reserve_Spawned_Units_Tech_0>
+
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>Frigate</Targeting_Priority_Set>	
+		<HardPoints>
+			HP_EnginesH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_Shield_GeneratorH_05,
+			HP_Shield_GeneratorH_06,
+			HP_Shield_GeneratorH_07,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Fighter_BayH_05,
+			HP_Fighter_BayH_06,
+			HP_Fighter_BayH_07,
+			HP_ISD_Super_Ion_00,
+			HP_ISD_Super_Ion_01,
+			HP_IonM_03,
+			HP_IonM_04,
+			HP_IonM_05,
+			HP_IonM_06,
+			HP_IonM_07
+			HP_TurboMR_03,
+			HP_TurboMR_04,
+			HP_Tractor_Beam_Rebelde
+   		</HardPoints>
+		
+	
+		<Tactical_Build_Cost_Multiplayer>4200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+	
+		
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			 <Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> Ssi_ruukCarrier_Beam_Attack_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	        </Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+		 
+            
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+					<Tractor_Beam_Attack_Ability Name="Ssi_ruukCarrier_Beam_Attack_Ability">
+							<Activation_Style> User_Input </Activation_Style>
+							<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+							<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+							<Activation_Min_Range>10</Activation_Min_Range>
+							<Activation_Max_Range>1500</Activation_Max_Range>
+							<Target_Speed_Decrease_Percent>1.0</Target_Speed_Decrease_Percent>
+							<Stacking_Category>0</Stacking_Category>            
+					</Tractor_Beam_Attack_Ability>
+             		
+					       
+       	</Abilities>  
+       
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.0625  0.0625</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+	
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="NV_Ssi_ruukBattleCruiser_Death_Clone">
+		<Text_ID> TEXT_UNIT_HOME_ONE </Text_ID>
+		<Space_Model_Name>NV_Ssi_ruukBattleCruiser_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor> 0.45 </Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</NV_Ssi_ruukBattleCruiserUnit_Data>

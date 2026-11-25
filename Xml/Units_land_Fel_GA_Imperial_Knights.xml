@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<Imperial_Knights_DeployedUnit_Data>
+	
+	<GenericHeroUnit Name="Squad_Imperial_Knight_A">
+		<Variant_Of_Existing_Type>Imperial_Kight_A</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FEL_IMPERIALKNIGHT</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FEL_IMPERIALKNIGHT </Encyclopedia_Text>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Land_Model_Name>EVF_Imperial_Knight_A.ALO</Land_Model_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_Imperial_Knight_A.ALO,
+			Urban, 				EVF_Imperial_Knight_A.ALO,
+			Arctic, 			EVF_Imperial_Knight_A.ALO,
+			Volcanic, 			EVF_Imperial_Knight_A.ALO,
+			Desert, 			EVF_Imperial_Knight_A.ALO,
+			Forest, 			EVF_Imperial_Knight_A.ALO,
+			Swamp, 				EVF_Imperial_Knight_A.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Icon_Name>I_BUTTON_Fel_ImperialKnight.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Create_Team>Yes</Create_Team>
+
+		<Behavior>SELECTABLE</Behavior>	
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWNk, HOLSTER_WEAPON, GARRISON_UNIT, IMPOSING_PRESENCE</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+
+		<SFXEvent_Select>Unit_Select_Jedi01CW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Jedi01CW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Jedi01CW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Jedi01CW</SFXEvent_Attack>
+		<SFXEvent_Fire>Unit_Light_Saber_On</SFXEvent_Fire>
+		<SFXEvent_Guard>Unit_Guard_Jedi01CW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Jedi01CW</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Jedi01CW</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Jedi01CW </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Group_Move_Jedi01CW </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_Jedi01CW </SFXEvent_Assist_Attack>
+	
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_FEL_GA_Hero</Highlight_Blob_Material_Name>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+             <Unit_Ability>
+				<Type>AREA_EFFECT_HEAL</Type>
+				<Recharge_Seconds>35.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Heal_Blast </Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Attack_Jedi01CW </SFXEvent_Target_Ability> 
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TARGETED_INVULNERABILITY</Type>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
+				<Effective_Radius>400</Effective_Radius>
+				<Friendly_Ability> true </Friendly_Ability>
+				<Supports_Autofire>True</Supports_Autofire>				
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+
+			<Redirect_Blaster_Ability Name="Knight_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.90</Redirect_Chance>
+				<Block_Chance>0.90</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | Vehicle | Air | Landhero | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			<Force_Healing_Ability Name="Knight_Self_Heal">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>5.0</Heal_Range>
+				<Heal_Amount> 0.0 </Heal_Amount>
+				<Heal_Percent> 0.07 </Heal_Percent>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+
+				<Applicable_Unit_Types>Obi_Wan_Kenobi</Applicable_Unit_Types>
+				
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Bone_Name>B_HEAD</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Color2 />
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		
+		</Abilities>
+	</GenericHeroUnit>
+		
+	<GenericHeroUnit Name="Squad_Imperial_Knight_B">
+		<Variant_Of_Existing_Type>Squad_Imperial_Knight_A</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Imperial_Knight_B.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_Imperial_Knight_B.ALO,
+			Urban, 				EVF_Imperial_Knight_B.ALO,
+			Arctic, 			EVF_Imperial_Knight_B.ALO,
+			Volcanic, 			EVF_Imperial_Knight_B.ALO,
+			Desert, 			EVF_Imperial_Knight_B.ALO,
+			Forest, 			EVF_Imperial_Knight_B.ALO,
+			Swamp, 				EVF_Imperial_Knight_B.ALO
+		</Land_Terrain_Model_Mapping>
+		
+	</GenericHeroUnit>
+		
+	<GenericHeroUnit Name="Squad_Imperial_Knight_C">
+		<Variant_Of_Existing_Type>Squad_Imperial_Knight_A</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Imperial_Knight_C.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_Imperial_Knight_C.ALO,
+			Urban, 				EVF_Imperial_Knight_C.ALO,
+			Arctic, 			EVF_Imperial_Knight_C.ALO,
+			Volcanic, 			EVF_Imperial_Knight_C.ALO,
+			Desert, 			EVF_Imperial_Knight_C.ALO,
+			Forest, 			EVF_Imperial_Knight_C.ALO,
+			Swamp, 				EVF_Imperial_Knight_C.ALO
+		</Land_Terrain_Model_Mapping>
+		
+	</GenericHeroUnit>
+		
+	<GenericHeroUnit Name="Squad_Imperial_Knight_D">
+		<Variant_Of_Existing_Type>Squad_Imperial_Knight_A</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Imperial_Knight_D.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_Imperial_Knight_D.ALO,
+			Urban, 				EVF_Imperial_Knight_D.ALO,
+			Arctic, 			EVF_Imperial_Knight_D.ALO,
+			Volcanic, 			EVF_Imperial_Knight_D.ALO,
+			Desert, 			EVF_Imperial_Knight_D.ALO,
+			Forest, 			EVF_Imperial_Knight_D.ALO,
+			Swamp, 				EVF_Imperial_Knight_D.ALO
+		</Land_Terrain_Model_Mapping>
+		
+	</GenericHeroUnit>
+		
+	<GenericHeroUnit Name="Squad_Imperial_Knight_E">
+		<Variant_Of_Existing_Type>Squad_Imperial_Knight_A</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Imperial_Knight_E.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_Imperial_Knight_E.ALO,
+			Urban, 				EVF_Imperial_Knight_E.ALO,
+			Arctic, 			EVF_Imperial_Knight_E.ALO,
+			Volcanic, 			EVF_Imperial_Knight_E.ALO,
+			Desert, 			EVF_Imperial_Knight_E.ALO,
+			Forest, 			EVF_Imperial_Knight_E.ALO,
+			Swamp, 				EVF_Imperial_Knight_E.ALO
+		</Land_Terrain_Model_Mapping>
+	</GenericHeroUnit>
+
+	<GenericHeroUnit Name="Squad_Imperial_Knight_F">
+		<Variant_Of_Existing_Type>Squad_Imperial_Knight_A</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVF_Imperial_Knight_F.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_Imperial_Knight_F.ALO,
+			Urban, 				EVF_Imperial_Knight_F.ALO,
+			Arctic, 			EVF_Imperial_Knight_F.ALO,
+			Volcanic, 			EVF_Imperial_Knight_F.ALO,
+			Desert, 			EVF_Imperial_Knight_F.ALO,
+			Forest, 			EVF_Imperial_Knight_F.ALO,
+			Swamp, 				EVF_Imperial_Knight_F.ALO
+		</Land_Terrain_Model_Mapping>
+	</GenericHeroUnit>
+	
+	
+	<HeroCompany Name="Deployed_Imperial_Knights_Team">
+		<Variant_Of_Existing_Type>E_Stormtrooper_SquadORG</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Create_Team_Type> Deployed_Imperial_Knights_Container </Create_Team_Type>
+		<Company_Units>Squad_Imperial_Knight_A, Squad_Imperial_Knight_B, Squad_Imperial_Knight_C, Squad_Imperial_Knight_D, Squad_Imperial_Knight_E, Squad_Imperial_Knight_F</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<SFXEvent_Build_Complete>Unit_Select_Jedi01CW</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Jedi01CW</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Jedi01CW</SFXEvent_Fleet_Move>
+		<Affiliation>Fel, Rebel</Affiliation>
+	</HeroCompany>
+	
+	<Container Name="Deployed_Imperial_Knights_Container">
+		<Text_ID>TEXT_UNIT_FEL_IMPERIALKNIGHT</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Scout_Trooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FEL_IMPERIALKNIGHT TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Name>No</Show_Name>
+		<Behavior>TEAM,SELECTABLE,UNIT_AI</Behavior>
+		<LandBehavior>REVEAL, LAND_TEAM_CONTAINER_LOCOMOTOR, TEAM_TARGETING, GARRISON_UNIT, ABILITY_COUNTDOWN</LandBehavior>
+		<SpaceBehavior>REVEAL</SpaceBehavior>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Space_FOW_Reveal_Range>800.0</Space_FOW_Reveal_Range>
+		<MovementClass>Infantry</MovementClass>
+		<Garrison_Category> Infantry </Garrison_Category>
+		
+		<Max_Speed>1</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Infantry </UnitCollisionClass>
+		<FormationOrder> 1 </FormationOrder>
+		<FormationSpacing> .5 </FormationSpacing>
+		<MovementClass> Infantry </MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Is_Squashable> true </Is_Squashable>
+		<MovementPredictionInterval> 4.0 </MovementPredictionInterval>	
+		<ContainerArrangement> Dartboard </ContainerArrangement>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+		
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Scale_Land>80</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>200</Radar_Icon_Scale_Space>
+
+		<Icon_Name>I_BUTTON_Fel_ImperialKnight.tga</Icon_Name>
+
+		<Targeting_Max_Attack_Distance>20.0</Targeting_Max_Attack_Distance>
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+		<Tactical_Bribe_Cost>25</Tactical_Bribe_Cost>
+		
+        <Select_Box_Scale>20</Select_Box_Scale>
+        <Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+        
+		<Unit_Abilities_Data SubObjectList="Yes">
+             <Unit_Ability>
+				<Type>AREA_EFFECT_HEAL</Type>
+				<Recharge_Seconds>35.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Heal_Blast </Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Attack_Jedi01CW </SFXEvent_Target_Ability> 
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TARGETED_INVULNERABILITY</Type>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
+				<Effective_Radius>400</Effective_Radius>
+				<Friendly_Ability> true </Friendly_Ability>
+				<Supports_Autofire>True</Supports_Autofire>				
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+			 
+		<CategoryMask>LandHero</CategoryMask>
+	</Container>
+	
+</Imperial_Knights_DeployedUnit_Data>

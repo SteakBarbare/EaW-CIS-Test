@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<Ha_HAVUnit_Data>
+	
+	<Mobile_Defense_Unit Name="Ha_HAV">
+		<Variant_Of_Existing_Type>Ha_HAVORG</Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Ha_HAV_Death_Clone_00</Death_Clone>
+	</Mobile_Defense_Unit>
+	<GroundVehicle Name="Ha_HAV_Death_Clone_00">
+		<Variant_Of_Existing_Type>Ha_HAV</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ha_HAV_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<Mobile_Defense_Unit Name="Ha_HAVORG">
+		<Text_ID>TEXT_UNIT_HA_HAV</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_HA_HAV</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ha_HAV.TGA</Icon_Name>
+		<Land_Model_Name>Ha_HAV.ALO</Land_Model_Name>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		
+		<Scale_Factor>0.8</Scale_Factor>
+		<Mass>1.0</Mass>
+		<Size_Value>75</Size_Value>
+
+		<Max_Speed>1.5</Max_Speed>
+		<Max_Rate_Of_Turn>0.9</Max_Rate_Of_Turn>
+		<Space_Layer> Land </Space_Layer>
+		<Movement_Animation_Speed> 0.5 </Movement_Animation_Speed>
+		<Has_Pre_Turn_Anim> yes </Has_Pre_Turn_Anim>
+		<Deploys>Yes</Deploys>
+		<Deployment_Anim_Rate>0.5</Deployment_Anim_Rate>
+		<Tactical_Build_Attachment_Bone_Name> ATTACH_POINT_00 </Tactical_Build_Attachment_Bone_Name>
+		<Tactically_Built_Child_Object_Persists> No </Tactically_Built_Child_Object_Persists>
+		<Behavior>SELECTABLE</Behavior>
+		
+		<LandBehavior>
+			ABILITY_COUNTDOWN,
+			WALK_LOCOMOTOR,
+			IDLE,
+			TARGETING,
+			WEAPON,
+			POWERED, 
+			REVEAL, 
+			HIDE_WHEN_FOGGED,
+			UNIT_AI,
+			SURFACE_FX,
+			AFFECTED_BY_SHIELD,
+			STUNNABLE,
+			DAMAGE_TRACKING,
+			SQUASH,
+			GARRISON_VEHICLE,
+			SHIELDED
+		</LandBehavior>
+		
+		<Garrison_Category> Infantry</Garrison_Category>
+		<Num_Garrison_Slots>10</Num_Garrison_Slots>
+		<Garrison_Exit_Dist>0</Garrison_Exit_Dist>
+		<Garrison_Enter_Dist>0</Garrison_Enter_Dist>
+		<Garrison_Radius>30</Garrison_Radius>
+		<Property_Flags>GoodInfantryCrusher | CanContainGarrison</Property_Flags>
+		
+		
+		<DeployedBehavior>TACTICAL_BUILD_OBJECTS</DeployedBehavior>
+		
+
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+		<Is_Affected_By_Gravity_Control_Field> No </Is_Affected_By_Gravity_Control_Field>
+		<Is_Supercrusher>Yes</Is_Supercrusher>
+		<SurfaceFX_Name>Generic_Track</SurfaceFX_Name>
+
+		<Affiliation>Pirates, Hapan</Affiliation>
+
+		<Armor_Type> Armor_Juggernaut </Armor_Type>
+		<Tactical_Health>2000</Tactical_Health>
+		<Autoresolve_Health>1000</Autoresolve_Health>
+		<Shield_Points>1000</Shield_Points>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<AI_Combat_Power>177</AI_Combat_Power>
+		<Damage>70</Damage>
+
+		<Land_FOW_Reveal_Range>450.0</Land_FOW_Reveal_Range>
+		<!-- This value must be less than the range of the hard points -->
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+
+		<HardPoints>
+			HP_Ha_HAV_Turret_01,
+			HP_Ha_HAV_Turret_02
+		</HardPoints>
+		
+		<Tactical_Buildable_Objects_Campaign>
+			Hapan,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Rebel,
+				UC_Empire_EM_Field_Generator,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Offensive_Sensor_Node,
+				UC_Rebel_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret	
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer>
+			Pirates,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_Empire_Offensive_Sensor_Node,
+				UC_Empire_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Rebel,
+				UC_Empire_EM_Field_Generator,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Offensive_Sensor_Node,
+				UC_Rebel_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret		
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Collidable_By_Projectile_Dead>Yes</Collidable_By_Projectile_Dead>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<SFXEvent_Turret_Rotating_Loop> Structure_Turret_Motor </SFXEvent_Turret_Rotating_Loop>	
+		<SFXEvent_Engine_Idle_Loop> Unit_Juggernaut_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Juggernaut_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Overall_Length>166.0</Overall_Length>
+		<Overall_Width>56.0</Overall_Width>
+
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
+		<MovementClass>Wheeled</MovementClass>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>99</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>3</No_Refraction_Below_Detail_Level>
+		<Blob_Shadow_Below_Detail_Level>2</Blob_Shadow_Below_Detail_Level>
+		<Blob_Shadow_Scale>65.0, 65.0</Blob_Shadow_Scale>
+		<Blob_Shadow_Material_Name>Generic_Shadow</Blob_Shadow_Material_Name>
+		<Weather_Category>Tracked</Weather_Category>
+        <Ranking_In_Category>3</Ranking_In_Category>
+
+		<Space_Layer> Land </Space_Layer>
+		<UnitCollisionClass> Giant Vehicle </UnitCollisionClass>
+		<Custom_Hard_XExtent> 75.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 25.0 </Custom_Hard_YExtent>
+		<FormationGrouping> Solo </FormationGrouping>
+		<MinimumPushReturnDistance> 100 </MinimumPushReturnDistance>
+
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Targeting_Stickiness_Time_Threshold>1.0</Targeting_Stickiness_Time_Threshold>
+		<Targeting_Priority_Set>AntiVehicleStructure</Targeting_Priority_Set>	
+		<Score_Cost_Credits> 18000 </Score_Cost_Credits>
+		<Population_Value>1</Population_Value>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Movement_Directions_Count>2</Movement_Directions_Count>
+		<Fire_Weapon_When_Deployed>No</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>Yes</Fire_Weapon_When_Undeployed>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</Mobile_Defense_Unit>
+	
+	
+
+
+	<GroundCompany Name="Ha_HAV_Company">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HA_HAV</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_HA_HAV</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Ha_HAV.TGA</Icon_Name>
+		
+		<Affiliation>Pirates, Hapan</Affiliation>
+		<Build_Cost_Credits>650</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hapan_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>Imperial_ATAT_Barge</Company_Transport_Unit>
+		
+		<Company_Units>Ha_HAV</Company_Units>
+				
+		<SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>1350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+	
+	
+
+</Ha_HAVUnit_Data>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+
+
+<Hu_LAATUnit_Data>
+
+	<GroundVehicle Name="Hu_LAAT">
+		<Variant_Of_Existing_Type> LAATUORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_LAAT</Text_ID>
+		<Encyclopedia_Good_Against>MPTL T4B_Tank Rebel_Infantry_Squad</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>AAC_HOVERTANK Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LAAT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_GUNSHIP</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Hu_Ugly_LAAT.ALO</Land_Model_Name>
+		<Icon_Name>i_button_Hu_LAAT.tga</Icon_Name>
+		<Affiliation>Pirates, Hutts, GAC</Affiliation>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+			
+		<Ranged_Target_Z_Adjust>100.0</Ranged_Target_Z_Adjust>
+		<Hardpoints>
+				HP_Gr_Fighter_Proton_Torpedo_00,
+				HP_Gr_Fighter_Heavy_Rocket_00,
+				HP_Gr_Fighter_Missile_00,
+				HP_LAAT_Yellow_Beam_00,
+				HP_LAAT_Yellow_Beam_01,
+				HP_Hu_LAAT_Yellow_Beam,
+				HP_Gr_Rear_Turret_Yellow_00
+		</Hardpoints>
+			
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, HULAAT_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="HULAAT_Death_Clone_00">
+		<Variant_Of_Existing_Type>LAAT_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hu_Ugly_LAAT_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+	<GroundCompany Name="Hu_LAAT_Company">
+		<Variant_Of_Existing_Type>LAATU_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_LAAT</Text_ID>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Hutts_Ground_Heavy_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		<Company_Units>Hu_LAAT</Company_Units>
+        <Icon_Name>i_button_Hu_LAAT.tga</Icon_Name>
+		
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+        
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		
+	</GroundCompany>
+	
+	
+
+</Hu_LAATUnit_Data>

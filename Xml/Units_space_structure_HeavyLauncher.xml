@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<space_structure_HeavyLauncherUnit_Data>
+
+	<UniqueUnit Name="HeavyLauncher_RebelEmpire">
+		<Variant_Of_Existing_Type>SmallGolanIeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HEAVYLAUNCHER</Text_ID>
+		<Space_Model_Name>AR_NV_HeavyLauncher.alo</Space_Model_Name>
+		<Affiliation>Rebel, Empire, Underworld, Pirates</Affiliation>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Star_Destroyer </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, POWERED, TARGETING, TACTICAL_SELL, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, WEAPON, TURRET, ION_STUN_EFFECT</SpaceBehavior>
+		<Icon_Name>I_BUTTON_HeavyLauncher.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Space_FOW_Reveal_Range>3000.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>5000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Min_Attack_Distance> 250 </Targeting_Min_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>20</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>0.15</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Fire_Inaccuracy_Distance> Fighter, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 1.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 30.0 </Fire_Inaccuracy_Distance>
+		
+		<Projectile_Types>Proj_Ship_HvyLauncher_MissileB</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>12</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>8</Projectile_Fire_Recharge_Seconds>
+		
+		<Fire_Weapon_When_In_Rocket_Attack_Mode>Yes</Fire_Weapon_When_In_Rocket_Attack_Mode>
+		<Fire_Weapon_When_In_Normal_Attack_Mode>No</Fire_Weapon_When_In_Normal_Attack_Mode>
+		<SFXEvent_Fire>Unit_Missile_Fire</SFXEvent_Fire>
+		<HardPoints>
+			HP_Rocket_01,
+			HP_Rocket_02,
+			HP_Rocket_03,
+			HP_Rocket_04,
+			HP_Torpedo_01,
+			HP_Torpedo_02,
+			HP_Torpedo_03,
+			HP_Torpedo_04,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03,
+			HP_Shield_GeneratorH_04,
+			HP_TorpedoM_01,
+			HP_TorpedoM_02,
+			HP_TorpedoM_03,
+			HP_TorpedoM_04,
+			HP_RocketM_01,
+			HP_RocketM_02,
+			HP_RocketM_03,
+			HP_RocketM_04
+		</HardPoints>
+		
+		
+		<Death_Clone>Damage_Normal, HeavyLauncher_Death_Clone</Death_Clone>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HEAVYLAUNCHER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>5000</Targeting_Max_Attack_Distance>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+                <Type>LASER_DEFENSE</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> HeavyLauncher_Laser_Defense </GUI_Activated_Ability_Name>
+                <Effective_Radius> 1000.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated> Unit_Laser_Defense_On_Crusader </SFXEvent_GUI_Unit_Ability_Activated>  <!--(by pressing the activate button)-->
+				<SFXEvent_GUI_Unit_Ability_Deactivated> Unit_Laser_Defense_Off_Crusader </SFXEvent_GUI_Unit_Ability_Deactivated>  <!--(by pressing deactivate)-->
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+           </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+            <Laser_Defense_Ability Name="HeavyLauncher_Laser_Defense">
+                <Activation_Style> User_Input </Activation_Style>
+                <Defense_Duration_In_Secs> 120.0 </Defense_Duration_In_Secs>
+                <Laser_Color>184, 10, 37, 255</Laser_Color>
+                <Bone_Names>muzzleB_00</Bone_Names>
+                <Projectile_Types_Targeted>MISSILE, ROCKET, MPTL_ROCKET</Projectile_Types_Targeted>
+                <Protection_Radius>1000.0</Protection_Radius>
+                <Laser_Beam_Frames>2</Laser_Beam_Frames>
+                <Laser_Beam_Width>4</Laser_Beam_Width>
+                <Projectile_Dist_Travelled>100</Projectile_Dist_Travelled>
+                <Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>
+                <Laser_Beam_Texture>tractor_beam00.tga</Laser_Beam_Texture>
+                <Recharge_Time_In_Secs>.50</Recharge_Time_In_Secs>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Zap_SFXEvent>Unit_Point_Laser_Fire</Zap_SFXEvent>
+            </Laser_Defense_Ability>
+		</Abilities>
+		
+	</UniqueUnit>
+	<SpecialStructure Name="HeavyLauncher_Death_Clone">
+		<Text_ID>TEXT_UNIT_GOLANI</Text_ID>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_HeavyLauncher_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</space_structure_HeavyLauncherUnit_Data>

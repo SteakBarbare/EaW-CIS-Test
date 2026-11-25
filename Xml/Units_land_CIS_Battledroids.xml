@@ -1,0 +1,264 @@
+<?xml version="1.0"?>
+<BattledroidsUnit_Data>
+	<GroundVehicle Name="Battledroids_Special">
+		<Variant_Of_Existing_Type>Battledroids</Variant_Of_Existing_Type>
+		<Create_Team>No</Create_Team>
+	</GroundVehicle>
+	<GroundInfantry Name="Battledroids">
+		<Variant_Of_Existing_Type>BattledroidsORG</Variant_Of_Existing_Type>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_B1Droid.ALO,
+			Urban, 				CIS_B1Droid.ALO,
+			Arctic, 			CIS_B1Droid_Snow.ALO,
+			Volcanic, 			CIS_B1Droid_Desert.ALO,
+			Desert, 			CIS_B1Droid_Desert.ALO,
+			Forest, 			CIS_B1Droid_Cammo.ALO,
+			Swamp, 				CIS_B1Droid_Cammo.ALO
+		</Land_Terrain_Model_Mapping>
+		<Land_Model_Anim_Override_Name>CIS_B1Droid.ALO</Land_Model_Anim_Override_Name>
+		<Death_Clone>Damage_Force_Whirlwind, Battledroid_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Battledroid_Crush_Death_Clone</Death_Clone>
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+		<Death_SFXEvent_Start_Die>Unit_Defeat_B1Droid</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1Droid </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Select>Unit_Select_B1Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B1Droid</SFXEvent_Guard>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_B1Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B1Droid </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B1Droid </Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="BattledroidsORG">
+		<Variant_Of_Existing_Type>StormtrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BATTLEDROIDS</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>CIS_B1Droid.ALO</Land_Model_Name>
+
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+
+		<Affiliation>CIS, Underworld, Rebel, Pirates</Affiliation>
+
+		<Tactical_Health>100</Tactical_Health>
+		<AI_Combat_Power>7</AI_Combat_Power>
+
+		<CategoryMask> Infantry </CategoryMask>
+		
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+				
+		<Encyclopedia_Text>TEXT_TOOLTIP_DROID TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		
+		<Presence_Induced_Animations>
+			Attention, 
+				Dooku,
+				General_Grievous
+		</Presence_Induced_Animations>
+	</GroundInfantry>
+	<GroundInfantry Name="Battledroid_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Battledroids</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="Battledroid_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Battledroids</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		<Specific_Death_Anim_Index/>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Battledroid">
+		<Variant_Of_Existing_Type>Battledroids</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED, DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.8 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Battledroid_rebel">
+		<Variant_Of_Existing_Type>Battledroids</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.8 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Battledroid_rebel_B">
+		<Variant_Of_Existing_Type>Squad_Battledroid_rebel</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>C_BattleDroid_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+	</GroundInfantry>	
+	<GroundCompany Name="C_BattleDroid_Squad_B">
+		<Variant_Of_Existing_Type>C_BattleDroid_Squad</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 18 </Max_Squad_Size>
+		<Create_Team_Type> Battledroid_Team </Create_Team_Type>
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+	</GroundCompany>	
+	<GroundCompany Name="C_BattleDroid_Squad">
+		<Variant_Of_Existing_Type>Rebel_Infantry_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BATTLEDROIDS</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DROID TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>CIS, Underworld, Pirates, Rebel</Affiliation>
+		<Build_Cost_Credits>40</Build_Cost_Credits>
+		<Build_Time_Seconds>12</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		
+		<Ship_Class>infantry</Ship_Class>
+		<Company_Transport_Unit>C9979_Landing_Craft</Company_Transport_Unit>
+		
+		<Company_Units> 
+		Squad_Battledroid_rebel_B,
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel
+		</Company_Units>
+		<Max_Squad_Size> 18 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+		<GUI_Model_Name>CIS_B1Droid.ALO</GUI_Model_Name>
+		<Land_Model_Name>CIS_B1Droid.ALO</Land_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_B1Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>40</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundCompany>
+	<GroundCompany Name="C_BattleDroid_Squad_Small">
+		<Variant_Of_Existing_Type>C_BattleDroid_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>CIS, Underworld, Rebel</Affiliation>
+		<Company_Units> 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel
+		</Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+	</GroundCompany>
+	<GroundCompany Name="C_BattleDroid_Squad_Medium">
+		<Variant_Of_Existing_Type>C_BattleDroid_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>CIS, Underworld, Rebel</Affiliation>
+		<Company_Units> 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel 
+		</Company_Units>
+		<Max_Squad_Size> 6 </Max_Squad_Size>
+	</GroundCompany>
+	<GroundCompany Name="C_BattleDroid_Squad_Large">
+		<Variant_Of_Existing_Type>C_BattleDroid_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>CIS, Underworld, Rebel</Affiliation>
+		<Company_Units> 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel, 
+		Squad_Battledroid_rebel
+		</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+	</GroundCompany>
+	
+	<Container Name="Battledroid_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BATTLEDROIDS</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DROID TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Icon_Name>I_BUTTON_CIS_B1_BATTLE_DROID.tga</Icon_Name>
+  		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Select_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Container>
+
+	
+	
+		
+</BattledroidsUnit_Data>

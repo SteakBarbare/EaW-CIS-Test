@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<EVK_Assassin_Corvette_MUnit_Data>
+
+	
+	
+	<SpaceUnit Name="EVK_Assassin_Corvette_M">
+		<Variant_Of_Existing_Type>Assassin_CorvetteORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_ASSASSINCORVETTE_M</Text_ID>
+		<Encyclopedia_Good_Against> Quasar Corellian_Gunboat Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_ASSASSINCORVETTE_M TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CORVETTE </Encyclopedia_Unit_Class>
+		<Space_Model_Name>EVK_Assassin_Corvette_M.ALO</Space_Model_Name>
+		<Icon_Name>i_button_EVK_Assassin_Corvette_M.tga</Icon_Name>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		
+		<Behavior>DUMMY_STARSHIP, SELECTABLE, POWERED, SHIELDED</Behavior>
+		<SpaceBehavior>BARRAGE, ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, TARGETING, WEAPON, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON </SpaceBehavior>
+				
+		<Projectile_Types>Proj_Ship_Assassin_M</Projectile_Types>
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Fire_Pulse_Delay_Seconds>0.2</Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>8.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
+		<!--<Targeting_Fire_Inaccuracy_Fixed_Radius> 120 </Targeting_Fire_Inaccuracy_Fixed_Radius>-->
+		<Targeting_Min_Attack_Distance>220</Targeting_Min_Attack_Distance>
+		<Build_Cost_Credits>1700</Build_Cost_Credits>
+		<SFXEvent_Fire>Unit_Boron_Missile_Fire</SFXEvent_Fire>
+		<AI_Combat_Power>255</AI_Combat_Power>
+		<HardPoints>
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Shield_GeneratorH_00,
+			HP_T_EVKAssasin_01,
+			HP_T_EVKAssasin_02,
+			HP_T_EVKAssasin_07,
+			HP_T_EVKAssasin_08
+		</HardPoints>
+		<Targeting_Priority_Set>Vengeance_TP</Targeting_Priority_Set>
+		<Lua_Script>ObjectScript_MC30</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Projectile_Types_Override>Proj_Ship_Assassin_M_Barrage</Projectile_Types_Override>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER,3.0f</Mod_Multiplier>
+                <SFXEvent_Target_Ability> Unit_Barrage_Broadside_Cruiser </SFXEvent_Target_Ability>
+                <Area_Effect_Decal_Distance> 320.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>320</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-150</Target_Position_Z_Offset>
+			</Unit_Ability>
+			  <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> AssasinM_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Broadside_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		  <Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="AssasinM_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 3.0 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_Broadside_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_Attack_Broadside_Cruiser</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+		<Tactical_Build_Cost_Multiplayer>1700</Tactical_Build_Cost_Multiplayer>
+		
+		<Death_Clone>Damage_Normal, EVK_Assassin_Corvette_M_Death_Clone</Death_Clone>
+	</SpaceUnit>
+
+	<SpaceUnit Name="EVK_Assassin_Corvette_M_Death_Clone">
+		<Text_ID>TEXT_UNIT_ACCLAMATOR</Text_ID>
+		<Space_Model_Name>EVK_Assassin_Corvette_M_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+	
+</EVK_Assassin_Corvette_MUnit_Data>

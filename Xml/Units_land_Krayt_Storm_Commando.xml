@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Krayt_Storm_CommandoUnit_Data>
+	<GenericHeroUnit Name="Krayt_Storm_CommandoH">
+		<Variant_Of_Existing_Type>Storm_CommandoH</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Fel, Empire</Affiliation>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>PLACE_REMOTE_BOMB</Type>
+				<Recharge_Seconds>18.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name>Saboteur_Remote_Bomb_Attack</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Thermal_Sabateur </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>DETONATE_REMOTE_BOMB</Type>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+
+			<Galactic_Sabotage_Ability Name="Saboteur_Galactic_Sabotage">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>Yes</Causes_Despawn>
+				<Can_Destroy_Special_Structure>True</Can_Destroy_Special_Structure>
+				<Sabotage_Cost_Increase_Factor> 2.0 </Sabotage_Cost_Increase_Factor>
+			</Galactic_Sabotage_Ability>
+		
+			
+			<System_Spy_Ability Name="Saboteur_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+			</System_Spy_Ability>
+
+			<Remote_Bomb_Ability Name="Saboteur_Remote_Bomb_Attack"> 
+				<Activation_Style> User_Input </Activation_Style> 
+				<Activation_Min_Range>5.0</Activation_Min_Range>
+				<Activation_Max_Range>130.0</Activation_Max_Range>
+				<Bomb_Type>Proj_Remote_Bomb</Bomb_Type>
+				<Toss_Anim>BOMBTOSS</Toss_Anim>
+				<Spawn_Frame>12.0</Spawn_Frame>
+				<Spawn_Bone>MuzzleB_00</Spawn_Bone>
+			</Remote_Bomb_Ability>
+
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Krayt_Storm_Commando_Squad">
+		<Variant_Of_Existing_Type>Imperial_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Krayt_Ground_Barracks, Krayt_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Company_Units> Krayt_Storm_CommandoH</Company_Units>
+		<Company_Transport_Unit>EVK_Fury_BoardingShip</Company_Transport_Unit>
+		
+	</HeroCompany>
+	<HeroCompany Name="Krayt_Storm_Commando_Land_Squad">
+		<Variant_Of_Existing_Type>Krayt_Storm_Commando_Squad</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+	<HeroCompany Name="Krayt_Storm_Commando_Space_Squad">
+		<Variant_Of_Existing_Type>Krayt_Storm_Commando_Squad</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>EVK_Fury_BoardingShip_MP</Company_Transport_Unit>
+	</HeroCompany>
+	
+	<HeroCompany Name="Fel_Storm_Commando_Squad">
+		<Variant_Of_Existing_Type>Imperial_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Fel_Ground_Barracks, Fel_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Units> Krayt_Storm_CommandoH</Company_Units>
+		<Company_Transport_Unit>EVF_Sigma_BoardingShip</Company_Transport_Unit>
+		
+	</HeroCompany>
+	<HeroCompany Name="Fel_Storm_Commando_Land_Squad">
+		<Variant_Of_Existing_Type>Fel_Storm_Commando_Squad</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+	<HeroCompany Name="Fel_Storm_Commando_Space_Squad">
+		<Variant_Of_Existing_Type>Fel_Storm_Commando_Squad</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>EVF_Sigma_BoardingShip_MP</Company_Transport_Unit>
+	</HeroCompany>
+	
+	
+</Krayt_Storm_CommandoUnit_Data>

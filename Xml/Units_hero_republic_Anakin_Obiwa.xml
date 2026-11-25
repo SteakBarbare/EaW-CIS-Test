@@ -1,0 +1,849 @@
+<?xml version="1.0"?>
+<Anakin_Obiwan_Files>
+	<HeroUnit Name="CLONOBIWAN_Misiones">
+		<Variant_Of_Existing_Type>CLONOBIWAN</Variant_Of_Existing_Type>
+		<Tactical_Health>500</Tactical_Health>
+	</HeroUnit>
+	<HeroUnit Name="CLONOBIWAN">
+		<Variant_Of_Existing_Type>Obi_Wan_Kenobi</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_CLONOBIWAN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CLONOBIWAN TEXT_TOOLTIP_REDUCE_TIME_5 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+		<Land_Model_Name>Ri_Kenobi.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_Obiwan.tga</Icon_Name>
+	
+		<Affiliation>Republic</Affiliation>
+	
+		<Tactical_Health>1500</Tactical_Health>
+		<Autoresolve_Health>3500</Autoresolve_Health>
+		<AI_Combat_Power>500</AI_Combat_Power>
+		
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+
+		<SFXEvent_Select>Unit_Select_ObiwanCW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_ObiwanCW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiwanCW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_ObiwanCW</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_ObiwanCW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_ObiwanCW</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_ObiwanCW</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ObiwanCW </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Defeat_ObiwanCW </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Defeat_ObiwanCW </SFXEvent_Health_Critical_Warning>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<CategoryMask> LandHero | SpaceHero </CategoryMask>
+	
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>		
+	
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Republic_Hero</Highlight_Blob_Material_Name>
+	</HeroUnit>
+	<HeroUnit Name="Anakin">
+		<Variant_Of_Existing_Type>Obi_Wan_Kenobi</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ANAKIN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ANAKIN2 TEXT_TOOLTIP_REDUCE_TIME_5 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+		<Land_Model_Name>RI_Anakin.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_Anakin.tga</Icon_Name>
+
+		<Affiliation>Republic</Affiliation>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>1500</Tactical_Health>
+		<Autoresolve_Health>3500</Autoresolve_Health>
+		<AI_Combat_Power>500</AI_Combat_Power>
+
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+
+		<SFXEvent_Select>Unit_Select_AnakinCW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_AnakinCW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AnakinCW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_AnakinCW</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_AnakinCW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_AnakinCW</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_AnakinCW</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_AnakinCW </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Defeat_AnakinCW </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Defeat_AnakinCW </SFXEvent_Health_Critical_Warning>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<CategoryMask> LandHero | SpaceHero </CategoryMask>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>		
+
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Republic_Hero</Highlight_Blob_Material_Name>
+
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>FORCE_CONFUSE</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> ObiWan_Confuse </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Guard_AnakinCW </SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TARGETED_INVULNERABILITY</Type>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
+				<Effective_Radius>400</Effective_Radius>
+				<Friendly_Ability> true </Friendly_Ability>
+				<Supports_Autofire>True</Supports_Autofire>				
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</HeroUnit>
+	
+	<HeroCompany Name="ClonAnakin_new_Team">
+		<Variant_Of_Existing_Type>ClonObiwan_old_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ANAKIN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ANAKIN2 TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Rep_Anakin.tga</Icon_Name>
+		<Company_Transport_Unit>Anakin_Eta2</Company_Transport_Unit>
+		<Company_Units>Anakin</Company_Units>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_AnakinCW</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_AnakinCW</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AnakinCW</SFXEvent_Fleet_Move>
+	</HeroCompany>
+	<HeroCompany Name="ClonObiwan_new_Team">
+		<Variant_Of_Existing_Type>ClonObiwan_old_Team</Variant_Of_Existing_Type>
+		<Company_Transport_Unit>ClonObiwanETA_2</Company_Transport_Unit>
+	</HeroCompany>
+	<HeroCompany Name="ClonAnakin_old_Team">
+		<Variant_Of_Existing_Type>ClonObiwan_old_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ANAKIN</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ANAKIN2 TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Rep_Anakin.tga</Icon_Name>
+		<Company_Transport_Unit>Anakin_Delta7</Company_Transport_Unit>
+		<Company_Units>Anakin</Company_Units>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_AnakinCW</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_AnakinCW</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AnakinCW</SFXEvent_Fleet_Move>
+	</HeroCompany>
+	<HeroCompany Name="ClonAnakin_Team_Space_MP">
+		<Variant_Of_Existing_Type>ClonAnakin_old_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>38</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+   	    <Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+	</HeroCompany>
+	<HeroCompany Name="ClonObiwan_old_Team">
+		<Text_ID>TEXT_HERO_CLONOBIWAN</Text_ID>
+		<Icon_Name>I_BUTTON_Rep_Obiwan.tga</Icon_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>50</Damage>
+		<Affiliation>Republic</Affiliation>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>ClonObiwan_Delta7</Company_Transport_Unit>
+		<Company_Units>CLONOBIWAN</Company_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Homogeneous>No</Is_Homogeneous>
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+		<Max_Squad_Size> 2 </Max_Squad_Size>
+		<Formation_Priority>2</Formation_Priority>
+		<Available_In_Skirmish>yes</Available_In_Skirmish>
+		<Can_Be_Only_One>true</Can_Be_Only_One>
+		<Idle_Chase_Range>1.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Population_Value>1</Population_Value>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_ObiwanCW</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_ObiwanCW</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiwanCW</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+            <Unit_Ability>
+                <Type>SABER_THROW</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Luke_Saber_Throw </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <Effective_Radius> 500.0 </Effective_Radius>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+            <Unit_Ability>
+                <Type>FORCE_CLOAK</Type>
+                <Recharge_Seconds>10.0</Recharge_Seconds>
+				<Expiration_Seconds>60.0</Expiration_Seconds>
+                <GUI_Activated_Ability_Name> Luke_Force_Cloak </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Cloak_Luke_Land</SFXEvent_GUI_Unit_Ability_Activated>
+                <Effective_Radius> 500.0 </Effective_Radius>
+            </Unit_Ability>
+		
+			<Unit_Ability>
+				<Type>FORCE_CONFUSE</Type>
+				<Recharge_Seconds>40.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> ObiWan_Confuse </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<SFXEvent_GUI_Unit_Ability_Activated> Unit_Confuse_Obi_Wan </SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>TARGETED_INVULNERABILITY</Type>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name>
+				<Spawned_Object_Type> Proj_Special_Obiwan_Instant_Invulnerability_Blast </Spawned_Object_Type>
+				<Effective_Radius>400</Effective_Radius>
+				<Friendly_Ability> true </Friendly_Ability>
+				<Supports_Autofire>True</Supports_Autofire>				
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>3450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_CLONOBIWAN TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_MASTER </Encyclopedia_Unit_Class>
+		<CategoryMask>LandHero | SpaceHero</CategoryMask>
+		<Ranking_In_Category> 3 </Ranking_In_Category>
+		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
+	</HeroCompany>
+	
+	<HeroCompany Name="ClonObiwan_Team_Space_MP">
+		<Variant_Of_Existing_Type>ClonObiwan_old_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>38</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+   	    <Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+	</HeroCompany>
+	<SpaceUnit Name="VenatorCody_Mision_Coruscant">
+		<Variant_Of_Existing_Type>Rep_VenatorX</Variant_Of_Existing_Type>
+		<Lua_Script>Autoload_Coruscant_Rep_Reinforces01</Lua_Script>
+		<Text_ID>TEXT_UNIT_VENATORCODY</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Rebel_Recusant_Patrol Rebel_Recusant_Frigate Rebel_Pirate_Munificent_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_LucrehulkB CONF_Tecno_Union_Destroyer C_Providence_Cruiser </Encyclopedia_Vulnerable_To>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+	</SpaceUnit>
+	<TransportUnit Name="VenatorCody_MP">
+		<Variant_Of_Existing_Type>VenatorCody</Variant_Of_Existing_Type>
+		
+		<Abilities SubObjectList="Yes">
+			<Concentrate_Fire_Attack_Ability Name="VenatorCody_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Fighter | Bomber | Transport | Corvette | Frigate | Capital | Structure</Applicable_Unit_Categories>
+				<Target_Damage_Increase_Percent>0.0</Target_Damage_Increase_Percent>
+				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Concentrate_Fire_Attack_Ability>
+			
+			<Energy_Weapon_Attack_Ability Name="VenatorCody_Weapon_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Fighter | Bomber | Transport | Corvette | Frigate | Capital | Super | Spacehero | Structure</Applicable_Unit_Categories>
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>HP_trac_bone</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+				<Beam_Color>4, 39, 251, 255</Beam_Color>
+				<Beam_Width>20.0</Beam_Width>
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Damage_Per_Frame>400</Damage_Per_Frame>
+			</Energy_Weapon_Attack_Ability>
+		</Abilities>
+	</TransportUnit>
+	
+	
+	<HeroUnit Name="Cody">
+		<Variant_Of_Existing_Type>Squad_Generic_Field_Commander_Phase2_Republic</Variant_Of_Existing_Type>
+		<Lua_Script>Rep_Cody_1X_Re</Lua_Script>
+		<Text_ID>TEXT_UNIT_REP_CODY</Text_ID>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Icon_Name>i_button_Rep_Cody.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_REP_CODY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+	</HeroUnit>
+	<HeroCompany Name="Cody_Team">
+		<Variant_Of_Existing_Type>Republic_Field_Commander_Phase2_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_REP_CODY</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_REP_CODY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Company_Units> Cody, Squad_Rep_Phase2_Field_Commander_Guard, Squad_Rep_Phase2_Field_Commander_Guard, Squad_Rep_Phase2_Field_Commander_Guard, Squad_Rep_Phase2_Field_Commander_Guard</Company_Units>
+		<Company_Transport_Unit>VenatorCody</Company_Transport_Unit>
+		<Icon_Name>i_button_Rep_Cody.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+	</HeroCompany>	
+
+	<GroundVehicle Name="AT-TE_Phase2_Walker_special">
+		<Variant_Of_Existing_Type>AT-TE_Phase2_Walker</Variant_Of_Existing_Type>
+		<Lua_Script>Rep_Cody_1X2_Re</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_AT_TE_Phase2_Company_special">
+		<Variant_Of_Existing_Type>Republic_AT_TE_Company_MKII</Variant_Of_Existing_Type>
+		<Company_Units>AT-TE_Phase2_Walker_special</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>Venator_Craft</Company_Transport_Unit>
+	</GroundCompany>
+	
+	<TransportUnit Name="VenatorCody">
+		<Variant_Of_Existing_Type>Rep_VenatorX</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_VENATORCODY</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Rep_Venator_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+			
+		<Affiliation>Republic</Affiliation>
+		<Ship_Class>Transport</Ship_Class>
+		<AI_Combat_Power>8300</AI_Combat_Power>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_VENATORCODY TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Population_Value>1</Population_Value>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_REP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>Rep_Fleet_Commander_3_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+	
+			<Unit_Ability>
+				<Type>ENERGY_WEAPON</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> VenatorCody_Weapon_Attack_Ability </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<SFXEvent_Target_Ability> Unit_Energy_Blast_Piett </SFXEvent_Target_Ability>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Energy_Blast </SFXEvent_Special_Ability_Loop> 
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Energy_Weapon_Attack_Ability Name="VenatorCody_Weapon_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Fighter | Bomber | Transport | Corvette | Frigate | Capital | Super | Spacehero | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+                <Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+                <Owner_Particle_Bone_Name>HP_trac_bone</Owner_Particle_Bone_Name>
+				<Activation_Min_Range>0</Activation_Min_Range>
+	            <Activation_Max_Range>1500</Activation_Max_Range>
+				<Beam_Color>4, 39, 251, 255</Beam_Color>
+				<Beam_Width>20.0</Beam_Width>
+				<!-- Modifiers. If 0 - no modifier is applied, 1 - "100% increase or decrease" -->
+				<Damage_Per_Frame>400</Damage_Per_Frame>
+			</Energy_Weapon_Attack_Ability>
+		</Abilities>
+	
+		<CategoryMask> Transport | AntiFrigate </CategoryMask>
+	</TransportUnit>
+
+	<SpaceUnit Name="Anakin_Eta2">
+		<Variant_Of_Existing_Type>Caza_Jedi2</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CLONANAKIN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ANAKIN2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+
+		<Space_Model_Name>rep_eta_2_A.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_Anakin.tga</Icon_Name>
+		<Respawn_Whole_Team_When_Killed>Yes</Respawn_Whole_Team_When_Killed>
+	    <No_Colorization_Color> 158, 10, 16, 255 </No_Colorization_Color> 
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+		<Affiliation>Republic</Affiliation>
+		
+		<SFXEvent_Select>Unit_Select_AnakinCW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_AnakinCW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AnakinCW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_AnakinCW</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_AnakinCW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_AnakinCW</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_AnakinCW</SFXEvent_Group_Attack>
+		<SFXEvent_Assist_Move> Unit_Group_Move_AnakinCW </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_AnakinCW </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Attack_AnakinCW </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Attack_AnakinCW </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Attack_AnakinCW </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Attack_AnakinCW </SFXEvent_Enemy_Health_Critical_Warning>		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_AnakinCW </Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Lost> Unit_Defeat_AnakinCW </SFXEvent_Unit_Lost>
+		
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber | AntiSuper </CategoryMask>
+		
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Create_Team>Yes</Create_Team>
+		
+		<Display_Contained_Hero_Grab_Bars>False</Display_Contained_Hero_Grab_Bars>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>STEALTH</Type>
+				<Alternate_Icon_Name>i_sa_stealth.tga</Alternate_Icon_Name>
+                <GUI_Activated_Ability_Name>Stealth_AnakinEta2</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>10.0</Recharge_Seconds>
+				<Expiration_Seconds>80.0</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FORCE_CONFUSE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FORCE_CONFUSE_SPACE_DESC</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FORCE_CONFUSE.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_AnakinCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Guard_AnakinCW</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+        
+            <Stealth_Ability Name="Stealth_AnakinEta2">
+                <Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 255</Stealth_Color>
+                <Stealth_Transition_Time>0.8</Stealth_Transition_Time>
+                <SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+            </Stealth_Ability>
+            
+			<Galactic_Stealth_Ability Name="AnakinEta2_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+            
+        </Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="ClonObiwanETA_2">
+		<Variant_Of_Existing_Type>Caza_Jedi2</Variant_Of_Existing_Type>
+		
+
+		<Text_ID>TEXT_HERO_CLONOBIWAN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CLONOBIWAN TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+
+		<Space_Model_Name>rep_eta_2_O.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_Obiwan.tga</Icon_Name>
+		<Respawn_Whole_Team_When_Killed>Yes</Respawn_Whole_Team_When_Killed>
+	    <No_Colorization_Color> 158, 10, 16, 255 </No_Colorization_Color> 
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+		
+		<SFXEvent_Select>Unit_Select_ObiwanCW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_ObiwanCW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiwanCW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_ObiwanCW</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_ObiwanCW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_ObiwanCW</SFXEvent_Group_Move>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ObiwanCW </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Group_Move_ObiwanCW </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_ObiwanCW </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Attack_ObiwanCW </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Attack_ObiwanCW </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Attack_ObiwanCW </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Attack_ObiwanCW </SFXEvent_Enemy_Health_Critical_Warning>		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ObiwanCW </Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Lost> Unit_Defeat_ObiwanCW </SFXEvent_Unit_Lost>
+
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber | AntiSuper </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+		
+		<Display_Contained_Hero_Grab_Bars>False</Display_Contained_Hero_Grab_Bars>
+		
+		<Create_Team>Yes</Create_Team>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Special_ObiwanEta2_Instant_Invulnerability_Blast</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_ObiwanCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_TARGETED_INVULNERABILITY_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_TARGETED_INVUL_SPACE_DESCR</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_FORCE_PROTECT.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_ObiwanCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Guard_ObiwanCW</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</SpaceUnit>
+	<TransportUnit Name="Caza_Eta2_Landing">
+		<Variant_Of_Existing_Type>ClonObiwanETA_2</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Eta2_ObiwanAnakin_Land.ALO</Land_Model_Name>
+		<Behavior>TRANSPORT, HINT</Behavior>
+		<Scale_Factor>0.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-50, -50, 0</User_Bound_Min>
+		<User_Bound_Max>50, 50, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</TransportUnit>
+	<Squadron Name="Eta2_Obiwan_Squadron">
+		<Variant_Of_Existing_Type>Delta7_Obiwan_Squadron</Variant_Of_Existing_Type>
+
+		<Squadron_Units>ClonObiwanETA_2</Squadron_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Squadron_Offsets>0.0,0.0,0.0</Squadron_Offsets>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Special_ObiwanEta2_Instant_Invulnerability_Blast</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_ObiwanCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_TARGETED_INVULNERABILITY_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_TARGETED_INVUL_SPACE_DESCR</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_FORCE_PROTECT.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_ObiwanCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Guard_ObiwanCW</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Is_Homogeneous>Yes</Is_Homogeneous>
+	</Squadron>
+	
+	<Squadron Name="Eta2_Anakin_Squadron">
+		<Variant_Of_Existing_Type>Delta7_Anakin_Squadron</Variant_Of_Existing_Type>
+		
+		<Squadron_Units>Anakin_Eta2</Squadron_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Squadron_Offsets>0.0,0.0,0.0</Squadron_Offsets>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>STEALTH</Type>
+				<Alternate_Icon_Name>i_sa_stealth.tga</Alternate_Icon_Name>
+                <GUI_Activated_Ability_Name>Stealth_AnakinEta2</GUI_Activated_Ability_Name> 
+                <Recharge_Seconds>10.0</Recharge_Seconds>
+				<Expiration_Seconds>80.0</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FORCE_CONFUSE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FORCE_CONFUSE_SPACE_DESC</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FORCE_CONFUSE.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		            1.5</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_AnakinCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Guard_AnakinCW</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+        
+            <Stealth_Ability Name="Stealth_AnakinEta2">
+                <Activation_Style> User_Input </Activation_Style>
+                <Stealth_Color>255, 255, 255, 255</Stealth_Color>
+                <Stealth_Transition_Time>0.8</Stealth_Transition_Time>
+                <SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+            </Stealth_Ability>
+            
+			<Galactic_Stealth_Ability Name="AnakinEta2_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+            
+        </Abilities>
+		<Is_Homogeneous>Yes</Is_Homogeneous>
+	</Squadron>
+	<SpaceUnit Name="Anakin_Delta7">
+		<Variant_Of_Existing_Type>Caza_Jedi</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_CLONANAKIN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ANAKIN2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+
+		<Space_Model_Name>Rep_Delta7_Anakin.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_Anakin.tga</Icon_Name>
+		<Respawn_Whole_Team_When_Killed>Yes</Respawn_Whole_Team_When_Killed>
+	    <No_Colorization_Color> 158, 10, 16, 255 </No_Colorization_Color> 
+		<Scale_Factor>1.0</Scale_Factor>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Select_Box_Z_Adjust>1.0f</Select_Box_Z_Adjust>
+
+		<Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+		
+		<SFXEvent_Select>Unit_Select_AnakinCW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_AnakinCW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AnakinCW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_AnakinCW</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_AnakinCW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_AnakinCW</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_AnakinCW</SFXEvent_Group_Attack>
+		<SFXEvent_Assist_Move> Unit_Group_Move_AnakinCW </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_AnakinCW </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Attack_AnakinCW </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Attack_AnakinCW </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Attack_AnakinCW </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Attack_AnakinCW </SFXEvent_Enemy_Health_Critical_Warning>		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_AnakinCW </Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Lost> Unit_Defeat_AnakinCW </SFXEvent_Unit_Lost>
+
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber | AntiSuper </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+		
+		<Display_Contained_Hero_Grab_Bars>False</Display_Contained_Hero_Grab_Bars>
+
+		<Create_Team>Yes</Create_Team>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_AnakinCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="ClonObiwan_Delta7">
+		<Variant_Of_Existing_Type>Caza_Jedi</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_HERO_CLONOBIWAN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CLONOBIWAN TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Space_Model_Name>Rep_Delta7_Obiwan.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Rep_Obiwan.tga</Icon_Name>
+		<Respawn_Whole_Team_When_Killed>Yes</Respawn_Whole_Team_When_Killed>
+	    <No_Colorization_Color> 158, 10, 16, 255 </No_Colorization_Color> 
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Affiliation>Republic</Affiliation>
+		
+		<SFXEvent_Select>Unit_Select_ObiwanCW</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_ObiwanCW</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiwanCW</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_ObiwanCW</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_ObiwanCW</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_ObiwanCW</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_ObiwanCW</SFXEvent_Group_Attack>
+		<SFXEvent_Assist_Move> Unit_Group_Move_ObiwanCW </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_ObiwanCW </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Attack_ObiwanCW </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Attack_ObiwanCW </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Attack_ObiwanCW </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Attack_ObiwanCW </SFXEvent_Enemy_Health_Critical_Warning>		
+		<Death_SFXEvent_Start_Die> Unit_Defeat_ObiwanCW </Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Lost> Unit_Defeat_ObiwanCW </SFXEvent_Unit_Lost>
+
+		<CategoryMask> Fighter | SpaceHero | AntiFighter | AntiBomber | AntiSuper </CategoryMask>
+		<Victory_Relevant>yes</Victory_Relevant>
+
+		<Create_Team>Yes</Create_Team>
+		
+		<Display_Contained_Hero_Grab_Bars>False</Display_Contained_Hero_Grab_Bars>
+
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_ObiwanCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<TransportUnit Name="Caza_Delta7Obiwan_Landing">
+		<Variant_Of_Existing_Type>Caza_Jedi</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_Eta2_ObiwanAnakin_Land.ALO</Land_Model_Name>
+		<Behavior>TRANSPORT, HINT</Behavior>
+		<Scale_Factor>0.5</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-50, -50, 0</User_Bound_Min>
+		<User_Bound_Max>50, 50, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</TransportUnit>
+	
+	<Squadron Name="Delta7_Obiwan_Squadron">
+		<Variant_Of_Existing_Type>A_Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_CLONOBIWAN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Conf_Vulture KUS_VultureR C_Cis_DroidBomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Caza_Sith Asajj_Ventress_Ginivex CONF_CIS_BOARDING </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLONOBIWAN TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Icon_Name>I_BUTTON_Rep_Obiwan.tga</Icon_Name>
+
+		<Affiliation>Republic</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_ObiwanCW</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_ObiwanCW</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_ObiwanCW</SFXEvent_Fleet_Move>
+		
+		<Squadron_Units>ClonObiwan_Delta7</Squadron_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Squadron_Offsets>0.0,0.0,0.0</Squadron_Offsets>
+	
+		<Population_Value>1</Population_Value>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_ObiwanCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Is_Homogeneous>Yes</Is_Homogeneous>
+	</Squadron>
+	<Squadron Name="Delta7_Anakin_Squadron">
+		<Variant_Of_Existing_Type>A_Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_CLONANAKIN</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_JEDI_KNIGHT </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Conf_Vulture KUS_VultureR C_Cis_DroidBomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Caza_Sith Asajj_Ventress_Ginivex CONF_CIS_BOARDING </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ANAKIN2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Icon_Name>I_BUTTON_Rep_Anakin.tga</Icon_Name>
+
+		<Affiliation>Republic</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Tech_Level>99</Tech_Level>
+
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_AnakinCW</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_AnakinCW</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_AnakinCW</SFXEvent_Fleet_Move>
+
+		<Squadron_Units>Anakin_Delta7</Squadron_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Squadron_Offsets>0.0,0.0,0.0</Squadron_Offsets>
+		
+		<Population_Value>1</Population_Value>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.5</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_AnakinCW</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Is_Homogeneous>Yes</Is_Homogeneous>
+	</Squadron>
+</Anakin_Obiwan_Files>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<EVFO_StormtrooperUnit_Data>
+	<GroundInfantry Name="EVFO_Stormtrooper">
+		<Variant_Of_Existing_Type> StormtrooperORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_STORMTROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVFO_STORMTROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Land_Model_Name>EVFO_StormTrooper.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVFO_Stormtrooper.tga</Icon_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVFO_StormTrooper.ALO,
+			Urban, 				EVFO_StormTrooper.ALO,
+			Arctic, 			EVFO_SnowAssault.alo,
+			Volcanic, 			EVFO_StormTrooper.ALO,
+			Desert, 			EVFO_StormTrooper.ALO,
+			Forest, 			EVFO_StormTrooper.ALO,
+			Swamp, 				EVFO_StormTrooper.ALO
+		</Land_Terrain_Model_Mapping>
+		<Death_Clone>Damage_Force_Whirlwind, EVFO_Stormtrooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, EVFO_Stormtrooper_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Disruptor_Hand, Infantry_Disruptor_Death_Clone_01</Death_Clone>
+
+		<Death_Clone>Damage_Infection, Infantry_Melt_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Remote_Bomb, Stormtrooper_Remote_Bomb_Death_Clone</Death_Clone>
+						
+	</GroundInfantry>
+	
+	<GroundInfantry Name="EVFO_Stormtrooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="EVFO_Stormtrooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Squad_EVFO_Stormtrooper">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper</Variant_Of_Existing_Type>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Squad_EVFO_Stormtrooper_B">
+		<Variant_Of_Existing_Type>Squad_EVFO_Stormtrooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>EVFO_Stormtrooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="EVFO_Stormtrooper_Squad_B">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> EVFO_Stormtrooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	
+	<GroundCompany Name="EVFO_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_EVFO_STORMTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVFO_STORMTROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Icon_Name>i_button_EVFO_Stormtrooper.tga</Icon_Name>
+		<Affiliation>Empire, EVFO</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Build_Cost_Credits>60</Build_Cost_Credits>
+		<Piracy_Value_Credits>50</Piracy_Value_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>EVFO_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>EVFO_Troop_Transport_L</Company_Transport_Unit>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Create_Team_Type> EVFO_Stormtrooper_Team </Create_Team_Type>
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Storm_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+				
+		<Company_Units> Squad_EVFO_Stormtrooper_B, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper </Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+	
+	<Container Name="EVFO_Stormtrooper_Team">
+		<Variant_Of_Existing_Type>Stormtrooper_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_EVFO_STORMTROOPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVFO_STORMTROOPER TEXT_DESC_CI_CANTIDAD_2 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Icon_Name>i_button_EVFO_Stormtrooper.tga</Icon_Name>
+	</Container>
+	
+
+	<GroundCompany Name="EVFO_Stormtrooper_Squad_SurvivorsS">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Units> Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper</Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+	</GroundCompany>
+	
+	<GroundCompany Name="EVFO_Stormtrooper_Squad_SurvivorsM">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Units> Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper</Company_Units>
+		<Max_Squad_Size> 6 </Max_Squad_Size>
+	</GroundCompany>
+	
+	<GroundCompany Name="EVFO_Stormtrooper_Squad_Survivors">
+		<Variant_Of_Existing_Type>EVFO_Stormtrooper_Squad</Variant_Of_Existing_Type>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Company_Units> Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper, Squad_EVFO_Stormtrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+	</GroundCompany>
+</EVFO_StormtrooperUnit_Data>

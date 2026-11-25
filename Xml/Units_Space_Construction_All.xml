@@ -1,0 +1,588 @@
+<?xml version="1.0"?>
+<Construction_AllUnit_Data>
+	
+	<SpaceUnit Name="E_BuildAll_01">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GOLANIII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANIII_DEF </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_SB_GOLAN3.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<Build_Time_Seconds>75</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>E_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>E_BuildAll_01</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	<SpaceUnit Name="E_BuildAll_02">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>E_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>E_BuildAll_02</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	<SpaceUnit Name="E_BuildAll_03">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSIMPERIALES</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLEROSIMPERIALES </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Repairyardx2.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>E_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>E_BuildAll_03</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<GroundVehicle Name="E_BuildAll">
+		<Variant_Of_Existing_Type>Ch_TR_MB</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CONSTRUCTIONSHIPC </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR </Encyclopedia_Unit_Class>
+		
+		<CategoryMask> Spacehero | LandHero </CategoryMask>
+		
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Icon_Name>I_BUTTON_EV_Empirical.tga</Icon_Name>
+		<Spawn_Planet>Coruscant</Spawn_Planet>
+				
+		<Affiliation>Underworld, Empire, Rebel</Affiliation>
+				
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+						
+			<Reduce_Production_Time_Ability Name="E_BuildAll_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.05</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+		</Abilities>
+	</GroundVehicle>	
+
+	<SpaceUnit Name="E_BuildAll_Ship">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_Empirical_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Affiliation>Empire</Affiliation>
+		<Space_Model_Name>EV_Empirical.ALO</Space_Model_Name>
+		<Autoresolve_Health>3600</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		<Tactical_Health>1500000</Tactical_Health>
+		<Shield_Refresh_Rate>22500</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+				
+		<Tactical_Build_Cost_Multiplayer>5000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<HardPoints>
+			HP_TurboMG_01,
+			HP_TurboMG_02,
+			HP_TurboMG_03,
+			HP_TurboMG_04,
+			HP_TurboMG_05,
+			HP_TurboMG_06
+		</HardPoints>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIPC TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EV_Empirical.tga</Icon_Name>		
+		<Death_Clone>Damage_Normal, E_BuildAll_Ship_Death_Clone</Death_Clone>
+		<Landing_Transport_Variant>Imperial_Landing_Craft_Landing</Landing_Transport_Variant>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsADV</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>	
+		
+	<SpaceUnit Name="E_BuildAll_Ship_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>EV_Empirical_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>RV_Corellian_Corvette.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<HeroCompany Name="E_BuildAll_Team">	
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Icon_Name>I_BUTTON_EV_Empirical.tga</Icon_Name>
+		<Company_Transport_Unit>E_BuildAll_Ship</Company_Transport_Unit>
+		<Company_Units>E_BuildAll</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIPC</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Select_Star_Destroyer</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Move_Star_Destroyer</SFXEvent_Hero_Respawned>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Required_Special_Structures>E_XCommand</Required_Special_Structures>
+		<CategoryMask> Spacehero | LandHero </CategoryMask>
+		<Build_Limit_Current_Per_Player>10</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>		
+	</HeroCompany>	
+		
+
+	
+	<SpaceUnit Name="R_BuildAll_01">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GOLANIII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANIII_DEF </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_SB_GOLAN3.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<Build_Time_Seconds>75</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>R_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>R_BuildAll_01</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="R_BuildAll_02">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>10000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>R_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>R_BuildAll_02</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="R_BuildAll_03">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSREBELDES</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLEROSREBELDES </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_REPAIRYARD2.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>R_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>R_BuildAll_03</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="R_BuildAll_Ship">
+		<Variant_Of_Existing_Type>CR_CV_Basic</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_RV_YB300_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Affiliation>Rebel</Affiliation>
+		<Space_Model_Name>RV_YB300.ALO</Space_Model_Name>
+		<Autoresolve_Health>3600</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		<Tactical_Health>1500000</Tactical_Health>
+		<Shield_Refresh_Rate>22500</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<Max_Speed>2.2</Max_Speed>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIPC TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_RV_YB300.tga</Icon_Name>		
+		<Death_Clone>Damage_Normal, R_BuildAll_Ship_Death_Clone</Death_Clone>
+		<Landing_Transport_Variant>Gallofree_Transport_Landing</Landing_Transport_Variant>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+		
+		<Tactical_Build_Cost_Multiplayer>5000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsADV</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>	
+	<SpaceUnit Name="R_BuildAll_Ship_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>RV_YB300_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>RV_Corellian_Corvette.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<GroundVehicle Name="R_BuildAll">
+		<Variant_Of_Existing_Type>E_BuildAll</Variant_Of_Existing_Type>
+		
+		<Affiliation>Rebel</Affiliation>
+		<Icon_Name>I_BUTTON_RV_YB300.tga</Icon_Name>
+		<Spawn_Planet>Yavin_Old</Spawn_Planet>
+				
+		<Abilities SubObjectList="Yes">
+						
+			<Reduce_Production_Time_Ability Name="R_BuildAll_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.05</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+		</Abilities>
+	</GroundVehicle>
+
+	
+	<HeroCompany Name="R_BuildAll_Team">	
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Icon_Name>I_BUTTON_RV_YB300.tga</Icon_Name>
+		<Company_Transport_Unit>R_BuildAll_Ship</Company_Transport_Unit>
+		<Company_Units>R_BuildAll</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIPC</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Select_Corvette</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Move_Corvette</SFXEvent_Hero_Respawned>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Required_Special_Structures>R_XCommand</Required_Special_Structures>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<CategoryMask> Spacehero | LandHero </CategoryMask>
+		<Build_Limit_Current_Per_Player>10</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>		
+	</HeroCompany>	
+		
+	
+	
+	<SpaceUnit Name="U_BuildAll_01">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GOLANIII</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANIII_DEF </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_UV_GolanIII.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>13000</Build_Cost_Credits>
+		<Build_Time_Seconds>75</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>U_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>U_BuildAll_01</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="U_BuildAll_02">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Shipyard.tga</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>11000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>U_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>U_BuildAll_02</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="U_BuildAll_03">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPIRATAS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLEROSPIRATAS </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_REPAIRYARD2.tga</Icon_Name>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>U_BuildAll_Ship</Required_Orbiting_Units>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Lua_Script>U_BuildAll_03</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="U_BuildAll_Ship">
+		<Variant_Of_Existing_Type>CR_CV_Basic</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_RV_YB300_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Affiliation>Underworld</Affiliation>
+		<Space_Model_Name>UV_YB300.ALO</Space_Model_Name>
+		<Projectile_Types>Proj_Ship_Turbolaser_Yellow_Small_Ships</Projectile_Types>
+		<Max_Speed>2.2</Max_Speed>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<Autoresolve_Health>3600</Autoresolve_Health>
+		<Shield_Points>22200</Shield_Points>
+		<Tactical_Health>1500000</Tactical_Health>
+		<Shield_Refresh_Rate>22500</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIPC TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_UV_YB300.tga</Icon_Name>		
+		<Death_Clone>Damage_Normal, U_BuildAll_Ship_Death_Clone</Death_Clone>
+		<Landing_Transport_Variant>Gallofree_Transport_Landing</Landing_Transport_Variant>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, NEBULA </SpaceBehavior>
+			
+		<Tactical_Build_Cost_Multiplayer>5000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+                <Type>BUZZ_DROIDS</Type>
+                <GUI_Activated_Ability_Name>Buzz_Droids_Viper</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <SFXEvent_Target_Ability> EHD_Build_Structure </SFXEvent_Target_Ability>
+				<!-- Make this double the Chase_Radius in the special ability-->
+				<Area_Effect_Decal_Distance> 100.0 </Area_Effect_Decal_Distance>
+				<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADBUILDSPACE_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Buzz_Droids_Ability Name="Buzz_Droids_Viper">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range> 5 </Activation_Min_Range>
+                <Activation_Max_Range> 10 </Activation_Max_Range>
+                <Chase_Radius>0</Chase_Radius>
+                <Damage_Radius> 0 </Damage_Radius>
+                <Enemy_Damage_Per_Second> 0 </Enemy_Damage_Per_Second>
+                <Own_Damage_Per_Second> 0 </Own_Damage_Per_Second>
+                <Activation_Time_In_Seconds> 1 </Activation_Time_In_Seconds>
+                <Activate_SFX>EHD_Build_Structure</Activate_SFX>
+                <Object_Type>Construction_Ship_PadsADV</Object_Type>
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+            </Buzz_Droids_Ability>
+		</Abilities>
+	</SpaceUnit>	
+	<SpaceUnit Name="U_BuildAll_Ship_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>UV_YB300_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>RV_Corellian_Corvette.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<GroundVehicle Name="U_BuildAll">
+		<Variant_Of_Existing_Type>E_BuildAll</Variant_Of_Existing_Type>
+
+		<Affiliation>Underworld</Affiliation>
+		<Icon_Name>I_BUTTON_UV_YB300.tga</Icon_Name>
+		<Spawn_Planet>Tatooine</Spawn_Planet>
+
+		<Abilities SubObjectList="Yes">
+						
+			<Reduce_Production_Time_Ability Name="U_BuildAll_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.05</Time_Reduction_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+		</Abilities>
+	</GroundVehicle>
+
+	
+	<HeroCompany Name="U_BuildAll_Team">	
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CONSTRUCTIONSHIPC</Text_ID>
+		<Icon_Name>I_BUTTON_UV_YB300.tga</Icon_Name>
+		<Company_Transport_Unit>U_BuildAll_Ship</Company_Transport_Unit>
+		<Company_Units>U_BuildAll</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CONSTRUCTIONSHIPC</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR </Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Complete>Unit_Select_Corvette</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Move_Corvette</SFXEvent_Hero_Respawned>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Required_Special_Structures>U_XCommand</Required_Special_Structures>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<CategoryMask> Spacehero | LandHero </CategoryMask>
+		<Build_Limit_Current_Per_Player>10</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>		
+	</HeroCompany>	
+		
+
+	
+</Construction_AllUnit_Data>

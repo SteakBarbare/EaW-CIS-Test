@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<XSuper_BunkerUnit_Data>
+
+	
+	
+   <SpecialStructure Name="Garrison_XSuper_Bunker_Capturable">
+		<Variant_Of_Existing_Type>Garrison_Bunker_Template</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_Artillery_Turret.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EB_Artillery_Turret.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Armor_Type> Armor_Turret </Armor_Type>
+		<Base_Level_Available>1</Base_Level_Available>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TURRET</Encyclopedia_Unit_Class>
+		
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld, CIS, Republic, Krayt, Fel</Affiliation>
+		
+		<Behavior> CAPTURE_POINT, SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Types>Proj_Ground_SPMAT_grenade</Projectile_Types>
+		
+		<Targeting_Max_Attack_Distance>800.0</Targeting_Max_Attack_Distance>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<Death_SFXEvent_Start_Die>Unit_Turret_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TURRET</Encyclopedia_Unit_Class>
+		
+		<CategoryMask> Structure | AntiVehicle </CategoryMask>
+		<SFXEvent_Fire>Unit_SPMAT_Projectile_Fire</SFXEvent_Fire>
+		
+		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
+		<Targeting_Min_Attack_Distance>100.0</Targeting_Min_Attack_Distance>
+	</SpecialStructure>
+</XSuper_BunkerUnit_Data>
+
+
+

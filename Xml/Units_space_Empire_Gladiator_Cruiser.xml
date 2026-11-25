@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<GladiatorUnit_Data>
+
+	<SpaceUnit Name="Gladiator">
+		<Variant_Of_Existing_Type>GladiatorORG</Variant_Of_Existing_Type>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_Squadron, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron, 17</Reserve_Spawned_Units_Tech_0>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>		
+		<Death_Clone>Damage_Normal, Gladiator_Death_Clone</Death_Clone>
+	</SpaceUnit>	
+	<SpaceUnit Name="GladiatorORG">
+		<Variant_Of_Existing_Type>Victory_Destroyer_No_Fighters</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GLADIATOR</Text_ID>
+		<Encyclopedia_Good_Against> Quasar Corellian_Gunboat Nebulon_B_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing Calamari_Cruiser B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GLADIATOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_Gladiator.alo</Space_Model_Name>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Max_Speed>2.0</Max_Speed>
+
+		<Layer_Z_Adjust>150.563</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Acclamator </Armor_Type>
+		<Shield_Armor_Type>Shield_Frigate</Shield_Armor_Type>
+
+		<Autoresolve_Health>18000</Autoresolve_Health>
+		<Shield_Points>18000</Shield_Points>
+		<Tactical_Health>100000000</Tactical_Health>  
+		<Shield_Refresh_Rate>20000</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>210000</Energy_Refresh_Rate>
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>		
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<AI_Combat_Power>1920</AI_Combat_Power>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		
+		
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+		<Turret_Rotate_Extent_Degrees>90</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_BlancoVacio_LaserT</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>3.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>10</Projectile_Fire_Recharge_Seconds>
+
+		<SFXEvent_Fire/>
+				
+		<HardPoints>
+			HP_Ion_01, 
+			HP_Ion_02,
+			HP_Ion_03, 
+			HP_Ion_04,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Rocket_01,
+			HP_Rocket_02,
+			HP_Torpedo_01,
+			HP_Torpedo_02,
+			HP_T_EGladiator_01,
+			HP_T_EGladiator_02,
+			HP_T_EGladiator_03,
+			HP_T_EGladiator_04,
+			HP_T_EGladiator_05,
+			HP_T_EGladiator_06,
+			HP_T_EGladiator_07,
+			HP_T_EGladiator_08,
+			HP_T_EGladiator_09,
+			HP_T_EGladiator_10,
+			HP_T_EGladiator_11,
+			HP_T_EGladiator_12,
+			HP_Fighter_Bay_Small_00,
+			HP_Fighter_Bay_Small_01,
+			HP_Fighter_Bay_Small_02,
+			HP_Shield_Generator_Small_00,
+			HP_Shield_Generator_Small_01,
+			HP_Shield_Generator_Small_02,
+			HP_Shield_Generator_Small_03,
+			HP_Engines_Small_00
+    	</HardPoints>
+
+		<Icon_Name>I_BUTTON_EV_Gladiator.TGA</Icon_Name>
+		<GUI_Model_Name>EV_Gladiator.alo</GUI_Model_Name>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Name>I_RADAR_CAPITAL_SHIP_BOX.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.03  0.03</Radar_Icon_Size>  <!-- 0.00006 = 1 metro tamaño minimo mostrado de la cuña en juego -->
+		<Targeting_Priority_Set>SpaceArtillery</Targeting_Priority_Set>
+		<Lua_Script>A_IA_Blast_PPTW3</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.1f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Gladiator_Max_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_torpedoB2_Barrage</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Victory_Destroyer </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_TORPEDO_ATTACK_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_HROCKET_FIGHTER_DESCR</Alternate_Description_Text><!-- la descripcion vale para todos -->
+				<Alternate_Icon_Name>I_SA_FULL_SALVO.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+			  <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Gladiator_Cluster_Bomb </GUI_Activated_Ability_Name> 
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Broadside_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+		</Unit_Abilities_Data>
+		  <Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="Gladiator_Max_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure | Fighter | Bomber</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Piet_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+            <Cluster_Bomb_Ability Name="Gladiator_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 3.0 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_Broadside_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_Attack_Broadside_Cruiser</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>2500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>625</Tactical_Bribe_Cost>
+		<Population_Value>2</Population_Value>
+		<!--<Space_Override_Population_Value>1</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="Gladiator_Death_Clone">
+		<Text_ID>TEXT_UNIT_VICTORY_DESTROYER</Text_ID>
+		<Space_Model_Name>EV_Gladiator_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Ship_Class>Frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</GladiatorUnit_Data>

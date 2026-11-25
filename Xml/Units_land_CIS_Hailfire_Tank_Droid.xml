@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<Hailfire_Tank_DroidUnit_Data>
+	
+	<GroundVehicle Name="Hailfire_Tank_Droid">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HAILFIRE_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Recon_Squad REP_LAAT Pod_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT-TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HAILFIRE_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_Hailfire.ALO</Land_Model_Name>
+		<Scale_Factor>0.2</Scale_Factor>
+
+		<Affiliation>Underworld, CIS, Rebel, Pirates</Affiliation>
+
+		<Max_Speed>1.5</Max_Speed>
+		<Max_Rate_Of_Turn>1.0</Max_Rate_Of_Turn>
+		<Movement_Animation_Speed> 0.8 </Movement_Animation_Speed>
+
+		<OverrideAcceleration> .2 </OverrideAcceleration>
+		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<FormationSpacing> 2.5 </FormationSpacing>
+		<FormationOrder> 4 </FormationOrder>
+		<FormationRaggedness> 0.5 </FormationRaggedness>
+		<MaxJiggleDistance> 0 </MaxJiggleDistance>
+
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Ground_ProtonBlue_Torpedo</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>7.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Appearance_Delay_Frames> 1 </Projectile_Appearance_Delay_Frames> 
+		
+		<Turret_Rotate_Extent_Degrees>10</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
+
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 3 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 2.0 </Targeting_Fire_Inaccuracy>
+		
+		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 250.0 </Targeting_Min_Attack_Distance>
+		
+		<CategoryMask> Vehicle  </CategoryMask>
+		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
+		
+		<Hardpoints>
+				HP_Gr_Front_Eweb_Laser_Green_01
+		</Hardpoints>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Fire>Unit_MPTL_Tank_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_B3Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Select_B3Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Select_B3Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Select_B3Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Select_B3Droid</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_B3Droid_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Select_B3Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Select_B3Droid </SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Critical_B3Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B3Droid </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B3Droid </Death_SFXEvent_Start_Die>
+
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+		
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>-1.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>-1.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<AI_Combat_Power>170</AI_Combat_Power>
+
+		<Icon_Name>I_BUTTON_CIS_HAILFIRE.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 15.0</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Select_B3Droid </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Ground_ProtonBlue_Torpedo</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	<Death_Clone>Damage_Normal, Hailfire_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="Hailfire_Death_Clone_00">
+		<Variant_Of_Existing_Type>Hailfire_Tank_Droid</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Hailfire_D.ALO</Land_Model_Name>
+				
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+		
+	<GroundCompany Name="C_Hailfire_Tank_Droid_Brigade">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HAILFIRE_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Recon_Squad REP_LAAT Pod_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>CIS, Underworld, Pirates, Rebel</Affiliation>
+		<Build_Cost_Credits>675</Build_Cost_Credits>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		
+		<Company_Units>Hailfire_Tank_Droid, Hailfire_Tank_Droid, Hailfire_Tank_Droid, Hailfire_Tank_Droid</Company_Units>
+		<Max_Squad_Size> 4 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_CIS_HAILFIRE.tga</Icon_Name>
+		
+		<SFXEvent_Build_Complete>Unit_Select_B3Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_B3Droid</SFXEvent_Fleet_Move>
+		
+		<Tactical_Build_Cost_Multiplayer>675</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_HAILFIRE_TANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+</Hailfire_Tank_DroidUnit_Data>

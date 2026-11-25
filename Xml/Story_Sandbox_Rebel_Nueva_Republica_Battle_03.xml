@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE CORUSCANT ESPACIAL ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_Coruscant_Space">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_Coruscant_Space_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANT</Reward_Param1>
+				<Prereq>Batalla_de_Coruscant_Space</Prereq>
+			</Event>
+    
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>
+
+	<Event Name="Proteger_Golan3">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>GOLANIII</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_Coruscant_Space</Prereq>
+	</Event>		
+	
+	<Event Name="Objetivos_InCompletados">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANT</Reward_Param1>
+		<Prereq>Proteger_Golan3</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>EMPIRE</Reward_Param1>
+				<Prereq>Objetivos_InCompletados</Prereq>
+			</Event>
+	
+				
+	<Event Name="Objetivo_Completado">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANT</Reward_Param1>
+		<Prereq>Destruir_Quimera</Prereq>
+	</Event>
+
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>1</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Objetivo_Completado</Prereq>
+			</Event>
+<!--DIALOGOS DE LA MISION ACTIVADOS POR EL SCRIPT -->			
+
+	<Event Name="Informe_00">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_00_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_00_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>MB_SPACE_HISTORY_BATTLEOFCORUSCANTR</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_00</Prereq>
+	</Event>
+			<Event Name="Informe_00_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_00_Text</Prereq>
+			</Event>
+	<Event Name="Informe_01">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_01_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_01_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_NEW_REPUBLIC_PARTE01_MISSION_03</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_01</Prereq>
+	</Event>
+			<Event Name="Informe_01_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_01_Text</Prereq>
+			</Event>		
+	<Event Name="Informe_02">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_02_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_02_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_NEW_REPUBLIC_PARTE02_MISSION_03</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_02</Prereq>
+	</Event>
+			<Event Name="Informe_02_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_02_Text</Prereq>
+			</Event>	
+	<Event Name="Informe_03">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_03_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_03_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_NEW_REPUBLIC_PARTE03_MISSION_03</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_03</Prereq>
+	</Event>
+			<Event Name="Informe_03_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_03_Text</Prereq>
+			</Event>		
+	<Event Name="Informe_04">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>MISSION_04_DIALOGUE_GO</Event_Param2>
+	</Event>
+	<Event Name="Informe_04_Text">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_REBEL_NEW_REPUBLIC_PARTE04_MISSION_03</Reward_Param1>
+		<Reward_Param2>10</Reward_Param2>
+		<Prereq>Informe_04</Prereq>
+	</Event>
+			<Event Name="Informe_04_Text_Fin">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+				<Prereq>Informe_04_Text</Prereq>
+			</Event>		
+	<Event Name="Objetivos_Completados_Fin_Evento">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_COMPLETE</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANT</Reward_Param1>
+		<Prereq>Informe_04_Text_Fin</Prereq>
+	</Event>
+			<Event Name="Victoria_Rebelde">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+       			<Event_Param1>2</Event_Param1>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>Rebel</Reward_Param1>
+				<Prereq>Objetivos_Completados_Fin_Evento</Prereq>
+			</Event>	
+</Story>

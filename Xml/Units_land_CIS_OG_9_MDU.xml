@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<OG_9_MDUUnit_Data>
+	
+	<Mobile_Defense_Unit Name="OG_9_MDU">
+		<Variant_Of_Existing_Type>OG_9</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_OG9_MDU</Text_ID>
+		<Encyclopedia_Good_Against> Republic_AT_AP_Company Republic_CloneTrooper_Squad Republic_ATXT_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company Republic_UTAT_COMPANY REP_LAAT </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_OG9_MDU</Encyclopedia_Text>
+
+		<Land_Model_Name>CIS_OG9_MDU.ALO</Land_Model_Name>
+
+		<Scale_Factor>2.5</Scale_Factor>
+		<Affiliation>CIS, Rebel</Affiliation>
+		
+		<DeployedBehavior>TACTICAL_BUILD_OBJECTS</DeployedBehavior>
+		<Deploys>Yes</Deploys>
+		<Deployment_Anim_Rate>0.5</Deployment_Anim_Rate>
+		<Tactical_Build_Attachment_Bone_Name> ATTACH_POINT_00 </Tactical_Build_Attachment_Bone_Name>
+		<Tactically_Built_Child_Object_Persists> No </Tactically_Built_Child_Object_Persists>
+		<Behavior>SELECTABLE</Behavior>
+		
+		<Tactical_Buildable_Objects_Campaign>
+			CIS,
+				UC_Empire_EM_Field_Generator,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Offensive_Sensor_Node,
+				UC_Rebel_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Underworld,
+				UC_Underworld_Sensor_Scrambler,
+				UC_Underworld_Ysalamiri_Cage,
+				UC_Underworld_Rocket_Pod,
+				UC_Underworld_Landing_Pad,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Rapid_Fire_Laser_Turret
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer>
+			CIS,
+				UC_Empire_EM_Field_Generator,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Offensive_Sensor_Node,
+				UC_Rebel_Landing_Pad,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Underworld,
+				UC_Underworld_Sensor_Scrambler,
+				UC_Underworld_Ysalamiri_Cage,
+				UC_Underworld_Rocket_Pod,
+				UC_Underworld_Landing_Pad,
+				UC_Rebel_Mobile_Shield_Generator,
+				UC_Rebel_Rapid_Fire_Laser_Turret	
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<AI_Combat_Power>185</AI_Combat_Power>
+		
+		<Icon_Name>I_BUTTON_CIS_OG9_MDU.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Mobile_Defense_Unit>
+
+	
+	<GroundCompany Name="C_OG_9_MDU_Group">
+		<Variant_Of_Existing_Type>C_OG_9_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_OG9_MDU</Text_ID>
+		<Encyclopedia_Good_Against> Republic_AT_AP_Company Republic_CloneTrooper_Squad Republic_ATXT_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company Republic_UTAT_COMPANY REP_LAAT </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_DROID</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_OG9_MDU</Encyclopedia_Text>
+		<Icon_Name> I_BUTTON_CIS_OG9_MDU.tga </Icon_Name>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+
+		<Company_Units>OG_9_MDU</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>850</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</OG_9_MDUUnit_Data>

@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<Hu_Comm_ShipUnit_Data>
+	<SpaceUnit Name="Up_Hu_JHutt_Cruiser_to_C">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_CRUISER</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_COMMSHIP TEXT_TOOLTIP_COMMSHIP</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Hu_CommShip.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA, Pirates_Ground_Officer_Academy</Required_Special_Structures>
+		<Required_Planets>Narshadda, Nalhutta</Required_Planets>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Required_Orbiting_Units>Hu_Jabba_Hutt_Cruiser</Required_Orbiting_Units>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Lua_Script>Up_Hu_JHutt_Cruiser_to_C</Lua_Script>
+		<Population_Value>1</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Hu_Comm_Ship">
+		<Variant_Of_Existing_Type>Hu_Jabba_Hutt_Cruiser_UpC</Variant_Of_Existing_Type>
+	</SpaceUnit>
+	<SpaceUnit Name="Hu_Jabba_Hutt_Cruiser_UpC">
+		<Variant_Of_Existing_Type>Hu_Jabba_Hutt_CruiserORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_COMMSHIP</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_COMMSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_Z95_HEADHUNTER TEXT_UNIT_R41 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Affiliation>Hutts, GAC</Affiliation>
+		
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<AI_Combat_Power>1300</AI_Combat_Power>
+
+		<Space_Model_Name>Hu_Jabba_Hutt_Cruiser.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Hu_CommShip.tga</Icon_Name>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>15</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 1000 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Hu_Comm_Ship_SB">
+		<Variant_Of_Existing_Type>Hu_Leviathan</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Pi_Comm_Ship1_SB">
+		<Variant_Of_Existing_Type>Hu_Thranta</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Hutts, GAC, Pirates</Affiliation>
+		<Icon_Name>I_BUTTON_Hu_CommShip2.tga</Icon_Name>
+		<!--<Lua_Script>Enemy_Space_Re3</Lua_Script>-->		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Hu_Comm_Ship2_SB">
+		<Variant_Of_Existing_Type>Hu_Hutt_CorvetteR</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Icon_Name>I_BUTTON_Hu_CommShip2.tga</Icon_Name>
+		<!--<Lua_Script>Enemy_Space_Re3</Lua_Script>-->		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Pi_Comm_Ship3_SB1">
+		<Variant_Of_Existing_Type>BS_Gozanti_IGV55</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Hutts, Pirates</Affiliation>
+		<Lua_Script>Pi_STR5_Re</Lua_Script>	
+	</SpaceUnit>	
+
+	
+	<SpaceUnit Name="Hu_Comm_Ship3_SB3">
+		<Variant_Of_Existing_Type>Hu_Gozanti_IGV55</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Hutts, GAC</Affiliation>
+		<Lua_Script>Hu_STR5_Re</Lua_Script>	
+	</SpaceUnit>	
+
+	
+	
+	<SpaceUnit Name="Pi_Comm_Ship2_SB">
+		<Variant_Of_Existing_Type>Pi_Comm_Ship_SB</Variant_Of_Existing_Type>
+		<Affiliation>Hutts, Pirates</Affiliation>
+		<!--<Lua_Script>Enemy_Space_Re1</Lua_Script>-->		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	<SpaceUnit Name="Pi_Comm_Ship_SB">
+		<Variant_Of_Existing_Type>BS_CR_Frg</Variant_Of_Existing_Type>
+		<Affiliation>Hutts, Pirates</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+</Hu_Comm_ShipUnit_Data>

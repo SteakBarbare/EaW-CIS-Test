@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<IndustrialComplex_PlattformUnit_Data>
+	<SpecialStructure Name="Empire_IndustrialComplex_Plattform">
+		<Variant_Of_Existing_Type>IndustrialComplex_Plattform</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		
+		<Death_Clone>Damage_Normal, IndustrialComplex_Plattform_Death_Clone</Death_Clone>	
+	</SpecialStructure>
+	<SpecialStructure Name="IndustrialComplex_Plattform">
+		<Variant_Of_Existing_Type>IndustrialComplex_Builded</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_TOOLTIP_INDUSTRIALCOMPLEX</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Rebel, Empire, Pirates</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		
+		<Death_Clone>Damage_Normal, IndustrialComplex_Plattform_Death_Clone</Death_Clone>	
+	</SpecialStructure>
+	
+	<SpecialStructure Name="IndustrialComplex_Builded">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_INDUSTRIALCOMPLEX</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_INDUSTRIALCOMPLEXB TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Space_Model_Name>NV_IndustrialComplex_X.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_IndustrialComplex_X.tga</Icon_Name>
+		<AI_Combat_Power>7500</AI_Combat_Power>
+		<Affiliation>Neutral</Affiliation>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, SPAWN_SQUADRON, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<GUI_Model_Name>NV_IndustrialComplex_X.ALO</GUI_Model_Name>
+		<Death_Clone>Damage_Normal, IndustrialComplex_Plattform_Death_Clone</Death_Clone>
+		<HardPoints>
+			HP_Shipyard_Shield01
+		</HardPoints>
+		
+	</SpecialStructure>
+	<SpecialStructure Name="IndustrialComplex_Plattform_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_IndustrialComplex_X_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+	
+</IndustrialComplex_PlattformUnit_Data>

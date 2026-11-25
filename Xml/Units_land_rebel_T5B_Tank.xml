@@ -1,0 +1,133 @@
+﻿<?xml version="1.0"?>
+
+
+<T5B_TankUnit_Data>
+	<GroundVehicle Name="T5B_Tank_WD">
+		<Variant_Of_Existing_Type>T5B_Tank</Variant_Of_Existing_Type>
+		<Affiliation>Rebel</Affiliation>
+	</GroundVehicle>
+	<GroundVehicle Name="T5B_Tank">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_T5B_TANK</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank AT_ST_Walker AT_AA_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker Imperial_MAAT Imperial_MAFT </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_T5B</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_RV_T5B.tga</Icon_Name>
+		<Land_Model_Name>RV_T5bX.alo</Land_Model_Name>
+
+		<Scale_Factor>1.5</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Rebel, GAC</Affiliation>
+		<Max_Speed>1.5</Max_Speed>
+
+		<Armor_Type> Armor_ATAT </Armor_Type>
+		<Shield_Armor_Type>Shield_HvyTank</Shield_Armor_Type>
+
+		<Shield_Points>350</Shield_Points>
+		<Tactical_Health>450</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+
+		<LandBehavior>GARRISON_UNIT,AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, BARRAGE, HUNT,WALK_LOCOMOTOR, IDLE,TARGETING, WEAPON, TURRET, SHIELDED, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+
+		<Turret_Rotate_Speed>3.0</Turret_Rotate_Speed>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_T4BX</Projectile_Types>
+		<Fire_Weapon_When_In_Rocket_Attack_Mode>Yes</Fire_Weapon_When_In_Rocket_Attack_Mode>
+		<Fire_Weapon_When_In_Normal_Attack_Mode>Yes</Fire_Weapon_When_In_Normal_Attack_Mode>
+		
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+		
+		<Land_FOW_Reveal_Range>220.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<CategoryMask> Vehicle | AntiVehicle </CategoryMask>
+				
+		<SFXEvent_Fire>Unit_Tank_T2B_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_T1B</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_T1B</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T1B</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_T1B</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T1B</SFXEvent_Guard>
+		<HardPoints>
+			HP_Gr_T5B_Proton_Torpedo_00
+		</HardPoints>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T1B </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T1B</SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_T1B_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<AI_Combat_Power>200</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+                <SFXEvent_Target_Ability> Unit_Barrage_Interdictor </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Red_T4BX</Projectile_Types_Override>
+                <Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Death_Clone>Damage_Normal, T5B_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="T5B_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>T5B_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_T5BX_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="Rebel_T5B_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_T5B_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> M1_Repulsor_Tank AT_ST_Walker AT_AA_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker Imperial_MAAT Imperial_MAFT </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_T5B TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>750</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>T5B_Tank, T5B_Tank, T5B_Tank</Company_Units>
+		<Icon_Name>i_button_RV_T5B.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>750</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+  		
+	</GroundCompany>
+	
+
+</T5B_TankUnit_Data>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<ZaUnit_Data>
+	<GenericHeroUnit Name="Za">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_ZA_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ZA TEXT_TOOLTIP_REDUCE_TIME_10 </Encyclopedia_Text>
+		<Icon_Name>i_button_Ei_Za.tga</Icon_Name>
+		<Spawn_Planet>Ord_Cantrell</Spawn_Planet>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Za_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Planet_Income_Gambling_Ability Name="Za_Gambling_Income">
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				<Min_Income_Modifier>-0.20</Min_Income_Modifier>
+				<Max_Income_Modifier>0.90</Max_Income_Modifier>
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+			<Income_Stream_Ability Name="Za_Income_Stream">
+				<Base_Income_Value>125</Base_Income_Value>
+				<Base_Interval_In_Secs>5</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Remove_Corruption_Ability Name="Za_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<HeroCompany Name="Za_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_HERO_ZA_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ZA TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Icon_Name>i_button_Ei_Za.tga</Icon_Name>
+				
+		<Company_Units>Za</Company_Units>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Noghri</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Attack_Noghri</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Noghri</SFXEvent_Fleet_Move>
+	</HeroCompany>
+</ZaUnit_Data>

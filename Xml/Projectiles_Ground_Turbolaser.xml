@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<Projectiles>
+	<Projectile Name="Proj_Ground_Turbolaser_GreenWE">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Blaster_Hand</Damage_Type>
+		<Projectile_Damage>8.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_RedWR">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Blaster_Hand</Damage_Type>
+		<Projectile_Damage>8.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_YellowWU">
+		<Variant_Of_Existing_Type>Proj_Mass_Driver_Turret</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Blaster_Hand</Damage_Type>
+		<Projectile_Damage>8.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_Green">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LaserHvyGreenGroundLand.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Damage_Type> Damage_Turbo_GRND </Damage_Type>
+		<Max_Speed>40.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Projectile_Max_Flight_Distance>1200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>20.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>20</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Detonation_Particle>Large_Damage_Land15</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land15</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land15</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE</Projectile_Ground_Detonation_SurfaceFX>
+		<AI_Combat_Power>500</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_Red">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_LaserHvyRedGroundLand.ALO</Land_Model_Name>
+		<Projectile_Object_Detonation_Particle>Large_Damage_Land11</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land11</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land11</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_Red_T">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Laser_T4B </Damage_Type>
+		<Projectile_Damage>25.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_Green_T">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Laser_T4B </Damage_Type>
+		<Projectile_Damage>25.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ground_Turbolaser_Green_flash">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_LaserHvyGreenGroundLandF.ALO</Land_Model_Name>
+		<Damage_Type>Damage_ATAT</Damage_Type>
+		<Projectile_Damage>45.0</Projectile_Damage>
+	</Projectile>	
+	<Projectile Name="Proj_Ground_Turbolaser_Red_flash">
+		<Variant_Of_Existing_Type>Proj_Ground_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_LaserHvyRedGroundLandF.ALO</Land_Model_Name>
+		<Damage_Type>Damage_ATAT</Damage_Type>
+		<Projectile_Damage>45.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle>Laser_03_Damage_Hull_Space</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Laser_03_Damage_Hull_Space</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Laser_03_Damage_Hull_Space</Projectile_Ground_Detonation_Particle>
+	</Projectile>	
+	<Projectile Name="Proj_GRShip_Turbolaser_Green_hvy">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_GreenLaser_LargeHvy.ALO</Space_Model_Name>
+		<Land_Model_Name>p_turbolaser_ground_aerial_green_Double.ALO</Land_Model_Name>
+		<Max_Speed>75.0</Max_Speed>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>150.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Turbolaser_Hvy_01_Damage_Hull_Space </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land13</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land13</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Large_Damage_Land13</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_Hvy_01_Damage_Hull_Space</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_GRShip_Turbolaser_Green">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_GreenLaser_LargeT.ALO</Space_Model_Name>
+		<Land_Model_Name>p_turbolaser_ground_aerial_green_sin_Ion.ALO</Land_Model_Name>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>75.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Turbolaser_Hvy_06_Damage_Hull_Space </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land13</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land13</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Large_Damage_Land13</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_Hvy_06_Damage_Hull_Space</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_GRShip_Turbolaser_Blue_Hvy">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_BlueLaser_LargeHvy.ALO</Space_Model_Name>
+		<Land_Model_Name>p_turbolaser_ground_aerial_blue_sin_Ion.ALO</Land_Model_Name>
+		<Max_Speed>75.0</Max_Speed>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>150.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Turbolaser_Hvy_06_Damage_Hull_Space </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land5</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land5</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Large_Damage_Land5</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeB</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_Hvy_06_Damage_Hull_Space</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_GRShip_Turbolaser_Blue">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_BlueLaser_LargeT.ALO</Space_Model_Name>
+		<Land_Model_Name>p_turbolaser_ground_aerial_blue_sin_Ion.ALO</Land_Model_Name>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>75.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Turbolaser_Hvy_06_Damage_Hull_Space </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land5</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land5</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Large_Damage_Land5</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeB</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_Hvy_06_Damage_Hull_Space</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_GRShip_Mass_Driver">
+		<Variant_Of_Existing_Type>Proj_Kedalbe_Mass_Driver</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>150.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_GRShip_Turbolaser_Red">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>75.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_GRShip_Turbolaser_Red_Hvy">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_RedLaser_LargeHvy.ALO</Space_Model_Name>
+		<Land_Model_Name>p_turbolaser_ground_aerial_red.ALO</Land_Model_Name>
+		<Max_Speed>75.0</Max_Speed>
+		<Damage_Type> Damage_ATAT </Damage_Type>
+		<Projectile_Damage>150.0</Projectile_Damage>
+		<Projectile_Object_Detonation_Particle> Turbolaser_Hvy_02_Damage_Hull_Space </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Damage_Land14</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Large_Damage_Land14</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Large_Damage_Land14</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_Hvy_02_Damage_Hull_Space</Death_Explosions> 
+	</Projectile>
+</Projectiles>

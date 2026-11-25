@@ -1,0 +1,310 @@
+<?xml version="1.0"?>
+<Projectiles>
+
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Generic">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>W_Laser_Small_R_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_R_Caza.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>35.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Damage_Type>Damage_Fighter</Damage_Type>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Max_Flight_Distance>1800.0</Projectile_Max_Flight_Distance>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Small_Damage_Space</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Small_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle/>
+		<Projectile_Lifetime_Detonation_Particle/>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Small</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Ground_Detonation_SurfaceFX>PROJECTILE</Projectile_Ground_Detonation_SurfaceFX>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_R_Caza.ALO</Space_Model_Name>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallR</Projectile_Absorbed_By_Shields_Particle>
+
+		<Projectile_Object_Detonation_Particle>Small_Laser_Red_Damage</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Red_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_R_Bomber">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Damage_Type>Damage_Station_Laser</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_G_Bomber">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Damage_Type>Damage_Station_Laser</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_R_Awing">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_AWing</Damage_Type>
+		<Projectile_Damage>5.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_G_Awing">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_AWing</Damage_Type>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_R_Xwing">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_R_GunboatS_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_G_Xwing">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_G_VT49S_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Y_Xwing">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Yellow</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Y_AEG77T_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Yellow</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red_X2">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Projectile_Damage>6.0</Projectile_Damage>
+		<AI_Combat_Power>150</AI_Combat_Power>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_G_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_G_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallG</Projectile_Absorbed_By_Shields_Particle>
+		
+		<Projectile_Object_Detonation_Particle> Small_Laser_Green_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Green_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_TIEI">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_TIEA">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+		<Projectile_Damage>6.0</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red_EW">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Projectile_Damage>5.5</Projectile_Damage>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red_ETA5">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Projectile_Damage>6.5</Projectile_Damage>
+		<Damage_Type>Damage_Proton_Torp_Light</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_TIEAG">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Proton_Torp_Light</Damage_Type>
+		<Projectile_Damage>6.2</Projectile_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Y_LAF">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Yellow</Variant_Of_Existing_Type>
+		<Projectile_Damage>6.0</Projectile_Damage>
+		<Damage_Type>Damage_AWing</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Y_HLAF">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Yellow</Variant_Of_Existing_Type>
+		<Projectile_Damage>6.5</Projectile_Damage>
+		<Damage_Type>Damage_AWing</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red_Hero">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_R_Caza.ALO</Space_Model_Name>
+		<Projectile_Damage>7.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallR</Projectile_Absorbed_By_Shields_Particle>
+		<Damage_Type>Damage_Tartan_Cruiser</Damage_Type>
+		<Projectile_Object_Detonation_Particle>Small_Laser_Red_Damage</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Red_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Yellow_Hero">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_Y_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_Y_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>7.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallY</Projectile_Absorbed_By_Shields_Particle>
+		<Damage_Type>Damage_Tartan_Cruiser</Damage_Type>
+		<Projectile_Object_Detonation_Particle> Small_Laser_Yellow_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Yellow_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Yellow_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Yellow_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Yellow_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_Hero">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_G_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_G_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>7.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Damage_Type>Damage_Tartan_Cruiser</Damage_Type>
+		<Projectile_Object_Detonation_Particle> Small_Laser_Green_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Green_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_Dreadnought"><!-- posiblemente no usado -->
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_G_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_G_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Damage_Type>Damage_Fighter</Damage_Type>
+		<Projectile_Object_Detonation_Particle> Small_Laser_Green_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Green_Damage</Death_Explosions> 
+	</Projectile>
+	
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Yellow">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_Y_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_Y_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>80</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallY</Projectile_Absorbed_By_Shields_Particle>
+		
+		<Projectile_Object_Detonation_Particle> Small_Laser_Yellow_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Yellow_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Yellow_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Yellow_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Yellow_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_Arc">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_G_Caza.ALO</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_G_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallG</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Object_Detonation_Particle> Small_Laser_Green_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Green_Damage</Death_Explosions> 
+	</Projectile>
+	
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Blue">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_B_Caza.alo</Space_Model_Name>
+		<Land_Model_Name>W_Laser_Small_B_Caza.ALO</Land_Model_Name>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallB</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Object_Detonation_Particle> Small_Laser_Blue_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Blue_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Blue_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Blue_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Blue_Damage</Death_Explosions> 
+	</Projectile>
+	
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Green_con_Ion">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_SmallG_con_Ion.ALO</Space_Model_Name>
+		<Land_Model_Name>W_SmallG_con_Ion.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Disable_Engines_Duration>1.0</Projectile_Disable_Engines_Duration>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallG</Projectile_Absorbed_By_Shields_Particle>
+		<Damage_Type>Damage_Fighter</Damage_Type>
+		<Projectile_Object_Detonation_Particle> Small_Laser_Green_Damage </Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Green_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Green_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_G_con_Ion_TIED">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Green_con_Ion</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red_con_Ion">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_SmallR_con_Ion.ALO</Space_Model_Name>
+		<Land_Model_Name>W_SmallR_con_Ion.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Projectile_Damage>5.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Disable_Engines_Duration>1.0</Projectile_Disable_Engines_Duration>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallG</Projectile_Absorbed_By_Shields_Particle>
+		<Damage_Type>Damage_Fighter</Damage_Type>
+		<Projectile_Object_Detonation_Particle>Small_Laser_Red_Damage</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Red_Damage</Death_Explosions> 
+	</Projectile>
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_R_con_Ion_TIED">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Red_con_Ion</Variant_Of_Existing_Type>
+		<Damage_Type>Damage_Assault_Frigate</Damage_Type>
+	</Projectile>
+	
+	<Projectile Name="Proj_Ship_Small_Laser_Cannon_Red_MG100">
+		<Variant_Of_Existing_Type>Proj_Ship_Small_Laser_Cannon_Generic</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Laser_Small_R_Caza.ALO</Space_Model_Name>
+		<Projectile_Damage>30.0</Projectile_Damage>
+		<Projectile_Energy_Per_Shot>5</Projectile_Energy_Per_Shot>
+		<AI_Combat_Power>120</AI_Combat_Power>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_SmallR</Projectile_Absorbed_By_Shields_Particle>
+		<Damage_Type>Damage_IPV</Damage_Type>
+		<Projectile_Object_Detonation_Particle>Small_Laser_Red_Damage</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Red_Laser_Fighter_Impact</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Small_Laser_Red_Damage</Death_Explosions> 
+	</Projectile>
+</Projectiles>

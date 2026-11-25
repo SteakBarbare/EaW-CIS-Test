@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<BS_Fleet_Tech_AllUnit_Data>
+	
+	<SpaceUnit Name="BS_Fleet_Tech_All_AI">
+		<Variant_Of_Existing_Type>BS_Fleet_Tech_All</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, UXSoloIA_STR_01</Required_Special_Structures>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+		<!--<Space_Override_Population_Value>30</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="BS_Fleet_Tech_All">
+		<Variant_Of_Existing_Type>BS_ISD</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_BLACK_SUN_TECH_0</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_STAR_DESTROYERU TEXT_UNIT_VICTORY_DESTROYERU TEXT_UNIT_MCS80A TEXT_UNIT_MCS80 TEXT_UNIT_KDY TEXT_UNIT_BALRUS TEXT_UNIT_GOLIATHBS TEXT_UNIT_BLOODSTAR_BATTLESHIP TEXT_UNIT_MARAUDER_CORVETTE TEXT_UNIT_INVINCIBLE TEXT_UNIT_THRANTA</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Underworld_StardestroyerBS_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>i_button_UI_fleet_BS_tech_all.tga</Icon_Name>
+		<GUI_Row>1</GUI_Row>
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Cost_Credits>50000</Build_Cost_Credits>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		
+		<Population_Value>0</Population_Value>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Build_Time_Reduced_By_Multiple_Factories>Yes</Build_Time_Reduced_By_Multiple_Factories>
+		<Population_Value>50</Population_Value>
+		<Space_Override_Population_Value>3</Space_Override_Population_Value>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Tactical_Build_Cost_Multiplayer>50000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+			
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>U_fleet_tech_all_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> UHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>UHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>				
+		</Unit_Abilities_Data>
+
+	</SpaceUnit>
+	<SpaceUnit Name="Disband_BS_Fleet_Tech_All">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_BLACK_SUN_TECH_0 TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>
+		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>BS_Fleet_Tech_All</Required_Orbiting_Units>
+		<Lua_Script>Disband_BS_Fleet_Tech_All</Lua_Script>
+		<SFXEvent_Build_Started>UHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>	
+	
+	
+</BS_Fleet_Tech_AllUnit_Data>

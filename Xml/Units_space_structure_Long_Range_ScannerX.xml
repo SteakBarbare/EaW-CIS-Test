@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<Orbital_Long_Range_ScannerXUnit_Data>
+
+	
+	<SpecialStructure Name="Empire_Orbital_Long_Range_ScannerX">
+		<Variant_Of_Existing_Type>Rebel_Orbital_Long_Range_Scanner</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Planets>
+			Naos_III, Abregado_Rae, AetenII, AlzocIII, Atzerri, Dagobah, Dantooine, Hoth, Endor, Endor_New, Yavin, Yavin_Old, Kashyyyk, Ilum, Korriban, Mustafar, Rattatak, Ryloth, Saleucami, 
+Shola, Aquaris, Arkania, Allyen, Anoth, Aridus, Bimmisaari, Despayre, DespayreDestroyed, Filve, Garqi, Genon, Hijarna, Jomark, Jussafet_Four, Klatooine, Mindor, Nam_Chorios, Nkllon, Pantolomin
+Poderis, Praesitlyn, Rishi, Ruusan, SelaggisVI, Serpindal, Selvaris, Smarck, Solem, Talasea, Trandosha, Toydaria, Trogan, Vladet, Vjun, Xagobah, Yinchorr, Ylesia, Zaddja, Anoat_GJavin_Sector, Atravis_Sector, Chardaan_Sector, Bothan_Sector, Abrion_Sector, Borleias_Sector, Mindor_Sector, Taris_Sector, The_Wheel_Sector, Escarte_Sector, Roche_Sector, Nirauan_Sector, Ord_Mantell_Sector, Orinda_Sector, Vladet_Sector, Bannistar_Sector, Vergesso_Sector, Denon_Sector 
+		</Required_Planets>
+	</SpecialStructure>
+	<SpecialStructure Name="Rebel_Orbital_Long_Range_Scanner">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_ORBITAL_LONG_RANGE_SCANNER</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>NV_Sensorarray.ALO</Space_Model_Name>
+		<Layer_Z_Adjust>-400.0</Layer_Z_Adjust>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Republic, CIS, Pirates, Fel, Krayt, EVFO, RVRE, GA, GAC</Affiliation>
+		<Build_Cost_Credits>210</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Slice_Cost_Credits>400</Slice_Cost_Credits>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+
+		<Tactical_Health>1200</Tactical_Health>
+		<AI_Combat_Power>1</AI_Combat_Power>
+		<Behavior>SELECTABLE, DUMMY_ORBITAL_STRUCTURE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, POWERED, TARGETING, TACTICAL_SELL, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, WEAPON, TURRET, ION_STUN_EFFECT</SpaceBehavior>
+		<Space_FOW_Reveal_Range>25000.0</Space_FOW_Reveal_Range>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Icon_Name>I_BUTTON_Sensorarray.TGA</Icon_Name>
+		<Victory_Relevant>Yes</Victory_Relevant>
+		<GUI_Model_Name>NV_Sensorarray.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Scanner_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Scanner_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select> Structure_Scanner_Select_SFX </SFXEvent_Select>
+
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Armor_Type> Armor_Satellite </Armor_Type>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Galactic_Influence_Range>150.0</Galactic_Influence_Range>
+		<Hyperspace_Fleet_Reveal_Range>150.0</Hyperspace_Fleet_Reveal_Range>
+		
+		<HardPoints>
+			HP_Shipyard_Shield01,
+		</HardPoints>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+                <Type>CORRUPT_SYSTEMS</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Long_Range_Scanner_Systems </GUI_Activated_Ability_Name> 
+                <Area_Effect_Decal_Distance> 300.0 </Area_Effect_Decal_Distance>
+                <SFXEvent_Target_Ability> Unit_Attack_Pirate_Fighter</SFXEvent_Target_Ability>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_JAMMING_FIGHTER</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_JAMMING_FIGHTER_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_CORRUPT_SYSTEMS.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+				
+		<Abilities SubObjectList="Yes">
+			<Corrupt_Systems_Ability Name="Long_Range_Scanner_Systems">
+                <Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>20.0</Activation_Min_Range>
+                <Activation_Max_Range>1000.0</Activation_Max_Range>
+                <Duration_In_Seconds>12</Duration_In_Seconds>
+                <Shield_Drain_Per_Second>60</Shield_Drain_Per_Second>
+                <Inaccuracy_Radius>500</Inaccuracy_Radius>
+				<Target_Particle_Effect>Han_Solo_Target_Stun_Effect</Target_Particle_Effect>
+				<Owner_Particle_Effect>Tani_Stun_Particles</Owner_Particle_Effect>
+                <SFXEvent_Activate>Unit_IG88_Corrupt_Systems</SFXEvent_Activate>
+            </Corrupt_Systems_Ability>			
+			<System_Spy_Ability Name="Empire_OLRS_System_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			<Enable_Radar_Ability Name="Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_LRS_00 TEXT_TOOLTIP_DANGER_BUILD_THIS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Score_Cost_Credits> 21000 </Score_Cost_Credits>
+		<Death_Clone>Damage_Normal, Sensorarray_Death_Clone</Death_Clone>
+	</SpecialStructure>
+	<SpecialStructure Name="Sensorarray_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>NV_Sensorarray.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>NV_Sensorarray.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Layer_Z_Adjust>-440.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpecialStructure>
+	<!-- Necesario solo para la campaña original en la misión de sabotaje de Dathomir -->
+	<SpecialStructure Name="Empire_Orbital_Long_Range_Scanner">
+		<Variant_Of_Existing_Type>Rebel_Orbital_Long_Range_Scanner</Variant_Of_Existing_Type>
+		<Space_Model_Name>NV_LRS.ALO</Space_Model_Name>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Base_Position>Orbital</Base_Position>
+		<Tech_Level>99</Tech_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Space_FOW_Reveal_Range>4000.0</Space_FOW_Reveal_Range>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Icon_Name>i_button_lrs.tga</Icon_Name>
+		<GUI_Model_Name>NV_LRS.ALO</GUI_Model_Name>
+
+		<Sabotage_Cost_Credits>500</Sabotage_Cost_Credits>
+
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Armor_Type> Armor_Satellite </Armor_Type>
+		<Galactic_Influence_Range>150.0</Galactic_Influence_Range>
+		<Hyperspace_Fleet_Reveal_Range>150.0</Hyperspace_Fleet_Reveal_Range>
+		<Abilities SubObjectList="Yes">
+			<System_Spy_Ability Name="Empire_OLRS_System_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			<Enable_Radar_Ability Name="Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+	</SpecialStructure>
+	
+</Orbital_Long_Range_ScannerXUnit_Data>

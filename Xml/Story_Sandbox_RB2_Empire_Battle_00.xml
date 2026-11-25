@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" ?>
+
+<Story>
+
+
+<!-- Mission start setup -->
+	<Event Name="Rebel_A4_M12_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+	</Event>
+		
+	
+	<Event Name="Rebel_A4_M12_Enable_Victory">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>ENABLE_VICTORY</Reward_Type>
+		<Reward_Param1>1</Reward_Param1>
+		<Prereq>Rebel_A4_M12_Begin</Prereq>	
+	</Event>
+
+	<Event Name="Rebel_A4_M12_Play_Death_Star_Movie">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>START_MOVIE</Reward_Type>
+		<Reward_Param1>DeathStar_Firing</Reward_Param1>
+		<Prereq>Rebel_A4_M12_Enable_Victory</Prereq>	
+	</Event>
+
+	<Event Name="Rebel_A4_M12_Pause_After_Movie">
+		<Event_Type>STORY_MOVIE_DONE</Event_Type>
+		<Prereq>Rebel_A4_M12_Play_Death_Star_Movie</Prereq>
+	</Event>
+
+	<Event Name="Rebel_A4_M12_Empire_Takes_Alderaan">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>2</Event_Param1>
+		<Reward_Type>PLANET_FACTION</Reward_Type>
+		<Reward_Param1>Alderaan</Reward_Param1>
+		<Reward_Param2>Empire</Reward_Param2>
+		<Prereq>Rebel_A4_M12_Begin</Prereq>
+	</Event>
+
+	<Event Name="Despawn_Death_Star_IA">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>2</Event_Param1>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Death_Star_IA</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Rebel_A4_M12_Empire_Takes_Alderaan</Prereq>
+	 </Event>
+	
+		
+
+</Story>

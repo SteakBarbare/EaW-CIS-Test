@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<Tech4_Field_Commander_Rebel_Hero_Files>
+
+
+	<GroundVehicle Name="Squad_Rebel_Tech4_Field_Commander_Rebel">
+		<Variant_Of_Existing_Type>Rebel_Attack_Tank</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_TECH4</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_R_TECH4 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_LHTC9 TEXT_REBEL_HEAVY_TANKS_BRIGADE TEXT_REBEL_XRVEHICLES2_SQUAD TEXT_REBEL_ARTILLERY_BRIGADE TEXT_UNIT_G-HTTA_TRANSPORT TEXT_DESC_NRE_CANTIDAD_4 TEXT_UNIT_Y_WING TEXT_DESC_NRE_CANTIDAD_4 TEXT_UNIT_X_WING TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+
+		<Icon_Name>I_BUTTON_RI_FIELD_COMMANDER_Tech4.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+				
+		<SFXEvent_Select>Unit_Select_Rebel_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Rebel_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Rebel_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Rebel_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Rebel_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Rebel_Field</SFXEvent_Group_Attack>
+
+		<CategoryMask> Infantry | LandHero </CategoryMask>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+
+		<Lua_Script>R_Tech4_Field_Re_1X</Lua_Script>
+		<Abilities SubObjectList="Yes">
+			<Remove_Corruption_Ability Name="Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</GroundVehicle>
+
+	
+	<HeroCompany Name="R_Tech4_Field_Com_Rebel_Team">
+		<Variant_Of_Existing_Type>R_Tech1_Field_Com_Rebel_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_TECH4</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_R_TECH4 TEXT_TOOLTIP_TRANSPORTE_LOADED TEXT_UNIT_LHTC9 TEXT_REBEL_HEAVY_TANKS_BRIGADE TEXT_REBEL_XRVEHICLES2_SQUAD TEXT_REBEL_ARTILLERY_BRIGADE TEXT_UNIT_G-HTTA_TRANSPORT TEXT_DESC_NRE_CANTIDAD_4 TEXT_UNIT_Y_WING TEXT_DESC_NRE_CANTIDAD_4 TEXT_UNIT_X_WING TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_RI_FIELD_COMMANDER_Tech4.TGA</Icon_Name>
+		<Build_Cost_Credits>13550</Build_Cost_Credits>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Officer_Academy, AdvancedTech_7, R_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>Mc80B_R_Tech4_Field_Commander</Company_Transport_Unit>
+		<Company_Units> 
+		Squad_Rebel_Tech4_Field_Commander_Rebel, 
+		Squad_R_T1_Commander_Auxiliar
+		</Company_Units>
+		
+		
+		<Tactical_Build_Cost_Multiplayer>13550</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</HeroCompany>
+	
+	<TransportUnit Name="Mc80B_R_Tech4_Field_Commander">
+		<Variant_Of_Existing_Type>Mc80a_EJ</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_MC80AEJ_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MC80A_CRUISER TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_MC80 TEXT_UNIT_CORELLIAN_HEAVY_GUNBOAT</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Landing_Transport_Variant>Gallofree_Transport_Landing</Landing_Transport_Variant>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space3</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_REB_FLEET_REINFORCES.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>R_Tech4_Fl_Sh</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	4000.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	200.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</TransportUnit>
+
+	<GroundVehicle Name="RV_LHTC9_X_IV">
+		<Variant_Of_Existing_Type>LHTC9_SquadNewRebel_Soldiers</Variant_Of_Existing_Type>
+		<Lua_Script>R_Tech4_Field_Re_2X</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="RV_LHTC9_Sq_X_IV">
+		<Variant_Of_Existing_Type>LHTC9_SquadRebel_New_Assault_Company</Variant_Of_Existing_Type>
+		<Company_Units>RV_LHTC9_X_IV</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>RV_Transports_Craft</Company_Transport_Unit>
+	</GroundCompany>
+
+	<TransportUnit Name="RV_Transports_Craft">
+		<Variant_Of_Existing_Type>Gallofree_Transport</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_Transports_Craft_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>RV_Transports_Craft_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	<TransportUnit Name="RV_Transports_Craft_Landing">
+		<Variant_Of_Existing_Type>RV_Transports_Craft</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CR20</Text_ID>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>1.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING, REVEAL</LandBehavior>
+		
+		<Hardpoints>
+				HP_TurboR_01,
+				HP_TurboR_02,
+				HP_TurboR_03,
+				HP_TurboR_04,
+				HP_TurboR_05,
+				HP_TurboR_06,
+				HP_TurboR_07,
+				HP_TurboR_08,
+				HP_TurboR_09,
+				HP_TurboR_10,
+				HP_TurboR_11,
+				HP_TurboR_12,
+				HP_TurboR_13,
+				HP_TurboR_14
+		</Hardpoints>
+		
+	</TransportUnit>
+</Tech4_Field_Commander_Rebel_Hero_Files>

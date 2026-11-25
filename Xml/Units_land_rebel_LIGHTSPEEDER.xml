@@ -1,0 +1,121 @@
+﻿<?xml version="1.0"?>
+
+
+<Rebel_LIGHTSPEEDERUnit_Data>
+	<GroundVehicle Name="Rebel_LIGHTSPEEDER">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LIGHTSPEEDER</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler AT_PT AT_RT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LIGHTSPEEDER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RV_LightSpeeder.ALO</Land_Model_Name>
+
+		<Scale_Factor>0.4</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Rebel</Affiliation>
+
+		<Max_Speed>3.0</Max_Speed>
+		<Min_Speed>2.5</Min_Speed>
+		<Bank_Turn_Angle>10</Bank_Turn_Angle>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Hover_Offset>10.0</Hover_Offset>
+		<Max_Lift>0.5</Max_Lift>
+		<Begin_Turn_Towards_Distance>500.0</Begin_Turn_Towards_Distance>
+		<Prepare_Strafe_Height>10.0</Prepare_Strafe_Height>
+
+		<Armor_Type> Armor_Corellian_Corvette </Armor_Type>
+
+		<Tactical_Health>120</Tactical_Health>
+
+		<Garrison_Value>1</Garrison_Value>
+
+		<Behavior>SELECTABLE, POWERED</Behavior>
+		<LandBehavior>ABILITY_COUNTDOWN, HUNT, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>180.0</Targeting_Max_Attack_Distance>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_Low</Projectile_Types>
+		
+		<Hardpoints>
+				HP_Gr_Front_Blaster_Cannon_Red_00, HP_Gr_Front_Blaster_Cannon_Red_01
+		</Hardpoints>
+
+		<SFXEvent_Ambient_Moving> Unit_Speederbike_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Engine_Moving_Loop> Unit_SpeederBike_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 12 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_SpeederBike_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<AI_Combat_Power>30</AI_Combat_Power>
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Icon_Name>I_BUTTON_LIGHTSPEEDER.tga</Icon_Name>
+		<Influences_Capture_Point> True </Influences_Capture_Point>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</GroundVehicle>
+	<GroundCompany Name="LIGHT_SCOUT_SPEEDER_Company">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_LIGHTSPEEDER</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler AT_PT AT_RT_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LIGHTSPEEDER TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_LIGHTSPEEDER.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>110</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>Rebel_LIGHTSPEEDER, Rebel_LIGHTSPEEDER</Company_Units>
+
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+		<Tactical_Build_Cost_Multiplayer>110</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	<GroundCompany Name="Grupo_XRVehicles2">
+		<Variant_Of_Existing_Type>LIGHT_SCOUT_SPEEDER_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_XRVEHICLES2_SQUAD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_XRVEHICLES2 TEXT_DESC_C_CANTIDAD_6</Encyclopedia_Text>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+		<Slice_Cost_Credits>600</Slice_Cost_Credits>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		<Company_Units>Rebel_LIGHTSPEEDER, Rebel_LIGHTSPEEDER, Rebel_LIGHTSPEEDER, T2BAA_Tank, T2BAA_Tank, T2BAA_Tank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+	</GroundCompany>
+</Rebel_LIGHTSPEEDERUnit_Data>

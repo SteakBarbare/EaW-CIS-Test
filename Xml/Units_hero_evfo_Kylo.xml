@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<Kylo_Ren_Hero_Files>
+
+
+
+<!-- BASE GROUND UNIT -->
+
+	<GenericHeroUnit Name="E_Kylo_Ren">
+		<Variant_Of_Existing_Type> EVFO_Kylo_Ren </Variant_Of_Existing_Type>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Affiliation>Empire</Affiliation>
+	</GenericHeroUnit>
+	<HeroUnit Name="EVFO_Kylo_Ren">
+		<Variant_Of_Existing_Type> Darth_Vader_ExpansionORG </Variant_Of_Existing_Type>
+		<LOD_Bias>5</LOD_Bias>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
+		<Text_ID>TEXT_HERO_UNIT_KYLO_REN</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_KYLO_REN TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Land_Model_Name>EVFO_Kylo_Ren.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVFO_Kylo_Ren.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>EVFO</Affiliation>
+
+		<CategoryMask> LandHero | Spacehero </CategoryMask>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FORCE_TELEKINESIS</Type>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Kylo_Force_Telekinesis </GUI_Activated_Ability_Name> 
+				<SFXEvent_Target_Ability> Unit_Lift_Vader </SFXEvent_Target_Ability> 
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>FORCE_WHIRLWIND</Type>
+				<Recharge_Seconds>25.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Kylo_Force_Whirlwind </GUI_Activated_Ability_Name> 
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Kylo_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Redirect_Blaster_Ability Name="Kylo_Redirect_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Redirect_Chance>0.60</Redirect_Chance>
+				<Block_Chance>0.80</Block_Chance>
+				<Reaction_Arc_In_Degrees>180.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 135.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+				<Applicable_Unit_Categories>Infantry | Landhero | Vehicle | Structure | Air</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+
+			<Absorb_Blaster_Ability Name="Kylo_Absorb_Blaster">
+				<Activation_Style>Take_Damage</Activation_Style>
+				<Absorb_Chance>0.5</Absorb_Chance>
+				<Damage_Absorb_Percentage>0.1</Damage_Absorb_Percentage>
+				<Damage_Absorb_Amount>1</Damage_Absorb_Amount>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Absorb</SFXEvent_Activate>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 0.4, 0.4</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Absorb_Blaster_Ability>
+			
+						
+			<Force_Whirlwind_Ability Name="Kylo_Force_Whirlwind">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>500.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Force_Whirlwind_Ability>
+
+			<Force_Telekinesis_Ability Name="Kylo_Force_Telekinesis">
+				<Activation_Style>User_Input</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>190.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.10</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.2</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Vehicle</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Force_Telekinesis_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>Turret_00, B_Turret_00, B_Turret, B_Turret_Base, ROOT</Target_Particle_Bone_Name>
+			</Force_Telekinesis_Ability>
+
+			<Earthquake_Attack_Ability Name="Kylo_Attack_Structures">
+				<Activation_Style>Special_Attack</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>120.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.01</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.4</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Structure</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
+			</Earthquake_Attack_Ability>
+
+			<System_Spy_Ability Name="Kylo_System_Spy_Force_Sensitive">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Force_Sensitive_Heroes>Yes</See_Force_Sensitive_Heroes>
+			</System_Spy_Ability>
+
+			<Remove_Corruption_Ability Name="Kylo_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+		</Abilities>
+	</HeroUnit>
+	
+
+
+
+<!-- COMPANY DATA -->
+	<HeroCompany Name="E_Kylo_Ren_Team">
+		<Variant_Of_Existing_Type>EVFO_Kylo_Ren_Team</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Is_Named_Hero>No</Is_Named_Hero>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Company_Units>E_Kylo_Ren</Company_Units>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+	<HeroCompany Name="EVFO_Kylo_Ren_Team">
+		<LOD_Bias>5</LOD_Bias>
+		<Text_ID>TEXT_HERO_UNIT_KYLO_REN</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_KYLO_REN TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EVFO_Kylo_Ren.tga</Icon_Name>
+		<Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Damage>100</Damage>
+		<Affiliation>EVFO</Affiliation>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>EVFO_Finalizer</Company_Transport_Unit>
+		<Company_Units>EVFO_Kylo_Ren</Company_Units>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
+		<Available_In_Skirmish>yes</Available_In_Skirmish>
+		<Score_Cost_Credits> 10000 </Score_Cost_Credits>
+		<Can_Be_Only_One>true</Can_Be_Only_One>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Respawn_Vader_Executor</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Vader_Executor</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Vader_Executor</SFXEvent_Fleet_Move>
+
+		<CategoryMask> LandHero | Spacehero </CategoryMask>
+		<Ranking_In_Category> 2 </Ranking_In_Category>
+		<Population_Value>1</Population_Value>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->  
+		<Tactical_Build_Cost_Multiplayer>2300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>24</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Tactical_Build_Prerequisites>EVFO_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+
+	<SpaceUnit Name="EVFO_Finalizer">
+		<Variant_Of_Existing_Type>ResurgentORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_FINALIZER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVFO_FINALIZER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER_FO TEXT_WAVES_X2 TEXT_UNIT_TIE_FIGHTER_E_FO TEXT_WAVES_X2 TEXT_UNIT_TIE_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_8</Encyclopedia_Text>		
+		<Affiliation>EVFO, Empire</Affiliation>
+		<Death_Clone>Damage_Normal, Resurgent_Death_Clone</Death_Clone>
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		<Landing_Transport_Variant>Rylo_TIE_Silencer_Landing</Landing_Transport_Variant>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_RyloTIE_Silencer_Squadron, 1</Starting_Spawned_Units_Tech_0> 
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0> 
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_FO_Squadron5, 15</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Fighter_E_FO_Squadron4, 15</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Bomber_Squadron4, 15</Starting_Spawned_Units_Tech_0> 
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+	</SpaceUnit>
+
+	<TransportUnit Name="Rylo_TIE_Silencer_Landing">
+		<Variant_Of_Existing_Type>EVFO_RyloTIE_Silencer</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVFO_TIE_Silencer_L.ALO</Land_Model_Name>
+		<Behavior>TRANSPORT, HINT</Behavior>
+		<Scale_Factor>1.7</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-50, -50, 0</User_Bound_Min>
+		<User_Bound_Max>50, 50, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</TransportUnit>
+
+</Kylo_Ren_Hero_Files>

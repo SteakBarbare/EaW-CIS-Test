@@ -1,0 +1,124 @@
+﻿<?xml version="1.0"?>
+
+
+<RV_StankUnit_Data>
+	<GroundVehicle Name="RV_Stank">
+		<Variant_Of_Existing_Type>RV_StankORG</Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, RV_Stank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="RV_StankORG">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_STANK</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_STANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RV_Stank_Urban.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_RV_Stank.TGA</Icon_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			RV_Stank_Urban.ALO,
+			Urban, 				RV_Stank_Urban.ALO,
+			Arctic, 			RV_Stank_Snow.ALO,
+			Volcanic, 			RV_Stank_Desert.ALO,
+			Desert, 			RV_Stank_Desert.ALO,
+			Forest, 			RV_Stank_Forest.ALO,
+			Swamp, 				RV_Stank_Forest.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Scale_Factor>1.0</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Rebel</Affiliation>
+
+		<Armor_Type> Armor_T2B </Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>100</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Behavior> SELECTABLE </Behavior>
+		<LandBehavior>GARRISON_UNIT, AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, HUNT, BARRAGE, TREAD_SCROLL, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET, STUNNABLE, DAMAGE_TRACKING</LandBehavior>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_Low</Projectile_Types>
+		
+		<Land_FOW_Reveal_Range>210.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>200.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 0.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Fire>Unit_Tank_T4B_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_T3B</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_T3B</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_T3B</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_T3B</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_T3B </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_T3B</SFXEvent_Assist_Attack>
+		
+		<CategoryMask> Vehicle | AntiVehicle </CategoryMask>
+	
+		<Destruction_Survivors> 
+			Rebel_Pilot, 1.0
+		</Destruction_Survivors>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 5.0</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Barrage_Interdictor </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Red_Low</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>-6</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GroundVehicle>
+	<GroundVehicle Name="RV_Stank_Death_Clone_00">
+		<Variant_Of_Existing_Type>T4B_Tank_Death_Clone_00</Variant_Of_Existing_Type>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Land_Model_Name>RV_Stank_Urban_D.ALO</Land_Model_Name>
+	</GroundVehicle>
+
+	<GroundCompany Name="Rebel_RV_Stank_Alliance">
+		<Variant_Of_Existing_Type>Rebel_Heavy_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_REBEL_RV_STANK_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_STANK TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Units>RV_Stank, RV_Stank, RV_Stank, RV_Stank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_RV_Stank.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_T3B</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T3B</SFXEvent_Fleet_Move>
+	
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+
+</RV_StankUnit_Data>

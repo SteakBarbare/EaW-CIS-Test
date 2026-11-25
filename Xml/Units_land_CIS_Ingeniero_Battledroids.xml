@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<Ingeniero_BattledroidsUnit_Data>
+	
+	<GroundInfantry Name="Ingeniero_Battledroids">
+		<Variant_Of_Existing_Type>B1Droid_Sniper</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_INGENIERO_DROID</Text_ID>
+		<No_Colorization_Color>249,160,6,255</No_Colorization_Color>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_INGENIERO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_B1Droid.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_B1Droid.ALO,
+			Urban, 				CIS_B1Droid.ALO,
+			Arctic, 			CIS_B1Droid_Snow.ALO,
+			Volcanic, 			CIS_B1Droid_Desert.ALO,
+			Desert, 			CIS_B1Droid_Desert.ALO,
+			Forest, 			CIS_B1Droid_Cammo.ALO,
+			Swamp, 				CIS_B1Droid_Cammo.ALO
+		</Land_Terrain_Model_Mapping>
+		<Land_Model_Anim_Override_Name>CIS_B1Droid.ALO</Land_Model_Anim_Override_Name>
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>LANDING, SURFACE_FX, ABILITY_COUNTDOWN, WALK_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+
+		<Icon_Name>I_BUTTON_CIS_Engineer_DroidB1.tga</Icon_Name>
+
+		<Movement_Animation_Speed> 0.9 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 20.0 </Rotation_Animation_Speed>
+
+		<Max_Speed>0.8</Max_Speed>
+
+		<Tactical_Health>75</Tactical_Health>
+
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy> 
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+
+		<AI_Combat_Power>7</AI_Combat_Power>
+
+		<Death_Clone>Damage_Force_Whirlwind, Ingeniero_Battledroid_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Ingeniero_Battledroid_Crush_Death_Clone</Death_Clone>
+
+		 <Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+					<Type>WEAKEN_ENEMY</Type>
+					<Alternate_Icon_Name>I_SA_HACK_TURRET.TGA</Alternate_Icon_Name>
+					<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_PADLAND</Alternate_Name_Text>
+	                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_PADLAND_DESCRIPTION</Alternate_Description_Text>
+					<Recharge_Seconds>120</Recharge_Seconds>
+					 <Spawned_Object_Type>Ingeniero_Droid_Build_Pad</Spawned_Object_Type>
+					 <Effective_Radius> 50.0 </Effective_Radius>
+					 <Spawned_Object_Type>Ingeniero_Droid_Build_Pad</Spawned_Object_Type>
+				     <SFXEvent_Target_Ability> Unit_Energy_Flux_Antilles </SFXEvent_Target_Ability>
+					 <SFXEvent_GUI_Unit_Ability_Activated>Unit_Energy_Flux_Antilles</SFXEvent_GUI_Unit_Ability_Activated>
+					 <SFXEvent_GUI_Unit_Ability_Deactivated/>
+					 <Area_Effect_Decal_Distance> 50 </Area_Effect_Decal_Distance>
+		  </Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+		
+			<Force_Healing_Ability Name="Engineer_Repair_Healing">
+			
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Heal_Range>50.0</Heal_Range>
+				<Heal_Amount>15.0</Heal_Amount>
+				<Heal_Interval_In_Secs>1.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Heal_Range_Blob_Material>Reinforcement_Point_Radius_Overlay</Heal_Range_Blob_Material>
+				<Applicable_Unit_Categories>Infantry | Vehicle | Air</Applicable_Unit_Categories>
+				<SFXEvent_Target_Affected>Unit_Force_Healing_Pulse</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Unit_Healed_Particles</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_Chest, B_TURRET, TURRET_00, B_TURRET_BASE</Target_Particle_Bone_Name>
+				<Target_Light_Effect_Type>Color_Flash</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>1.2, 2.0, 1.2</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>0.6</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>1</Target_Light_Effect_Pulse_Count>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 2.0, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+			
+		</Abilities>
+	</GroundInfantry>
+	<GroundInfantry Name="Ingeniero_Battledroid_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Ingeniero_Battledroids</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Ingeniero_Battledroid_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Ingeniero_Battledroids</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Ingeniero_Battledroid">
+		<Variant_Of_Existing_Type>Ingeniero_Battledroids</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BATTLEDROIDS</Text_ID>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 0.8 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Ingeniero_Battledroid_B">
+		<Variant_Of_Existing_Type>Squad_Ingeniero_Battledroid</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>C_Ingeniero_BattleDroid_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="C_Ingeniero_BattleDroid_Squad_B">
+		<Variant_Of_Existing_Type>C_Ingeniero_BattleDroid_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid, Squad_Ingeniero_Battledroid</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 8 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="C_Ingeniero_BattleDroid_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_INGENIERO_DROID</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_INGENIERO TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>12</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>CIS_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>C9979_Landing_Craft</Company_Transport_Unit>
+
+		<Company_Units> Squad_Ingeniero_Battledroid_B </Company_Units>
+		<Population_Value>0</Population_Value>
+		<Icon_Name>I_BUTTON_CIS_Engineer_DroidB1.tga</Icon_Name>
+		<GUI_Model_Name>CIS_B1Droid.ALO</GUI_Model_Name>
+		<Land_Model_Name>CIS_B1Droid.ALO</Land_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+	
+	
+</Ingeniero_BattledroidsUnit_Data>

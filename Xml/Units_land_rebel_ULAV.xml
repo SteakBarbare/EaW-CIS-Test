@@ -1,0 +1,130 @@
+﻿<?xml version="1.0"?>
+
+
+<Rebel_ULAVUnit_Data>
+
+
+	<GroundVehicle Name="RV_ULAV">
+		<Variant_Of_Existing_Type>SnowspeederORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_ULAV</Text_ID>
+		<Encyclopedia_Good_Against> IMPV_19_landspeeder_Company Empire_ISP_Company LAVr_Transport_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> 1H_Repulsor_Tank_Group M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_ULAV</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RV_ULAV.ALO</Land_Model_Name>
+
+		<Scale_Factor>1.2</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Rebel, GAC</Affiliation>
+		<Max_Speed>4.5</Max_Speed>
+		<Min_Speed>4.5</Min_Speed>
+
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 20.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_Corellian_Corvette </Armor_Type>
+		<Shield_Armor_Type>Shield_LtVeh</Shield_Armor_Type>
+
+		<Shield_Points>150</Shield_Points>
+		<Tactical_Health>120</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Hover_Offset>10.0</Hover_Offset>
+		<Max_Lift>0.5</Max_Lift>
+
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR, IDLE, HUNT, TARGETING, WEAPON, SHIELDED, STUNNABLE, POWERED, REVEAL, HIDE_WHEN_FOGGED, WIND_DISTURBANCE,DAMAGE_TRACKING, AMBIENT_SFX, SURFACE_FX, AFFECTED_BY_SHIELD </LandBehavior>
+
+		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>300.0</Targeting_Max_Attack_Distance>
+
+		<Projectile_Types>Proj_Snowspeeder_Laser_Cannon</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		
+		<Hardpoints>
+				HP_RV_ULAV_BACK
+		</Hardpoints>
+				
+		<SFXEvent_Fire>Unit_Snow_Speeder_Fire</SFXEvent_Fire>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<AI_Combat_Power>60</AI_Combat_Power>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		<Icon_Name>I_BUTTON_RV_ULAV.tga</Icon_Name>
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+		<Spin_Away_On_Death>Yes</Spin_Away_On_Death>
+		<Spin_Away_On_Death_Chance>0.2</Spin_Away_On_Death_Chance>
+		<Spin_Away_On_Death_Time>2.0f</Spin_Away_On_Death_Time>
+		<Spin_Away_On_Death_Explosion>Medium_Explosion_Land</Spin_Away_On_Death_Explosion>
+		<Spin_Away_On_Death_SFXEvent_Start_Die>Unit_A_Wing_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_2M_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, RV_ULAV_Death_Clone_00</Death_Clone>
+
+	</GroundVehicle>
+	<GroundVehicle Name="RV_ULAV_Death_Clone_00">
+		<Variant_Of_Existing_Type>RV_ULAV</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_ULAV_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="RV_ULAV_Company">
+		<Variant_Of_Existing_Type>RebelSeraph_class_landspeeder_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_ULAV</Text_ID>
+		<Encyclopedia_Good_Against> IMPV_19_landspeeder_Company Empire_ISP_Company LAVr_Transport_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> 1H_Repulsor_Tank_Group M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_ULAV TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<GUI_Row> 0 </GUI_Row>
+		<Icon_Name>I_BUTTON_RV_ULAV.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>RV_ULAV, RV_ULAV, RV_ULAV</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+</Rebel_ULAVUnit_Data>

@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<Plex_DroidB1Unit_Data>
+	
+	
+	<GroundInfantry Name="Plex_DroidB1">
+		<Variant_Of_Existing_Type>Plex_SoldierORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_DROIDB1</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Scout_Squad Empire_AT_AP_Company IMPV_19_landspeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>CIS_B1DroidPlex.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_B1DroidPlex.ALO,
+			Urban, 				CIS_B1DroidPlex.ALO,
+			Arctic, 			CIS_B1DroidPlex_Snow.ALO,
+			Volcanic, 			CIS_B1DroidPlex_Desert.ALO,
+			Desert, 			CIS_B1DroidPlex_Desert.ALO,
+			Forest, 			CIS_B1DroidPlex_Cammo.ALO,
+			Swamp, 				CIS_B1DroidPlex_Cammo.ALO
+		</Land_Terrain_Model_Mapping>
+		<Icon_Name>i_button_CIS_plex_droidb1.tga</Icon_Name>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+		<CategoryMask> Infantry </CategoryMask>
+		<SFXEvent_Select>Unit_Select_B1PlexDroid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1PlexDroid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1PlexDroid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Select_B1Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Select_B1Droid</SFXEvent_Guard>
+		
+		<SFXEvent_Fire>Unit_CIS_Plex_weapon_Fire</SFXEvent_Fire>
+		
+		<Death_SFXEvent_Start_Die>Unit_Defeat_B1Droid</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1PlexDroid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Select_B1Droid </SFXEvent_Assist_Attack>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX_DROIDB1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Death_Clone>Damage_Force_Whirlwind, Plex_DroidB1_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Plex_DroidB1_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Plex_DroidB1_Crush_Death_Clone</Death_Clone>
+
+		<Death_Clone>Damage_Remote_Bomb, Plex_DroidB1_Remote_Bomb_Death_Clone</Death_Clone>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>		  
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Conversion_Ability_Changes_To_Enemy> Plex_DroidB1_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_DroidB1_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Plex_DroidB1 </Variant_Of_Existing_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Plex_DroidB1_NonVictroy">
+		<Variant_Of_Existing_Type> Plex_DroidB1 </Variant_Of_Existing_Type>
+		<Victory_Relevant>no</Victory_Relevant>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_DroidB1_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_DroidB1</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_DroidB1_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_DroidB1</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+
+	<GroundInfantry Name="Plex_DroidB1_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_DroidB1</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Plex_DroidB1_Remote_Bomb_Death_Clone">
+		<Variant_Of_Existing_Type>Plex_DroidB1</Variant_Of_Existing_Type>
+		<Death_SFXEvent_Start_Die>Unit_Rebel_Soldier_Bomb_Death</Death_SFXEvent_Start_Die>
+	</GroundInfantry>	
+	<GroundInfantry Name="Squad_Plex_DroidB1">
+		<Variant_Of_Existing_Type>Plex_DroidB1</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_DROIDB1</Text_ID>
+		<LandBehavior>SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> 1.4 </FormationRaggedness>
+		<MaxJiggleDistance> 3.5 </MaxJiggleDistance>
+		<Conversion_Ability_Changes_To_Enemy> Plex_DroidB1_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+	</GroundInfantry>
+	<GroundInfantry Name="Squad_Plex_DroidB1_B">
+		<Variant_Of_Existing_Type>Squad_Plex_DroidB1</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>C_PlexDroidB1_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="C_PlexDroidB1_Squad_B">
+		<Variant_Of_Existing_Type>C_PlexDroidB1_Squad</Variant_Of_Existing_Type>
+		<Company_Units> 
+		Squad_Plex_DroidB1, 
+		Squad_Plex_DroidB1, 
+		Squad_Plex_DroidB1
+		</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Plex_DroidB1_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="C_PlexDroidB1_Squad">
+		<Variant_Of_Existing_Type>Rebel_Tank_Buster_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_DROIDB1_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Scout_Squad Republic_AT_AP_Company Republic_CombatSpeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX_DROIDB1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Required_Special_Structures>CIS_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Sheathipede_Shuttle</Company_Transport_Unit>
+		
+		<Company_Units> 
+		Squad_Plex_DroidB1_B,
+		Squad_Plex_DroidB1, 
+		Squad_Plex_DroidB1 
+		</Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Plex_DroidB1_Team </Create_Team_Type>
+		<Icon_Name>i_button_CIS_plex_droidb1.tga</Icon_Name>
+		<GUI_Model_Name>CIS_B1DroidPlex.ALO</GUI_Model_Name>
+		<Land_Model_Name>CIS_B1DroidPlex.ALO</Land_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_B1PlexDroid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1PlexDroid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<Container Name="Plex_DroidB1_Team">
+		<Variant_Of_Existing_Type>Plex_Soldier_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLEX_DROIDB1</Text_ID>
+		<Encyclopedia_Good_Against> TX130_Repulsor_Tank Canderous_Assault_Tank AT_ATs_Walker </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_XT_Walker Storm_Commando Underworld_Disruptor_Merc </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLEX_DROIDB1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+
+		<Icon_Name>i_button_CIS_plex_droidb1.tga</Icon_Name>
+	</Container>
+</Plex_DroidB1Unit_Data>

@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+
+
+<IrdfighterUUnit_Data>
+
+
+
+
+	<SpaceUnit Name="IrdfighterU">	
+		<Variant_Of_Existing_Type>X-wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IRDFIGHTER</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> X-Wing TIE_Interceptor B-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Avenger CR_Hvy_Gunboat BS_IPVII </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_IRDFIGHTER TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Space_Model_Name>UV_Irdfighter.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Max_Speed>4.1</Max_Speed>
+		<Min_Speed>2.7</Min_Speed>
+		<Max_Rate_Of_Turn>3.9</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		
+		<Affiliation>Underworld, Pirates, Corporate</Affiliation>
+		<Shield_Points>1000</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>1100</Shield_Refresh_Rate>
+		<Energy_Capacity>15000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000</Energy_Refresh_Rate>
+
+		<HardPoints> 
+			HP_Fighter_Proton_Torpedo_AdvW, HP_R_Xwing_Laser_00, HP_R_Xwing_Laser_01
+		</HardPoints>
+		<Icon_Name>i_button_Irdfighter.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+
+	<Squadron Name="IrdfighterU_Squadron">
+		<Variant_Of_Existing_Type>Z95_Headhunter_Rebel_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IRDFIGHTER_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> X-Wing TIE_Interceptor B-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Avenger CR_Hvy_Gunboat BS_IPVII </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_IRDFIGHTER TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Underworld, Pirates, Corporate</Affiliation>
+		<Build_Cost_Credits>180</Build_Cost_Credits>
+		<Build_Time_Seconds>5</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		
+		<Squadron_Units>IrdfighterU, IrdfighterU, IrdfighterU</Squadron_Units>
+		<Squadron_Offsets>-45.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>60.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>IrdfighterU_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_Irdfighter.tga</Icon_Name>
+		<GUI_Model_Name>UV_Irdfighter.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_V_Wing</SFXEvent_Build_Complete>
+						
+		<Tactical_Build_Cost_Multiplayer>180</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>
+	<Container Name="IrdfighterU_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_IRDFIGHTER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_IRDFIGHTER TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Irdfighter.tga</Icon_Name>
+
+		<Max_Speed>4.1</Max_Speed>
+		<Min_Speed>2.7</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,25.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-30.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-60.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>60.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,50.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-50.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-70.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>70.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-60.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</IrdfighterUUnit_Data>

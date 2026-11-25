@@ -1,0 +1,204 @@
+﻿<?xml version="1.0"?>
+
+
+<Hu_SeraphUnit_Data>
+	
+	<Mobile_Defense_Unit Name="Hu_Seraph">
+		<Variant_Of_Existing_Type>Abstract_Mobile_Defense_Unit</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_SERAPH</Text_ID>
+		<Encyclopedia_Good_Against> IMPV_19_landspeeder_Company Empire_ISP_Company LAVr_Transport_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> 1H_Repulsor_Tank_Group M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_HU_SERAPH</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>Hu_Seraph.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_Hu_Seraph.tga</Icon_Name>
+		
+		<Tactical_Build_Attachment_Bone_Name> Hp_T01 </Tactical_Build_Attachment_Bone_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+	
+		<Affiliation>Pirates, Hutts</Affiliation>
+
+		<Max_Speed>3.00</Max_Speed>
+				
+		<Tactical_Buildable_Objects_Campaign>
+			Pirates,
+				UC_Hutts_Seraph_Flamethower_Pod,
+				UC_Hutts_Seraph_Laser_Pod,
+				UC_Hutts_Seraph_Missile_Pod,
+				UC_Hutts_Seraph_Shield_Pod,
+				UC_Hutts_Seraph_Microwave_Pod
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer>
+			Pirates,
+				UC_Hutts_Seraph_Flamethower_Pod,
+				UC_Hutts_Seraph_Laser_Pod,
+				UC_Hutts_Seraph_Missile_Pod,
+				UC_Hutts_Seraph_Shield_Pod,
+				UC_Hutts_Seraph_Microwave_Pod
+		</Tactical_Buildable_Objects_Multiplayer>
+	
+		<Hardpoints>
+				HP_Hu_Seraph_00, 
+				HP_Hu_Seraph_01	
+		</Hardpoints>
+	</Mobile_Defense_Unit>
+	
+	<GroundCompany Name="Hu_Seraph_Company">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HU_SERAPH</Text_ID>
+		<Encyclopedia_Good_Against> IMPV_19_landspeeder_Company Empire_ISP_Company LAVr_Transport_Group </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> 1H_Repulsor_Tank_Group M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RV_HU_SERAPH TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SPEEDER</Encyclopedia_Unit_Class>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>3</Required_Timeline>
+		<Icon_Name>i_button_Hu_Seraph.tga</Icon_Name>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>Hu_Seraph, Hu_Seraph, Hu_Seraph, Hu_Seraph</Company_Units>
+		<Required_Special_Structures>Hutts_Ground_Light_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		
+	</GroundCompany>
+	
+	
+	<GroundBuildable Name="UC_Hutts_Seraph_Flamethower_Pod">
+		<Variant_Of_Existing_Type> UC_Rebel_Rapid_Fire_Laser_Turret </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_FLAMETHOWER_POD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FLAMETHOWER_POD</Encyclopedia_Text>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Tactical_Buildable_Constructed> Hutts_Seraph_Flamethower_Pod </Tactical_Buildable_Constructed>		<!-- Defined in GroundTurrets.xml -->
+		<Land_Model_Name>Hu_Seraph_Flamethower_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Flamethower_Turret.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundStructure Name="Hutts_Seraph_Flamethower_Pod">
+		<Variant_Of_Existing_Type> Rebel_Rapid_Fire_Laser_Turret </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_FLAMETHOWER_POD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FLAMETHOWER_POD</Encyclopedia_Text>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
+		<Land_Model_Name>Hu_Seraph_Flamethower_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Flamethower_Turret.tga</Icon_Name>
+		<Projectile_Types>LanzallamasM2</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>6.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Fire>Unit_Flamethrower_Fire</SFXEvent_Fire>
+		<CategoryMask> Structure | AntiVehicle | AntiInfantry </CategoryMask>
+	</GroundStructure>
+	
+	<GroundBuildable Name="UC_Hutts_Seraph_Laser_Pod">
+		<Variant_Of_Existing_Type> UC_Rebel_Rapid_Fire_Laser_Turret </Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Tactical_Buildable_Constructed> Hutts_Seraph_Laser_Pod </Tactical_Buildable_Constructed>		
+		<Land_Model_Name>Hu_Seraph_Laser_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Laser_Turret.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<GroundStructure Name="Hutts_Seraph_Laser_Pod">
+		<Variant_Of_Existing_Type> Rebel_Rapid_Fire_Laser_Turret </Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
+		<Land_Model_Name>Hu_Seraph_Laser_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Laser_Turret.tga</Icon_Name>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<CategoryMask> Structure | AntiVehicle | Antiair </CategoryMask>
+	</GroundStructure>
+	
+	<GroundBuildable Name="UC_Hutts_Seraph_Missile_Pod">
+		<Variant_Of_Existing_Type> UC_Underworld_Rocket_Pod </Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Tactical_Buildable_Constructed> Hutts_Seraph_Missile_Pod </Tactical_Buildable_Constructed>		<!-- Defined in GroundTurrets.xml -->
+		<Land_Model_Name>Hu_Seraph_Missile_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Missile_Turret.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<GroundStructure Name="Hutts_Seraph_Missile_Pod">
+		<Variant_Of_Existing_Type> Underworld_Rocket_Pod </Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Land_Model_Name>Hu_Seraph_Missile_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+	</GroundStructure>
+	
+	<GroundBuildable Name="UC_Hutts_Seraph_Shield_Pod">
+		<Variant_Of_Existing_Type> UC_Rebel_Mobile_Shield_Generator </Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Tactical_Buildable_Constructed> Hutts_Seraph_Shield_Pod </Tactical_Buildable_Constructed>		<!-- Defined in GroundTurrets.xml -->
+		<Land_Model_Name>Hu_Seraph_Shield_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+	</GroundBuildable>
+		
+	
+	<GroundStructure Name="Hutts_Seraph_Shield_Pod">
+   		<Variant_Of_Existing_Type>Rebel_Mobile_Shield_Generator</Variant_Of_Existing_Type>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Land_Model_Name>Hu_Seraph_Shield_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Shield_Normal_Color>0.996, 0.988, 0.459, 1.0</Shield_Normal_Color>
+
+		<Tactical_Buildable_Objects_Campaign> 
+			Pirates,
+				RL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Pirates,
+				RL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+	</GroundStructure>
+	
+	<GroundBuildable Name="UC_Hutts_Seraph_Microwave_Pod">
+		<Variant_Of_Existing_Type> UC_Rebel_Rapid_Fire_Laser_Turret </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_RF_LASER_TURRET</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RF_LASER_TURRET</Encyclopedia_Text>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Tactical_Buildable_Constructed> Hutts_Seraph_Microwave_Pod </Tactical_Buildable_Constructed>		<!-- Defined in GroundTurrets.xml -->
+		<Land_Model_Name>Hu_Seraph_Shield_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Shield_Turret.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<GroundStructure Name="Hutts_Seraph_Microwave_Pod">
+		<Variant_Of_Existing_Type> Rebel_Rapid_Fire_Laser_Turret </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_FLAMETHOWER_POD</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FLAMETHOWER_POD</Encyclopedia_Text>
+		<Affiliation>Pirates, Hutts</Affiliation>
+		<Targeting_Max_Attack_Distance>450.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
+		<Land_Model_Name>Hu_Seraph_Shield_Turret.ALO</Land_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Icon_Name>i_button_Hu_Seraph_Shield_Turret.tga</Icon_Name>
+		<Projectile_Types>Proj_Ground_Microwave</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>6.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<SFXEvent_Fire>Unit_Tyber_Fire</SFXEvent_Fire>
+		<CategoryMask> Structure | AntiVehicle | AntiInfantry | Antiair</CategoryMask>
+	</GroundStructure>
+</Hu_SeraphUnit_Data>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<EVFO_Fleet_Tech_2_Data>
+	<SpaceUnit Name="E_FO_Fleet_Tech_2_AI">
+		<Variant_Of_Existing_Type>EVFO_Fleet_Tech_2</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, EXSoloIA_STR_01, AdvTech_8IA</Required_Special_Structures>
+		<Build_Cost_Credits>4500</Build_Cost_Credits>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Affiliation>Empire</Affiliation>
+		<!--<Space_Override_Population_Value>30</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_Fleet_Tech_2_AI">
+		<Variant_Of_Existing_Type>EVFO_Fleet_Tech_2</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, EXSoloIA_STR_01</Required_Special_Structures>
+		<Build_Cost_Credits>4500</Build_Cost_Credits>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+		<!--<Space_Override_Population_Value>30</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="EVFO_Fleet_Tech_2">
+		<Variant_Of_Existing_Type>EVFO_VSD2</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_EVFO_TECH_2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_STAR_DESTROYER TEXT_UNIT_VSD2 TEXT_UNIT_ENFORCERSHIP TEXT_UNIT_IMP_ATTACK_CARRIER TEXT_UNIT_ACCLAMATORSTARFRIGATE TEXT_UNIT_NEBULON_B2 TEXT_UNIT_REP_LIGHT_CRUISERX TEXT_UNIT_E_GOZANTI TEXT_UNIT_RAIDER_CRV_I</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_StardestroyerX1_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>i_button_EVFO_fleet_tech_2.tga</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>EVFO</Affiliation>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Cost_Credits>35000</Build_Cost_Credits>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Population_Value>45</Population_Value>
+		<Space_Override_Population_Value>3</Space_Override_Population_Value>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<Tactical_Build_Cost_Multiplayer>35000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>EVFO_fleet_tech_2_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="Disband_EVFO_Fleet_Tech_2">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_EMPIRE_TECH_2 TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>EVFO</Affiliation>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>E_Fleet_Tech_2</Required_Orbiting_Units>
+		<Lua_Script>Disband_EVFO_Fleet_Tech_2</Lua_Script>
+		<SFXEvent_Build_Started>EHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>	
+</EVFO_Fleet_Tech_2_Data>

@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<Lando_Calrissian_Hero_Files>
+	<GenericHeroUnit Name="Lando_Calrissian">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LANDO_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_LANDO TEXT_TOOLTIP_REDUCE_TIME_UPGRADE_STRUCTURE_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>RI_Lando.alo</Land_Model_Name>
+		<Icon_Name>I_BUTTON_LANDO.tga</Icon_Name>
+
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Rebel</Affiliation>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Tactical_Health>1300</Tactical_Health>
+
+		<Projectile_Types>Proj_Infiltrator_Blaster</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+			
+		<SFXEvent_Select>Unit_Select_Katarn</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Katarn</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Katarn</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Katarn</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Katarn</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Katarn</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Katarn</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Katarn </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Katarn </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Katarn </Death_SFXEvent_Start_Die>
+
+	
+		<CategoryMask> LandHero | Spacehero </CategoryMask>
+	
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+	
+		<Selection_Blob_Material_Name>Selection_Rebel_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Rebel_Hero</Highlight_Blob_Material_Name>
+
+		<Neutralization_Cost>1500.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 8.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+   		 	<Unit_Ability>
+				<Type>TACTICAL_BRIBE</Type>
+				<Recharge_Seconds>30.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Lando_Tactical_Bribe </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Sprint_Katarn </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Lando_Production_Time_Reduction">
+				<Applicable_Unit_Categories> Upgrade | Structure </Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+       			<Tactical_Bribe_Ability Name="Lando_Tactical_Bribe">
+					<Activation_Style> User_Input </Activation_Style>
+					<Activation_Min_Range>0.0</Activation_Min_Range>
+					<Activation_Max_Range>100.0</Activation_Max_Range>
+					<Bribed_Effect> Rebel_Bribed_Particle_Effect </Bribed_Effect> 
+					<Bribed_Effect_Small> Rebel_Bribed_Particle_Effect_Small </Bribed_Effect_Small> 
+					<Effect_Z_Offset>35.0</Effect_Z_Offset>
+					<SFXEvent_Success>GUI_Bribe_SFX</SFXEvent_Success>
+					<SFXEvent_Fail></SFXEvent_Fail>
+            	</Tactical_Bribe_Ability>
+			<Galactic_Stealth_Ability Name="Lando_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Combat_Bonus_Ability Name="Lando_Combat_Bonus">
+				<Activation_Style>Combat_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Price_Ability Name="Lando_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Remove_Corruption_Ability Name="Lando_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		
+		</Abilities>
+	</GenericHeroUnit>
+	<GenericHeroUnit Name="Lando_Calrissian_no_nave">
+			<Variant_Of_Existing_Type>Lando_Calrissian</Variant_Of_Existing_Type>
+			<CategoryMask>LandHero</CategoryMask>
+	</GenericHeroUnit>
+	<HeroCompany Name="Lando_Calrissian_No_Nave_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01G_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_LANDO</Text_ID>
+		<Icon_Name>I_BUTTON_LANDO.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+
+		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
+		<Company_Units>Lando_Calrissian_no_nave</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Katarn</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Katarn</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Katarn</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_LANDO TEXT_TOOLTIP_REDUCE_TIME_UPGRADE_STRUCTURE_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<CategoryMask>LandHero</CategoryMask>
+	</HeroCompany>
+	<HeroCompany Name="Lando_Calrissian_Team">
+		<Variant_Of_Existing_Type>Lando_Calrissian_No_Nave_Team</Variant_Of_Existing_Type>
+
+		<Company_Transport_Unit>Dama_Afortunada</Company_Transport_Unit>
+		<Company_Units>Lando_Calrissian</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<CategoryMask>LandHero | Spacehero</CategoryMask>
+
+	</HeroCompany>
+	<HeroCompany Name="Lando_Calrissian_Team_Space_MP">
+		<Variant_Of_Existing_Type>Lando_Calrissian_Team</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Tartan_Patrol_Cruiser </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DAMA_AFORTUNADA </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites />
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Is_Stealth_Company>No</Is_Stealth_Company>
+	</HeroCompany>
+	<SpaceUnit Name="Dama_Afortunada_Skirmiss">
+		<Variant_Of_Existing_Type>Dama_Afortunada</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+	</SpaceUnit>
+	<SpaceUnit Name="Dama_Afortunada">
+		<Variant_Of_Existing_Type>Moldy_CrowORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_DAMA_AFORTUNADA</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DAMA_AFORTUNADA TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_LANDO.tga</Icon_Name>
+		<Land_Model_Name>RV_LandoShip_Land.ALO</Land_Model_Name>
+		<Space_Model_Name>RV_LandoShip.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_LandoShip_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Scale_Factor>0.25</Scale_Factor>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Max_Speed>5.0</Max_Speed>
+		<Min_Speed>3.5</Min_Speed>
+		<Bank_Turn_Angle>50</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+
+		<Autoresolve_Health>400</Autoresolve_Health>
+		<AI_Combat_Power>740</AI_Combat_Power>
+		<Energy_Capacity>19000</Energy_Capacity>
+		<Energy_Refresh_Rate>11400</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Red_Hero</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<SFXEvent_Ambient_Moving> Unit_Falcon_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Idle_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Falcon_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Landing_Transport_Variant>Dama_Afortunada_Landing</Landing_Transport_Variant>
+
+		<Tactical_Build_Cost_Multiplayer>2800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Death_Clone>Damage_Normal, Dama_Afortunada_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	<SpaceUnit Name="Dama_Afortunada_Landing">
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Variant_Of_Existing_Type>Dama_Afortunada</Variant_Of_Existing_Type>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>1.2</Scale_Factor>
+	</SpaceUnit>
+	<SpaceUnit Name="Dama_Afortunada_Death_Clone">
+		<Text_ID>TEXT_UNIT_MILLENNIUM_FALCON</Text_ID>
+		<Space_Model_Name>RV_LandoShip.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.40</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</Lando_Calrissian_Hero_Files>

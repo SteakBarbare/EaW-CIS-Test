@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<Red_Leader_XWing_Hero_Files>
+
+	<SpaceUnit Name="Red_Leader_XWing">
+		<Variant_Of_Existing_Type>X-Wing</Variant_Of_Existing_Type>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_RED_SQUADRON </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_luke_skywalker.tga</Icon_Name>
+		<Text_ID>TEXT_UNIT_RED_LEADER_XWING</Text_ID>
+		<Armor_Type> Armor_Hero_Transport </Armor_Type>
+		<SpaceBehavior>ABILITY_COUNTDOWN, REVEAL, FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, NEBULA </SpaceBehavior>
+		<SFXEvent_Select>Unit_Select_Red_Leader</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Red_Leader</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Red_Leader</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Red_Leader</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Red_Leader</SFXEvent_Guard>
+		<SFXEvent_Assist_Move/>
+		<SFXEvent_Assist_Attack/>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Red_Leader </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Red_Leader </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Red_Leader </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Red_Leader </SFXEvent_Enemy_Health_Critical_Warning>
+		<SFXEvent_Unit_Lost> Unit_Defeat_Red_Leader </SFXEvent_Unit_Lost>
+		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<Create_Team>Yes</Create_Team>
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Someone commented this out. This is needed on ALL Red Squadron units! -Oksana -->
+			<Unit_Ability>
+				<Type>LUCKY_SHOT</Type>
+				<Projectile_Types_Override>Proj_Ship_Lucky_Shot_Medium_Laser_Cannon_Red</Projectile_Types_Override>
+				<SFXEvent_Target_Ability> Unit_Lucky_Shot_Luke </SFXEvent_Target_Ability>
+			</Unit_Ability>
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Ability_On_Red_Leader</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Ability_Off_Red_Leader</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Red_Leader_XWing_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Fighter</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Lucky_Shot_Attack_Ability Name="Red_Squadron_Lucky_Shot">
+				<Activation_Style> User_Input </Activation_Style>
+				
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Applicable_Unit_Types/>
+				
+			</Lucky_Shot_Attack_Ability>
+		</Abilities>
+	</SpaceUnit>
+	<SpaceUnit Name="Wedge_XWing">
+		<Variant_Of_Existing_Type>X-Wing</Variant_Of_Existing_Type>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_RED_SQUADRON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UNIT_WEDGE_XWING</Text_ID>
+		<Armor_Type> Armor_Hero_Transport </Armor_Type>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<!-- <Behavior>TRANSPORT </Behavior> AJA 11/18/2005: These units are not transports, and this tag was breaking the hero respawn logic. -->
+		<SpaceBehavior>FIGHTER_LOCOMOTOR, SELECTABLE, TARGETING, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, AMBIENT_SFX, NEBULA </SpaceBehavior>
+		<SFXEvent_Select>Unit_Select_Wedge</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Wedge</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Wedge</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Wedge</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Wedge</SFXEvent_Guard>
+		<SFXEvent_Assist_Move>Unit_Assist_Move_Wedge </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Wedge</SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Wedge </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Wedge </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Wedge </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Wedge </SFXEvent_Enemy_Health_Critical_Warning>
+		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_X_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+		<!--<Create_Team>Yes</Create_Team>-->
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Someone commented this out. This is needed on ALL Red Squadron units! -Oksana -->
+			<Unit_Ability>
+				<Type>LUCKY_SHOT</Type>
+				<SFXEvent_Target_Ability> Unit_Lucky_Shot_Luke </SFXEvent_Target_Ability>
+			</Unit_Ability>
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPOILER_LOCK</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Ability_On_Wedge</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated>Unit_Ability_Off_Wedge</SFXEvent_GUI_Unit_Ability_Deactivated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+	<SpaceUnit Name="Biggs_XWing">
+		<Variant_Of_Existing_Type>Wedge_XWing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_BIGGS_XWING</Text_ID>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<SFXEvent_Assist_Move/>
+		<SFXEvent_Assist_Attack/>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Biggs </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Biggs </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Biggs </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Biggs </SFXEvent_Enemy_Health_Critical_Warning>
+		<SFXEvent_Unit_Lost> Unit_Defeat_Biggs</SFXEvent_Unit_Lost>
+	</SpaceUnit>
+	<SpaceUnit Name="Hobbie_XWing">
+		<Variant_Of_Existing_Type>Wedge_XWing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_JOHN_XWING</Text_ID>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<SFXEvent_Assist_Move/>
+		<SFXEvent_Assist_Attack/>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Klivian </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Klivian </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Klivian </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Enemy_Health_Critical_Warning> Unit_Enemy_Health_Critical_Klivian </SFXEvent_Enemy_Health_Critical_Warning>
+		<SFXEvent_Unit_Lost> Unit_Defeat_Klivian</SFXEvent_Unit_Lost>
+	</SpaceUnit>
+	<SpaceUnit Name="Porkins_XWing">
+		<Variant_Of_Existing_Type>Wedge_XWing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PORKINS_XWING</Text_ID>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<SFXEvent_Assist_Move/>
+		<SFXEvent_Assist_Attack/>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Porkins </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Porkins </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Health_Low_Warning> Unit_Enemy_Health_Low_Porkins </SFXEvent_Enemy_Health_Low_Warning>
+		<SFXEvent_Unit_Lost> Unit_Defeat_Porkins </SFXEvent_Unit_Lost>
+	</SpaceUnit>
+
+
+
+
+
+</Red_Leader_XWing_Hero_Files>

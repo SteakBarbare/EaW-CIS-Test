@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<RV_Ghost_Data>
+
+	
+	<SpaceUnit Name="RV_Ghost">
+		<Variant_Of_Existing_Type>Millennium_FalconORG</Variant_Of_Existing_Type>	
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_RV_Ghost_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Landing_Transport_Variant>RV_Ghost_Landing</Landing_Transport_Variant>
+		<Death_Clone>Damage_Normal, RV_Ghost_Death_Clone</Death_Clone>
+		<Text_ID>TEXT_UNIT_RV_GHOST</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG Lancer Attack_Carrier </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RV_GHOST TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Icon_Name>i_button_RV_Ghost.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Land_Model_Name>RV_Ghost_Phantom_Land.ALO</Land_Model_Name>
+		<Space_Model_Name>RV_Ghost_Phantom.ALO</Space_Model_Name>
+
+		<Starting_Spawned_Units_Tech_0>RV_Phantom, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>1</Spawned_Squadron_Delay_Seconds>
+		
+		<HardPoints>
+			HP_RV_Ghost_01, 
+			HP_RV_Ghost_02,
+			HP_Fighter_Bay_Invisible
+		</HardPoints>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_INVULNERABILITY_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_INVULNERABILITY_DESCRIPTION</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Hera</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_EVASIVE_MANEUVERS.TGA</Alternate_Icon_Name>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Hera</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Enable_Radar_Ability Name="R_Comm_Array_Enable_Radar">
+					<Activation_Style>Skirmish_Automatic</Activation_Style>
+					<Initially_Enabled>Yes</Initially_Enabled>
+					<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+					<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>  
+
+		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Respawn_Hera</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Hera</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Hera</SFXEvent_Fleet_Move>	
+
+		<SFXEvent_Select>Unit_Select_Hera</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Hera</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Hera</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Attack_Hera</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Move_Hera </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Attack_Hera </SFXEvent_Assist_Attack>
+		<SFXEvent_Deploy>Unit_Move_Hera</SFXEvent_Deploy>
+
+		<Death_SFXEvent_Start_Die>Unit_X_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Ambient_Moving> Unit_Falcon_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Idle_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Falcon_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Falcon_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_For_All_Allies>1</Build_Limit_Current_For_All_Allies>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>		
+	
+	<SpaceUnit Name="RV_Ghost_Landing">
+		<Variant_Of_Existing_Type>RV_Ghost</Variant_Of_Existing_Type>	
+		<HardPoints>
+			HP_RV_Ghost_01, 
+			HP_RV_Ghost_02,
+			HP_RV_Ghost_03
+		</HardPoints>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>8.0</Scale_Factor>
+	</SpaceUnit>
+
+	<SpaceUnit Name="RV_Ghost_Death_Clone">
+		<Text_ID>TEXT_UNIT_MILLENNIUM_FALCON</Text_ID>
+		<Space_Model_Name>RV_Ghost_Phantom_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.40</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="RV_Phantom">
+		<Variant_Of_Existing_Type>Millennium_FalconORG</Variant_Of_Existing_Type>		
+		<Text_ID>TEXT_UNIT_RV_PHANTOM</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Scout TIE_Bomber </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TartanORG Lancer Bajonett </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RV_PHANTOM TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_button_RV_Phantom.tga</Icon_Name>
+		<Space_Model_Name>RV_Ghost_Phantom2.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Max_Speed>3.8</Max_Speed>
+		<Min_Speed>2.6</Min_Speed>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>8000</Tactical_Health>
+		<Autoresolve_Health>400</Autoresolve_Health>
+		<Shield_Refresh_Rate>2150</Shield_Refresh_Rate>
+		<Energy_Capacity>25000</Energy_Capacity>
+		<Energy_Refresh_Rate>15000</Energy_Refresh_Rate>
+		
+		<HardPoints>
+      		HP_RV_Ghost_03,
+			HP_R_Delta7_Laser_00,
+			HP_R_Delta7_Laser_01
+	    </HardPoints>
+
+		<SFXEvent_Select>Unit_Select_Sabine</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Sabine</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Sabine</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Sabine</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Sabine</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Sabine </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_Sabine </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Death_Sabine </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Select>Unit_Select_Sabine</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Sabine</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Sabine</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Sabine</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Move_Sabine</SFXEvent_Guard>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Move_Sabine </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Move_Sabine </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Sabine </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Low_Sabine </SFXEvent_Health_Critical_Warning>
+	
+		<Victory_Relevant>no</Victory_Relevant>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 5.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Sabine</SFXEvent_GUI_Unit_Ability_Activated>
+				
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, RV_Phantom_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="RV_Phantom_Death_Clone">
+		<Text_ID>TEXT_UNIT_ASSAULTFIGHTER</Text_ID>
+		<Space_Model_Name>RV_Phantom.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</RV_Ghost_Data>

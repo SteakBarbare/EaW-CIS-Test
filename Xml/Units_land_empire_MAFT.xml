@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<MAFTUnit_Data>
+	<GroundVehicle Name="MAFT">
+		<Variant_Of_Existing_Type>Lancet_Air_Artillery</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 184, 10, 37, 255 </No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_MAFT</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder Rebel_Light_Tank_Brigade LIGHT_SCOUT_SPEEDER_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T2BAA_Brigade Rebel_Z95Land_squadron UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAFT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>EV_MAFT.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Select_Box_Scale>55</Select_Box_Scale>
+		<Ranking_In_Category>5</Ranking_In_Category>
+		
+		<Max_Speed>4.5</Max_Speed>
+		<Min_Speed>4.0</Min_Speed>
+		<OverrideAcceleration> .4</OverrideAcceleration>
+		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		
+		<Armor_Type> Armor_Missile_Cruiser </Armor_Type>
+
+		<Bank_Turn_Angle>45</Bank_Turn_Angle>
+		<AI_Combat_Power>155</AI_Combat_Power>
+		<Affiliation>Empire</Affiliation>
+		<Autoresolve_Health>70.0</Autoresolve_Health>
+		<Tactical_Health>250</Tactical_Health>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<Ranged_Target_Z_Adjust>3.0</Ranged_Target_Z_Adjust>
+		<Land_FOW_Reveal_Range>400.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+		<Turret_Rotate_Extent_Degrees>20.0</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30.0</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_Main_Cannon_MAAT</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Vehicle, 1.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Air, 2.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Structure, 10.0</Targeting_Fire_Inaccuracy>
+
+		<Damaged_Smoke_Asset_Name>P_Smoke_Small02.alo</Damaged_Smoke_Asset_Name>
+		<Death_Explosions>Small_Explosion_Land_07</Death_Explosions>
+		<Hardpoints>
+				HP_Gr_Fighter_White_Proton_Torpedo
+		</Hardpoints>
+		
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_MAFT</SFXEvent_Select>
+		
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<SFXEvent_Engine_Idle_Loop>Unit_LAFT_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_LAFT_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop>Unit_LAFT_Idle_Engine_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+		<SFXEvent_Ambient_Moving> Unit_LAFT_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		
+		<Icon_Name>I_BUTTON_ev_MAFT.tga</Icon_Name>
+		<CategoryMask> Air | AntiStructure</CategoryMask>
+		<Targeting_Priority_Set>AntiVehicleNW</Targeting_Priority_Set>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Move_Lancet</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<GroundCompany Name="Imperial_MAFT">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MAFT</Text_ID>
+		<Encyclopedia_Good_Against> Snowspeeder Rebel_Light_Tank_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T2BAA_Brigade UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MAFT TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FIGHTER</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Piracy_Value_Credits>60</Piracy_Value_Credits>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Tech_Level>99</Tech_Level>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>LAFT_Land_Transport</Company_Transport_Unit>
+		<Company_Units>MAFT, MAFT</Company_Units>
+		<Icon_Name>i_button_ev_maft.tga</Icon_Name>
+		<GUI_Model_Name>EV_MAFT.ALO</GUI_Model_Name>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Lancet</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Lancet</SFXEvent_Fleet_Move>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>700</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+</MAFTUnit_Data>

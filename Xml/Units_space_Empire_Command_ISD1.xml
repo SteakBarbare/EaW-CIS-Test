@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<Command_ISD1Unit_Data>
+	<SpaceUnit Name="IA_Command_ISD1">
+		<Variant_Of_Existing_Type>Command_ISD1</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA</Required_Special_Structures>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+	</SpaceUnit>	
+	<SpaceUnit Name="Command_ISD1_MP">
+		<Variant_Of_Existing_Type>Command_ISD1</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+			
+
+	</SpaceUnit>	
+	<SpaceUnit Name="Command_ISD1">
+		<Variant_Of_Existing_Type>Star_Destroyer</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_EMPIRE</Text_ID>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FLEET_COMMANDER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_FIGHTER TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Icon_Name>i_button_EI_fleet_commander.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>		
+
+		<Build_Cost_Credits>6500</Build_Cost_Credits>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>99</Tech_Level>
+
+		<Required_Special_Structures>Astilleros_PesadosE, E_Ground_Officer_Academy</Required_Special_Structures>
+
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+		
+		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
+		<Galactic_Fleet_Override_Model_Name> W_Empire_ISD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+						
+		<Death_Clone>Damage_Normal, Star_Destroyer_Death_Clone</Death_Clone>
+				
+		<SFXEvent_Build_Complete>GUI_E_Fleet_Commander_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Started>EHD_Build_Commander</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>	
+			  
+		<AI_Combat_Power>1900</AI_Combat_Power>
+		
+		<Neutralization_Cost>2000.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Tactical_Build_Cost_Multiplayer>6500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		
+
+		<Population_Value>8</Population_Value>
+		<!--<Space_Override_Population_Value>3</Space_Override_Population_Value>-->
+
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>CONCENTRATE_FIRE</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Effective_Radius>4000</Effective_Radius>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Particle_Effect>Empire_Target_Particles</Particle_Effect>
+				<GUI_Activated_Ability_Name>Command_ISD1_Ability</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Barrage_Tartan </SFXEvent_Target_Ability>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEET_COMMANDER_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>E_Fl_C_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			 
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Concentrate_Fire_Attack_Ability Name="Command_ISD1_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital | Super | Structure | Spacehero</Applicable_Unit_Categories>
+				<Target_Damage_Increase_Percent>0.0</Target_Damage_Increase_Percent>
+				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Concentrate_Fire_Attack_Ability>
+			<!--<Enhance_Defense_Ability Name="Command_ISD1_Enhance_Defense">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.5</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+			</Enhance_Defense_Ability>-->
+			<Battlefield_Modifier_Ability Name="Command_ISD1_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>3.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			<Remove_Corruption_Ability Name="Command_ISD1_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+		
+	</SpaceUnit>
+</Command_ISD1Unit_Data>

@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+<UpgradeObjects>
+	
+	
+	
+	
+	<UpgradeObject Name="Chiss_Level_Two_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Next_Upgrade_Level_Type>Chiss_Level_Three_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Chiss_tech_upgrade_2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_TWO </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Chiss_Level_Three_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 85 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Chiss_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Chiss_Level_Two_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Next_Upgrade_Level_Type>Chiss_Level_Four_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Chiss_tech_upgrade_3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_THREE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Chiss_Level_Four_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Chiss_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Chiss_Level_Three_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Chiss_tech_upgrade_4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_FOUR  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+		
+	<UpgradeObject Name="Chiss_Bombing_Run_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_BOMBING_RUN</Behavior>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_MULTI_BOMBING_RUN_SEPARATIST.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_TOOLTIP_RL_BOMBING_RUN_USE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_RL_BOMBING_RUN_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Chiss_Bombing_Run_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Bombing_Runs>Yes</Enable_Bombing_Runs>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+	<UpgradeObject Name="Chiss_Planetary_Bombard_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_PLANETARY_BOMBARD</Behavior>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 6000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 125 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_multi_orbital_bombardment.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_RL_ORBITAL_BOMBARD_TOOLTIP  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_ORBITAL_BOMBARD_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Chiss_Planetary_Bombard_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Planetary_Bombardment>Yes</Enable_Planetary_Bombardment>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+
+	<UpgradeObject Name="Corporate_Level_Two_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Next_Upgrade_Level_Type>Corporate_Level_Three_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Corporate_tech_upgrade_2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_TWO </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Corporate_Level_Three_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 85 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Corporate_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Corporate_Level_Two_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Next_Upgrade_Level_Type>Corporate_Level_Four_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Corporate_tech_upgrade_3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_THREE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Corporate_Level_Four_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Corporate_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Corporate_Level_Three_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Corporate_tech_upgrade_4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_FOUR  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+		
+	<UpgradeObject Name="Corporate_Bombing_Run_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_BOMBING_RUN</Behavior>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Corporate_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_MULTI_BOMBING_RUN_SEPARATIST.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_TOOLTIP_RL_BOMBING_RUN_USE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_RL_BOMBING_RUN_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Corporate_Bombing_Run_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Bombing_Runs>Yes</Enable_Bombing_Runs>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+	<UpgradeObject Name="Corporate_Planetary_Bombard_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_PLANETARY_BOMBARD</Behavior>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 6000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 125 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Corporate_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_multi_orbital_bombardment.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_RL_ORBITAL_BOMBARD_TOOLTIP  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_ORBITAL_BOMBARD_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Corporate_Planetary_Bombard_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Planetary_Bombardment>Yes</Enable_Planetary_Bombardment>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+	<UpgradeObject Name="Ha_Level_Two_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Next_Upgrade_Level_Type>Ha_Level_Three_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Hapan_tech_upgrade_2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_TWO </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ha_Level_Three_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 85 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Ha_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Ha_Level_Two_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Next_Upgrade_Level_Type>Ha_Level_Four_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Hapan_tech_upgrade_3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_THREE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ha_Level_Four_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Ha_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Ha_Level_Three_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Hapan_tech_upgrade_4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_FOUR  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+		
+	<UpgradeObject Name="Ha_Bombing_Run_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_BOMBING_RUN</Behavior>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Ha_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_MULTI_BOMBING_RUN_SEPARATIST.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_TOOLTIP_RL_BOMBING_RUN_USE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_RL_BOMBING_RUN_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Hapan_Bombing_Run_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Bombing_Runs>Yes</Enable_Bombing_Runs>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+	<UpgradeObject Name="Ha_Planetary_Bombard_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_PLANETARY_BOMBARD</Behavior>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 6000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 125 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Ha_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_multi_orbital_bombardment.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_RL_ORBITAL_BOMBARD_TOOLTIP  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_ORBITAL_BOMBARD_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Hapan_Planetary_Bombard_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Planetary_Bombardment>Yes</Enable_Planetary_Bombardment>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+	<UpgradeObject Name="Hu_Level_Two_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Next_Upgrade_Level_Type>Hu_Level_Three_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Hutts_tech_upgrade_2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_TWO </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Hu_Level_Three_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 85 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Hu_Level_Two_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Hu_Level_Two_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Next_Upgrade_Level_Type>Hu_Level_Four_Tech_Upgrade</Next_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Hutts_tech_upgrade_3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_THREE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+
+	<UpgradeObject Name="Hu_Level_Four_Tech_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_01_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 60 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Hu_Level_Three_Tech_Upgrade </Tactical_Build_Prerequisites>
+		<Tactical_Build_Increments_Tech_Level> Yes </Tactical_Build_Increments_Tech_Level>
+		<Tactical_Destruction_Decrements_Tech_Level> Yes </Tactical_Destruction_Decrements_Tech_Level>
+		<Previous_Upgrade_Level_Type>Hu_Level_Three_Tech_Upgrade</Previous_Upgrade_Level_Type>
+		<Destroy_Previous_Upgrade_Level>No</Destroy_Previous_Upgrade_Level>
+		<Icon_Name>i_button_Hutts_tech_upgrade_4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_TECHNOLOGY_LEVEL_FOUR  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_COMMAND_CENTER</Text_ID>
+		<SFXEvent_Build_Started>RHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Is_Community_Property>Yes</Is_Community_Property>
+	</UpgradeObject>
+		
+	<UpgradeObject Name="Hu_Bombing_Run_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_BOMBING_RUN</Behavior>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 45 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Hu_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_MULTI_BOMBING_RUN_SEPARATIST.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_TOOLTIP_RL_BOMBING_RUN_USE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_RL_BOMBING_RUN_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Hu_Bombing_Run_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Bombing_Runs>Yes</Enable_Bombing_Runs>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+	<UpgradeObject Name="Hu_Planetary_Bombard_Use_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Behavior>DUMMY_UPGRADE, DUMMY_DESTROY_AFTER_PLANETARY_BOMBARD</Behavior>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 6000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 125 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Hu_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Show_In_Sidebar_While_Building> No </Show_In_Sidebar_While_Building>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>i_multi_orbital_bombardment.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_UPGRADE_RL_ORBITAL_BOMBARD_TOOLTIP  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERWEAPON </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_ORBITAL_BOMBARD_USE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Battlefield_Modifier_Ability Name="Hu_Planetary_Bombard_Use_Effect">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enable_Planetary_Bombardment>Yes</Enable_Planetary_Bombardment>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>0</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+  	</UpgradeObject>
+
+	<UpgradeObject Name="Co_Level_Two_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 80 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Co_Star_Base_1 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Co_Station_Level2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_TWO_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Co_Level_Two_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Co_Level_Three_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 3200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>600</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 100 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Co_Star_Base_2 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Co_Station_Level3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_THREE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Co_Level_Three_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Co_Level_Four_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>900</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 120 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Co_Star_Base_3 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Co_Station_Level4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FOUR_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Co_Level_Four_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Co_Level_Five_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Corporate</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1100</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 140 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Co_Star_Base_4 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Co_Station_Level5.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FIVE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FIVE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Co_Level_Five_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+	
+	<UpgradeObject Name="Ha_Level_Two_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 80 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ha_Star_Base_1 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ha_Station_Level2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_TWO_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ha_Level_Two_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ha_Level_Three_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 3200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>600</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 100 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ha_Star_Base_2 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ha_Station_Level3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_THREE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ha_Level_Three_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ha_Level_Four_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>900</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 120 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ha_Star_Base_3 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ha_Station_Level4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FOUR_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ha_Level_Four_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ha_Level_Five_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hapan</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1100</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 140 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ha_Star_Base_4 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ha_Station_Level5.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FIVE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FIVE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ha_Level_Five_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Hu_Level_Two_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 80 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Hu_Star_Base_1 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Hu_Station_Level2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_TWO_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Hu_Level_Two_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Hu_Level_Three_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 3200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>600</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 100 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Hu_Star_Base_2 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Hu_Station_Level3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_THREE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Hu_Level_Three_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Hu_Level_Four_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>900</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 120 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Hu_Star_Base_3 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Hu_Station_Level4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FOUR_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Hu_Level_Four_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Hu_Level_Five_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Hutts</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1100</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 140 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Hu_Star_Base_4 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Hu_Station_Level5.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FIVE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FIVE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Hu_Level_Five_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ch_Level_Two_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>300</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 80 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ch_Star_Base_1 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ch_Station_Level2.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_TWO_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_TWO_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ch_Level_Two_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ch_Level_Three_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 3200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>600</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 100 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ch_Star_Base_2 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ch_Station_Level3.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_THREE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_THREE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ch_Level_Three_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ch_Level_Four_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 4000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>900</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 120 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ch_Star_Base_3 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ch_Station_Level4.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FOUR_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FOUR_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ch_Level_Four_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+
+	<UpgradeObject Name="Ch_Level_Five_Starbase_Upgrade">
+		<Variant_Of_Existing_Type>Upgrade_Basico_02_R</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tactical_Build_Cost_Multiplayer> 5500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1100</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 140 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites> Skirmish_Ch_Star_Base_4 </Tactical_Build_Prerequisites>
+		<Show_In_Sidebar_When_Complete> No </Show_In_Sidebar_When_Complete>
+		<Icon_Name>I_BUTTON_Ch_Station_Level5.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_UPGRADE_LEVEL_FIVE_STARBASE  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_ADVANCE </Encyclopedia_Unit_Class>
+		<Text_ID>TEXT_UPGRADE_LEVEL_FIVE_STARBASE</Text_ID>
+		<Abilities SubObjectList="Yes">
+			<Starbase_Upgrade_Ability Name="Ch_Level_Five_Starbase_Upgrade_Effect">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+			</Starbase_Upgrade_Ability>
+		</Abilities>		
+	</UpgradeObject>
+</UpgradeObjects>

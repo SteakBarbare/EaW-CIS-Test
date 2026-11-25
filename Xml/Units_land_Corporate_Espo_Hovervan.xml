@@ -1,0 +1,84 @@
+﻿<?xml version="1.0"?>
+
+
+<Espo_HovervanUnit_Data>
+	<GroundVehicle Name="Espo_Hovervan">
+		<Variant_Of_Existing_Type>T2B_TankORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_ESPO_HOVERVAN</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_ESPO_HOVERVAN</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Co_Espo_Hovervan.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Max_Speed>2.3</Max_Speed>
+		<Max_Rate_Of_Turn>20.0</Max_Rate_Of_Turn>
+		<Custom_Hard_XExtent> 20.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 22.0 </Custom_Hard_YExtent>
+
+		<Armor_Type> Armor_T4B </Armor_Type>
+
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>450</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<LandBehavior>AFFECTED_BY_SHIELD, HUNT, WALK_LOCOMOTOR, ABILITY_COUNTDOWN, IDLE, TARGETING, BARRAGE, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, GARRISON_UNIT</LandBehavior>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		
+		<HardPoints>
+			HP_Co_Espo_Hovervan_Turret_01, HP_Co_Espo_Hovervan_Turret_02
+		</HardPoints>		
+		<AI_Combat_Power>60</AI_Combat_Power>
+
+		<CategoryMask> Vehicle </CategoryMask>
+		<Icon_Name>i_button_Co_Espo_Hovervan.tga</Icon_Name>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Espo_Hovervan_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ESPO_HOVERVAN_BRIGADE</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_ESPO_HOVERVAN TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Pirates, Corporate</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Corporate_Ground_Heavy_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Gallofree_Transport</Company_Transport_Unit>
+		<Company_Units>Espo_Hovervan, Espo_Hovervan, Espo_Hovervan</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_Co_Espo_Hovervan.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+
+		<Population_Value>1</Population_Value>
+
+	</GroundCompany>
+	
+</Espo_HovervanUnit_Data>

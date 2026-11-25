@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<Darth_TalonUnit_Data>
+	<HeroUnit Name="Darth_Talon">
+		<Variant_Of_Existing_Type>Emperor_Palpatine</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_TALON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DARTH_TALON TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Land_Model_Name>EVK_Darth_Talon.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EVK_Darth_Talon.tga</Icon_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Tactical_Health>1500</Tactical_Health>
+		<Projectile_Types> Proj_Lightsaber_Luke </Projectile_Types>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<SFXEvent_Select>Unit_Select_Ventress</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Ventress</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Ventress</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Ventress</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Ventress</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Fleet_Move_Ventress</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Attack_Ventress</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Ventress </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Ventress </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Ventress </Death_SFXEvent_Start_Die>
+		
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Krayt_Hero</Highlight_Blob_Material_Name>
+		
+		<CategoryMask> LandHero </CategoryMask>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>FORCE_LIGHTNING</Type>
+				<Recharge_Seconds>20.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Darth_Talon_Force_Lightning </GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Attack_Ventress </SFXEvent_Target_Ability> 
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>FORCE_WHIRLWIND</Type>
+				<Recharge_Seconds>25.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Darth_Talon_Force_Whirlwind </GUI_Activated_Ability_Name> 
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Time_Ability Name="Darth_Talon_Production_Time_Reduction">
+						<Applicable_Unit_Types>EVK_Sith, EVK_TIEReaper_Squadron_Land, EVK_Annihilator_Squadron_Land, EVK_Dragon, EVK_TIE_Reaper_SquadronB, EVK_Annihilator_SquadronB</Applicable_Unit_Types>
+						<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+						<Stacking_Category>6</Stacking_Category>
+						<Galaxy_Wide> No </Galaxy_Wide>
+					</Reduce_Production_Time_Ability>
+			<Earthquake_Attack_Ability Name="Darth_Talon_Attack_Structures">
+				<Activation_Style>Special_Attack</Activation_Style>
+				<Terminate_Effect_On_Move_Command>Yes</Terminate_Effect_On_Move_Command>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>250.0</Activation_Max_Range>
+				<Activation_Chance>1.0</Activation_Chance>
+				<Damage_Amount>0.0</Damage_Amount>
+				<Damage_Percentage>0.01</Damage_Percentage>
+				<Damage_Interval_In_Secs>0.2</Damage_Interval_In_Secs>
+				<Applicable_Unit_Categories>Structure</Applicable_Unit_Categories>
+				<Target_Particle_Effect>Earthquake_Dust_Particles</Target_Particle_Effect>
+			</Earthquake_Attack_Ability>
+
+			<Force_Lightning_Ability Name="Darth_Talon_Force_Lightning">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>175.0</Activation_Max_Range>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Damage_Amount>9999.0</Damage_Amount>
+				<Damage_Application_Time_In_Secs>2.3893</Damage_Application_Time_In_Secs>
+				<Start_Lightning_Frame_Number> 8 </Start_Lightning_Frame_Number>
+				<Lightning_Effect_Name>Force_Lightning</Lightning_Effect_Name>	
+				<Lightning_Source_Bone_Name>B_HAND_L</Lightning_Source_Bone_Name>
+				<Lightning_Target_Bone_Name>B_PELVIS</Lightning_Target_Bone_Name>
+				<Lightning_Max_Targets> 15 </Lightning_Max_Targets> 			
+				<Lightning_Targets_Radius> 100.0 </Lightning_Targets_Radius>	
+				<SFXEvent_Activate>Unit_Force_Lightning</SFXEvent_Activate>
+				<Target_Particle_Effect>Force_Lightning_Smoke</Target_Particle_Effect>
+				<Target_Particle_Bone_Name>B_PELVIS</Target_Particle_Bone_Name> 
+				<Target_Light_Effect_Type>Linear_Pulse</Target_Light_Effect_Type>
+				<Target_Light_Effect_Color>0.3, 0.3, 0.8</Target_Light_Effect_Color>
+				<Target_Light_Effect_Duration>2.3893</Target_Light_Effect_Duration>
+				<Target_Light_Effect_Pulse_Count>25</Target_Light_Effect_Pulse_Count>
+			</Force_Lightning_Ability>
+			
+           <Force_Whirlwind_Ability Name="Darth_Talon_Force_Whirlwind">
+				<Activation_Style> User_Input </Activation_Style>
+				<Activation_Min_Range>0.0</Activation_Min_Range>
+				<Activation_Max_Range>75.0</Activation_Max_Range>
+				<Damage_Amount>500.0</Damage_Amount>
+				<Damage_Range>75.0</Damage_Range>
+				<Travel_Time_In_Secs>1.0</Travel_Time_In_Secs>
+				<Activation_Chance>0,0.0, 1,0.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Force_Whirlwind</SFXEvent_Activate>
+				<Owner_Particle_Effect>Force_Whirlwind_Particles</Owner_Particle_Effect>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>2.0, 2.0, 2.0</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.5</Owner_Light_Effect_Duration>
+			</Force_Whirlwind_Ability>
+			
+			<Combat_Bonus_Ability Name="Darth_Talon_Land_Combat_Bonus">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Unit_Strength_Category>Vehicle | Infantry | Air</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Vehicle | Infantry | Air</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Darth_Talon_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			
+			<Remove_Corruption_Ability Name="Darth_Talon_Remove_Corruption">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>1</Corruption_Removal_Cost_Multiplier> 			
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+
+        </Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Darth_Talon_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_TALON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DARTH_TALON TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EVK_Darth_Talon.tga</Icon_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Company_Transport_Unit>Darth_Talon_EVK_Fury</Company_Transport_Unit>
+		<Company_Units>Darth_Talon</Company_Units>
+		
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Select_Ventress</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Ventress</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Ventress</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+
+		<CategoryMask>LandHero</CategoryMask>
+		<Tactical_Build_Prerequisites>Krayt_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Darth_Talon_EVK_Fury"> 
+		<Variant_Of_Existing_Type>EVK_Fury</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_TALON</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_TALON TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EVK_Darth_Talon.tga</Icon_Name>
+		
+		<SFXEvent_Select>Unit_Select_Ventress</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Ventress</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Katarn</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Katarn</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Katarn</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		<HardPoints> 
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+		<AI_Combat_Power>2500</AI_Combat_Power>
+		<Landing_Transport_Variant>EVK_Fury_Landing</Landing_Transport_Variant>
+	</SpaceUnit>		
+	
+</Darth_TalonUnit_Data>

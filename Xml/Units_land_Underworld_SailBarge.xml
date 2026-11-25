@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+
+<Hutt_SailBargeUnit_Data>
+
+	<GroundVehicle Name="UV_SailBarge">
+		<Variant_Of_Existing_Type>Hutt_SailBarge</Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, SailBarge_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="SailBarge_Death_Clone_00">
+		<Variant_Of_Existing_Type>UV_SailBarge</Variant_Of_Existing_Type>
+		<Land_Model_Name>Hutt_Sailbarge_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundVehicle Name="Hutt_SailBarge">
+		<Variant_Of_Existing_Type>Ha_SpecforceORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HUTT_SAILBARGE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SAILBARGE</Encyclopedia_Text>
+
+		<Land_Model_Name>Hutt_Sailbarge.ALO</Land_Model_Name>
+		<Affiliation>Underworld</Affiliation>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 23 </Turret_Targets_Anything_Else>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATX</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>3</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+
+		<Icon_Name> I_BUTTON_HUTT_SAILBARGE.tga </Icon_Name>
+
+		<SFXEvent_Fire>Unit_AT_AT_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_2M_Tank</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_2M_Tank</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_2M_Tank</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_2M_Tank</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_2M_Tank</SFXEvent_Guard>
+
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_2M_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_2M_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_2M_Tank </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_2M_Tank</SFXEvent_Assist_Attack>
+
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> UHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> UHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> UHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<AI_Combat_Power>425</AI_Combat_Power>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>180</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>SAILBARGE_Maximum_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ground_Laser_Cannon_Red_ATATX</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Activate_Energy_Blast_Veers</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Target_Energy_Blast_Veers </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+              	<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_INFANTRY_REINFORCES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_R_FIELD_COMMANDER_RE</Alternate_Description_Text>
+				<Recharge_Seconds>120</Recharge_Seconds>
+			    <Spawned_Object_Type>SailBarge_troopers_Marker</Spawned_Object_Type>
+				<Effective_Radius> 10.0 </Effective_Radius>
+				<Max_Num_Spawned_Objects>2</Max_Num_Spawned_Objects>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 10 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Maximum_Firepower_Attack_Ability Name="SAILBARGE_Maximum_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Veers_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+
+	</GroundVehicle>
+	
+	<GroundCompany Name="Hutt_SailBarge_Company">
+		<Variant_Of_Existing_Type> Imperial_Armor_GroupORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HUTT_SAILBARGE</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Rebel_Trooper </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank M1_Repulsor_Tank </Encyclopedia_Vulnerable_To>		
+		<Encyclopedia_Text>TEXT_TOOLTIP_SAILBARGE TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>UV_SailBarge</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>i_button_Hutt_SailBarge.tga</Icon_Name>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+		<Tactical_Build_Cost_Multiplayer>1400</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+
+	<GroundCompany Name="Hutt_Skiff_Team_Company">
+		<Variant_Of_Existing_Type> Imperial_Armor_GroupORG </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_PIRATE_SKIFF_TEAM</Text_ID>
+		<Encyclopedia_Good_Against> AT_ST_Walker T2B_Tank </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Plex_Soldier M1_Repulsor_Tank </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SKIFF</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>200</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>U_Ground_Vehicle_Factory, U_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>Underworld_Vehicle_Transport</Company_Transport_Unit>
+		<Company_Units>Pirate_Skiff_U, Pirate_Skiff_U, Pirate_Skiff_U</Company_Units>
+		<Icon_Name>i_button_skiff.tga</Icon_Name>
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+
+		<Tactical_Build_Cost_Multiplayer>200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+	
+	
+</Hutt_SailBargeUnit_Data>

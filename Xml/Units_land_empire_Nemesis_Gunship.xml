@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<Nemesis_GunshipUnit_Data>
+	<GroundVehicle Name="Nemesis_Gunship">
+		<Variant_Of_Existing_Type>MAFT</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 184, 10, 37, 255 </No_Colorization_Color>
+
+		<Text_ID>TEXT_UNIT_EV_NEMESIS_GUNSHIP</Text_ID>
+		<Encyclopedia_Good_Against>MPTL T4B_Tank Rebel_Infantry_Squad</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>AAC_HOVERTANK Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_NEMESIS_GUNSHIP</Encyclopedia_Text>
+
+		<Land_Model_Name>EV_Nemesis_GunshipF.ALO</Land_Model_Name>
+		<Affiliation>Empire</Affiliation>
+		<Custom_Hard_XExtent> 25.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 25.0 </Custom_Hard_YExtent>
+		
+		<LandBehavior>ABILITY_COUNTDOWN,HUNT,TURRET,FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED, AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE,WIND_DISTURBANCE,DAMAGE_TRACKING,SELF_DESTRUCT</LandBehavior>
+
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		
+		<Turret_Rotate_Extent_Degrees>120</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>60</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Turret_Targets_Ground_Vehicles> 2</Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 3</Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 1</Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4</Turret_Targets_Anything_Else>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 75.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+		
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Hardpoints>
+				HP_Gr_Fighter_V_Wing_Missile_00, HP_Gr_Fighter_V_Wing_Missile_01, HP_Gr_Fighter_V_Wing_Missile_02, HP_Gr_Fighter_V_Wing_Missile_03
+		</Hardpoints>
+	
+		<Death_Explosions>Medium_Explosion_Space6</Death_Explosions>
+
+		<Icon_Name>i_button_EV_Nemesis_Gunship.tga</Icon_Name>
+
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+
+		<AI_Combat_Power>200</AI_Combat_Power>
+
+		<Select_Box_Scale>80</Select_Box_Scale>
+		<Select_Box_Z_Adjust>150.0f</Select_Box_Z_Adjust>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, NemesisG_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="NemesisG_Death_Clone_00">
+		<Variant_Of_Existing_Type>Nemesis_Gunship</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_Nemesis_Gunship_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="E_Nemesis_Gunship_DO">
+		<Variant_Of_Existing_Type>E_Nemesis_Gunship</Variant_Of_Existing_Type>
+		<Required_Orbiting_Units>Doomgiver</Required_Orbiting_Units>
+	</GroundCompany>
+	<GroundCompany Name="E_Nemesis_Gunship">
+		<Variant_Of_Existing_Type>Imperial-LAAT</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_NEMESIS_GUNSHIP</Text_ID>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_NEMESIS_GUNSHIP TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Build_Cost_Credits>1650</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Affiliation>Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Orbiting_Units>Arc_Hammer</Required_Orbiting_Units>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>Nemesis_Gunship, Nemesis_Gunship</Company_Units>
+
+		<Icon_Name>i_button_EV_Nemesis_Gunship.tga</Icon_Name>
+		<GUI_Model_Name>EV_Nemesis_Gunship.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>1650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</Nemesis_GunshipUnit_Data>

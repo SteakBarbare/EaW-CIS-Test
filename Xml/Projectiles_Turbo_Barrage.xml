@@ -1,0 +1,1006 @@
+<?xml version="1.0"?>
+<Projectiles>
+	<Projectile Name="Proj_Ship_Large_LaserIGX_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_LaserIRX_Cannon_Red</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Space_Model_Name>P_LaserIGX_Barrage.ALO</Space_Model_Name>
+		<Land_Model_Name>W_FlakM_Proyectile.ALO</Land_Model_Name>
+		<Max_Speed>45.0</Max_Speed>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Max_Flight_Distance>2200.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>200.0</Projectile_Damage>
+		
+		<Projectile_Blast_Area_Damage> 200 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>10</Projectile_Energy_Per_Shot>
+				
+		<Damage_Type>Damage_Station_Turbolaser</Damage_Type>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Large_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		
+		<AI_Combat_Power>200</AI_Combat_Power>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+		<Projectile_SFXEvent_Detonate_Reduced_By_Armor> Unit_Anti_Air_Small_Explosion_SFX </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Death_SFXEvent_Start_Die>Unit_Anti_Air_Explosion_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Fire>Unit_Eweb_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Large_LaserIRX_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_LaserIGX_Barrage</Variant_Of_Existing_Type>
+		<Space_Model_Name>P_LaserIRX_Barrage.alo</Space_Model_Name>
+		<Death_Explosions>Turbolaser_R_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumR</Projectile_Absorbed_By_Shields_Particle>
+		<SFXEvent_Fire>Unit_Eweb_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Large_BlueUX_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_LaserIGX_Barrage</Variant_Of_Existing_Type>
+		<Space_Model_Name>P_LaserIBX_Barrage.alo</Space_Model_Name>
+		<Death_Explosions>Turbolaser_B_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumB</Projectile_Absorbed_By_Shields_Particle>
+		<SFXEvent_Fire>Unit_Rep_HandLaser_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Large_LaserOYX_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_LaserIGX_Barrage</Variant_Of_Existing_Type>
+		<Space_Model_Name>P_LaserIYX_Barrage.alo</Space_Model_Name>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumO</Projectile_Absorbed_By_Shields_Particle>
+		<SFXEvent_Fire>Unit_Eweb_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_BeamLaserSpace_Orange_Barrage">
+		<Variant_Of_Existing_Type>Proj_BeamLaserSpace_Orange</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_LaserBeamAA_OrangeBlast.ALO</Space_Model_Name>
+		<Projectile_Max_Flight_Distance>3200.0</Projectile_Max_Flight_Distance>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumO</Projectile_Absorbed_By_Shields_Particle>
+		<SFXEvent_Fire>Unit_Eweb_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_BeamLaserSpace_Green_Barrage">
+		<Variant_Of_Existing_Type>Proj_BeamLaserSpace_Orange</Variant_Of_Existing_Type>
+		<Projectile_Max_Flight_Distance>3200.0</Projectile_Max_Flight_Distance>
+		<Space_Model_Name>W_LaserBeamAA_GreenBlast.ALO</Space_Model_Name>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumG</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_BeamLaserSpace_Blue_Barrage">
+		<Variant_Of_Existing_Type>Proj_BeamLaserSpace_Orange</Variant_Of_Existing_Type>
+		<Projectile_Max_Flight_Distance>3200.0</Projectile_Max_Flight_Distance>
+		<Space_Model_Name>W_LaserBeamAA_BlueBlast.ALO</Space_Model_Name>
+		<Death_Explosions>Turbolaser_B_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumB</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_BeamLaserSpace_Red_Barrage">
+		<Variant_Of_Existing_Type>Proj_BeamLaserSpace_Orange</Variant_Of_Existing_Type>
+		<Projectile_Max_Flight_Distance>3200.0</Projectile_Max_Flight_Distance>
+		<Space_Model_Name>W_LaserBeamAA_RedBlast.ALO</Space_Model_Name>
+		<Death_Explosions>Turbolaser_B_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumR</Projectile_Absorbed_By_Shields_Particle>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Flak_M_Laser_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_LaserIGX_Barrage</Variant_Of_Existing_Type>
+		<Space_Model_Name>P_LaserIYX_Barrage.alo</Space_Model_Name>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumO</Projectile_Absorbed_By_Shields_Particle>
+		<SFXEvent_Fire>Unit_Flak_Cannon_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Flak_Laser_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Flak_Red_Laser_Cannon_Anticaza</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Space_Model_Name>P_LaserIYX_Barrage.alo</Space_Model_Name>
+		<Projectile_Damage>15.0</Projectile_Damage>
+		<Damage_Type> Damage_Acclamator_TL </Damage_Type>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Death_Explosions>Flak_Pod_Explosion</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle>Flak_Pod_Explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Flak_Pod_Explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Flak_Pod_Explosion</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumO</Projectile_Absorbed_By_Shields_Particle>
+		<SFXEvent_Fire>Unit_Flak_Cannon_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Large_Laser_Cannon_Green_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_Laser_Cannon_Green</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Nebulon_B </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Laser_Cannon_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Large_Laser_Cannon_Red_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Large_Laser_Cannon_Red</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Nebulon_B </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Rebel_Ship_Laser_Cannon_Fire</SFXEvent_Fire>
+	</Projectile>
+
+	<Projectile Name="Proj_Ship_Ion_Cannon_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Cannon</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_IonCannon </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Ion_Small_Dud</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Ion_Small_Dud</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Ion_Small_Dud</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large_Ion</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Ion_Small_Dud</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Ion_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Ion_Cannon_hvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Ion_Cannon_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_IonCannon_LRG </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Ion_Small_Dud</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Ion_Small_Dud</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Ion_Small_Dud</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_Large_Ion</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Ion_Small_Dud</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Ion_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Red_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Victory_SD </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_R_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Blue_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Victory_SD </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeB</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_B_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Republic_Ship_Turbolaser_ver01</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Yellow_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Yellow</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Victory_SD </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeY</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Turbo_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Vengeance_Mass_Driver_Barrage">
+		<Variant_Of_Existing_Type>Proj_Vengeance_Mass_Driver</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Damage_Type> Damage_Mass_Driver_Space </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeY</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Anti_Air_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Kedalbe_Mass_Driver_Barrage">
+		<Variant_Of_Existing_Type>Proj_Kedalbe_Mass_Driver</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Damage_Type> Damage_Mass_Driver_Space </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeY</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Anti_Air_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Green_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Victory_SD </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>15.0</Projectile_Blast_Area_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_Orange_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Orange</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Victory_SD </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeY</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_GreenHvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_RedHvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_R_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_CISHvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_CIS_Turbolaser_Hvy</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_R_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_AAT_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_BlueHvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_B_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeB</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_B_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_YellowHvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Yellow_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeY</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Turbo_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_OrangeHvy_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Orange_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_O_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeY</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_O_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_G_MAXFIRE">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green</Variant_Of_Existing_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_GXISD2_MAXFIRE">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_X_ISD2_Turrets</Variant_Of_Existing_Type>
+		<Projectile_Damage>15.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<!--Habilidades max power fire sin hacer daño en escudos, poco daño en general pero atraviesan los escudos como la habilidad de los cohetes y torpedos-->
+	<Projectile Name="Proj_Ship_T_G_X_ISD3_Turrets_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_X_ISD3_Turrets</Variant_Of_Existing_Type>
+		<Projectile_Damage>35.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 35 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_T_R_X_ISD3_Turrets_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_X_ISD_Turrets</Variant_Of_Existing_Type>
+		<Projectile_Damage>35.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 35 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Turbolaser_Gauss_Red_Barrage">
+		<Variant_Of_Existing_Type>Proj_Turbolaser_Gauss_Red</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Damage>45.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 45 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<SFXEvent_Fire>Unit_Turbo_Gauss_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Mass_Driver_SSD_Barrage">
+		<Variant_Of_Existing_Type>Proj_Mass_Driver_SSD</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Damage>45.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 45 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<SFXEvent_Fire>Unit_Anti_Air_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_T_G_HvyX_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_HvyX</Variant_Of_Existing_Type>
+		<Projectile_Damage>75.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 75 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Max_Flight_Distance>5550.0</Projectile_Max_Flight_Distance>
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_T_R_HvyX_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_HvyX</Variant_Of_Existing_Type>
+		<Projectile_Damage>75.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 75 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Max_Flight_Distance>5550.0</Projectile_Max_Flight_Distance>
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_T_B_HvyX_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Blue_HvyX</Variant_Of_Existing_Type>
+		<Projectile_Damage>75.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 75 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Max_Flight_Distance>5550.0</Projectile_Max_Flight_Distance>
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_GreenHvyIon_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_hvy</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Object_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_G_Lifetime</Death_Explosions> 
+		
+		<Projectile_Damage>45.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 45 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Disables_Engines_When_Power_Drained>No</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Ion_Stun_Duration>5.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.5</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.5</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Stun_On_Detonation>Yes</Projectile_Stun_On_Detonation>
+		<Projectile_Stun_Duration_Frames>300</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>300</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect> Stunned_Infantry </Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> All </Projectile_Stun_Victims_Category_Mask>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>10</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Ion_Small_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Turbolaser_RedHvyIon_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Red_hvy</Variant_Of_Existing_Type>
+		<Space_Model_Name>W_Battledragon_LaserIon.ALO</Space_Model_Name>
+		<Damage_Type> Damage_Calamari_Cruiser </Damage_Type>
+		<Projectile_Object_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Object_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_R_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeR</Projectile_Absorbed_By_Shields_Particle>
+		<Death_Explosions>Turbolaser_R_Lifetime</Death_Explosions> 
+		
+		<Projectile_Damage>45.0</Projectile_Damage>
+
+		<Projectile_Blast_Area_Damage> 45 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>	
+
+		<Projectile_Ion_Stun_On_Detonation>Yes</Projectile_Ion_Stun_On_Detonation>
+		<Projectile_Disables_Engines_When_Power_Drained>No</Projectile_Disables_Engines_When_Power_Drained>
+		<Projectile_Ion_Stun_Duration>5.0</Projectile_Ion_Stun_Duration>
+		<Projectile_Ion_Stun_Speed_Reduction_Percent>0.5</Projectile_Ion_Stun_Speed_Reduction_Percent>
+		<Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>0.5</Projectile_Ion_Stun_Shot_Rate_Reduction_Percent>
+		<Projectile_Ion_Stun_Stack_Duration>No</Projectile_Ion_Stun_Stack_Duration>
+		<Projectile_Stun_On_Detonation>Yes</Projectile_Stun_On_Detonation>
+		<Projectile_Stun_Duration_Frames>300</Projectile_Stun_Duration_Frames>
+		<Projectile_Stun_Radius>300</Projectile_Stun_Radius>
+		<Projectile_Stun_Spawn_Effect> Stunned_Infantry </Projectile_Stun_Spawn_Effect>
+		<Projectile_Stun_Victims_Category_Mask> All </Projectile_Stun_Victims_Category_Mask>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>Yes</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>10</Projectile_Energy_Per_Shot>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Ion_Small_Dud</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_SmallGolanI_Gun_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Flak_Red_Laser_Cannon_Anticaza</Variant_Of_Existing_Type>
+		<Projectile_Damage>50.0</Projectile_Damage>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Projectile_Blast_Area_Damage> 50 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Space_Model_Name>W_SGolan_1_Flak.ALO</Space_Model_Name>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Projectile_Object_Detonation_Particle>DB_Flak_Explosion</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>DB_Flak_Explosion</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>DB_Flak_Explosion</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>DB_Flak_Explosion</Projectile_Lifetime_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_MediumO</Projectile_Absorbed_By_Shields_Particle>
+		<AI_Combat_Power>60000</AI_Combat_Power>
+		<SFXEvent_Fire>Unit_Flak_Cannon_Fire</SFXEvent_Fire>
+	</Projectile>	
+	<Projectile Name="Proj_SmallGolanII_Gun_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Flak_Red_Laser_Cannon_Anticaza</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Max_Speed>8.0</Max_Speed>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Projectile_Blast_Area_Damage> 100 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Space_Model_Name>w_proton_projectile.ALO</Space_Model_Name>	
+		<Projectile_Object_Detonation_Particle>Medium_Explosion_Space10</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Medium_Explosion_Space10</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Medium_Explosion_Space10</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Medium_Explosion_Space10</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+		<AI_Combat_Power>60000</AI_Combat_Power>
+		<SFXEvent_Fire>Unit_MPTL_Tank_Fire</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_SmallGolanIII_Gun_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Flak_Red_Laser_Cannon_Anticaza</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Max_Speed>30.0</Max_Speed>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Blast_Area_Damage> 500 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		<Projectile_Damage>500</Projectile_Damage>
+		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Space_Model_Name>P_minigolan3_shot.ALO</Space_Model_Name>	
+		<Projectile_Object_Detonation_Particle>Spmat_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Spmat_Damage_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Spmat_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Spmat_Damage_Land</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+		<AI_Combat_Power>60000</AI_Combat_Power>
+		<SFXEvent_Fire>SmallGolan3</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_SmallGolanVI_Gun_Barrage">
+		<Variant_Of_Existing_Type>Proj_Ship_Flak_Red_Laser_Cannon_Anticaza</Variant_Of_Existing_Type>
+		<Projectile_Category>Laser</Projectile_Category>
+		<Max_Speed>30.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Blast_Area_Damage> 700 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Projectile_Damage>700</Projectile_Damage>
+		<Damage_Type> Damage_Diamond_Missile </Damage_Type>
+		<Space_Model_Name>P_minigolan5_shot.ALO</Space_Model_Name>	
+		<Projectile_Object_Detonation_Particle>Spmat_Damage_Land</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Spmat_Damage_Land</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Spmat_Damage_Land</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Spmat_Damage_Land</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+	</Projectile>
+
+	<!-- Para algunas naves como habilidad con daño por rango -->
+	<Projectile Name="Proj_Ship_T_Green_HvyX_SSD_Max">
+		<Variant_Of_Existing_Type>Proj_Ship_Turbolaser_Green_HvyX_SSD</Variant_Of_Existing_Type>
+		<Max_Speed>45.0</Max_Speed>
+		<Projectile_Blast_Area_Damage> 15 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 150 </Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+		
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+		<Explode_When_Reached_Target_Radius> Yes </Explode_When_Reached_Target_Radius>
+		<SFXEvent_Fire>Unit_Empire_Ship_Turbolaser</SFXEvent_Fire>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Assertor_SuperLaser">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Assertor_SuperLaser.ALO</Space_Model_Name>
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Max_Speed>45.0</Max_Speed>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Projectile_Damage>999999</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 999999 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 500 </Projectile_Blast_Area_Range>
+		
+		<Projectile_Object_Detonation_Particle>Explosion_Superlaser_Assertor</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Explosion_Superlaser_Assertor</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Explosion_Superlaser_Assertor</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Explosion_Superlaser_Assertor</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Xyston_SuperLaser">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Xyston_SuperLaser.ALO</Space_Model_Name>
+		<Projectile_Max_Flight_Distance>25000.0</Projectile_Max_Flight_Distance>
+		<Max_Speed>45.0</Max_Speed>
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Projectile_Damage>999999</Projectile_Damage>
+		<Projectile_Blast_Area_Damage> 999999 </Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range> 500 </Projectile_Blast_Area_Range>
+		
+		<Projectile_Object_Detonation_Particle>Explosion_Superlaser_Xyston</Projectile_Object_Detonation_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>Explosion_Superlaser_Xyston</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Explosion_Superlaser_Xyston</Projectile_Ground_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Explosion_Superlaser_Xyston</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_SFXEvent_Detonate>SFX_Proton_Torpedo_Detonation</Projectile_SFXEvent_Detonate>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Assertor_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Assertor_Blast.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Damage>2250.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>2250.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_LegacySSD_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_LegacySSD_Blast.ALO</Space_Model_Name>
+		<Projectile_Damage>1500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1500.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_MandatorV_Blast"><!-- Proyectil rojo -->
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_MandatorV_Blast.ALO</Space_Model_Name>
+		<Projectile_Damage>1500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1500.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Lusankya_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_MandatorV_Blast.ALO</Space_Model_Name>
+		<Projectile_Damage>1250.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1250.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Knighthammer_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_LegacySSD_Blast.ALO</Space_Model_Name>
+		<Projectile_Damage>1250.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1250.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_SSD1_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_LegacySSD_Blast.ALO</Space_Model_Name>
+		<Projectile_Damage>1000.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1000.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_Colossus_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Turbolaser_Red_MegaBlast.ALO</Space_Model_Name>
+		<Projectile_Damage>1000.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>1000.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Eclipse_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Assertor_Blast.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Damage>2500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>2500.0</Projectile_Blast_Area_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Imperium_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Assertor_Blast.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Damage>5500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>5500.0</Projectile_Blast_Area_Damage>
+		<Projectile_Does_Shield_Damage>No</Projectile_Does_Shield_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Nemesis_Blast"><!-- Proyectil rojo -->
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Nemesis_Blast.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Damage>2500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>2500.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_NebulaSDMKII_Blast">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_NebulaSDMKII_Blast.ALO</Space_Model_Name>
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Supremacy_Gun">
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Projectile_Max_Flight_Distance>7600.0</Projectile_Max_Flight_Distance>
+		<Projectile_Damage>2500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>2500.0</Projectile_Blast_Area_Damage>
+		<Space_Model_Name>P_minigolan3_shot.alo</Space_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+	</Projectile>
+	<Projectile Name="Proj_Schyte_Blast"><!-- Proyectil Verde single shot -->
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Schyte_Blast.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Damage>500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>500.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_MC99_Blast"><!-- Proyectil Rojo single shot -->
+		<Variant_Of_Existing_Type>Proj_Ship_ImplacableBR_Blast</Variant_Of_Existing_Type>
+		<Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+		<Space_Model_Name>W_Turbolaser_Red_MegaBlast.ALO</Space_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Projectile_Damage>2500.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>2500.0</Projectile_Blast_Area_Damage>
+	</Projectile>
+	<Projectile Name="Proj_Ship_ImplacableBR_Blast">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_LegacySSD_Blast.ALO</Land_Model_Name>
+		<Space_Model_Name>W_LegacySSD_Blast.ALO</Space_Model_Name>
+        <Scale_Factor>0.75</Scale_Factor>
+        <Damage_Type> Damage_Krayt_Damage_Blast </Damage_Type>
+        <Max_Speed>45.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.0</Max_Rate_Of_Turn>
+		<Behavior>PROJECTILE, HIDE_WHEN_FOGGED</Behavior>
+		<Projectile_Category>LASER</Projectile_Category>
+		<Projectile_Max_Flight_Distance>5000.0</Projectile_Max_Flight_Distance>
+		<Projectile_Max_Scan_Range>0.0</Projectile_Max_Scan_Range>
+
+		<Projectile_Damage>750.0</Projectile_Damage>
+		<Projectile_Blast_Area_Damage>750.0</Projectile_Blast_Area_Damage>
+		<Projectile_Blast_Area_Range>150.0</Projectile_Blast_Area_Range>
+		<Max_Secs_For_AE_Delayed_Damage>0</Max_Secs_For_AE_Delayed_Damage>
+
+		<Projectile_SFXEvent_Detonate>SFX_Concussion_Missile_Detonation</Projectile_SFXEvent_Detonate>
+        <Projectile_SFXEvent_Detonate_Reduced_By_Armor> SFX_Small_Damage_Detonation </Projectile_SFXEvent_Detonate_Reduced_By_Armor>
+		<Projectile_Does_Shield_Damage>Yes</Projectile_Does_Shield_Damage>
+		<Projectile_Does_Energy_Damage>No</Projectile_Does_Energy_Damage>
+		<Projectile_Does_Hitpoint_Damage>Yes</Projectile_Does_Hitpoint_Damage>
+		<Projectile_Energy_Per_Shot>0</Projectile_Energy_Per_Shot>
+		<Death_Explosions>Turbolaser_Hvy_01_Damage_Hull_Space</Death_Explosions> 
+		<Projectile_Object_Detonation_Particle> Turbolaser_Hvy_01_Damage_Hull_Space </Projectile_Object_Detonation_Particle>
+		<Projectile_Absorbed_By_Shields_Particle>Projectile_Shield_Absorb_LargeG</Projectile_Absorbed_By_Shields_Particle>
+		<Projectile_Object_Armor_Reduced_Detonation_Particle>TurboH_Green_Armor_Impact</Projectile_Object_Armor_Reduced_Detonation_Particle>
+		<Projectile_Ground_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Ground_Detonation_Particle>
+		<Projectile_Lifetime_Detonation_Particle>Turbolaser_G_Lifetime</Projectile_Lifetime_Detonation_Particle>
+		<AI_Combat_Power>3000</AI_Combat_Power>
+	</Projectile>
+</Projectiles>

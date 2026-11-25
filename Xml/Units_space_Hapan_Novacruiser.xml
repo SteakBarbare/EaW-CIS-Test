@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<NovaCruiserUnit_Data>
+
+	
+	
+	<SpaceUnit Name="NovaCruiser">
+		<Variant_Of_Existing_Type>VSD2ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NOVACRUISER</Text_ID>
+		
+		<Encyclopedia_Good_Against> Victory_Destroyer Star_Destroyer Calamari_Cruiser </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-Wing TIE_Bomber B-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_NOVACRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CRUISER </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Novacruiser.TGA</Icon_Name>
+		<GUI_Model_Name>Ha_HapanNova.ALO</GUI_Model_Name>
+		<Space_Model_Name>Ha_HapanNova.ALO</Space_Model_Name>
+		<Scale_Factor>0.15</Scale_Factor>
+		
+		<!--<Custom_Hard_XExtent> 90.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 45.0 </Custom_Hard_YExtent>-->
+
+		<OverrideAcceleration> .03 </OverrideAcceleration>
+		<OverrideDeceleration> .03 </OverrideDeceleration>
+		<Layer_Z_Adjust> -190 </Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Death_Clone>Damage_Normal, NovaCruiser_Death_Clone</Death_Clone>
+
+		<Political_Faction>Pirates, Underworld</Political_Faction>
+		
+		<AI_Combat_Power>2775</AI_Combat_Power>
+		<Build_Cost_Credits>4300</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+				
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, WEAPON, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1800.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>35</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_Ship_Turbolaser_Red_con_Ion</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Fighter, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 15.0 </Targeting_Fire_Inaccuracy>
+		<Attack_Category_Restrictions> Fighter, Bomber </Attack_Category_Restrictions>
+		
+		<SFXEvent_Fire>Unit_Rebel_Turbo_Fire</SFXEvent_Fire>
+
+		<HardPoints>
+			HP_Ion_01,
+			HP_Ion_02,
+			HP_Ion_03,
+			HP_Ion_04,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_TurboR_01,
+			HP_TurboR_02,
+			HP_TurboR_03,
+			HP_TurboR_04,
+			HP_TurboMR_05,
+			HP_TurboMR_06,
+			HP_TorpedoM_01,
+			HP_TorpedoM_02,
+			HP_MisilA_01,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Shield_GeneratorH_00,
+			HP_EnginesH_00,
+			HP_RocketM_01,
+			HP_RocketM_02
+   		</HardPoints>
+		
+		<Tactical_Build_Cost_Multiplayer>4200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+
+		<Lua_Script>ObjectScript_Asteroid_Mines</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+            <Unit_Ability>
+                <Type>CLUSTER_BOMB</Type>
+                <Recharge_Seconds>30.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> MC30_Cluster_Bomb </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <Effective_Radius> 1500.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>Unit_Cluster_Bombs_MC30_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+                <Supports_Autofire>True</Supports_Autofire>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_MC30_Frigate</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+		</Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+
+            <Cluster_Bomb_Ability Name="MC30_Cluster_Bomb">
+                <Activation_Style> User_Input </Activation_Style>
+                <Detonation_Time_In_Secs> 1.5 </Detonation_Time_In_Secs>
+                <Bomb_Type>Proj_NovaMine_Bomb</Bomb_Type>
+                <Number_Of_Bombs> 12 </Number_Of_Bombs>
+                <SFXEvent_Activate>Unit_MC30_Launch_Cluster_Bomb</SFXEvent_Activate>
+            </Cluster_Bomb_Ability>
+			
+		</Abilities>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.015  0.03</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<CategoryMask> Capital | AntiFrigate </CategoryMask>
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		<Population_Value>2</Population_Value>
+		<!--<Space_Override_Population_Value>1</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="NovaCruiser_Death_Clone">
+		<Text_ID> TEXT_UNIT_HOME_ONE </Text_ID>
+		<Space_Model_Name>Ha_HapanNova_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor> 0.15 </Scale_Factor>
+		<Layer_Z_Adjust> -190.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.3 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+		
+	<SpaceUnit Name="Hapan_NovaCruiser">
+		<Affiliation>Hapan, Rebel, Underworld, GAC</Affiliation>
+		<Variant_Of_Existing_Type>NovaCruiser</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Starting_Spawned_Units_Tech_0>MIYTILFIGHTER_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>MiytilBomber_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>MIYTILFIGHTER_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>MiytilBomber_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text> TEXT_TOOLTIP_NOVACRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MIYTILFIGHTER TEXT_UNIT_MIYTILBOMBER TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+	</SpaceUnit>
+</NovaCruiserUnit_Data>

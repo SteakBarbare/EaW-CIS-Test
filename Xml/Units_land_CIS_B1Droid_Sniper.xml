@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<B1Droid_SniperUnit_Data>
+	<GroundInfantry Name="B1Droid_Sniper">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG2</Variant_Of_Existing_Type>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SNIPER</Encyclopedia_Unit_Class>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_B1Droid_Sniper.ALO,
+			Urban, 				CIS_B1Droid_Sniper.ALO,
+			Arctic, 			CIS_B1Droid_Sniper_Snow.ALO,
+			Volcanic, 			CIS_B1Droid_Sniper_Desert.ALO,
+			Desert, 			CIS_B1Droid_Sniper_Desert.ALO,
+			Forest, 			CIS_B1Droid_Sniper_Cammo.ALO,
+			Swamp, 				CIS_B1Droid_Sniper_Cammo.ALO
+		</Land_Terrain_Model_Mapping>
+		<Death_Clone>Damage_Force_Whirlwind, B1Droid_Sniper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, B1Droid_Sniper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, B1Droid_Sniper_Crush_Death_Clone</Death_Clone>
+		<Conversion_Ability_Changes_To_Enemy> B1Droid_Sniper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+				
+	</GroundInfantry>
+	<GroundInfantry Name="B1Droid_SniperORG2">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1Droid </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Select>Unit_Select_B1Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B1Droid</SFXEvent_Guard>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_B1Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B1Droid </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B1Droid </Death_SFXEvent_Start_Die>
+	</GroundInfantry>
+	<GroundInfantry Name="B1Droid_SniperORG">
+		<Variant_Of_Existing_Type>BattledroidsORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B1DROID_SNIPER</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		
+		<Affiliation>CIS, Rebel, Underworld</Affiliation>
+		<Land_Model_Name>CIS_B1Droid_Sniper.ALO</Land_Model_Name>
+		<CategoryMask> Infantry </CategoryMask>
+						
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, IDLE, GARRISON_UNIT</LandBehavior>
+				
+		<FormationOrder> 3 </FormationOrder>
+
+		<Affiliation>CIS, Underworld, Rebel</Affiliation>
+		
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+
+		<Tactical_Health>150</Tactical_Health>
+
+		<Targeting_Max_Attack_Distance>550.0</Targeting_Max_Attack_Distance>
+		<Land_FOW_Reveal_Range>450.0</Land_FOW_Reveal_Range>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+
+		<Projectile_Types> Proj_Sniper_Blaster </Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>2.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 0.1 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 7.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 7.0 </Targeting_Fire_Inaccuracy>
+		
+
+		<Create_Team>No</Create_Team>
+		<AI_Combat_Power>11</AI_Combat_Power>
+
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Icon_Name>I_BUTTON_CIS_DroidB1_Sniper.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>FOW_REVEAL_PING</Type>
+				<Recharge_Seconds> 30.0 </Recharge_Seconds>
+				<Spawned_Object_Type> Proj_Special_Land_FOW_Reveal_Ping_Blast </Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+				<Area_Effect_Decal_Distance> 250.0 </Area_Effect_Decal_Distance> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	  <GroundInfantry Name="B1Droid_Sniper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> B1Droid_Sniper </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="B1Droid_Sniper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>B1Droid_Sniper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+	<GroundInfantry Name="B1Droid_Sniper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>B1Droid_Sniper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="B1Droid_Sniper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>B1Droid_Sniper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	<GroundInfantry Name="B1Droid_Sniper_B">
+		<Variant_Of_Existing_Type>B1Droid_Sniper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>B1Droid_Sniper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+	</GroundInfantry>	
+	<GroundCompany Name="B1Droid_Sniper_Squad_B">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Company_Units>B1Droid_Sniper, B1Droid_Sniper, B1Droid_Sniper, B1Droid_Sniper, B1Droid_Sniper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="B1Droid_Sniper_Squad">
+		<Variant_Of_Existing_Type>C_Air_BattledroidsB1_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_B1_SNIPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Imperial_Stormtrooper_Squad Imperial_Light_Scout_Squad Imperial_Light_Recon_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> HAV_Juggernaut_A5 Rep_LAAT Storm_Commando </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SNIPER</Encyclopedia_Unit_Class>
+		<Affiliation>CIS, Underworld, Rebel</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Required_Special_Structures>CIS_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Units> B1Droid_Sniper_B </Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Company_Transport_Unit>Sheathipede_Shuttle</Company_Transport_Unit>
+		<Icon_Name>I_BUTTON_CIS_DroidB1_Sniper.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_B1Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+</B1Droid_SniperUnit_Data>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<Moff_Morlish_VeedUnit_Data>
+	<HeroUnit Name="Moff_Morlish_Veed">
+		<Variant_Of_Existing_Type>TarkinORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_MORLISH_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_MORLISH TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Moff_Morlis.tga</Icon_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Spawn_Planet>CoruscantK</Spawn_Planet>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask>Spacehero</CategoryMask>
+		<Abilities SubObjectList="Yes">
+			
+			<Reduce_Production_Price_Ability Name="Moff_Morlis_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Moff_Morlis_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</HeroUnit>
+	<HeroCompany Name="Moff_Morlish_Veed_Team">
+		<Variant_Of_Existing_Type>Grand_Moff_Tarkin_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_MORLISH_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_EVK_Moff_Morlis.tga</Icon_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Company_Transport_Unit>Moff_Morlish_Veed_PellaeonSDT</Company_Transport_Unit>
+		<Company_Units>Moff_Morlish_Veed</Company_Units>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MOFF_MORLISH TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+			
+		<SFXEvent_Build_Complete>Unit_Planet_Select_Nereus</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Nereus</SFXEvent_Hero_Respawned>
+		<CategoryMask>Spacehero</CategoryMask>
+	</HeroCompany>
+	<SpaceUnit Name="Moff_Morlish_Veed_PellaeonSDT">
+		<Variant_Of_Existing_Type>Moff_Morlish_Veed_PellaeonSD</Variant_Of_Existing_Type>
+		<Behavior> SELECTABLE, TRANSPORT </Behavior>
+		<Landing_Transport_Variant>Fel_Nune_Shuttle_Landing</Landing_Transport_Variant>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Moff_Morlish_Veed_PellaeonSD">
+		<Variant_Of_Existing_Type>EVK_PellaeonSD</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_MORLISH_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_MORLISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_IMPLACABLE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_EVF_Pellaeon_SD_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<CategoryMask> Spacehero </CategoryMask>
+		<Icon_Name>I_BUTTON_EVK_Moff_Morlis.tga</Icon_Name>
+		<AI_Combat_Power>2535</AI_Combat_Power>
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Planet_Select_Nereus</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Nereus</SFXEvent_Hero_Respawned>
+		<Neutralization_Cost>3000.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+				
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Lua_Script>ObjectScript_NONE</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Moff_Morlish_Veed_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+			    <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Tractor_Beam_Attack_Ability Name="Moff_Morlish_Veed_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>2500</Activation_Max_Range>
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			
+			<Reduce_Production_Price_Ability Name="Moff_Morlis_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Moff_Morlis_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Combat_Bonus_Ability Name="Moff_Morlish_Veed_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Moff_Morlish_Veed_PellaeonSD</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.1</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.1</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.1</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.1</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>
+	</SpaceUnit>
+	
+</Moff_Morlish_VeedUnit_Data>

@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+
+<Story>
+
+
+	<Event Name="Empire_Batalla_de_Hoth_Space_Begin">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+	</Event>
+	
+	<Event Name="Video_Batalla_de_Hoth_Space_Inicio">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>START_MOVIE</Reward_Type>
+		<Reward_Param1>Executor_enterHoth</Reward_Param1>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Begin</Prereq>
+	</Event>
+
+	<Event Name="Video_Batalla_de_Hoth_Space_Fin">
+		<Event_Type>STORY_MOVIE_DONE</Event_Type>
+		<Prereq>Video_Batalla_de_Hoth_Space_Inicio</Prereq>
+	</Event>	
+		
+	<Event Name="Empire_Batalla_de_Hoth_Space_Autoresolve_Off">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIDE_AUTORESOLVE</Reward_Type>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Begin</Prereq>
+	</Event>
+
+	<Event Name="Empire_Batalla_de_Hoth_Space_Allow_Win">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Begin</Prereq>
+	</Event>
+	
+	<Event Name="Victoria_Imperial">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Allow_Win</Prereq>
+	</Event>
+		
+	<Event Name="Executor_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Executor_Super_Star_Destroyer</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Begin</Prereq>
+	</Event>		
+	
+	<Event Name="Executor_Hoth_Destruido">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Executor_Hoth</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Begin</Prereq>
+	</Event>		
+	
+	<Event Name="Imperiales_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>EMPIRE</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Empire_Batalla_de_Hoth_Space_Begin</Prereq>
+	</Event>
+
+	<Event Name="Victoria_Rebelde">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>30</Event_Param1>
+		<Reward_Type>VICTORY</Reward_Type>
+		<Reward_Param1>REBEL</Reward_Param1>
+		<Prereq>Executor_Destruido</Prereq>
+		<Prereq>Executor_Hoth_Destruido</Prereq>
+		<Prereq>Imperiales_Destruidos</Prereq>
+	</Event>
+	
+	<Event Name="Remove_Executor">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REMOVE_UNIT</Reward_Type>
+		<Reward_Param1>Executor_Hoth</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Victoria_Imperial</Prereq>
+		<Prereq>Victoria_Rebelde</Prereq>
+	</Event>
+</Story>

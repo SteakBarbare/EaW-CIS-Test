@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<BS_GolanIIUnit_Data>
+	
+	<SpecialStructure Name="UV_GolanII_Defenses">
+		<Variant_Of_Existing_Type>UV_GolanII</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GOLANII_DEF</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANII_DEF TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Lua_Script>BS_STR4_D_STRU</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Required_Special_Structures>UV_GolanI_Defenses</Required_Special_Structures>
+	</SpecialStructure>
+	<SpecialStructure Name="BS_GolanII">
+		<Variant_Of_Existing_Type>UV_GolanII</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Starting_Spawned_Units_Tech_0>IrdfighterU_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>IrdfighterU_Squadron, 9</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>ToskanU_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ToskanU_Squadron, 9</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>
+	
+	<SpecialStructure Name="UV_GolanII">
+		<Variant_Of_Existing_Type>GolanII_Basic</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, UV_Golan_II_Plattform_Death_Clone</Death_Clone>
+		<Space_Model_Name>BS_GolanII.alo</Space_Model_Name>
+		<Scale_Factor>3.5</Scale_Factor>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GOLANSE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2 </Encyclopedia_Text>		
+		<Icon_Name>I_BUTTON_UV_GolanII.TGA</Icon_Name>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, WEAPON, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_T_ISDBS2_Side_01,
+			HP_T_ISDBS2_Side_02,
+			HP_T_ISDBS2_Side_03,
+			HP_T_ISDBS2_Side_04,
+			HP_T_ISDBS2_Side_05,
+			HP_T_ISDBS2_Side_06,
+			HP_T_ISDBS2_Side_07,
+			HP_T_ISDBS2_Side_08,
+			HP_T_ISDBS2_Side_09,
+			HP_T_ISDBS2_Side_10,
+			HP_T_ISDBS2_Side_11,
+			HP_T_ISDBS2_Side_12,
+			HP_T_ISDBS2_Side_13,
+			HP_T_ISDBS2_Side_14,
+			HP_T_ISDBS2_Side_15,
+			HP_T_ISDBS2_Side_16,
+			HP_T_ISDBS2_Side_17,
+			HP_T_GolanU_Side_18,
+			HP_T_GolanU_Side_19,
+			HP_T_GolanU_Side_20,
+			HP_T_GolanU_Side_21,
+			HP_T_GolanU_Side_22,
+			HP_T_GolanU_Side_23,
+			HP_T_GolanU_Side_24,
+			HP_T_GCEGolan_01,
+			HP_T_GCEGolan_02,
+			HP_T_GCEGolan_03,
+			HP_T_GCEGolan_04,
+			HP_T_GCEGolan_05,
+			HP_T_GCEGolan_06,
+			HP_T_GCEGolan_07,
+			HP_T_GCEGolan_08,
+			HP_T_GCEGolan_09,
+			HP_T_GCEGolan_10,
+			HP_T_GCEGolan_11,
+			HP_T_GCEGolan_12,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_T_BSGolan_M01,
+			HP_T_BSGolan_M02
+		</HardPoints>
+		
+	</SpecialStructure>
+	<SpecialStructure Name="UV_Golan_II_Plattform_Death_Clone">
+		<Text_ID>TEXT_UNIT_GOLANII</Text_ID>
+		<Scale_Factor>3.5</Scale_Factor>
+		<Space_Model_Name>BS_GolanII_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Layer_Z_Adjust>0.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</BS_GolanIIUnit_Data>

@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<space_structure_Jovan_StationUnit_Data>
+	<SpecialStructure Name="Jovan_Station">
+		<Variant_Of_Existing_Type>Jovan_StationORG</Variant_Of_Existing_Type>
+	
+		<Starting_Spawned_Units_Tech_1>Rep_Protector, 2</Starting_Spawned_Units_Tech_1>
+		<Starting_Spawned_Units_Tech_1>REP_Procurator_Up, 2</Starting_Spawned_Units_Tech_1>
+		
+		<Starting_Spawned_Units_Tech_2>Victory_Destroyer, 2</Starting_Spawned_Units_Tech_2>
+		<Starting_Spawned_Units_Tech_2>Star_Destroyer, 2</Starting_Spawned_Units_Tech_2>
+				
+		<Starting_Spawned_Units_Tech_3>Victory_Destroyer, 2</Starting_Spawned_Units_Tech_3>
+		<Starting_Spawned_Units_Tech_3>Star_Destroyer, 2</Starting_Spawned_Units_Tech_3>
+		
+		<Starting_Spawned_Units_Tech_4>EVK_Ardent, 2</Starting_Spawned_Units_Tech_4>
+		<Starting_Spawned_Units_Tech_4>EVK_KnightSD, 2</Starting_Spawned_Units_Tech_4>
+		
+		<Starting_Spawned_Units_Tech_5>EVK_Ardent, 2</Starting_Spawned_Units_Tech_5>
+		<Starting_Spawned_Units_Tech_5>EVK_KnightSD, 2</Starting_Spawned_Units_Tech_5>
+
+	</SpecialStructure>	
+	<SpecialStructure Name="Jovan_StationCW">
+		<Variant_Of_Existing_Type>Jovan_StationORG</Variant_Of_Existing_Type>
+		<Starting_Spawned_Units_Tech_0>Rep_Trireme, 2</Starting_Spawned_Units_Tech_0>	
+
+		<Starting_Spawned_Units_Tech_0>Rep_LongHorn, 2</Starting_Spawned_Units_Tech_0>	
+		<Affiliation>CIS, Republic</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="Jovan_Station_Chiss">
+		<Variant_Of_Existing_Type>Jovan_StationORG</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		
+	</SpecialStructure>	
+	
+	<SpecialStructure Name="Jovan_StationORG">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_JOVAN_STATION</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_JOVAN_STATION TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN</Encyclopedia_Text>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Space_Model_Name>NV_Jovan_Station.ALO</Space_Model_Name>
+
+		<Layer_Z_Adjust>-400.0</Layer_Z_Adjust>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, Underworld</Affiliation>
+		<Autoresolve_Health>125000</Autoresolve_Health>
+		<Shield_Points>125000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>131000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+		
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		
+		<Spawned_Squadron_Location_Flyout_Distances>500.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPACE_OBSTACLE, WEAPON, TARGETING, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<HardPoints>
+			HP_TurboMG_01,
+			HP_TurboMG_02,
+			HP_TurboMG_03,
+			HP_TurboMG_04,
+			HP_TurboMG_05,
+			HP_TurboMG_06,
+			HP_TurboMG_07, 
+			HP_TurboMG_08,
+			HP_TurboMG_09,
+			HP_TurboMG_10,
+			HP_TurboMG_11,
+			HP_TurboMG_12,
+			HP_LaserNG_01,
+			HP_LaserNG_02,
+			HP_LaserNG_03,
+			HP_LaserNG_04,
+			HP_LaserNG_05,
+			HP_LaserNG_06,
+			HP_LaserNG_07,
+			HP_LaserNG_08,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01,
+			HP_Shield_Generator_00,
+			HP_Empire_Station_One_Comm_Array_Dummy,
+			HP_Empire_Station_One_Supply_Dock_Dummy,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Torpedo_01,
+			HP_Torpedo_02,
+			HP_Torpedo_03,
+			HP_Ion_01,
+			HP_Ion_02,
+			HP_Ion_03
+		</HardPoints>
+		
+		<Icon_Name>i_button_NV_jovan_station.TGA</Icon_Name>
+		
+		<Radar_Icon_Name>i_button_NV_jovan_station.tga</Radar_Icon_Name>
+		
+		<Death_Clone>Damage_Normal, Jovan_Station_Death_Clone</Death_Clone>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Tartan</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+	
+			
+		</Unit_Abilities_Data>
+	</SpecialStructure>
+	<SpecialStructure Name="Jovan_Station_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<Space_Model_Name>NV_Jovan_Station_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_5000</Death_Explosions>
+		<Scale_Factor>1.5</Scale_Factor>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+</space_structure_Jovan_StationUnit_Data>

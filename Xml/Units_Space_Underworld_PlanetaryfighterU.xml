@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+
+
+<PlanetaryfighterUUnit_Data>
+
+
+
+
+	<SpaceUnit Name="PlanetaryfighterU">
+		<Variant_Of_Existing_Type>B-wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PLANETARYFIGHTER</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber Y-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Interceptor CR_GunboatORG IPV1ORG </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>UV_Planetaryfighter.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Max_Speed>5.5</Max_Speed>
+		<Min_Speed>3.7</Min_Speed>
+		<Max_Rate_Of_Turn>4.0</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>5.0</Max_Rate_Of_Roll>
+		
+		<Hyperspace>No</Hyperspace>
+		<Affiliation>Underworld</Affiliation>
+		<Shield_Points>600</Shield_Points>
+		<Tactical_Health>3000</Tactical_Health>
+		<Shield_Refresh_Rate>650</Shield_Refresh_Rate>
+		<Energy_Capacity>14000</Energy_Capacity>
+		<Energy_Refresh_Rate>8400</Energy_Refresh_Rate>
+		<Ship_Class>fighter</Ship_Class>
+		<Armor_Type> Armor_Infantry</Armor_Type>
+		<Shield_Armor_Type>Shield_LtTank</Shield_Armor_Type>
+
+		<HardPoints>
+			HP_R_Ewing_Laser_00, HP_R_Ewing_Laser_01
+        </HardPoints>
+		
+		<SFXEvent_Fire>Unit_X_Wing_Fire</SFXEvent_Fire>
+		
+		<CategoryMask> Fighter | AntiFighter </CategoryMask> 
+		<Targeting_Priority_Set>Fighter_Super</Targeting_Priority_Set>
+		
+		<SFXEvent_Select>Unit_Select_B_WingX</SFXEvent_Select>
+
+		<CategoryMask> Fighter | AntiBomber</CategoryMask>
+		<Icon_Name>i_button_Planetaryfighter.tga</Icon_Name>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLANETARYFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>
+
+	<Squadron Name="PlanetaryfighterU_Squadron">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_PLANETARYFIGHTER_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter TIE_Bomber Y-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Interceptor CR_GunboatORG IPV1ORG </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLANETARYFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		
+		<GUI_Row> 0 </GUI_Row>
+
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>150</Build_Cost_Credits>
+		<Build_Time_Seconds>5</Build_Time_Seconds>
+		<Tech_Level>99</Tech_Level>
+		<Squadron_Units>PlanetaryfighterU, PlanetaryfighterU, PlanetaryfighterU</Squadron_Units>
+		<Create_Team_Type>PlanetaryfighterU_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_Planetaryfighter.tga</Icon_Name>
+		<GUI_Model_Name>UV_Planetaryfighter.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_B_WingX</SFXEvent_Build_Complete>
+				
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>5</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</Squadron>
+	<Container Name="PlanetaryfighterU_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_PLANETARYFIGHTER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_PLANETARYFIGHTER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_Planetaryfighter.tga</Icon_Name>
+
+		<Max_Speed>5.5</Max_Speed>
+		<Min_Speed>3.7</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+
+
+
+</PlanetaryfighterUUnit_Data>

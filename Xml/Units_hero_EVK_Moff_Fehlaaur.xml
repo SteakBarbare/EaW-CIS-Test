@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<Moff_FehlaaurUnit_Data>
+	<HeroUnit Name="Moff_Fehlaaur">
+		<Variant_Of_Existing_Type>General_Melvar</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_FEHLAAUR_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_FEHLAAUR TEXT_TOOLTIP_REDUCE_TIME_FRIGATE_10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Land_Model_Name>EVK_Moff_Fehlaaur.ALO</Land_Model_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Icon_Name>I_BUTTON_EVK_Moff_Fehlaaur.tga</Icon_Name>
+		<SFXEvent_Select>Unit_Select_Loor</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Loor</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Loor</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Loor</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Loor</SFXEvent_Guard>
+		<SFXEvent_Announce>Unit_Announce_Loor</SFXEvent_Announce>
+		<SFXEvent_Group_Move>Unit_Group_Move_Loor</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Loor</SFXEvent_Group_Attack>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Loor </Death_SFXEvent_Start_Die>
+		<CategoryMask> Landhero </CategoryMask>
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		
+		<Lua_Script>ObjectScript_Summon_AutoFire</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPRINT</Type>
+				<Expiration_Seconds> 7.0 </Expiration_Seconds>
+				<Recharge_Seconds> 45.0 </Recharge_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 2.0f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.75f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Sprint_Han_Solo</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			<Galactic_Stealth_Ability Name="Moff_Fehlaaur_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<System_Spy_Ability Name="Moff_Fehlaaur_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>Yes</See_Base_Levels>
+				<See_Credit_Income>Yes</See_Credit_Income>
+				<See_Credit_Income_Breakdown>Yes</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>No</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>Yes</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>Yes</See_Ground_Company_Contents>
+				<See_Special_Structures>Yes</See_Special_Structures>
+				<See_Political_Control>Yes</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>Yes</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>Yes</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			<Reduce_Production_Price_Ability Name="Moff_Fehlaaur_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Moff_Fehlaaur_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Frigate</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Moff_Fehlaaur_Team">
+		<Variant_Of_Existing_Type>General_Melvar_Team</Variant_Of_Existing_Type>
+		<Icon_Name>I_BUTTON_EVK_Moff_Fehlaaur.TGA</Icon_Name>
+		<Company_Units>Moff_Fehlaaur, EVK_AT_ST_Walker, EVK_AT_ST_Walker, EVK_AT_ST_Walker, EVK_AT_ST_Walker, EVK_LightSpeeder, EVK_LightSpeeder, EVK_LightSpeeder, EVK_LightSpeeder, EVK_LightSpeeder</Company_Units>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Affiliation>Krayt</Affiliation>
+		<Text_ID>TEXT_HERO_MOFF_FEHLAAUR_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_FEHLAAUR TEXT_TOOLTIP_REDUCE_TIME_FRIGATE_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<CategoryMask> Landhero </CategoryMask>
+		<SFXEvent_Build_Started>EHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Respawn_Loor</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Loor</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Loor</SFXEvent_Fleet_Move>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Moff_Fehlaaur_EVK_Fury"> 
+		<Variant_Of_Existing_Type>EVK_Fury</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_MOFF_FEHLAAUR_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MOFF_FEHLAAUR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Moff_Fehlaaur.tga</Icon_Name>
+		<AI_Combat_Power>2055</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Loor</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Loor</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Loor</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Loor</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Loor</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		
+		<Landing_Transport_Variant>EVK_Fury_Landing</Landing_Transport_Variant>
+	</SpaceUnit>	
+	
+</Moff_FehlaaurUnit_Data>

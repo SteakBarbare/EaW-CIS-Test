@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<ImperialTransportG_LoaderUnit_Data>
+	<GroundVehicle Name="ImperialTransportG_Loader">
+		<Variant_Of_Existing_Type>ImperialTransportG_LoaderORG</Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, ImperialTransportGL_Loader_Death_Clone_00</Death_Clone>
+	</GroundVehicle>	
+	<GroundVehicle Name="ImperialTransportGL_Loader_Death_Clone_00">
+		<Variant_Of_Existing_Type>ImperialTransportG_Loader</Variant_Of_Existing_Type>
+		<Land_Model_Name>EV_ImperialTransportG_Loader_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 0 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundVehicle Name="ImperialTransportG_LoaderORG">
+		<Variant_Of_Existing_Type>Gallofree_HTTORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IMPERIAL_LANDING_CRAFT</Text_ID>
+		<Encyclopedia_Good_Against>MPTL T4B_Tank Rebel_Infantry_Squad</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>AAC_HOVERTANK Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_LANDING_CRAFT_L</Encyclopedia_Text>
+		<Icon_Name>i_button_Sentinel_Lander_loader.tga</Icon_Name>
+		<Select_Box_Scale>100</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		
+		<Land_Model_Name>EV_ImperialTransportG_Loader.ALO</Land_Model_Name>
+		<Scale_Factor>2.25</Scale_Factor>
+		<Affiliation>Empire, Chiss</Affiliation>
+		<Armor_Type> Armor_Interdictor </Armor_Type>
+		<Max_Speed>3.5</Max_Speed>
+		<Min_Speed>0.1</Min_Speed>
+		<OverrideAcceleration> .1 </OverrideAcceleration>
+		<OverrideDeceleration> .1 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>10.0</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>45</Bank_Turn_Angle>
+		
+		<Behavior> SELECTABLE </Behavior>
+		<LandBehavior>IDLE, AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, TARGETING, TURRET, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET, STUNNABLE, DAMAGE_TRACKING, GARRISON_HOVER</LandBehavior>
+
+		<Garrison_Category> Infantry, Vehicle </Garrison_Category>
+        <Num_Garrison_Slots>8</Num_Garrison_Slots>
+        <Garrison_Bone_Names>b_garrison_00</Garrison_Bone_Names>
+		<Garrison_Exit_Dist>5</Garrison_Exit_Dist>
+		<Garrison_Enter_Dist>5</Garrison_Enter_Dist>
+        <Garrison_Radius>5</Garrison_Radius>
+		
+		<Turret_Rotate_Extent_Degrees>180</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>180</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+		
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles> 3 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+		
+		<HardPoints> 
+			HP_LAAT_Rear_Green_Laser
+		</HardPoints>
+		
+		<Death_Explosions>Large_Damage_Land12</Death_Explosions>
+
+		<SFXEvent_Fire>Unit_Shuttle_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Sentinel_Lander</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Sentinel_Lander</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Sentinel_Lander</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Sentinel_Lander</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Attack_Sentinel_Lander</SFXEvent_Guard>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Shuttle_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Shuttle_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Shuttle_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<AI_Combat_Power>50</AI_Combat_Power>
+	</GroundVehicle>
+	
+	
+	<GroundCompany Name="Imperial_Landing_CraftG_Loader">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IMPERIAL_LANDING_CRAFT</Text_ID>
+		<Encyclopedia_Good_Against>MPTL T4B_Tank Rebel_Infantry_Squad</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>AAC_HOVERTANK Snowspeeder UC_Rebel_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1150</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+	
+		<Company_Transport_Unit>LAAT_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>ImperialTransportG_Loader</Company_Units>
+		<Icon_Name>i_button_Sentinel_Lander_loader.tga</Icon_Name>
+		<GUI_Model_Name>EV_ImperialTransportG_Loader.ALO</GUI_Model_Name>
+	
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Sentinel_Lander</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_Sentinel_Lander</SFXEvent_Fleet_Move>
+		
+		<!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+		<Tactical_Build_Cost_Multiplayer>1150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT</Encyclopedia_Unit_Class>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	
+	<GroundCompany Name="Ch_LandingCG_Loader">
+		<Variant_Of_Existing_Type>Imperial_Landing_CraftG_Loader</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Chiss_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Tactical_Build_Cost_Multiplayer>1150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		
+	</GroundCompany>
+</ImperialTransportG_LoaderUnit_Data>

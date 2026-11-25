@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+<land_BuildingsX02Unit_Data>
+	
+	<SpecialStructure Name="Nb_Sales_Market">
+		<Select_Box_Scale>200</Select_Box_Scale>
+		<Text_ID>TEXT_STRUCTURE_SALES_MARKET</Text_ID>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_Model_Name> W_Urban_CorBuild_A.ALO </Land_Model_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<GUI_Bounds_Scale>0.33</GUI_Bounds_Scale>
+
+		<Can_Contain_Heroes_During_Ground_Battle> Yes </Can_Contain_Heroes_During_Ground_Battle>
+		<Scale_Factor>2.0</Scale_Factor>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Affiliation>Empire, Rebel, Republic, CIS, Underworld, Pirates, Fel, Krayt, Chiss, Corporate, Hapan, Hutts, EVFO, RVRE, GA, GAC</Affiliation>
+		<Political_Control>0</Political_Control>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		
+		<Tactical_Health>700</Tactical_Health>
+		<Behavior>SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,EARTHQUAKE_TARGET,ION_STUN_EFFECT, STUNNABLE</LandBehavior>
+		<Obstacle_Proxy_Type> Empire_Ground_Mining_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+
+		<Icon_Name>i_button_W_Urban_CorBuild_A.tga</Icon_Name>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.125  0.125</Radar_Icon_Size>
+		<Radar_Show_Facing>No</Radar_Show_Facing>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+
+		<Sabotage_Cost_Credits>1000</Sabotage_Cost_Credits>
+
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+		<Obstacle_Width>120.0</Obstacle_Width>
+		<Obstacle_Height>120.0</Obstacle_Height>
+		<Obstacle_X_Offset>-60.0</Obstacle_X_Offset>
+		<Obstacle_Y_Offset>-60.0</Obstacle_Y_Offset>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Armor_Type> Armor_Structure </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Mining_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Mining_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Mining_Select_SFX</SFXEvent_Select>
+
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+
+		<CategoryMask> Structure | AntiInfantry </CategoryMask>
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Gambling_Ability Name="Nb_Sales_Market_Gambling_Income">
+				
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				
+				<Min_Income_Modifier>-0.10</Min_Income_Modifier>
+				
+				<Max_Income_Modifier>0.90</Max_Income_Modifier>
+				
+				<Chance_To_Win>0.90</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+			<Income_Stream_Ability Name="Nb_Sales_Market_Income_Stream">
+				<Base_Income_Value>125</Base_Income_Value>
+				<Base_Interval_In_Secs>5</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Force_Healing_Ability Name="Nb_Sales_Market_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.003</Heal_Percent>  
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs> 
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+		
+		<Score_Cost_Credits> 5000 </Score_Cost_Credits>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_SALES_MARKET  </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_ENCYCLOPEDIA_SALES_MARKET  </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
+		
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+	</SpecialStructure>
+	<SpecialStructure Name="Nb_Desert_Farm">
+		<Variant_Of_Existing_Type>Empire_Ground_Mining_Facility</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Text_ID>TEXT_STRUCTURE_DESERT_FARM</Text_ID>
+		<Land_Model_Name>NB_DCH.alo</Land_Model_Name>
+		<Icon_Name>i_button_NB_DCH.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_DESERT_FARM  </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_ENCYCLOPEDIA_DESERT_FARM </MP_Encyclopedia_Text>
+				
+		<Scale_Factor>1.0</Scale_Factor>
+		
+		<Affiliation>Empire, Rebel, Republic, CIS, Underworld, Pirates, Fel, Krayt, Chiss, Corporate, Hapan, Hutts, EVFO, RVRE, GA, GAC</Affiliation>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+		
+		<Build_Cost_Credits>800</Build_Cost_Credits>
+		
+		<Required_Planets>
+			Klatooine, Tatooine, Kiffu, Kiffex, Saleucami, Utapau, Filve, Onderon, Ord_Mantell, Solem, UtapauK, UtapauCW, Ruusan, TatooineK, KiffexK, RuusanK, Iego, Borosk, Lok
+			Roche_Sector, Yagdul_Sector, Ord_Mantell_Sector, Jakku, Moraband, Cantonica, Pasaana, Savareen, Arvala_7, Sepan, KorribanK, YinchorrK, Yinchorr, Had_Abaddon, Drash_So, GeonosisCW, Geonosis, Honoghr, Hypori, Korriban, Rattatak, Brentaal, DaSoocha, Dorlo, Delvardus, Elom, Nam_Chorios, Ord_Pardron, Poderis, Svivren, Trandosha, Tangrene, Vjun, Zaddja 
+		</Required_Planets>
+		
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Gambling_Ability Name="Nb_Desert_Farm_Gambling_Income">
+				
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				
+				<Min_Income_Modifier>-0.10</Min_Income_Modifier>
+				
+				<Max_Income_Modifier>0.90</Max_Income_Modifier>
+				
+				<Chance_To_Win>0.80</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+			<Force_Healing_Ability Name="Nb_Desert_Farm_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.003</Heal_Percent>  
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs> 
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+		
+	</SpecialStructure>	
+	<SpecialStructure Name="Nb_Temperate_Farm">
+		<Variant_Of_Existing_Type>Empire_Ground_Mining_Facility</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Text_ID>TEXT_STRUCTURE_TEMPERATE_FARM</Text_ID>
+		<Land_Model_Name>NB_TCH.alo</Land_Model_Name>
+		<Icon_Name>i_button_NB_TCH.tga</Icon_Name>
+		
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_TEMPERATE_FARM  </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_ENCYCLOPEDIA_TEMPERATE_FARM  </MP_Encyclopedia_Text>
+				
+		<Scale_Factor>1.2</Scale_Factor>
+		
+		<Affiliation>Empire, Rebel, Republic, CIS, Underworld, Pirates, Fel, Krayt, Chiss, Corporate, Hapan, Hutts, EVFO, RVRE, GA, GAC</Affiliation>
+		<Build_Max_Instances_Per_Planet> -1 </Build_Max_Instances_Per_Planet>
+				
+		<Build_Cost_Credits>700</Build_Cost_Credits>
+		
+		<Required_Planets>
+			Dantooine, Taanab, Tralus, Corellia, Chazwa, Naboo, Thyferra, Aldivy, Allyen, Exocron, Garqi, Saffalore, Ukio, Alderaan, Serpindal, Averam, LiinadeIII, Catoneimodia, CatoneimodiaCW, CorelliaK, Gamorr, Agamar, Munto_Cudro, Vendaxa, DaluuJ, Anoat_GJavin_Sector, Seswenna_Sector, Abrion_Sector, Corellia_Sector, Mindor_Sector, Pallaxides_Sector, Escarte_Sector, Bonadan_Sector, Ciutric_Sector, Yagdul_Sector, Orinda_Sector, Vladet_Sector, Bannistar_Sector, Vergesso_Sector, Lah_mu, Ajan_Kloss, Ithor, Mimban, D_Qar, Takodana, Batuu, Akiva, Rodia, Scarif, Toprawa, Turkhana, Javin, Pakuuni, OssusK, Ossus, WaylandK, Wayland, BelderoneK, Belderone, Roon, KashyyykCW, Kashyyyk, Atzerri, Bestine, Bothawui, Carida, Dathomir, Dagobah, Endor, Felucia, Myrkr, Yavin, Bimmisaari, Belsmuth, BozPity, Borleias, Chandrila, Ciutric_IV, Corvis_Minor, Endor_new, Ession, Farrfin, GarosIV, Generis, Genon, Halmad, Jomark, Khomm, Kothlis, Mindor, Mrisst, NewAlderaan, Nirauan, Nubia, Neimodia, ObroaSkai, Mhaeli, Palanhi, Phaeda, Praesitlyn, Selvaris, Smarck, Sulon, Talasea, Toydaria, Trogan, Tynna, Vladet, Vortex, Xagobah, Yavin_Old, Zhar 
+		</Required_Planets>
+		
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Gambling_Ability Name="Nb_Temperate_Farm_Gambling_Income">
+				
+				<Evaluation_Interval_In_Secs>30.0</Evaluation_Interval_In_Secs>
+				
+				<Min_Income_Modifier>-0.10</Min_Income_Modifier>
+				
+				<Max_Income_Modifier>0.90</Max_Income_Modifier>
+				
+				<Chance_To_Win>0.80</Chance_To_Win>
+			</Planet_Income_Gambling_Ability>
+			<Force_Healing_Ability Name="Nb_Temperate_Farm_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.003</Heal_Percent>  
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>2.0</Heal_Interval_In_Secs> 
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories />
+				<Applicable_Unit_Types />
+				<SFXEvent_Target_Affected />
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2 />
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+		
+	</SpecialStructure>	
+	
+	
+	
+</land_BuildingsX02Unit_Data>

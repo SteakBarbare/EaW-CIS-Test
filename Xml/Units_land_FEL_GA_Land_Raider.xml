@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<GA_Land_RaiderUnit_Data>
+	
+	<GroundVehicle Name="GA_Land_Raider">
+		<Variant_Of_Existing_Type>T4B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_LAND_RAIDER</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_GA_LAND_RAIDER</Encyclopedia_Text>
+		<Land_Model_Name>GA_Land_Raider.ALO</Land_Model_Name>
+		<Icon_Name>i_button_GA_Land_Raider.tga</Icon_Name>
+		<No_Colorization_Color> 255, 210, 0, 255 </No_Colorization_Color>
+		<Max_Speed>0.5</Max_Speed>
+		<UnitCollisionClass> Giant Vehicle </UnitCollisionClass>
+		
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Armor_Type> Armor_ATAT5 </Armor_Type>
+
+		<Land_FOW_Reveal_Range>350.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>700.0</Targeting_Max_Attack_Distance>
+		
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_Ground_GA_S_Attack_Tank</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>8</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+
+		<HardPoints>
+			HP_GA_Land_Raider_TurretF,
+			HP_GA_Land_Raider_TurretBR,
+			HP_GA_Land_Raider_TurretBL,
+			HP_GA_Land_Raider_TurretCR,
+			HP_GA_Land_Raider_TurretCL
+		</HardPoints>
+
+		<SFXEvent_Fire>Unit_Rep_SPHAT_Fire</SFXEvent_Fire>
+		
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		<Death_Clone>Damage_Normal, GA_Land_Raider_Death_Clone_00</Death_Clone>
+		
+		<Lua_Script>ObjectScript_Blast_Land</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            
+			<Unit_Ability>
+                <Type>BLAST</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+	            <GUI_Activated_Ability_Name> Raider_Blast </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_BARRAGE_AREA.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+              	<Alternate_Icon_Name>I_SA_DEPLOY_SQUAD.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_SCOUTS_REINFORCES</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ATATHOVER_REINFORCE_DESC</Alternate_Description_Text>
+				<Recharge_Seconds>3600</Recharge_Seconds>
+			    <Spawned_Object_Type>Land_Raider_Marker</Spawned_Object_Type>
+				<Effective_Radius> 10.0 </Effective_Radius>
+                <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 10 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			
+        </Unit_Abilities_Data>
+
+		<Abilities SubObjectList="Yes">
+            <Blast_Ability Name="Raider_Blast">
+				<Activation_Style> User_Input </Activation_Style>
+				<Charge_Up_Seconds>5</Charge_Up_Seconds>
+				<Damage_Multiplier>100</Damage_Multiplier>
+				<SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
+			</Blast_Ability>         
+			
+		</Abilities>
+
+	</GroundVehicle>
+	
+	<GroundVehicle Name="GA_Land_Raider_Death_Clone_00">
+		<Variant_Of_Existing_Type>GA_Land_Raider</Variant_Of_Existing_Type>
+		<Land_Model_Name>GA_Land_Raider_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="GA_Land_Raider_Squad">
+		<Variant_Of_Existing_Type>Rebel_Attack_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_LAND_RAIDER</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_GA_LAND_RAIDER TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		<Icon_Name>i_button_GA_Land_Raider.tga</Icon_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>3150</Build_Cost_Credits>
+		
+		<Company_Transport_Unit>GA_Crix_Transport</Company_Transport_Unit>
+
+		<Company_Units>GA_Land_Raider</Company_Units>
+		<Required_Special_Structures>Fel_Ground_Advanced_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Tactical_Build_Cost_Multiplayer>3150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+
+</GA_Land_RaiderUnit_Data>

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<RVRE_VigilUnit_Data>
+	
+
+	<SpaceUnit Name="RVRE_Vigil">
+		<Variant_Of_Existing_Type>CR_GunboatORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_UNIT_RVRE_VIGIL</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Bomber Gunboat TIE_Defender </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> VSD2 ISDORG ISD2 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RVRE_VIGIL TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<GUI_Row>0</GUI_Row>
+		<Space_Model_Name>RVRE_Vigil.alo</Space_Model_Name>
+		
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+
+		<Icon_Name>I_BUTTON_RVRE_Vigil.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Scale_Factor>0.2</Scale_Factor><!-- aumentada a la escala del defendersd y reducida aqui para tener la escala correcta y usar sus torretas correctamente -->
+		<Autoresolve_Health>15000</Autoresolve_Health>
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>130000000</Tactical_Health>  
+		<Shield_Refresh_Rate>18000</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>90000</Energy_Refresh_Rate>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		<Armor_Type> Armor_Assault_Frigate </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		
+		<Max_Speed>2.75</Max_Speed>
+
+		<Layer_Z_Adjust>20.0</Layer_Z_Adjust>
+
+		<Affiliation>Rebel, RVRE</Affiliation>
+
+		<Build_Cost_Credits>3200</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Death_Clone>Damage_Normal, RVRE_Vigil_Death_Clone</Death_Clone>
+		<!-- torretas mezcladas para que sean todas turbolaser del defender sd y no use ionguns -->		
+		<HardPoints>
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_T_DefenderSD_15,
+			HP_T_DefenderSD_16,
+			HP_T_CRHvyGunship_01,
+			HP_T_CRHvyGunship_02,
+			HP_T_CRHvyGunship_03,
+			HP_T_CRHvyGunship_04,
+			HP_T_CRHvyGunship_05,
+			HP_T_CRHvyGunship_06,
+			HP_T_CRHvyGunship_07,
+			HP_T_CRHvyGunship_08,
+			HP_T_CRHvyGunship_09,
+			HP_T_CRHvyGunship_10,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02
+		</HardPoints>
+
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Gunboat</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>50</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Gunboat</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>3200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+	<SpaceUnit Name="RVRE_Vigil_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>RVRE_Vigil_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.2</Scale_Factor><!-- aumentada a la escala del defendersd y reducida aqui para tener la escala correcta y usar sus torretas correctamente -->
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</RVRE_VigilUnit_Data>

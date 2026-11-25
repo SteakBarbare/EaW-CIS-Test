@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<Republic_UTAT_Repulsor_TankUnit_Data>
+	
+	<GroundVehicle Name="Rep_UTAT_Repulsor_Tank">
+		<Variant_Of_Existing_Type>Rep_UTATORG</Variant_Of_Existing_Type>
+		<Death_Clone>Damage_Normal, Rep_UTAT_Death_Clone_00</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>Rep_UTAT_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Hardpoints>
+				HP_UTAT_01_Turret_Main, HP_UTAT_01, HP_UTAT_06, HP_Utat_BackR01, HP_Utat_BackR02, HP_Utat_BackL02, HP_Utat_BackL01	
+		</Hardpoints>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_UTATORG">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UTAT</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UTAT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_Rep_UTAT.tga</Icon_Name>
+		<Land_Model_Name>UTAT.ALO</Land_Model_Name>
+		<Scale_Factor>2.2</Scale_Factor>
+		<Affiliation>Republic, Empire, Corporate</Affiliation>
+		
+		<Max_Speed>1.0</Max_Speed>
+		<Max_Rate_Of_Turn>2</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn>1</Stopped_Rate_Of_Turn>
+
+		<Armor_Type> Armor_ATAT </Armor_Type>
+		<Shield_Armor_Type>Shield_HvyTank</Shield_Armor_Type>
+
+		<Tactical_Health>1000</Tactical_Health>
+
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<LandBehavior>AFFECTED_BY_SHIELD, ABILITY_COUNTDOWN, HUNT,WALK_LOCOMOTOR, GARRISON_VEHICLE, IDLE,TARGETING, TURRET, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+		
+		<Wind_Disturbance_Radius>300</Wind_Disturbance_Radius>
+		<Wind_Disturbance_Strength>10</Wind_Disturbance_Strength>
+		<Wind_Disturbance_Sphere_Alpha>0.4</Wind_Disturbance_Sphere_Alpha>
+		
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+		
+		<Garrison_Category> Vehicle </Garrison_Category>
+        <Garrison_Value>2</Garrison_Value>
+				
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>425.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance>50.0</Targeting_Min_Attack_Distance>
+				
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Fire>Unit_AT_TE_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<SFXEvent_Ambient_Moving> Unit_LHTC9_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_LHTC9</SFXEvent_Assist_Move>
+		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_LHTC9</SFXEvent_Assist_Attack>
+				
+		
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+
+		<CategoryMask> Vehicle | AntiVehicle | AntiStructure </CategoryMask>
+
+		<AI_Combat_Power>240</AI_Combat_Power>
+		<MovementClass>LargeHoverU</MovementClass>
+		<Weather_Category>LargeWalker</Weather_Category>
+		<Custom_Hard_XExtent> 24.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 18.0 </Custom_Hard_YExtent>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+		
+		
+		
+		<Lua_Script>ObjectScript_Blast_Land</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+                <Type>BLAST</Type>
+                <Recharge_Seconds>60.0</Recharge_Seconds>
+	            <GUI_Activated_Ability_Name> UTAT_Blast </GUI_Activated_Ability_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_ASSAULT_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_BARRAGE_AREA.TGA</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Blast_Ability Name="UTAT_Blast">
+				<Activation_Style> User_Input </Activation_Style>
+				<Charge_Up_Seconds>5</Charge_Up_Seconds>
+				<Damage_Multiplier>100</Damage_Multiplier>
+				<SFXEvent_Activate>Unit_Underworld_Plasma_Fire</SFXEvent_Activate>
+			</Blast_Ability>         
+		</Abilities>
+		
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_UTAT_Tank_Captured">
+		<Variant_Of_Existing_Type>Rep_UTAT_Repulsor_Tank</Variant_Of_Existing_Type>
+		
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_UTAT_Death_Clone_00">
+		<Variant_Of_Existing_Type>Rep_UTAT_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rep_UTAT_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+
+	<GroundCompany Name="Republic_UTAT_COMPANY">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UTAT</Text_ID>
+		<Encyclopedia_Good_Against> C_HAG_Group C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Cis_MAF_team C_Vulture_squadron C_Cis_Gunship_team </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Republic, Empire, Pirates</Affiliation>
+		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+	
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>CR25</Company_Transport_Unit>
+		<Company_Units>Rep_UTAT_Repulsor_Tank</Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Icon_Name>I_BUTTON_Rep_UTAT.tga</Icon_Name>
+		<SFXEvent_Build_Complete>Unit_Complete_Clon_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>60</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_UTAT</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+	</GroundCompany>
+</Republic_UTAT_Repulsor_TankUnit_Data>

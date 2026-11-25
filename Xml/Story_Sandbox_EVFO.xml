@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+
+
+
+<!--****** This story file is used to automatically set some things that would normally happen ******-->
+<!--****** in story mode for the full campaign.  This file should be generic enough to use for  ******-->
+<!--****** any sandbox campaign set.                                                           ******-->
+
+<!-- Sandbox Campaign: The Conflict Begins -->
+
+<Story>
+	
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Sandbox_Intro</Story_Dialog>
+		<Story_Chapter>29</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+	</Event>
+	<Event Name="Revelar_todos_los_planetas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Centrar_Camara_en_Planet_Side">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>POSITION_CAMERA</Reward_Type>
+			<Reward_Param1>StarkillerBase</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>	
+	</Event>
+	
+	<Event Name="Lock_EXSoloIA_STR_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EXSoloIA_STR_01</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Armed_Walls">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>GC_Walls_IE</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	<Event Name="Lock_Astilleros_IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Indicador_LEVEL_1">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>8</Event_Param1>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>17</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_1</Story_Tag>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_1">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_1</Reward_Param1>
+			<Prereq>Enter_Tech_2</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>18</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_2</Story_Tag>
+		<Prereq>Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_2">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_2</Reward_Param1>
+			<Prereq>Enter_Tech_3</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>19</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_3</Story_Tag>
+		<Prereq>Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_3</Reward_Param1>
+			<Prereq>Enter_Tech_4</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>20</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_4</Story_Tag>
+		<Prereq>Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_4</Reward_Param1>
+			<Prereq>Enter_Tech_5</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>21</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_5</Story_Tag>
+		<Prereq>Enter_Tech_5</Prereq>
+	</Event>
+	
+	<Event Name="Enter_Tech_2">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>EVFO_To_Tech_2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		 <Event Name="DesOcultar_EVFO_To_Tech_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>EVFO_To_Tech_3</Reward_Param1>
+			<Prereq>Enter_Tech_2</Prereq>
+        </Event>	
+	<Event Name="Lock_EVFO_To_Tech_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVFO_To_Tech_3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Enter_Tech_3">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>EVFO_To_Tech_3</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="DesOcultar_EVFO_To_Tech_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>EVFO_To_Tech_4</Reward_Param1>
+			<Prereq>Enter_Tech_3</Prereq>
+        </Event>	
+	<Event Name="Lock_EVFO_To_Tech_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVFO_To_Tech_4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Enter_Tech_4">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>EVFO_To_Tech_4</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="DesOcultar_EVFO_To_Tech_5">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>EVFO_To_Tech_5</Reward_Param1>
+			<Prereq>Enter_Tech_4</Prereq>
+        </Event>		
+	<Event Name="Lock_EVFO_To_Tech_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EVFO_To_Tech_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Enter_Tech_5">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>EVFO_To_Tech_5</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		
+	
+	<Event Name="Spawn_EVFO_Snoke_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Snoke_Team</Reward_Param1>
+		<Reward_Param2>Exegol</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_5</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Kylo_Ren_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Kylo_Ren_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Phasma_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>EVFO_Phasma_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_2</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_EVFO_Fulminatrix">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>UNIQUE_UNIT</Reward_Type>
+		<Reward_Param1>EVFO_Fulminatrix</Reward_Param1>
+		<Reward_Param2>Exegol</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_4</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Armitage_Hux_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Armitage_Hux_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Spawn_Edrison_Peavey_Team">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SPAWN_HERO</Reward_Type>
+		<Reward_Param1>Edrison_Peavey_Team</Reward_Param1>
+		<Reward_Param2>StarkillerBase</Reward_Param2>
+		<Prereq>Universal_Story_Start Enter_Tech_4</Prereq>
+	</Event>
+</Story>

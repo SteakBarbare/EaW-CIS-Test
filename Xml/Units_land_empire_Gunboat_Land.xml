@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Gunboat_LandUnit_Data>
+	
+	<GroundVehicle Name="Gunboat_Land">
+		<Variant_Of_Existing_Type>MAFT</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNBOAT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GUNBOAT</Encyclopedia_Text>
+
+		<Land_Model_Name>EV_Gunboat_Land.ALO</Land_Model_Name>
+		<Scale_Factor>1.8</Scale_Factor><!--Reescalado real-->
+		<Armor_Type> Armor_Tartan </Armor_Type>
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>250</Shield_Points>
+		<Tactical_Health>350</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>1000</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR,REVEAL,HIDE_WHEN_FOGGED,SHIELDED,AMBIENT_SFX,UNIT_AI,TARGETING,WEAPON,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, HUNT</LandBehavior>
+
+		<Max_Speed>4.0</Max_Speed>
+		<Min_Speed>3.5</Min_Speed>
+	
+		<Projectile_Types>Proj_Ground_Fighter_Green</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Vehicle, 1.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Air, 2.0</Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy>Structure, 10.0</Targeting_Fire_Inaccuracy>
+				
+		<HardPoints>
+			HP_Gr_Fighter_Ion, HP_Gr_Fighter_Proton_Torpedo_00, HP_Gr_Fighter_Proton_Torpedo_01
+		</HardPoints>
+		<Affiliation>Empire</Affiliation>
+		<SFXEvent_Fire> Unit_TIE_Fighter_Fire </SFXEvent_Fire>		
+		
+		<SFXEvent_Select>Unit_Select_Pirate_Fighter</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Pirate_Fighter</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pirate_Fighter</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Pirate_Fighter</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Pirate_Fighter</SFXEvent_Guard>
+		
+		<SFXEvent_Ambient_Moving> Unit_X_Wing_Fly_By </SFXEvent_Ambient_Moving>
+
+		
+		<Icon_Name>I_BUTTON_EV_GUNBOAT.tga</Icon_Name>
+
+	</GroundVehicle>
+	<GroundCompany Name="Gunboat_Squadron_Land">
+		<Variant_Of_Existing_Type>Missile_Gunboat_Squadron_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNBOAT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GUNBOAT TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Company_Units>Gunboat_Land, Gunboat_Land</Company_Units>
+		<Icon_Name>I_BUTTON_EV_GUNBOAT.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+
+	
+</Gunboat_LandUnit_Data>

@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+
+
+<Krayt_DestroyerUnit_Data>
+	
+	<SpaceUnit Name="Krayt_Class_Destroyer">
+		<Variant_Of_Existing_Type>Krayt_SD_ORG</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosU</Required_Special_Structures>		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Starting_Spawned_Units_Tech_0>BS_Lt_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BS_Med_Fighter_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>BS_Lt_Fighter_Squadron7, 3</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>BS_Med_Fighter_Squadron4, 5</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, Krayt_SD_ORG_Death_Clone</Death_Clone>
+		<Lua_Script>ObjectScript_Krayt_Z</Lua_Script>
+	</SpaceUnit>
+
+
+
+	<SpaceUnit Name="Krayt_SD_ORG">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_KRAYT_DESTROYER</Text_ID>
+		<Encyclopedia_Good_Against> MC80a ISDORG Victory_Destroyer </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber Y-Wing Y-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_KRAYT_DESTROYER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_SOLNEGROLIGHTFIGHTER TEXT_WAVES_X3 TEXT_UNIT_SOLNEGROMEDIUMFIGHTER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+
+		<Icon_Name>i_button_uv_krayt.tga</Icon_Name>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>Uv_kraytclassdestroyer.ALO</Space_Model_Name>
+		<Scale_Factor>0.4</Scale_Factor>
+
+
+		<Max_Speed>2.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+
+		<Layer_Z_Adjust>500.0</Layer_Z_Adjust>
+		<OverrideAcceleration> .03 </OverrideAcceleration>
+		<OverrideDeceleration> .03 </OverrideDeceleration>
+
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Max_Thrust>1.5</Max_Thrust>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		
+		<Affiliation>Underworld</Affiliation>
+		
+		<Tech_Level>99</Tech_Level>
+		
+		<Energy_Capacity>999999</Energy_Capacity>
+
+		<Build_Cost_Credits>4500</Build_Cost_Credits>
+		<AI_Combat_Power>13750</AI_Combat_Power>
+		<Build_Time_Seconds>60</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+
+		<Cheap_Bribe_Cost>700</Cheap_Bribe_Cost>
+		<Expensive_Bribe_Cost>1000</Expensive_Bribe_Cost>
+		<Tactical_Bribe_Cost>3500</Tactical_Bribe_Cost>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>	
+
+		<HardPoints>
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_Fighter_BayH_00, 
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_T_Kedalbe_01,
+			HP_T_Kedalbe_02,
+			HP_T_Kedalbe_03,
+			HP_T_Kedalbe_04,
+			HP_T_Kedalbe_05, 
+			HP_T_Kedalbe_06, 
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_T_Kedalbe_07, 
+			HP_T_Kedalbe_08, 
+			HP_T_Kedalbe_09, 
+			HP_T_Kedalbe_10,
+			HP_EspecialR_00,
+			HP_EspecialR_01,
+			HP_EspecialR_02,
+			HP_EspecialR_03,
+			HP_EspecialR_04,
+			HP_EspecialR_05
+		</HardPoints>
+
+		<SFXEvent_Build_Started>UHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Krayt_Class_Destroyer</SFXEvent_Build_Complete>
+	  
+		<SFXEvent_Select>Unit_Select_Krayt_Class_Destroyer</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Krayt_Class_Destroyer</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Krayt_Class_Destroyer</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Krayt_Class_Destroyer</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Krayt_Class_Destroyer</SFXEvent_Guard>
+		<SFXEvent_Barrage>Unit_Barrage_Krayt_Class_Destroyer</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Asteroid_Field> Unit_Asteroids_Krayt_Class_Destroyer </SFXEvent_Move_Into_Asteroid_Field>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Krayt_Class_Destroyer </SFXEvent_Move_Into_Nebula>
+		<SFXEvent_Damaged_By_Asteroid> SFX_Asteroid_Detonation </SFXEvent_Damaged_By_Asteroid>
+		<SFXEvent_Bombard_Select_Target> UHD_Bombard_Select_Target </SFXEvent_Bombard_Select_Target>
+		<SFXEvent_Bombard_Incoming> UHD_Bombard_Incoming  </SFXEvent_Bombard_Incoming>
+
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_LASER, Unit_HP_LASER_Krayt_Class_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_Krayt_Class_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_Krayt_Class_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_Krayt_Class_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_Krayt_Class_Destroyer </SFXEvent_Attack_Hardpoint>
+		<SFXEvent_Attack_Hardpoint> HARD_POINT_ENGINE, Unit_HP_ENGINES_Krayt_Class_Destroyer </SFXEvent_Attack_Hardpoint>
+
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Krayt_Class_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Krayt_Class_Destroyer </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Krayt_Class_Destroyer </SFXEvent_Hardpoint_Destroyed>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Calamari_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Calamari_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Calamari_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Death_SFXEvent_Start_Die>Unit_Calamari_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Selt_Destruct_SFXEvent_Start_Die> Unit_ZC_Self_Destruct </Selt_Destruct_SFXEvent_Start_Die> 
+		
+		
+
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+		
+		<Population_Value>3</Population_Value>
+		<!--<Space_Override_Population_Value>2</Space_Override_Population_Value>-->
+
+		<Lua_Script>ObjectScript_Krayt_Z</Lua_Script>
+
+		<Tactical_Build_Cost_Multiplayer>4800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Alternate_Description_Text>TEXT_TOOLTIP_KRAYT_DESTRUCT_DESCRIPTION</Alternate_Description_Text>
+				<Expiration_Seconds>3.5</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> Krayt_Self_Destruct_Blast </Spawned_Object_Type>
+				<GUI_Activated_Ability_Name>Krayt_Self_Destruct</GUI_Activated_Ability_Name>
+				<Stop_When_Activated>No</Stop_When_Activated>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Self_Destruct_Krayt_Class_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+                <Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>2500</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>7</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+
+	</SpaceUnit>
+
+
+	<SpaceUnit Name="Krayt_SD_ORG_Death_Clone">
+		<Text_ID>TEXT_UNIT_KRAYT_DESTROYER</Text_ID>
+		<Space_Model_Name>Uv_kraytclassdestroyer_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.4</Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Underworld </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+
+</Krayt_DestroyerUnit_Data>

@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<GA_B22_Files>
+	
+	<SpaceUnit Name="GA_B22">
+		<Variant_Of_Existing_Type>T42</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_B22</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_B22 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Y-Wing Z-95_Headhunter_Rebel </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Corellian_Corvette X-wing A-Wing </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Space_Model_Name>GA_BB2_Bomber.ALO</Space_Model_Name>
+		<Icon_Name>i_button_GA_BB2.TGA</Icon_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Max_Speed>3.4</Max_Speed>
+		<Min_Speed>2.3</Min_Speed>
+		<Max_Rate_Of_Turn>3.0</Max_Rate_Of_Turn>
+		<Max_Thrust>1.0</Max_Thrust>
+		<Max_Rate_Of_Roll>4.0</Max_Rate_Of_Roll>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Armor_Type> Armor_Infantry_SH </Armor_Type>
+		<Shield_Points>2000</Shield_Points>
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Refresh_Rate>2150</Shield_Refresh_Rate>
+		<Energy_Capacity>16000</Energy_Capacity>
+		<Energy_Refresh_Rate>9600</Energy_Refresh_Rate>
+		
+		<Land_Bomber_Type>GA_B22_Bombing_Run</Land_Bomber_Type>
+		
+		<HardPoints>
+			HP_Fighter_Proton_Torpedo_Adv, 
+			HP_Fighter_Adv_Missile_B, 
+			HP_IonShot_00H,
+			HP_GA_B22_01,
+			HP_GA_B22_02,
+			HP_G_TIEB_Laser_00,
+			HP_G_TIEB_Laser_01,
+			HP_Torpedoadv_Ability_00,
+			HP_MissileAdv_Ability_01
+		</HardPoints>
+		
+		<SFXEvent_Fire> Unit_X_Wing_Fire </SFXEvent_Fire>
+		
+		<AI_Combat_Power>80</AI_Combat_Power>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	
+	</SpaceUnit>
+		
+	<Squadron Name="GA_B22_Squadron">
+		<Variant_Of_Existing_Type>Y-Wing_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_SQUADRON_GA_B22</Text_ID>
+		<Encyclopedia_Good_Against> ISD2 VSD2 SSD </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Phantom TIE_Hunter Lancer </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>225</Build_Cost_Credits>
+		<Build_Time_Seconds>18</Build_Time_Seconds>
+		
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+
+		<Squadron_Units>GA_B22, GA_B22, GA_B22</Squadron_Units>
+
+		<Create_Team_Type> GA_B22_Squadron_Container1 </Create_Team_Type>
+		
+		<Icon_Name>i_button_GA_BB2.tga</Icon_Name>
+		<GUI_Model_Name>GA_BB2_Bomber.ALO</GUI_Model_Name>
+	
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_V_Wing</SFXEvent_Build_Complete>
+	
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_B22 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+	
+		<Tactical_Build_Cost_Multiplayer>225</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+	</Squadron>
+	<Container Name="GA_B22_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_SQUADRON_GA_B22</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_B22 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_GA_BB2.tga</Icon_Name>
+
+		<Max_Speed>3.4</Max_Speed>
+		<Min_Speed>2.3</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiTransport </CategoryMask> 
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+	
+</GA_B22_Files>

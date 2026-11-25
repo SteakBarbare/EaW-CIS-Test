@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<EVK_Patrol_SpeederUnit_Data>
+	
+	<GroundVehicle Name="EVK_Patrol_Speeder">
+		<Variant_Of_Existing_Type>Ch_Patrol_SpeederORG</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Land_Model_Name>EVK_Patrol_Speeder.alo</Land_Model_Name>
+		<Icon_Name> i_button_EVK_Patrol_Speeder.tga </Icon_Name>
+		<Death_Clone>Damage_Normal, EVK_Patrol_Speeder_Death_Clone_00</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>EVK_Patrol_Speeder_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="EVK_Patrol_Speeder_Death_Clone_00">
+		<Variant_Of_Existing_Type>M1_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVK_Patrol_Speeder_D.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+	</GroundVehicle>
+	<GroundVehicle Name="EVK_Patrol_Speeder_Captured">
+		<Variant_Of_Existing_Type>EVK_Patrol_Speeder</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="EVK_Patrol_Speeder_Squad">
+		<Variant_Of_Existing_Type>Ch_Patrol_Speeder_Armor_Group</Variant_Of_Existing_Type>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Krayt_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>EVK_Patrol_Speeder, EVK_Patrol_Speeder, EVK_Patrol_Speeder, EVK_Patrol_Speeder</Company_Units>
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Icon_Name> i_button_EVK_Patrol_Speeder.tga </Icon_Name>
+		
+		<Tactical_Build_Cost_Multiplayer>1200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		
+		<Tactical_Build_Prerequisites>Krayt_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</EVK_Patrol_SpeederUnit_Data>

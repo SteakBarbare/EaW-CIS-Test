@@ -1,0 +1,667 @@
+<?xml version="1.0"?>
+<EVFO_structuresUnit_Data>
+	<SpecialStructure Name="EVFO_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EVFO_Officer_Squad,
+				EVFO_Praetorian_Guard_Company,
+				EVFO_Phasma_Team,
+				EVFO_Kylo_Ren_Team,
+				EVFO_Snoke_Team,
+				EVFO_Level_Two_Tech_Upgrade,
+				EVFO_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>EVFO</Affiliation>
+
+   </SpecialStructure>
+
+	<GroundBuildable Name="EVFO_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>EVFO</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_EVFO_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Command_Center </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>EVFO</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="EVFO_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Obstacle_Proxy_Type> EVFO_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+				
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Elite_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Elite_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EVFO_Bombing_Run_Use_Upgrade, 
+				EVFO_Planetary_Bombard_Use_Upgrade,
+				EVFO_TIE_Squadron_Land,
+				EVFO_TIE_Elite_Squadron_Land,
+				EVFO_TIE_Bomber_Squadron_Land,
+				EVFO_TIE_Interceptor_Squadron_Land,
+				EVFO_TIE_Invader_Squadron_Land,
+				EVFO_Troop_Transport_Squad_Land,
+				EVFO_Upsilon_Ground_SquadB
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>EVFO</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Affiliation>EVFO</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Tactical_Buildable_Constructed> EVFO_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> EVFO_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="EVFO_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>EVFO_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> EVFO_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="EVFO_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>EVFO_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>EVFO_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="EVFO_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> EVFO_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> EVFO_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="EVFO_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> EVFO_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>EVFO</Affiliation>
+
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>EVFO_Power_Generator</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> EVFO_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="EVFO_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_POWER_GENERATOR</Text_ID>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Affiliation>EVFO</Affiliation>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Obstacle_Proxy_Type> EVFO_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+
+	</SpecialStructure>
+	<SpecialStructure Name="EVFO_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>EVFO_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+	<GroundBuildable Name="EVFO_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_EVFO_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>EVFO_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="EVFO_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> EVFO_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, TURRET, WEAPON, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>EVFO, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_evfo_infantry_barracks.tga</Icon_Name>
+	
+		<Tactical_Buildable_Objects_Campaign> 
+			EVFO,
+				EL_Increased_Mobility_Upgrade,
+				EL_Stamina_Boost_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EVFO_Stormtrooper_Squad,
+				EVFO_GrenadeTrooper_Squad,
+				EVFO_FlameTrooper_Squad,
+				EVFO_EWEB_Squad,	
+				EVFO_Assault_Squad,
+				EVFO_Sith_Trooper_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Starting_Spawned_Units_Tech_0>EVFO_Stormtrooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_Stormtrooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_GrenadeTrooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_GrenadeTrooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="EVFO_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_evfo_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Ground_Barracks </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_evfo_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="EVFO_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> EVFO_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>EVFO, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_EVFO_vehicle_factory.tga</Icon_Name>
+						
+		<Tactical_Buildable_Objects_Campaign> 
+			EVFO,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EVFO_ATMP_Squad,
+				EVFO_AT_ST_Walker_Squad,
+				EVFO_INT4_Squad,
+				EVFO_M2_Tank_Squad,
+				EVFO_M2_Tank_Rocket_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_AT_ST_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_AT_ST_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_ATMP, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_ATMP, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Tactical_Additional_Structure_Type>EVFO_XLanding</Tactical_Additional_Structure_Type>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_EVFO_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> EVFO_Ground_Light_Vehicle_Factory </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_EVFO_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="EVFO_XLanding">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING </Encyclopedia_Text>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> E_XLanding_Build_Pad </Obstacle_Proxy_Type>
+
+
+		<Affiliation>EVFO, Empire</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Tech_Level>99</Tech_Level>
+		<Tactical_Health>1000</Tactical_Health>
+		<Scale_Factor>1.25</Scale_Factor>
+		
+		<Ranged_Target_Z_Adjust>1.0</Ranged_Target_Z_Adjust>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EVFO_Bombing_Run_Use_Upgrade, 
+				EVFO_Planetary_Bombard_Use_Upgrade,
+				EVFO_TIE_Squadron_Land,
+				EVFO_TIE_Elite_Squadron_Land,
+				EVFO_TIE_Bomber_Squadron_Land,
+				EVFO_TIE_Interceptor_Squadron_Land,
+				EVFO_TIE_Invader_Squadron_Land,
+				EVFO_Troop_Transport_Squad_Land,
+				EVFO_Upsilon_Ground_SquadB
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Interceptor_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Invader_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Invader_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+   </SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_XLanding_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_XLanding</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_XLanding">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING </Encyclopedia_Text>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> EVK_XLanding </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> EVK_XLanding_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+   </GroundBuildable>
+	
+	
+	<SpecialStructure Name="EVFO_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> EVFO_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>EVFO, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>EVFO_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_EVFO_heavy_factory.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			EVFO,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EVFO_ATTE_Squad,
+				EVFO_ATTE_AA_Squad,
+				EVFO_ATAT_Company,
+				EVFO_UMHC_Squad,
+				EVFO_UMHC_Art_Squad,
+				EVFO_ATM6_Company
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_ATAT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_ATAT, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVFO_ATM6, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_ATM6, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Tactical_Additional_Structure_Type>EVFO_XLanding</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	<GroundBuildable Name="EVFO_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_EVFO_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_EVFO_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Ground_Heavy_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_EVFO_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="EVFO_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> EVFO_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>EVFO, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>EVFO_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_EVFO_mega_advanced_weapons.tga</Icon_Name>
+
+					
+		<Starting_Spawned_Units_Tech_0>EVFO_ATM6, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVFO_ATM6, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_Ground_Advanced_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		
+		<Icon_Name>i_button_EVFO_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVFO_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+
+		<Icon_Name>i_button_EVFO_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+
+
+	<SpecialStructure Name="EVFO_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> EVFO_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>EVFO</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			EVFO,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			EVFO,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_EVFO_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="EVFO_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> EVFO_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+
+		<Scale_Factor>1.5</Scale_Factor>
+		<Destruction_Survivors> 
+			EVFO_Stormtrooper_Squad_SurvivorsS, 1.0
+			EVFO_Stormtrooper_Squad_SurvivorsM, 1.0
+			EVFO_Stormtrooper_Squad_Survivors, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>EVFO, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> EVFO_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_e_officer_academy.tga</Icon_Name>
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="EVFO_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>EVFO, PC_EVFO_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_e_officer_academy.tga</Icon_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_EVFO_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> EVFO_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> EVFO_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>EB_OfficerAcademy.alo</Land_Model_Name>
+		<Affiliation>EVFO</Affiliation>
+		<Icon_Name>i_button_e_officer_academy.tga</Icon_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+	</GroundBuildable>
+</EVFO_structuresUnit_Data>
+
+
+

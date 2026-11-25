@@ -1,0 +1,301 @@
+<?xml version="1.0" ?>
+<Props_Generic>
+
+	<Props_Generic Name="Prop_ISD_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>NV_ISDWreck.ALO</Land_Model_Name>
+		<Scale_Factor>6.0</Scale_Factor>
+		<Space_Layer> Frigate | Corvette </Space_Layer>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+		<Space_Obstacle_Radius>800</Space_Obstacle_Radius>
+	</Props_Generic>
+	<Props_Generic Name="Prop_NebulonB_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>NV_NebulonBWreck.ALO</Land_Model_Name>
+		<Scale_Factor>4.0</Scale_Factor>
+		<Space_Layer> Frigate | Corvette </Space_Layer>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+		<Space_Obstacle_Radius>800</Space_Obstacle_Radius>
+	</Props_Generic>
+	<Props_Generic Name="Prop_MC80_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>NV_MC80Wreck.ALO</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Space_Layer> Frigate | Corvette </Space_Layer>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+		<Space_Obstacle_Radius>800</Space_Obstacle_Radius>
+	</Props_Generic>
+	<Props_Generic Name="Prop_World_Devastator_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>EV_World_Devastator_Land.ALO</Land_Model_Name>
+		<Scale_Factor>3.0</Scale_Factor>
+		<Space_Layer> Frigate | Corvette </Space_Layer>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+		<Space_Obstacle_Radius>800</Space_Obstacle_Radius>
+	</Props_Generic>
+	<Props_Generic Name="Ironfist_on_construction">
+		<GUI_Bounds_Scale>0.1</GUI_Bounds_Scale>
+		<Text_ID>TEXT_UNIT_IRONFIST</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_STORY_UNDER_CONSTRUCTION  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_DREADNAUGHT </Encyclopedia_Unit_Class>
+		<Space_Model_Name>EV_IronFist_rebuilded.alo</Space_Model_Name>
+		<Facing_Adjust>0.0, 0.0, 0.0</Facing_Adjust>
+		<Behavior>SELECTABLE, UNIT_AI, HIDE_WHEN_FOGGED,REVEAL</Behavior>
+		<SpaceBehavior>IDLE, SPACE_OBSTACLE</SpaceBehavior>
+		<Space_FOW_Reveal_Range>100.0</Space_FOW_Reveal_Range>
+		<Mass>1.0</Mass>
+		<Scale_Factor>2.7</Scale_Factor>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>900000</Tactical_Health><!-- jdg was 1800 -->
+		<Ranged_Target_Z_Adjust>30.0</Ranged_Target_Z_Adjust>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Energy_Capacity>0</Energy_Capacity>
+		<Energy_Refresh_Rate>0</Energy_Refresh_Rate>
+		<Affiliation>Empire</Affiliation>
+		<Base_Level_Available>0</Base_Level_Available>
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Reveal_During_Setup_Phase> false </Reveal_During_Setup_Phase>
+		<Victory_Relevant>no</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>     
+        <Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions> Friggin_Huge_Explosion_Space_Empire </Death_Explosions>
+		<Death_SFXEvent_Start_Die> Planet_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>True</Remove_Upon_Death>
+		<Death_Projectiles>Proj_Construction_Pod_Detonation</Death_Projectiles><!-- jdg test -->
+		<CategoryMask>Structure</CategoryMask>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Space_Obstacle_Radius> 130 </Space_Obstacle_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> StaticObject </Space_Layer>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+		<Death_Clone>Damage_Normal, IronFist_Construction_Death_Clone</Death_Clone>
+	</Props_Generic>
+	<Props_Generic Name="IronFist_Construction_Death_Clone">
+		<Space_Model_Name>EV_IronFist_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Space_Station_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>700.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>True</Remove_Upon_Death>
+	</Props_Generic>
+
+<!--Yoden Props-->
+
+	<Props_Generic Name="PropOnly_Pipe_3b">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_fuel_pipe02.alo</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Crate08x2">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_crates08.alo</Land_Model_Name>
+		<LandBehavior>LAND_OBSTACLE</LandBehavior>
+		<Scale_Factor>5.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>Yes</Is_Decoration>
+	</Props_Generic>
+	<Props_Generic Name="Prop_Crate12x2">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_crates12.alo</Land_Model_Name>
+		<LandBehavior>LAND_OBSTACLE</LandBehavior>
+		<Scale_Factor>5.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>Yes</Is_Decoration>
+	</Props_Generic>
+	<Props_Generic Name="Prop_Crate20x2">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_crates20.alo</Land_Model_Name>
+		<LandBehavior>LAND_OBSTACLE</LandBehavior>
+		<Scale_Factor>5.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>Yes</Is_Decoration>
+	</Props_Generic>
+	<Props_Generic Name="Prop_Crate15x2">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_crates15.alo</Land_Model_Name>
+		<LandBehavior>LAND_OBSTACLE</LandBehavior>
+		<Scale_Factor>5.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>Yes</Is_Decoration>
+	</Props_Generic>
+	<Props_Generic Name="PropOnly_Pipe_3s">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_fuel_pipe02.alo</Land_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Crate06x2">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_crates06.alo</Land_Model_Name>
+		<LandBehavior>LAND_OBSTACLE</LandBehavior>
+		<Scale_Factor>5.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>Yes</Is_Decoration>
+	</Props_Generic>
+	
+	<Props_Generic Name="Prop_LucrehulkCore_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>CIS_LucrehulkDD.ALO</Land_Model_Name>
+		<Scale_Factor>10.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_CR20_Wreck">
+		<No_Colorization_Color>184,10,37,255</No_Colorization_Color>
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>CR20.ALO</Land_Model_Name>
+		<Scale_Factor>10.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_C9979_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>CIS_C9979.ALO</Land_Model_Name>
+		<Scale_Factor>10.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Hardcell_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>CIS_HARDCELL.ALO</Land_Model_Name>
+		<Scale_Factor>10.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Munificent_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>CIS_Munificent.ALO</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Recusant_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>CIS_Recusant_Destroyer.ALO</Land_Model_Name>
+		<Scale_Factor>10.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Venator_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>Rep_Venator.alo</Land_Model_Name>
+		<Scale_Factor>2.5</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Prop_Acclamator_Wreck">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>EV_Acclamator_Assault_Ship.ALO</Land_Model_Name>
+		<Scale_Factor>5.0</Scale_Factor>
+		<Space_Layer> Frigate | Corvette </Space_Layer>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+		<Space_Obstacle_Radius>800</Space_Obstacle_Radius>
+	</Props_Generic>
+	
+	<Props_Generic Name="Prop_Landing_Gear">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_SithArtifact_pedestal.alo</Land_Model_Name>
+		<Scale_Factor>50.0</Scale_Factor>
+		<!--<Is_Sprite>No</Is_Sprite>-->
+		<Is_Decoration>No</Is_Decoration>
+		<LandBehavior>LAND_OBSTACLE</LandBehavior>
+	</Props_Generic>
+	
+	<Props_Generic Name="Water_Plane01">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_WaterPlane01.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Is_Sprite>Yes</Is_Sprite>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade> 
+	</Props_Generic>
+	<Props_Generic Name="Water_Plane02">
+		<Variant_Of_Existing_Type>Water_Plane01</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_WaterPlane02.alo</Land_Model_Name>
+	</Props_Generic>
+	<Props_Generic Name="Water_Plane03">
+		<Variant_Of_Existing_Type>Water_Plane01</Variant_Of_Existing_Type>
+		<Land_Model_Name>W_WaterPlane03.alo</Land_Model_Name>
+	</Props_Generic>
+	
+	<Props_Temperate Name="Prop_Rockform_02m">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>w_felucia_rock_arch00.alo</Land_Model_Name>
+		<Scale_Factor>16.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</Props_Temperate>
+	
+	<Props_Temperate Name="Prop_Rockform_02e">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>w_felucia_rock_arch00.alo</Land_Model_Name>
+		<Scale_Factor>8.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</Props_Temperate>
+
+	<Props_Temperate Name="Prop_Rockform_02l">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>w_felucia_rock_arch00.alo</Land_Model_Name>
+		<Scale_Factor>14.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</Props_Temperate>
+
+	<Props_Temperate Name="Prop_Rockform_02n">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>w_felucia_rock_arch00.alo</Land_Model_Name>
+		<Scale_Factor>17.0</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</Props_Temperate>
+	
+	<Props_Temperate Name="Prop_Mnt_Temp_Big">
+		<Text_ID>TEXT_NONE</Text_ID>
+		<Land_Model_Name>W_TempMntRnge00.ALO</Land_Model_Name>
+		<Scale_Factor>10</Scale_Factor>
+		<Is_Decoration>No</Is_Decoration>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+	</Props_Temperate>
+	
+</Props_Generic>

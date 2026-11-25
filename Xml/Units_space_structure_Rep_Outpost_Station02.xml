@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Rep_Outpost_Station_2Unit_Data>
+
+	<UniqueUnit Name="Rep_Outpost_Station_2">
+		<Variant_Of_Existing_Type>SmallGolanIeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNPLATFORM2</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPLATFORM2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_CAPITAL </Encyclopedia_Text>
+		<Space_Model_Name>Rep_Outpost_Station_2.ALO</Space_Model_Name>
+		<Scale_Factor>0.225</Scale_Factor>
+		
+		<Projectile_Types>Proj_BlancoVacio_Laser</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>30</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Fire>Unit_Republic_Ship_Turbolaser_ver01</SFXEvent_Fire>
+		
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire,	
+				Acclamator_Assault_Ship,
+				E_AcclamatorII,
+				Rep_Phalanx,
+				E_Venator,
+				Rep_LongHorn,
+				REP_Procurator,
+				REP_Procurator_Up,
+				Rep_Valiant,
+				E_Protector,
+				E_Legacy,
+				E_RothanaSD,
+				E_Praetor,
+				E_Maelstorm,
+				E_Nexu,
+				E_MandatorI,
+				E_MandatorI_Up,
+				E_RothanaBC
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Affiliation>Republic, Empire</Affiliation>
+		<HardPoints>
+			HP_T_RepOutpostSt_01,
+			HP_T_RepOutpostSt_02,
+			HP_T_RepOutpostSt_03,
+			HP_T_RepOutpostSt_04,
+			HP_T_RepOutpostSt_05,
+			HP_T_RepOutpostSt_06,
+			HP_T_RepOutpostSt_07,
+			HP_T_RepOutpostSt_08,
+			HP_Shield_GeneratorH_00,
+			HP_Misil_01,
+			HP_Misil_02,
+			HP_Misil_03,
+			HP_Misil_04
+		</HardPoints>
+		<Targeting_Priority_Set>Corvette</Targeting_Priority_Set>
+		<Icon_Name>I_BUTTON_NV_Rep_Outpost_Station_2.TGA</Icon_Name>
+		<Death_Clone>Damage_Normal, Rep_Outpost_Station_2_Death_Clone</Death_Clone>
+	</UniqueUnit>
+
+		
+	<SpecialStructure Name="Rep_Outpost_Station_2_Death_Clone">
+		<Text_ID>TEXT_UNIT_CORELLIAN_CORVETTE</Text_ID>
+		<Space_Model_Name>Rep_Outpost_Station_2.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>Rep_Outpost_Station_2.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>0.225</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Rebel, Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpecialStructure>
+	
+</Rep_Outpost_Station_2Unit_Data>

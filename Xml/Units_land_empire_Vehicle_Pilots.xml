@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Vehicle_PilotsUnit_Data>
+	<GroundInfantry Name="Walker_Commander_Survivor">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATATCOMMANDER</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator Destroyer_Droid </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>Ei_WalkerCommander.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ei_WalkerCommander.ALO</Land_Model_Anim_Override_Name>
+		<Icon_Name>I_BUTTON_WalkerCommander.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Rebel, Empire, Pirates, Underworld, Fel, Krayt, CIS, Republic, Hutts, Chiss, Corporate, Hapan, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>75</Tactical_Health>
+		<Targeting_Max_Attack_Distance>100.0</Targeting_Max_Attack_Distance>
+		<Projectile_Types>Proj_Hand_Blaster_Red</Projectile_Types>
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 3.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 10.0 </Targeting_Fire_Inaccuracy>
+
+		<SFXEvent_Select>Unit_Select_Empire_Field</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Empire_Field</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Empire_Field</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Empire_Field</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Empire_Field</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Empire_Field</SFXEvent_Group_Attack>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<CategoryMask> Infantry </CategoryMask>
+		<AI_Combat_Power>7</AI_Combat_Power>
+		<Victory_Relevant>No</Victory_Relevant>
+		<Encyclopedia_Text>TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+	</GroundInfantry>
+	<GroundInfantry Name="Walker_Pilot_Survivor">
+		<Variant_Of_Existing_Type>Walker_Commander_Survivor</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATATPILOT</Text_ID>
+		<Land_Model_Name>Ei_AtatPilot.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ei_AtatPilot.ALO</Land_Model_Anim_Override_Name>
+		<Icon_Name>I_BUTTON_ATATPilot.tga</Icon_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+		<SFXEvent_Select>Unit_Select_Storm_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Storm_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Storm_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Storm_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Storm_Trooper</SFXEvent_Guard>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Storm_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Storm_Trooper </SFXEvent_Assist_Attack>
+	</GroundInfantry>
+	<GroundInfantry Name="Atst_Pilot_Survivor">
+		<Variant_Of_Existing_Type>Walker_Pilot_Survivor</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ATSTPILOT</Text_ID>
+		<Land_Model_Name>Ei_AtstPilot.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ei_AtstPilot.ALO</Land_Model_Anim_Override_Name>
+		<Icon_Name>I_BUTTON_ATSTPilot.tga</Icon_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+	</GroundInfantry>
+	<GroundInfantry Name="TIE_Pilot_Survivor">
+		<Variant_Of_Existing_Type>Walker_Pilot_Survivor</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TIEPILOT</Text_ID>
+		<Land_Model_Name>Ei_TIEPilot.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ei_TIEPilot.ALO</Land_Model_Anim_Override_Name>
+		<Icon_Name>I_BUTTON_TIEPilot.tga</Icon_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+	</GroundInfantry>
+	
+
+</Vehicle_PilotsUnit_Data>

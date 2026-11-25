@@ -1,0 +1,178 @@
+﻿<?xml version="1.0"?>
+
+<ShadowDroid_Files>
+
+	
+	<SpaceUnit Name="ShadowDroid">
+		<Variant_Of_Existing_Type>TIE_Avenger_Generic</Variant_Of_Existing_Type>		
+		<Text_ID>TEXT_UNIT_SHADOWDROID</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SHADOWDROID TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> Y-Wing B-Wing X-wing</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> E-Wing XJ_wing Ranger_Frigata </Encyclopedia_Vulnerable_To>
+		<Space_Model_Name>EV_ShadowDroid.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+		<Select_Box_Scale>0.001</Select_Box_Scale>
+		<Max_Speed>4.3</Max_Speed>
+		<Min_Speed>2.9</Min_Speed>
+		<Max_Rate_Of_Turn>4.4</Max_Rate_Of_Turn>
+		<Max_Lift>5</Max_Lift>
+		<Max_Thrust>1.4</Max_Thrust>
+		<Max_Rate_Of_Roll>6.5</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>48</Bank_Turn_Angle>
+		<Hyperspace>no</Hyperspace>
+		<Hyperspace_Speed>0</Hyperspace_Speed>
+		<Begin_Turn_Towards_Distance>350.0</Begin_Turn_Towards_Distance>
+		<Fires_Forward>no</Fires_Forward>
+		<Affiliation>Empire</Affiliation>
+		
+		<HardPoints>
+			HP_Fighter_Adv_Missile_B, HP_Havoc_Laser, HP_G_TIEA_Laser_00, HP_G_TIEA_Laser_01, HP_G_TIEA_Laser_02, HP_G_TIEA_Laser_03, HP_MissileAdv_Ability_00, HP_MissileAdv_Ability_01
+		</HardPoints>
+		<Targeting_Priority_Set>Fighter_Super</Targeting_Priority_Set>
+	
+		<Icon_Name>I_BUTTON_SHADOWDROID.tga</Icon_Name>
+		<Lua_Script>AI_Space_CASF</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Alternate_Icon_Name>I_SA_JOIN_ME.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_AREA_EFFECT_CONVERT_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_AREA_EFFECT_CONVERT_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>90</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders3be</Spawned_Object_Type>
+				<Effective_Radius> 750.0 </Effective_Radius>
+				<SFXEvent_Target_Ability> Unit_Convert_Emperor </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Convert_Emperor</SFXEvent_GUI_Unit_Ability_Activated>
+				<Area_Effect_Decal_Distance> 750 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Tactical_Bribe_Cost>29</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	
+	<Squadron Name="ShadowDroid_Squadron">
+		<Variant_Of_Existing_Type>TIE_Fighter_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_SHADOWDROID_SQUADRON</Text_ID>
+		<Encyclopedia_Good_Against> Y-Wing B-Wing X-wing</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> E-Wing XJ_wing Ranger </Encyclopedia_Vulnerable_To>
+		<GUI_Row>1</GUI_Row>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Build_Cost_Credits>350</Build_Cost_Credits>
+		<Build_Time_Seconds>12</Build_Time_Seconds>
+
+		<Required_Planets>Byss</Required_Planets>
+
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Factoria_Cazas_SIENAR, AdvancedTech_7</Required_Special_Structures>
+
+		<Squadron_Units>ShadowDroid, ShadowDroid, ShadowDroid</Squadron_Units>
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>ShadowDroid_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>I_BUTTON_SHADOWDROID.tga</Icon_Name>
+		<GUI_Model_Name>EV_ShadowDroid.ALO</GUI_Model_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Alternate_Icon_Name>I_SA_JOIN_ME.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_AREA_EFFECT_CONVERT_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_AREA_EFFECT_CONVERT_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>90</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders3be</Spawned_Object_Type>
+				<Effective_Radius> 750.0 </Effective_Radius>
+				<SFXEvent_Target_Ability> Unit_Convert_Emperor </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Convert_Emperor</SFXEvent_GUI_Unit_Ability_Activated>
+				<Area_Effect_Decal_Distance> 750 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SHADOWDROID TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY</Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>12</Tactical_Build_Time_Seconds>
+	</Squadron>
+	<Container Name="ShadowDroid_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_SHADOWDROID_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SHADOWDROID TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_SHADOWDROID.tga</Icon_Name>
+
+		<Max_Speed>4.3</Max_Speed>
+		<Min_Speed>2.9</Min_Speed>
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-40.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>20.0,30.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>40.0,-20.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,10.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,20.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+				<Alternate_Icon_Name>I_SA_JOIN_ME.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_AREA_EFFECT_CONVERT_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_AREA_EFFECT_CONVERT_DESCRIPTION</Alternate_Description_Text>
+				<Recharge_Seconds>90</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders3be</Spawned_Object_Type>
+				<Effective_Radius> 750.0 </Effective_Radius>
+				<SFXEvent_Target_Ability> Unit_Convert_Emperor </SFXEvent_Target_Ability>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Convert_Emperor</SFXEvent_GUI_Unit_Ability_Activated>
+				<Area_Effect_Decal_Distance> 750 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</Container>
+
+</ShadowDroid_Files>

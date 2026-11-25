@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<Jariah_SynUnit_Data>
+	<HeroUnit Name="Jariah_Syn">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_JARIAH_SYN_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_JARIAH_SYN TEXT_TOOLTIP_REDUCE_TIME_5 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>GA_Jariah_Syn.alo</Land_Model_Name>
+		<Icon_Name>I_BUTTON_GA_Jariah_Syn.tga</Icon_Name>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Fel</Affiliation>
+
+		<Autoresolve_Health>300</Autoresolve_Health>
+		<Tactical_Health>1300</Tactical_Health>
+
+		<Projectile_Types>Proj_Infiltrator_Blaster</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+			
+		<SFXEvent_Select>Unit_Select_Katarn</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Katarn</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Katarn</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Katarn</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Katarn</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rebel_Infantry_Fire</SFXEvent_Fire>
+		<SFXEvent_Group_Move>Unit_Group_Move_Katarn</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Katarn</SFXEvent_Group_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Katarn </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Katarn </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Katarn </Death_SFXEvent_Start_Die>
+
+	
+		<CategoryMask> LandHero </CategoryMask>
+	
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+	
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_FEL_GA_Hero</Highlight_Blob_Material_Name>
+
+		<Neutralization_Cost>1500.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+	
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+                <Type>BERSERKER</Type>
+                <Recharge_Seconds>70.0</Recharge_Seconds>
+                <GUI_Activated_Ability_Name> Jariah_Syn_Berseker_Attack </GUI_Activated_Ability_Name> <!-- GUI Command Bar support -->
+                <Effective_Radius> 500.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> Unit_Attack_Katarn </SFXEvent_Target_Ability>  
+ 				<Supports_Autofire>True</Supports_Autofire>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_CRAZY_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_CRAZY_DESCR</Alternate_Description_Text>
+           </Unit_Ability>
+		   <Unit_Ability>
+				<Type>STICKY_BOMB</Type>
+				<Recharge_Seconds>26.0f </Recharge_Seconds>
+				<GUI_Activated_Ability_Name> Jariah_Syn_Grenade_Attack </GUI_Activated_Ability_Name>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	
+		<Abilities SubObjectList="Yes">
+			<Galactic_Stealth_Ability Name="Jariah_Syn_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Berserker_Ability Name="Jariah_Syn_Berseker_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+                <Activation_Min_Range>0.0</Activation_Min_Range>
+                <Activation_Max_Range>120.0</Activation_Max_Range>
+                <Berserker_Speed>5.0</Berserker_Speed>
+                <Berserker_Damage>35.0</Berserker_Damage>
+                <Berserker_Damage_Range>12.0</Berserker_Damage_Range>
+                <Berserker_Duration_In_Secs>6.0</Berserker_Duration_In_Secs>
+				<Applicable_Unit_Categories>Infantry | Vehicle | Structure | LandHero</Applicable_Unit_Categories>
+            </Berserker_Ability>
+			
+			<Reduce_Production_Time_Ability Name="Jariah_Syn_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.14</Time_Reduction_Percentage>
+				<Stacking_Category>3</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			
+			<Grenade_Attack_Ability Name="Jariah_Syn_Grenade_Attack">
+				<Activation_Style> User_Input </Activation_Style> 
+				<Activation_Min_Range>5.0</Activation_Min_Range>
+				<Activation_Max_Range>100.0</Activation_Max_Range>
+				<Requires_Direct_Player_Command> No </Requires_Direct_Player_Command> 
+				<Grenade_Type>Proj_Mara_Jade_Sticky_Bomb</Grenade_Type>
+				<Grenade_Toss_Anim>BOMBTOSS</Grenade_Toss_Anim>
+				<Grenade_Spawn_Frame>12.0</Grenade_Spawn_Frame>
+				<Grenade_Spawn_Bone>B_Hand_L</Grenade_Spawn_Bone>
+				<Grenade_Explode_Timer_In_Secs>8.0</Grenade_Explode_Timer_In_Secs>
+				<Activation_Chance>0,0.0, 1,1.0, 5,1.0, 500,1.0</Activation_Chance>
+				<Applicable_Unit_Categories>Vehicle, Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Bomb_Katarn</SFXEvent_Activate>
+			</Grenade_Attack_Ability>
+
+			<Remove_Corruption_Ability Name="Jariah_Syn_Remove_Corruption">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs>
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>RHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+			
+		</Abilities>
+	</HeroUnit>
+
+	<HeroCompany Name="Jariah_Syn_Team">
+		<Variant_Of_Existing_Type>Basic_Rebel_Hero01_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_JARIAH_SYN_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_JARIAH_SYN TEXT_TOOLTIP_REDUCE_TIME_5</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_GA_Jariah_Syn.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+
+		<Company_Transport_Unit>GA_Crix_Shuttle</Company_Transport_Unit>
+		<Company_Units>Jariah_Syn</Company_Units>
+
+		<SFXEvent_Build_Complete>Unit_Respawn_Katarn</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Katarn</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Katarn</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1300</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+		
+		<CategoryMask>LandHero</CategoryMask>
+	</HeroCompany>
+	
+	
+</Jariah_SynUnit_Data>

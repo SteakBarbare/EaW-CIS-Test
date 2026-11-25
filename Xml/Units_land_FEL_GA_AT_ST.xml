@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<EVF_AT_ST_WalkerUnit_Data>
+
+<GroundVehicle Name="EVF_AT_ST_Walker">
+		<Variant_Of_Existing_Type>AT_ST_WalkerORG</Variant_Of_Existing_Type>
+
+		<Land_Model_Name>EVF_AT_ST.ALO</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			EVF_AT_ST.ALO,
+			Urban, 				EVF_AT_ST.ALO,
+			Arctic, 			EVF_AT_ST.ALO,
+			Volcanic, 			EVF_AT_ST.ALO,
+			Desert, 			EVF_AT_ST.ALO,
+			Forest, 			EVF_AT_ST.ALO,
+			Swamp, 				EVF_AT_ST.ALO
+		</Land_Terrain_Model_Mapping>
+				
+		<Affiliation>Fel, Rebel</Affiliation>
+
+		<Hardpoints>
+				EVF_AT_ST_00,
+				EVF_AT_ST_01,
+				EVF_AT_ST_02,
+				EVF_AT_ST_03,
+				EVF_AT_ST_04,
+				EVF_AT_ST_05
+		</Hardpoints>
+				
+		<Icon_Name>I_BUTTON_EVF_AT_ST_Walker.tga</Icon_Name>
+		
+		<Death_Clone>Damage_Normal, EVF_AT_ST_Walker_Death_Clone_00</Death_Clone>
+		<Death_Clone>Damage_Normal, EVF_AT_ST_Walker_Death_Clone_01</Death_Clone>
+		<Death_Clone>Damage_Normal, EVF_AT_ST_Walker_Death_Clone_02</Death_Clone>
+		
+		<Vehicle_Thief_Inside_Clone>EVF_AT_ST_Walker_Captured</Vehicle_Thief_Inside_Clone>
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVF_AT_ST_Walker_Captured">
+		<Variant_Of_Existing_Type>EVF_AT_ST_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVF_AT_ST_Walker_Death_Clone_00">
+		<Variant_Of_Existing_Type>EVF_AT_ST_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> -15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 0 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVF_AT_ST_Walker_Death_Clone_01">
+		<Variant_Of_Existing_Type>EVF_AT_ST_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+      <Custom_Hard_YExtent_Offset> -15.0 </Custom_Hard_YExtent_Offset>
+		<Custom_Hard_XExtent> 6.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 15.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 1 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundVehicle Name="EVF_AT_ST_Walker_Death_Clone_02">
+		<Variant_Of_Existing_Type>EVF_AT_ST_Walker</Variant_Of_Existing_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+      
+		<Custom_Hard_XExtent> 15.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 6.0 </Custom_Hard_YExtent>
+		
+		<!--<Death_Persistence_Duration> 30 </Death_Persistence_Duration>-->
+		<Death_Explosions_End>Large_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_End_Die>
+		<Specific_Death_Anim_Index> 2 </Specific_Death_Anim_Index>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		
+	</GroundVehicle>
+
+	<GroundCompany Name="EVF_AT_ST_Walker_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<GUI_Row> 0 </GUI_Row>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Required_Special_Structures>Fel_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		
+		<Company_Transport_Unit>Fel_Hvy_Nune_Shuttle</Company_Transport_Unit>
+		<Company_Units>EVF_AT_ST_Walker, EVF_AT_ST_Walker, EVF_AT_ST_Walker, EVF_AT_ST_Walker</Company_Units>
+
+		<Icon_Name>I_BUTTON_EVF_AT_ST_Walker.tga</Icon_Name>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+
+</EVF_AT_ST_WalkerUnit_Data>

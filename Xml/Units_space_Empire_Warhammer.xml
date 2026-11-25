@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<WarhammerUnit_Data>
+
+	<SpaceUnit Name="Warhammer">
+		<Variant_Of_Existing_Type>ISDORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WARHAMMER</Text_ID>
+		<Encyclopedia_Good_Against> MC90 RSD NebulaSD </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MC112 MC108 Mc104 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WARHAMMER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_WARHAMMER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_OPRESOR TEXT_WAVES_X2 TEXT_UNIT_TIE_AGRESOR TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_8</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BATTLECRUISER </Encyclopedia_Unit_Class>
+		<Required_Special_Structures>Super_Astilleros_Imperiales, AdvancedTech_8</Required_Special_Structures>
+		<!--<Custom_Hard_XExtent> 680.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 259.0 </Custom_Hard_YExtent>-->
+		
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>EV_WarhammerBC.ALO</Space_Model_Name>
+		<Scale_Factor>0.55</Scale_Factor>
+		<Armor_Type> Armor_SSD </Armor_Type>
+		<Shield_Armor_Type>Shield_Warhammer</Shield_Armor_Type>
+		<Max_Speed>2.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.2</Max_Thrust>
+
+		<!--<Layer_Z_Adjust>1000.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>420.0</Layer_Z_Adjust>
+		<CategoryMask> Capital | AntiTransport </CategoryMask>
+
+
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>500000000</Tactical_Health>
+		<Shield_Refresh_Rate>264000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+
+		<Build_Cost_Credits>23500</Build_Cost_Credits>
+		<AI_Combat_Power>5400</AI_Combat_Power>
+		<Build_Time_Seconds>200</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		<Starting_Spawned_Units_Tech_0>TIE_Opresor_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Agresor_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Opresor_Squadron4, 23</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Agresor_Squadron7, 15</Reserve_Spawned_Units_Tech_0>
+
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Death_Clone>Damage_Normal, Warhammer_Death_Clone</Death_Clone>
+
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		<HardPoints> 
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10,
+			HP_MisilA_01, 
+			HP_MisilA_02,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,	
+			HP_T_WarhammerBC_01,
+			HP_T_WarhammerBC_02,
+			HP_T_WarhammerBC_03,
+			HP_T_WarhammerBC_04,
+			HP_T_WarhammerBC_05,
+			HP_T_WarhammerBC_06,
+			HP_T_WarhammerBC_07,
+			HP_T_WarhammerBC_08,
+			HP_T_WarhammerBC_09,
+			HP_T_WarhammerBC_10,
+			HP_T_WarhammerBC_11,
+			HP_T_WarhammerBC_12,
+			HP_T_WarhammerBC_13,
+			HP_T_WarhammerBC_14,
+			HP_T_WarhammerBC_15,
+			HP_T_WarhammerBC_16,
+			HP_T_WarhammerBC_17,
+			HP_T_WarhammerBC_18,
+			HP_T_WarhammerBC_19,
+			HP_T_WarhammerBC_20,
+			HP_T_WarhammerBC_21,
+			HP_T_WarhammerBC_22,
+			HP_T_WarhammerBC_23,
+			HP_T_WarhammerBC_24,
+			HP_T_WarhammerBC_25,
+			HP_T_WarhammerBC_26,
+			HP_T_WarhammerBC_27,
+			HP_T_WarhammerBC_28,
+			HP_T_WarhammerBC_29,
+			HP_T_WarhammerBC_30,
+			HP_T_WarhammerBC_31,
+			HP_T_WarhammerBC_32,
+			HP_T_WarhammerBC_33,
+			HP_T_WarhammerBC_34,
+			HP_T_WarhammerBC_35,
+			HP_T_WarhammerBC_36,
+			HP_T_WarhammerBC_37,
+			HP_T_WarhammerBC_38,
+			HP_T_WarhammerBC_39,
+			HP_T_WarhammerBC_40,
+			HP_T_WarhammerBC_41,
+			HP_T_WarhammerBC_42,
+			HP_T_WarhammerBC_43,
+			HP_T_WarhammerBC_44,
+			HP_T_WarhammerBC_45,
+			HP_T_WarhammerBC_46,
+			HP_T_WarhammerBC_47,
+			HP_T_WarhammerBC_48,
+			HP_T_WarhammerBC_49,
+			HP_T_WarhammerBC_50,
+			HP_T_WarhammerBC_51,
+			HP_T_WarhammerBC_52,
+			HP_T_WarhammerBC_53,
+			HP_T_WarhammerBC_54,
+			HP_T_WarhammerBC_55,
+			HP_T_WarhammerBC_56,
+			HP_T_WarhammerBC_57,
+			HP_T_WarhammerBC_58,
+			HP_T_WarhammerBC_59,
+			HP_T_WarhammerBC_60,
+			HP_T_WarhammerBC_61,
+			HP_T_WarhammerBC_62,
+			HP_T_WarhammerBC_63,
+			HP_T_WarhammerBC_64,
+			HP_T_WarhammerBC_65,
+			HP_T_WarhammerBC_66,
+			HP_T_WarhammerBC_67,
+			HP_T_WarhammerBC_68,
+			HP_T_WarhammerBC_69,
+			HP_T_WarhammerBC_70,
+			HP_T_WarhammerBC_71,
+			HP_T_WarhammerBC_72,
+			HP_T_WarhammerBC_73,
+			HP_T_WarhammerBC_74,
+			HP_T_WarhammerBC_75,
+			HP_T_WarhammerBC_76,
+			HP_T_WarhammerBC_77,
+			HP_T_WarhammerBC_78,
+			HP_T_WarhammerBC_79,
+			HP_T_WarhammerBC_80,
+			HP_T_WarhammerBC_81,
+			HP_T_WarhammerBC_82,
+			HP_T_WarhammerBC_83,
+			HP_T_WarhammerBC_84,
+			HP_T_WarhammerBC_85,
+			HP_T_WarhammerBC_86,
+			HP_T_WarhammerBC_87,
+			HP_T_WarhammerBC_88,
+			HP_T_WarhammerAF_01,
+			HP_T_WarhammerAF_02,
+			HP_T_WarhammerAF_03,
+			HP_T_WarhammerAF_04,
+			HP_T_WarhammerAF_05,
+			HP_T_WarhammerAF_06,
+			HP_T_WarhammerAF_07,
+			HP_T_WarhammerAF_08,
+			HP_T_WarhammerAF_09,
+			HP_T_WarhammerAF_10,
+			HP_T_WarhammerAF_11,
+			HP_T_WarhammerAF_12,
+			HP_T_WarhammerAF_13,
+			HP_T_WarhammerAF_14,
+			HP_T_WarhammerAF_15,
+			HP_T_WarhammerAF_16,
+			HP_T_WarhammerAF_17,
+			HP_T_WarhammerAF_18,
+			HP_T_WarhammerAF_19,
+			HP_T_WarhammerAF_20,
+			HP_T_WarhammerAF_21,
+			HP_T_WarhammerAF_22,
+			HP_T_WarhammerAF_23,
+			HP_T_WarhammerAF_24,
+			HP_T_WarhammerAF_25,
+			HP_T_WarhammerAF_26,
+			HP_T_WarhammerAF_27,
+			HP_T_WarhammerAF_28,
+			HP_T_WarhammerAF_29,
+			HP_T_WarhammerAF_30,
+			HP_LegacySSD_Blast_01,
+			HP_LegacySSD_Blast_02,
+			HP_LegacySSD_Blast_03,
+			HP_LegacySSD_Blast_04,
+			HP_LegacySSD_Blast_05,
+			HP_LegacySSD_Blast_06,
+			HP_LegacySSD_Blast_07,
+			HP_LegacySSD_Blast_08,
+			HP_LegacySSD_Blast_09,
+			HP_LegacySSD_Blast_10,
+			HP_LegacySSD_Blast_11,
+			HP_LegacySSD_Blast_12,
+			HP_LegacySSD_Blast_13,
+			HP_LegacySSD_Blast_14,
+			HP_LegacySSD_Blast_15,
+			HP_LegacySSD_Blast_16,
+			HP_LegacySSD_Blast_17,
+			HP_LegacySSD_Blast_18,
+			HP_LegacySSD_Blast_19,
+			HP_LegacySSD_Blast_20,
+			HP_LegacySSD_Blast_21,
+			HP_LegacySSD_Blast_22,
+			HP_LegacySSD_Blast_23,
+			HP_LegacySSD_Blast_24,
+			HP_LegacySSD_Blast_25,
+			HP_LegacySSD_Blast_26,
+			HP_LegacySSD_Blast_27,
+			HP_LegacySSD_Blast_28,
+			HP_LegacySSD_Blast_29,
+			HP_LegacySSD_Blast_30,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Tractor_Beam_Rebelde
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_WARHAMMER.TGA</Icon_Name>
+		<GUI_Model_Name>EV_WarhammerBC.ALO</GUI_Model_Name>
+
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.06795  0.104085</Radar_Icon_Size>  
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>4000</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SECONDARYW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_FULL_SALVO.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+		
+
+			<Unit_Ability>
+				<Type>TRACTOR_BEAM</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name> Warhammer_Beam_Attack_Ability </GUI_Activated_Ability_Name>
+
+				<Recharge_Seconds>25</Recharge_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+
+			<Tractor_Beam_Attack_Ability Name="Warhammer_Beam_Attack_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Activation_Min_Range>10</Activation_Min_Range>
+				<Activation_Max_Range>3000</Activation_Max_Range>
+
+				<Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+				<Stacking_Category>0</Stacking_Category>
+			</Tractor_Beam_Attack_Ability>
+			<Force_Healing_Ability Name="Warhammer_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>Warhammer, IA_Warhammer</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>23500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>74</Tactical_Build_Time_Seconds>
+
+		<Population_Value>8</Population_Value>
+		<!--<Space_Override_Population_Value>6</Space_Override_Population_Value>-->
+		<Tactical_Bribe_Cost>5875</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="Warhammer_Death_Clone">
+		<Text_ID>TEXT_UNIT_IMPLACABLE</Text_ID>
+		<Space_Model_Name>EV_WarhammerBC_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Death_Explosions>Death_Explosion_Flash_8000</Death_Explosions>
+		<Scale_Factor>0.55</Scale_Factor>
+		<Layer_Z_Adjust>1000</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</WarhammerUnit_Data>

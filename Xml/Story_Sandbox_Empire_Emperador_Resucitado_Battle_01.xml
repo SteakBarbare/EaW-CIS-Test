@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" ?>
+
+<!--**************************************************************************-->
+<!--******** EVENTO TACTICO BATALLA DE CoruscantDE TERRESTRE ********-->
+<!--**************************************************************************-->
+
+<Story>
+
+      <Event Name="Batalla_de_CoruscantDE_Land">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0</Event_Param1>
+	  </Event>
+			<Event Name="Batalla_de_CoruscantDE_Land_ADD_OBJECTIVE_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>ADD_OBJECTIVE</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANTDE_E</Reward_Param1>
+				<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+			</Event>
+			
+	<Event Name="Anular_Retirada_Rebelde">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Rebel</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>	
+	
+	<Event Name="Anular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>			
+			
+<!--DIALOGO IMPERIAL DE ENTRADA -->
+	<Event Name="Dialogo_Inicio_01">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Reward_Type>MULTIMEDIA</Reward_Type>
+        <Reward_Param1>MB_LAND_HISTORY_DARKEMPIRECORUSCANTE</Reward_Param1>
+        <Reward_Param2>10</Reward_Param2>
+        <Prereq>Batalla_de_CoruscantDE_land</Prereq>
+    </Event>
+	
+	<Event Name="Dialogo_Inicio_01b">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>8</Event_Param1>
+        <Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+        <Prereq>Dialogo_Inicio_01</Prereq>
+    </Event>
+	
+	<Event Name="Destruidos_T1B">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>T1B_TANK</Event_Param1>
+		<Event_Param3>5</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_00">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_00</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Destruidos_T1B</Prereq>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement_00">
+		<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param2>Story_Trigger_Zone_00</Event_Param2>
+		<Event_Param3>100</Event_Param3>
+		<Prereq>Destruidos_T1B</Prereq>
+	</Event>
+	
+	<Event Name="UnHIGHLIGHT_OBJECT_00">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_00</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Empire_Reinforcement_00</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Vwing">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>V_Wing_Airspeeder</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_T5B">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>T5B_TANK</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_01</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Destruidos_Vwing Destruidos_T5B</Prereq>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement_01">
+		<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param2>Story_Trigger_Zone_01</Event_Param2>
+		<Event_Param3>100</Event_Param3>
+		<Prereq>Destruidos_T5B Destruidos_Vwing</Prereq>
+	</Event>
+	
+	<Event Name="UnHIGHLIGHT_OBJECT_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_01</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Empire_Reinforcement_01</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_ACC">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>AAC_Hovertank</Event_Param1>
+		<Event_Param3>4</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_02">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_02</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Destruidos_ACC</Prereq>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement_02">
+		<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param2>Story_Trigger_Zone_02</Event_Param2>
+		<Event_Param3>100</Event_Param3>
+		<Prereq>Destruidos_ACC</Prereq>
+	</Event>
+	
+	<Event Name="UnHIGHLIGHT_OBJECT_02">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_02</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Empire_Reinforcement_02</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_T6B">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>T6B_Tank</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_03</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Destruidos_T6B</Prereq>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement_03">
+		<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param2>Story_Trigger_Zone_03</Event_Param2>
+		<Event_Param3>100</Event_Param3>
+		<Prereq>Destruidos_T6B</Prereq>
+	</Event>
+	
+	<Event Name="UnHIGHLIGHT_OBJECT_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_03</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Empire_Reinforcement_03</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_T8B">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>T8B_Tank</Event_Param1>
+		<Event_Param3>5</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Xwing">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>X_Wing_Fighter_Land</Event_Param1>
+		<Event_Param3>3</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Ywing">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Y_Wing_Land</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_MPTL">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>MPTL</Event_Param1>
+		<Event_Param3>2</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_04">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_04</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Destruidos_T8B Destruidos_Xwing Destruidos_Ywing Destruidos_MPTL</Prereq>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement_04">
+		<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param2>Story_Trigger_Zone_04</Event_Param2>
+		<Event_Param3>100</Event_Param3>
+		<Prereq>Destruidos_MPTL Destruidos_Ywing Destruidos_Xwing Destruidos_T8B</Prereq>
+	</Event>
+	
+	<Event Name="UnHIGHLIGHT_OBJECT_04">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_04</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Empire_Reinforcement_04</Prereq>
+	</Event>
+		
+	<Event Name="Destruidos_WookieGunship">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>WookieGunship</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Rebel_Wookie_Trooper_Squad">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Squad_Wookietrooper</Event_Param1>
+		<Event_Param3>54</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="Destruidos_Rebel_Wookie_Buster_Squad">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Squad_Plex_Wookie</Event_Param1>
+		<Event_Param3>18</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+	<Event Name="HIGHLIGHT_OBJECT_05">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_05</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Destruidos_WookieGunship Destruidos_Rebel_Wookie_Trooper_Squad Destruidos_Rebel_Wookie_Buster_Squad</Prereq>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement_05">
+		<Event_Type>STORY_UNIT_PROXIMITY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param2>Story_Trigger_Zone_05</Event_Param2>
+		<Event_Param3>100</Event_Param3>
+		<Prereq>Destruidos_WookieGunship Destruidos_Rebel_Wookie_Trooper_Squad Destruidos_Rebel_Wookie_Buster_Squad</Prereq>
+	</Event>
+	
+	<Event Name="UnHIGHLIGHT_OBJECT_05">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>HIGHLIGHT_OBJECT</Reward_Type>
+		<Reward_Param1>Story_Trigger_Zone_05</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>		
+		<Reward_Param3>2000</Reward_Param3>		
+		<Prereq>Empire_Reinforcement_05</Prereq>
+	</Event>
+	
+
+	<Event Name="Empire_Reinforcement01_DialogCue">
+		<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+		<Event_Param2>REINFORCE_DIALOG_GO_01</Event_Param2>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>
+	
+	<Event Name="Empire_Reinforcement01_Dialog_00">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>MULTIMEDIA</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_EMPIRE_ACT01_MISSION_TWO_52</Reward_Param1>
+		<Reward_Param2>-1</Reward_Param2>	
+		<Reward_Param8>EMPIRE_ACT01_MISSION_TWO_52</Reward_Param8>
+		<Reward_Param9>Commander_Moff_Loop</Reward_Param9>
+		<Reward_Param10>1</Reward_Param10>
+		<Prereq>Empire_Reinforcement01_DialogCue</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>	
+
+	<Event Name="Empire_Reinforcement01_Dialog_00c">
+		<Event_Type>STORY_SPEECH_DONE</Event_Type>
+		<Event_Param1>EMPIRE_ACT01_MISSION_TWO_52</Event_Param1>
+		<Reward_Type>SCREEN_TEXT</Reward_Type>
+		<Reward_Param1>TEXT_SPEECH_EMPIRE_ACT01_MISSION_TWO_52</Reward_Param1>
+		<Reward_Param4>remove</Reward_Param4>
+		<Prereq>Empire_Reinforcement01_Dialog_00</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>
+	
+				<Event Name="Empire_Reinforcement01_Dialog_RemoveMovie">
+					<Event_Type>STORY_TRIGGER</Event_Type>
+					<Reward_Type>STOP_COMMANDBAR_MOVIE</Reward_Type>
+					<Prereq>Empire_Reinforcement01_Dialog_00c</Prereq>
+					<Branch>Branch_Empire_Reinforcement01</Branch>
+				</Event>
+				
+	<Event Name="Fin_dialog_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>RESET_BRANCH</Reward_Type>
+		<Reward_Param1>Branch_Empire_Reinforcement01</Reward_Param1>
+		<Prereq>Empire_Reinforcement01_Dialog_RemoveMovie</Prereq>
+		<Branch>Branch_Empire_Reinforcement01</Branch>
+	</Event>			
+		
+	
+	
+	<Event Name="Destruido_Comandante">
+		<Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+		<Event_Param1>Ei_Commander_Mix01</Event_Param1>
+		<Event_Param3>1</Event_Param3>
+		<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+	</Event>
+	
+    <Event Name="Rebeldes_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>REBEL</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+			
+			<Event Name="Objetivos_Completados">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>OBJECTIVE_COMPLETED</Reward_Type>
+				<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANTDE_E</Reward_Param1>
+				<Prereq>Rebeldes_Destruidos</Prereq>
+			</Event>
+			
+			<Event Name="Victoria_Imperial">
+				<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+				<Event_Param2>Victoria_Imperial</Event_Param2>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>EMPIRE</Reward_Param1>
+				<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+			</Event>
+		
+	<Event Name="Imperiales_Destruidos">
+		<Event_Type>STORY_CHECK_DESTROYED</Event_Type>
+		<Event_Param1>EMPIRE</Event_Param1>
+		<Event_Param2>DESTROY_ALL</Event_Param2>
+		<Prereq>Dialogo_Inicio_01b</Prereq>
+	</Event>
+		
+	<Event Name="Objetivos_InCompletados1">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>OBJECTIVE_FAILED</Reward_Type>
+		<Reward_Param1>TEXT_INTERVENTION_OBJECTIVE_BATALLA_DE_CORUSCANTDE_E</Reward_Param1>
+		<Prereq>Imperiales_Destruidos</Prereq>
+		<Prereq>Destruido_Comandante</Prereq>
+	</Event>
+	
+			<Event Name="Derrota_por_Victoria_Rebelde">
+				<Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+				<Event_Param2>Derrota_por_Victoria_Rebelde</Event_Param2>
+				<Reward_Type>VICTORY</Reward_Type>
+				<Reward_Param1>REBEL</Reward_Param1>
+				<Prereq>Batalla_de_CoruscantDE_Land</Prereq>
+			</Event>
+			
+	<Event Name="DesAnular_Retirada_Imperial">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_RETREAT</Reward_Type>
+		<Reward_Param1>Empire</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Objetivos_InCompletados1</Prereq>
+		<Prereq>Objetivos_Completados</Prereq>
+	</Event>							
+</Story>

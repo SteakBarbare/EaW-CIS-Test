@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Rep_TX130_Repulsor_TankUnit_Data>
+	<GroundVehicle Name="Rep_TX130_Repulsor_Tank">
+		<Variant_Of_Existing_Type>TX130_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> C_Super_BattleDroid_Squad C_Stap_Squad C_Droideka_Mk1_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_Hailfire_Tank_Droid_Brigade UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire</Affiliation>
+		
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_TX130_Armor_Group">
+		<Variant_Of_Existing_Type>TX130_Armor_Group</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> C_Super_BattleDroid_Squad C_Stap_Squad C_Droideka_Mk1_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_AAT_Group C_Hailfire_Tank_Droid_Brigade UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Company_Units>Rep_TX130_Repulsor_Tank, Rep_TX130_Repulsor_Tank, Rep_TX130_Repulsor_Tank, Rep_TX130_Repulsor_Tank</Company_Units>
+		<Icon_Name>I_BUTTON_Rep_TX130TANK.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Clon_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+	
+</Rep_TX130_Repulsor_TankUnit_Data>

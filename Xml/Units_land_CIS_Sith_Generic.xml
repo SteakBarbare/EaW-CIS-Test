@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<SithUnit_Data>
+	
+	<GenericHeroUnit Name="Sith">
+		<Variant_Of_Existing_Type>Sith_generic</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Republic_CloneTrooper_Squad Republic_Stormtrooper_Squad Republic_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group Jedi_Company UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>CIS, Rebel</Affiliation>
+		
+		<AI_Combat_Power>400</AI_Combat_Power>
+		
+		<Selection_Blob_Material_Name>Selection_CIS_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_CIS_Hero</Highlight_Blob_Material_Name>
+
+	</GenericHeroUnit>	
+	<HeroCompany Name="Sith_Team">
+		<Variant_Of_Existing_Type>Imperial_Sith</Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> Republic_CloneTrooper_Squad Republic_Stormtrooper_Squad Republic_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group Jedi_Company UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>1800</Build_Cost_Credits>
+		<Build_Time_Seconds>35</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Required_Planets>
+		Korriban, Rattatak 
+		</Required_Planets>
+		<Company_Transport_Unit>ProvidenceSith</Company_Transport_Unit>
+		<Company_Units>
+		Sith
+		</Company_Units>
+
+		<Icon_Name>I_BUTTON_CIS_SITH.tga</Icon_Name>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Tactical_Build_Prerequisites>CIS_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>		   
+
+	</HeroCompany>
+	
+	<TransportUnit Name="ProvidenceSith">
+		<Variant_Of_Existing_Type>CIS_Providence</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PROVIDENCESITH</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_LORD_SITH </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> REP_AcclamatorI Rep_AcclamatorII Rep_VictorII </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Rep_Venator REP_Valiant Rep_MandatorI </Encyclopedia_Vulnerable_To>
+		<Icon_Name>I_BUTTON_CIS_PROVIDENCE.tga</Icon_Name>
+		<Space_Model_Name>CIS_Providence.ALO</Space_Model_Name>
+
+		<Hyperspace_Speed>1.5</Hyperspace_Speed>
+
+		<Ship_Class>Transport</Ship_Class>
+
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PROVIDENCESITH </Encyclopedia_Text>
+
+		<CategoryMask> Transport | AntiFrigate </CategoryMask>
+		<Landing_Transport_Variant>Caza_Sith_Landing_Transport</Landing_Transport_Variant>
+	</TransportUnit>
+	
+</SithUnit_Data>

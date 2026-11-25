@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<FaragutUnit_Data>
+	
+	<SpaceUnit Name="Faragut">
+		<Variant_Of_Existing_Type>FaragutORG</Variant_Of_Existing_Type>
+		<Affiliation>Empire, GA</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Imperiales, AdvancedTech_7</Required_Special_Structures>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Death_Clone>Damage_Normal, Faragut_Death_Clone</Death_Clone>
+		<Starting_Spawned_Units_Tech_0>TIE_Interceptor_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Bomber_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Interceptor_Squadron7, 7</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Bomber_Squadron4, 11</Reserve_Spawned_Units_Tech_0>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FARAGUT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_INTERCEPTOR TEXT_WAVES_X3 TEXT_UNIT_TIE_BOMBER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_4</Encyclopedia_Text>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="FaragutORG">
+		<Variant_Of_Existing_Type>Victory_Destroyer_No_Fighters</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_FARAGUT</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_FARAGUT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_INTERCEPTOR TEXT_UNIT_TIE_BOMBER TEXT_DESC_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_CARRIER </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> CC9600 CC7700 Ranger </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Mc80cORG R_BulwarkII MC90 </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>Ev_Faragut.alo</Space_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		
+		<Layer_Z_Adjust>200.0</Layer_Z_Adjust>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+        <Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+
+		<Autoresolve_Health>25000</Autoresolve_Health>
+		<Shield_Points>25000</Shield_Points>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Shield_Refresh_Rate>27000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>400000</Energy_Refresh_Rate>
+				
+		<Build_Cost_Credits>5600</Build_Cost_Credits>
+		<AI_Combat_Power>2760</AI_Combat_Power>
+		<Build_Time_Seconds>65</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<Targeting_Priority_Set>FrigateAA</Targeting_Priority_Set>
+		<HardPoints>
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_T_Faragut_01,
+			HP_T_Faragut_02,
+			HP_T_Faragut_03,
+			HP_T_Faragut_04,
+			HP_T_Faragut_05,
+			HP_T_Faragut_06,
+			HP_T_Faragut_07,
+			HP_T_Faragut_08,
+			HP_T_ISD3_Side_01,
+			HP_T_ISD3_Side_02,
+			HP_T_ISD2_Side_03,
+			HP_T_ISD2_Side_04,
+			HP_T_ISD2_Side_05,
+			HP_T_ISD2_Side_06,
+			HP_T_ISD2_Side_07,
+			HP_T_ISD2_Side_08,
+			HP_T_ISD2_Side_09,
+			HP_T_ISD2_Side_10,
+			HP_T_ISD2_Side_11,
+			HP_T_ISD2_Side_12,
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Fighter_Bay_Small_00,
+			HP_Fighter_Bay_Small_01,
+			HP_Shield_Generator_Small_00,
+			HP_Shield_Generator_Small_01,
+			HP_Engines_Small_00,
+			HP_Engines_Small_01
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_EV_Faragut.tga</Icon_Name>
+		<GUI_Model_Name>Ev_Faragut.alo</GUI_Model_Name>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Lua_Script>ObjectScript_ZLayer</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+		<Tactical_Build_Cost_Multiplayer>5600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+		
+		<Radar_Icon_Name>I_RADAR_CAPITAL_SHIP_BOX.tga</Radar_Icon_Name>
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Size>0.054  0.054</Radar_Icon_Size>
+		
+		<Tactical_Bribe_Cost>1400</Tactical_Bribe_Cost>
+	</SpaceUnit>
+     <SpaceUnit Name="Faragut_Death_Clone">
+		<Text_ID>TEXT_UNIT_VICTORYIII_DESTROYER</Text_ID>
+		<Space_Model_Name>Ev_Faragut_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Scale_Factor>1.25</Scale_Factor>                                              
+		<Layer_Z_Adjust>-200.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</FaragutUnit_Data>

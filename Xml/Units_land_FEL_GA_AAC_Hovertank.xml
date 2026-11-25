@@ -1,0 +1,171 @@
+﻿<?xml version="1.0"?>
+
+
+<GA_AAC_HovertankUnit_Data>
+	<GroundVehicle Name="GA_AAC_Hovertank">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 255, 210, 0, 255 </No_Colorization_Color>
+		<Text_ID>TEXT_UNIT_GA_AAC</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler AT_ST_Walker SPMAT_Walker</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>Stormtrooper AT_AT_Walker UC_Empire_Buildable_Anti_Vehicle_Turret</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_AAC</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_GA_AAC_HOVERTANK.tga</Icon_Name>
+		<Land_Model_Name>GA_AAC_HOVERTANK.ALO</Land_Model_Name>
+		<Scale_Factor>0.9</Scale_Factor>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Max_Speed>2.0</Max_Speed>
+		<Movement_Animation_Speed> 2.0</Movement_Animation_Speed>
+		<Max_Rate_Of_Turn>17.0</Max_Rate_Of_Turn>
+		<FormationSpacing> 1.5 </FormationSpacing>
+		<FormationOrder> 4 </FormationOrder>
+		<FormationRaggedness> 2.4 </FormationRaggedness>
+		<MaxJiggleDistance> 6 </MaxJiggleDistance>
+		<SecondaryTurnInPlaceROTCoefficient> .5 </SecondaryTurnInPlaceROTCoefficient>
+		<MinSecondaryTurnROTCoefficient> .01 </MinSecondaryTurnROTCoefficient>
+		<MaxSecondaryTurnROTCoefficient> .7 </MaxSecondaryTurnROTCoefficient>
+		<SecondaryTurnLookaheadDistance> 0 </SecondaryTurnLookaheadDistance>
+		<Custom_Hard_XExtent> 17.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 8.5</Custom_Hard_YExtent>
+		<Hardpoints>
+				HP_Gr_Front_Laser_Green_00, HP_Gr_Front_Laser_Green_01, HP_Gr_Front_Laser_Green_02, HP_Gr_Front_Laser_Green_03	
+		</Hardpoints>
+		
+		<Death_Clone>Damage_Normal, GA_ACC_Death_Clone_00</Death_Clone>
+
+		<Armor_Type> Armor_ATST </Armor_Type>
+
+		<Shield_Points>150</Shield_Points>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Tactical_Health>200</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		<LandBehavior>GARRISON_UNIT,BARRAGE, ABILITY_COUNTDOWN, HUNT, AFFECTED_BY_SHIELD, WALK_LOCOMOTOR, IDLE,TARGETING, WEAPON, TURRET, SHIELDED, POWERED, REVEAL,HIDE_WHEN_FOGGED, UNIT_AI, SURFACE_FX, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING</LandBehavior>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>Turret_Bone</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_Bone</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>10.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+		
+		<Turret_Targets_Ground_Vehicles> 3</Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 1 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+		
+		<Projectile_Types>Proj_Plex_Missile_AAC</Projectile_Types>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>600.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>7.0</Ranged_Target_Z_Adjust>
+		<Projectile_Fire_Recharge_Seconds>2.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>12</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Infantry, 15.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 4.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+				
+		<SFXEvent_Fire>Unit_Plex_Soldier_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Swamp_Speeder</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Swamp_Speeder</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pod_Walker</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Swamp_Speeder</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Swamp_Speeder</SFXEvent_Guard>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Swamp_Speeder</SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Swamp_Speeder</SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Engine_Idle_Loop> Unit_T2B_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_T2B_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+				
+		<CategoryMask> Vehicle | AntiVehicle| AntiAir </CategoryMask>
+
+		<Ground_Vehicle_Turret_Target> Yes </Ground_Vehicle_Turret_Target>
+		<Overall_Length>31.0</Overall_Length>
+		<Overall_Width>14.0</Overall_Width>
+
+		<AI_Combat_Power>210</AI_Combat_Power>
+
+		<Targeting_Priority_Set>AntiAir</Targeting_Priority_Set>
+
+		<Select_Box_Scale>45</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Barrage_Interdictor </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_Plex_Missile_AAC_Barrage</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+
+	</GroundVehicle>
+	<GroundVehicle Name="GA_ACC_Death_Clone_00">
+		<Variant_Of_Existing_Type>GA_AAC_Hovertank</Variant_Of_Existing_Type>
+		<Land_Model_Name>GA_AAC_HOVERTANK_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundCompany Name="GA_AAC_Hovertank_Squad">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_AAC</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler AT_ST_Walker SPMAT_Walker</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To>Stormtrooper AT_AT_Walker UC_Empire_Buildable_Anti_Vehicle_Turret</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_AAC TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Formation_Priority>3</Formation_Priority>
+		<Company_Transport_Unit>GA_Crix_Transport</Company_Transport_Unit>
+		<Company_Units>GA_AAC_Hovertank, GA_AAC_Hovertank, GA_AAC_Hovertank, GA_AAC_Hovertank</Company_Units>
+		<Max_Squad_Size>4</Max_Squad_Size>
+		<Icon_Name>i_button_GA_AAC_HOVERTANK.tga</Icon_Name>
+
+		<SFXEvent_Build_Started>RHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Pod_Walker</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Pod_Walker</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>550</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	</GroundCompany>
+	
+
+</GA_AAC_HovertankUnit_Data>

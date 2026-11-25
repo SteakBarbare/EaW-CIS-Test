@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<E_RB_HeroesUnit_Data>
+	
+	<HeroUnit Name="Emperor_PalpatineROS">
+		<Variant_Of_Existing_Type>Emperor_Palpatine</Variant_Of_Existing_Type>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+	</HeroUnit>
+	<HeroCompany Name="Emperor_PalpatineROS_Team">
+		<Variant_Of_Existing_Type>Emperor_Palpatine_Team</Variant_Of_Existing_Type>
+		<Company_Transport_Unit>PalpatineReborn_Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Emperor_PalpatineROS</Company_Units>
+		<CategoryMask>LandHero</CategoryMask>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Ravager_SSD">
+		<Variant_Of_Existing_Type>SSD02</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RAVAGER_SSD</Text_ID>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>1</Build_Limit_Lifetime_Per_Player>
+	</SpaceUnit>
+	
+	<HeroUnit Name="Rae_Sloane">
+		<Variant_Of_Existing_Type>Basic_Generic_H</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_RAE_SLOANE_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Rae_Sloane.TGA</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Spawn_Planet>Fondor</Spawn_Planet>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RAE_SLOANE TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<Abilities SubObjectList="Yes">
+			
+			<Reduce_Production_Time_Ability Name="Rae_Sloane_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Rae_Sloane_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Rae_Sloane_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GRIFF_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Rae_Sloane.TGA</Icon_Name>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Rae_Sloane</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_RAE_SLOANE TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<SFXEvent_Build_Complete>Unit_Select_Silri</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Silri</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+	
+	<HeroUnit Name="Gallius_Rax">
+		<Variant_Of_Existing_Type>Basic_Generic_H</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GALLIUS_RAX_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Gallius_Rax.TGA</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Spawn_Planet>Fondor</Spawn_Planet>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GALLIUS_RAX TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<Abilities SubObjectList="Yes">
+
+			<Reduce_Production_Time_Ability Name="Rae_Sloane_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Rae_Sloane_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Gallius_Rax_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GALLIUS_RAX_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Gallius_Rax.TGA</Icon_Name>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Gallius_Rax</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GALLIUS_RAX TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+	
+	<HeroUnit Name="Brendol_Hux">
+		<Variant_Of_Existing_Type>Basic_Generic_H</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GALLIUS_RAX_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Brendol_Hux.TGA</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Spawn_Planet>Fondor</Spawn_Planet>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GALLIUS_RAX TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<Abilities SubObjectList="Yes">
+
+			<Reduce_Production_Time_Ability Name="Rae_Sloane_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Infantry</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Rae_Sloane_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Brendol_Hux_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_BRENDOL_HUX_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Brendol_Hux.TGA</Icon_Name>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Brendol_Hux</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_BRENDOL_HUX TEXT_TOOLTIP_REDUCE_TIME_INFANTRY_10 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+	
+	<HeroUnit Name="Yupe_Tashu">
+		<Variant_Of_Existing_Type>Basic_Generic_H</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_YUPE_TASHU_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Yupe_Tashu.TGA</Icon_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Spawn_Planet>Fondor</Spawn_Planet>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<Encyclopedia_Text> TEXT_TOOLTIP_YUPE_TASHU TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<Abilities SubObjectList="Yes">
+
+			<Reduce_Production_Time_Ability Name="Rae_Sloane_Production_Time_Reduction">
+				<Applicable_Unit_Categories>Capital</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Rae_Sloane_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Yupe_Tashu_Team">
+		<Variant_Of_Existing_Type>Basic_Generic_H_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_YUPE_TASHU_TEAM</Text_ID>
+		<Icon_Name>I_BUTTON_Ei_Yupe_Tashu.TGA</Icon_Name>
+		<Company_Transport_Unit>Shuttle_Tyderium</Company_Transport_Unit>
+		<Company_Units>Yupe_Tashu</Company_Units>
+		<Encyclopedia_Text> TEXT_TOOLTIP_YUPE_TASHU TEXT_TOOLTIP_REDUCE_TIME_CAPITAL_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+
+		<CategoryMask>NonCombatHero</CategoryMask>
+	</HeroCompany>
+
+</E_RB_HeroesUnit_Data>

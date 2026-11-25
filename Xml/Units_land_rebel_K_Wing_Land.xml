@@ -1,0 +1,132 @@
+﻿<?xml version="1.0"?>
+
+
+<K_Wing_LandUnit_Data>
+
+	<GroundVehicle Name="K_Wing_Land">
+		<Variant_Of_Existing_Type>Y_Wing_Land</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_K_WING</Text_ID>
+		<Encyclopedia_Good_Against>SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_K_WING</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RV_KwingLand.ALO</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor><!--Reescalado real-->
+		<Size_Value>15</Size_Value>
+		<Select_Box_Scale>40</Select_Box_Scale>
+		<Max_Speed>4.8</Max_Speed>
+		<Min_Speed>4.3</Min_Speed>
+		<OverrideAcceleration> .2 </OverrideAcceleration>
+		<OverrideDeceleration> .2 </OverrideDeceleration>
+		<Max_Rate_Of_Turn>1.3</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>3.0</Max_Rate_Of_Roll>
+		<Max_Lift>3.5</Max_Lift>
+		<Bank_Turn_Angle>70</Bank_Turn_Angle>
+
+		<Affiliation>Rebel, GA</Affiliation>
+
+		<Armor_Type> Armor_Interdictor </Armor_Type>
+		<Shield_Armor_Type>Shield_HvyTank</Shield_Armor_Type>
+
+		<Autoresolve_Health>40.0</Autoresolve_Health>
+		<Shield_Points>300</Shield_Points>
+		<Tactical_Health>450</Tactical_Health>
+		<Shield_Refresh_Rate>4</Shield_Refresh_Rate>
+		<Energy_Capacity>500</Energy_Capacity>
+		<Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_T4BX</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+		
+		<HardPoints>
+			HP_Gr_Fighter_Bombas_00, HP_Gr_Fighter_Ion, HP_Gr_Fighter_Proton_Torpedo_00
+		</HardPoints>
+
+		<SFXEvent_Fire>Unit_Corvette_Fire</SFXEvent_Fire>
+		
+		<SFXEvent_Select>Unit_Select_Katarn</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Katarn</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Katarn</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Katarn</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Katarn</SFXEvent_Guard>
+		
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Ambient_Moving> Unit_Moldy_Crow_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_A_Wing </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_A_Wing </SFXEvent_Health_Critical_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Low_Warning> Unit_Enemy_Health_Low_A_Wing </SFXEvent_Enemy_Damaged_Health_Low_Warning>
+		<SFXEvent_Enemy_Damaged_Health_Critical_Warning> Unit_Enemy_Health_Critical_A_Wing </SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_A_Wing_Cinematic_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Icon_Name>I_BUTTON_RV_KWING.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Secondary ability -->
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>5</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="Rebel_K_WingLand_squadron">
+		<Variant_Of_Existing_Type>Rebel_Speeder_Wing</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_K_WING</Text_ID>
+		<Encyclopedia_Good_Against>SPMAT_Walker M1_Repulsor_Tank</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AA_Walker UC_Empire_Buildable_Anti_Aircraft_Turret </Encyclopedia_Vulnerable_To>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>550</Build_Cost_Credits>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+
+		<Required_Special_Structures>R_Ground_Heavy_Vehicle_Factory, R_XCommand, AdvancedTech_8</Required_Special_Structures>
+
+		<Company_Transport_Unit>K_Wing_Land_Transport</Company_Transport_Unit>
+		<Company_Units>K_Wing_Land, K_Wing_Land</Company_Units>
+		<Icon_Name>I_BUTTON_RV_KWING.tga</Icon_Name>
+		<GUI_Model>RV_KwingLand.ALO</GUI_Model>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Pirate_Fighter</SFXEvent_Build_Complete>
+
+		<Tactical_Build_Cost_Multiplayer>900</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>25</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+		<Encyclopedia_Text>TEXT_TOOLTIP_K_WING TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HVY_BOMBER</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+	<TransportUnit Name="K_Wing_Land_Transport">
+		<Variant_Of_Existing_Type>Gallofree_Transport</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_K_WingLand_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>K_Wing_Land_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<TransportUnit Name="K_Wing_Land_Landing">
+		<Variant_Of_Existing_Type>K_Wing_Land_Transport</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>0.25</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>RV_K_WingLand_Landing.ALO</Land_Model_Name>
+	</TransportUnit>
+</K_Wing_LandUnit_Data>

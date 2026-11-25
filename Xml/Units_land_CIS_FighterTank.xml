@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<CIS_FIGHTERTANKUnit_Data>
+	
+	<GroundVehicle Name="CIS_FIGHTERTANK">
+		<Variant_Of_Existing_Type>AAT_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_FIGHTERTANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Scout_Squad Empire_AT_AP_Company IMPV_19_landspeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT-TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_FIGHTERTANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_MEDIUM_VEHICLE</Encyclopedia_Unit_Class>
+
+		<Land_Model_Name>Cis_FighterTank.ALO</Land_Model_Name>
+		<Scale_Factor>0.8</Scale_Factor><!--Reescalado real-->
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Max_Speed>2.00</Max_Speed>
+		<Movement_Animation_Speed> 2.30 </Movement_Animation_Speed>
+		<Max_Rate_Of_Turn>16.0</Max_Rate_Of_Turn>
+
+		<Shield_Points>100</Shield_Points>
+		<Tactical_Health>200</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+
+		<Projectile_Types>Proj_ATST_Blaster_Cannon_Red</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+
+		<Land_FOW_Reveal_Range>200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>180.0</Targeting_Max_Attack_Distance>
+
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<Icon_Name> I_BUTTON_CIS_FIGHTERTANK.tga </Icon_Name>
+
+		<SFXEvent_Fire>Unit_Crabdroid_Fire</SFXEvent_Fire>
+
+		<SFXEvent_Select>Unit_Select_B2Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Select_B2Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Select_B2Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Select_B2Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Select_B2Droid</SFXEvent_Guard>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Critical_B2Droid </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_B2Droid </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_B2Droid </Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Select_B2Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Select_B2Droid </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_2M_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_2M_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+
+		<AI_Combat_Power>80</AI_Combat_Power>
+
+		<Select_Box_Scale>60</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-6.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	0.3f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.3f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	1.5f</Mod_Multiplier>
+				<Recharge_Seconds>50</Recharge_Seconds>
+				<Expiration_Seconds>6</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_2M_Tank</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, FighterTank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="FighterTank_Death_Clone_00">
+		<Variant_Of_Existing_Type>CIS_FIGHTERTANK</Variant_Of_Existing_Type>
+		<Land_Model_Name>Cis_FighterTank_D.ALO</Land_Model_Name>
+				
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="CIS_FighterTank_Alliance">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CIS_FIGHTERTANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_AT_AP_Company Republic_CloneTrooper_Squad Republic_ATXT_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company Republic_UTAT_COMPANY REP_LAAT </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_FIGHTERTANK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TANK</Encyclopedia_Unit_Class>
+		
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+
+		<Company_Transport_Unit>Gtrans_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>CIS_FIGHTERTANK, CIS_FIGHTERTANK, CIS_FIGHTERTANK, CIS_FIGHTERTANK</Company_Units>
+
+		<Icon_Name>I_BUTTON_CIS_FIGHTERTANK.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_B2Droid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_B2Droid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	
+	
+</CIS_FIGHTERTANKUnit_Data>

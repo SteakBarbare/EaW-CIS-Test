@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<IMPLACABLEUnit_Data>
+	
+	<SpaceUnit Name="ImplaGr">
+		<Variant_Of_Existing_Type>ImplaGrORG</Variant_Of_Existing_Type>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<Required_Special_Structures>Super_Astilleros_Imperiales, AdvancedTech_7</Required_Special_Structures>
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+	</SpaceUnit>
+	<SpaceUnit Name="ImplaGrORG">
+		<Variant_Of_Existing_Type>Victory_Destroyer_No_Fighters</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IMPLACABLE</Text_ID>
+		<Encyclopedia_Good_Against> Calamari_Cruiser Mc80a Mc85 </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> K-wing B-Wing MC902_1 </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_IMPLACABLE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_AVENGER TEXT_WAVES_X2 TEXT_UNIT_TIE_INTERDICTOR TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_6</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HVY_BATTLECRUISER </Encyclopedia_Unit_Class>
+				
+		<Space_Model_Name>EV_ImplacableSD.ALO</Space_Model_Name>
+		
+		<!--<Custom_Hard_XExtent> 661.0 </Custom_Hard_XExtent>-->
+		<!--<Custom_Hard_YExtent> 245.0 </Custom_Hard_YExtent>-->
+
+		<Scale_Factor>1.0</Scale_Factor>
+				
+		<Armor_Type> Armor_Star_Destroyer </Armor_Type>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+		<Max_Speed>2.3</Max_Speed>
+		
+		<GUI_Bracket_Height>500</GUI_Bracket_Height>
+		<GUI_Bracket_Size>1</GUI_Bracket_Size>
+		<GUI_Bounds_Scale>0.2</GUI_Bounds_Scale>
+				
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.2</Max_Thrust>
+		
+
+		<!--<Layer_Z_Adjust>650.0</Layer_Z_Adjust>-->
+		<Layer_Z_Adjust>420.0</Layer_Z_Adjust>
+		
+		<Affiliation>Empire, GA</Affiliation>
+				
+		<Hyperspace>Yes</Hyperspace>
+
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>300000000</Tactical_Health>
+		<Shield_Refresh_Rate>262000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+		
+		<Ship_Class>capital</Ship_Class>
+		<Build_Cost_Credits>20000</Build_Cost_Credits>
+		<AI_Combat_Power>4920</AI_Combat_Power>
+		
+		<Build_Time_Seconds>200</Build_Time_Seconds>
+				
+		<Starting_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>TIE_Interdictor_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>TIE_Avenger_Squadron5, 17</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TIE_Interdictor_Squadron4, 17</Reserve_Spawned_Units_Tech_0>
+		<Death_Clone>Damage_Normal, IMPLACABLESD_Death_Clone</Death_Clone>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Asteroid_Damage_Hit_Particles>Large_Damage_Space</Asteroid_Damage_Hit_Particles>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		
+		<Death_Explosions>Large_Explosion_Space_Empire</Death_Explosions>
+		
+	
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+				
+		<HardPoints> 
+			HP_T_Implacable_01,
+			HP_T_Implacable_02,
+			HP_T_Implacable_03,
+			HP_T_Implacable_04,
+			HP_T_Implacable_05,
+			HP_T_Implacable_06,
+			HP_T_Implacable_07,
+			HP_T_Implacable_08,
+			HP_T_Implacable_09,
+			HP_T_Implacable_10,
+			HP_T_Implacable_11,
+			HP_T_Implacable_12,
+			HP_T_Implacable_13,
+			HP_T_Implacable_14,
+			HP_T_Implacable_15,
+			HP_T_Implacable_16,
+			HP_T_Implacable_17,
+			HP_T_Implacable_18,
+			HP_T_Implacable_19,
+			HP_T_Implacable_20,
+			HP_T_Implacable_21,
+			HP_T_Implacable_22,
+			HP_T_Implacable_23,
+			HP_T_Implacable_24,
+			HP_T_Implacable_25,
+			HP_T_Implacable_26,
+			HP_T_Implacable_27,
+			HP_T_Implacable_28,
+			HP_T_Implacable_29,
+			HP_T_Implacable_30,
+			HP_T_Implacable_31,
+			HP_T_Implacable_32,
+			HP_T_Implacable_33,
+			HP_T_Implacable_34,
+			HP_T_Implacable_35,
+			HP_T_Implacable_36,
+			HP_TM_Implacable_01,
+			HP_TM_Implacable_02,
+			HP_TM_Implacable_03,
+			HP_TM_Implacable_04,
+			HP_TM_Implacable_05,
+			HP_TM_Implacable_06,
+			HP_TM_Implacable_07,
+			HP_TM_Implacable_08,
+			HP_TM_Implacable_09,
+			HP_TM_Implacable_10,
+			HP_TM_Implacable_11,
+			HP_TM_Implacable_12,
+			HP_TM_Implacable_13,
+			HP_TM_Implacable_14,
+			HP_TM_Implacable_15,
+			HP_TM_Implacable_16,
+			HP_TM_Implacable_17,
+			HP_TM_Implacable_18,
+			HP_TM_Implacable_19,
+			HP_TM_Implacable_20,
+			HP_TM_Implacable_21,
+			HP_TM_Implacable_22,
+			HP_TM_Implacable_23,
+			HP_TM_Implacable_24,
+			HP_TM_Implacable_25,
+			HP_TM_Implacable_26,
+			HP_TM_Implacable_27,
+			HP_TM_Implacable_28,
+			HP_TM_Implacable_29,
+			HP_TM_Implacable_30,
+			HP_TM_Implacable_31,
+			HP_TM_Implacable_32,
+			HP_TM_Implacable_33,
+			HP_TM_Implacable_34,
+			HP_TM_Implacable_35,
+			HP_TM_Implacable_36,
+			HP_TM_Implacable_37,
+			HP_TM_Implacable_38,
+			HP_TM_Implacable_39,
+			HP_TM_Implacable_40,
+			HP_TM_Implacable_41,
+			HP_TM_Implacable_42,
+			HP_TM_Implacable_43,
+			HP_TM_Implacable_44,
+			HP_TM_Implacable_45,
+			HP_TM_Implacable_46,
+			HP_TM_Implacable_47,
+			HP_TM_Implacable_48,
+			HP_TM_Implacable_49,
+			HP_TM_Implacable_50,
+			HP_TM_Implacable_51,
+			HP_TM_Implacable_52,
+			HP_TM_Implacable_53,
+			HP_TM_Implacable_54,
+			HP_TM_Implacable_55,
+			HP_TM_Implacable_56,
+			HP_TM_Implacable_57,
+			HP_TM_Implacable_58,
+			HP_TM_Implacable_59,
+			HP_TM_Implacable_60,
+			HP_TM_Implacable_61,
+			HP_TM_Implacable_62,
+			HP_TM_Implacable_63,
+			HP_TM_Implacable_64,
+			HP_TM_Implacable_65,
+			HP_TM_Implacable_66,
+			HP_TM_Implacable_67,
+			HP_TM_Implacable_68,
+			HP_TM_Implacable_69,
+			HP_TM_Implacable_70,
+			HP_TM_Implacable_71,
+			HP_TM_Implacable_72,
+			HP_TM_Implacable_73,
+			HP_TM_Implacable_74,
+			HP_TM_Implacable_75,
+			HP_TM_Implacable_76,
+			HP_TM_Implacable_77,
+			HP_TM_Implacable_78,
+			HP_TM_Implacable_79,
+			HP_TM_Implacable_80,
+			HP_TM_Implacable_81,
+			HP_TM_Implacable_82,
+			HP_TM_Implacable_83,
+			HP_TM_Implacable_84,
+			HP_TM_Implacable_85,
+			HP_TM_Implacable_86,
+			HP_TM_Implacable_87,
+			HP_TM_Implacable_88,
+			HP_TM_Implacable_89,
+			HP_TM_Implacable_90,
+			HP_TM_Implacable_91,
+			HP_TM_Implacable_92,
+			HP_TM_Implacable_93,
+			HP_TM_Implacable_94,
+			HP_TM_Implacable_95,
+			HP_TM_Implacable_96,
+			HP_LaserGX_01, 
+			HP_LaserGX_02, 
+			HP_LaserGX_03, 
+			HP_LaserGX_04, 
+			HP_LaserGX_05, 
+			HP_LaserGX_06, 
+			HP_LaserGX_07, 
+			HP_LaserGX_08, 
+			HP_LaserGX_09, 
+			HP_LaserGX_10,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10,
+			HP_Flak_11,
+			HP_Flak_12,
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_EnginesH_00,
+			HP_EnginesH_01,
+			HP_EnginesH_02,
+			HP_Tractor_Beam_Rebelde
+		</HardPoints>
+		<CategoryMask> Capital | AntiTransport </CategoryMask>
+		<Icon_Name>I_BUTTON_IMPLACABLE.TGA</Icon_Name>
+		<GUI_Model_Name>EV_ImplacableSD.ALO</GUI_Model_Name>
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Name>i_radar_capital_ship_empire.tga</Radar_Icon_Name>
+		<Radar_Icon_Size>0.06795  0.104085</Radar_Icon_Size>  
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>		
+			
+			<Unit_Ability>
+	            <Type>TRACTOR_BEAM</Type>
+	            <Mod_Multiplier>SPEED_MULTIPLIER, 0.8f</Mod_Multiplier>
+	            <GUI_Activated_Ability_Name> ImplacableSD_Tractor_Ability </GUI_Activated_Ability_Name> 
+	            <Recharge_Seconds>25</Recharge_Seconds>
+	            <SFXEvent_GUI_Unit_Ability_Activated>Unit_Tractor_Beam_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Special_Ability_Loop> Unit_Star_Destroyer_Tractor_Beam </SFXEvent_Special_Ability_Loop>
+				<Supports_Autofire>True</Supports_Autofire>
+	      </Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Abilities SubObjectList="Yes">
+			
+			<Tractor_Beam_Attack_Ability Name="ImplacableSD_Tractor_Ability">
+	            <Activation_Style> User_Input </Activation_Style>
+	            <Applicable_Unit_Categories>Transport | Corvette | Frigate | Spacehero | Capital</Applicable_Unit_Categories>
+				<Excluded_Unit_Types>Buzz_Droids, Millennium_Falcon</Excluded_Unit_Types>
+	            <Activation_Min_Range>10</Activation_Min_Range>
+	            <Activation_Max_Range>2000</Activation_Max_Range>
+	            <Target_Speed_Decrease_Percent>0.75</Target_Speed_Decrease_Percent>
+	            <Stacking_Category>0</Stacking_Category>            
+	      	</Tractor_Beam_Attack_Ability>
+
+		</Abilities>
+
+		<Tactical_Build_Cost_Multiplayer>20000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>74</Tactical_Build_Time_Seconds>
+		<Population_Value>8</Population_Value>
+		<!--<Space_Override_Population_Value>6</Space_Override_Population_Value>-->
+		<Tactical_Bribe_Cost>5000</Tactical_Bribe_Cost>
+	</SpaceUnit>
+	<SpaceUnit Name="IMPLACABLESD_Death_Clone">
+		<Text_ID>TEXT_UNIT_IMPLACABLE</Text_ID>
+		<Space_Model_Name>EV_ImplacableSD_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_8000</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>1400.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</IMPLACABLEUnit_Data>

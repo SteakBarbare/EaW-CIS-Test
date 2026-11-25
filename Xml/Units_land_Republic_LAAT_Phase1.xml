@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<Rep_LAAT_Phase1Unit_Data>
+	
+	<GroundVehicle Name="Rep_LAAT_Phase1">
+		<Variant_Of_Existing_Type> Rep_LAAT_ORG </Variant_Of_Existing_Type>
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, Rep_LAAT_Death_Clone_00</Death_Clone>
+		<CategoryMask> Air | AntiInfantry </CategoryMask>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Phase1_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02, B_Trooper_03 </Owner_Attachment_Bone>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Deploy_LAAT</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="Rep_LAAT_ORG">
+		<Variant_Of_Existing_Type> LAAT </Variant_Of_Existing_Type>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Nantex_squadron C_Vulture_squadron UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Land_Model_Name>REP_LAAT.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Ranged_Target_Z_Adjust>115.0</Ranged_Target_Z_Adjust>
+		<Turret_Bone_Name>Turret_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>Barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+
+		<Icon_Name>I_BUTTON_Rep_LAAT.tga</Icon_Name>
+
+		<SFXEvent_Fire>Unit_LAAT_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_Republic_LAAT</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Select_Republic_LAAT</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Republic_LAAT</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Republic_LAAT</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Republic_LAAT</SFXEvent_Guard>
+		
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<SFXEvent_Engine_Idle_Loop>Unit_LAAT_Idle_Engine_Loop</SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop>Unit_LAAT_Moving_Engine_Loop</SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop>Unit_LAAT_Idle_Engine_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+		<SFXEvent_Ambient_Moving> Unit_LAAT_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Republic_LAAT</SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Republic_LAAT</SFXEvent_Assist_Attack>
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<AI_Combat_Power>125</AI_Combat_Power>
+		
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+		
+	</GroundVehicle>
+	<GroundVehicle Name="Rep_LAAT_Death_Clone_00">
+		<Variant_Of_Existing_Type>LAAT_Death_Clone_00</Variant_Of_Existing_Type>
+		<Land_Model_Name>REP_LAAT_D.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_LAAT_Phase1">
+		<Variant_Of_Existing_Type> Imperial-LAAT </Variant_Of_Existing_Type>
+
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_AAT_Group MTT_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_Nantex_squadron C_Vulture_squadron UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Republic_Ground_Heavy_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Transport_Unit>REP_LAAT_Transport</Company_Transport_Unit>
+		<Company_Units>Rep_LAAT_Phase1</Company_Units>
+		<Icon_Name>I_BUTTON_Rep_LAAT.tga</Icon_Name>
+		<GUI_Model_Name>REP_LAAT.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Select_Republic_LAAT</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_Republic_LAAT</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY_TROOPERS</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>LAAT_Phase1_Deployed_Republic_Stormtrooper_Squad</Spawned_Object_Type>
+				<Max_Num_Spawned_Objects>1</Max_Num_Spawned_Objects>
+				<Owner_Attachment_Bone>B_Trooper_00, B_Trooper_01, B_Trooper_02 </Owner_Attachment_Bone>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Tactical_Build_Cost_Multiplayer>800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<Maintenance_Cost>0.05</Maintenance_Cost>
+		<Population_Value>1</Population_Value>
+	</GroundCompany>
+	<GroundCompany Name="LAAT_Phase1_Deployed_Republic_Stormtrooper_Squad">
+		<Variant_Of_Existing_Type>Republic_CloneTrooper_Squad_B</Variant_Of_Existing_Type>
+		<Company_Units> Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper, Republic_Squad_CloneTrooper</Company_Units>
+		<Max_Squad_Size> 9 </Max_Squad_Size>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Damage>9</Damage>
+		<Icon_Name>I_BUTTON_Rep_Phase1Clones.tga</Icon_Name>
+	</GroundCompany>
+	
+	<TransportUnit Name="REP_LAAT_Transport">
+		<Variant_Of_Existing_Type>CR20LAAT</Variant_Of_Existing_Type>
+		<Land_Model_Name>REP_LAAT_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>REP_LAAT_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<TransportUnit Name="REP_LAAT_Landing">
+		<Variant_Of_Existing_Type>REP_LAAT_Transport</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>0.25</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Hover_Offset>600.0</Hover_Offset>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>REP_LAAT_Landing.ALO</Land_Model_Name>
+	</TransportUnit>
+</Rep_LAAT_Phase1Unit_Data>

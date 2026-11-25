@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<Up_BS_KDY_to_BS_KDYIIUnit_Data>
+		
+		
+	<SpaceUnit Name="Up_BS_KDY_to_BS_KDYII">
+		<Variant_Of_Existing_Type>Up_BS_MC80b_to_BS_MC80bII</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_UNIT_KDY_MKI_to_KDY_MKII</Text_ID>
+        <Encyclopedia_Text>TEXT_TOOLTIP_KDY_MKI_to_KDY_MKII</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_UV_KDY_UPGRADE.TGA</Icon_Name>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_PesadosU, AdvancedTech_U</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Orbiting_Units>BS_KDY_Frg</Required_Orbiting_Units>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Lua_Script>Up_BS_KDY_to_BS_KDYII</Lua_Script>
+		<Population_Value>4</Population_Value>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Up_CO_KDY_to_CO_KDYII">
+		<Variant_Of_Existing_Type>Up_BS_MC80b_to_BS_MC80bII</Variant_Of_Existing_Type>
+		<GUI_Row>1</GUI_Row>
+		<Text_ID>TEXT_UNIT_KDY_MKI_to_KDY_MKII</Text_ID>
+        <Encyclopedia_Text>TEXT_TOOLTIP_KDY_MKI_to_KDY_MKII</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_UV_KDY_UPGRADE.TGA</Icon_Name>
+		<Affiliation>Corporate</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		<Required_Orbiting_Units>Co_KDY_Frg</Required_Orbiting_Units>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<Lua_Script>Up_Co_KDY_to_Co_KDYII</Lua_Script>
+		<Population_Value>4</Population_Value>
+	</SpaceUnit>
+
+	<SpaceUnit Name="BS_KDY_Frg_Up">
+		<Variant_Of_Existing_Type>BS_KDY_Frg</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_KDY_MKII</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_KDY_MKII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_SOLNEGROLIGHTFIGHTER TEXT_WAVES_X3 TEXT_UNIT_SOLNEGROMEDIUMFIGHTER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+		
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Affiliation>Underworld</Affiliation>
+
+
+		<Space_Model_Name>UV_KDY_MKII.alo</Space_Model_Name>
+		<Icon_Name>I_BUTTON_UV_KDY.TGA</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<AI_Combat_Power>12750</AI_Combat_Power>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Autoresolve_Health>36000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>200000000</Tactical_Health>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Layer_Z_Adjust>100.0</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Calamari_Cruiser </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<Affiliation>Underworld, Pirates</Affiliation>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+
+		<Death_Clone>Damage_Normal, KDY_Frg_Death_Clone</Death_Clone>
+
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>  
+		
+		<Starting_Spawned_Units_Tech_0>BS_Lt_Fighter_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BS_Med_Fighter_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>BS_Lt_Fighter_Squadron7, 8</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>BS_Med_Fighter_Squadron4, 8</Reserve_Spawned_Units_Tech_0>
+		
+		<HardPoints>
+			HP_T_U_KDY2_01,
+			HP_T_U_KDY2_02,
+			HP_T_U_KDY2_03,
+			HP_T_U_KDY2_04,
+			HP_T_U_KDY2_05,
+			HP_T_U_KDY2_06,
+			HP_T_U_KDY2_07,
+			HP_T_U_KDY2_08,
+			HP_T_U_KDY2_09,
+			HP_T_U_KDY2_10,
+			HP_T_U_KDY2_11,
+			HP_T_U_KDY2_12,
+			HP_T_U_KDY2_13,
+			HP_T_U_KDY2_14,
+			HP_T_U_KDY2_15,
+			HP_T_U_KDY2_16,
+			HP_T_U_KDY2_17,
+			HP_T_U_KDY2_18,
+			HP_T_U_KDY2_19,
+			HP_T_U_KDY2_20,
+			HP_T_U_KDY2_21,
+			HP_T_U_KDY2_22,
+			HP_T_U_KDY2_23,
+			HP_T_U_KDY2_24,
+			HP_T_U_KDY2_25,
+			HP_T_U_KDY2_26,
+			HP_T_U_KDY2_27,
+			HP_T_U_KDY2_28,
+			HP_T_U_KDY2_29,
+			HP_T_U_KDY2_30,
+			HP_T_U_KDY2_31,
+			HP_T_U_KDY2_32,
+			HP_LaserYXC_01,
+			HP_LaserYXC_02, 
+			HP_LaserYXC_03,
+			HP_LaserYXC_04,
+			HP_LaserYXC_05, 
+			HP_LaserYXC_06,
+			HP_LaserYXC_07,
+			HP_LaserYXC_08,
+			HP_LaserYXC_09, 
+			HP_LaserYXC_10,
+			HP_LaserYXC_11,
+			HP_LaserYXC_12, 	
+			HP_Shield_GeneratorH_00, 
+			HP_Fighter_BayH_00, 
+			HP_Fighter_BayH_01,
+			HP_EnginesH_00
+		</HardPoints>
+		
+
+		<Tactical_Build_Cost_Multiplayer>5000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>29</Tactical_Build_Time_Seconds>
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Expiration_Seconds>25</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	5.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.8f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Guard_Jedi_Cruiser</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		
+
+	</SpaceUnit>
+
+	
+</Up_BS_KDY_to_BS_KDYIIUnit_Data>

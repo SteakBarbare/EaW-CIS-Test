@@ -1,0 +1,1015 @@
+<?xml version="1.0"?>
+<StarBases>
+	
+	
+	<StarBase Name="Fel_Star_Base_1">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_STAR_BASE_SP_1</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_1 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_GA_CROSSFIRE TEXT_UNIT_GA_B22 TEXT_DESC_CANTIDAD_4 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+
+		<!--<Space_Model_Name>GA_Starbase_1.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_Rep_Station_01.ALO</Galactic_Model_Name>-->
+		<Space_Model_Name>NV_Baas_class_ST.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_NV_Baas_class_ST.alo</Galactic_Model_Name>
+		
+		<Affiliation>Fel</Affiliation>
+		<Build_Cost_Credits>850</Build_Cost_Credits>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Station>yes</Build_Tab_Space_Station>
+		<Size_Value>10</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>1</Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+
+		<Next_Level_Base>Fel_Star_Base_2</Next_Level_Base>
+		
+		<CategoryMask> Capital </CategoryMask>
+				
+		<Damage>35</Damage>
+		<Autoresolve_Health>150000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+				
+		<!-- -1 == no limit -->
+		<Starting_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 2</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 6</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>GA_B22_Squadron4, 2</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_B22_Squadron4, 6</Reserve_Spawned_Units_tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		 <Starting_Spawned_Units_Tech_0>EVF_Comm_Ship2_SB1, 1</Starting_Spawned_Units_Tech_0>  
+		
+		<Starting_Spawned_Units_Tech_0>GA_Comm_Ship3_SB1, 1</Starting_Spawned_Units_Tech_0>	
+		
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Fel_STR1, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_Fel_STR1, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Behavior>SELECTABLE, DUMMY_STAR_BASE</Behavior>
+		<SpaceBehavior> SPACE_OBSTACLE, TACTICAL_BUILD_OBJECTS, POWERED, SHIELDED, SPAWN_SQUADRON, TARGETING, ABILITY_COUNTDOWN, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ION_STUN_EFFECT</SpaceBehavior>
+				
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_SB_Defense_Ion_Circle,
+				UC_EVF_SB_Defense_Laser_Circle
+		</Tactical_Buildable_Objects_Campaign>
+		
+				
+		<HardPoints>
+			HP_T_Baas_G_01,
+			HP_T_Baas_G_02,
+			HP_T_Baas_G_03,
+			HP_T_Baas_G_04,
+			HP_T_Baas_G_05,
+			HP_T_Baas_G_06,
+			HP_T_Baas_07,
+			HP_T_Baas_08,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Empire_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+		<Radar_Icon_Name>i_radar_Fel_station1_2.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.05  0.05</Radar_Icon_Size>
+
+		<Icon_Name>I_BUTTON_Fel_st_Baas_1.tga</Icon_Name>
+
+		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_1_Empire</Retreat_Self_Destruct_Explosion>
+		<Death_Clone>Damage_Normal, NV_Baas_class_ST_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>10</Additional_Population_Capacity>
+		
+	</StarBase>
+	
+	<StarBase Name="Fel_Star_Base_2">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STAR_BASE_SP_2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_2 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_GA_CROSSFIRE TEXT_UNIT_GA_B22 TEXT_DESC_CANTIDAD_4 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_2.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_Rep_Station_02.ALO</Galactic_Model_Name>
+		<Affiliation>Fel</Affiliation>
+		<Build_Cost_Credits>1000</Build_Cost_Credits>
+		<AI_Combat_Power>7500</AI_Combat_Power>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<Build_Tab_Space_Station>yes</Build_Tab_Space_Station>
+		<Size_Value>20</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>2</Base_Level>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+
+		<Prev_Level_Base>Fel_Star_Base_1</Prev_Level_Base>
+		<Next_Level_Base>Fel_Star_Base_3</Next_Level_Base>
+		<CategoryMask> Capital </CategoryMask>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		
+		<Damage>45</Damage>
+		<Autoresolve_Health>450000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+
+		<Starting_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 2</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 6</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>GA_B22_Squadron4, 2</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_B22_Squadron4, 6</Reserve_Spawned_Units_tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship2_SB2, 1</Starting_Spawned_Units_Tech_0>  
+		
+		<Starting_Spawned_Units_Tech_0>GA_Comm_Ship3_SB2, 1</Starting_Spawned_Units_Tech_0>	
+					
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Fel_STR2, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_Fel_STR2, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_Turbolaser_Green_Station</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>48</Projectile_Fire_Pulse_Count>
+		
+		<Targeting_Max_Attack_Distance>3500.0</Targeting_Max_Attack_Distance>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_SB_Defense_Ion_Circle,
+				UC_EVF_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy,
+			HP_T_SSDMKI_19,
+			HP_T_SSDMKI_20,
+			HP_T_SSDMKI_21,
+			HP_T_SSDMKI_22,
+			HP_T_SSDMKI_23,
+			HP_T_SSDMKI_24,
+			HP_T_SSDMKI_25,
+			HP_T_SSDMKI_26,
+			HP_T_SSDMKI_27,
+			HP_T_SSDMKI_28,
+			HP_T_SSDMKI_29,
+			HP_T_SSDMKI_30,
+			HP_T_SSDMKI_31,
+			HP_T_SSDMKI_32,
+			HP_T_SSDMKI_33,
+			HP_T_SSDMKI_34,
+			HP_T_SSDMKI_35,
+			HP_T_SSDMKI_36
+		</HardPoints>
+		
+		<Radar_Icon_Name>i_radar_Fel_station1_2.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+
+		<Icon_Name>i_button_Fel_station2.tga</Icon_Name>
+		<Score_Cost_Credits> 3000</Score_Cost_Credits>
+		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_2_Empire</Retreat_Self_Destruct_Explosion>
+		<Death_Clone>Damage_Normal, Fel_Star_Base_2_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>13</Additional_Population_Capacity>
+		
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_2_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_2</Text_ID>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_2_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_3">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STAR_BASE_SP_3</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_3 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_GA_CROSSFIRE TEXT_UNIT_GA_B22 TEXT_DESC_CANTIDAD_4 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_3.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_Rep_Station_03.ALO</Galactic_Model_Name>
+		<Affiliation>Fel</Affiliation>
+		<Build_Cost_Credits>1500</Build_Cost_Credits>
+		<AI_Combat_Power>12000</AI_Combat_Power>
+		<Build_Time_Seconds>65</Build_Time_Seconds>
+		<Build_Tab_Space_Station>yes</Build_Tab_Space_Station>
+		<Size_Value>30</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>3</Base_Level>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+
+		<Prev_Level_Base>Fel_Star_Base_2</Prev_Level_Base>
+		<Next_Level_Base>Fel_Star_Base_4</Next_Level_Base>
+
+		<Required_Star_Base_Level>2</Required_Star_Base_Level>
+		<CategoryMask> Capital </CategoryMask>
+	
+		<Damage>55</Damage>
+		<Autoresolve_Health>600000</Autoresolve_Health>
+		<Shield_Points>43000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>46000</Shield_Refresh_Rate>
+		<Energy_Capacity>1000000</Energy_Capacity>
+		<Energy_Refresh_Rate>600000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		
+		
+		<Starting_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 2</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 6</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>GA_B22_Squadron4, 2</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_B22_Squadron4, 6</Reserve_Spawned_Units_tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship2_SB3, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>GA_Comm_Ship3_SB3, 1</Starting_Spawned_Units_Tech_0>	
+						
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Fel_STR3, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_Fel_STR3, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_Turbolaser_Green_Station</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>48</Projectile_Fire_Pulse_Count>
+		
+		<Targeting_Max_Attack_Distance>3500.0</Targeting_Max_Attack_Distance>
+		
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_SB_Defense_Ion_Circle,
+				UC_EVF_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle,	
+				UC_SB_Defense_Turbolaser_Circle
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_T_SSDMKI_07,
+			HP_T_SSDMKI_08,
+			HP_T_SSDMKI_09,
+			HP_T_SSDMKI_10,
+			HP_T_SSDMKI_11,
+			HP_T_SSDMKI_12,
+			HP_T_SSDMKI_19,
+			HP_T_SSDMKI_20,
+			HP_T_SSDMKI_21,
+			HP_T_SSDMKI_22,
+			HP_T_SSDMKI_23,
+			HP_T_SSDMKI_24,
+			HP_T_SSDMKI_25,
+			HP_T_SSDMKI_26,
+			HP_T_SSDMKI_27,
+			HP_T_SSDMKI_28,
+			HP_T_SSDMKI_29,
+			HP_T_SSDMKI_30,
+			HP_T_SSDMKI_31,
+			HP_T_SSDMKI_32,
+			HP_T_SSDMKI_33,
+			HP_T_SSDMKI_34,
+			HP_T_SSDMKI_35,
+			HP_T_SSDMKI_36,
+			HP_TorpedoA_01,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_01,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+	
+		<Radar_Icon_Name>i_radar_Fel_station3.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+
+		<Icon_Name>i_button_Fel_station3.tga</Icon_Name>
+		<Score_Cost_Credits> 6000</Score_Cost_Credits>
+		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_3_Empire</Retreat_Self_Destruct_Explosion>
+		<Death_Clone>Damage_Normal, Fel_Star_Base_3_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>15</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_3_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_3</Text_ID>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_3_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_4">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+
+		<Text_ID>TEXT_STAR_BASE_SP_4</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_4 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_GA_CROSSFIRE TEXT_UNIT_GA_IONIZER TEXT_DESC_CANTIDAD_6 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_4.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_Rep_Station_04.ALO</Galactic_Model_Name>
+		<Affiliation>Fel</Affiliation>
+		<Build_Cost_Credits>2000</Build_Cost_Credits>
+		<AI_Combat_Power>20000</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Tab_Space_Station>yes</Build_Tab_Space_Station>
+		<Size_Value>40</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>4</Base_Level>
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+
+		<Prev_Level_Base>Fel_Star_Base_3</Prev_Level_Base>
+		<Next_Level_Base>Fel_Star_Base_5</Next_Level_Base>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<CategoryMask> Capital </CategoryMask>
+		
+		<Damage>65</Damage>
+		<Autoresolve_Health>600000</Autoresolve_Health>
+		<Shield_Points>125000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>131000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+				
+		<Starting_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 9</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>GA_Ionizer_Squadron4, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Ionizer_Squadron4, 9</Reserve_Spawned_Units_tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+			
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship2_SB4, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>GA_Comm_Ship3_SB4, 1</Starting_Spawned_Units_Tech_0>	
+			
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Fel_STR4, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_Fel_STR4, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_Turbolaser_Green_Station</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>48</Projectile_Fire_Pulse_Count>
+		
+		<Targeting_Max_Attack_Distance>3500.0</Targeting_Max_Attack_Distance>
+		
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_SB_Defense_Ion_Circle,
+				UC_EVF_SB_Defense_Laser_Circle,
+				UC_SB_Defense_Missile_Circle,	
+				UC_SB_Defense_Turbolaser_Circle,
+				UC_SB_Defense_TurbolaserM_Circle
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_T_SSDMKI_07,
+			HP_T_SSDMKI_08,
+			HP_T_SSDMKI_09,
+			HP_T_SSDMKI_10,
+			HP_T_SSDMKI_11,
+			HP_T_SSDMKI_12,
+			HP_T_SSDMKI_13,
+			HP_T_SSDMKI_14,
+			HP_T_SSDMKI_15,
+			HP_T_SSDMKI_16,
+			HP_T_SSDMKI_17,
+			HP_T_SSDMKI_18,
+			HP_T_SSDMKI_19,
+			HP_T_SSDMKI_20,
+			HP_T_SSDMKI_21,
+			HP_T_SSDMKI_22,
+			HP_T_SSDMKI_23,
+			HP_T_SSDMKI_24,
+			HP_T_SSDMKI_25,
+			HP_T_SSDMKI_26,
+			HP_T_SSDMKI_27,
+			HP_T_SSDMKI_28,
+			HP_T_SSDMKI_29,
+			HP_T_SSDMKI_30,
+			HP_T_SSDMKI_31,
+			HP_T_SSDMKI_32,
+			HP_T_SSDMKI_33,
+			HP_T_SSDMKI_34,
+			HP_T_SSDMKI_35,
+			HP_T_SSDMKI_36,
+			HP_TorpedoA_01,
+			HP_TorpedoA_03,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+	
+		
+		<Radar_Icon_Name>i_radar_Fel_station4.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+
+		<Icon_Name>i_button_Fel_station4.tga</Icon_Name>
+		
+		<Score_Cost_Credits> 12000</Score_Cost_Credits>
+		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_4_Empire</Retreat_Self_Destruct_Explosion>
+		<Death_Clone>Damage_Normal, Fel_Star_Base_4_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>16</Additional_Population_Capacity>
+		
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_4_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_4</Text_ID>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_4_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_5">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STAR_BASE_SP_5</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SUPPLY_DEPOT_5 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_GA_CROSSFIRE TEXT_UNIT_GA_IONIZER TEXT_DESC_CANTIDAD_6 </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_5.ALO</Space_Model_Name>
+		<Galactic_Model_Name>I_Rep_Station_05.ALO</Galactic_Model_Name>
+		<Affiliation>Fel</Affiliation>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<AI_Combat_Power>35000</AI_Combat_Power>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Space_Station>yes</Build_Tab_Space_Station>
+		<Size_Value>50</Size_Value>
+		<Tech_Level>0</Tech_Level>
+		<Base_Level>5</Base_Level>
+		<Prev_Level_Base>Fel_Star_Base_4</Prev_Level_Base>
+
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+
+		<Required_Star_Base_Level>4</Required_Star_Base_Level>
+		<CategoryMask> Capital </CategoryMask>
+
+		<Damage>35</Damage>
+		<Autoresolve_Health>250000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>262000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+				
+		<Starting_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Crossfire_Squadron5, 9</Reserve_Spawned_Units_tech_0>
+		<Starting_Spawned_Units_tech_0>GA_Ionizer_Squadron4, 3</Starting_Spawned_Units_tech_0>
+		<Reserve_Spawned_Units_tech_0>GA_Ionizer_Squadron4, 9</Reserve_Spawned_Units_tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship_SB, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Comm_Ship2_SB, 1</Starting_Spawned_Units_Tech_0>	
+		
+		<Starting_Spawned_Units_Tech_0>GA_Comm_Ship3_SB5, 1</Starting_Spawned_Units_Tech_0>	
+			
+		<Starting_Spawned_Units_Tech_0>BuildShipA_Fel_STR5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>BuildShipB_Fel_STR5, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Projectile_Types>Proj_Ship_Turbolaser_Green_Station</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>48</Projectile_Fire_Pulse_Count>
+		
+		<Targeting_Max_Attack_Distance>3500.0</Targeting_Max_Attack_Distance>
+		
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel, 
+				UC_SB_Defense_Ion_Circle,
+				UC_EVF_SB_Defense_Laser_Circle,
+				UC_EVF_SB_Defense_Missile_Circle,	
+				UC_SB_Defense_Turbolaser_Circle,
+				UC_SB_Defense_TurbolaserM_Circle,			
+				UC_SB_Defense_TurbolaserML_Circle		
+		</Tactical_Buildable_Objects_Campaign>
+
+		<HardPoints>
+			HP_T_SSDMKI_01,
+			HP_T_SSDMKI_02,
+			HP_T_SSDMKI_03,
+			HP_T_SSDMKI_04,
+			HP_T_SSDMKI_05,
+			HP_T_SSDMKI_06,
+			HP_T_SSDMKI_07,
+			HP_T_SSDMKI_08,
+			HP_T_SSDMKI_09,
+			HP_T_SSDMKI_10,
+			HP_T_SSDMKI_11,
+			HP_T_SSDMKI_12,
+			HP_T_SSDMKI_13,
+			HP_T_SSDMKI_14,
+			HP_T_SSDMKI_15,
+			HP_T_SSDMKI_16,
+			HP_T_SSDMKI_17,
+			HP_T_SSDMKI_18,
+			HP_T_SSDMKI_19,
+			HP_T_SSDMKI_20,
+			HP_T_SSDMKI_21,
+			HP_T_SSDMKI_22,
+			HP_T_SSDMKI_23,
+			HP_T_SSDMKI_24,
+			HP_T_SSDMKI_25,
+			HP_T_SSDMKI_26,
+			HP_T_SSDMKI_27,
+			HP_T_SSDMKI_28,
+			HP_T_SSDMKI_29,
+			HP_T_SSDMKI_30,
+			HP_T_SSDMKI_31,
+			HP_T_SSDMKI_32,
+			HP_T_SSDMKI_33,
+			HP_T_SSDMKI_34,
+			HP_T_SSDMKI_35,
+			HP_T_SSDMKI_36,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_TorpedoA_03,
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy
+		</HardPoints>
+		
+		
+		<Radar_Icon_Name>i_radar_Fel_station5.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+
+		<Icon_Name>i_button_Fel_station5.tga</Icon_Name>
+		<Score_Cost_Credits> 24000 </Score_Cost_Credits>
+		<Death_Clone>Damage_Normal, Fel_Star_Base_5_Death_Clone</Death_Clone>
+		<Additional_Population_Capacity>10</Additional_Population_Capacity>
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_5_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_5_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>	
+
+	<StarBase Name="Skirmish_Fel_Star_Base_1">
+		<Variant_Of_Existing_Type>E_Star_BaseORG</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_1</Text_ID>
+			
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>1.0</Scale_Factor>
+
+		<Space_Model_Name>GA_Starbase_1.ALO</Space_Model_Name>
+		<!--<Galactic_Model_Name>I_Rep_Station_01.ALO</Galactic_Model_Name>-->
+		<Affiliation>Fel</Affiliation>
+		
+		<Behavior>DUMMY_STAR_BASE, SELECTABLE</Behavior>
+		
+		<CategoryMask> Capital </CategoryMask>
+				
+		<Damage>35</Damage>
+		<Autoresolve_Health>150000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>3000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		
+		<Projectile_Types>Proj_Ship_Turbolaser_Green_Station</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>24</Projectile_Fire_Pulse_Count>
+		
+		<Targeting_Max_Attack_Distance>3500.0</Targeting_Max_Attack_Distance>
+						
+		<HardPoints>
+			HP_Shield_GeneratorH_00,
+			HP_Fighter_BayH_00,
+			HP_Rebel_Station_One_Supply_Dock_Dummy,
+			HP_All_Station_One_Comm_Array_Dummy,
+			HP_T_SSDMKI_19,
+			HP_T_SSDMKI_20,
+			HP_T_SSDMKI_21,
+			HP_T_SSDMKI_22,
+			HP_T_SSDMKI_23,
+			HP_T_SSDMKI_24,
+			HP_T_SSDMKI_25,
+			HP_T_SSDMKI_26,
+			HP_T_SSDMKI_27
+		</HardPoints>
+		
+		<Radar_Icon_Name>i_radar_Fel_station1_2.TGA</Radar_Icon_Name>
+		<Radar_Icon_Size>0.07  0.07</Radar_Icon_Size>
+
+		<Icon_Name>i_button_Fel_station1.tga</Icon_Name>
+
+		<Retreat_Self_Destruct_Explosion>Self_Destruct_Star_Base_Level_1_Empire</Retreat_Self_Destruct_Explosion>
+		<Death_Clone>Damage_Normal, Fel_Star_Base_1_Death_Clone</Death_Clone>
+			
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				Ga_Twighlight,
+				EVF_Assassin_Corvette,
+				EVF_Shipping_Vessel,
+				EVF_Ardent,
+				Ga_SaberTooth,
+				Ga_Mynock,
+				Fel_Level_Two_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base/>
+		<Next_Level_Base>Skirmish_Fel_Star_Base_2</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Fel_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>90</Base_Income_Value>
+				<Base_Interval_In_Secs>10</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Fel_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>20</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Fel_Star_Base_1</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Fel_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Fel_Star_Base_1_Death_Clone">
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_2</Text_ID>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Space_Model_Name>GA_Starbase_1_D.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_1500</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<!--<Death_Persistence_Duration> 34 </Death_Persistence_Duration>-->
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</StarBase>
+	<StarBase Name="Skirmish_Fel_Star_Base_2">
+		<Variant_Of_Existing_Type>Fel_Star_Base_2</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_2</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				Ga_Twighlight,
+				EVF_Assassin_Corvette,
+				EVF_Shipping_Vessel,
+				EVF_Ardent,
+				Ga_SaberTooth,
+				GA_Sha_Shore,
+				Ga_Schyte,
+				Ga_Mynock,
+				Space_Shado_Vao_Team,
+				Space_Wolf_Sazen_Team,
+				Fel_Level_Three_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base>Skirmish_Fel_Star_Base_1</Prev_Level_Base>
+		<Next_Level_Base>Skirmish_Fel_Star_Base_3</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Fel_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>95</Base_Income_Value>
+				<Base_Interval_In_Secs>12</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Fel_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>25</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Fel_Star_Base_2</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Fel_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Skirmish_Fel_Star_Base_3">
+		<Variant_Of_Existing_Type>Fel_Star_Base_3</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_3</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				Ga_Twighlight,
+				EVF_Assassin_Corvette,
+				EVF_Shipping_Vessel,
+				EVF_Ardent,
+				Ga_SaberTooth,
+				GA_Sha_Shore,
+				Ga_Schyte,
+				EVF_PellaeonSD,
+				Ga_Mynock,
+				Space_Shado_Vao_Team,
+				Space_Wolf_Sazen_Team,
+				Ga_Gladius,
+				Fel_Level_Four_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base>Skirmish_Fel_Star_Base_2</Prev_Level_Base>
+		<Next_Level_Base>Skirmish_Fel_Star_Base_4</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Fel_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>100</Base_Income_Value>
+				<Base_Interval_In_Secs>14</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Fel_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>30</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Fel_Star_Base_3</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Fel_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+		
+	</StarBase>
+	<StarBase Name="Skirmish_Fel_Star_Base_4">
+		<Variant_Of_Existing_Type>Fel_Star_Base_4</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_4</Text_ID>
+		<!-- Replacement List of Hardpoints -->
+		
+
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				Ga_Twighlight,
+				EVF_Assassin_Corvette,
+				EVF_Shipping_Vessel,
+				EVF_Ardent,
+				Ga_SaberTooth,
+				GA_Sha_Shore,
+				Ga_Schyte,
+				Ga_TriSchyte,
+				EVF_KnightSD,
+				EVF_PellaeonSD,
+				EVF_PellaeonSD_A,
+				Ga_Mynock,
+				Space_Shado_Vao_Team,
+				Space_Wolf_Sazen_Team,
+				Ga_Gladius,
+				Roan_Fel_PellaeonSD,
+				Imperial_Kights_Squadron,
+				Fel_Level_Five_Starbase_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<!-- Base upgrade sequence -->
+		<Prev_Level_Base>Skirmish_Fel_Star_Base_3</Prev_Level_Base>
+		<Next_Level_Base>Skirmish_Fel_Star_Base_5</Next_Level_Base>
+		<!-- Special Abilities unique to Skirmish mode -->
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="Fel_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>105</Base_Income_Value>
+				<Base_Interval_In_Secs>16</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="Fel_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>35</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Fel_Star_Base_4</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="Fel_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Visible_On_Radar_When_Fogged>False</Visible_On_Radar_When_Fogged>
+	</StarBase>
+	<StarBase Name="Skirmish_Fel_Star_Base_5">
+		<Variant_Of_Existing_Type>Fel_Star_Base_5</Variant_Of_Existing_Type>
+		<Lua_Script>ObjectScript_NONE</Lua_Script>
+		<Text_ID>TEXT_EMPIRE_STAR_BASE_5</Text_ID>
+		
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<AI_Combat_Power>35000</AI_Combat_Power>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Build_Tab_Space_Station>no</Build_Tab_Space_Station>
+		
+		<Visible_On_Radar_When_Fogged>true</Visible_On_Radar_When_Fogged>
+		
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+		<Space_FOW_Reveal_Range>2000.0</Space_FOW_Reveal_Range>
+		<Reinforcement_Prevention_Radius> 1 </Reinforcement_Prevention_Radius>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STATION_SKIRMISH TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE</Encyclopedia_Text>
+		<!-- Tactical Production Options -->
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, WEAPON, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				Ga_Twighlight,
+				EVF_Assassin_Corvette,
+				EVF_Shipping_Vessel,
+				EVF_Ardent,
+				Ga_SaberTooth,
+				GA_Sha_Shore,
+				Ga_Schyte,
+				Ga_TriSchyte,
+				EVF_KnightSD,
+				EVF_PellaeonSD,
+				EVF_PellaeonSD_A,
+				EVF_Imperious,
+				EVF_Nemesis,
+				Ga_Mynock,
+				Space_Shado_Vao_Team,
+				Space_Wolf_Sazen_Team,
+				Ga_Gladius,
+				Roan_Fel_PellaeonSD,
+				Imperial_Kights_Squadron,
+				Space_Marasiah_Fel_Team,
+				Space_Antares_Draco_Team,
+				Oron_Jaeger_PellaeonSD,
+				GA_Imperious
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		
+		<!-- Data to prevent this from being buildable in galactic mode -->
+		<Build_Cost_Credits>0</Build_Cost_Credits>
+		<Build_Time_Seconds>0</Build_Time_Seconds>
+		<Build_Tab_Space_Station>No</Build_Tab_Space_Station>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		
+		<Abilities SubObjectList="Yes">
+			<Income_Stream_Ability Name="RE_Starbase_Income_Stream">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Base_Income_Value>115</Base_Income_Value>
+				<Base_Interval_In_Secs>18</Base_Interval_In_Secs>
+				<Split_Income_With_Allies>Yes</Split_Income_With_Allies>
+				<Split_Favors_Owner>No</Split_Favors_Owner>
+				<Full_Amount_To_Everyone>Yes</Full_Amount_To_Everyone>
+			</Income_Stream_Ability>
+			<Income_Stream_Mod_Ability Name="RE_Supply_Dock_Income_Bonus">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>No</Initially_Enabled>
+				<!-- This bonus income is controlled by the presence of the Supply Dock hardpoint -->
+				<Income_Multiplier>1.0</Income_Multiplier>
+				<Income_Additive_Value>45</Income_Additive_Value>
+				<Interval_Multiplier>1.0</Interval_Multiplier>
+				<Stacking_Category>0</Stacking_Category>
+				<Target_Stream_Source>Skirmish_Fel_Star_Base_5</Target_Stream_Source>
+				<Affects_All_Allied_Sources>Yes</Affects_All_Allied_Sources>
+				<Reverse_Application_Logic>No</Reverse_Application_Logic>
+			</Income_Stream_Mod_Ability>
+			<Enable_Radar_Ability Name="RE_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<!-- This effect is controlled by the presence of the Comm Array hardpoint -->
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+		</Abilities>
+	</StarBase>
+	
+	
+</StarBases>

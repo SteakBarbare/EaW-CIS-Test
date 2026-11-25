@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<RVRE_MC99_Data>
+	
+	<SpaceUnit Name="RVRE_MC99">
+		<Variant_Of_Existing_Type>Mc80aORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RVRE_MC99</Text_ID>
+		<Encyclopedia_Good_Against> Titan SSD Venganza </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Bomber GunBoat Missile_Gunboat </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_RVRE_MC99 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ECLIPSE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_RVRE_A_WING TEXT_WAVES_X3 TEXT_UNIT_B_WING TEXT_WAVES_X3 TEXT_UNIT_R_XWINGT70 TEXT_WAVES_X3 TEXT_DESC_CANTIDAD_24</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_STAR_DEFENDER </Encyclopedia_Unit_Class>
+		<Required_Special_Structures>Super_Astilleros_Rebeldes</Required_Special_Structures>
+		
+		<Galactic_Fleet_Override_Model_Name> w_planet_fleet_RVRE_MC99.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<!--<Custom_Hard_XExtent> 2125.0 </Custom_Hard_XExtent>-->
+        <!--<Custom_Hard_YExtent> 645.0 </Custom_Hard_YExtent>-->
+		<GUI_Row>1</GUI_Row>
+		<Space_Model_Name>RVRE_MC99.ALO</Space_Model_Name>
+		<GUI_Bounds_Scale>0.15</GUI_Bounds_Scale>
+		<Scale_Factor>1.9</Scale_Factor>
+
+		<Max_Speed>2.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll><!--Alabeo-->
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.2</Max_Thrust>
+
+		<Space_Layer> Supercapital </Space_Layer>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+
+		<!--<Layer_Z_Adjust>-1000.0 </Layer_Z_Adjust>-->
+		
+		<Layer_Z_Adjust>-350.0</Layer_Z_Adjust>
+
+		<Armor_Type> Armor_Eclipse </Armor_Type>
+		<Shield_Armor_Type>Shield_Eclipse</Shield_Armor_Type>
+		<Death_Clone>Damage_Normal, RVRE_MC99_Death_Clone</Death_Clone>
+		<Affiliation>RVRE, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>5</Required_Star_Base_Level>
+		
+		<Autoresolve_Health>500000</Autoresolve_Health>
+		<Shield_Points>1000000</Shield_Points>
+		<Tactical_Health>1000000000</Tactical_Health>
+		<Shield_Refresh_Rate>1192000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+
+		<CategoryMask> Capital | AntiSuper </CategoryMask>
+		<Build_Cost_Credits>37500</Build_Cost_Credits>
+		<AI_Combat_Power>8055</AI_Combat_Power>
+		<Build_Time_Seconds>240</Build_Time_Seconds>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SELF_DESTRUCT </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>RVRE_A_Wing_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>RVRE_BWing_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>R_XwingT70_Squadron7, 1</Starting_Spawned_Units_Tech_0>
+		
+		<Reserve_Spawned_Units_Tech_0>RVRE_A_Wing_Squadron7, 31</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>RVRE_BWing_Squadron7, 31</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>R_XwingT70_Squadron7, 31</Reserve_Spawned_Units_Tech_0>
+		
+		<Space_FOW_Reveal_Range>6000.0</Space_FOW_Reveal_Range>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+	
+
+		<In_Background>No</In_Background>
+
+		<HardPoints>
+			HP_MC99_Blast_01,
+			HP_MC99_Blast_02,
+			HP_MC99_Blast_03,
+			HP_MC99_Blast_04,
+			HP_MC99_Blast_05,
+			HP_MC99_Blast_06,
+			HP_MC99_Blast_07,
+			HP_MC99_Blast_08,
+			HP_MC99_Blast_09,
+			HP_MC99_Blast_10,
+			HP_MC99_Blast_11,
+			HP_MC99_Blast_12,
+			HP_MC99_Blast_13,
+			HP_MC99_Blast_14,
+			HP_MC99_Blast_15,
+			HP_MC99_Blast_16,
+			HP_MC99_Blast_17,
+			HP_MC99_Blast_18,
+			HP_MC99_Blast_19,
+			HP_MC99_Blast_20,
+			HP_MC99_Blast_21,
+			HP_MC99_Blast_22,
+			HP_MC99_Blast_23,
+			HP_MC99_Blast_24,
+			HP_MC99_Blast_25,
+			HP_MC99_Blast_26,
+			HP_MC99_Blast_27,
+			HP_MC99_Blast_28,
+			HP_MC99_Blast_29,
+			HP_MC99_Blast_30,
+			HP_MC99_Blast_31,
+			HP_T_MC99_01,
+			HP_T_MC99_02,
+			HP_T_MC99_03,
+			HP_T_MC99_04,
+			HP_T_MC99_05,
+			HP_T_MC99_06,
+			HP_T_MC99_07,
+			HP_T_MC99_08,
+			HP_T_MC99_09,
+			HP_T_MC99_10,
+			HP_T_MC99_11,
+			HP_T_MC99_12,
+			HP_T_MC99_13,
+			HP_T_MC99_14,
+			HP_T_MC99_15,
+			HP_T_MC99_16,
+			HP_T_MC99_17,
+			HP_T_MC99_18,
+			HP_T_MC99_19,
+			HP_T_MC99_20,
+			HP_T_MC99_21,
+			HP_T_MC99_22,
+			HP_T_MC99_23,
+			HP_T_MC99_24,
+			HP_T_MC99_25,
+			HP_T_MC99_26,
+			HP_T_MC99_27,
+			HP_T_MC99_28,
+			HP_T_MC99_29,
+			HP_T_MC99_30,
+			HP_T_MC99_31,
+			HP_T_MC99_32,
+			HP_T_MC99_33,
+			HP_T_MC99_34,
+			HP_T_MC99_35,
+			HP_T_MC99_36,
+			HP_T_MC99_37,
+			HP_T_MC99_38,
+			HP_T_MC99_39,
+			HP_T_MC99_40,
+			HP_T_MC99_41,
+			HP_T_MC99_42,
+			HP_T_MC99_43,
+			HP_T_MC99_44,
+			HP_T_MC99_45,
+			HP_T_MC99_46,
+			HP_T_MC99_47,
+			HP_T_MC99_48,
+			HP_T_MC99_49,
+			HP_T_MC99_50,
+			HP_T_MC99_51,
+			HP_T_MC99_52,
+			HP_T_MC99_53,
+			HP_T_MC99_54,
+			HP_T_MC99_55,
+			HP_T_MC99_56,
+			HP_T_MC99_57,
+			HP_T_MC99_58,
+			HP_T_MC99_59,
+			HP_T_MC99_60,
+			HP_T_MC99_61,
+			HP_T_MC99_62,
+			HP_T_MC99_63,
+			HP_T_MC99_64,
+			HP_T_MC99_65,
+			HP_T_MC99_66,
+			HP_T_MC99_67,
+			HP_T_MC99_68,
+			HP_T_MC99_69,
+			HP_T_MC99_70,
+			HP_T_MC99_71,
+			HP_T_MC99_72,
+			HP_T_MC99_73,
+			HP_T_MC99_74,
+			HP_T_MC99_75,
+			HP_T_MC99_76,
+			HP_T_MC99_77,
+			HP_T_MC99_78,
+			HP_T_MC99_79,
+			HP_T_MC99_80,
+			HP_T_MC99_81,
+			HP_T_MC99_82,
+			HP_T_MC99_83,
+			HP_T_MC99_84,
+			HP_T_MC99_85,
+			HP_T_MC99_86,
+			HP_T_MC99_87,
+			HP_T_MC99_88,
+			HP_T_MC99_89,
+			HP_T_MC99_90,
+			HP_T_MC99_91,
+			HP_T_MC99_92,
+			HP_T_MC99_93,
+			HP_T_MC99_94,
+			HP_T_MC99_95,
+			HP_T_MC99_96,
+			HP_T_MC99_97,
+			HP_T_MC99_98,
+			HP_T_MC99_99,
+			HP_T_MC99_100,
+			HP_T_MC99_101,
+			HP_T_MC99_102,
+			HP_T_MC99_103,
+			HP_T_MC99_104,
+			HP_T_MC99_105,
+			HP_T_MC99_106,
+			HP_T_MC99_107,
+			HP_T_MC99_108,
+			HP_T_MC99_109,
+			HP_T_MC99_110,
+			HP_T_MC99_111,
+			HP_T_MC99_112,
+			HP_T_MC99_113,
+			HP_T_MC99_114,
+			HP_T_MC99_115,
+			HP_T_MC99_116,
+			HP_T_MC99_117,
+			HP_T_MC99_118,
+			HP_T_MC99_119,
+			HP_T_MC99_120,
+			HP_T_MC99_121,
+			HP_T_MC99_122,
+			HP_T_MC99_123,
+			HP_T_MC99_124,
+			HP_T_MC99_125,
+			HP_T_MC99_126,
+			HP_T_MC99_127,
+			HP_T_MC99_128,
+			HP_T_MC99_129,
+			HP_T_MC99_130,
+			HP_T_MC99_131,
+			HP_T_MC99_132,
+			HP_T_MC99_133,
+			HP_T_MC99_134,
+			HP_T_MC99_135,
+			HP_T_MC99_136,
+			HP_T_MC99_137,
+			HP_T_MC99_138,
+			HP_T_MC99_139,
+			HP_MisilA_01, 
+			HP_MisilA_02,
+			HP_TorpedoA_01,
+			HP_TorpedoA_02,
+			HP_TorpedoA_03,
+			HP_TorpedoA_04,
+			HP_TorpedoA_05,
+			HP_Fighter_BayH_00,
+			HP_Fighter_BayH_01,
+			HP_Fighter_BayH_02,
+			HP_Fighter_BayH_03,
+			HP_Fighter_BayH_04,
+			HP_Fighter_BayH_05,
+			HP_Fighter_BayH_06,
+			HP_Fighter_BayH_07,
+			HP_Shield_GeneratorSH_00,
+			HP_Shield_GeneratorSH_01,
+			HP_Shield_GeneratorSH_02,
+			HP_Shield_GeneratorSH_03,
+			HP_EnginesSH_00,
+			HP_EnginesSH_01,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_Flak_05,
+			HP_Flak_06,
+			HP_Flak_07,
+			HP_Flak_08,
+			HP_Flak_09,
+			HP_Flak_10
+		</HardPoints>
+		
+		<Targeting_Priority_Set>CapitalAA</Targeting_Priority_Set>
+		
+		<Icon_Name>I_BUTTON_RVRE_MC99.tga</Icon_Name>
+		<GUI_Model_Name>RVRE_MC99.ALO</GUI_Model_Name>
+		
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+		<Build_Countdown_Text_ID> TEXT_MC99_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+		<Build_Countdown_Text_RGBA> 255, 0, 0, 255 </Build_Countdown_Text_RGBA>
+				
+		<Build_Speech_Underway> RHD_Build_Vehicle </Build_Speech_Underway>
+		<Build_Speech_Completed> Unit_Complete_Vizconde </Build_Speech_Completed>
+		<Build_Speech_Stopped> RHD_Unit_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> RHD_Build_Vehicle </Build_Speech_Countdowns>
+
+		<Build_Music_Completed> Galactic_Rebel_Unit_Alliance_Complete_Music_Event </Build_Music_Completed>
+		
+		<SFXEvent_Build_Complete>Unit_Complete_Vizconde</SFXEvent_Build_Complete>
+
+		<SFXEvent_Select>Unit_Select_Vizconde</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Vizconde</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Vizconde</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Vizconde</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Vizconde</SFXEvent_Guard>
+		<SFXEvent_Stop>Unit_Stop_Vizconde</SFXEvent_Stop>
+		<SFXEvent_Barrage>Unit_Barrage_Vizconde</SFXEvent_Barrage>
+		<SFXEvent_Move_Into_Nebula> Unit_Nebula_Vizconde </SFXEvent_Move_Into_Nebula>
+				
+		<SFXEvent_Health_Low_Warning>Unit_Health_Low_Vizconde</SFXEvent_Health_Low_Warning>
+		
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_WEAPON_LASER, Unit_Lost_Laser_Vizconde </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_SHIELD_GENERATOR, Unit_Lost_Shields_Vizconde </SFXEvent_Hardpoint_Destroyed>
+		<SFXEvent_Hardpoint_Destroyed> HARD_POINT_ENGINE, Unit_Lost_Engines_Vizconde </SFXEvent_Hardpoint_Destroyed>
+		
+		<Radar_Register_As_Foreground_Object>Yes</Radar_Register_As_Foreground_Object>
+		<Radar_Clip_To_Visible_Region>Yes</Radar_Clip_To_Visible_Region>
+		<Radar_Icon_Size>0.10  0.21</Radar_Icon_Size>
+		<Radar_Icon_Name>i_radar_capital_ship.tga</Radar_Icon_Name>
+
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Targeting_Max_Attack_Distance>4000</Targeting_Max_Attack_Distance>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<Expiration_Seconds>7</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BLAST_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BLAST_NEW_DESCR</Alternate_Description_Text>
+				<Alternate_Icon_Name>I_SA_BLAST.TGA</Alternate_Icon_Name>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Enable_Radar_Ability Name="R_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>
+			<Redirect_Blaster_Ability Name="US_Magnetically_Sealed_Armor_Bonus_L3">
+				<Initially_Enabled> Yes </Initially_Enabled>		
+				<Activation_Style>Take_Damage</Activation_Style>
+
+				<Redirect_Chance>0.0</Redirect_Chance>
+				<Block_Chance>0.30</Block_Chance>
+				<Reaction_Arc_In_Degrees>360.0</Reaction_Arc_In_Degrees>
+				<Max_Projectile_Redirection_Angle_In_Degrees> 30.0 </Max_Projectile_Redirection_Angle_In_Degrees>
+				<Turn_To_Face_Unblockable_Shots>No</Turn_To_Face_Unblockable_Shots>
+
+				<Applicable_Unit_Categories>Fighter | Bomber | Corvette | Frigate | Capital | Super | Structure</Applicable_Unit_Categories>
+				<SFXEvent_Activate>Unit_Lightsaber_Projectile_Block</SFXEvent_Activate>
+			</Redirect_Blaster_Ability>
+			<Force_Healing_Ability Name="MC99_Autorepair">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.050</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Types>RVRE_MC99</Applicable_Unit_Types>
+				<Owner_Particle_Bone_Name>TractorBeam</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>	
+		</Abilities>
+		
+		<Score_Cost_Credits> 100000 </Score_Cost_Credits>
+
+		<Tactical_Build_Cost_Multiplayer>30000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>88</Tactical_Build_Time_Seconds>
+
+		<Population_Value>15</Population_Value>
+		<!--<Space_Override_Population_Value>10</Space_Override_Population_Value>-->
+	</SpaceUnit>
+	<SpaceUnit Name="RVRE_MC99_Death_Clone">
+		<Text_ID> TEXT_UNIT_MC104 </Text_ID>
+		<Space_Model_Name> RVRE_MC99_D.ALO </Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<In_Background>No</In_Background>
+		<Scale_Factor>1.9</Scale_Factor>
+		<Layer_Z_Adjust>-2000.0 </Layer_Z_Adjust>
+		<Max_Speed> 0.25 </Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+
+</RVRE_MC99_Data>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+
+
+<Pulse_Cannon_TankAUnit_Data>
+
+
+	<GroundVehicle Name="MZ8_Pulse_Cannon_Tank_Advanced">
+		<Variant_Of_Existing_Type>MZ8_Pulse_Cannon_Tank</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MZ8A_PC_TANK</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_MZ8A_PC_TANK</Encyclopedia_Text>
+
+		<Icon_Name>i_button_uv_mz8 pulse Advanced.tga</Icon_Name>
+
+		<Land_Model_Name>UV_MZ8MOBILEPULSEADVANCED.ALO</Land_Model_Name>
+
+		<LandBehavior> SHIELDED, ABILITY_COUNTDOWN, AFFECTED_BY_SHIELD, TURRET, TREAD_SCROLL, WALK_LOCOMOTOR, IDLE, TARGETING, WEAPON, POWERED, REVEAL, HIDE_WHEN_FOGGED, SQUASH, SURFACE_FX, UNIT_AI, TELEKINESIS_TARGET, STUNNABLE, WIND_DISTURBANCE,DAMAGE_TRACKING, SELF_DESTRUCT</LandBehavior>
+
+		<Armor_Type> Armor_ATAT2 </Armor_Type>
+		<Tactical_Health>200</Tactical_Health>
+	
+		<Shield_Points>300</Shield_Points>
+		<Shield_Refresh_Rate>18</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Land_FOW_Reveal_Range>320.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>320.0</Targeting_Max_Attack_Distance>
+		<Ranged_Target_Z_Adjust>13.0</Ranged_Target_Z_Adjust>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret</Turret_Bone_Name>
+		<Barrel_Bone_Name>MuzzleA_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 2 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+
+		<Projectile_Types>Proj_Mobile_Pulse_Cannon_BlastX</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>5.3</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Appearance_Delay_Frames> 30 </Projectile_Appearance_Delay_Frames>
+	
+		<Targeting_Fire_Inaccuracy> Infantry, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 1.0 </Targeting_Fire_Inaccuracy>
+		<Fire_Category_Restrictions> Air </Fire_Category_Restrictions>	
+		
+		<AI_Combat_Power>250</AI_Combat_Power>
+
+		<Vehicle_Thief_Inside_Clone>MZ8_Pulse_Cannon_TankA_Captured</Vehicle_Thief_Inside_Clone>
+
+	</GroundVehicle>
+	<GroundVehicle Name="MZ8_Pulse_Cannon_TankA_Captured">
+		<Variant_Of_Existing_Type>MZ8_Pulse_Cannon_Tank_Advanced</Variant_Of_Existing_Type>
+		
+	
+		<!-- MUST have same abilities PLUS EJECT_THIEF -->
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SELF_DESTRUCT</Type>
+				<Expiration_Seconds>2</Expiration_Seconds>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+				<Spawned_Object_Type> MZ8_Tank_Self_Destruct_Blast </Spawned_Object_Type>
+                <Owner_Attachment_Bone>b_overheat_00</Owner_Attachment_Bone>
+                <Particle_Effect>Pulse_Cannon_Tank_Overheat</Particle_Effect>
+                <Stop_When_Activated>No</Stop_When_Activated>
+                <GUI_Activated_Ability_Name>Pulse_Tank_Self_Destruct</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>Yes</Must_Be_Bought_On_Black_Market>
+			</Unit_Ability>
+			
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+
+	</GroundVehicle>
+
+
+	<GroundCompany Name="MZ8_Pulse_Cannon_Tank_Advanced_Company">
+		<Variant_Of_Existing_Type>MZ8_Pulse_Cannon_Tank_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MZ8A_PC_TANK_COMPANY</Text_ID>
+		<Icon_Name>i_button_uv_mz8 pulse Advanced.tga</Icon_Name>
+
+		<Affiliation>Underworld</Affiliation>
+		<Build_Cost_Credits>1950</Build_Cost_Credits>
+		
+		<Company_Units>MZ8_Pulse_Cannon_Tank_Advanced, MZ8_Pulse_Cannon_Tank_Advanced, MZ8_Pulse_Cannon_Tank_Advanced, MZ8_Pulse_Cannon_Tank_Advanced, MZ8_Pulse_Cannon_Tank_Advanced</Company_Units>
+
+		<Tactical_Build_Cost_Multiplayer>1450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>16</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>UC_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</Pulse_Cannon_TankAUnit_Data>

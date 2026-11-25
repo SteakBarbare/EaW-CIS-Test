@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<Ch_Comm_ShipUnit_Data>
+	<SpaceUnit Name="Up_Ch_VSD3X_to_C">
+		<Variant_Of_Existing_Type>Up_E_VSDI_to_II</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CHISS_VSD</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_UNIT_COMMSHIP TEXT_TOOLTIP_COMMSHIP</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_Ch_CommShip.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Chiss, Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA, Chiss_Ground_Officer_Academy</Required_Special_Structures>
+		
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Orbiting_Units>VSD3X</Required_Orbiting_Units>
+		<Build_Time_Seconds>25</Build_Time_Seconds>
+		<Build_Cost_Credits>500</Build_Cost_Credits>
+		<Lua_Script>Up_Ch_VSD3X_to_C</Lua_Script>
+		<Population_Value>2</Population_Value>
+	</SpaceUnit>
+	<SpaceUnit Name="Ch_Comm_Ship">
+		<Variant_Of_Existing_Type>VSD3X_UpC</Variant_Of_Existing_Type>
+	</SpaceUnit>
+	<SpaceUnit Name="VSD3X_UpC">
+		<Variant_Of_Existing_Type>VSD3XORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_COMMSHIP</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_COMMSHIP TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2 TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_TIE_CLAW TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>70</Build_Time_Seconds>
+		<Affiliation>Chiss, Empire</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA, Chiss_Ground_Officer_Academy</Required_Special_Structures>
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<Starting_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Empire_TIE_Claw_Squadron, 11</Reserve_Spawned_Units_Tech_0>
+		
+		<AI_Combat_Power>3350</AI_Combat_Power>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+
+		<Space_Model_Name>EV_VictoryIIIX.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Ch_CommShip.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_SPRINT.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_COMM_SHIP1</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_COMM_SHIP1_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>15</Recharge_Seconds>
+			    <Spawned_Object_Type>Comm_Ship_orders1b</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+                <Area_Effect_Decal_Distance> 1000 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+						
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		<Tactical_Build_Cost_Multiplayer>6000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+
+	</SpaceUnit>
+
+	<SpaceUnit Name="Ch_Comm_Ship_SB">
+		<Variant_Of_Existing_Type>Ch_Comm_Ship</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space4</Lua_Script>		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Victory_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Ch_Comm_Ship3_SB4">
+		<Variant_Of_Existing_Type>E_Gozanti_IGV55</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Lua_Script>Ch_STR5_Re</Lua_Script>	
+		<Affiliation>Chiss</Affiliation>
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Ch_Comm_Ship2_SB">
+		<Variant_Of_Existing_Type>Ch_Patrol</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Icon_Name>I_BUTTON_Ch_CommShip2.tga</Icon_Name>
+		<!--<Lua_Script>Enemy_Space_Re4</Lua_Script>-->		
+		<Unit_Abilities_Data SubObjectList="Yes">
+					
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders4b</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_C_DESC</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</SpaceUnit>	
+</Ch_Comm_ShipUnit_Data>

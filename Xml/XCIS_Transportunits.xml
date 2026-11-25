@@ -1,0 +1,352 @@
+<?xml version="1.0"?>
+<TransportUnits>
+	<TransportUnit Name="CIS_Long_Probe_Craft">
+		<Variant_Of_Existing_Type>C9979_Landing_Craft</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Bebulba_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+	</TransportUnit>
+	
+	<TransportUnit Name="Lucrehulk_Craft">
+		<Variant_Of_Existing_Type>C9979_Landing_Craft</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_Lucrehulk_Landing.ALO</Land_Model_Name>
+		<Landing_Transport_Variant>Lucrehulk_Craft_Landing</Landing_Transport_Variant>
+		
+		<Affiliation>Empire, Rebel, Underworld, Pirates, CIS, Republic, Fel, Krayt</Affiliation>
+	</TransportUnit>
+	
+	<TransportUnit Name="Lucrehulk_Craft_Landing">
+		<Variant_Of_Existing_Type>Lucrehulk_Craft</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>2.2</Scale_Factor>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>CIS_Lucrehulk_Landing.ALO</Land_Model_Name>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING, REVEAL</LandBehavior>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+		<HardPoints> 
+			HP_TurboMR_01, 
+			HP_TurboMR_02, 
+			HP_TurboMR_03, 
+			HP_TurboMR_04,
+			HP_TurboMR_05,
+			HP_TurboMR_06,   
+			HP_TurboMR_07, 
+			HP_TurboMR_08,
+			HP_TurboR_01, 
+			HP_TurboR_02, 
+			HP_TurboR_03, 
+			HP_TurboR_04,
+			HP_TurboR_05,
+			HP_TurboR_06,   
+			HP_TurboR_07, 
+			HP_TurboR_08
+		</HardPoints>
+	</TransportUnit>
+	
+	<TransportUnit Name="U_C9979_Landing_Craft">
+		<Variant_Of_Existing_Type>C9979_Landing_CraftORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>UV_Munificent.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, Munificent_Death_Clone</Death_Clone>
+		<HardPoints>
+			HP_LaserNY_01, 
+			HP_LaserNY_02, 
+			HP_LaserNY_03, 
+			HP_LaserNY_04, 
+			HP_Flak_01,
+			HP_Flak_02, 
+			HP_Flak_03,
+			HP_Flak_04,
+			HP_T_UV_Munificent_01,
+			HP_T_UV_Munificent_02,
+			HP_T_UV_Munificent_03,
+			HP_T_UV_Munificent_04,
+			HP_T_UV_Munificent_05,
+			HP_T_UV_Munificent_06,
+			HP_T_UV_Munificent_07,
+			HP_T_UV_Munificent_08,
+			HP_T_UV_Munificent_09,
+			HP_T_UV_Munificent_10,
+			HP_MunificentIonLH_01,
+			HP_MunificentIonLH_02,
+			HP_CISMaxFire_00,
+			HP_CISMaxFire_01,
+			HP_Shield_Generator_Small_00, 
+			HP_Fighter_Bay_Small_00,
+			HP_Engines_Small_00
+		</HardPoints>
+	</TransportUnit>	
+	<TransportUnit Name="C9979_Landing_Craft">
+		<Variant_Of_Existing_Type>C9979_Landing_CraftORG</Variant_Of_Existing_Type>
+		<Space_Model_Name>CIS_Munificent.ALO</Space_Model_Name>
+		<Death_Clone>Damage_Normal, CIS_Munificent_Death_Clone</Death_Clone>
+		<HardPoints>
+			HP_LaserNR_01, 
+			HP_LaserNR_02, 
+			HP_LaserNR_03, 
+			HP_LaserNR_04, 
+			HP_TurboR_01, 
+			HP_TurboR_02, 
+			HP_TurboR_03, 
+			HP_TurboR_04, 
+			HP_T_CIS_Munificent_01,
+			HP_T_CIS_Munificent_02,
+			HP_T_CIS_Munificent_03,
+			HP_T_CIS_Munificent_04,
+			HP_T_CIS_Munificent_05,
+			HP_T_CIS_Munificent_06,
+			HP_T_CIS_Munificent_07,
+			HP_T_CIS_Munificent_08,
+			HP_T_CIS_Munificent_09,
+			HP_T_CIS_Munificent_10,
+			HP_MunificentIonLH_01,
+			HP_MunificentIonLH_02,
+			HP_CISMaxFire_00,
+			HP_CISMaxFire_01,
+			HP_Shield_Generator_Small_00, 
+			HP_Fighter_Bay_Small_00,
+			HP_Engines_Small_00
+		</HardPoints>
+	</TransportUnit>	
+	
+	<TransportUnit Name="C9979_Landing_CraftORG">
+		<Variant_Of_Existing_Type>Imperial_Landing_CraftORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_PIRATE_MUNIFICENT</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_PIRATE_MUNIFICENT </Encyclopedia_Text>
+		<Land_Model_Name>CIS_C9979_Landing.ALO</Land_Model_Name>
+		<Space_Model_Name>CIS_Munificent.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Munificent_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, CIS, Republic, Fel, Krayt</Affiliation>
+		<SpaceBehavior> SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, REVEAL, UNIT_AI, HIDE_WHEN_FOGGED, ASTEROID_FIELD_DAMAGE</SpaceBehavior>
+		<Icon_Name>I_BUTTON_CIS_Munificent.tga</Icon_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Affiliation>CIS</Affiliation>
+		<Shield_Points>20000</Shield_Points>
+		<Tactical_Health>31000</Tactical_Health>
+		<Shield_Refresh_Rate>20050</Shield_Refresh_Rate>
+		<Energy_Capacity>250000</Energy_Capacity>
+		<Energy_Refresh_Rate>150000</Energy_Refresh_Rate>
+		<Max_Speed>2.0</Max_Speed>
+		<Max_Rate_Of_Turn>0.1</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .02 </OverrideAcceleration>
+		<OverrideDeceleration> .02 </OverrideDeceleration>
+		<Max_Thrust>0.1</Max_Thrust>
+		
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+		
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+
+		<Landing_Transport_Variant>C9979_Craft_Landing</Landing_Transport_Variant>
+		
+	</TransportUnit>
+	<SpaceUnit Name="C9979_CraftCraft_Death_Clone">
+		<Text_ID>TEXT_UNIT_IMPERIAL_LANDING_CRAFT</Text_ID>
+		<Space_Model_Name>CIS_C9979.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Death_Explosions>Medium_Explosion_Space_Empire</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<CategoryMask> Fighter </CategoryMask>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	<TransportUnit Name="C9979_Craft_Landing">
+		<Variant_Of_Existing_Type>C9979_Landing_Craft</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>7.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED, WEAPON, TARGETING</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Land_Model_Name>CIS_C9979_Landing.ALO</Land_Model_Name>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</TransportUnit>
+	<TransportUnit Name="Gtrans_Landing_Craft">
+		<Variant_Of_Existing_Type>Imperial_Landing_CraftORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_TECNODESTROYER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_TECNODESTROYER TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_MANKVIM814 TEXT_DESC_CANTIDAD_2</Encyclopedia_Text>
+		<Land_Model_Name>CIS_GTRANSLAND.ALO</Land_Model_Name>
+		<Space_Model_Name>CIS_TecnoDestroyer.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_TecnoDestroyer_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		
+		<Affiliation>Empire, Rebel, Underworld, Pirates, CIS, Republic, Fel, Krayt</Affiliation>
+		<SpaceBehavior> SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, REVEAL, UNIT_AI, HIDE_WHEN_FOGGED, ASTEROID_FIELD_DAMAGE</SpaceBehavior>
+
+		<Starting_Spawned_Units_Tech_0>CIS_Mankvim814_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>5</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>CIS_Mankvim814_Squadron, 23</Reserve_Spawned_Units_Tech_0>
+		
+		<Icon_Name>I_BUTTON_CIS_TecnoDestroyer.tga</Icon_Name>
+		<Scale_Factor>0.65</Scale_Factor>
+		<Max_Speed>1.8</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>1.5</Max_Thrust>
+		<OverrideAcceleration> .03 </OverrideAcceleration>
+		<OverrideDeceleration> .03 </OverrideDeceleration>
+		<Shield_Points>31500</Shield_Points>
+		<Tactical_Health>40000</Tactical_Health> 
+		<Shield_Refresh_Rate>32500</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+
+		<Affiliation>CIS</Affiliation>
+		<Armor_Type> Armor_Assault_Frigate </Armor_Type>
+       	<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+		
+		<Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+		
+		<HardPoints>
+			HP_Ion_01, 
+			HP_Ion_02, 
+			HP_Ion_03, 
+			HP_TurboY_01, 
+			HP_TurboY_02,
+			HP_TurboY_03,
+			HP_TurboY_04,
+			HP_TurboY_05,
+			HP_TurboY_06,
+			HP_TurboY_07,
+			HP_Shield_Generator_00, 
+			HP_Engines_00,
+			HP_Fighter_Bay_00,
+			HP_Fighter_Bay_01
+		</HardPoints>
+		
+		<Death_Clone>Damage_Normal, CIS_TU_SD_Death_Clone</Death_Clone>
+		
+		<Landing_Transport_Variant>Gtrans_Craft_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	<SpaceUnit Name="Gtrans_Landing_Craft_Death_Clone">
+		<Text_ID>TEXT_UNIT_IMPERIAL_LANDING_CRAFT</Text_ID>
+		<Space_Model_Name>CIS_GTrans.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Medium_Explosion_Space_Empire</Death_Explosions>
+		<Scale_Factor>0.1</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<CategoryMask> Fighter </CategoryMask>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</SpaceUnit>
+	<TransportUnit Name="Gtrans_Craft_Landing">
+		<Variant_Of_Existing_Type>Gtrans_Landing_Craft</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+	</TransportUnit>
+	<TransportUnit Name="Sheathipede_Shuttle">
+		<Variant_Of_Existing_Type>Imperial_Landing_CraftORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_MARAUDER_CORVETTE</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_MARAUDER_CORVETTE</Encyclopedia_Text>
+		<Land_Model_Name>CIS_sheathipede_LAND.ALO</Land_Model_Name>
+		<Space_Model_Name>CIS_Marauder_Corvette.ALO</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_Marauder_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		
+		<Affiliation>Empire, Rebel, Underworld, Pirates, CIS, Republic, Fel, Krayt</Affiliation>
+		
+		<Icon_Name>I_BUTTON_CIS_Marauder.tga</Icon_Name>
+		<Scale_Factor>0.30</Scale_Factor>
+		<Affiliation>CIS</Affiliation>
+		<Max_Speed>2.45</Max_Speed>
+		<Max_Rate_Of_Turn>1.25</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>45</Bank_Turn_Angle>
+		<OverrideAcceleration> .05 </OverrideAcceleration>
+		<OverrideDeceleration> .05 </OverrideDeceleration>
+
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>13000</Tactical_Health>
+		<Shield_Refresh_Rate>15500</Shield_Refresh_Rate>
+		<Energy_Capacity>240000</Energy_Capacity>
+		<Energy_Refresh_Rate>144000</Energy_Refresh_Rate>
+
+		<Armor_Type> Armor_Corellian_Corvette </Armor_Type>
+		<Shield_Armor_Type>Shield_Corvette</Shield_Armor_Type>
+		<Max_Thrust>2.5</Max_Thrust>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.3</Hyperspace_Speed>
+
+		<SpaceBehavior> SIMPLE_SPACE_LOCOMOTOR, SELECTABLE, TARGETING, POWERED, SHIELDED, REVEAL, UNIT_AI, HIDE_WHEN_FOGGED, ASTEROID_FIELD_DAMAGE</SpaceBehavior>
+		
+		<HardPoints>
+      			HP_LaserGX_01, 
+				HP_LaserGX_02, 
+				HP_LaserGX_03, 
+				HP_LaserNG_01, 
+				HP_LaserNG_02,
+				HP_LaserNG_03,
+				HP_LaserNG_04,
+				HP_LaserNG_05,
+				HP_Fighter_Bay_00
+	  	</HardPoints>		
+	
+		<Death_Clone>Damage_Normal, CIS_Marauder_Death_Clone</Death_Clone>
+
+		<Landing_Transport_Variant>Sheathipede_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+
+	<SpaceUnit Name="Sheathipede_Death_Clone">
+		<Text_ID>TEXT_UNIT_SHEATHIPEDE</Text_ID>
+		<Space_Model_Name>CIS_sheathipede.alo</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Scale_Factor>0.2</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.02</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<CategoryMask> Fighter </CategoryMask>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	<TransportUnit Name="Sheathipede_Landing">
+		<Variant_Of_Existing_Type>Sheathipede_Shuttle</Variant_Of_Existing_Type>
+		<Behavior>TRANSPORT</Behavior>
+		<Scale_Factor>0.23</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior> 
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+      	<UnitCollisionClass>Landing Transport</UnitCollisionClass>	
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</TransportUnit>
+
+
+	
+	
+	
+	
+	
+</TransportUnits>

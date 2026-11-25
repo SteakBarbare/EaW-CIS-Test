@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<CIS_General_Kalani_Data>
+	
+	
+	<GenericHeroUnit Name="CIS_General_Kalani">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG2</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_CIS_KALANI</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_KALANI TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_HERO_UNIT_FIELD_REBEL</Encyclopedia_Unit_Class>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Land_Model_Name>CIS_General_Kalani.ALO</Land_Model_Name>
+				
+		<No_Colorization_Color> 119, 237, 78, 255 </No_Colorization_Color>
+		<Icon_Name>I_BUTTON_CIS_General_Kalani.tga</Icon_Name>
+		<Scale_Factor>1.3</Scale_Factor>
+
+		<Affiliation>CIS, Rebel</Affiliation>
+
+		<Behavior>SELECTABLE</Behavior>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, ABILITY_COUNTDOWN</LandBehavior>
+			
+		<Armor_Type> Armor_Hero </Armor_Type>
+	
+		<Projectile_Types>Proj_Infiltrator_Blaster</Projectile_Types>
+	
+		<CategoryMask> LandHero </CategoryMask>
+	
+		<Create_Team>No</Create_Team>
+		<Execute_Script_On_Type>true</Execute_Script_On_Type>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+
+		<Neutralization_Cost>100.0</Neutralization_Cost>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>Yes</Can_Be_Neutralized_By_Minor_Heroes>
+
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+		
+		<Death_Clone>Damage_Force_Whirlwind, CIS_General_Kalani_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, CIS_General_Kalani_Crush_Death_Clone</Death_Clone>
+		<Lua_Script>CIS_KalaniX_Re</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+		
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Enhance_Defense_Ability Name="CIS_General_Kalani_Enhance_Defense">
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.25</Enhancement_Percentage>
+				<Apply_To_All_Allies>No</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+				<Unit_Strength_Category>Vehicle | Air | Infantry</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="CIS_General_Kalani_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Ground_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>1.5</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+			<Reduce_Production_Time_Ability Name="Kalani_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+	</GenericHeroUnit>
+	<GroundInfantry Name="CIS_General_Kalani_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>CIS_General_Kalani</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+		
+	</GroundInfantry>
+	<GroundInfantry Name="CIS_General_Kalani_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>CIS_General_Kalani</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+		
+	</GroundInfantry>
+	<GenericHeroUnit Name="CIS_General_Kalani_Squad">
+		<Variant_Of_Existing_Type>CIS_General_Kalani</Variant_Of_Existing_Type>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, ABILITY_COUNTDOWN</LandBehavior>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>8.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		<CategoryMask> Landhero </CategoryMask>
+	</GenericHeroUnit>
+
+	<HeroCompany Name="CIS_General_Kalani_Team">
+		<Variant_Of_Existing_Type>C_Air_BattledroidsB1_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_CIS_KALANI</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CIS_KALANI TEXT_TOOLTIP_REDUCE_TIME_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_HERO_UNIT_FIELD_REBEL</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_CIS_General_Kalani.tga</Icon_Name>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>CIS_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>CIS_SupplyShip_Kalani_Droid_Ship</Company_Transport_Unit>
+		<Company_Units>CIS_General_Kalani_Squad, Squad_Battledroid_Guard, Squad_Battledroid_Guard, Squad_Battledroid_Guard, Squad_Battledroid_Guard</Company_Units>
+		<Is_Homogeneous>No</Is_Homogeneous>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+				
+		<Tactical_Build_Cost_Multiplayer>12200</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+
+		<Build_Limit_Current_Per_Player>-1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		
+		<Population_Value>1</Population_Value>
+		<CategoryMask>LandHero</CategoryMask>
+		<Score_Cost_Credits> 500 </Score_Cost_Credits>
+	</HeroCompany>
+
+	<GroundVehicle Name="Kalani_special">
+		<Variant_Of_Existing_Type>NR_N99_Tank_Droid</Variant_Of_Existing_Type>
+		<Lua_Script>CIS_KalaniX2_Re</Lua_Script>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Group_special_Kalani">
+		<Variant_Of_Existing_Type>C_NR_N99_Tank_Droid_Brigade</Variant_Of_Existing_Type>
+		<Company_Units>Kalani_special, NR_N99_Tank_Droid, NR_N99_Tank_Droid</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>Lucrehulk_Craft</Company_Transport_Unit>
+	</GroundCompany>
+	
+	<TransportUnit Name="CIS_SupplyShip_Kalani_Droid_Ship">
+		<Variant_Of_Existing_Type>CIS_SupplyShip</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_CIS_SupplyShip_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>I_BUTTON_CIS_General_Kalani.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>		
+		<Text_ID>TEXT_HERO_UNIT_CIS_KALANI</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_CIS_KALANI </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_HERO_UNIT_FIELD_REBEL </Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Landing_Transport_Variant>Sheathipede_Landing</Landing_Transport_Variant>
+		<Affiliation>CIS, Rebel</Affiliation>
+		<AI_Combat_Power>5175</AI_Combat_Power>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Enhance_Defense_Ability Name="CIS_Fleet_Commander_Enhance_Defense">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Enhancement_Percentage>0.5</Enhancement_Percentage>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+			</Enhance_Defense_Ability>
+			<Battlefield_Modifier_Ability Name="CIS_Fleet_Commander_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>3.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+	</TransportUnit>
+	
+</CIS_General_Kalani_Data>

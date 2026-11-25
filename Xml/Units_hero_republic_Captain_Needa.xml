@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<Captain_Needa_Files>
+	
+	<SpaceUnit Name="Rep_Integridad_MP">
+		<Variant_Of_Existing_Type>Rep_Integridad</Variant_Of_Existing_Type>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+	
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Integridad_Combat_Bonus_General">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.0</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Combat_Bonus_Ability Name="Integridad_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Rep_Integridad_MP</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.25</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Enable_Radar_Ability Name="E_Comm_Array_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>     
+			<Reduce_Production_Time_Ability Name="Integridad_Production_Time_Reduction">
+				<Applicable_Unit_Categories> Frigate </Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Concentrate_Fire_Attack_Ability Name="Integridad_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Fighter | Bomber | Transport | Corvette | Frigate | Capital</Applicable_Unit_Categories>
+				<Target_Damage_Increase_Percent>0.0</Target_Damage_Increase_Percent>
+				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Concentrate_Fire_Attack_Ability>
+		</Abilities>
+		
+	</SpaceUnit>	
+	
+	<SpaceUnit Name="Rep_Integridad">
+		<Variant_Of_Existing_Type>CarrackORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CARRACKINTEGRIDAD</Text_ID>
+
+		<Galactic_Fleet_Override_Model_Name> W_Rep_Needa_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>EV_Carrack.ALO</Space_Model_Name>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>
+
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Affiliation>Republic</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<AI_Combat_Power>4300</AI_Combat_Power>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		
+		<Starting_Spawned_Units_Tech_0>REP_VWing_Squadron, 1</Starting_Spawned_Units_Tech_0>
+		
+		<CategoryMask> SpaceHero </CategoryMask>
+		<Icon_Name>I_BUTTON_Rep_Needa.tga</Icon_Name>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
+		<GUI_Model_Name>EV_Carrack.ALO</GUI_Model_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_Needa</SFXEvent_Build_Complete>
+		
+		<SFXEvent_Select>Unit_Select_Needa</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Needa</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Needa</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Needa</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Needa</SFXEvent_Guard>
+		<SFXEvent_Group_Move>Unit_Group_Move_Needa</SFXEvent_Group_Move>
+		<SFXEvent_Group_Attack>Unit_Group_Attack_Needa</SFXEvent_Group_Attack>
+		<SFXEvent_Assist_Move> Unit_Group_Move_Needa </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Group_Attack_Needa </SFXEvent_Assist_Attack>
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>Integridad_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			 <Unit_Ability>
+				<Type>CONCENTRATE_FIRE</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.2f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.1f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0</Mod_Multiplier>
+				<Effective_Radius>4000</Effective_Radius>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Expiration_Seconds>15</Expiration_Seconds>
+				<Particle_Effect>Empire_Target_Particles</Particle_Effect>
+				<GUI_Activated_Ability_Name>Integridad_Ability</GUI_Activated_Ability_Name>
+				<SFXEvent_Target_Ability> Unit_Barrage_Tartan </SFXEvent_Target_Ability>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+			<Abilities SubObjectList="Yes">
+			
+			<Combat_Bonus_Ability Name="Integridad_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Types>Rep_Integridad</Applicable_Unit_Types>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.25</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>1</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Enable_Radar_Ability Name="Integridad_Enable_Radar">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Affects_All_Allies>True</Affects_All_Allies>
+			</Enable_Radar_Ability>     
+			<Concentrate_Fire_Attack_Ability Name="Integridad_Ability">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Transport | Corvette | Frigate | Capital | Super | Structure | Spacehero</Applicable_Unit_Categories>
+				<Target_Damage_Increase_Percent>0.0</Target_Damage_Increase_Percent>
+				<Target_Speed_Decrease_Percent>0.0</Target_Speed_Decrease_Percent>
+				<Stacking_Category>9</Stacking_Category>
+			</Concentrate_Fire_Attack_Ability>
+			<Reduce_Production_Time_Ability Name="Integridad_Production_Time_Reduction">
+				<Applicable_Unit_Categories> Frigate </Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+		</Abilities>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_NEEDA TEXT_TOOLTIP_REDUCE_TIME_FRIGATE_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+
+		<Tactical_Build_Cost_Multiplayer>1800</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>20</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+
+</Captain_Needa_Files>

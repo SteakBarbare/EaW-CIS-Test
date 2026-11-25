@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<Almirante_Stazi_Hero_Files>
+		
+	<HeroUnit Name="Admiral_Stazi">
+		<Variant_Of_Existing_Type>Nereus</Variant_Of_Existing_Type>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_HERO_GA_STAZI</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_STAZI TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<SFXEvent_Select>Unit_Select_Ackbar</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Ackbar</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Ackbar</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Ackbar</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Ackbar</SFXEvent_Guard>
+
+		<Icon_Name>I_BUTTON_GA_Stazi.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<Spawn_Planet>Coruscant</Spawn_Planet>
+		<Abilities SubObjectList="Yes">
+			<Reduce_Production_Price_Ability Name="Stazi_Reduce_Production_Price">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Price_Reduction_Percentage>0.25</Price_Reduction_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Reduce_Production_Price_Ability>
+			<Reduce_Production_Time_Ability Name="Stazi_Production_Time_Reduction">
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<System_Spy_Ability Name="Stazi_Ship_Reveal">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Base_Levels>No</See_Base_Levels>
+				<See_Credit_Income>No</See_Credit_Income>
+				<See_Credit_Income_Breakdown>No</See_Credit_Income_Breakdown>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+				<See_Most_Powerful_Ship>Yes</See_Most_Powerful_Ship>
+				<See_Fleet_Contents>Yes</See_Fleet_Contents>
+				<See_Num_Ground_Companies>No</See_Num_Ground_Companies>
+				<See_Ground_Company_Contents>No</See_Ground_Company_Contents>
+				<See_Special_Structures>No</See_Special_Structures>
+				<See_Political_Control>No</See_Political_Control>
+				<See_Political_Control_Breakdown>No</See_Political_Control_Breakdown>
+				<See_Current_Production>No</See_Current_Production>
+				<See_Minor_Stealth_Heroes>No</See_Minor_Stealth_Heroes>
+				<See_Major_Stealth_Heroes>No</See_Major_Stealth_Heroes>
+			</System_Spy_Ability>
+			<Battlefield_Modifier_Ability Name="Stazi_Fleet_Commander_FOW_Increase">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<FOW_Reveal_Range_Multiplier>5.0</FOW_Reveal_Range_Multiplier>
+				<Apply_To_All_Allies>Yes</Apply_To_All_Allies>
+				<Stacking_Category>9</Stacking_Category>
+			</Battlefield_Modifier_Ability>
+		</Abilities>
+	</HeroUnit>
+	
+	<HeroCompany Name="Admiral_Stazi_Team">
+		<Variant_Of_Existing_Type>Nereus_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_GA_STAZI</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_STAZI TEXT_TOOLTIP_REDUCE_TIME_10 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET_COMMANDER</Encyclopedia_Unit_Class>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Icon_Name>I_BUTTON_GA_Stazi.tga</Icon_Name>
+		<Affiliation>Fel</Affiliation>
+		<Company_Transport_Unit>GA_Crix_Shuttle</Company_Transport_Unit>
+		<Company_Units>Admiral_Stazi</Company_Units>
+
+		<SFXEvent_Build_Started>RHD_Request_Assistance</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Request_Canceled</SFXEvent_Build_Cancelled>		
+		<SFXEvent_Build_Complete>Unit_Respawn_Ackbar</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Respawn_Ackbar</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Ackbar</SFXEvent_Fleet_Move>
+		
+	</HeroCompany>	
+	
+	
+
+</Almirante_Stazi_Hero_Files>

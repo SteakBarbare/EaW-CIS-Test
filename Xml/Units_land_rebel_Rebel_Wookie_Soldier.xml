@@ -1,0 +1,94 @@
+﻿<?xml version="1.0"?>
+
+
+<Wookie_SoldierUnit_Data>
+	<GroundInfantry Name="Wookie_Soldier">
+		<Variant_Of_Existing_Type> Sullustan_Rebel </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_SOLDIER</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INFANTRY </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_WOOKIE_SOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Armor_Type> Armor_Infantry_M </Armor_Type>
+		<Land_Model_Name>RI_Wookiee01.alo</Land_Model_Name>
+		<Icon_Name>i_button_generic_wookie.tga</Icon_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Projectile_Types>Proj_Wookiee_Bowcaster</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>1</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Targeting_Fire_Inaccuracy> Infantry, 1.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 8.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 50.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 8.0 </Targeting_Fire_Inaccuracy>
+		<Land_FOW_Reveal_Range>130.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>120.0</Targeting_Max_Attack_Distance>
+
+		<AI_Combat_Power>10</AI_Combat_Power>
+		<SFXEvent_Select>Unit_Select_Wookie</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Wookie</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Wookie</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Wookie</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Wookie </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Attack_Wookie </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_Wookie_Death</Death_SFXEvent_Start_Die>
+		<SFXEvent_Fire>Unit_Chewie_Blaster_Fire</SFXEvent_Fire>
+		<SFXEvent_Ambient_Moving> Ambient_Wookie_Random_Chatter </SFXEvent_Ambient_Moving>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 5 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 10 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<Create_Team>True</Create_Team>
+		<Create_Team_Type>Wookie_Team</Create_Team_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Wookie_Soldier_B">
+		<Variant_Of_Existing_Type>Wookie_Soldier</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Rebel_Wookie_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+	</GroundInfantry>	
+	<GroundCompany Name="Rebel_Wookie_Squad_B">
+		<Variant_Of_Existing_Type>Rebel_Wookie_Squad</Variant_Of_Existing_Type>
+		<Company_Units>Wookie_Soldier, Wookie_Soldier, Wookie_Soldier, Wookie_Soldier, Wookie_Soldier</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Create_Team_Type>Wookie_Team</Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Rebel_Wookie_Squad">
+		<Variant_Of_Existing_Type> Rebel_Infantry_Squad </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_WOOKIE_SOLDIER_SQUAD</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_WOOKIE_SOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+
+		<Icon_Name>i_button_generic_wookie.tga</Icon_Name>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Barracks, R_XCommand</Required_Special_Structures>
+		<Required_Planets>Kashyyyk, KashyyykCW</Required_Planets>
+		<Build_Cost_Credits>650</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+	
+		<Company_Transport_Unit>Alliance_Shuttle</Company_Transport_Unit>
+		<Company_Units>Wookie_Soldier_B, Wookie_Soldier, Wookie_Soldier, Wookie_Soldier, Wookie_Soldier</Company_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+		<Create_Team_Type>Wookie_Team</Create_Team_Type>
+		
+	
+	
+		<SFXEvent_Build_Complete>Unit_Attack_Wookie</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Move_Wookie</SFXEvent_Fleet_Move>
+		<Tactical_Build_Cost_Multiplayer>650</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+	
+	</GroundCompany>
+	<Container Name="Wookie_Team">
+		<Variant_Of_Existing_Type> Sullustan_Rebel_Team </Variant_Of_Existing_Type>
+		<Text_ID>TEXT_INDIGENOUS_WOOKIE_PARTY</Text_ID>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INDIGENOUS </Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_WOOKIE_SOLDIER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Icon_Name>i_button_generic_wookie.tga</Icon_Name>
+		<Select_Box_Scale>65</Select_Box_Scale>
+	</Container>	
+</Wookie_SoldierUnit_Data>

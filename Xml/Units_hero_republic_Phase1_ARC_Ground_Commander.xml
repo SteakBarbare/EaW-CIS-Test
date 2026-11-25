@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<ARC_Field_Commander_Phase1_Republic_Files>
+	
+		
+	<GenericHeroUnit Name="Squad_Generic_ARC_Field_Commander_Phase1_Republic">
+		<Variant_Of_Existing_Type>Republic_ARC_Soldier_Squad</Variant_Of_Existing_Type>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, ABILITY_COUNTDOWN</LandBehavior>
+		<Land_Model_Name>RI_ClonARCPhase1_Red.ALO</Land_Model_Name>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_TOOLTIP_FIELD_DEPLOY TEXT_UNIT_AT_TE_COMPANY TEXT_UNIT_AT_ATs_WALKER TEXT_UNIT_REP_HOVERMOTO_PHASE1 TEXT_UNIT_ATXT TEXT_UNIT_CLONPHASE1PLEX TEXT_UNIT_LAAT TEXT_UNIT_LAAT_C TEXT_UNIT_CLON_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<AI_Combat_Power>10000</AI_Combat_Power>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>8.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Lua_Script>Rep_ARC_Commander_Phase1X_Re</Lua_Script>
+		<CategoryMask> Landhero </CategoryMask>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+		
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Clon_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+	</GenericHeroUnit>
+	<GroundInfantry Name="Squad_Rep_Phase1_Field_Commander_Guard">
+		<Variant_Of_Existing_Type>Republic_Squad_CloneTrooper</Variant_Of_Existing_Type>
+		<Tactical_Health>200</Tactical_Health>
+		<Projectile_Fire_Recharge_Seconds>0.6</Projectile_Fire_Recharge_Seconds>
+		<Score_Cost_Credits> 250 </Score_Cost_Credits>
+		<Create_Team>No</Create_Team>
+		<OccupationStyle>1x1</OccupationStyle>
+		<LandBehavior>SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, STUNNABLE, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, ABILITY_COUNTDOWN</LandBehavior>
+		<CategoryMask> Landhero </CategoryMask>
+	</GroundInfantry>
+		
+	<HeroCompany Name="Republic_ARC_Field_Commander_Phase1_Team">
+		<GUI_Row> 1 </GUI_Row>
+		<Text_ID>TEXT_HERO_UNIT_FIELD_EMPIRE</Text_ID>
+		<Icon_Name>i_button_Rep_Clone_ARC_Phase1_Commander.tga</Icon_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Cost_Credits>13000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures>Republic_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>Rep_Acclamator_ARC_Field_Commander_Phase1_Ship</Company_Transport_Unit>
+		<Company_Units> Squad_Generic_ARC_Field_Commander_Phase1_Republic, Squad_Rep_Phase1_Field_Commander_Guard, Squad_Rep_Phase1_Field_Commander_Guard, Squad_Rep_Phase1_Field_Commander_Guard, Squad_Rep_Phase1_Field_Commander_Guard</Company_Units>
+		<Is_Homogeneous>No</Is_Homogeneous>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+	
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<SFXEvent_Build_Complete>GUI_E_Field_Commander_Complete</SFXEvent_Build_Complete>
+		<SFXEvent_Build_Started>EHD_Build_Commander</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Empire_Field</SFXEvent_Fleet_Move>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Clon_Trooper</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_FIELD_COMMANDER TEXT_TOOLTIP_FIELD_DEPLOY TEXT_UNIT_AT_TE_COMPANY TEXT_UNIT_AT_ATs_WALKER TEXT_UNIT_REP_HOVERMOTO_PHASE1 TEXT_UNIT_ATXT TEXT_UNIT_CLONPHASE1PLEX TEXT_UNIT_LAAT TEXT_UNIT_LAAT_C TEXT_UNIT_CLON_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HERO_MINOR</Encyclopedia_Unit_Class>
+		
+				
+		<Tactical_Build_Cost_Multiplayer>13000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>-1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		<Population_Value>1</Population_Value>
+		<CategoryMask>LandHero</CategoryMask>
+		<Score_Cost_Credits> 500 </Score_Cost_Credits>
+	</HeroCompany>
+	
+	<HeroCompany Name="Republic_ARC_Field_Commander_Phase1_Team_Space_MP">
+		<Variant_Of_Existing_Type>Republic_ARC_Field_Commander_Phase1_Team</Variant_Of_Existing_Type>
+		<Tactical_Build_Cost_Multiplayer>13000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Heroes>No</Build_Tab_Heroes>
+	</HeroCompany>
+
+	<GroundVehicle Name="AT-TE_Walker_special3">
+		<Variant_Of_Existing_Type>Rep_AT_TE_Walker</Variant_Of_Existing_Type>
+		<Lua_Script>Rep_ARC_Commander_Phase1X2_Re</Lua_Script>
+	</GroundVehicle>
+	<GroundCompany Name="Republic_AT_TE_Company_special3">
+		<Variant_Of_Existing_Type>Republic_AT_TE_Company</Variant_Of_Existing_Type>
+		<Company_Units>AT-TE_Walker_special3</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Company_Transport_Unit>Venator_Craft</Company_Transport_Unit>
+	</GroundCompany>
+	
+	<TransportUnit Name="Rep_Acclamator_ARC_Field_Commander_Phase1_Ship">
+		<Variant_Of_Existing_Type>Rep_VenatorX</Variant_Of_Existing_Type>
+		<Galactic_Fleet_Override_Model_Name> W_REP_Venator_Uniqueshipon_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>		
+		<Text_ID>TEXT_HERO_UNIT_FLEET_REP</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_VENETORCLON TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_JEDI_CRUISER TEXT_UNIT_REP_LIGHT_CRUISERX</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_TOOLTIP_FLEET_COMMANDER </Encyclopedia_Unit_Class>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Ship_Class>Transport</Ship_Class>
+		<Transport_Capacity>30</Transport_Capacity>
+		<Behavior>SELECTABLE, TRANSPORT</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SPAWN_SQUADRON, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		<TacticalBehavior> SELECTABLE </TacticalBehavior>
+		<CategoryMask> Transport | AntiCapital </CategoryMask>
+		<Landing_Transport_Variant>Republic_Nu_Shuttle_Landing</Landing_Transport_Variant>
+		<AI_Combat_Power>8050</AI_Combat_Power>
+		<Lua_Script>ObjectScript_Reinforces_AI_Space3</Lua_Script>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_REP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEET_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>Rep_Fleet_Commander_3_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> EHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>EHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Recharge_Seconds>20</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders2</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Nebulon</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Icon_Name>I_SA_SENSOR_PING.TGA</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_GIVE_ORDERS_DESCRIPTION</Alternate_Description_Text>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+		
+	</TransportUnit>
+	
+	<TransportUnit Name="Republic_Nu_Shuttle">
+		<Variant_Of_Existing_Type>Shuttle_Tyderium</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_REPUBLIC_NU_SHUTTLE</Text_ID>
+		<Land_Model_Name>REP_NU_SHUTTLE_LAND.ALO</Land_Model_Name>
+		<Space_Model_Name>REP_NU_SHUTTLE.ALO</Space_Model_Name>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_CLASS_TRANSPORT </Encyclopedia_Text>
+		<No_Colorization_Color> 242, 53, 9, 255 </No_Colorization_Color>
+		<Icon_Name>i_button_Rep_Nu_Shuttle.tga</Icon_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Rep_Nu_Shuttle_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		
+		<Scale_Factor>0.15</Scale_Factor>
+
+		<Affiliation>Republic</Affiliation>
+	
+		<Projectile_Types>Proj_Ship_Small_Laser_Cannon_Blue</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Landing_Transport_Variant>Republic_Nu_Shuttle_Landing</Landing_Transport_Variant>
+	</TransportUnit>
+	
+	<TransportUnit Name="Republic_Nu_Shuttle_Landing">
+		<Variant_Of_Existing_Type>Republic_Nu_Shuttle</Variant_Of_Existing_Type>
+		<No_Colorization_Color> 242, 53, 9, 255 </No_Colorization_Color>
+		<Behavior>TRANSPORT, HINT</Behavior>
+		<Scale_Factor>1.0</Scale_Factor>
+		<LandBehavior>HIDE_WHEN_FOGGED</LandBehavior>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-50, -50, 0</User_Bound_Min>
+		<User_Bound_Max>50, 50, 1500</User_Bound_Max>
+		<Has_Space_Evaluator>False</Has_Space_Evaluator>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Use_Transported_Object_Bounds_For_Landing_Z> false </Use_Transported_Object_Bounds_For_Landing_Z>
+	</TransportUnit>
+</ARC_Field_Commander_Phase1_Republic_Files>

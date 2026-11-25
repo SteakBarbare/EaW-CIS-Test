@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<EVFO_Interdictor_Data>
+	
+	<SpaceUnit Name="EVFO_Interdictor">
+		<Variant_Of_Existing_Type>InterdictorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVFO_INTERDICTOR</Text_ID>
+		<Encyclopedia_Good_Against> Marauder_Missile_Cruiser Interceptor4_Frigate</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser Y-Wing Skipray_Blastboat</Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_INTERDICTOR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVFO_TIE_INVADER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_1</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_INTERDICTOR </Encyclopedia_Unit_Class>
+		<Space_Model_Name>EVFO_Interdictor.alo</Space_Model_Name>
+		<Icon_Name>i_button_EVFO_Interdictor.tga</Icon_Name>
+		<Armor_Type> Armor_Interdictor </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_PesadosE</Required_Special_Structures>
+		<GUI_Row> 0 </GUI_Row>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Affiliation>EVFO, Empire</Affiliation>
+		<Tactical_Bribe_Cost>750</Tactical_Bribe_Cost>	
+		<Autoresolve_Health>24000</Autoresolve_Health>
+		<Shield_Points>24000</Shield_Points>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Shield_Refresh_Rate>27000</Shield_Refresh_Rate>
+		<Energy_Capacity>350000</Energy_Capacity>
+		<Energy_Refresh_Rate>52500</Energy_Refresh_Rate>
+		<Hyperspace_Speed>0.45</Hyperspace_Speed>
+		<Death_Clone>Damage_Normal, EVFO_Interdictor_Death_Clone</Death_Clone>
+		<Starting_Spawned_Units_Tech_0>EVFO_TIE_Invader_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVFO_TIE_Invader_Squadron4, 5</Reserve_Spawned_Units_Tech_0>
+		<AI_Combat_Power>4550</AI_Combat_Power>
+		<HardPoints>
+			HP_T_EVFOCarrier_01, 
+			HP_T_EVFOCarrier_02,
+  		    HP_T_EVFOCarrier_03, 
+			HP_T_EVFOCarrier_04, 
+			HP_MisilA_01,
+			HP_MisilA_02,
+			HP_Flak_01,
+			HP_Flak_02,
+			HP_Flak_03,
+			HP_Flak_04,
+      		HP_Fighter_BayH_00,			
+			HP_Fighter_BayH_01,			
+			HP_Shield_GeneratorH_00, 
+			HP_EnginesH_00,
+			Hp_Gravedad_01,
+			Hp_Gravedad_02,
+		</HardPoints>
+		<Lua_Script>Interdictor_EVFO</Lua_Script>
+		<Tactical_Build_Cost_Multiplayer>2000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>33</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="EVFO_Interdictor_Death_Clone">
+		<Text_ID>TEXT_UNIT_INTERDICTOR_CRUISER</Text_ID>
+		<Space_Model_Name>EVFO_Interdictor_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_500</Death_Explosions>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+	</SpaceUnit>
+	
+</EVFO_Interdictor_Data>

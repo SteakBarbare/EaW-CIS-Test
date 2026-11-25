@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<ATACT_WalkerUnit_Data>
+<GroundVehicle Name="ATACT_Walker">
+		<Variant_Of_Existing_Type>AT_AT_WalkerORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_ATACT</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_ATACT</Encyclopedia_Text>
+		
+		<Land_Model_Name>EV_ATACT.ALO</Land_Model_Name>
+		<Icon_Name>i_button_EV_ATACT.tga</Icon_Name>
+		
+		<Max_Speed>0.60 </Max_Speed>
+		<Scale_Factor>2.1</Scale_Factor>
+		
+		<Armor_Type> Armor_T4B </Armor_Type>
+		
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+
+		<Affiliation>Empire</Affiliation>
+				
+		<Destruction_Survivors> 
+			Walker_Commander_Survivor, 1.0 
+			Walker_Pilot_Survivor, 1.0
+			Walker_Pilot_Survivor, 1.0
+		</Destruction_Survivors>
+		
+		<Death_Clone>Damage_Cable_Attack, ATACT_Walker_Cable_Attack_Death_Clone</Death_Clone>
+		<Vehicle_Thief_Inside_Clone>ATACT_Walker_Captured</Vehicle_Thief_Inside_Clone>
+						 
+	</GroundVehicle>
+	
+	<GroundVehicle Name="ATACT_Walker_Captured">
+		<Variant_Of_Existing_Type>ATACT_Walker</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds> 
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="ATACT_Walker_Cable_Attack_Death_Clone">
+		<Variant_Of_Existing_Type>ATACT_Walker</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>CA_DIE</Specific_Death_Anim_Type>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+      <Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+		<Presence_Range>200.0</Presence_Range>
+
+	</GroundVehicle>
+
+	
+	<GroundCompany Name="Imperial_ATACT_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Assault_Company</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EV_ATACT</Text_ID>
+		<Encyclopedia_Good_Against> T4B_Tank T2B_Tank UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Snowspeeder Plex_Soldier Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EV_ATACT TEXT_DESC_C_CANTIDAD_1</Encyclopedia_Text>
+		
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1100</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>E_Ground_Advanced_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+
+		<Company_Units>ATACT_Walker</Company_Units>
+		<Icon_Name>i_button_EV_ATACT.tga</Icon_Name>
+		<GUI_Model_Name>EV_ATACT.ALO</GUI_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>1100</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>EC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</ATACT_WalkerUnit_Data>

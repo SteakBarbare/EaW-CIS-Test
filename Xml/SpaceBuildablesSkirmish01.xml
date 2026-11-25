@@ -1,0 +1,644 @@
+<?xml version="1.0"?>
+<SpaceBuildables>
+
+
+	<!--
+		ATTENTION DESIGNERS: Use this laser pad ONLY on maps unless you
+		are making something specific to a scripted mission.
+	-->
+	
+	<SpaceBuildable Name="Defense_Satellite_Laser_Pad">
+		<Behavior> SPACE_OBSTACLE, TACTICAL_BUILD_OBJECTS, REVEAL, HIDE_WHEN_FOGGED, CAPTURE_POINT </Behavior>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire, 
+				UC_Empire_Defense_Satellite_Laser,
+				UC_Empire_Defense_Satellite_Missile,
+				UC_Empire_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			EVFO, 
+				UC_Empire_Defense_Satellite_Laser,
+				UC_Empire_Defense_Satellite_Missile,
+				UC_Empire_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			Pirates, 
+				UC_Pirates_Defense_Satellite_Laser,
+				UC_Empire_Defense_Satellite_Missile,
+				UC_Rebel_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			Rebel,
+				UC_Rebel_Defense_Satellite_Laser,
+				UC_Rebel_Defense_Satellite_Missile,
+				UC_Rebel_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			RVRE,
+				UC_Rebel_Defense_Satellite_Laser,
+				UC_Rebel_Defense_Satellite_Missile,
+				UC_Rebel_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			GA,
+				UC_Rebel_Defense_Satellite_Laser,
+				UC_Rebel_Defense_Satellite_Missile,
+				UC_Rebel_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			GAC,
+				UC_Rebel_Defense_Satellite_Laser,
+				UC_Hutts_Defense_Satellite_Missile,
+				UC_Hapan_Defense_Satellite_Repair,
+				UC_Corporate_Defense_SSD_Shipyard,
+			CIS, 
+				UC_CIS_Defense_Satellite_Laser,
+				UC_CIS_Defense_Satellite_Missile,
+				UC_CIS_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			Republic, 
+				UC_Republic_Defense_Satellite_Laser,
+				UC_Republic_Defense_Satellite_Missile,
+				UC_Republic_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			Underworld,
+				UC_Underworld_Defense_Satellite_Plasma,
+				UC_Empire_Defense_Satellite_Missile,
+				UC_Underworld_Defense_Satellite_Repair,
+				UC_Defense_SSD_Shipyard,
+			Krayt, 
+				UC_EVF_Defense_Satellite_Laser,
+				UC_EVF_Defense_Satellite_Missile,
+				UC_EVF_Defense_Satellite_Repair,		
+			Fel, 
+				UC_EVF_Defense_Satellite_Laser,
+				UC_EVF_Defense_Satellite_Missile,
+				UC_EVF_Defense_Satellite_Repair,
+			Hutts, 
+				UC_FreeSide_Defense_Satellite_Laser,
+				UC_Hutts_Defense_Satellite_Missile,
+				UC_Hutts_Defense_Satellite_Repair,
+				UC_Hutts_Defense_SSD_Shipyard,
+			Chiss, 
+				UC_FreeSide_Defense_Satellite_Laser,
+				UC_Chiss_Defense_Satellite_Missile,
+				UC_Chiss_Defense_Satellite_Repair,
+				UC_Chiss_Defense_SSD_Shipyard,
+			Hapan, 
+				UC_FreeSide_Defense_Satellite_Laser,
+				UC_Hapan_Defense_Satellite_Missile,
+				UC_Hapan_Defense_Satellite_Repair,
+				UC_Hapan_Defense_SSD_Shipyard,
+			Corporate, 
+				UC_FreeSide_Defense_Satellite_Laser,
+				UC_Corporate_Defense_Satellite_Missile,
+				UC_Corporate_Defense_Satellite_Repair,
+				UC_Corporate_Defense_SSD_Shipyard
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Empire, 
+				UC_Empire_Defense_Satellite_Laser,
+			EVFO, 
+				UC_Empire_Defense_Satellite_Laser,
+			Pirates, 
+				UC_Pirates_Defense_Satellite_Laser,
+			Rebel,
+				UC_Rebel_Defense_Satellite_Laser,
+			RVRE,
+				UC_Rebel_Defense_Satellite_Laser,
+			GA,
+				UC_Rebel_Defense_Satellite_Laser,
+			GAC,
+				UC_Rebel_Defense_Satellite_Laser,
+			CIS, 
+				UC_CIS_Defense_Satellite_Laser,
+			Republic, 
+				UC_Republic_Defense_Satellite_Laser,
+			Underworld,
+				UC_Underworld_Defense_Satellite_Plasma,
+			Krayt, 
+				UC_EVF_Defense_Satellite_Laser,
+			Fel, 
+				UC_EVF_Defense_Satellite_Laser,
+			Hutts, 
+				UC_FreeSide_Defense_Satellite_Laser,
+			Chiss, 
+				UC_FreeSide_Defense_Satellite_Laser,
+			Hapan, 
+				UC_FreeSide_Defense_Satellite_Laser,
+			Corporate, 
+				UC_FreeSide_Defense_Satellite_Laser	
+		</Tactical_Buildable_Objects_Campaign>
+
+		<Text_ID> TEXT_ORBITAL_DEFENSE_SATELLITE_PAD_TEMP </Text_ID>
+		<Space_Model_Name>NV_LDS_pad.ALO</Space_Model_Name>
+		<Icon_Name>i_button_lds.tga</Icon_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Select_Box_Scale>3</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+		<Affiliation>Neutral, Rebel, Empire, Pirates, CIS, Republic, Underworld, Krayt, Fel, Hutts, Chiss, Hapan, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Size_Value>30</Size_Value>
+		<Tactical_Health>1200</Tactical_Health>
+		
+		<Space_FOW_Reveal_Range>200.0</Space_FOW_Reveal_Range>
+
+		<GUI_Model_Name>NV_LDS_pad.ALO</GUI_Model_Name>
+		<GUI_Distance>1000</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<CategoryMask> Structure </CategoryMask>
+		<Armor_Type> Armor_Satellite </Armor_Type>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+
+		<Capture_Point_Radius>750</Capture_Point_Radius>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Capture_Point_Transition_Time_Seconds>5.0</Capture_Point_Transition_Time_Seconds>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<Hides_When_Built_On>True</Hides_When_Built_On>
+		<Destroy_When_Child_Dies>True</Destroy_When_Child_Dies>
+
+		<Loop_Idle_Anim_00> No </Loop_Idle_Anim_00>
+		<Collidable_By_Projectile_Living> No </Collidable_By_Projectile_Living>
+		<Is_Visible_On_Radar>True</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.075  0.075</Radar_Icon_Size>
+		<Select_Box_Scale> 50 </Select_Box_Scale>
+		<Scale_Factor> 0.5 </Scale_Factor>
+		<Victory_Relevant> No </Victory_Relevant>
+		<Custom_Soft_Footprint_Radius> 100 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> StaticObject </Space_Layer>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		
+		<Tactical_Respawn_Time_In_Secs>45</Tactical_Respawn_Time_In_Secs>
+		
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_DEFENSE_SAT_PAD_EMPTY_00 TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_DEFENSE_SAT_PAD_EMPTY_00 TEXT_TOOLTIP_UNIT_CAPTUREABLE_STRUCTURE </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Victory_Relevant>No</Victory_Relevant>
+	</SpaceBuildable>
+	<SpaceBuildable Name="Defense_Satellite_Missile_Pad">
+		<Variant_Of_Existing_Type>Defense_Satellite_Laser_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>
+			Empire,
+				UC_Empire_Defense_Satellite_Missile,
+			EVFO,
+				UC_Empire_Defense_Satellite_Missile,
+			Pirates,
+				UC_Pirates_Defense_Satellite_Missile,	
+			Rebel,
+				UC_Rebel_Defense_Satellite_Missile,
+			RVRE,
+				UC_Rebel_Defense_Satellite_Missile,
+			GA,
+				UC_Rebel_Defense_Satellite_Missile,
+			GAC,
+				UC_Rebel_Defense_Satellite_Missile,
+			CIS,
+				UC_CIS_Defense_Satellite_Missile,		
+			Republic,
+				UC_Republic_Defense_Satellite_Missile,		
+			Underworld,
+				UC_Underworld_Defense_Satellite_DBM,	
+			Krayt,
+				UC_EVF_Defense_Satellite_Missile,		
+			Fel,
+				UC_EVF_Defense_Satellite_Missile,
+			Hutts,
+				UC_Hutts_Defense_Satellite_Missile,
+			Chiss,
+				UC_Chiss_Defense_Satellite_Missile,	
+			Hapan,
+				UC_Hapan_Defense_Satellite_Missile,
+			Corporate,
+				UC_Corporate_Defense_Satellite_Missile
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Space_Model_Name>NV_LDS_Pad.ALO</Space_Model_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+	</SpaceBuildable>
+	<SpaceBuildable Name="Defense_Satellite_Repair_Pad">
+		<Variant_Of_Existing_Type>Defense_Satellite_Laser_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire, 
+				UC_Empire_Defense_Satellite_Repair,
+			EVFO, 
+				UC_Empire_Defense_Satellite_Repair,
+			Pirates, 
+				UC_Pirates_Defense_Satellite_Repair,	
+			Rebel,
+				UC_Rebel_Defense_Satellite_Repair,
+			RVRE,
+				UC_Rebel_Defense_Satellite_Repair,
+			GA,
+				UC_Rebel_Defense_Satellite_Repair,
+			GAC,
+				UC_Rebel_Defense_Satellite_Repair,
+			CIS, 
+				UC_CIS_Defense_Satellite_Repair,	
+			Republic, 
+				UC_Republic_Defense_Satellite_Repair,			
+			Underworld,
+				UC_Underworld_Defense_Satellite_Repair,
+			Krayt, 
+				UC_EVF_Defense_Satellite_Repair,
+			Fel, 
+				UC_EVF_Defense_Satellite_Repair,
+			Hutts,
+				UC_Hutts_Defense_Satellite_Repair,
+			Chiss,
+				UC_Chiss_Defense_Satellite_Repair,	
+			Hapan,
+				UC_Hapan_Defense_Satellite_Repair,
+			Corporate,
+				UC_Corporate_Defense_Satellite_Repair	
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Space_Model_Name>NV_LDS_Pad.ALO</Space_Model_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+	</SpaceBuildable>
+	<SpaceBuildable Name="Defense_Satellite_SSDs_Pad">
+		<Variant_Of_Existing_Type>Defense_Satellite_Laser_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Empire, 
+				UC_Defense_SSD_Shipyard,
+			EVFO, 
+				UC_Defense_SSD_Shipyard,
+			Pirates, 
+				UC_Defense_SSD_Shipyard,	
+			Rebel,
+				UC_Defense_SSD_Shipyard,
+			RVRE,
+				UC_Defense_SSD_Shipyard,
+			GA,
+				UC_Defense_SSD_Shipyard,
+			GAC,
+				UC_Corporate_Defense_SSD_Shipyard,
+			CIS, 
+				UC_Defense_SSD_Shipyard,	
+			Republic, 
+				UC_Defense_SSD_Shipyard,			
+			Underworld,
+				UC_Defense_SSD_Shipyard,
+			Krayt, 
+				UC_EVF_Defense_Satellite_Laser,	
+			Fel, 
+				UC_EVF_Defense_Satellite_Laser,
+			Hutts,
+				UC_Hutts_Defense_SSD_Shipyard,
+			Chiss,
+				UC_Chiss_Defense_SSD_Shipyard,	
+			Hapan,
+				UC_Hapan_Defense_SSD_Shipyard,
+			Corporate,
+				UC_Corporate_Defense_SSD_Shipyard	
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Space_Model_Name>NV_LDS_Pad.ALO</Space_Model_Name>
+		<Victory_Relevant>No</Victory_Relevant>
+	</SpaceBuildable>
+	
+<!--  ***************************************** -->
+<!--  ***** UC VERSIONS OF ALL SATELLITES ***** -->
+<!--  ***************************************** -->
+	<SpaceBuildable Name="UC_Empire_Defense_Satellite_Laser">
+		<Behavior>SPACE_OBSTACLE, TACTICAL_UNDER_CONSTRUCTION, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED</Behavior>
+		<Tactical_Buildable_Constructed> XQ11_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		<Victory_Relevant>No</Victory_Relevant>
+
+		<Text_ID>TEXT_UNIT_PLATTFORM11</Text_ID>
+		<GUI_Row> 0 </GUI_Row>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Space_Model_Name>AR_NV_XQ11X_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.6</Scale_Factor>
+		<Select_Box_Scale>3</Select_Box_Scale>
+		<Select_Box_Z_Adjust>-30</Select_Box_Z_Adjust>
+		<Affiliation>Empire, Pirates, Hutts, Chiss, Hapan, Corporate, EVFO</Affiliation>
+		<Size_Value>30</Size_Value>
+		<Tactical_Health>1200</Tactical_Health>
+		<Space_FOW_Reveal_Range>200.0</Space_FOW_Reveal_Range>
+
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Large_Explosion_Space</Death_Explosions>
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<Icon_Name>I_BUTTON_NV_XQ11X.tga</Icon_Name>
+		<GUI_Model_Name>AR_NV_XQ11X_Build.ALO</GUI_Model_Name>
+		<GUI_Distance>1000</GUI_Distance>
+		<GUI_Offset>0 0 0</GUI_Offset>
+		<GUI_Velocity>45</GUI_Velocity>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<CategoryMask> Structure </CategoryMask>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Armor_Type> Armor_Satellite </Armor_Type>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+
+		<Custom_Soft_Footprint_Radius> 100 </Custom_Soft_Footprint_Radius>
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset> 
+		<Space_Layer> StaticObject </Space_Layer>
+		<Has_Space_Evaluator>True</Has_Space_Evaluator>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_PLATTFORM1 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_PLATTFORM1 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
+		<Last_State_Visible_Under_FOW> True </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		<Victory_Relevant>No</Victory_Relevant>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_Rebel_Defense_Satellite_Laser">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> XQ10_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+		
+		<Text_ID>TEXT_UNIT_PLATTFORM10</Text_ID>
+
+		<Space_Model_Name>AR_NV_XQ10X_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_XQ10X.tga</Icon_Name>
+
+		<Affiliation>Rebel, RVRE, GA, GAC</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>		
+	<SpaceBuildable Name="UC_Underworld_Defense_Satellite_Plasma">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> XQ9_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+		
+		<Text_ID>TEXT_UNIT_PLATTFORM9</Text_ID>
+		
+		<Space_Model_Name>AR_NV_XQ9X_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_XQ9X.tga</Icon_Name>
+
+		<Affiliation>Underworld</Affiliation>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+
+	</SpaceBuildable>	
+	<SpaceBuildable Name="UC_Underworld_Defense_Satellite_Sensor">
+   		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_SENSOR_SCRAMBLER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SENSOR_SCRAMBLER</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_SENSOR_SCRAMBLER</MP_Encyclopedia_Text>
+		<Space_Model_Name>NV_LRS_build.alo</Space_Model_Name>
+		<Icon_Name>i_button_lrs.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> Underworld_Defense_Satellite_Sensor </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 875 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>700</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 18 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Underworld, Pirates</Affiliation>
+	
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="UC_Empire_Defense_Satellite_Tractor">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+   		<Text_ID>TEXT_ORBITAL_DEFENSE_SATELLITE_TRACTOR</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_DEFENSE_SATELLITE_TRACTOR</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_DEFENSE_SATELLITE_TRACTOR</MP_Encyclopedia_Text>
+
+		<Space_Model_Name>EV_Satallite_TB.alo</Space_Model_Name>
+		<Icon_Name>i_button_tractor_beam.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> Empire_Defense_Satellite_Tractor </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>600</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Empire, Pirates, Krayt, Fel, Hutts, Chiss, Hapan, Corporate, EVFO</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="UC_Rebel_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+   		<Text_ID>TEXT_UNIT_ASTILLEROSREBELDES</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ASTILLEROSREBELDES</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_ASTILLEROSREBELDES</MP_Encyclopedia_Text>
+
+		<Space_Model_Name>NV_RepairYardRebelX2_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Icon_Name>I_BUTTON_REPAIRYARD2.tga</Icon_Name>
+
+		<Tactical_Buildable_Constructed> Astilleros_Rebeldes_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1200</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		
+		<Affiliation>Rebel, Pirates, RVRE, GA, GAC</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="UC_Empire_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_Rebel_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+		
+		<Space_Model_Name>NV_RepairYardX2_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_Repairyardx2.TGA</Icon_Name>
+		<Scale_Factor>0.3</Scale_Factor>
+		<Tactical_Buildable_Constructed> Astilleros_Imperiales_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1200</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		
+		<Text_ID>TEXT_UNIT_ASTILLEROSIMPERIALES</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ASTILLEROSIMPERIALES</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>TEXT_TOOLTIP_ASTILLEROSIMPERIALES</MP_Encyclopedia_Text>
+
+		<Affiliation>Empire, Krayt, Fel, Hutts, Chiss, Hapan, Corporate, EVFO</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Underworld_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_Rebel_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Astilleros_Rebeldes_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1200</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Underworld</Affiliation>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+   	<SpaceBuildable Name="UC_Empire_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ASTILLEROSPESADOS</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_ASTILLERONAVESCAPITALES </MP_Encyclopedia_Text>
+		
+		<Tactical_Buildable_Constructed> Astilleros_Pesados_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		
+		<Space_Model_Name>NV_Shipyard_Build.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Icon_Name>I_BUTTON_Shipyard.tga</Icon_Name>
+		<Affiliation>Empire, Pirates, Krayt, Fel, Hutts, Chiss, Hapan, Corporate, EVFO</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<GUI_Model_Name>NV_Shipyard_Build.ALO</GUI_Model_Name>
+   </SpaceBuildable>	
+	<SpaceBuildable Name="UC_Rebel_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Missile</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Astilleros_Pesados_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+
+		<Affiliation>Rebel, RVRE, GA, GAC</Affiliation>
+		<SFXEvent_Build_Started>RHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>RHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>RHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Underworld_Defense_Satellite_DBM">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Missile</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Astilleros_Pesados_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+
+		<Affiliation>Underworld</Affiliation>
+		<SFXEvent_Build_Started>UHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>UHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>UHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Pirates_Defense_Satellite_Laser">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		
+		<Tactical_Buildable_Constructed> XQ9_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+		
+		<Text_ID>TEXT_UNIT_PLATTFORM9</Text_ID>
+		
+		<Space_Model_Name>AR_NV_XQ9X_Build.ALO</Space_Model_Name>
+		<Icon_Name>I_BUTTON_NV_XQ9X.tga</Icon_Name>
+		
+		<Affiliation>Pirates</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Pirates_Defense_Satellite_Missile">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Missile</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Astilleros_Pesados_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>275</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+
+		<Affiliation>Pirates</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Pirates_Defense_Satellite_Repair">
+		<Variant_Of_Existing_Type>UC_Rebel_Defense_Satellite_Repair</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Astilleros_Rebeldes_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>500</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+
+		<Affiliation>Pirates</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Pirates_Defense_Satellite_Flak">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Flak</Variant_Of_Existing_Type>
+
+		<Tactical_Buildable_Constructed> Underworld_Defense_Satellite_Flak </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 875 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>400</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 25 </Tactical_Build_Time_Seconds>
+
+		<Affiliation>Pirates</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_Pirates_Defense_Missile_Launcher">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Missile_Launcher</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_ORBITAL_DEFENSE_SATELLITE_DBM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DEFENSE_SATELLITE_DBM </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_DEFENSE_SATELLITE_DBM </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+
+		<Tactical_Buildable_Constructed> Underworld_Defense_Missile_Launcher </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1200 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 20 </Tactical_Build_Time_Seconds>
+		<Tactical_Health>1000</Tactical_Health>
+
+		<Affiliation>Pirates</Affiliation>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+	</SpaceBuildable>
+
+	<SpaceBuildable Name="UC_Defense_SSD_Shipyard">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_SSDSHIPYARD</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_SSDSHIPYARD </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_SSDSHIPYARD </MP_Encyclopedia_Text>
+		
+		<Tactical_Buildable_Constructed> SSDShipyard_Plattform_MP </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>2000</Tactical_Build_Cost_Campaign>
+		<Tactical_Build_Time_Seconds> 28 </Tactical_Build_Time_Seconds>
+		<Tactical_Build_Start_Lower_Z> 0.0 </Tactical_Build_Start_Lower_Z>
+		
+		<Space_Model_Name>NV_SSDShipyard_Build.ALO</Space_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Icon_Name>I_BUTTON_SSDShipyard.tga</Icon_Name>
+		<Affiliation>Rebel, Empire, Pirates, CIS, Republic, Underworld, Krayt, Fel, Hutts, Chiss, Hapan, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+
+		<SFXEvent_Fire>Unit_A_Wing_Fire</SFXEvent_Fire>
+		<GUI_Model_Name>NV_SSDShipyard_Build.ALO</GUI_Model_Name>
+   </SpaceBuildable>	
+</SpaceBuildables>

@@ -1,0 +1,189 @@
+<?xml version="1.0" ?>
+<Ataque_Centralia_Files>
+
+	<SpaceUnit Name="Ataque_Centralia">
+		<Text_ID>TEXT_UNIT_CENTRALIA_ATTACK</Text_ID>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>W_LASER_INVISIBLE.alo</Space_Model_Name>
+		<Galactic_Fleet_Override_Model_Name> W_Estacion_Centralia_Ataque.alo </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Ranking_In_Category> 0 </Ranking_In_Category>
+		<Prevents_Story_Campaign_Autoresolve>yes</Prevents_Story_Campaign_Autoresolve>
+		<Mass>0.9995</Mass>
+		<Scale_Factor>0.1</Scale_Factor>
+		<Max_Speed> 10.0 </Max_Speed> 
+		<Max_Thrust> 0.02 </Max_Thrust>
+		<Max_Rate_Of_Turn>1.4</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>0.2</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<Hyperspace>Yes</Hyperspace>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+		<Maintenance_Cost>0.3</Maintenance_Cost>
+		<Collision_Box_Modifier>250.0</Collision_Box_Modifier>
+		<Affiliation>Empire, Rebel, Underworld, Pirates</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Planets>Tralus, Corellia_Sector</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<Build_Time_Seconds>150</Build_Time_Seconds> <!-- 310 = 5 minutes 10 seconds (to hear 5 minutes until complete V/O -->
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Autoresolve_Health>5</Autoresolve_Health>
+		<Damage>50000</Damage>
+		<Shield_Points>5</Shield_Points>
+		<Tactical_Health>50000</Tactical_Health>
+		<Shield_Refresh_Rate>100</Shield_Refresh_Rate>
+		<Energy_Capacity>50000</Energy_Capacity>
+		<Energy_Refresh_Rate>100</Energy_Refresh_Rate>
+		<Ship_Class>super</Ship_Class>
+		<Formation_Priority>6</Formation_Priority>
+		<Is_Escort>no</Is_Escort>
+		<Is_Bomber>no</Is_Bomber>
+		<Political_Faction>Empire</Political_Faction>
+		<Squadron_Capacity>100</Squadron_Capacity>
+		<Transport_Capacity>100</Transport_Capacity>
+		<Number_per_Squadron>1</Number_per_Squadron>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Size_Value>200</Size_Value>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		
+		<Behavior> DUMMY_STARSHIP DUMMY_CANT_PATHFIND</Behavior>
+		<GalacticBehavior> SELECTABLE </GalacticBehavior>
+		<SpaceBehavior> SIMPLE_SPACE_LOCOMOTOR, IDLE </SpaceBehavior>
+		<In_Background>Yes</In_Background>
+		
+		<SFXEvent_Fire> Unit_Superlaser_Fire </SFXEvent_Fire>
+	
+		<Icon_Name>I_BUTTON_NV_Centralia.tga</Icon_Name>
+		<Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+
+		<Build_Speech_Underway> EHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> EHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<!-- Intentially called "Speech_Death_Star_Build_" (with trailing underscore)  for varied countdown references in SpeechEvents.xml -->
+		<Build_Speech_Countdowns> EHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Music_Completed> Galactic_Death_Star_Complete_Music_Event </Build_Music_Completed>
+		
+		<Victory_Relevant>No</Victory_Relevant>
+		<CategoryMask> Super </CategoryMask>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CENTRALIA_ATTACK</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SUPER</Encyclopedia_Unit_Class>
+		<Targeting_Max_Attack_Distance>1.0</Targeting_Max_Attack_Distance>
+		<Unit_Abilities_Data SubObjectList="Yes"></Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Galactic_Stealth_Ability Name="Ataque_Centralia_Galactic_Stealth">
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+			<Planet_Destruction_Ability Name="Death_Star_Planet_Destruction">
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<SFXEvent_Target_Affected>Planet_Death_SFX</SFXEvent_Target_Affected>
+				<Target_Particle_Effect>Planet_Explosion_Galactic</Target_Particle_Effect>
+				<Causes_Despawn>Yes</Causes_Despawn>
+			</Planet_Destruction_Ability>
+		</Abilities>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+				
+		<Population_Value>1</Population_Value>
+		<Space_Override_Population_Value>0</Space_Override_Population_Value>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Investigar_Ataque_Centralia_F">
+		<Variant_Of_Existing_Type>Ataque_Centralia</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Chiss, Hapan, Corporate, Hutts</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+
+		<Build_Speech_Underway> EHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> EHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> EHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Investigar_Ataque_Centralia_Rep">
+		<Variant_Of_Existing_Type>Ataque_Centralia</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Republic</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Required_Orbiting_Units>YodaRepublic_Team</Required_Orbiting_Units>
+		<Required_Special_Structures>Astilleros_IAC</Required_Special_Structures>
+
+		<Build_Speech_Underway> EHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> EHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> EHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Investigar_Ataque_Centralia_CIS">
+		<Variant_Of_Existing_Type>Ataque_Centralia</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>CIS</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Required_Orbiting_Units>Dooku_Team</Required_Orbiting_Units>
+		<Required_Special_Structures>Astilleros_IAN</Required_Special_Structures>
+
+		<Build_Speech_Underway> RHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> RHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> RHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> RHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Investigar_Ataque_Centralia_Rebel">
+		<Variant_Of_Existing_Type>Ataque_Centralia</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Required_Orbiting_Units>Luke_Skywalker_Jedi_Team</Required_Orbiting_Units>
+		
+		<Build_Speech_Underway> RHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> RHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> RHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> RHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Countdown_Text_RGBA> 255, 0, 0, 255 </Build_Countdown_Text_RGBA>
+	</SpaceUnit>
+	<SpaceUnit Name="Investigar_Ataque_Centralia_Empire">
+		<Variant_Of_Existing_Type>Ataque_Centralia</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Empire</Affiliation>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Required_Special_Structures>Astilleros_Imperiales</Required_Special_Structures>
+		<Required_Orbiting_Units>Desann_Team</Required_Orbiting_Units>
+
+		<Build_Speech_Underway> EHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> EHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> EHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> EHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Countdown_Text_RGBA> 167, 183, 210, 255 </Build_Countdown_Text_RGBA>
+	</SpaceUnit>
+	<SpaceUnit Name="Investigar_Ataque_Centralia_Underworld">
+		<Variant_Of_Existing_Type>Ataque_Centralia</Variant_Of_Existing_Type>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Underworld</Affiliation>
+		
+		<Required_Special_Structures>Astilleros_Piratas</Required_Special_Structures>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Speech_Underway> UHD_Upgrade_Progress </Build_Speech_Underway>
+		<Build_Speech_Completed> UHD_Upgrade_Complete </Build_Speech_Completed>
+		<Build_Speech_Stopped> UHD_Upgrade_Canceled </Build_Speech_Stopped>
+		<Build_Speech_Countdowns> UHD_Upgrade_Progress </Build_Speech_Countdowns>
+		<Build_Countdown_Text_RGBA> 192, 143, 82, 255 </Build_Countdown_Text_RGBA>
+	</SpaceUnit>
+	
+	
+</Ataque_Centralia_Files>
+

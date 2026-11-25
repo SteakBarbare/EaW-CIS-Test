@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<EVK_Sith_genericUnit_Data>
+	<GenericHeroUnit Name="EVK_Sith_generic">
+		<Variant_Of_Existing_Type>Sith_generic</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Is_Force_Sensitive>Yes</Is_Force_Sensitive>
+		<Text_ID>TEXT_UNIT_SITH</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SITH TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+
+		<Land_Model_Name>EVK_Sith_Trooper.ALO</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Land_Model_Anim_Override_Name>EVK_Sith_Trooper.alo</Land_Model_Anim_Override_Name>
+		<Icon_Name>I_BUTTON_EVK_Sith_Trooper.tga</Icon_Name>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Obiwan_Lightsaber_Idle_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Obiwan_Lightsaber_Moving_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Obiwan_Lightsaber_Cinematic_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Scale_Factor>1.2</Scale_Factor>
+
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Tactical_Health>400</Tactical_Health>
+
+		<Armor_Type> Armor_Hero </Armor_Type>
+		
+		<SFXEvent_Select>Unit_Select_Dark_Trooper_1</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Dark_Trooper_1</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_1</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_1</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_1</SFXEvent_Guard>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_1 </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_1 </SFXEvent_Assist_Attack>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Vader </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Vader </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Vader </Death_SFXEvent_Start_Die>
+		
+		<SFXEvent_Tactical_Build_Started> Unit_Produce_Troops_Arc_Hammer </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Troops_Arc_Hammer </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+
+		<CategoryMask> LandHero | Spacehero </CategoryMask>
+
+		<Attach_To_Flagship_During_Space_Battle>No</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>No</Stay_In_Transport_During_Ground_Battle>		
+
+		<Selection_Blob_Material_Name>Selection_Republic_Hero</Selection_Blob_Material_Name>
+        <Highlight_Blob_Material_Name>Highlight_Krayt_Hero</Highlight_Blob_Material_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes"> 
+            <Unit_Ability>
+				<Type>FORCE_WHIRLWIND</Type>
+				<Recharge_Seconds>60.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> SithE_Force_Whirlwind </GUI_Activated_Ability_Name> 
+				<Effective_Radius> 500.0 </Effective_Radius>
+				<Spawned_Object_Type> Force_Whirlwind_Particles </Spawned_Object_Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>AREA_EFFECT_CONVERT</Type>
+				<Recharge_Seconds>50.0</Recharge_Seconds>
+				<GUI_Activated_Ability_Name> </GUI_Activated_Ability_Name> 
+				<Spawned_Object_Type> Proj_Special_Convert_Krayt_Land </Spawned_Object_Type>
+				<SFXEvent_Target_Ability> Unit_Convert_Emperor </SFXEvent_Target_Ability>  
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+
+        </Unit_Abilities_Data>
+		
+	</GenericHeroUnit>
+	
+	<HeroCompany Name="EVK_Sith">
+		<GUI_Row>0</GUI_Row>
+		<Text_ID>TEXT_UNIT_SITH</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SITH TEXT_DESC_CI_CANTIDAD_1S TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Sith_Trooper.tga</Icon_Name>
+		<Is_Dummy>Yes</Is_Dummy>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+		<Build_Tab_Heroes>Yes</Build_Tab_Heroes>
+		<Combat_Power_Value>0</Combat_Power_Value>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Required_Special_Structures>Krayt_Ground_Barracks, Krayt_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Required_Planets>
+			Korriban, KorribanK, Vjun, Byss, Ruusan, RuusanK, Anoat_GJavin_Sector
+		</Required_Planets>
+		
+		<Build_Limit_Current_Per_Player>10</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Behavior>DUMMY_GROUND_COMPANY</Behavior>
+		<Company_Transport_Unit>EVK_Sith_Annihilator</Company_Transport_Unit>
+		<Company_Units> EVK_Sith_generic </Company_Units>
+		<Is_Homogeneous>No</Is_Homogeneous>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<SFXEvent_Build_Started>EHD_Build_Commander</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>	
+		<SFXEvent_Build_Complete>Unit_Select_Sith</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Sith</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>45</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+
+		<!--<MULTIPLAYER SKIRMISH VALUES END>-->
+		<Population_Value>1</Population_Value>
+		<CategoryMask>LandHero | Spacehero</CategoryMask>
+		<Score_Cost_Credits> 500 </Score_Cost_Credits>
+	</HeroCompany>
+	
+	
+	<SpaceUnit Name="EVK_Sith_Annihilator"> 
+	  <Variant_Of_Existing_Type>Moldy_CrowORG</Variant_Of_Existing_Type>	
+	  <Text_ID>TEXT_UNIT_EVK_ANNIHILATOR_SQUADRON</Text_ID>
+	  <Encyclopedia_Good_Against> TIE_Fighter TIE_Scout Rep_Clockshape </Encyclopedia_Good_Against>
+	  <Encyclopedia_Vulnerable_To> TIE_Interceptor TIE_Avenger TartanORG </Encyclopedia_Vulnerable_To>
+	  <Encyclopedia_Text>TEXT_TOOLTIP_EVK_ANNIHILATOR</Encyclopedia_Text>
+	  <Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+	  
+	  <Galactic_Fleet_Override_Model_Name> W_Rebel_Solusar_Fleet.ALO </Galactic_Fleet_Override_Model_Name> 
+	  <Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+	  <Is_Super_Weapon_Killer>Yes</Is_Super_Weapon_Killer>
+ 	  <Land_Model_Name>EVK_Annihilator.ALO</Land_Model_Name>
+	  <Space_Model_Name>EVK_Annihilator_Space.ALO</Space_Model_Name>
+
+	  <Icon_Name>I_BUTTON_EVK_Sith_Trooper.tga</Icon_Name>
+	  <Scale_Factor>1.0</Scale_Factor>
+	  <Max_Speed>5.5</Max_Speed>
+	  <Min_Speed>3.5</Min_Speed>
+
+	  <Affiliation>Krayt, Empire</Affiliation>
+	  <Shield_Points>400</Shield_Points>
+	  <Tactical_Health>400</Tactical_Health>
+	  <Autoresolve_Health>130</Autoresolve_Health>
+	  <Shield_Refresh_Rate>9</Shield_Refresh_Rate>
+	  <Energy_Capacity>800</Energy_Capacity>
+	  <Energy_Refresh_Rate>300</Energy_Refresh_Rate>
+
+	  <Projectile_Types>Proj_Ship_Small_Laser_Cannon_Yellow_Hero</Projectile_Types>
+	  <Projectile_Fire_Recharge_Seconds>0.1</Projectile_Fire_Recharge_Seconds>
+	  <Projectile_Fire_Pulse_Count>10</Projectile_Fire_Pulse_Count>
+	  <Projectile_Fire_Pulse_Delay_Seconds>0.1</Projectile_Fire_Pulse_Delay_Seconds>
+	  
+	  <Tactical_Build_Cost_Multiplayer>1550</Tactical_Build_Cost_Multiplayer>
+	  <Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+	  <Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+	  <Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+	  <Build_Limit_Lifetime_For_All_Allies>-1</Build_Limit_Lifetime_For_All_Allies>  
+
+
+	  <HardPoints> 
+		HP_Hero_Fighter_Force_Proyectile
+	  </HardPoints>
+	  
+	  <SFXEvent_Fire>Unit_Corvette_Fire</SFXEvent_Fire>
+
+	  <Landing_Transport_Variant>EVK_Sith_Annihilator_Landing</Landing_Transport_Variant>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 0.50f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 2</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_STRIKE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_STRIKE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_strike.tga</Alternate_Icon_Name>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>INVULNERABILITY</Type>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Katarn</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Death_Clone>Damage_Normal, EVK_Sith_Annihilator_Death_Clone</Death_Clone>
+	</SpaceUnit>
+	
+	<TransportUnit Name="EVK_Sith_Annihilator_Landing">
+		<Variant_Of_Existing_Type>EVK_Sith_Annihilator</Variant_Of_Existing_Type>
+		<Land_Model_Name>EVK_Annihilator_Landing.ALO</Land_Model_Name>
+		<AI_Combat_Power>0</AI_Combat_Power>
+		<Is_Valid_Target>No</Is_Valid_Target>
+		<User_Bound_Min>-700, -700, 0</User_Bound_Min>
+		<User_Bound_Max>700, 700, 1500</User_Bound_Max>
+		<No_Colorization_Color> 255, 255, 255, 255 </No_Colorization_Color>
+		<Exclude_From_Distance_Fade>true</Exclude_From_Distance_Fade>
+		<Scale_Factor>1.05</Scale_Factor>
+	</TransportUnit>
+	  <SpaceUnit Name="EVK_Sith_Annihilator_Death_Clone">
+		<Text_ID>TEXT_UNIT_SALVAJE</Text_ID>
+		<Space_Model_Name>EVK_Annihilator.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Small_Explosion_Space</Death_Explosions>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>	
+	  
+
+</EVK_Sith_genericUnit_Data>

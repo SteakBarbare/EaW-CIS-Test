@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Rep_CR2200Unit_Data>
+	
+	<SpaceUnit Name="Rep_CR2200">
+		<Variant_Of_Existing_Type>InterdictorORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CR2200</Text_ID>
+		<Encyclopedia_Good_Against> CIS_Marauder CIS_Boarding CIS_Sabaoth_Frigate </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> CIS_TU_SD CIS_Recusant CIS_Providence </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 1 </GUI_Row>
+		<Space_Model_Name>EV_CR2200.ALO</Space_Model_Name>
+		<GUI_Model_Name>EV_CR2200.ALO</GUI_Model_Name>
+
+		<Scale_Factor>0.25</Scale_Factor>
+		<Max_Speed>2.1</Max_Speed>
+		<Layer_Z_Adjust>224.717</Layer_Z_Adjust>
+		<Required_Planets>Corellia, Tralus, Duro, Commenor, Nubia, Tynna, Naboo, Balmorra, DuroK, CorelliaK, Corellia_Sector, Kuat_Sector, Vladet_Sector, Chardaan_Sector</Required_Planets>
+		<Death_Clone>Damage_Normal, Rep_CR2200_Death_Clone</Death_Clone>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_NoIA3</Required_Special_Structures>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<AI_Combat_Power>1815</AI_Combat_Power>
+
+		<HardPoints> 
+				HP_Gravedad_01, 
+				HP_Gravedad_02, 
+				HP_Gravedad_03, 
+				HP_Gravedad_04, 
+				HP_Gravedad_05, 
+				HP_Gravedad_06, 
+				HP_LaserNG_01, 
+				HP_LaserNG_02, 
+				HP_LaserNG_03, 
+				HP_LaserNG_04, 
+				HP_TurboG_01, 
+				HP_TurboG_02, 
+				HP_TurboG_03, 
+				HP_TurboG_04,
+				HP_Shield_Generator_Small_00, 
+				HP_Engines_Small_00
+		</HardPoints>
+		<Icon_Name>I_BUTTON_Rep_CR2200.TGA</Icon_Name>
+		<GUI_Model_Name>EV_CR2200.ALO</GUI_Model_Name>
+		
+		<Radar_Icon_Scale_Land>1.0</Radar_Icon_Scale_Land>
+		<Radar_Icon_Scale_Space>1.0</Radar_Icon_Scale_Space>
+		<Radar_Icon_Name>I_RADAR_DEFAULT_BLIP.TGA</Radar_Icon_Name>
+		<Lua_Script>Interdictor_Rep</Lua_Script>
+		
+		<Encyclopedia_Text>TEXT_TOOLTIP_CR2200 TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INTERDICTOR</Encyclopedia_Unit_Class>
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Rep_CR2200_Death_Clone">
+		<Text_ID>TEXT_UNIT_CR2200</Text_ID>
+		<Space_Model_Name>EV_CR2200_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Corvette_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_800</Death_Explosions>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.25</Scale_Factor>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<Max_Speed>0.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.4</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.02</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>corvette</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+</Rep_CR2200Unit_Data>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<Darth_AzardUnit_Data>
+	
+	
+	
+	
+	<HeroUnit Name="Darth_Azard">
+		<Variant_Of_Existing_Type>Comandante_Thanas</Variant_Of_Existing_Type>
+		<Affiliation>Krayt</Affiliation>
+		<Is_Generic_Hero>No</Is_Generic_Hero>
+		<Spawn_Planet>MonCalimari</Spawn_Planet>
+		<Always_Spawn_In_Orbit>Yes</Always_Spawn_In_Orbit>
+		<Is_Named_Hero>Yes</Is_Named_Hero>
+		<Text_ID>TEXT_HERO_DARTH_AZARD_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_AZARD TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_EVK_Darth_Azard.tga</Icon_Name>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Autoresolve_Health>350</Autoresolve_Health>
+		<Attach_To_Flagship_During_Space_Battle>Yes</Attach_To_Flagship_During_Space_Battle>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Can_Be_Neutralized_By_Major_Heroes>Yes</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="Thanas_Combat_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Applicable_Unit_Categories>All</Applicable_Unit_Categories>
+				<Health_Bonus_Percentage>0.25</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.25</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.25</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.25</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.25</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.25</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>9</Stacking_Category>
+			</Combat_Bonus_Ability>
+			<Reduce_Production_Time_Ability Name="Thanas_Production_Time_Reduction">
+				<Applicable_Unit_Types>EVK_Sith, EVK_TIEReaper_Squadron_Land, EVK_Annihilator_Squadron_Land, EVK_Dragon, EVK_TIE_Reaper_SquadronB, EVK_Annihilator_SquadronB</Applicable_Unit_Types>
+				<Time_Reduction_Percentage>0.24</Time_Reduction_Percentage>
+				<Stacking_Category>6</Stacking_Category>
+				<Galaxy_Wide> No </Galaxy_Wide>
+			</Reduce_Production_Time_Ability>
+			<Remove_Corruption_Ability Name="Thanas_Remove_Corruption">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Corruption_Removal_Cost_Multiplier>0.0</Corruption_Removal_Cost_Multiplier> 
+				<Activation_Style>Ground_Activated</Activation_Style>
+				<Corruption_Removal_Time_In_Secs>3</Corruption_Removal_Time_In_Secs> 
+				<Causes_Despawn>No</Causes_Despawn>
+				<SFXEvent_Activate>EHD_Removing_Corruption</SFXEvent_Activate>
+			</Remove_Corruption_Ability>
+		</Abilities>
+	</HeroUnit>	
+				
+	<HeroCompany Name="Darth_Azard_Team">
+		<Variant_Of_Existing_Type>Thanas_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_AZARD_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_AZARD TEXT_TOOLTIP_REDUCE_TIME_SITH_10</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Darth_Azard.tga</Icon_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Company_Transport_Unit>Darth_Azard_EVK_Fury</Company_Transport_Unit>
+		<Company_Units>Darth_Azard</Company_Units>
+		<CategoryMask> NonCombatHero </CategoryMask>
+		<SFXEvent_Build_Complete>Unit_Select_Calamarian</SFXEvent_Build_Complete>
+		<SFXEvent_Hero_Respawned>Unit_Select_Calamarian</SFXEvent_Hero_Respawned>
+		<SFXEvent_Fleet_Move>Unit_Move_Calamarian</SFXEvent_Fleet_Move>
+	</HeroCompany>
+	
+	<SpaceUnit Name="Darth_Azard_EVK_Fury"> 
+		<Variant_Of_Existing_Type>EVK_Fury</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_DARTH_AZARD_TEAM</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_DARTH_AZARD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SITH_LORD </Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_EVK_Darth_Azard.tga</Icon_Name>
+		<SFXEvent_Select>Unit_Select_Calamarian</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Calamarian</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Calamarian</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Calamarian</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Calamarian</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Falcon_Fire</SFXEvent_Fire>
+		<AI_Combat_Power>2655</AI_Combat_Power>
+		<HardPoints> 
+			HP_Hero_Fighter_Force_Proyectile
+		</HardPoints>
+	</SpaceUnit>	
+		
+	
+		
+</Darth_AzardUnit_Data>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+
+<BS_IPVIIUnit_Data>
+	
+	<SpaceUnit Name="BS_IPVII">
+		<Variant_Of_Existing_Type>IPV1ORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_IPV_MKII</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Bomber TIE_Fighter Pirate_Fighter </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> ISDORG Victory_Destroyer AcclamatorI </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_IPV_MKII TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_SLOW TEXT_CLASS_SHIELD_CORVETTE</Encyclopedia_Text>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Space_Model_Name>UV_IPV_MKII.alo</Space_Model_Name>
+		<GUI_Model_Name>UV_IPV_MKII.ALO</GUI_Model_Name>
+		<Scale_Factor>0.125</Scale_Factor>
+		<Max_Speed>3.2</Max_Speed>
+		<Min_Speed>2.1</Min_Speed>
+
+		<Armor_Type> Armor_Corellian_Gunboat </Armor_Type>
+
+		<Affiliation>Underworld, Pirates</Affiliation>
+		<Tech_Level>99</Tech_Level>
+		<Required_Special_Structures>Astilleros_Piratas</Required_Special_Structures>
+		
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+
+		<Build_Cost_Credits>1250</Build_Cost_Credits>
+		<AI_Combat_Power>2750</AI_Combat_Power>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Shield_Refresh_Rate>11000</Shield_Refresh_Rate>
+		<Tactical_Health>12000</Tactical_Health>  
+		<Death_Clone>Damage_Normal, BS_IPVII_Death_Clone</Death_Clone>
+
+		<HardPoints> 
+				HP_LaserNY_O_01,
+				HP_LaserNY_O_02,
+				HP_LaserNY_O_03,
+				HP_LaserNY_O_04,
+				HP_LaserYXC_01,
+				HP_LaserYXC_02,
+				HP_LaserYXC_03,
+				HP_LaserYXC_04,
+				HP_Misil_01, 
+				HP_Misil_02,
+				HP_Misil_02,
+				HP_Misil_04,
+				HP_MisilA_01,
+				HP_MisilA_02
+		</HardPoints>
+
+		<Icon_Name>I_BUTTON_UV_IPV_MKII.TGA</Icon_Name>
+		<GUI_Model_Name>UV_IPV_MKII.ALO</GUI_Model_Name>
+			
+		<Tactical_Build_Cost_Multiplayer>1250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>15</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+	<SpaceUnit Name="BS_IPVII_Death_Clone">
+		<Text_ID>TEXT_UNIT_PIRATE_FRIGATE</Text_ID>
+		<Space_Model_Name>UV_IPV_MKII_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Scale_Factor>0.125</Scale_Factor>
+		<Layer_Z_Adjust>-150.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+	
+	
+</BS_IPVIIUnit_Data>

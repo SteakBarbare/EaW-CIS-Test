@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<Up_R_CRFleet_to_R_CRFleetIIUnit_Data>
+	
+	<SpaceUnit Name="Up_R_CRFleet_to_R_CRFleetII">
+		<Variant_Of_Existing_Type>Up_R_Strike_to_StrikeMod</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_REBEL_CORELLIA</Text_ID>
+        <Encyclopedia_Text>TEXT_TO TEXT_HERO_UNIT_FLEET_REBEL_CORELLIA2</Encyclopedia_Text>
+		<Icon_Name>i_button_R_Fleet_Corellia_Up.TGA</Icon_Name>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Rebel, GAC</Affiliation>
+		<Required_Special_Structures>Astilleros_Rebeldes, AdvancedTech_6</Required_Special_Structures>
+		<Required_Planets>Corellia, Tralus, Duro, Commenor, Nubia, Tynna, Naboo, Balmorra, DuroK, CorelliaK, Corellia_Sector, Kuat_Sector, Vladet_Sector, Chardaan_Sector</Required_Planets>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Required_Orbiting_Units>R_Fleet_Corellian</Required_Orbiting_Units>
+		<Build_Time_Seconds>90</Build_Time_Seconds>
+		<Build_Cost_Credits>9000</Build_Cost_Credits>
+		<Lua_Script>Up_R_CRFleet_to_R_CRFleetII</Lua_Script>
+		<Population_Value>0</Population_Value>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+	</SpaceUnit>
+	<SpaceUnit Name="R_Fleet_Corellian_Up_AI">
+		<Variant_Of_Existing_Type>R_Fleet_Corellian_Up</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Astilleros_IA, RXSoloIA_STR_01, AdvTech_6IA</Required_Special_Structures>
+		<Required_Planets>Corellia, Tralus, Duro, Commenor, Nubia, Tynna, Naboo, Balmorra, DuroK, CorelliaK, Corellia_Sector, Kuat_Sector, Vladet_Sector, Chardaan_Sector</Required_Planets>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		<Tech_Level>0</Tech_Level>
+		<Required_Star_Base_Level>3</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Cost_Credits>32000</Build_Cost_Credits>
+		<Abilities SubObjectList="Yes">
+			<Combat_Bonus_Ability Name="R_Fleet_Corellian_Up_AI_Bonus">
+				<Activation_Style>Space_Automatic</Activation_Style>
+				<Unit_Strength_Category>Capital | Corvette | Frigate | Fighter | Structure</Unit_Strength_Category>
+				<Applicable_Unit_Categories>Capital | Corvette | Frigate | Fighter | Structure</Applicable_Unit_Categories>
+				<Applicable_Unit_Types />
+				<Health_Bonus_Percentage>0.0</Health_Bonus_Percentage>
+				<Damage_Bonus_Percentage>0.2</Damage_Bonus_Percentage>
+				<Energy_Pool_Bonus_Percentage>0.0</Energy_Pool_Bonus_Percentage>
+				<Shield_Bonus_Percentage>0.0</Shield_Bonus_Percentage>
+				<Defense_Bonus_Percentage>0.0</Defense_Bonus_Percentage>
+				<Movement_Speed_Bonus_Percentage>0.0</Movement_Speed_Bonus_Percentage>
+				<Stacking_Category>0</Stacking_Category>
+			</Combat_Bonus_Ability>
+		</Abilities>	
+		<!--<Space_Override_Population_Value>25</Space_Override_Population_Value>-->
+	</SpaceUnit>	
+	<SpaceUnit Name="R_Fleet_Corellian_Up">
+		<Variant_Of_Existing_Type>CR_SDI_Up</Variant_Of_Existing_Type>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Text_ID>TEXT_HERO_UNIT_FLEET_REBEL_CORELLIA2</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_SPACEDEPLOY TEXT_UNIT_CORELLIAN_DESTROYERMKII TEXT_UNIT_NEW_CR_DESTROYER TEXT_UNIT_CORELLIAN_MEDIUM_FRIGATE TEXT_UNIT_CORELLIAN_LIGHT_FRIGATE TEXT_UNIT_CC9600 TEXT_UNIT_CORELLIAN_HEAVY_GUNBOAT TEXT_UNIT_CORELLIAN_LT_GUNSHIP TEXT_UNIT_CORELLIAN_PATROL_SHIP TEXT_UNIT_CC7700</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_FLEET</Encyclopedia_Unit_Class>
+		<Galactic_Fleet_Override_Model_Name> W_Rebel_Corellian_Fleet2.ALO </Galactic_Fleet_Override_Model_Name> 
+		<Galactic_Fleet_Override_Icon_Index> 4 </Galactic_Fleet_Override_Icon_Index>
+		<Icon_Name>i_button_R_fleet_Corellia_MKII.tga</Icon_Name>
+		<Tech_Level>99</Tech_Level>
+		<Build_Time_Seconds>120</Build_Time_Seconds>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>25000</Build_Cost_Credits>
+		<Affiliation>Rebel, GAC</Affiliation>
+		<Population_Value>30</Population_Value>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, ASTEROID_FIELD_DAMAGE, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON </SpaceBehavior>
+		<Space_Override_Population_Value>3</Space_Override_Population_Value>
+		
+		<CategoryMask> Capital | Anticorvette </CategoryMask>
+		<AI_Combat_Power>4000</AI_Combat_Power>
+		<Autoresolve_Health>1000000</Autoresolve_Health>
+		<Can_Be_Neutralized_By_Major_Heroes>No</Can_Be_Neutralized_By_Major_Heroes>
+		<Can_Be_Neutralized_By_Minor_Heroes>No</Can_Be_Neutralized_By_Minor_Heroes>
+		
+		<Tactical_Build_Cost_Multiplayer>32000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+		
+		
+		<Lua_Script>ObjectScript_Reinforces_AI_Space</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>WEAKEN_ENEMY</Type>
+                <Alternate_Icon_Name>I_SA_IMP_FLEET_REINFORCES.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_FLEETM_REINFORCES</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_FLEETM_RE_DESCR</Alternate_Description_Text>
+				<Recharge_Seconds>960</Recharge_Seconds>
+			    <Spawned_Object_Type>R_fleet_Corellian_up_Marker</Spawned_Object_Type>
+				<Effective_Radius> 0.0 </Effective_Radius>
+                <SFXEvent_Target_Ability> RHD_Reinforcements_En_Route </SFXEvent_Target_Ability>
+                <SFXEvent_GUI_Unit_Ability_Activated>RHD_Reinforcements_En_Route</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+                <!-- Area effect decal size depends on "Antills_Weaken_Enemy_Effect" -->
+                <Area_Effect_Decal_Distance> 100 </Area_Effect_Decal_Distance>
+			</Unit_Ability>
+			
+			 <Unit_Ability>
+				<Type>FULL_SALVO</Type>
+                <Recharge_Seconds>60</Recharge_Seconds>
+                <Expiration_Seconds>5</Expiration_Seconds>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Barrage_Star_Destroyer</SFXEvent_GUI_Unit_Ability_Activated>
+                <GUI_Activated_Ability_Name>Interceptor_Full_Salvo</GUI_Activated_Ability_Name> 
+                <Must_Be_Bought_On_Black_Market>No</Must_Be_Bought_On_Black_Market>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_MAXIMUM_FIREPOWER_DESCRIPTION</Alternate_Description_Text>
+                <Alternate_Icon_Name>I_SA_MAXIMUM_FIREPOWER.tga</Alternate_Icon_Name>
+            </Unit_Ability>			
+		</Unit_Abilities_Data>
+		
+	</SpaceUnit>
+	<SpaceUnit Name="Disband_R_Fleet_Corellian_Up">
+		<Variant_Of_Existing_Type>Disband_Command_Ship</Variant_Of_Existing_Type>
+		<Encyclopedia_Text>TEXT_HERO_UNIT_FLEET_REBEL_CORELLIA2 TEXT_TOOLTIP_DISBAND_UNIT</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Affiliation>Rebel, GAC</Affiliation>
+		<Required_Special_Structures>Astilleros_Rebeldes</Required_Special_Structures>
+		<Required_Star_Base_Level>1</Required_Star_Base_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Orbiting_Units>R_Fleet_Corellian_Up</Required_Orbiting_Units>
+		<Lua_Script>Disband_R_Fleet_Corellian_Up</Lua_Script>
+		<SFXEvent_Build_Started>EHD_Upgrade_Progress</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+	</SpaceUnit>	
+</Up_R_CRFleet_to_R_CRFleetIIUnit_Data>

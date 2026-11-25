@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<AAT_Repulsor_TankUnit_Data>
+
+	<GroundVehicle Name="AAT_Repulsor_Tank">
+		<Variant_Of_Existing_Type>AAT_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_AAT_Blue.ALO,
+			Urban, 				CIS_AAT_Blue.ALO,
+			Arctic, 			CIS_AAT_Blue.ALO,
+			Volcanic, 			CIS_AAT.ALO,
+			Desert, 			CIS_AAT.ALO,
+			Forest, 			CIS_AAT.ALO,
+			Swamp, 				CIS_AAT.ALO
+		</Land_Terrain_Model_Mapping>
+		<Vehicle_Thief_Inside_Clone>AAT_Repulsor_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Hardpoints>
+				HP_Gr_Front_Eweb_Laser_Green_00, HP_Gr_Front_Eweb_Laser_Green_01
+		</Hardpoints>
+		<Death_Clone>Damage_Normal, AAT_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="AAT_Repulsor_TankORG">
+		<Variant_Of_Existing_Type>M1_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AAT_REPULSOR_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Scout_Squad Empire_AT_AP_Company IMPV_19_landspeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT-TE_Company HAV_Juggernaut_Company UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AAT_REPULSOR</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_HEAVY_VEHICLE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_AAT.ALO</Land_Model_Name>
+		
+
+		<Scale_Factor>1.0</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>CIS, Rebel, Underworld, Pirates</Affiliation>
+	
+		<Max_Speed>1.60</Max_Speed>
+		<Max_Rate_Of_Turn>8.0</Max_Rate_Of_Turn>
+	
+		<Shield_Points>120</Shield_Points>
+		<Tactical_Health>250</Tactical_Health>
+		<Shield_Refresh_Rate>8</Shield_Refresh_Rate>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+		
+		<Targeting_Fire_Inaccuracy> Vehicle, 3.0 </Targeting_Fire_Inaccuracy>
+	
+		<Projectile_Types>Proj_Ground_Laser_Cannon_Red_ATATX</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+	
+		<Land_FOW_Reveal_Range>240.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>230.0</Targeting_Max_Attack_Distance>
+
+		<CategoryMask> Vehicle </CategoryMask>
+		<Targeting_Priority_Set>AntiVehicle</Targeting_Priority_Set>
+
+		<Icon_Name> I_BUTTON_CIS_AAT.tga </Icon_Name>
+
+		<SFXEvent_Fire>Unit_AAT_Fire</SFXEvent_Fire>
+		<SFXEvent_Select>Unit_Select_B1reconDroid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1reconDroid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1reconDroid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1reconDroid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Select_B1reconDroid</SFXEvent_Guard>
+		<SFXEvent_Turret_Rotating_Loop> Vehicle_Turret_Motor </SFXEvent_Turret_Rotating_Loop>
+		<SFXEvent_Engine_Idle_Loop> Unit_AAT_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_AAT_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1reconDroid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1reconDroid </SFXEvent_Assist_Attack>
+		<SFXEvent_Unit_Lost> Unit_Tank_Death_SFX </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<AI_Combat_Power>90</AI_Combat_Power>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_B1reconDroid</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+
+	<GroundVehicle Name="AAT_Repulsor_Tank_Captured">
+		<Variant_Of_Existing_Type>AAT_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	
+	
+	<GroundVehicle Name="AAT_Death_Clone_00">
+		<Variant_Of_Existing_Type>AAT_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_AAT_D.ALO</Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_AAT_Blue_D.ALO,
+			Urban, 				CIS_AAT_Blue_D.ALO,
+			Arctic, 			CIS_AAT_Blue_D.ALO,
+			Volcanic, 			CIS_AAT_D.ALO,
+			Desert, 			CIS_AAT_D.ALO,
+			Forest, 			CIS_AAT_D.ALO,
+			Swamp, 				CIS_AAT_D.ALO
+		</Land_Terrain_Model_Mapping>
+		
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</GroundVehicle>
+	
+	
+	<GroundCompany Name="C_AAT_Group">
+		<Variant_Of_Existing_Type>Imperial_Armor_GroupORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AAT_REPULSOR_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_Light_Scout_Squad Republic_AT_AP_Company Republic_CombatSpeeder_Company </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_Company UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_AAT_REPULSOR TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_TANK</Encyclopedia_Unit_Class>
+		
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>CIS, Pirates, Rebel</Affiliation>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Required_Special_Structures>CIS_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>C9979_Landing_Craft</Company_Transport_Unit>
+		<Company_Units>AAT_Repulsor_Tank, AAT_Repulsor_Tank, AAT_Repulsor_Tank</Company_Units>
+		<Icon_Name>I_BUTTON_CIS_AAT.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_B1reconDroid</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Select_B1reconDroid</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+		
+	
+</AAT_Repulsor_TankUnit_Data>

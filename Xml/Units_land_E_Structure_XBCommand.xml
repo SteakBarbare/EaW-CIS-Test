@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<E_Structure_XBCommandUnit_Data>
+	<SpecialStructure Name="E_XBCommand">
+		<Variant_Of_Existing_Type>E_XBCommandORG</Variant_Of_Existing_Type>
+		<!--<Tactical_Additional_Structure_Type>E_Ground_Advanced_Vehicle_FactoryD</Tactical_Additional_Structure_Type>-->
+	</SpecialStructure>
+	<SpecialStructure Name="E_XBCommandORG">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Behavior>TACTICAL_BUILD_OBJECTS, SELECTABLE, DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,TURRET,TARGETING,WEAPON,POWERED,REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION, STUNNABLE,EARTHQUAKE_TARGET, ABILITY_COUNTDOWN, SHIELDED </LandBehavior>
+		<Tactical_Build_Attachment_Bone_Name> ATTACH_POINT_00 </Tactical_Build_Attachment_Bone_Name>
+		
+		<GUI_Bounds_Scale>0.2</GUI_Bounds_Scale>
+			
+		<Tactical_Health>4000</Tactical_Health>
+		<Shield_Points>1000</Shield_Points>
+				
+		<Text_ID>TEXT_STRUCTURE_E_XBCOMMAND</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XBCOMMAND </Encyclopedia_Text>
+		<Obstacle_Proxy_Type> E_XBCommand_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_Bridge_CommandX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Empire, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Icon_Name>i_button_EB_Bridge_CommandX.tga</Icon_Name>
+		
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		
+		<Tactical_Buildable_Objects_Campaign>
+			Empire,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Rebel,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Underworld,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Chiss,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Corporate,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Hapan,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Hutts,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Republic,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			CIS,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Krayt,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			Fel,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			EVFO,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			RVRE,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			GA,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+			GAC,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret
+		</Tactical_Buildable_Objects_Campaign>
+		
+		<Tactical_Buildable_Objects_Multiplayer>
+			Empire,
+				UC_Empire_EM_Field_Generator,
+				UC_Republic_Mobile_Shield_Generator,
+				UC_E_SPHAT_Turret,
+				UC_E_AA_Turret,
+				UC_Underworld_Rocket_Pod,
+				UC_Rebel_Rapid_Fire_Laser_Turret,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Respects_Skirmish_Pre_Build_Bases_Option> false </Respects_Skirmish_Pre_Build_Bases_Option>
+		<Capture_Point_Radius> 0.0 </Capture_Point_Radius>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		<Place_At_Every_Specific_Marker_Position>True</Place_At_Every_Specific_Marker_Position>
+		<Visible_To_Enemies_When_Empty>True</Visible_To_Enemies_When_Empty>
+		<Immune_To_Damage>False</Immune_To_Damage>
+		<Ranged_Target_Z_Adjust>1.0</Ranged_Target_Z_Adjust>
+						
+	</SpecialStructure>
+	<GroundBuildable Name="E_XBCommand_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Empire, PC_E_XBCommand, Rebel, PC_R_XBCommand</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Bridge_CommandX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Icon_Name>i_button_EB_Bridge_CommandX.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<GroundBuildable Name="PC_E_XBCommand">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> E_XBCommand_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>E_XBCommand</Tactical_Buildable_Constructed>
+		<Land_Model_Name>EB_Bridge_CommandX.ALO</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Empire, Krayt, Republic, Chiss, EVFO</Affiliation>
+		<Icon_Name>i_button_EB_Bridge_CommandX.tga</Icon_Name>
+	</GroundBuildable>	
+	
+</E_Structure_XBCommandUnit_Data>

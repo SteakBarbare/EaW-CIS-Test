@@ -1,0 +1,1837 @@
+﻿<?xml version="1.0" ?>
+
+
+
+<!--******************************************************-->
+<!--******	Campaign: Rim World Conflict (Rebel)	******-->
+<!--******************************************************-->
+
+
+
+<Story>
+
+	<Event Name="Universal_Story_Start">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_Expansion_GC_Solo</Story_Dialog>
+		<Story_Chapter>38</Story_Chapter>
+		<Story_Tag>Intro_Tag</Story_Tag>
+	</Event>
+
+	<Event Name="Centrar_Camara_en_Csilla">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>POSITION_CAMERA</Reward_Type>
+			<Reward_Param1>Csilla</Reward_Param1>
+			<Prereq>Universal_Story_Start</Prereq>	
+	</Event>
+
+	<Event Name="Indicador_LEVEL_1">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>8</Event_Param1>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>6</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_1</Story_Tag>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_1">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_1</Reward_Param1>
+			<Prereq>Enter_Tech_2</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>7</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_2</Story_Tag>
+		<Prereq>Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_2">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_2</Reward_Param1>
+			<Prereq>Enter_Tech_3</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>8</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_3</Story_Tag>
+		<Prereq>Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_3</Reward_Param1>
+			<Prereq>Enter_Tech_4</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>9</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_4</Story_Tag>
+		<Prereq>Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_4</Reward_Param1>
+			<Prereq>Enter_Tech_5</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_E_Tech_Messages</Story_Dialog>
+		<Story_Chapter>10</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_5</Story_Tag>
+		<Prereq>Enter_Tech_5</Prereq>
+	</Event>
+
+	<Event Name="Enter_Tech_2">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Chiss_To_Tech_2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		 <Event Name="DesOcultar_Chiss_To_Tech_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>Chiss_To_Tech_3</Reward_Param1>
+			<Prereq>Enter_Tech_2</Prereq>
+        </Event>	
+	<Event Name="Lock_Chiss_To_Tech_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Chiss_To_Tech_3</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Enter_Tech_3">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Chiss_To_Tech_3</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="DesOcultar_Chiss_To_Tech_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>Chiss_To_Tech_4</Reward_Param1>
+			<Prereq>Enter_Tech_3</Prereq>
+        </Event>	
+	<Event Name="Lock_Chiss_To_Tech_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Chiss_To_Tech_4</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Enter_Tech_4">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Chiss_To_Tech_4</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+		<Event Name="DesOcultar_Chiss_To_Tech_5">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>BUILDABLE_UNIT</Reward_Type>
+			<Reward_Param1>Chiss_To_Tech_5</Reward_Param1>
+			<Prereq>Enter_Tech_4</Prereq>
+        </Event>		
+	<Event Name="Lock_Chiss_To_Tech_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Chiss_To_Tech_5</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Enter_Tech_5">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Chiss_To_Tech_5</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+		</Event>
+	
+	<Event Name="Capturar_click_Credits_00a">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters0</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Capturar_click_BaseLevel_00b">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters1</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Capturar_click_Weather_00c">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters2</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Capturar_click_Hero_00d">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters3</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+				
+		<Event Name="Capturar_click_Cazas_01">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters4</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+		
+		<Event Name="Capturar_click_Bombarderos_24">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters24</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+        <Event Name="Capturar_click_Corbetas_02">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters5</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+        </Event>
+
+         <Event Name="Capturar_click_Fragatas_03">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters6</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_LTCruceros_25">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters25</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_04">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters7</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Portanaves_26">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters26</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Destructores_05">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters8</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_Pesados_06">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters9</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Cruceros_de_Batalla_07">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters10</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Super_Destructores_08">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters11</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+          </Event>
+		  
+		  <Event Name="Capturar_click_Infanteria_09">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters12</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_Vehiculos_Ligeros_10">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters13</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_Vehiculos_Pesados_11">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters14</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_Vehiculos_Pesados_Avanzados_12">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters15</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_Hovers_13">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters16</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_Aircrafts_14">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters17</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_estructuras_15">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters18</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			<Event Name="Capturar_click_venta_de_estructuras_16">
+				<Event_Type>STORY_CLICK_GUI</Event_Type>
+				<Event_Param1>b_filters19</Event_Param1>
+				<Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			 <Event Name="Capturar_click_RBUnits_18">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters21</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			 <Event Name="Capturar_click_FactoryShip_20">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters23</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+			 <Event Name="Capturar_click_NewCanon_27">
+                <Event_Type>STORY_CLICK_GUI</Event_Type>
+                <Event_Param1>b_filters27</Event_Param1>
+                <Perpetual>True</Perpetual>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>
+			
+	<Event Name="Revelar_todos_los_planetas">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>REVEAL_ALL_PLANETS</Reward_Type>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_IA_BlackSun">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Tatooine</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	
+	<Event Name="Indicador_LEVEL_1">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>8</Event_Param1>
+		<Story_Dialog>Dialog_Ch_Tech_Messages</Story_Dialog>
+		<Story_Chapter>1</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_1</Story_Tag>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_1">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_1</Reward_Param1>
+			<Prereq>Enter_Tech_2</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_2">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_Ch_Tech_Messages</Story_Dialog>
+		<Story_Chapter>2</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_2</Story_Tag>
+		<Prereq>Enter_Tech_2</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_2">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_2</Reward_Param1>
+			<Prereq>Enter_Tech_3</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_3">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_Ch_Tech_Messages</Story_Dialog>
+		<Story_Chapter>3</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_3</Story_Tag>
+		<Prereq>Enter_Tech_3</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_3">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_3</Reward_Param1>
+			<Prereq>Enter_Tech_4</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_4">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_Ch_Tech_Messages</Story_Dialog>
+		<Story_Chapter>4</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_4</Story_Tag>
+		<Prereq>Enter_Tech_4</Prereq>
+	</Event>
+		<Event Name="Cerrar_Indicador_LEVEL_4">
+			<Event_Type>STORY_TRIGGER</Event_Type>
+			<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+			<Reward_Param1>Tag_Tech_Level_4</Reward_Param1>
+			<Prereq>Enter_Tech_5</Prereq>
+		</Event>
+	<Event Name="Indicador_LEVEL_5">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Story_Dialog>Dialog_Ch_Tech_Messages</Story_Dialog>
+		<Story_Chapter>5</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Tag_Tech_Level_5</Story_Tag>
+		<Prereq>Enter_Tech_5</Prereq>
+	</Event>
+
+
+	<Event Name="Enter_Tech_2">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Chiss_To_Tech_2</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Enter_Tech_3">
+			<Event_Type>STORY_CONSTRUCT</Event_Type>
+			<Event_Param1>Chiss_To_Tech_3</Event_Param1>
+			<Event_Param2>1</Event_Param2>
+			<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+			<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Enter_Tech_4">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Chiss_To_Tech_4</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Enter_Tech_5">
+		<Event_Type>STORY_CONSTRUCT</Event_Type>
+		<Event_Param1>Chiss_To_Tech_5</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+		
+		<!--***** Indicador nuevas caracteristicas ***********-->
+			<Event Name="Indicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Story_Dialog>Dialog_E_Indicador_nuevas_caracteristicas</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>Indicador_nuevas_caracteristicas_Tag</Story_Tag>
+				<Prereq>Universal_Story_Start</Prereq>
+			</Event>			
+			<Event Name="Flash_Buttons">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param2>
+				<Prereq>Indicador_nuevas_caracteristicas_00</Prereq>
+			</Event>	
+			<Event Name="Hide_Indicador_nuevas_caracteristicas">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			<Event Name="CerrarIndicador_nuevas_caracteristicas_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>Indicador_nuevas_caracteristicas_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01</Prereq>
+			</Event>
+			
+			
+		<!--***** Indicador nuevas caracteristicas ***********-->
+			
+		<!--***** Activar/Desactivar IA CIS Por defecto esta desactivada ***********-->
+								
+			<Event Name="DesActivar_IA_CIS_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>0</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_CIS_Tag</Story_Tag>
+				<Prereq>CerrarIndicador_nuevas_caracteristicas_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_CIS_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_CIS_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_CIS_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_CIS_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_CIS_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_CIS_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_CIS_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_CIS_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_CIS_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_CIS_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_CIS_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_CIS_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_CIS_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_CIS_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_CIS_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_CIS_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_CIS">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_CIS_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>CIS</Reward_Param1>
+				<Reward_Param2>BasicCIS</Reward_Param2>
+				<Prereq>DesActivar_IA_CIS</Prereq>
+				<Branch>DesActivar_IA_CIS_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Rep Por defecto esta desactivada ***********-->
+			
+			<Event Name="DesActivar_IA_Rep_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>1</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Rep_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_CIS_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Rep_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Rep_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Rep_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rep_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rep_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Rep_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Rep_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Rep_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rep_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rep_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Rep_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rep_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rep_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Rep_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rep_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rep_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Rep">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_Rep_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Republic</Reward_Param1>
+				<Reward_Param2>BasicRepublic</Reward_Param2>
+				<Prereq>DesActivar_IA_Rep</Prereq>
+				<Branch>DesActivar_IA_Rep_00_Branch</Branch>
+			</Event>
+					
+			<!--***** Activar/Desactivar IA Hapan  ***********-->
+			
+			<Event Name="DesActivar_IA_Hapan_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>4</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Hapan_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Rep_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Hapan_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Hapan_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Hapan_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hapan_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hapan_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Hapan_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Hapan_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Hapan_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hapan_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hapan_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Hapan_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hapan_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hapan_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Hapan_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hapan_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hapan_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Hapan">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_Hapan_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Hapan</Reward_Param1>
+				<Reward_Param2>BasicHapan</Reward_Param2>
+				<Prereq>DesActivar_IA_Hapan</Prereq>
+				<Branch>DesActivar_IA_Hapan_00_Branch</Branch>
+			</Event>
+
+		
+
+<!--***** Activar/Desactivar IA Corporate ***********-->
+			
+			<Event Name="DesActivar_IA_Corporate_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>3</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Corporate_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Hapan_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Corporate_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Corporate_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Corporate_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Corporate_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Corporate_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Corporate_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Corporate_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Corporate_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Corporate_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Corporate_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Corporate_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Corporate_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Corporate_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Corporate_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Corporate_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Corporate_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Corporate">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_Corporate_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Corporate</Reward_Param1>
+				<Reward_Param2>BasicCorporate</Reward_Param2>
+				<Prereq>DesActivar_IA_Corporate</Prereq>
+				<Branch>DesActivar_IA_Corporate_00_Branch</Branch>
+			</Event>
+
+<!--***** Activar/Desactivar IA Hutts ***********-->
+			
+			<Event Name="DesActivar_IA_Hutts_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>5</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Hutts_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Corporate_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Hutts_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Hutts_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Hutts_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hutts_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hutts_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Hutts_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Hutts_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Hutts_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hutts_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hutts_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Hutts_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hutts_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hutts_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Hutts_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Hutts_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hutts_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Hutts">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>	
+			
+
+			<Event Name="DesActiva_IA_Hutts_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Hutts</Reward_Param1>
+				<Reward_Param2>BasicHutts</Reward_Param2>
+				<Prereq>DesActivar_IA_Hutts</Prereq>
+				<Branch>DesActivar_IA_Hutts_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Fel/GA Por defecto esta desactivada  1213 ***********-->
+			
+			<Event Name="DesActivar_IA_FEL_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>6</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_FEL_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Hutts_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_FEL_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_FEL_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_FEL_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_FEL_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_FEL_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_FEL_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_FEL_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_FEL_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_FEL_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_FEL_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_FEL_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_FEL_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_FEL_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_FEL_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_FEL_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_FEL_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_FEL">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_FEL_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Fel</Reward_Param1>
+				<Reward_Param2>BasicFel</Reward_Param2>
+				<Prereq>DesActivar_IA_FEL</Prereq>
+				<Branch>DesActivar_IA_FEL_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Krayt Por defecto esta desactivada  1314 ***********-->
+			
+			<Event Name="DesActivar_IA_KRAYT_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>7</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_KRAYT_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_FEL_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_KRAYT_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_KRAYT_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_KRAYT_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_KRAYT_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_KRAYT_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_KRAYT_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_KRAYT_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_KRAYT_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_KRAYT_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_KRAYT_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_KRAYT_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_KRAYT_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_KRAYT_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_KRAYT_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_KRAYT_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_KRAYT_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_KRAYT">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_KRAYT_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Krayt</Reward_Param1>
+				<Reward_Param2>BasicKrayt</Reward_Param2>
+				<Prereq>DesActivar_IA_KRAYT</Prereq>
+				<Branch>DesActivar_IA_KRAYT_00_Branch</Branch>
+			</Event>
+
+			<!--***** Activar/Desactivar IA Rebel Alliance / Por defecto esta desactivada  1516 ***********-->
+			
+			<Event Name="DesActivar_IA_Rebel_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>8</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Rebel_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_KRAYT_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Rebel_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Rebel_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Rebel_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rebel_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rebel_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Rebel_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Rebel_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Rebel_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rebel_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rebel_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Rebel_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rebel_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rebel_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Rebel_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Rebel_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rebel_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Rebel">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_Rebel_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Rebel</Reward_Param1>
+				<Reward_Param2>BasicRebelTW</Reward_Param2>
+				<Prereq>DesActivar_IA_Rebel</Prereq>
+				<Branch>DesActivar_IA_Rebel_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Galactic Empire / Por defecto esta desactivada 1819 ***********-->
+			
+			<Event Name="DesActivar_IA_Empire_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>9</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Empire_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Rebel_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Empire_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Empire_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Empire_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Empire_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Empire_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Empire_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Empire_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Empire_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Empire_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Empire_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Empire_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Empire_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Empire_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Empire_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Empire_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Empire_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Empire">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_Empire_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>Empire</Reward_Param1>
+				<Reward_Param2>BasicEmpireTW</Reward_Param2>
+				<Prereq>DesActivar_IA_Empire</Prereq>
+				<Branch>DesActivar_IA_Empire_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA First Order / Por defecto esta desactivada 1819 ***********-->
+			
+			<Event Name="DesActivar_IA_First_Order_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>10</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_First_Order_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Empire_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_First_Order_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_First_Order_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_First_Order_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_First_Order_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_First_Order_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_First_Order_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_First_Order_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_First_Order_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_First_Order_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_First_Order_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_First_Order_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_First_Order_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_First_Order_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_First_Order_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_First_Order_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_First_Order_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_First_Order">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_First_Order_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>EVFO</Reward_Param1>
+				<Reward_Param2>BasicFirstOrder</Reward_Param2>
+				<Prereq>DesActivar_IA_First_Order</Prereq>
+				<Branch>DesActivar_IA_First_Order_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Resistance / Por defecto esta desactivada 1819 ***********-->
+			
+			<Event Name="DesActivar_IA_Resistance_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>11</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_Resistance_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_First_Order_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_Resistance_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Resistance_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_Resistance_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Resistance_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Resistance_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_Resistance_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_Resistance_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_Resistance_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Resistance_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Resistance_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_Resistance_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Resistance_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Resistance_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_Resistance_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_Resistance_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Resistance_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_Resistance">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_Resistance_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>RVRE</Reward_Param1>
+				<Reward_Param2>BasicResistance</Reward_Param2>
+				<Prereq>DesActivar_IA_Resistance</Prereq>
+				<Branch>DesActivar_IA_Resistance_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Galactic Alliance / Por defecto esta desactivada 1819 ***********-->
+			
+			<Event Name="DesActivar_IA_GA_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>12</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_GA_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_Resistance_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_GA_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_GA_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_GA_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GA_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GA_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_GA_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_GA_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_GA_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GA_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GA_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_GA_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GA_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GA_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_GA_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GA_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GA_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_GA">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_GA_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>GA</Reward_Param1>
+				<Reward_Param2>BasicGA</Reward_Param2>
+				<Prereq>DesActivar_IA_GA</Prereq>
+				<Branch>DesActivar_IA_GA_00_Branch</Branch>
+			</Event>
+			
+			<!--***** Activar/Desactivar IA Confederation / Por defecto esta desactivada 1819 ***********-->
+			
+			<Event Name="DesActivar_IA_GAC_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>4</Event_Param1>
+				<Story_Dialog>Dialog_E_Opciones_de_conflictoX</Story_Dialog>
+				<Story_Chapter>13</Story_Chapter>
+				<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+				<Story_Tag>DesActivar_IA_GAC_Tag</Story_Tag>
+				<Prereq>CerrarDesActivar_IA_GA_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>			
+			<Event Name="Flash_Buttons_DesActivar_IA_GAC_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters4</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_GAC_00_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>	
+			<Event Name="CerrarDesActivar_IA_GAC_00">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GAC_Tag</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GAC_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>
+			<Event Name="Flash_Buttons_DesActivar_IA_GAC_01">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>FLASH_GUI</Reward_Type>
+				<Reward_Param1>b_filters1</Reward_Param1>
+				<Reward_Param2>DesActivar_IA_GAC_01_GUI_Flash</Reward_Param2>
+				<Prereq>DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>	
+			<Event Name="Hide_DesActivar_IA_GAC_00_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GAC_00_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GAC_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>
+			<Event Name="Hide_DesActivar_IA_GAC_01_GUI_Flash">
+				<Event_Type>STORY_TRIGGER</Event_Type>
+				<Reward_Type>HIDE_TUTORIAL_CURSOR</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GAC_01_GUI_Flash</Reward_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GAC_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>
+									
+			<Event Name="DesActivar_IA_GAC_00_Disabled">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>8</Event_Param1>
+				<Reward_Type>DISABLE_BRANCH</Reward_Type>
+				<Reward_Param1>DesActivar_IA_GAC_00_Branch</Reward_Param1>
+				<Reward_Param2>1</Reward_Param2>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GAC_00</Prereq>
+				<Prereq>Capturar_click_BaseLevel_00b DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActivar_IA_GAC">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Prereq>Capturar_click_Cazas_01 DesActivar_IA_GAC_00</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>	
+			
+			<Event Name="DesActiva_IA_GAC_00">
+				<Event_Type>STORY_ELAPSED</Event_Type>
+				<Event_Param1>2</Event_Param1>
+				<Reward_Type>SWITCH_CONTROL</Reward_Type>
+				<Reward_Param1>GAC</Reward_Param1>
+				<Reward_Param2>BasicGAC</Reward_Param2>
+				<Prereq>DesActivar_IA_GAC</Prereq>
+				<Branch>DesActivar_IA_GAC_00_Branch</Branch>
+			</Event>
+			
+	<Event Name="UnLock_IA_BlackSun">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>400</Event_Param1>
+		<Reward_Type>SET_PLANET_RESTRICTED</Reward_Type>
+		<Reward_Param1>Tatooine</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>				
+	
+	<!-- Special locks structuras y unidades al comienzo -->
+	<Event Name="Lock_Astilleros_IA">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>Astilleros_IA</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>	
+	
+	<Event Name="Lock_EXSoloIA_STR_01">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>EXSoloIA_STR_01</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Lock_Armed_Walls">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>LOCK_UNIT</Reward_Type>
+		<Reward_Param1>GC_Walls_IE</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Revolt_Rebel_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Yavin_Old</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_R</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Rebel_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Rebel_01_Tag</Story_Tag>
+		<Prereq>Revolt_Rebel_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Rebel_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Rebel_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Rebel_02_Intervention</Prereq>
+	</Event>	
+	
+	<Event Name="Revolt_Underworld_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Tatooine</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_U</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Underworld_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Underworld_01_Tag</Story_Tag>
+		<Prereq>Revolt_Underworld_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Underworld_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Underworld_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Underworld_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_Hutts_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Narshadda</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_Hu</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Hutts_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Hutts_01_Tag</Story_Tag>
+		<Prereq>Revolt_Hutts_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Hutts_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Hutts_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Hutts_02_Intervention</Prereq>
+	</Event>	
+	
+	<Event Name="Revolt_Hapan_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Hapes</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_Ha</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Hapan_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Hapan_01_Tag</Story_Tag>
+		<Prereq>Revolt_Hapan_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Hapan_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Hapan_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Hapan_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_Corporate_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Bonadan</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_Co</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Corporate_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Corporate_01_Tag</Story_Tag>
+		<Prereq>Revolt_Corporate_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Corporate_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Corporate_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Corporate_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_CIS_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Neimodia</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_CIS</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_CIS_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_CIS_01_Tag</Story_Tag>
+		<Prereq>Revolt_CIS_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_CIS_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_CIS_01_Tag</Reward_Param1>
+		<Prereq>Revolt_CIS_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_Republic_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Kamino</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_Rep</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Republic_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Republic_01_Tag</Story_Tag>
+		<Prereq>Revolt_Republic_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Republic_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Republic_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Republic_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_Fel_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>BastionK</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_Fel</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Fel_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Fel_01_Tag</Story_Tag>
+		<Prereq>Revolt_Fel_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Fel_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Fel_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Fel_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_Kayt_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>KorribanK</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_Krayt</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Kayt_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Kayt_01_Tag</Story_Tag>
+		<Prereq>Revolt_Kayt_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Kayt_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Kayt_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Kayt_02_Intervention</Prereq>
+	</Event>	
+
+	<Event Name="Revolt_Empire_01">
+		<Event_Type>STORY_CONQUER</Event_Type>
+		<Event_Param1>Coruscant</Event_Param1>
+		<Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+		<Reward_Type>STORY_ELEMENT</Reward_Type>
+		<Reward_Param1>Story_Sandbox_Empire_Revolt_E</Reward_Param1>
+		<Prereq>Universal_Story_Start</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Empire_02_Intervention">
+		<Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>0</Event_Param1>
+		<Story_Dialog>Dialog_E_Intervention_Planet_Revolt</Story_Dialog>
+		<Story_Chapter>0</Story_Chapter>
+		<Story_Dialog_Popup>True</Story_Dialog_Popup>	
+		<Story_Tag>Revolt_Empire_01_Tag</Story_Tag>
+		<Prereq>Revolt_Empire_01</Prereq>
+	</Event>
+
+	<Event Name="Revolt_Empire_03">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>STORY_GOAL_COMPLETED</Reward_Type>
+		<Reward_Param1>Revolt_Empire_01_Tag</Reward_Param1>
+		<Prereq>Revolt_Empire_02_Intervention</Prereq>
+	</Event>	
+	
+</Story>

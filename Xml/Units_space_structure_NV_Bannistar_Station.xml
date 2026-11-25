@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<NV_Bannistar_StationUnit_Data>
+
+
+	<SpecialStructure Name="NV_Bannistar_Station">
+		<Variant_Of_Existing_Type>Astilleros_PesadosORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_NV_BANNISTAR</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_NV_BANNISTAR TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Bannistar_Station.ALO</Space_Model_Name>
+		<Affiliation>Empire</Affiliation>
+		<Victory_Relevant>Yes</Victory_Relevant>
+		
+		<Autoresolve_Health>125000</Autoresolve_Health>
+		<Shield_Points>125000</Shield_Points>
+		
+		<Shield_Refresh_Rate>131000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate>
+		<Death_Explosions>Super_Huge_Explosion_Space_Empire</Death_Explosions>
+		<Reinforcement_Prevention_Radius> 1000 </Reinforcement_Prevention_Radius>
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+		
+		<SpaceBehavior> SPACE_OBSTACLE, POWERED, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, UNIT_AI, SPAWN_SQUADRON, ION_STUN_EFFECT</SpaceBehavior>
+		
+		<HardPoints>
+			HP_Fighter_BayH_00,
+			HP_Shield_GeneratorH_00,
+			HP_Shield_GeneratorH_01,
+			HP_Shield_GeneratorH_02,
+			HP_Shield_GeneratorH_03
+		</HardPoints>
+	
+		<Icon_Name>I_BUTTON_NV_Bannistar_Station.TGA</Icon_Name>
+		<Death_Clone>Damage_Normal, NV_Bannistar_Station_Death_Clone</Death_Clone>
+	</SpecialStructure>
+	<SpecialStructure Name="NV_Bannistar_Station_Death_Clone">
+		<Text_ID>TEXT_UNIT_REPAIRYARD</Text_ID>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Space_Model_Name>NV_Bannistar_Station_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_3000</Death_Explosions>
+		<Layer_Z_Adjust>-330.0</Layer_Z_Adjust>
+		<CategoryMask> Capital </CategoryMask>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Should_Death_Clone_Play_Idle> true </Should_Death_Clone_Play_Idle>
+	</SpecialStructure>
+	
+	
+</NV_Bannistar_StationUnit_Data>

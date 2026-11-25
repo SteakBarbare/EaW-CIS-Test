@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<BS_Jehavey_FrgUnit_Data>
+	
+	<SpaceUnit Name="BS_Jehavey_FrgA">
+		<Variant_Of_Existing_Type>BS_Jehavey_Frg</Variant_Of_Existing_Type>
+		<Encyclopedia_Text> TEXT_TOOLTIP_UV_JEHAVEY_FRIGATE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		
+		<Affiliation>Hutts</Affiliation>
+		<Required_Special_Structures>Astilleros_NoIA</Required_Special_Structures>
+		<Armor_Type> Armor_Victory_Class </Armor_Type>
+        <Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		<Autoresolve_Health>31000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>150000000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		<AI_Combat_Power>5750</AI_Combat_Power>
+		<Hyperspace_Speed>0.4</Hyperspace_Speed>
+		<HardPoints>
+			HP_T_JehaveyA_01,
+			HP_T_JehaveyA_02,
+			HP_T_JehaveyA_03,
+			HP_T_JehaveyA_04,
+			HP_T_JehaveyA_05,
+			HP_T_JehaveyA_06,
+			HP_T_JehaveyA_07,
+			HP_T_JehaveyA_08,
+			HP_T_JehaveyA_09,
+			HP_T_JehaveyA_10,
+			HP_T_JehaveyA_11,
+			HP_T_JehaveyA_12,
+			HP_T_JehaveyA_13,
+			HP_Shield_GeneratorH_00, 
+			HP_EnginesH_00
+		</HardPoints>
+		
+	</SpaceUnit>
+	
+	<SpaceUnit Name="BS_Jehavey_Frg">
+		<Variant_Of_Existing_Type>RV_Nebulon_BORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_UV_JEHAVEY_FRIGATE</Text_ID>
+		<Encyclopedia_Good_Against> Corellian_Corvette CR_GunboatORG Bajonett </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Y-wing TIE_Bomber MC80a </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text> TEXT_TOOLTIP_UV_JEHAVEY_FRIGATE TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FRIGATE</Encyclopedia_Text>
+
+		<Space_Model_Name>UV_Jehavey_Frigate.ALO</Space_Model_Name>
+		<Scale_Factor>0.35</Scale_Factor>
+
+		<Layer_Z_Adjust>90.0</Layer_Z_Adjust>
+
+		<Affiliation>Underworld</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Astilleros_Piratas</Required_Special_Structures>
+		
+		<AI_Combat_Power>6000</AI_Combat_Power>
+		
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+
+		<Death_Clone>Damage_Normal, BS_Jehavey_Frg_Death_Clone</Death_Clone>
+		
+		<Behavior>DUMMY_STARSHIP, SELECTABLE</Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, SHIELDED, TARGETING, WEAPON, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA, SPAWN_SQUADRON </SpaceBehavior>
+		
+		<Projectile_Types>Proj_Ship_KyramudRocket</Projectile_Types>
+		
+		<Turret_Rotate_Extent_Degrees>30</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>40</Turret_Elevate_Extent_Degrees>
+		<Projectile_Fire_Pulse_Count>6</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.02</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>8.0</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Fire>Unit_Boron_Missile_Fire</SFXEvent_Fire>
+		<Targeting_Max_Attack_Distance>1600.0</Targeting_Max_Attack_Distance>
+		<HardPoints>
+			HP_T_Jehavey_01,
+			HP_T_Jehavey_02,
+			HP_T_Jehavey_03,
+			HP_T_Jehavey_04,
+			HP_T_Jehavey_05,
+			HP_T_Jehavey_06,
+			HP_T_Jehavey_07,
+			HP_T_Jehavey_08,
+			HP_T_Jehavey_09,
+			HP_T_Jehavey_10,
+			HP_T_Jehavey_11,
+			HP_T_Jehavey_12,
+			HP_T_Jehavey_13,
+			HP_Shield_Generator_Small_00, 
+			HP_Engines_Small_00
+		</HardPoints>
+
+		<Icon_Name>i_button_UV_Jehavey_Frigate.tga</Icon_Name>
+		<GUI_Model_Name>UV_Jehavey_Frigate.ALO</GUI_Model_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Jehavey_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_KyramudRocket</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Attack_Jedi_Cruiser </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Expiration_Seconds>60</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-0.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated/>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			
+			<Maximum_Firepower_Attack_Ability Name="Jehavey_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+	
+	</SpaceUnit>
+   
+     <SpaceUnit Name="BS_Jehavey_Frg_Death_Clone">
+		<Text_ID>TEXT_UNIT_UV_JEHAVEY_FRIGATE</Text_ID>
+		<Space_Model_Name>UV_Jehavey_Frigate_D.ALO</Space_Model_Name>
+		<xxxSpace_Model_Name>UV_Jehavey_Frigate_D.ALO</xxxSpace_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Explosions>Death_Explosion_Flash_300</Death_Explosions>
+		<Scale_Factor>0.35</Scale_Factor>
+		<Layer_Z_Adjust>-90.0</Layer_Z_Adjust>
+		<Max_Speed>1.2</Max_Speed>
+		<Max_Rate_Of_Turn>0.03</Max_Rate_Of_Turn>
+		<Max_Thrust>1</Max_Thrust>
+		<Max_Rate_Of_Roll>0.1</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>0</Bank_Turn_Angle>
+		<Affiliation>Rebel</Affiliation>
+		<Ship_Class>frigate</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</BS_Jehavey_FrgUnit_Data>

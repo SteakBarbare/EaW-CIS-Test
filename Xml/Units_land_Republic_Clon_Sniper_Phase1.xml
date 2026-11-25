@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Clon_Sniper_Phase1Unit_Data>
+	<GroundInfantry Name="Clon_Sniper_Phase1">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CLON_SNIPER_PHASE1</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_MAF_team </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SNIPER</Encyclopedia_Unit_Class>
+		<Land_Model_Name>RI_ClonPhase1Sniper.ALO</Land_Model_Name>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Republic, Empire</Affiliation>
+
+		<Tactical_Health>150</Tactical_Health>
+		
+		<Projectile_Types> Proj_Sniper_Blaster_Blue </Projectile_Types>
+
+		<SFXEvent_Select>Unit_Select_Clon_Trooper</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clon_Trooper</SFXEvent_Move>
+		<SFXEvent_Attack>Unit_Attack_Clon_Trooper</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clon_Trooper</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Rep_HandLaser04_Fire</SFXEvent_Fire>
+		<Death_SFXEvent_Start_Die>Unit_Stormtrooper_2_Death</Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Clon_Trooper </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Clon_Trooper </SFXEvent_Assist_Attack>
+		
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Clon_Trooper </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Clon_Trooper </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Clon_Trooper </Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<Death_Clone>Damage_Force_Whirlwind, Clon_Sniper_Phase1_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, Clon_Sniper_Phase1_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, Clon_Sniper_Phase1_Crush_Death_Clone</Death_Clone>
+
+		<Icon_Name>I_BUTTON_Rep_Sniper_Phase1_Clone.tga</Icon_Name>
+
+		<Conversion_Ability_Changes_To_Enemy> Clon_Sniper_Phase1_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+	  <GroundInfantry Name="Clon_Sniper_Phase1_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> Clon_Sniper_Phase1 </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="Clon_Sniper_Phase1_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>Clon_Sniper_Phase1</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+	<GroundInfantry Name="Clon_Sniper_Phase1_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>Clon_Sniper_Phase1</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="Clon_Sniper_Phase1_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>Clon_Sniper_Phase1</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	<GroundInfantry Name="Clon_Sniper_Phase1_B">
+		<Variant_Of_Existing_Type>Clon_Sniper_Phase1</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Republic_Clon_Sniper_Phase1_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="Republic_Clon_Sniper_Phase1_Squad_B">
+		<Variant_Of_Existing_Type>Republic_Clon_Sniper_Phase1_Squad</Variant_Of_Existing_Type>
+		<Company_Units> Clon_Sniper_Phase1, Clon_Sniper_Phase1, Clon_Sniper_Phase1, Clon_Sniper_Phase1, Clon_Sniper_Phase1</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="Republic_Clon_Sniper_Phase1_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CLON_SNIPER_PHASE1_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> C_BattleDroid_Squad C_Super_BattleDroid_Squad C_Super_BattleDroidB2_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> C_HAG_Group C_AAT_Group C_Cis_MAF_team </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_CLON_SNIPER_PHASE1 TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_SNIPER</Encyclopedia_Unit_Class>
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Republic, Empire</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Republic_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Company_Units> Clon_Sniper_Phase1_B </Company_Units>
+		<Company_Transport_Unit>CR20</Company_Transport_Unit>
+		<Icon_Name>I_BUTTON_Rep_Sniper_Phase1_Clone.tga</Icon_Name>
+
+		<SFXEvent_Build_Started>EHD_Build_Troops</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Recruitment_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>Unit_Complete_Clon_Trooper</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Clon_Trooper</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Rep_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</Clon_Sniper_Phase1Unit_Data>

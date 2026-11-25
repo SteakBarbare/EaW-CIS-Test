@@ -1,0 +1,672 @@
+<?xml version="1.0"?>
+<Krayt_structuresUnit_Data>
+	<SpecialStructure Name="Krayt_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Krayt,
+				Darth_Strife_Team,
+				Darth_Nilh_Team,
+				Darth_Talon_Team,
+				Darth_Wyyrlok_Team,
+				Darth_Krayt_Team,
+				EVK_Sith,
+				Krayt_Field_Com_Team,
+				Krayt_Level_Two_Tech_Upgrade,
+				Krayt_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Krayt, Empire</Affiliation>
+
+   </SpecialStructure>
+
+	<GroundBuildable Name="Krayt_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Krayt, Empire</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Krayt_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Command_Center_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Krayt, Empire</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Krayt_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Obstacle_Proxy_Type> Krayt_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+				
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt,
+				All_Bombing_Run_Use_Upgrade, 
+				All_Planetary_Bombard_Use_Upgrade,
+				EVK_LAV_Squad,
+				EVK_TIE_Predator_Squadron_Land,
+				EVK_TIE_Neutralizer_Squadron_Land,
+				EVK_TIEReaper_Squadron_Land,
+				EVK_Annihilator_Squadron_Land,
+				EVK_Assault_Bomber_Land_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Krayt, Empire</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Krayt_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Affiliation>Krayt, Empire</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Krayt_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Tactical_Buildable_Constructed> Krayt_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Krayt_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Krayt_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Krayt_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Krayt_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Krayt_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Krayt_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Krayt_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Krayt_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Krayt_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Krayt_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Krayt_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+   </GroundBuildable>
+	
+	
+   <SpecialStructure Name="Krayt_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> Krayt_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Krayt_Power_Generator</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Krayt_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Krayt_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> Krayt_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Krayt_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_POWER_GENERATOR</Text_ID>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Obstacle_Proxy_Type> Power_Generator_E_Build_Pad </Obstacle_Proxy_Type>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Krayt_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Krayt_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+	<GroundBuildable Name="Krayt_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Krayt_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Krayt_Power_Generator</Tactical_Buildable_Constructed>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+	</SpecialStructure>	
+	<SpecialStructure Name="Krayt_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Krayt_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, WEAPON, TURRET, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt,
+				EL_Increased_Mobility_Upgrade,
+				EL_Stamina_Boost_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt,
+				Krayt_Stormtrooper_Squad,
+				Krayt_Plextrooper_Squad,
+				Krayt_Light_Scout_Squad,
+				Krayt_Engineer_Squad,
+				Krayt_Storm_Commando_Land_Squad,
+				Krayt_Assault_Squad,
+				Krayt_Sniper_Squad,
+				Krayt_EWEB_troopers_Squad,
+				Krayt_Rocket_Trooper_Squad,
+				Krayt_Swamp_Trooper_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		<Starting_Spawned_Units_Tech_0>Krayt_Stormtrooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Krayt_Stormtrooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Krayt_Plextrooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Krayt_Plextrooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+	
+	</SpecialStructure>
+
+	<GroundBuildable Name="Krayt_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Krayt_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Ground_Barracks_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Krayt_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Krayt_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_Rep_Light_Factory_01
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+						
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt,
+				EVK_LightSpeeder_Squad,
+				EVK_Patrol_Speeder_Squad,
+				EVK_AT_RCT_Walker_Squad,
+				EVK_ATSTAP_Walker_Squad,
+				EVK_ATSTAP_AA_Walker_Squad,
+				EVK_AT_ST_Walker_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_AT_RCT_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_RCT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_AT_ST_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_ST_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_LightSpeeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_LightSpeeder, -1</Reserve_Spawned_Units_Tech_0>
+
+		
+		<Tactical_Additional_Structure_Type>EVK_XLanding</Tactical_Additional_Structure_Type>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Krayt_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Krayt_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Krayt_Ground_Light_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="EVK_XLanding">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING </Encyclopedia_Text>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> E_XLanding_Build_Pad </Obstacle_Proxy_Type>
+
+
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Tech_Level>99</Tech_Level>
+		<Tactical_Health>1000</Tactical_Health>
+		<Scale_Factor>1.25</Scale_Factor>
+		
+		<Ranged_Target_Z_Adjust>1.0</Ranged_Target_Z_Adjust>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Predator_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Predator_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+   </SpecialStructure>
+	
+	<GroundBuildable Name="EVK_XLanding_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Empire, PC_E_XLanding, Rebel, PC_R_XLanding, Underworld, PC_U_XLanding, Krayt, PC_EVK_XLanding, Fel, PC_EVF_XLanding</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVK_XLanding">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING </Encyclopedia_Text>
+		<Land_Model_Name>EB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> EVK_XLanding </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> EVK_XLanding_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_E_XLanding.tga</Icon_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+   </GroundBuildable>
+	
+	
+	<SpecialStructure Name="Krayt_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Krayt_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Krayt_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt,
+				EVK_S2_Tank_Squad,
+				EVK_AT_AT_Walker_Squad,
+				EVK_AT_SE_Walker_Squad,
+				EVK_AT_AHT_Squad,
+				EVK_AT_HA_Squad,
+				EVK_ATSHW_Squad,
+				EVK_ATSC_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_AT_AA_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVF_AT_AA_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_AT_SE_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_SE_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_S2_Tank, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_S2_Tank, -1</Reserve_Spawned_Units_Tech_0>
+
+	</SpecialStructure>
+	<GroundBuildable Name="Krayt_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Krayt_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Ground_Heavy_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Krayt_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Krayt_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Krayt_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+
+					
+		<Starting_Spawned_Units_Tech_0>EVK_AT_AT_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_AT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>ATSC_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>ATSC_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_AT_AHT, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_AHT, -1</Reserve_Spawned_Units_Tech_0>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Krayt_Ground_Advanced_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Krayt_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+
+
+	<SpecialStructure Name="Krayt_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Krayt_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Krayt</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Krayt,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Krayt,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Krayt_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Krayt_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Krayt</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Krayt_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_Command_CenterX.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Krayt_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+
+		<Scale_Factor>1.5</Scale_Factor>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Krayt, Empire</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Krayt_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_E_XCommand2.tga</Icon_Name>
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Krayt_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Krayt, PC_Krayt_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_Command_CenterX.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_E_XCommand2.tga</Icon_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Krayt_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Krayt_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Krayt_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>EB_Command_CenterX.alo</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Icon_Name>i_button_E_XCommand2.tga</Icon_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+	</GroundBuildable>
+</Krayt_structuresUnit_Data>
+
+
+

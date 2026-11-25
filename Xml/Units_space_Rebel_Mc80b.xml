@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<Mc80bUnit_Data>
+	<SpaceUnit Name="Mc80b_Home_One">
+		<Variant_Of_Existing_Type>Calamari_Cruiser_Up</Variant_Of_Existing_Type>	
+
+	</SpaceUnit>
+	
+	<SpaceUnit Name="Mc80bORG">
+		<Variant_Of_Existing_Type>Mc80aORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_CALAMARI_CRUISER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_MON_CALAMARI_CRUISER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_MEDIUM TEXT_CLASS_NORMAL_SPEED_FAST TEXT_CLASS_SHIELD_ISD TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_X_WING TEXT_UNIT_OLDBTLS3YWING TEXT_DESC_CANTIDAD_3</Encyclopedia_Text>
+
+		<Space_Model_Name>RV_MC80b.ALO</Space_Model_Name>
+		<Scale_Factor>0.55</Scale_Factor>
+
+		<Layer_Z_Adjust>98.883</Layer_Z_Adjust>
+
+		<Death_Clone>Damage_Normal, Mc80b_Death_Clone</Death_Clone>
+		<AI_Combat_Power>3255</AI_Combat_Power>
+		<Affiliation>Rebel</Affiliation>
+
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+
+				
+		<HardPoints> 
+			HP_ISD_Super_IonS_00,
+			HP_ISD_Super_IonS_01,
+			HP_T_MC80AN_01,
+			HP_T_MC80AN_02,
+			HP_T_MC80AN_03,
+			HP_T_MC80AN_04,
+			HP_T_MC80AN_05,
+			HP_T_MC80AN_06,
+			HP_T_MC80AN_07,
+			HP_T_MC80AN_08,
+			HP_T_MC80AN_09,
+			HP_T_MC80AN_10,
+			HP_T_MC80AN_11,
+			HP_T_MC80AN_12,
+			HP_T_MC80AN_13,
+			HP_T_MC80AN_14,
+			HP_T_MC80AN_15,
+			HP_T_MC80AN_16,
+			HP_T_MC80AN_17,
+			HP_T_MC80AN_18,
+			HP_T_MC80AN_19,
+			HP_T_MC80AN_20,
+			HP_T_MC80AN_21,
+			HP_T_MC80AN_22,
+			HP_T_MC80AN_23,
+			HP_T_MC80AN_24,
+			HP_T_MC80AN_25,
+			HP_T_MC80AN_26,
+			HP_T_MC80AN_27,
+			HP_T_MC80AN_28,
+			HP_T_MC80AN_29,
+			HP_T_MC80AN_30,
+			HP_T_MC80AN_31,
+			HP_T_MC80AN_32,
+			HP_T_MC80AN_33,
+			HP_T_MC80AN_34,
+			HP_T_MC80AN_35,
+			HP_T_MC80AN_36,
+			HP_T_MC80AN_37,
+			HP_T_MC80BN_38,
+			HP_T_MC80BN_39,
+			HP_T_MC80BN_40,
+			HP_T_MC80BN_41,
+			HP_T_MC80BN_42,
+			HP_T_MC80BN_43,
+			HP_T_MC80BN_44,
+			HP_T_MC80BN_45,
+			HP_T_MC80BN_46,
+			HP_T_MC80BN_47,
+			HP_Shield_Generator_00, 
+			HP_Shield_Generator_01, 
+			HP_Engines_00,
+			HP_Engines_01,
+			HP_Fighter_Bay_00
+		</HardPoints>
+		<Icon_Name>I_BUTTON_Mc80.tga</Icon_Name>
+		<GUI_Model_Name>RV_MC80b.ALO</GUI_Model_Name>
+
+		<Lua_Script>ObjectScript_PowerToShields_Z</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+
+			<Unit_Ability>
+				<Type>DEFEND</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	1.3f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	1.0f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	0.10f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	3.0f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		0.8f</Mod_Multiplier>
+				<Recharge_Seconds>40</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Defend_Calamari</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN2_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Combat_Alert_ability</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		
+		
+		<Tactical_Build_Cost_Multiplayer>4500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+	</SpaceUnit>
+
+	<SpaceUnit Name="Mc80b_Death_Clone">
+		<Text_ID> TEXT_UNIT_CALAMARI_CRUISER </Text_ID>
+		<Space_Model_Name>RV_MC80b_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die> Unit_Calamari_Death_SFX </Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration>
+		<Death_Explosions>Death_Explosion_Flash_1000</Death_Explosions>
+		<Scale_Factor> 0.55 </Scale_Factor>
+		<Layer_Z_Adjust> -290.0 </Layer_Z_Adjust>
+		<Max_Speed> 2.25 </Max_Speed>
+		<Max_Rate_Of_Turn> 0.4 </Max_Rate_Of_Turn>
+		<Max_Thrust> 0.05 </Max_Thrust>
+		<Max_Rate_Of_Roll> 0.02 </Max_Rate_Of_Roll>
+		<Bank_Turn_Angle> 5 </Bank_Turn_Angle>
+		<Affiliation> Rebel </Affiliation>
+		<Ship_Class> capital_ship </Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+</Mc80bUnit_Data>

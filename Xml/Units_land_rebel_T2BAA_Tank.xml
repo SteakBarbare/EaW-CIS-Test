@@ -1,0 +1,142 @@
+﻿<?xml version="1.0"?>
+
+
+<T2BAA_TankUnit_Data>
+	<GroundVehicle Name="T2BAA_Tank">
+		<Variant_Of_Existing_Type>T2B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_T2BAA</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter_Land TIE_Bomber_Land TIE_Interceptor_Land </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_T2BAA</Encyclopedia_Text>
+
+		<Land_Model_Name>Rv_T2B-AAV.alo</Land_Model_Name>
+		<Scale_Factor>1.25</Scale_Factor><!--Reescalado real-->
+
+		<Affiliation>Rebel, GAC, Corporate</Affiliation>
+		<AI_Combat_Power>75</AI_Combat_Power>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>45</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Speed>4.0</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles> 2 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles> 1 </Turret_Targets_Air_Vehicles>       
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+
+		<Attack_Category_Restrictions> Vehicle | Structure | Landhero </Attack_Category_Restrictions>
+	
+		<Projectile_Types>Proj_Flak_Pod</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>20</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>1.0</Projectile_Fire_Recharge_Seconds>
+				
+		<Land_FOW_Reveal_Range>380.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>400.0</Targeting_Max_Attack_Distance>
+	
+		<Targeting_Fire_Inaccuracy> Infantry, 60.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 25.0 </Targeting_Fire_Inaccuracy>
+	
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+
+		<SFXEvent_Fire>Unit_Anti_Air_Fire</SFXEvent_Fire>
+
+		<CategoryMask>Vehicle | AntiAir</CategoryMask>
+		
+		<Targeting_Priority_Set>AntiAir</Targeting_Priority_Set>
+
+		<Icon_Name>I_BUTTON_T-2BAA.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<No_Colorization_Color> 31, 14, 245, 255 </No_Colorization_Color>
+		<Vehicle_Thief_Inside_Clone>T2BAA_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Death_Clone>Damage_Normal, T2BAA_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="T2BAA_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>T2BAA_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>Rv_T2B-AAV_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundVehicle Name="T2BAA_Tank_Captured">
+		<Variant_Of_Existing_Type>T2BAA_Tank</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundCompany Name="T2BAA_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_T2BAA</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Fighter_Land TIE_Bomber_Land TIE_Interceptor_Land </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+		<Build_Cost_Credits>350</Build_Cost_Credits>
+		<Build_Time_Seconds>45</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Affiliation>Rebel</Affiliation>
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		<Company_Units>T2BAA_Tank, T2BAA_Tank, T2BAA_Tank</Company_Units>
+
+		<Icon_Name>I_BUTTON_T-2BAA.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Complete_T2B_Tank</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_T2B_Tank</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Encyclopedia_Text>TEXT_TOOLTIP_T2BAA TEXT_DESC_C_CANTIDAD_3</Encyclopedia_Text>
+	</GroundCompany>
+		
+	<GroundVehicle Name="Ha_T2B_Tank">
+		<Variant_Of_Existing_Type>T2B_Tank</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HVY_T2B</Text_ID>
+		<Land_Model_Name>Ha_T2B.alo</Land_Model_Name>
+		<Affiliation>Rebel, GAC</Affiliation>
+		<AI_Combat_Power>60</AI_Combat_Power>
+		<Icon_Name>I_BUTTON_RV_HT2B.tga</Icon_Name>		
+		<HardPoints>
+			HP_Gr_Ha_T2B_Grenade
+		</HardPoints>
+	</GroundVehicle>
+	
+	<GroundCompany Name="Hapan_Light_Tank_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HVY_T2B</Text_ID>
+		<Affiliation>Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Build_Cost_Credits>600</Build_Cost_Credits>
+		<Icon_Name>I_BUTTON_RV_HT2B.tga</Icon_Name>		
+		<Required_Special_Structures>R_Ground_Light_Vehicle_Factory, R_XCommand, AdvancedTech_6</Required_Special_Structures>
+		<Company_Transport_Unit>Assaulttransport</Company_Transport_Unit>
+		<Company_Units>Ha_T2B_Tank, Ha_T2B_Tank, Ha_T2B_Tank, Ha_T2B_Tank, Ha_T2B_Tank</Company_Units>
+		<Tactical_Build_Cost_Multiplayer>600</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+
+</T2BAA_TankUnit_Data>

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<StapUnit_Data>
+	<GroundInfantry Name="Stap">
+		<Variant_Of_Existing_Type>Scout_TrooperORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_STAP</Text_ID>
+		<Encyclopedia_Good_Against> Republic_CloneTrooper_Squad Republic_Stormtrooper_Squad Republic_Light_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> REP_LAAT Republic_EWEB_Squad UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STAP</Encyclopedia_Text>
+		<Land_Model_Name> CIS_StapX.ALO </Land_Model_Name>
+		<Land_Terrain_Model_Mapping>
+			Temperate, 			CIS_StapX_Blue.ALO,
+			Urban, 				CIS_StapX_Blue.ALO,
+			Arctic, 			CIS_StapX_Blue.ALO,
+			Volcanic, 			CIS_StapX.ALO,
+			Desert, 			CIS_StapX.ALO,
+			Forest, 			CIS_StapX.ALO,
+			Swamp, 				CIS_StapX.ALO
+		</Land_Terrain_Model_Mapping>
+		<Icon_Name>I_BUTTON_CIS_STAP.tga</Icon_Name>
+
+		<Scale_Factor>0.2</Scale_Factor>
+
+		<Max_Speed>3.0</Max_Speed>
+		<Min_Speed>3.0</Min_Speed>
+		<Max_Rate_Of_Turn>7.5</Max_Rate_Of_Turn>
+		<Max_Rate_Of_Roll>3</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>45</Bank_Turn_Angle>
+
+		<Affiliation>CIS, Pirates, Underworld, Rebel</Affiliation>
+		<CategoryMask> vehicle </CategoryMask>
+		<Tactical_Health>100</Tactical_Health>
+		<AI_Combat_Power>13</AI_Combat_Power>
+
+		<Projectile_Types>Proj_EWEB_Red_Blaster</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>0.5</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+		
+		<SFXEvent_Select>Unit_Select_B1Droid</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_B1Droid</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_B1Droid</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_B1Droid</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_B1Droid</SFXEvent_Guard>
+		
+		<SFXEvent_Fire>Unit_Stap_Fire</SFXEvent_Fire>
+		
+		<Death_SFXEvent_Start_Die>Unit_Speeder_Bike_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_B1Droid </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_B1Droid</SFXEvent_Assist_Attack>
+		<SFXEvent_Ambient_Moving> Unit_Stap_Fly_By </SFXEvent_Ambient_Moving>
+		<SFXEvent_Engine_Moving_Loop> Unit_Stap_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Ambient_Moving_Min_Delay_Seconds> 7 </SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+		<SFXEvent_Ambient_Moving_Max_Delay_Seconds> 12 </SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+		<SFXEvent_Engine_Cinematic_Focus_Loop> Unit_Stap_Engine_Loop </SFXEvent_Engine_Cinematic_Focus_Loop>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>UNTARGETED_STICKY_BOMB</Type>
+				<Recharge_Seconds>64</Recharge_Seconds>
+				<Spawned_Object_Type>Proj_Speeder_Bomb</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>4</Bomb_Countdown_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_B1Droid</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundInfantry>
+	<GroundInfantry Name="Stap_B">
+		<Variant_Of_Existing_Type>Stap</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, FLYING_LOCOMOTOR, IDLE, HUNT, TARGETING, WEAPON, STUNNABLE, POWERED, REVEAL, HIDE_WHEN_FOGGED, WIND_DISTURBANCE,DAMAGE_TRACKING, AMBIENT_SFX, SURFACE_FX, AFFECTED_BY_SHIELD, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>C_Stap_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="C_Stap_Squad_B">
+		<Variant_Of_Existing_Type>C_Stap_Squad</Variant_Of_Existing_Type>
+		<Company_Units>Stap, Stap, Stap, Stap</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 4 </Max_Squad_Size>
+	</GroundCompany>	
+	<GroundCompany Name="C_Stap_Squad">
+		<Variant_Of_Existing_Type>C_Ingeniero_BattleDroid_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_STAP</Text_ID>
+		<Encyclopedia_Good_Against> Republic_CloneTrooper_Squad Republic_Stormtrooper_Squad Republic_Light_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Imperial-LAAT Imperial_EWEB_Squad UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_INFANTRY</Encyclopedia_Unit_Class>
+		<Encyclopedia_Text>TEXT_TOOLTIP_STAP</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_CIS_STAP.tga</Icon_Name>
+		
+		<Affiliation>CIS, Underworld, Pirates, Rebel</Affiliation>
+		
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+	
+		<Required_Special_Structures>CIS_Ground_Barracks, R_XCommand</Required_Special_Structures>
+
+		<Company_Units>Stap_B</Company_Units>
+		<GUI_Model_Name> CIS_StapX.ALO </GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>150</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>13</Tactical_Build_Time_Seconds>
+	</GroundCompany>
+	
+</StapUnit_Data>

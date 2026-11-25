@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<HAG_Repulsor_TankUnit_Data>
+	
+	
+	<GroundVehicle Name="HAG_Repulsor_Tank">
+		<Variant_Of_Existing_Type>AAT_Repulsor_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HAG_REPULSOR_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_CloneTrooper_Squad Republic_Stormtrooper_Squad Republic_Light_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT-TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HAG_REPULSOR</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+		<Land_Model_Name>CIS_HAG.ALO</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor><!--Reescalado real-->
+		<Affiliation>CIS, Rebel, Pirates</Affiliation>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+
+		<Turret_Bone_Name>TurretHull_00</Turret_Bone_Name>
+		<Barrel_Bone_Name>barrel_00</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>4.0</Turret_Rotate_Speed>
+
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>0</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Turret_Rest_Angle>0.0, 0.0, 0.0</Turret_Rest_Angle>
+		<Turret_Deployed_Rest_Angle>0.0, 0.0, 0.0</Turret_Deployed_Rest_Angle>
+
+		<Deploys>Yes</Deploys>
+		<Deployment_Anim_Rate>2.0</Deployment_Anim_Rate>
+
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+
+		<Turret_Targets_Ground_Vehicles> 1 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Ground_Infantry> 2 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else> 4 </Turret_Targets_Anything_Else>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 20.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 8.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 55.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 5.0 </Targeting_Fire_Inaccuracy>
+		
+		<Attack_Category_Restrictions> Air </Attack_Category_Restrictions>
+		
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 220 </Targeting_Min_Attack_Distance>
+		
+		<Projectile_Types>Proj_Main_Cannon_HAG</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>2</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.3</Projectile_Fire_Pulse_Delay_Seconds>
+		
+		<Idle_Chase_Range>0.0</Idle_Chase_Range>
+		<Guard_Chase_Range>0.0</Guard_Chase_Range>
+		<Attack_Move_Response_Range>0.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>0.0</Autonomous_Move_Extension_Vs_Attacker>
+		
+		<CategoryMask> Vehicle </CategoryMask>
+		<Targeting_Priority_Set>AntiStructure</Targeting_Priority_Set>
+				
+		<Hardpoints>
+				HP_Gr_Front_Eweb_Laser_Red_01, HP_Gr_CIS_MAF_Proton_Torpedo		
+		</Hardpoints>
+		
+		<Icon_Name> I_BUTTON_CIS_HAG.tga </Icon_Name>
+		
+		<SFXEvent_Fire>Unit_Turbo_Tower_Fire</SFXEvent_Fire>
+		
+		<Vehicle_Thief_Inside_Clone>HAG_Repulsor_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Death_Clone>Damage_Normal, HAG_Death_Clone_00</Death_Clone>
+		
+		<Base_Shield_Penetration_Particle>Shield_Penetration_Effect_Particle</Base_Shield_Penetration_Particle>
+		<Influences_Capture_Point> False </Influences_Capture_Point>
+		
+		<AI_Combat_Power>100</AI_Combat_Power>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Converted_To_Enemy_Die_Time_Seconds>45</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+	<GroundVehicle Name="HAG_Repulsor_Tank_Captured">
+		<Variant_Of_Existing_Type>HAG_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	<GroundVehicle Name="HAG_Death_Clone_00">
+		<Variant_Of_Existing_Type>HAG_Repulsor_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>CIS_HAG_D.ALO</Land_Model_Name>
+				
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundCompany Name="C_HAG_Group">
+		<Variant_Of_Existing_Type>C_AAT_Group</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_HAG_REPULSOR_TANK</Text_ID>
+		<Encyclopedia_Good_Against> Republic_CloneTrooper_Squad Republic_Stormtrooper_Squad Republic_Light_Scout_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Republic_AT_TE_Company HAV_Juggernaut_A5 UC_Rebel_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Build_Cost_Credits>390</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<Tech_Level>0</Tech_Level>
+		<Company_Units>HAG_Repulsor_Tank, HAG_Repulsor_Tank, HAG_Repulsor_Tank</Company_Units>
+		<Icon_Name>I_BUTTON_CIS_HAG.tga</Icon_Name>
+		<Tactical_Build_Cost_Multiplayer>390</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>18</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>CIS_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		<Encyclopedia_Text>TEXT_TOOLTIP_HAG_REPULSOR</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_ARTILLERY</Encyclopedia_Unit_Class>
+	</GroundCompany>
+</HAG_Repulsor_TankUnit_Data>

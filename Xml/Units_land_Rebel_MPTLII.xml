@@ -1,0 +1,122 @@
+﻿<?xml version="1.0"?>
+
+
+<RV_MPTLIIUnit_Data>
+	<GroundVehicle Name="RV_MPTLII">
+		<Variant_Of_Existing_Type>MPTLORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_RV_MPTLII</Text_ID>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RV_MPTLII</Encyclopedia_Text>
+		<Scale_Factor>1.8</Scale_Factor><!--Reescalado real-->
+		<Land_Model_Name>RV_MPTLII.alo</Land_Model_Name>
+		
+		<Tactical_Health>400</Tactical_Health>
+		<AI_Combat_Power>160</AI_Combat_Power>
+		<Affiliation>Rebel, GA, Hapan</Affiliation>
+		<Deploys>Yes</Deploys>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>90</Turret_Elevate_Extent_Degrees>
+		
+		<Turret_Targets_Ground_Infantry> 3 </Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles> 2 </Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles> 9999 </Turret_Targets_Air_Vehicles>       
+		<Turret_Targets_Anything_Else> 1 </Turret_Targets_Anything_Else>
+
+		<Targeting_Fire_Inaccuracy> Infantry, 10.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Vehicle, 5.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Air, 55.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Structure, 4.0 </Targeting_Fire_Inaccuracy>
+		
+		<Attack_Category_Restrictions> Air </Attack_Category_Restrictions>
+
+		<Projectile_Types>Proj_RV_MPTLII_Torpedo</Projectile_Types>
+
+		<Land_FOW_Reveal_Range>1200.0</Land_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>1250.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 450 </Targeting_Min_Attack_Distance>
+
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.8</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>6.0</Projectile_Fire_Recharge_Seconds>
+		
+		<Icon_Name>i_button_RV_MPTLII.tga</Icon_Name>
+		
+		<Remove_Upon_Death>False</Remove_Upon_Death>
+		<Death_Clone>Damage_Normal, RV_MPTLII_Death_Clone</Death_Clone>
+	
+		<Vehicle_Thief_Inside_Clone>RV_MPTLII_Captured</Vehicle_Thief_Inside_Clone>
+		
+		<!-- Non-Hero unit abilities description -->
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>BARRAGE</Type>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<Recharge_Seconds>45</Recharge_Seconds>
+				<Mod_Multiplier>FIRE_RATE_MULTIPLIER, 2.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 25.0</Mod_Multiplier>
+				<SFXEvent_Target_Ability> Unit_Attack_MPTL </SFXEvent_Target_Ability>
+				<Projectile_Types_Override>Proj_RV_MPTLII_Torpedo</Projectile_Types_Override>
+				<Area_Effect_Decal_Distance> 75.0 </Area_Effect_Decal_Distance>
+				<Targeting_Fire_Inaccuracy_Fixed_Radius_Override>75</Targeting_Fire_Inaccuracy_Fixed_Radius_Override>
+				<Target_Position_Z_Offset>0</Target_Position_Z_Offset>
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</GroundVehicle>
+	
+	<GroundVehicle Name="RV_MPTLII_Death_Clone">
+		<Variant_Of_Existing_Type>RV_MPTLII</Variant_Of_Existing_Type>
+		<Land_Model_Name>RV_MPTLII_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>yes</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	
+	<GroundVehicle Name="RV_MPTLII_Captured">
+		<Variant_Of_Existing_Type>RV_MPTLII</Variant_Of_Existing_Type>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+		
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>DEPLOY</Type>
+			</Unit_Ability>
+
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundCompany Name="RV_MPTLII_Brigade">
+		<Variant_Of_Existing_Type>Rebel_Artillery_BrigadeORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_RV_MPTLII_BRIGADE</Text_ID>
+		<Affiliation>Rebel</Affiliation>
+		<Build_Cost_Credits>820</Build_Cost_Credits>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Company_Units>RV_MPTLII, RV_MPTLII</Company_Units>
+	
+		<Icon_Name>i_button_RV_MPTLII.tga</Icon_Name>
+	
+		<Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Prerequisites>RC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_RV_MPTLII TEXT_DESC_C_CANTIDAD_2</Encyclopedia_Text>
+		
+	</GroundCompany>
+</RV_MPTLIIUnit_Data>

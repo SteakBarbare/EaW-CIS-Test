@@ -1,0 +1,707 @@
+<?xml version="1.0"?>
+<Fel_structuresUnit_Data>
+	<SpecialStructure Name="Fel_Command_Center">
+		<Variant_Of_Existing_Type>Basic_Command_Center</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>
+		
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00,
+			HP_GroundStructure_Power_Generator_00
+		</HardPoints>
+		
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		 
+		 <Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				Roan_Fel_Team,
+				Marasiah_Fel_Team,
+				Antares_Draco_Team,
+				Treis_Sinde_Team,
+				Cade_Skywalker_Team,
+				Morrigan_Team,
+				Imperial_Kights_Team,
+				Shado_Vao_Team,
+				Wolf_Sazen_Team,
+				GA_Jedi_Team_Land_MP,
+				GA_Field_Com_Team,
+				Fel_Field_Com_Team,
+				Fel_Level_Two_Tech_Upgrade,
+				Fel_Level_Three_Tech_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+
+   </SpecialStructure>
+
+	<GroundBuildable Name="Fel_Command_Center_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Command_Center_Build_Pad</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Command_Center</Tactical_Buildable_Objects_Multiplayer>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Fel, Rebel</Affiliation>
+  </GroundBuildable>	
+
+	<GroundBuildable Name="PC_Fel_Command_Center">
+		<Variant_Of_Existing_Type>PC_Basic_Command_Center</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Command_Center_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Command_Center_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_CommandCenter.alo</Land_Model_Name>
+		<Icon_Name>i_button_Rep_commandcenter.tga</Icon_Name>	
+		<Affiliation>Fel, Rebel</Affiliation>
+   </GroundBuildable>
+   
+	<SpecialStructure Name="Fel_Communications_Array">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Icon_Name>i_button_R_XLanding.tga</Icon_Name>
+		<Land_Model_Name>RB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Scale_Factor>1.25</Scale_Factor>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>		
+		<Starting_Spawned_Units_Tech_0>GA_Crossfire_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_Crossfire_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				All_Bombing_Run_Use_Upgrade, 
+				All_Planetary_Bombard_Use_Upgrade,
+				GA_Crossfire_Squadron_Land,
+				GA_B22_Land_squadron,
+				GA_Ionizer_Land_squadron,
+				EVF_TIE_Predator_Squadron_Land,
+				EVF_TIE_Neutralizer_Squadron_Land,
+				GA_X38_Squadron_Land,
+				EVF_Sigma_Shuttle_Land_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="Fel_Communications_Array_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Communications_Array</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>RB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_R_XLanding.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Fel_Communications_Array">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Land_Model_Name>RB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Fel_Communications_Array </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Fel_Communications_Array_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_R_XLanding.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+   </GroundBuildable>
+   
+   <SpecialStructure Name="Fel_Turbolaser">
+		<Variant_Of_Existing_Type>Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Tactical_Additional_Structure_Type>Fel_Power_Generator</Tactical_Additional_Structure_Type>
+		<Obstacle_Proxy_Type> Fel_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Projectile_Types>Proj_Ground_Turbolaser_Green</Projectile_Types>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+   </SpecialStructure>
+   
+   <SpecialStructure Name="Fel_Turbolaser_Defenses">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Defenses</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Fel_Power_Generator</Tactical_Additional_Structure_Type>
+		<Place_Other_Type_At_Every_Specific_Marker_Position>Fel_Turbolaser</Place_Other_Type_At_Every_Specific_Marker_Position>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+	</SpecialStructure>
+	
+   <GroundBuildable Name="Fel_Turbolaser_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Turbolaser_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Turbolaser</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Fel_Turbolaser">
+		<Variant_Of_Existing_Type>PC_Basic_Turbolaser</Variant_Of_Existing_Type>
+		<Land_Model_Name>EB_TurretBunker.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> Fel_Turbolaser </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> Fel_Turbolaser_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>I_BUTTON_EBTurretBunker.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+   </GroundBuildable>
+	
+	
+    <SpecialStructure Name="Fel_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>E_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Obstacle_Proxy_Type> Fel_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Affiliation>Fel</Affiliation>
+
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+
+		<Tactical_Additional_Structure_Type>Fel_Power_Generator</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Fel_Ground_Base_Shield_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Base_Shield_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Base_Shield</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Fel</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Fel_Ground_Base_Shield">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Base_Shield</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_BASE_SHIELD</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_BASE_SHIELD_00  </Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Obstacle_Proxy_Type> Fel_Ground_Base_Shield_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Ground_Base_Shield </Tactical_Buildable_Constructed>
+		<Land_Model_Name>NB_BASESHIELDGEN.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor> 
+		<Affiliation>Fel</Affiliation>
+		<Icon_Name>i_button_base_shield_generator.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Fel_Power_Generator">
+		<Variant_Of_Existing_Type>Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_POWER_GENERATOR</Text_ID>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+				
+		<Obstacle_Proxy_Type> Fel_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+
+	</SpecialStructure>
+	<SpecialStructure Name="Fel_Power_Generator_Multiplayer">
+		<Variant_Of_Existing_Type>Fel_Power_Generator</Variant_Of_Existing_Type>
+		<Victory_Relevant>Yes</Victory_Relevant>
+	</SpecialStructure>
+
+
+	<GroundBuildable Name="Fel_Power_Generator_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Power_Generator_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Power_Generator</Tactical_Buildable_Objects_Multiplayer>
+		<Text_ID>TEXT_STRUCTURE_POWER_GENERATOR</Text_ID>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="PC_Fel_Power_Generator">
+		<Variant_Of_Existing_Type>PC_Basic_Power_Generator</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Power_Generator_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed>Fel_Power_Generator</Tactical_Buildable_Constructed>
+		<Text_ID>TEXT_STRUCTURE_POWER_GENERATOR</Text_ID>
+		<Encyclopedia_Text> TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_POWER_GENERATOR_00 </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_power_generator.tga</Icon_Name>
+		<Land_Model_Name>RB_SHIELD-GENERATOR.ALO</Land_Model_Name>
+		<Scale_Factor>0.75</Scale_Factor>
+		<Affiliation>Fel, Rebel</Affiliation>
+	</SpecialStructure>	
+	<SpecialStructure Name="Fel_Ground_Barracks">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Projectile_Types>Proj_EWEB_Blaster</Projectile_Types>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, TURRET, WEAPON, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel,
+				EL_Increased_Mobility_Upgrade,
+				EL_Stamina_Boost_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				GA_Assault_Trooper_Squad,
+				GA_Plex_Trooper_Squad,
+				GA_Sniper_Trooper_Squad,
+				GA_EWEB_troopers_Squad,
+				Fel_Light_Scout_Squad,
+				Fel_Stormtrooper_Squad,
+				Fel_PlexTrooper_Squad,
+				Fel_Assault_Squad,
+				Fel_Sniper_Squad,
+				Fel_EWEB_troopers_Squad,
+				Fel_Engineer_Squad,
+				Fel_Storm_Commando_Land_Squad
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>GA_Assault_Trooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_Assault_Trooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>GA_Plex_Trooper_Squad, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_Plex_Trooper_Squad, -1</Reserve_Spawned_Units_Tech_0>
+		
+			
+	</SpecialStructure>
+
+	<GroundBuildable Name="Fel_Ground_Barracks_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Barracks_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Barracks</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Fel_Ground_Barracks">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Barracks</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Ground_Barracks_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Ground_Barracks_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Ch_InfantryBarracks.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_rep_infantry_barracks.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Fel_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				EVF_AT_RCT_Walker_Squad,
+				EVF_AT_MP_Squad,
+				EVF_AT_ST_Walker_Squad,
+				GA_LightSpeeder_Squad,
+				GA_T2B_Tank_Squad,
+				GA_AAC_Hovertank_Squad,
+				EVF_Hvy_Artillery_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>GA_T2B_Tank, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_T2B_Tank, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_AT_ST_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVF_AT_ST_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>GA_LightSpeeder, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_LightSpeeder, -1</Reserve_Spawned_Units_Tech_0>
+
+				
+		<Tactical_Additional_Structure_Type>EVF_XLanding</Tactical_Additional_Structure_Type>
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Fel_Ground_Light_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Light_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Light_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Fel_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+
+		<Tactical_Buildable_Constructed> Fel_Ground_Light_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_LightFactory.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_rep_vehicle_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="EVF_XLanding">
+		<Variant_Of_Existing_Type>Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING </Encyclopedia_Text>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Icon_Name>i_button_R_XLanding.tga</Icon_Name>
+		<Land_Model_Name>RB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Obstacle_Proxy_Type> E_XLanding_Build_Pad </Obstacle_Proxy_Type>
+
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Tech_Level>99</Tech_Level>
+		<Tactical_Health>1000</Tactical_Health>
+		<Scale_Factor>1.25</Scale_Factor>
+		
+		<Ranged_Target_Z_Adjust>1.0</Ranged_Target_Z_Adjust>
+				
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				All_Bombing_Run_Use_Upgrade, 
+				All_Planetary_Bombard_Use_Upgrade,
+				GA_Crossfire_Squadron_Land,
+				GA_B22_Land_squadron,
+				GA_Ionizer_Land_squadron,
+				EVF_TIE_Predator_Squadron_Land,
+				EVF_TIE_Neutralizer_Squadron_Land,
+				GA_X38_Squadron_Land,
+				EVF_Sigma_Shuttle_Land_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>GA_Crossfire_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_Crossfire_Land, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Predator_Land, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Predator_Land, -1</Reserve_Spawned_Units_Tech_0>
+   </SpecialStructure>
+	
+	<GroundBuildable Name="EVF_XLanding_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Communications_Array_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Empire, PC_E_XLanding, Rebel, PC_R_XLanding, Underworld, PC_U_XLanding, Krayt, PC_EVK_XLanding, Fel, PC_EVF_XLanding</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>RB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Icon_Name>i_button_R_XLanding.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+	</GroundBuildable>
+	<GroundBuildable Name="PC_EVF_XLanding">
+		<Variant_Of_Existing_Type>PC_Basic_Communications_Array</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_STRUCTURE_E_XLANDING</Text_ID>
+		<Encyclopedia_Text> MP_TEXT_ENCYCLOPEDIA_E_XLANDING </Encyclopedia_Text>
+		<Land_Model_Name>RB_Landing_PlattformX.ALO</Land_Model_Name>
+		<Tactical_Buildable_Constructed> EVF_XLanding </Tactical_Buildable_Constructed>
+		<Obstacle_Proxy_Type> EVF_XLanding_Build_Pad </Obstacle_Proxy_Type>
+		<Icon_Name>i_button_R_XLanding.tga</Icon_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Scale_Factor>1.25</Scale_Factor>
+   </GroundBuildable>
+	
+	<SpecialStructure Name="Fel_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Fel_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Weatherproof_Upgrade
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				EVF_AT_AA_Walker_Squad,
+				EVF_AT_AT_Walker_Squad,
+				EVF_AT_SE_Walker_Squad,
+				EVF_AT_AHT_Squad,
+				GA_Scanner_Brigade,
+				GA_TBAA_Brigade,
+				Ga_T7B_Brigade,
+				Ga_T9B_Brigade,
+				Ga_Specforce_Squad,
+				GA_S_Attack_Tank_Squad,
+				GA_Land_Raider_Squad,
+				EVF_AT_AHTH_Squad,
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+		<Starting_Spawned_Units_Tech_0>GA_TBAA, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>GA_TBAA, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Ga_T9B_Tank, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Ga_T9B_Tank, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_Sigma_Shuttle_Land, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVF_Sigma_Shuttle_Land, -1</Reserve_Spawned_Units_Tech_0>
+
+
+	</SpecialStructure>
+	<GroundBuildable Name="Fel_Ground_Heavy_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Fel_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Ground_Heavy_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Ground_Heavy_Vehicle_Factory_MP </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_VehicleFactory.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_rep_heavy_factory.tga</Icon_Name>
+	</GroundBuildable>
+	
+	
+	<SpecialStructure Name="Fel_Ground_Advanced_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE,SHIELDED,POWERED</LandBehavior>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures>Fel_Ground_Heavy_Vehicle_Factory</Required_Special_Structures>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+		<Starting_Spawned_Units_Tech_0>EVF_AT_AT_Walker, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVF_AT_AT_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_AT_SE_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_SE_Walker, -1</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>EVK_AT_AHT, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_AT_AHT, -1</Reserve_Spawned_Units_Tech_0>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Fel_Ground_Advanced_Vehicle_Factory_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Advanced_Heavy_Vehicle_Factory_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Advanced_Heavy_Vehicle_Factory</Tactical_Buildable_Objects_Multiplayer>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+		
+	</GroundBuildable>
+	<GroundBuildable Name="PC_Fel_Ground_Advanced_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Advanced_Heavy_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Ground_Advanced_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Ground_Advanced_Vehicle_Factory </Tactical_Buildable_Constructed>
+
+		<Land_Model_Name>Co_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Affiliation>Fel, Rebel</Affiliation>
+
+		<Icon_Name>i_button_Rep_mega_advanced_weapons.tga</Icon_Name>
+	</GroundBuildable>
+
+
+
+	<SpecialStructure Name="Fel_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<HardPoints>
+			HP_GroundStructure_Shield_Generator_00
+		</HardPoints>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Fel</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+		
+		<Tactical_Buildable_Objects_Campaign> 
+			Fel,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade_NoPre
+		</Tactical_Buildable_Objects_Campaign>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			Fel,
+				EL_Reinforced_Structures_Upgrade, 
+				EL_Enhanced_Turret_Firepower_L1_Upgrade,
+				EL_Enhanced_Turret_Firepower_L2_Upgrade,
+				EL_Increased_Mobility_Upgrade,
+				EL_Weatherproof_Upgrade,
+				EL_Light_Reflective_Armor_L1_Upgrade,
+				EL_Light_Reflective_Armor_L2_Upgrade,
+				EL_Enhanced_Reactors_L1_Upgrade,
+				EL_Enhanced_Reactors_L2_Upgrade,
+				EL_Heavy_Reflective_Armor_L1_Upgrade,
+				EL_Heavy_Reflective_Armor_L2_Upgrade,
+				EL_Improved_ATAT_Reactors_L1_Upgrade,
+				EL_Improved_ATAT_Reactors_L2_Upgrade,
+				EL_Enhanced_Base_Shield_Upgrade
+		</Tactical_Buildable_Objects_Multiplayer>
+		
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Fel_Ground_Research_Facility_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Research_Facility_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Research_Facility</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Fel</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Fel_Ground_Research_Facility">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Research_Facility</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Ground_Research_Facility_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Ground_Research_Facility </Tactical_Buildable_Constructed>
+		<Land_Model_Name>Co_ResearchFacility.alo</Land_Model_Name>
+		<Affiliation>Fel</Affiliation>
+		<Icon_Name>i_button_rep_research_facility.tga</Icon_Name>
+	</GroundBuildable>
+	
+	<SpecialStructure Name="Fel_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Land_Model_Name>RB_Command_CenterX.alo</Land_Model_Name>
+		<Obstacle_Proxy_Type> Fel_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Scale_Factor>1.5</Scale_Factor>
+		
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET,ION_STUN_EFFECT,STUNNABLE</LandBehavior>
+		<Destruction_Survivors> 
+			Empire_Survivors_Small, 1.0
+			Empire_Survivors_Medium, 1.0
+			Empire_Survivors_Large, 1.0 
+		</Destruction_Survivors>
+		
+		<Affiliation>Fel, Rebel</Affiliation>
+		
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		
+		<Tech_Level>0</Tech_Level>
+		
+		<Required_Special_Structures> Fel_Ground_Barracks </Required_Special_Structures>
+		
+		<Icon_Name>i_button_R_XCommand2.tga</Icon_Name>
+				
+	</SpecialStructure>
+	
+	<GroundBuildable Name="Fel_Ground_Officer_Academy_Build_Pad">
+		<Variant_Of_Existing_Type>Basic_Ground_Officer_Academy_Build_Pad</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Objects_Multiplayer>Fel, PC_Fel_Ground_Officer_Academy</Tactical_Buildable_Objects_Multiplayer>
+		<Land_Model_Name>RB_Command_CenterX.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_R_XCommand2.tga</Icon_Name>
+	</GroundBuildable>
+
+	<GroundBuildable Name="PC_Fel_Ground_Officer_Academy">
+		<Variant_Of_Existing_Type>PC_Basic_Ground_Officer_Academy</Variant_Of_Existing_Type>
+		<Obstacle_Proxy_Type> Fel_Ground_Officer_Academy_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Constructed> Fel_Ground_Officer_Academy </Tactical_Buildable_Constructed>
+		<Land_Model_Name>RB_Command_CenterX.alo</Land_Model_Name>
+		<Scale_Factor>1.5</Scale_Factor>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_R_XCommand2.tga</Icon_Name>
+	</GroundBuildable>
+</Fel_structuresUnit_Data>
+
+
+

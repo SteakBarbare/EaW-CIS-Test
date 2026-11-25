@@ -1,0 +1,726 @@
+<?xml version="1.0"?>
+<SpaceBuildables>
+	<SpaceBuildable Name="UC_SB_Defense_Ion_Circle">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_Ion_Circle </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 800 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>800</Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_IONBAT</Text_ID>
+		<Space_Model_Name>NV_Defense_Ion_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_IONBAT.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_IONBAT </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_IONBAT </MP_Encyclopedia_Text>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_Ion_Circle">
+		<Variant_Of_Existing_Type>Empire_Defense_Satellite_Basic</Variant_Of_Existing_Type>
+		<SpaceBehavior> ABILITY_COUNTDOWN, TARGETING, POWERED, WEAPON, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>
+		
+		<GUI_Bounds_Scale>0.2</GUI_Bounds_Scale>
+
+		<Text_ID>TEXT_UNIT_IONBAT</Text_ID>
+		<Space_Model_Name>NV_Defense_Ion_Plattform.ALO</Space_Model_Name>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		
+		<Autoresolve_Health>150000</Autoresolve_Health>
+		<Shield_Points>31000</Shield_Points>
+		<Tactical_Health>58000</Tactical_Health>
+		<Shield_Refresh_Rate>32000</Shield_Refresh_Rate>
+		<Energy_Capacity>500000</Energy_Capacity>
+		<Energy_Refresh_Rate>300000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD</Shield_Armor_Type>
+
+		<Projectile_Damage>14.0</Projectile_Damage>
+		<Projectile_Types>Proj_Ion_Bat</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>32</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.2</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		<Space_FOW_Reveal_Range>1200.0</Space_FOW_Reveal_Range>
+		<Targeting_Max_Attack_Distance>3000.0</Targeting_Max_Attack_Distance>
+		<Fire_Inaccuracy_Distance> Fighter, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 2.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 20.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 50.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 1.0 </Fire_Inaccuracy_Distance>
+		<SFXEvent_Fire>Unit_Ion_Fighter_Fire</SFXEvent_Fire>
+		<Victory_Relevant>yes</Victory_Relevant>
+		<Icon_Name>I_BUTTON_IONBAT.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_Ion_Plattform.ALO</GUI_Model_Name>
+		
+		<HardPoints>
+			HP_WS_00,
+			HP_WS_01,
+			HP_WS_02,
+			HP_WS_03
+		</HardPoints>
+
+		<Encyclopedia_Text> TEXT_TOOLTIP_IONBAT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_IONBAT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD</MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 20.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Ion_Circle_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ion_Bat</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Empire_Space_Station </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="Ion_Circle_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_SB_Defense_Laser_Circle">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_Laser_Circle </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1250 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1250</Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_GUNPAD</Text_ID>
+		<Space_Model_Name>NV_Defense_Laser_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_GUNPADLASER.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPAD </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPAD </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_Laser_Circle">
+		<Variant_Of_Existing_Type>SB_Defense_Ion_Circle</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNPAD</Text_ID>
+		<Space_Model_Name>NV_Defense_Laser_Plattform.ALO</Space_Model_Name>
+		
+		<Autoresolve_Health>300000</Autoresolve_Health>
+		<Shield_Points>36000</Shield_Points>
+		<Tactical_Health>67000</Tactical_Health>
+		<Shield_Refresh_Rate>38000</Shield_Refresh_Rate>
+		<Energy_Capacity>750000</Energy_Capacity>
+		<Energy_Refresh_Rate>450000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD2</Shield_Armor_Type>
+		
+		<Projectile_Types>Proj_Ship_Flak_Green_Laser_Cannon_Anticaza</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>32</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>1.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>6.0</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Flak_Cannon_Fire</SFXEvent_Fire>
+		<Icon_Name>I_BUTTON_GUNPADLASER.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_Laser_Plattform.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPAD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPAD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD2</MP_Encyclopedia_Text>
+		
+		<HardPoints>
+			HP_WS_00,
+			HP_WS_01,
+			HP_WS_02,
+			HP_WS_03
+		</HardPoints>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 10.0</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Laser_Circle_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_Flak_M_Laser_Barrage</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Empire_Space_Station </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="Laser_Circle_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+	</SpaceBuildable>
+	<SpaceBuildable Name="UC_SB_Defense_Missile_Circle">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_Missile_Circle </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 1500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>1500</Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_GUNWARHEADPAD</Text_ID>
+		<Space_Model_Name>NV_Defense_Missile_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_GUNPAD.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNWARHEADPAD </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNWARHEADPAD </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_Missile_Circle">
+		<Variant_Of_Existing_Type>SB_Defense_Ion_Circle</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNWARHEADPAD</Text_ID>
+		<Space_Model_Name>NV_Defense_Missile_Plattform.ALO</Space_Model_Name>
+		
+		<Autoresolve_Health>450000</Autoresolve_Health>
+		<Shield_Points>43000</Shield_Points>
+		<Tactical_Health>76000</Tactical_Health>
+		<Shield_Refresh_Rate>46000</Shield_Refresh_Rate>
+		<Energy_Capacity>1000000</Energy_Capacity>
+		<Energy_Refresh_Rate>600000</Energy_Refresh_Rate>
+
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_ISD3</Shield_Armor_Type>
+		
+		<Projectile_Types>Proj_Ship_Concussion_Missile_ShipT</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>16</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>2.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>5.0</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Fire>Unit_Missile_Fire</SFXEvent_Fire>
+		<Icon_Name>I_BUTTON_GUNPAD.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_Missile_Plattform.ALO</GUI_Model_Name>
+		
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNWARHEADPAD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNWARHEADPAD TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_ISD3</MP_Encyclopedia_Text>
+		
+		<HardPoints>
+			HP_WS_00,
+			HP_WS_01,
+			HP_WS_02,
+			HP_WS_03
+		</HardPoints>
+		
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Missile_Circle_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_Concussion_Missile_ShipT</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Empire_Space_Station </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="Missile_Circle_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+	</SpaceBuildable>
+	
+	<SpaceBuildable Name="UC_SB_Defense_Turbolaser_Circle">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_Turbolaser_Circle </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 2000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>2000</Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_GUNPADT</Text_ID>
+		<Space_Model_Name>NV_Gunplatform.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_NV_Defense_Turbolaser_Plattform.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPADT </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPADT </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_Turbolaser_Circle">
+		<Variant_Of_Existing_Type>SB_Defense_Ion_Circle</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNPADT</Text_ID>
+		<Space_Model_Name>NV_Gunplatform.ALO</Space_Model_Name>
+		
+		<Autoresolve_Health>600000</Autoresolve_Health>
+		<Shield_Points>125000</Shield_Points>
+		<Tactical_Health>85000</Tactical_Health>
+		<Shield_Refresh_Rate>131000</Shield_Refresh_Rate>
+		<Energy_Capacity>1250000</Energy_Capacity>
+		<Energy_Refresh_Rate>750000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Titan</Shield_Armor_Type>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, WEAPON, TARGETING, POWERED, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_BlancoVacio_LaserT</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>18</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>2.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>20</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Fighter, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 15.0 </Targeting_Fire_Inaccuracy>
+		<Attack_Category_Restrictions> Fighter, Bomber </Attack_Category_Restrictions>
+		
+		<Targeting_Max_Attack_Distance>3050.0</Targeting_Max_Attack_Distance>
+				
+		<SFXEvent_Fire>Unit_Rebel_Ship_Turbolaser</SFXEvent_Fire>
+		
+		<HardPoints> 
+			HP_T_NV_Gunplatform_01,
+			HP_T_NV_Gunplatform_02,
+			HP_T_NV_Gunplatform_03,
+			HP_T_NV_Gunplatform_04,
+			HP_T_NV_Gunplatform_05,
+			HP_T_NV_Gunplatform_06,
+			HP_T_NV_Gunplatform_07,
+			HP_T_NV_Gunplatform_08,
+			HP_T_NV_Gunplatform_09,
+			HP_T_NV_Gunplatform_10,
+			HP_T_NV_Gunplatform_11,
+			HP_T_NV_Gunplatform_12,
+			HP_T_NV_Gunplatform_13,
+			HP_T_NV_Gunplatform_14,
+			HP_T_NV_Gunplatform_15,
+			HP_T_NV_Gunplatform_16
+		</HardPoints>
+		<Icon_Name>I_BUTTON_NV_Defense_Turbolaser_Plattform.tga</Icon_Name>
+		<GUI_Model_Name>NV_Gunplatform.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPADT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPADT TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_TITAN</MP_Encyclopedia_Text>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>NV_Gunplatform_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_Turbolaser_Green_Hvy1</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Empire_Space_Station </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="NV_Gunplatform_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+		
+	</SpaceBuildable>
+	
+	<SpaceBuildable Name="UC_SB_Defense_TurbolaserM_Circle">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_TurbolaserM_Circle </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>2500</Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_GUNPADTM</Text_ID>
+		<Space_Model_Name>NV_Defense_TurbolaserM_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_NV_Defense_TurbolaserM_Plattform.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTM </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTM </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_TurbolaserM_Circle">
+		<Variant_Of_Existing_Type>SB_Defense_Ion_Circle</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNPADTM</Text_ID>
+		<Space_Model_Name>NV_Defense_TurbolaserM_Plattform.ALO</Space_Model_Name>
+		
+		<Autoresolve_Health>750000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>76000</Tactical_Health>
+		<Shield_Refresh_Rate>262000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+				
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+		
+		<SpaceBehavior> ABILITY_COUNTDOWN, WEAPON, TARGETING, POWERED, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_BlancoVacio_LaserT02</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>18</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>2.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>20</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Fighter, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 15.0 </Targeting_Fire_Inaccuracy>
+		<Attack_Category_Restrictions> Fighter, Bomber </Attack_Category_Restrictions>
+		
+		<Targeting_Max_Attack_Distance>3050.0</Targeting_Max_Attack_Distance>
+				
+		<SFXEvent_Fire>Unit_Rebel_Ship_Turbolaser</SFXEvent_Fire>
+		
+		<HardPoints> 
+			HP_T_Defense_Turbo_Plattform_01,
+			HP_T_Defense_Turbo_Plattform_02,
+			HP_T_Defense_Turbo_Plattform_03,
+			HP_T_Defense_Turbo_Plattform_04,
+			HP_T_Defense_Turbo_Plattform_05,
+			HP_T_Defense_Turbo_Plattform_06,
+			HP_T_Defense_Turbo_Plattform_07,
+			HP_T_Defense_Turbo_Plattform_08,
+			HP_T_Defense_Turbo_Plattform_09,
+			HP_T_Defense_Turbo_Plattform_10,
+			HP_T_Defense_Turbo_Plattform_11,
+			HP_T_Defense_Turbo_Plattform_12
+		</HardPoints>
+		
+		<Icon_Name>I_BUTTON_NV_Defense_TurbolaserM_Plattform.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_TurbolaserM_Plattform.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTM TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTM TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE</MP_Encyclopedia_Text>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Defense_TurbolaserM_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_Turbolaser_Green_HvyX_SSD</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Empire_Space_Station </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="Defense_TurbolaserM_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+		
+	</SpaceBuildable>
+	
+	<SpaceBuildable Name="UC_SB_Defense_TurbolaserML_Circle">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_TurbolaserML_Circle </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 2500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign>2500</Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_GUNPADTML</Text_ID>
+		<Space_Model_Name>NV_Defense_TurbolaserML_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_NV_Defense_TurbolaserML_Plattform.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTML </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTML </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STATION</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_TurbolaserML_Circle">
+		<Variant_Of_Existing_Type>SB_Defense_Ion_Circle</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GUNPADTML</Text_ID>
+		<Space_Model_Name>NV_Defense_TurbolaserML_Plattform.ALO</Space_Model_Name>
+		<SpaceBehavior> ABILITY_COUNTDOWN, WEAPON, TARGETING, POWERED, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		
+		<Autoresolve_Health>750000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>76000</Tactical_Health>
+		<Shield_Refresh_Rate>262000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Implacable</Shield_Armor_Type>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>360</Turret_Elevate_Extent_Degrees>
+		
+		<Projectile_Types>Proj_BlancoVacio_LaserT02</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>18</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>2.0</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>20</Projectile_Fire_Recharge_Seconds>
+		
+		<Targeting_Fire_Inaccuracy> Fighter, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Bomber, 100.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Transport, 70.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Corvette, 45.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Frigate, 35.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Capital, 25.0 </Targeting_Fire_Inaccuracy>
+		<Targeting_Fire_Inaccuracy> Super, 15.0 </Targeting_Fire_Inaccuracy>
+		<Attack_Category_Restrictions> Fighter, Bomber </Attack_Category_Restrictions>
+		
+		<Targeting_Max_Attack_Distance>3050.0</Targeting_Max_Attack_Distance>
+				
+		<SFXEvent_Fire>Unit_Rebel_Ship_Turbolaser</SFXEvent_Fire>
+		
+		<HardPoints> 
+			HP_T_Defense_Turbo_Plattform_01,
+			HP_T_Defense_Turbo_Plattform_02,
+			HP_T_Defense_Turbo_Plattform_03,
+			HP_T_Defense_Turbo_Plattform_04,
+			HP_T_Defense_Turbo_Plattform_05,
+			HP_T_Defense_Turbo_Plattform_06,
+			HP_T_Defense_Turbo_Plattform_07,
+			HP_T_Defense_Turbo_Plattform_08,
+			HP_T_Defense_Turbo_Plattform_09,
+			HP_T_Defense_Turbo_Plattform_10,
+			HP_T_Defense_Turbo_Plattform_11,
+			HP_T_Defense_Turbo_Plattform_12,
+			HP_T_Defense_Turbo_Plattform_13,
+			HP_T_Defense_Turbo_Plattform_14,
+			HP_T_Defense_Turbo_Plattform_15,
+			HP_T_Defense_Turbo_Plattform_16
+		</HardPoints>
+		<Icon_Name>I_BUTTON_NV_Defense_TurbolaserML_Plattform.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_TurbolaserML_Plattform.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTML TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_GUNPADTML TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_SHIELD_IMPLACABLE</MP_Encyclopedia_Text>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>MAXIMUM_FIREPOWER</Type>
+				<Expiration_Seconds>1</Expiration_Seconds>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.0f</Mod_Multiplier>
+				<GUI_Activated_Ability_Name>Defense_TurbolaserML_Firepower_Attack</GUI_Activated_Ability_Name>
+				<Projectile_Types_Override>Proj_Ship_Turbolaser_Green_HvyX_SSD</Projectile_Types_Override>
+				<Mod_Flag>ALLOW_TARGET_DIMINISHING_FIREPOWER, false</Mod_Flag>
+				<SFXEvent_GUI_Unit_Ability_Activated>GUI_Weapon_Boost_SFX</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_Target_Ability> Unit_Barrage_Empire_Space_Station </SFXEvent_Target_Ability>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Maximum_Firepower_Attack_Ability Name="Defense_TurbolaserML_Firepower_Attack">
+				<Activation_Style> User_Input </Activation_Style>
+				<Applicable_Unit_Categories>Corvette | Frigate | Capital | Super | Transport | Spacehero | Structure</Applicable_Unit_Categories>
+				<Owner_Particle_Effect>Recusant_Powerup_Particle_Effect</Owner_Particle_Effect>
+				<Owner_Particle_Bone_Name>powerup</Owner_Particle_Bone_Name>
+				<SFXEvent_Activate>Unit_AT_AT_PowerUp</SFXEvent_Activate>
+			</Maximum_Firepower_Attack_Ability>
+		</Abilities>
+		
+	</SpaceBuildable>
+
+	<SpaceBuildable Name="UC_SB_Defense_IongunS">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_IonGunS </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 5000 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 5000 </Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_IONGUNSPACE</Text_ID>
+		<Space_Model_Name>NV_Defense_IonGunS_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_NV_IONGUNSPACE.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_IONGUNSPACE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_IONGUNSPACE </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_IonGunS">
+		<Variant_Of_Existing_Type>Empire_Defense_Satellite_Basic</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Text_ID>TEXT_UNIT_IONGUNSPACE</Text_ID>
+		<Space_Model_Name>NV_Defense_IonGunS_Plattform.ALO</Space_Model_Name>
+		<SpaceBehavior> ABILITY_COUNTDOWN, TARGETING, WEAPON, TURRET, POWERED, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		
+		<Autoresolve_Health>600000</Autoresolve_Health>
+		<Shield_Points>250000</Shield_Points>
+		<Tactical_Health>85000</Tactical_Health>
+		<Shield_Refresh_Rate>264000</Shield_Refresh_Rate>
+		<Energy_Capacity>15000000</Energy_Capacity>
+		<Energy_Refresh_Rate>9000000</Energy_Refresh_Rate>
+
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_Warhammer</Shield_Armor_Type>
+		
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 500 </Targeting_Min_Attack_Distance>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret_01</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel_01</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>0.15</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Fire_Category_Restrictions> Fighter, Bomber, Transport </Fire_Category_Restrictions>
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 5.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 0.0 </Fire_Inaccuracy_Distance>
+		<Projectile_Types>Proj_BlancoVacio_LaserTotal</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>15.0</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Ion_Cannon_NoSound</SFXEvent_Fire>
+		
+		<HardPoints> 
+			HP_SB_Defense_IonGunS_01,
+			HP_WS_00,
+			HP_WS_01,
+			HP_WS_02,
+			HP_WS_03
+		</HardPoints>
+				
+		<Icon_Name>I_BUTTON_NV_IONGUNSPACE.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_IonGunS_Plattform.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_IONGUNSPACE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_IONGUNSPACE </MP_Encyclopedia_Text>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Death_Clone>Damage_Normal, IONGUNSPACE_Death_Clone</Death_Clone>
+		
+		
+	</SpaceBuildable>	
+	<SpaceBuildable Name="UC_SB_Defense_HyperGunS">
+		<Variant_Of_Existing_Type>UC_Empire_Defense_Satellite_Laser</Variant_Of_Existing_Type>
+		<Tactical_Buildable_Constructed> SB_Defense_HyperGunS </Tactical_Buildable_Constructed>
+		<Tactical_Build_Cost_Multiplayer> 6500 </Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Cost_Campaign> 6500 </Tactical_Build_Cost_Campaign>
+		<Text_ID>TEXT_UNIT_HYPERGUNSPACE</Text_ID>
+		<Space_Model_Name>NV_Defense_HyperGunS_Plattform.ALO</Space_Model_Name>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Tactical_Health>9000</Tactical_Health>
+		<Icon_Name>I_BUTTON_NV_HYPERGUNSPACE.tga</Icon_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HYPERGUNSPACE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_HYPERGUNSPACE </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+	</SpaceBuildable>	
+	<SpaceBuildable Name="SB_Defense_HyperGunS">
+		<Variant_Of_Existing_Type>Empire_Defense_Satellite_Basic</Variant_Of_Existing_Type>
+		<Affiliation>Empire, Rebel, Underworld, Pirates, Republic, CIS, Krayt, Fel, Hutts, Hapan, Chiss, Corporate, EVFO, RVRE, GA, GAC</Affiliation>
+		<Text_ID>TEXT_UNIT_HYPERGUNSPACE</Text_ID>
+		<Space_Model_Name>NV_Defense_HyperGunS_Plattform.ALO</Space_Model_Name>
+		<SpaceBehavior> ABILITY_COUNTDOWN, TARGETING, WEAPON, TURRET, POWERED, SPACE_OBSTACLE, DUMMY_ORBITAL_STRUCTURE, SELECTABLE, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, SHIELDED, DAMAGE_TRACKING, TACTICAL_SELL </SpaceBehavior>
+		
+		<Autoresolve_Health>750000</Autoresolve_Health>
+		<Shield_Points>500000</Shield_Points>
+		<Tactical_Health>900000</Tactical_Health>
+		<Shield_Refresh_Rate>524000</Shield_Refresh_Rate>
+		<Energy_Capacity>10000000</Energy_Capacity>
+		<Energy_Refresh_Rate>6000000</Energy_Refresh_Rate>
+		
+		<Armor_Type> Armor_Station </Armor_Type>
+		<Shield_Armor_Type>Shield_SSD</Shield_Armor_Type>
+		
+		<Targeting_Max_Attack_Distance>25000.0</Targeting_Max_Attack_Distance>
+		<Targeting_Min_Attack_Distance> 500 </Targeting_Min_Attack_Distance>
+		
+		<HardPoints> 
+			HP_SB_Defense_HyperGunS_01,
+			HP_WS_00,
+			HP_WS_01,
+			HP_WS_02,
+			HP_WS_03
+		</HardPoints>
+		
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30</Turret_Elevate_Extent_Degrees>
+		<Turret_Bone_Name>B_Turret_01</Turret_Bone_Name>
+		<Barrel_Bone_Name>B_Barrel_01</Barrel_Bone_Name>
+		<Turret_Rotate_Speed>0.15</Turret_Rotate_Speed>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+		<Fire_Category_Restrictions> Fighter, Bomber, Transport </Fire_Category_Restrictions>
+		<Fire_Inaccuracy_Distance> Fighter, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Bomber, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Transport, 70.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Corvette, 30.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Frigate, 15.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Capital, 0.0 </Fire_Inaccuracy_Distance>
+		<Fire_Inaccuracy_Distance> Super, 0.0 </Fire_Inaccuracy_Distance>
+		<Projectile_Types>Proj_BlancoVacio_LaserTotal</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>1</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.5</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>15.0</Projectile_Fire_Recharge_Seconds>
+		<SFXEvent_Fire>Unit_Hyper_Velocity_NoSound</SFXEvent_Fire>
+				
+		<Icon_Name>I_BUTTON_NV_HYPERGUNSPACE.tga</Icon_Name>
+		<GUI_Model_Name>NV_Defense_HyperGunS_Plattform.ALO</GUI_Model_Name>
+		<Encyclopedia_Text> TEXT_TOOLTIP_HYPERGUNSPACE </Encyclopedia_Text>
+		<MP_Encyclopedia_Text> TEXT_TOOLTIP_HYPERGUNSPACE </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Scale_Factor>0.5</Scale_Factor>
+		<Death_Clone>Damage_Normal, HYPERGUNSPACE_Death_Clone</Death_Clone>
+		
+		
+	</SpaceBuildable>
+	
+	
+</SpaceBuildables>

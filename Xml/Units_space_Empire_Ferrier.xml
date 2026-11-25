@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<FerrierUnit_Data>
+
+	<SpaceUnit Name="Ferrier">
+		<Variant_Of_Existing_Type>CR_Hvy_Gunboat</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_HERO_FERRIER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_FERRIER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_CAPITAL</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_HERO_MAJOR </Encyclopedia_Unit_Class>
+		<Encyclopedia_Good_Against> X-Wing A-Wing Y-Wing </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> Calamari_Cruiser Alliance_Assault_Frigate </Encyclopedia_Vulnerable_To>
+		<Icon_Name>I_BUTTON_Ei_Ferrier.tga</Icon_Name>
+		<Is_Generic_Hero>Yes</Is_Generic_Hero>
+		<Show_Hero_Head>Yes</Show_Hero_Head>
+		<Space_Model_Name>RV_CorellianHvyGunboat.alo</Space_Model_Name>
+
+		<Scale_Factor>0.25</Scale_Factor>
+
+		<Max_Speed>3.25</Max_Speed>
+		<Max_Rate_Of_Turn>2.4</Max_Rate_Of_Turn>  
+		<MovementClass> Space </MovementClass>
+		<Space_Layer> Corvette </Space_Layer>
+		<Layer_Z_Adjust>-20.0</Layer_Z_Adjust>
+		<Max_Rate_Of_Roll>0.8</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>15</Bank_Turn_Angle>
+		<OverrideAcceleration> .12 </OverrideAcceleration>
+		<OverrideDeceleration> .12 </OverrideDeceleration>
+
+		<Armor_Type> Armor_Assault_Frigate </Armor_Type>
+		<Shield_Armor_Type>Shield_Capital</Shield_Armor_Type>
+		<Hyperspace_Speed>0.5</Hyperspace_Speed>
+	
+		<Affiliation>Empire</Affiliation>
+		<Build_Initially_Locked>Yes</Build_Initially_Locked>
+		<Tech_Level>99</Tech_Level>
+		<Autoresolve_Health>1800</Autoresolve_Health>
+		<Shield_Points>15000</Shield_Points>
+		<Tactical_Health>130000000</Tactical_Health>  
+		<Shield_Refresh_Rate>18000</Shield_Refresh_Rate>
+		<Energy_Capacity>150000</Energy_Capacity>
+		<Energy_Refresh_Rate>90000</Energy_Refresh_Rate>
+		<AI_Combat_Power>1100</AI_Combat_Power>
+		<CategoryMask> SpaceHero | AntiFighter | AntiBomber </CategoryMask>
+		<Behavior> SELECTABLE, DUMMY_STARSHIP </Behavior>
+		<SpaceBehavior>ABILITY_COUNTDOWN, SIMPLE_SPACE_LOCOMOTOR, POWERED, HUNT, SHIELDED, HIDE_WHEN_FOGGED, REVEAL, TARGETING, UNIT_AI, ASTEROID_FIELD_DAMAGE, SPAWN_SQUADRON, DAMAGE_TRACKING, ION_STUN_EFFECT, NEBULA </SpaceBehavior>
+		
+		<HardPoints> 
+				HP_T_CRHvyGunship_01,
+				HP_T_CRHvyGunship_02,
+				HP_T_CRHvyGunship_03,
+				HP_T_CRHvyGunship_04,
+				HP_T_CRHvyGunship_05,
+				HP_T_CRHvyGunship_06,
+				HP_T_CRHvyGunship_07,
+				HP_T_CRHvyGunship_08,
+				HP_T_CRHvyGunship_09,
+				HP_T_CRHvyGunship_10,
+				HP_T_CRHvyGunship_11,
+				HP_MisilA_01,
+				HP_MisilA_02,
+				HP_MisilA_03,
+				HP_MisilA_04,
+				HP_MisilA_05,
+				HP_MisilA_06,
+				HP_MisilA_07,
+				HP_MisilA_08,
+				HP_LaserRXC_01,
+				HP_LaserRXC_02,
+				HP_LaserRXC_03,
+				HP_LaserRXC_04,
+				HP_LaserRXC_05,
+				HP_LaserRXC_06,
+				HP_LaserRXC_07,
+				HP_LaserRXC_08,
+				HP_LaserRXC_09,
+				HP_LaserRXC_10,
+				HP_LaserRXC_11,
+				HP_LaserRXC_12,
+				HP_Shield_Generator_Small_00, 
+				HP_Engines_Small_00
+		</HardPoints>
+
+		<SFXEvent_Select>Unit_Select_Gunboat</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Gunboat</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Gunboat</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Gunboat</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Gunboat</SFXEvent_Guard>
+
+		<Death_Clone>Damage_Normal, CR_Hvy_Gunboat_Death_Clone</Death_Clone>
+
+
+	
+		<Lua_Script>ObjectScript_AI_Space_Capture_Ships</Lua_Script>
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>TURBO</Type>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SUPER_SYSTEMS_REIN</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_SUPER_SYSTEMS_REIN2_DESCR</Alternate_Description_Text>
+				<Expiration_Seconds>30</Expiration_Seconds>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Mod_Multiplier>ENERGY_REGEN_INTERVAL_MULTIPLIER,	500.10f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,		2.0f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER , 100.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Speed_Corvette</SFXEvent_GUI_Unit_Ability_Activated>
+				<SFXEvent_GUI_Unit_Ability_Deactivated />
+			</Unit_Ability>
+			<Unit_Ability>
+				<Type>HARMONIC_BOMB</Type>
+				<Alternate_Icon_Name>i_sa_boarding_assault.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>TEXT_TOOLTIP_BOARDING_ASSAULT</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_BOARDING_ASSAULT_DESC3</Alternate_Description_Text>
+				<Recharge_Seconds>15</Recharge_Seconds>
+				<Spawned_Object_Type>Comm_Ship_orders3</Spawned_Object_Type>
+				<Bomb_Countdown_Seconds>1.5</Bomb_Countdown_Seconds> 
+				<SFXEvent_GUI_Unit_Ability_Activated></SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+		<Abilities SubObjectList="Yes">
+			<Galactic_Stealth_Ability Name="Smuggler_Galactic_Stealth">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Evade_Detection_Chance>0.0</Evade_Detection_Chance>
+			</Galactic_Stealth_Ability>
+
+			<System_Spy_Ability Name="Smuggler_Limited_Spy">
+				<Initially_Enabled>Yes</Initially_Enabled>
+				<Activation_Style>Galactic_Automatic</Activation_Style>
+				<Causes_Despawn>No</Causes_Despawn>
+				<Duration_In_Secs>-1.0</Duration_In_Secs>
+				<See_Num_Fleets>Yes</See_Num_Fleets>
+			</System_Spy_Ability>
+		</Abilities>
+		
+		<Tactical_Build_Cost_Multiplayer>3000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>22</Tactical_Build_Time_Seconds>
+		<Tactical_Bribe_Cost>750</Tactical_Bribe_Cost>
+		<Build_Limit_Current_Per_Player>1</Build_Limit_Current_Per_Player>
+		<Build_Limit_Lifetime_Per_Player>-1</Build_Limit_Lifetime_Per_Player>
+		
+	</SpaceUnit>
+
+	
+	
+</FerrierUnit_Data>

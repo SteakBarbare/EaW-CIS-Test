@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<GA_T2B_TankUnit_Data>
+
+	<GroundVehicle Name="GA_T2B_Tank">
+		<Variant_Of_Existing_Type>T2B_TankORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_T2B_TANK</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker Underworld_Merc </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank Canderous_Assault_Tank </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_GA_T2B</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		
+		<Projectile_Types>Proj_T1B_Green</Projectile_Types>
+		<Attack_Category_Restrictions> Air </Attack_Category_Restrictions>
+		<Scale_Factor>1.25</Scale_Factor><!--Reescalado real-->
+		<Land_Model_Name>GA_T2B.alo</Land_Model_Name>
+		<No_Colorization_Color> 255, 210, 0, 255 </No_Colorization_Color>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Icon_Name>i_button_GA_T2B_Tank.tga</Icon_Name>
+		<Armor_Type> Armor_SPMAT </Armor_Type>
+        <Shield_Armor_Type>Shield_Veh</Shield_Armor_Type>
+
+		<HardPoints>
+			HP_Gr_Front_Eweb_Laser_Green_00, HP_Gr_Front_Eweb_Laser_Green_01, HP_Gr_Front_Eweb_Laser_Green_02, HP_Gr_Front_Eweb_Laser_Green_03
+		</HardPoints>
+		
+		<Vehicle_Thief_Inside_Clone>GA_T2B_Tank_Captured</Vehicle_Thief_Inside_Clone>
+		<Death_Clone>Damage_Normal, GA_T2B_Tank_Death_Clone_00</Death_Clone>
+	</GroundVehicle>
+	<GroundVehicle Name="GA_T2B_Tank_Death_Clone_00">
+		<Variant_Of_Existing_Type>GA_T2B_Tank</Variant_Of_Existing_Type>
+		<Land_Model_Name>GA_T2B_D.ALO</Land_Model_Name>
+		<Death_Clone_Is_Obstacle>no</Death_Clone_Is_Obstacle>
+		<LandBehavior>HIDE_WHEN_FOGGED,IMPOSING_PRESENCE</LandBehavior>
+      
+		<Custom_Hard_XExtent_Offset> 15.0 </Custom_Hard_XExtent_Offset>
+		<Custom_Hard_XExtent> 47.0 </Custom_Hard_XExtent>
+		<Custom_Hard_YExtent> 10.0 </Custom_Hard_YExtent>
+		
+		<Death_Explosions>Medium_Explosion_Land</Death_Explosions>
+		<!--<Death_Persistence_Duration> 15 </Death_Persistence_Duration> -->
+		<Death_Explosions_End>Huge_Explosion_Land</Death_Explosions_End>
+		<Death_SFXEvent_End_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_End_Die>
+		<IsDeathCloneObstacle> true </IsDeathCloneObstacle>
+ 		<Presence_Range>200.0</Presence_Range>
+	</GroundVehicle>
+	<GroundVehicle Name="GA_T2B_Tank_Captured">
+		<Variant_Of_Existing_Type>GA_T2B_Tank</Variant_Of_Existing_Type>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>EJECT_VEHICLE_THIEF</Type>
+				<Recharge_Seconds>10</Recharge_Seconds>
+			</Unit_Ability>
+			
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+	
+	<GroundCompany Name="GA_T2B_Tank_Squad">
+		<Variant_Of_Existing_Type>Rebel_Light_Tank_Brigade</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_T2B_TANK_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> TIE_Crawler SPMAT_Walker UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> AT_AT_Walker M1_Repulsor_Tank UC_Empire_Buildable_Anti_Vehicle_Turret </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_GA_T2B TEXT_DESC_C_CANTIDAD_5</Encyclopedia_Text>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Icon_Name>i_button_GA_T2B_Tank.tga</Icon_Name>
+		<Required_Special_Structures>Fel_Ground_Light_Vehicle_Factory, R_XCommand</Required_Special_Structures>
+		<Company_Transport_Unit>GA_Crix_Transport</Company_Transport_Unit>
+		<Company_Units>GA_T2B_Tank, GA_T2B_Tank, GA_T2B_Tank, GA_T2B_Tank, GA_T2B_Tank</Company_Units>
+	</GroundCompany>
+
+</GA_T2B_TankUnit_Data>

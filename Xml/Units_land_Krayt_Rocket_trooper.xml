@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Krayt_Rocket_TrooperUnit_Data>
+	<GroundInfantry Name="Krayt_Rocket_Trooper">
+		<Variant_Of_Existing_Type>Underworld_MercORG</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROCKET_TROOPER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ROCKET_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		
+		<Land_Model_Name>EVK_Rocket_Trooper.ALO</Land_Model_Name>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Scale_Factor>1.2</Scale_Factor>
+		<Armor_Type>Armor_Dark_Trooper</Armor_Type>
+		<Icon_Name>i_button_Ei_RocketTrooper.tga</Icon_Name>
+
+		<Tactical_Health>200</Tactical_Health>
+		<Energy_Capacity>999</Energy_Capacity>
+		<Energy_Refresh_Rate>999</Energy_Refresh_Rate>
+
+		<Projectile_Types>Proj_Rockettrooper_Blaster_Yellow</Projectile_Types>
+		<Projectile_Fire_Pulse_Count>4</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.15</Projectile_Fire_Pulse_Delay_Seconds>
+		<Projectile_Fire_Recharge_Seconds>0.55</Projectile_Fire_Recharge_Seconds>
+		
+		<SFXEvent_Select>Unit_Select_Dark_Trooper_2</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Dark_Trooper_2</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_2</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Dark_Trooper_2</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Dark_Trooper_2</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Dark_Trooper_2 </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Dark_Trooper_2 </SFXEvent_Assist_Attack>
+		<Death_SFXEvent_Start_Die>Unit_AT_ST_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Lost> </SFXEvent_Unit_Lost>		
+		<SFXEvent_Tactical_Build_Started> Unit_Produce_Troops_Arc_Hammer </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> Unit_Complete_Troops_Arc_Hammer </SFXEvent_Tactical_Build_Complete>	  
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		
+		<Death_Explosions>Small_Explosion_Land</Death_Explosions>
+        <Remove_Upon_Death>true</Remove_Upon_Death>
+		<Death_Persistence_Duration>0.0</Death_Persistence_Duration>
+		<Death_Fade_Time>0.05</Death_Fade_Time>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Dark_Trooper_3</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+					
+	</GroundInfantry>
+	
+	<GroundInfantry Name="Krayt_Rocket_Trooper_B">
+		<Variant_Of_Existing_Type>Krayt_Rocket_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>Krayt_Rocket_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+	</GroundInfantry>	
+	<GroundCompany Name="Krayt_Rocket_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>Krayt_Rocket_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units>Krayt_Rocket_Trooper, Krayt_Rocket_Trooper, Krayt_Rocket_Trooper, Krayt_Rocket_Trooper, Krayt_Rocket_Trooper, Krayt_Rocket_Trooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Rocket_Trooper_Team </Create_Team_Type>
+	</GroundCompany>	
+	<GroundCompany Name="Krayt_Rocket_Trooper_Squad">
+		<Variant_Of_Existing_Type>Imperial_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROCKET_TROOPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ROCKET_TROOPER TEXT_DESC_CI_CANTIDAD_9</Encyclopedia_Text>
+		<Icon_Name>i_button_Ei_RocketTrooper.tga</Icon_Name>
+
+		<GUI_Row> 1 </GUI_Row>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Build_Cost_Credits>750</Build_Cost_Credits>
+		<Build_Time_Seconds>20</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		
+
+		<Company_Transport_Unit>Fel_Nune_Shuttle</Company_Transport_Unit>
+		<Required_Special_Structures>Krayt_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Company_Units>Krayt_Rocket_Trooper_B,Krayt_Rocket_Trooper, Krayt_Rocket_Trooper</Company_Units>
+		<Max_Squad_Size> 3 </Max_Squad_Size>
+		<Create_Team_Type> Rocket_Trooper_Team </Create_Team_Type>
+
+		<SFXEvent_Build_Complete>Unit_Complete_Dark_Trooper_2</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Dark_Trooper_2</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>1000</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>23</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Krayt_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+		
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Dark_Trooper_3</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundCompany>
+
+	<Container Name="Rocket_Trooper_Team">
+		<Variant_Of_Existing_Type>Underworld_Merc_Team</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_ROCKET_TROOPER</Text_ID>
+		<Encyclopedia_Text> TEXT_TOOLTIP_ROCKET_TROOPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY </Encyclopedia_Text>
+		<Encyclopedia_Good_Against> Rebel_Trooper Plex_Soldier Rebel_Assault_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> MPTL Rebel_Infiltrator UC_Rebel_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<Icon_Name>i_button_Ei_RocketTrooper.tga</Icon_Name>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>POWER_TO_WEAPONS</Type>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER,	0.5f</Mod_Multiplier>
+				<Mod_Multiplier>SHIELD_REGEN_MULTIPLIER,	-2.0f</Mod_Multiplier>
+				<Mod_Multiplier>ENERGY_REGEN_MULTIPLIER,	1f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER,			0.5f</Mod_Multiplier>
+				<Mod_Multiplier>CAUSE_DAMAGE_MULTIPLIER ,	3.0f</Mod_Multiplier>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>10</Expiration_Seconds>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Dark_Trooper_3</SFXEvent_GUI_Unit_Ability_Activated>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+	</Container>
+
+</Krayt_Rocket_TrooperUnit_Data>

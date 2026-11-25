@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+
+
+
+<XChiss_Land_Units_Data>
+
+	<GenericHeroUnit Name="Squad_Generic_Field_Commander_Chiss">
+		<Variant_Of_Existing_Type>Generic_Field_Commander_Empire</Variant_Of_Existing_Type>
+		<Land_Model_Name>Ch_atatcommander.ALO</Land_Model_Name>
+		<Land_Model_Anim_Override_Name>Ch_atatcommander.ALO</Land_Model_Anim_Override_Name>
+		<LandBehavior>LANDING, SURFACE_FX, LAND_TEAM_INFANTRY_LOCOMOTOR,IDLE,WEAPON, STUNNABLE, GARRISON_UNIT, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING,ABILITY_COUNTDOWN</LandBehavior>
+		<Garrison_Category> Infantry </Garrison_Category>
+		<Is_Squashable> Yes </Is_Squashable>
+		<Max_Speed> 1.1 </Max_Speed>
+		<Space_Layer> None </Space_Layer>
+		<Custom_Soft_Footprint_Radius> 3.0 </Custom_Soft_Footprint_Radius>
+		<Max_Rate_Of_Turn>8.0</Max_Rate_Of_Turn>
+		<FormationRaggedness> .2 </FormationRaggedness>
+		<MaxJiggleDistance> 2 </MaxJiggleDistance>
+		<Create_Team>Yes</Create_Team>
+		<Select_Box_Scale>0</Select_Box_Scale>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<!-- Primary ability -->
+			<Unit_Ability>
+				<Type>SPREAD_OUT</Type>
+				<Mod_Multiplier>SPEED_MULTIPLIER,	 0.5f</Mod_Multiplier>
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.5f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Take_Cover_Storm_Trooper</SFXEvent_GUI_Unit_Ability_Activated>		  			
+			</Unit_Ability>
+	
+		</Unit_Abilities_Data>
+	</GenericHeroUnit>
+		
+	<HeroCompany Name="Field_Com_Chiss_Team">
+		<Variant_Of_Existing_Type>Field_Com_Empire_Team</Variant_Of_Existing_Type>
+		<Company_Units> Squad_Generic_Field_Commander_Chiss, Squad_E_Field_Commander_Guard, Squad_E_Field_Commander_Guard, Squad_E_Field_Commander_Guard, Squad_E_Field_Commander_Guard</Company_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Chiss_Ground_Barracks, Chiss_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Affiliation>Chiss</Affiliation>
+		<GUI_Row> 0 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Required_Timeline>1</Required_Timeline>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</HeroCompany>		
+		
+	<GroundCompany Name="Ch_Assault_Squad">
+		<Variant_Of_Existing_Type>Imperial_Assault_Squad</Variant_Of_Existing_Type>
+		<Required_Special_Structures>Chiss_Ground_Barracks, Chiss_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Affiliation>Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Ch_StormC_Squad">
+		<Variant_Of_Existing_Type>Imperial_StormCommando_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Chiss_Ground_Barracks, Chiss_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Ch_Sniper_Squad">
+		<Variant_Of_Existing_Type>Imperial_Sniper_Team</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Special_Structures>Chiss_Ground_Barracks, Chiss_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Ch_Engi_Squad">
+		<Variant_Of_Existing_Type>Ei_Engineer_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Special_Structures>Chiss_Ground_Barracks, Chiss_Ground_Officer_Academy, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Ch_StormT_Squad">
+		<Variant_Of_Existing_Type>E_Stormtrooper_Squad_Builded</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Special_Structures>Chiss_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+	</GroundCompany>
+	<GroundCompany Name="Ch_Scout_Squad">
+		<Variant_Of_Existing_Type>Imperial_Light_Scout_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Special_Structures>Chiss_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+	</GroundCompany>
+	<GroundCompany Name="Ch_EWEB_Squad">
+		<Variant_Of_Existing_Type>Imperial_EWEB_Squad</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Required_Special_Structures>Chiss_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Tactical_Build_Cost_Multiplayer>120</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>35</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Ch_PlexT_Squad">
+		<Variant_Of_Existing_Type>PlexTrooper_Company</Variant_Of_Existing_Type>
+		<Affiliation>Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Chiss_Ground_Barracks, E_XCommand</Required_Special_Structures>
+		<Tactical_Build_Cost_Multiplayer>450</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>6</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+	<GroundCompany Name="Ch_ATSTAS_Squad">
+		<Variant_Of_Existing_Type>Imperial_Heavy_Scout_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_IMPERIAL_AT_ST_AS_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Rebel_Infantry_Squad Rebel_Assault_Squad T2BAA_Brigade </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> T4B_Tank Rebel_T3B_Brigade Rebel_A_Wing_Land_squadron </Encyclopedia_Vulnerable_To>
+		<Encyclopedia_Text>TEXT_TOOLTIP_ATST_AS TEXT_DESC_C_CANTIDAD_4</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_LIGHT_VEHICLE</Encyclopedia_Unit_Class>
+		<Affiliation>Chiss</Affiliation>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Chiss_Ground_Light_Vehicle_Factory, E_XCommand</Required_Special_Structures>
+		<Company_Units>AT_ST_ASX, AT_ST_ASX, AT_ST_ASX, AT_ST_ASX</Company_Units>
+		<Icon_Name>i_button_atst_s.tga</Icon_Name>
+		<GUI_Model_Name>EV_ATST_AS.ALO</GUI_Model_Name>
+		<Tactical_Build_Cost_Multiplayer>350</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>30</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Chiss_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+	</GroundCompany>
+</XChiss_Land_Units_Data>

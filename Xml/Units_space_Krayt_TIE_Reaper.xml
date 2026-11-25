@@ -1,0 +1,114 @@
+﻿<?xml version="1.0"?>
+
+<EVK_TIE_Reaper_Files>
+
+	<SpaceUnit Name="EVK_TIE_Reaper">
+		<Variant_Of_Existing_Type>TIE_Agresor</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_TIE_REAPER</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_TIE_REAPER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Max_Speed>5.4</Max_Speed>
+		<Min_Speed>3.6</Min_Speed>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Armor_Type> Armor_Bomber </Armor_Type>
+		<Hardpoints>
+			HP_R_TIEREA_Laser_00, HP_R_TIEREA_Laser_01, HP_R_TIEREA_Laser_02, HP_R_TIEREA_Laser_03, HP_R_TIEREA_Laser_04, HP_R_TIEREA_Laser_05, HP_R_TIEREA_Laser_06, HP_R_TIEREA_Laser_07
+		</Hardpoints>
+
+		<Space_Model_Name>EVK_TIEReaper_Space.ALO</Space_Model_Name>
+		<Scale_Factor>0.7</Scale_Factor>
+
+		<Icon_Name>i_button_EVK_TIEReaper.tga</Icon_Name>
+		
+		
+	</SpaceUnit>
+	
+	<Squadron Name="EVK_TIE_Reaper_Squadron">
+		<Variant_Of_Existing_Type>TIE_Agresor_Squadron</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_EVK_TIE_REAPER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_TIE_REAPER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+
+		<Affiliation>Krayt, Empire</Affiliation>
+
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Space_Units>No</Build_Tab_Space_Units>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		
+		<Squadron_Units>EVK_TIE_Reaper, EVK_TIE_Reaper, EVK_TIE_Reaper</Squadron_Units>
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		<Create_Team_Type>EVK_TIE_Reaper_Squadron_Container1</Create_Team_Type>
+		<Icon_Name>i_button_EVK_TIEReaper.TGA</Icon_Name>
+		<GUI_Model_Name>EVK_TIEReaper.ALO</GUI_Model_Name>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		
+		
+	</Squadron>
+	
+	<Container Name="EVK_TIE_Reaper_Squadron_Container1">
+		<Movie_Object>true</Movie_Object>
+		<Text_ID>TEXT_UNIT_EVK_TIE_REAPER_SQUADRON</Text_ID>
+		<Encyclopedia_Text>TEXT_TOOLTIP_EVK_TIE_REAPER TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_FAST TEXT_CLASS_NORMAL_SPEED_VERYFAST TEXT_CLASS_SHIELD_FIGHTER</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class> TEXT_ENCYCLOPEDIA_CLASS_SUPERIORITY </Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_EVK_TIEReaper.tga</Icon_Name>
+
+		<Max_Speed>5.4</Max_Speed>
+		<Min_Speed>3.6</Min_Speed>
+
+		<MovementClass>Space</MovementClass>
+
+		<CategoryMask> Fighter | AntiFighter </CategoryMask>
+		<Show_Name>no</Show_Name>
+
+		<Formation_Priority>1</Formation_Priority>
+		<FormationOrder>1</FormationOrder>
+		<WaitsForFormationFormup>false</WaitsForFormationFormup>
+
+		<Behavior>TEAM, SELECTABLE, UNIT_AI, TEAM_LOCOMOTOR, TARGETING</Behavior>
+		<SpaceBehavior> REVEAL</SpaceBehavior>
+
+		<Squadron_Offsets>-45.0,20.0,0.0</Squadron_Offsets>
+		<Squadron_Offsets>-20.0,-25.0,-5.0</Squadron_Offsets>
+		<Squadron_Offsets>15.0,35.0,-10.0</Squadron_Offsets>
+		<Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+		<Squadron_Offsets>-55.0,-10.0,-20.0</Squadron_Offsets>
+		<Squadron_Offsets>0.0,15.0,-25.0</Squadron_Offsets>
+		<Squadron_Offsets>55.0,25.0,-30.0</Squadron_Offsets>
+		<Squadron_Offsets>-30.0,45.0,-35.0</Squadron_Offsets>
+		<Squadron_Offsets>30.0,-45.0,-40.0</Squadron_Offsets>
+		<Squadron_Offsets>-65.0,35.0,-45.0</Squadron_Offsets>
+		<Squadron_Offsets>65.0,-35.0,-50.0</Squadron_Offsets>
+		<Squadron_Offsets>5.0,-55.0,-55.0</Squadron_Offsets>
+		
+		<Is_Visible_On_Radar>yes</Is_Visible_On_Radar>
+
+		<Space_FOW_Reveal_Range>500.0</Space_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+
+		<Squadron_Formation_Error_Tolerance>80</Squadron_Formation_Error_Tolerance>
+
+		<Targeting_Max_Attack_Distance>500.0</Targeting_Max_Attack_Distance>
+		<Guard_Chase_Range>1000.0</Guard_Chase_Range>
+		<Idle_Chase_Range>1800.0</Idle_Chase_Range>
+		<Attack_Move_Response_Range>800.0</Attack_Move_Response_Range>
+		<Autonomous_Move_Extension_Vs_Attacker>1200.0</Autonomous_Move_Extension_Vs_Attacker>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>HUNT</Type>
+			</Unit_Ability>
+						
+		</Unit_Abilities_Data>
+	</Container>
+</EVK_TIE_Reaper_Files>

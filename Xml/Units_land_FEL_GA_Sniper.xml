@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<GA_Assault_Trooper_SniperUnit_Data>
+
+	<GroundInfantry Name="GA_Sniper_Trooper">
+		<Variant_Of_Existing_Type>B1Droid_SniperORG</Variant_Of_Existing_Type>
+		
+		<Text_ID>TEXT_UNIT_GA_SNIPER</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Underworld_Merc</Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Destroyer_Droid UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
+
+		<Stealth_Capable>No</Stealth_Capable>
+		<Land_Model_Name>GA_Sniper_Trooper.ALO</Land_Model_Name>
+		
+		<Land_Terrain_Model_Mapping>
+            		Temperate, 			GA_Sniper_Trooper.ALO,
+            		Urban, 				GA_Sniper_Trooper.ALO,
+					Arctic, 			GA_Sniper_Trooper.ALO,
+            		Volcanic, 			GA_Sniper_Trooper.ALO,
+            		Desert, 			GA_Sniper_Trooper.ALO,
+            		Forest, 			GA_Sniper_Trooper.ALO,
+            		Swamp, 				GA_Sniper_Trooper.ALO
+		</Land_Terrain_Model_Mapping>
+		
+
+		<Scale_Factor>1.2</Scale_Factor>
+		<Affiliation>Fel, Rebel</Affiliation>
+
+		<Tactical_Health>150</Tactical_Health>
+
+		<SFXEvent_Select>Unit_Select_Silri</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Silri</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Silri</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Silri</SFXEvent_Guard>
+		<SFXEvent_Fire>Unit_Storm_Trooper_Fire</SFXEvent_Fire>
+		<SFXEvent_Health_Low_Warning> Unit_Health_Low_Silri </SFXEvent_Health_Low_Warning>
+		<SFXEvent_Health_Critical_Warning> Unit_Health_Critical_Silri </SFXEvent_Health_Critical_Warning>
+		<Death_SFXEvent_Start_Die> Unit_Defeat_Silri </Death_SFXEvent_Start_Die>
+
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Rebel_Infiltrator </SFXEvent_Assist_Move>		
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Rebel_Infiltrator </SFXEvent_Assist_Attack>
+
+		<SFXEvent_Tactical_Build_Started> RHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>		
+		<SFXEvent_Tactical_Build_Complete> RHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>		
+		<SFXEvent_Tactical_Build_Cancelled> RHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		  
+	
+		<Death_Clone>Damage_Force_Whirlwind, GA_Sniper_Trooper_Force_Whirlwind_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Force_Lightning, GA_Sniper_Trooper_Force_Lightning_Death_Clone</Death_Clone>
+		<Death_Clone>Damage_Crush, GA_Sniper_Trooper_Crush_Death_Clone</Death_Clone>
+
+		<Icon_Name>I_BUTTON_GA_Assault_Trooper_Sniper.tga</Icon_Name>
+
+		<Conversion_Ability_Changes_To_Enemy> GA_Sniper_Trooper_Converted_To_Enemy </Conversion_Ability_Changes_To_Enemy>
+
+	</GroundInfantry>
+
+	  <GroundInfantry Name="GA_Sniper_Trooper_Converted_To_Enemy">
+		<Variant_Of_Existing_Type> GA_Sniper_Trooper </Variant_Of_Existing_Type>
+	  </GroundInfantry>
+	  <GroundInfantry Name="GA_Sniper_Trooper_Force_Whirlwind_Death_Clone">
+		<Variant_Of_Existing_Type>GA_Sniper_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FW_DIE</Specific_Death_Anim_Type>
+	  </GroundInfantry>
+	<GroundInfantry Name="GA_Sniper_Trooper_Force_Lightning_Death_Clone">
+		<Variant_Of_Existing_Type>GA_Sniper_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>FL_DIE</Specific_Death_Anim_Type>
+	</GroundInfantry>
+	<GroundInfantry Name="GA_Sniper_Trooper_Crush_Death_Clone">
+		<Variant_Of_Existing_Type>GA_Sniper_Trooper</Variant_Of_Existing_Type>
+		<Specific_Death_Anim_Type>Crushed</Specific_Death_Anim_Type>
+	</GroundInfantry>	
+	
+	<GroundInfantry Name="GA_Sniper_Trooper_B">
+		<Variant_Of_Existing_Type>GA_Sniper_Trooper</Variant_Of_Existing_Type>
+		<LandBehavior>ABILITY_COUNTDOWN, SURFACE_FX,WALK_LOCOMOTOR,IDLE,TARGETING,WEAPON, REVEAL,HIDE_WHEN_FOGGED,DAMAGE_TRACKING, GARRISON_UNIT, SPAWN_SQUADRON</LandBehavior>
+		<Starting_Spawned_Units_Tech_0>GA_Sniper_Trooper_Squad_B, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>		
+		<HardPoints>
+			HP_Ground_BayI_Invisible
+		</HardPoints>
+		<Create_Team>No</Create_Team>
+		<Select_Box_Scale>20</Select_Box_Scale>
+		<Select_Box_Z_Adjust>3.0f</Select_Box_Z_Adjust>
+	</GroundInfantry>	
+	<GroundCompany Name="GA_Sniper_Trooper_Squad_B">
+		<Variant_Of_Existing_Type>GA_Sniper_Trooper_Squad</Variant_Of_Existing_Type>
+		<Company_Units> GA_Sniper_Trooper, GA_Sniper_Trooper, GA_Sniper_Trooper, GA_Sniper_Trooper, GA_Sniper_Trooper</Company_Units>
+		<Tech_Level>99</Tech_Level>
+		<Build_Tab_Land_Units>No</Build_Tab_Land_Units>
+		<Max_Squad_Size> 5 </Max_Squad_Size>
+	</GroundCompany>	
+	 <GroundCompany Name="GA_Sniper_Trooper_Squad">
+		<Variant_Of_Existing_Type>B1Droid_Sniper_Squad</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_GA_SNIPER_SQUAD</Text_ID>
+		<Encyclopedia_Good_Against> Stormtrooper Imperial_Assault_Squad Imperial_Miliciano_Naval_Squad </Encyclopedia_Good_Against>
+		<Encyclopedia_Vulnerable_To> TIE_Crawler Scout_Trooper UC_Empire_Buildable_Anti_Infantry_Turret </Encyclopedia_Vulnerable_To>
+		<GUI_Row> 0 </GUI_Row>
+		<Affiliation>Fel, Rebel</Affiliation>
+		<Build_Cost_Credits>250</Build_Cost_Credits>
+		<Build_Time_Seconds>15</Build_Time_Seconds>
+		<Build_Tab_Land_Units>Yes</Build_Tab_Land_Units>
+		<Tech_Level>0</Tech_Level>
+		<Required_Special_Structures>Fel_Ground_Barracks, Fel_Ground_Officer_Academy, R_XCommand</Required_Special_Structures>
+		<Company_Units> GA_Sniper_Trooper_B </Company_Units>
+		<Max_Squad_Size> 1 </Max_Squad_Size>
+		<Autoresolve_Health>100</Autoresolve_Health>
+		<Company_Transport_Unit>GA_Crix_Shuttle</Company_Transport_Unit>
+		<Icon_Name>I_BUTTON_GA_Assault_Trooper_Sniper.tga</Icon_Name>
+
+		<SFXEvent_Build_Complete>Unit_Select_Silri</SFXEvent_Build_Complete>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Silri</SFXEvent_Fleet_Move>
+
+		<Tactical_Build_Cost_Multiplayer>250</Tactical_Build_Cost_Multiplayer>
+		<Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+		<Tactical_Build_Prerequisites>Fel_Level_Three_Tech_Upgrade</Tactical_Build_Prerequisites>
+
+  		<Encyclopedia_Text>TEXT_TOOLTIP_SNIPER TEXT_TOOLTIP_UNIT_CAPTURE_ABILITY</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_COMMANDO</Encyclopedia_Unit_Class>
+	</GroundCompany>
+	
+</GA_Assault_Trooper_SniperUnit_Data>

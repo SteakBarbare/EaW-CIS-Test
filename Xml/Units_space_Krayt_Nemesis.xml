@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<EVK_NemesisUnit_Data>
+	
+	<SpaceUnit Name="EVK_Nemesis">
+		<Variant_Of_Existing_Type>EVF_NemesisORG</Variant_Of_Existing_Type>
+		<Affiliation>Krayt, Empire</Affiliation>
+		<Space_Model_Name>EVK_Nemesis.ALO</Space_Model_Name>
+		<Tech_Level>0</Tech_Level>
+		<Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+		<Required_Special_Structures>Astilleros_NoIA4</Required_Special_Structures>
+		<Death_Clone>Damage_Normal, EVK_Nemesis_Death_Clone</Death_Clone>
+		<Lua_Script>ObjectScript_ZLayer_SSD</Lua_Script>
+		<Encyclopedia_Text> TEXT_TOOLTIP_EVF_NEMESIS TEXT_TOOLTIP_TEXT_SEPARATOR TEXT_CLASS_HYPER_SPEED_VERYFAST TEXT_CLASS_NORMAL_SPEED_MEDIUM TEXT_CLASS_SHIELD_ECLIPSE TEXT_DESC_DEPLOY_FIGHTERS_YES TEXT_UNIT_EVK_TIE_REAPER TEXT_WAVES_X2 TEXT_UNIT_EVF_TIE_NEUTRALIZER TEXT_WAVES_X2 TEXT_DESC_CANTIDAD_12</Encyclopedia_Text>
+		<AI_Combat_Power>1575</AI_Combat_Power>
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Reaper_Squadron5, 1</Starting_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Squadron4, 1</Starting_Spawned_Units_Tech_0>
+		<Spawned_Squadron_Delay_Seconds>10</Spawned_Squadron_Delay_Seconds>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Reaper_Squadron5, 35</Reserve_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>EVK_TIE_Neutralizer_Squadron4, 35</Reserve_Spawned_Units_Tech_0>
+	</SpaceUnit>
+	<SpaceUnit Name="EVK_Nemesis_Death_Clone">
+		<Text_ID>TEXT_UNIT_STAR_DESTROYER</Text_ID>
+		<Space_Model_Name>EVK_Nemesis_D.ALO</Space_Model_Name>
+		<Death_SFXEvent_Start_Die>Unit_Star_Destroyer_Death_SFX</Death_SFXEvent_Start_Die>
+		<Death_Persistence_Duration> 0 </Death_Persistence_Duration> 
+		<Death_Explosions>Death_Explosion_Flash_16000</Death_Explosions>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Layer_Z_Adjust>-110.0</Layer_Z_Adjust>
+		<Max_Speed>2.25</Max_Speed>
+		<Max_Rate_Of_Turn>0.05</Max_Rate_Of_Turn>
+		<Max_Thrust>0.05</Max_Thrust>
+		<Max_Rate_Of_Roll>0.03</Max_Rate_Of_Roll>
+		<Bank_Turn_Angle>5</Bank_Turn_Angle>
+		<Affiliation>Empire</Affiliation>
+		<Ship_Class>capital_ship</Ship_Class>
+		<Remove_Upon_Death>true</Remove_Upon_Death>
+	</SpaceUnit>
+
+	
+	
+	
+	
+	
+</EVK_NemesisUnit_Data>
