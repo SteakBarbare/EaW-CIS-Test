@@ -1,0 +1,67 @@
+---@class Configuration
+Configuration_SSD = {
+    ---@type table<string,function>[]
+    ---A map of anonymous objects that define the mapping between the category mask and (a subset of) bones of the `LAYER_DUMMY_TYPE` . 
+	---LO HE PENSADO PARA LOS EXECUTOR CLASS 1
+    CATEGORY_MAP = {
+        {
+            ---@type string
+            ID = "Corvette",
+            ---@return integer l_min minimum offset
+            ---@return integer l_max maximum offset
+            ---**TODO:** Update to desired range.
+            get_range = function() return -200, 200 end
+        },
+        {
+            -- @type string
+            ID = "Frigate",
+            ---@return integer l_min minimum offset
+            ---@return integer l_max maximum offset
+            ---**TODO:** Update to desired range.
+            get_range = function() return -200, 200 end
+
+        },
+        {
+            -- @type string
+            ID = "Capital",
+            ---@return integer l_min minimum offset
+            ---@return integer l_max maximum offset
+            ---**TODO:** Update to desired range.
+            get_range = function() return -200, 200 end
+
+        },
+		{
+            -- @type string
+            ID = "Spacehero",
+            ---@return integer l_min minimum offset
+            ---@return integer l_max maximum offset
+            ---**TODO:** Update to desired range.
+            get_range = function() return -200, 200 end
+
+        },
+		{
+            -- @type string
+            ID = "AntiSuper",
+            ---@return integer l_min minimum offset
+            ---@return integer l_max maximum offset
+            ---**TODO:** Update to desired range.
+            get_range = function() return -200, 200 end
+
+        },
+		{
+            -- @type string
+            ID = "AntiFrigate",
+            ---@return integer l_min minimum offset
+            ---@return integer l_max maximum offset
+            ---**TODO:** Update to desired range.
+            get_range = function() return -200, 200 end
+
+        },
+        ---@return integer l_min minimum offset
+        ---@return integer l_max maximum offset
+        ---**TODO:** Update to desired range.
+        default = function() return 0, 0 end
+    }
+}
+
+return Configuration_SSD
